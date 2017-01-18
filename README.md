@@ -8,8 +8,8 @@ Currently supported microformats:
 - http://microformats.org/wiki/hrecipe
 
 ## Pieces of Flair
-- [![Build Status](https://travis-ci.org/iancanderson/hangry.png?branch=master)](http://travis-ci.org/iancanderson/hangry)
-- [![Code Climate](https://codeclimate.com/github/iancanderson/hangry.png)](https://codeclimate.com/github/iancanderson/hangry)
+- [![Build Status](https://travis-ci.org/lukeasrodgers/hangry.png?branch=master)](http://travis-ci.org/iancanderson/hangry)
+- [![Code Climate](https://codeclimate.com/github/lukeasrodgers/hangry.png)](https://codeclimate.com/github/iancanderson/hangry)
 
 ## Installation
 
