@@ -4,7 +4,6 @@ require 'hangry/hrecipe_parser'
 require 'hangry/schema_org_recipe_parser'
 require 'hangry/data_vocabulary_recipe_parser'
 
-require 'hangry/parsers/non_standard/all_recipes_parser'
 require 'hangry/parsers/non_standard/bigoven_parser'
 require 'hangry/parsers/non_standard/copykat_parser'
 require 'hangry/parsers/non_standard/eating_well_parser'
