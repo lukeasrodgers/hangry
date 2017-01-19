@@ -5,18 +5,21 @@ require 'rspec/its'
 describe Hangry do
 
   context "tasteofhome.com recipe" do
-    let(:html) { File.read("spec/fixtures/hrecipe/tasteofhome.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/hrecipe/tasteofhome.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::TasteOfHomeParser)
+      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::TasteOfHomeParser)
     end
     
     its(:author) { should == "" }
     its(:canonical_url) { should == 'http://www.tasteofhome.com/recipes/rhubarb-popover-pie' }
     its(:cook_time) { should == 20 }
     its(:description) { should == "This fabulous spring breakfast \"pie\" is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!—Patricia Kile, Elizabethtown, Pennsylvania." }
-    its(:image_url) { should == "//hostedmedia.reimanpub.com/TOH/Images/Photos/37/300x300/exps49051_HCA1864839B02_17_3bC.jpg" }
+    its(:image_url) { should == "//cdn2.tmbi.com/TOH/Images/Photos/37/300x300/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg" }
     its(:ingredients) {
       should == [
         "1/2 cup all-purpose flour",
@@ -32,18 +35,18 @@ describe Hangry do
         "Whipped cream or vanilla ice cream, optional"
       ]
     }
-    its(:name) { should == "Rhubarb Popover Pie Recipe" }
+    its(:name) { should == "Rhubarb Popover Pie" }
     its(:nutrition) do
       should == {
-        calories: nil,
-        cholesterol: nil,
-        fiber: nil,
-        protein: nil,
+        calories: "279 calories: 1 piece",
+        cholesterol: '109mg cholesterol',
+        fiber: "1g fiber)",
+        protein: "4g protein.",
         saturated_fat: nil,
-        sodium: nil,
+        sodium: "239mg sodium",
         sugar: nil,
-        total_carbohydrates: nil,
-        total_fat: nil,
+        total_carbohydrates: "31g carbohydrate (21g sugars",
+        total_fat: "16g fat (10g saturated fat)",
         trans_fat: nil,
         unsaturated_fat: nil
       }
