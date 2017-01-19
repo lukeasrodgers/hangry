@@ -5,7 +5,6 @@ require 'hangry/schema_org_recipe_parser'
 require 'hangry/data_vocabulary_recipe_parser'
 require 'hangry/json_ld_parser'
 
-require 'hangry/parsers/non_standard/bigoven_parser'
 require 'hangry/parsers/non_standard/copykat_parser'
 require 'hangry/parsers/non_standard/eating_well_parser'
 require 'hangry/parsers/non_standard/epicurious_parser'
@@ -24,7 +23,6 @@ module Hangry
     def parser_class
       # Prefer the more specific parsers
       parser_classes = [
-        Parsers::NonStandard::BigOvenParser,
         Parsers::NonStandard::CopykatParser,
         Parsers::NonStandard::EatingWellParser,
         Parsers::NonStandard::EpicuriousParser,
