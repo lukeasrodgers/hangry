@@ -12,7 +12,7 @@ module Hangry
         end
 
         def parse_instructions
-          node_with_itemprop("recipeInstructions").css(">p").map(&:content).join("\n")
+          node_with_itemprop("recipeInstructions").css("li.preparation-step").map(&:content).join("\n")
         end
 
       end
