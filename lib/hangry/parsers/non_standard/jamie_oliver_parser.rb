@@ -4,7 +4,9 @@ module Hangry
       class JamieOliverParser < JsonLDParser
 
         def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'jamieoliver.com')
+          new(html).nokogiri_doc.css('meta[name="author"]').first['content'] == "JamieOliver.com"
+        rescue NoMethodError
+          false
         end
 
         private
@@ -14,10 +16,7 @@ module Hangry
         end
 
         def parse_instructions
-          # Some sites like may have their recipe instructions doubled if they
-          # support different ways of presentation.
-          # E.g. http://www.pillsbury.com/recipes/big-cheesy-pepperoni-pockets/a17766e6-30ce-4a0c-af08-72533bb9b449
-          # has its steps doubled ("step by step" and "list" modes).
+          # JamieOliver.com has html inside json ld recipeInstructions node
           nodes = nodes_with_itemprop(:recipeInstructions)
           nodes = [nodes].flatten
           html = nodes.map(&:strip).uniq.join("\n")
