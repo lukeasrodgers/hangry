@@ -3,6 +3,7 @@ require 'hangry/default_recipe_parser'
 require 'hangry/hrecipe_parser'
 require 'hangry/schema_org_recipe_parser'
 require 'hangry/data_vocabulary_recipe_parser'
+require 'hangry/json_ld_parser'
 
 require 'hangry/parsers/non_standard/bigoven_parser'
 require 'hangry/parsers/non_standard/copykat_parser'
@@ -33,7 +34,7 @@ module Hangry
         Parsers::NonStandard::SouthernFoodParser,
         Parsers::NonStandard::TasteOfHomeParser
       ]
-      parser_classes += [SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser]
+      parser_classes += [SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser, JsonLDParser]
       parser_classes << DefaultRecipeParser
       parser_classes.detect { |p| p.can_parse?(@html) }
     end
