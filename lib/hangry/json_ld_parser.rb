@@ -20,7 +20,7 @@ module Hangry
       initialize_nutrition
       self.nokogiri_doc = Nokogiri::HTML(recipe_html)
       recipe_ld_script = nokogiri_doc.css(self.class.root_selector).first
-      self.recipe_hash = recipe_ld_script && JSON.parse(recipe_ld_script.content)
+      self.recipe_hash = recipe_ld_script && JSON.parse(recipe_ld_script.content.tr("\n", ''))
       self.nutrition_hash = recipe_hash && recipe_hash['nutrition']
     end
 
