@@ -1,5 +1,6 @@
 # encoding: UTF-8
 require 'hangry'
+require "rspec/its"
 
 describe Hangry do
 
@@ -10,29 +11,29 @@ describe Hangry do
     its(:author) { should == "Antony Worrall Thompson" }
     its(:canonical_url) { should == nil }
     its(:cook_time) { should == 30 }
-    its(:description) { should == "An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo." }
-    its(:image_url) { should == 'http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/paella_7100_16x9.jpg' }
+    its(:description) { should == "An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt." }
+    its(:image_url) { should == 'http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/paella_7100_16x9.jpg' }
     its(:ingredients) {
       should == [
-        "170g/6oz chorizo , cut into thin slices",
-        "110g/4oz pancetta , cut into small dice",
+        "170g/6oz chorizo, cut into thin slices",
+        "110g/4oz pancetta, cut into small dice",
         "2 cloves garlic finely chopped",
-        "1 large Spanish onion , finely diced",
+        "1 large Spanish onion, finely diced",
         "1 red pepper, diced",
         "1 tsp soft thyme leaves",
         "¼ tsp dried red chilli flakes",
         "570ml/1pint calasparra (Spanish short-grain) rice",
         "1 tsp paprika",
         "125ml/4fl oz dry white wine",
-        "1.2 litres/2 pints chicken stock , heated with ¼ tsp saffron strands",
+        "1.2 litres/2 pints chicken stock, heated with ¼ tsp saffron strands",
         "8 chicken thighs, each chopped in half and browned",
-        "18 small clams , cleaned",
+        "18 small clams, cleaned",
         "110g/4oz fresh or frozen peas",
-        "4 large tomatoes , de-seeded and diced",
-        "125ml/4fl oz good olive oil",
-        "1 head garlic , cloves separated and peeled",
-        "12 jumbo raw prawns , in shells",
-        "450g/1lb squid , cleaned and chopped into bite-sized pieces",
+        "4 large tomatoes, de-seeded and diced",
+        "50ml/2fl oz good olive oil",
+        "1 head garlic, cloves separated and peeled",
+        "12 jumbo raw prawns, in shells",
+        "450g/1lb squid, cleaned and chopped into bite-sized pieces",
         "5 tbsp chopped flatleaf parsley",
         "Salt and freshly ground black pepper"
       ]
@@ -67,7 +68,7 @@ Scatter the chopped parsley over the paella and serve immediately.
     its(:prep_time) { should == 60 }
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
-    its(:yield) { should == "Serves 6-8" }
+    its(:yield) { should == "Serves 8" }
 
   end
 
