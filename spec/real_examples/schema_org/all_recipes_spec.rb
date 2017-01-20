@@ -1,5 +1,4 @@
-require 'hangry'
-require 'rspec/its'
+# encoding: UTF-8
 
 describe Hangry do
 

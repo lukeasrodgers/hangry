@@ -1,5 +1,4 @@
 # encoding: UTF-8
-require 'hangry'
 
 describe Hangry do
 

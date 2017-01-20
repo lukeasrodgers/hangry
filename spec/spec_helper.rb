@@ -1,3 +1,4 @@
+require 'hangry'
 require 'byebug'
 require 'rspec/its'
 
