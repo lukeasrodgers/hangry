@@ -36,7 +36,12 @@ module Hangry
         #author_node.css('[itemprop = "name"]').first['content']
         author_node.css('[itemprop = "name"]').first.content
       else
-        author_node.content
+        content = author_node.content
+        if content.strip.blank? && author_node['title'].present?
+          author_node['title']
+        else
+          content.strip
+        end
       end
       author
     end

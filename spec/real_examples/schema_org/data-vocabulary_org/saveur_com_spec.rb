@@ -1,11 +1,13 @@
 # encoding: UTF-8
-require 'hangry'
 
 describe Hangry do
 
   context "saveur.com recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/data-vocabulary_org/saveur.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/data-vocabulary_org/saveur.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == nil }
     its(:canonical_url) { should == "http://www.saveur.com/article/Recipes/Smoked-Trout-Blinis-with-Creme-Fraiche-and-Dill" }

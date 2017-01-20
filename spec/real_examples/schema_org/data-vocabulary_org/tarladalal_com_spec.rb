@@ -1,11 +1,13 @@
 # encoding: UTF-8
-require 'hangry'
 
 describe Hangry do
 
   context "tarladalal.com recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/data-vocabulary_org/tarladalal.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/data-vocabulary_org/tarladalal.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == "Tarla Dalal" }
     its(:canonical_url) { should == nil }

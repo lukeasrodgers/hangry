@@ -1,11 +1,13 @@
 # encoding: UTF-8
-require 'hangry'
 
 describe Hangry do
 
   context "campbellskitchen.com recipe" do
-    let(:html) { File.read("spec/fixtures/hrecipe/campbellskitchen.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/hrecipe/campbellskitchen.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == nil }
     its(:canonical_url) { should == "http://www.campbellskitchen.com/recipes/savory-white-beans-spinach-60821" }

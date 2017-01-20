@@ -29,7 +29,6 @@ task :update_fixtures do
     ['http://www.bbc.co.uk/food/recipes/paella_7100', 'spec/fixtures/hrecipe/bbc.co.uk.html'],
     ['http://www.bigoven.com/recipe/steves-fish-tacos/178920', 'spec/fixtures/hrecipe/bigoven.html'],
     ['http://www.campbellskitchen.com/recipes/recipedetails?recipeid=60821', 'spec/fixtures/hrecipe/campbellskitchen.com.html'],
-    ['http://www.cooking.com/recipes-and-more/recipes/garlic-shrimp-recipe-41.aspx', 'spec/fixtures/hrecipe/cooking.com.html'],
     ['http://www.cooks.com/recipe/oc0mk7z3/lemon-bars-deluxe.html', 'spec/fixtures/hrecipe/cooks.com.html'],
     ['http://www.drinksmixer.com/drink2438.html', 'spec/fixtures/hrecipe/drinksmixer.com.html'],
     ['http://www.epicurious.com/recipes/food/views/grilled-turkey-burgers-with-cheddar-and-smoky-aioli-354289', 'spec/fixtures/hrecipe/epicurious.html'],

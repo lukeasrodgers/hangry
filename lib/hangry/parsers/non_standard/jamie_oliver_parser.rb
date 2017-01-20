@@ -1,18 +1,26 @@
 module Hangry
   module Parsers
     module NonStandard
-      class JamieOliverParser < HRecipeParser
+      class JamieOliverParser < JsonLDParser
 
         def self.can_parse?(html)
-          html.include?('jamieoliver.com')
+          new(html).nokogiri_doc.css('meta[name="author"]').first['content'] == "JamieOliver.com"
+        rescue NoMethodError
+          false
         end
 
-        def parse_description
-          recipe_ast.css(".instructions").css("i").first.content
+        private
+
+        def parse_author
+          "Jamie Oliver"
         end
 
         def parse_instructions
-          recipe_ast.css(".content").css(".instructions").map(&:content).join("\n") 
+          # JamieOliver.com has html inside json ld recipeInstructions node
+          nodes = nodes_with_itemprop(:recipeInstructions)
+          nodes = [nodes].flatten
+          html = nodes.map(&:strip).uniq.join("\n")
+          Nokogiri::HTML(html.gsub(/<\/li><li>/, "\n")).content
         end
       end
     end
