@@ -11,6 +11,10 @@ module Hangry
           node_with_itemprop(:recipeInstructions).css("p").map(&:content).join("\n")
         end
 
+        def parse_description
+          node_with_itemprop(:description)['content']
+        end
+
       end
     end
   end
