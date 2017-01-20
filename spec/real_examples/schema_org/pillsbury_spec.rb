@@ -4,14 +4,17 @@ require 'hangry'
 describe Hangry do
 
   context "pillsbury.com recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/pillsbury.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/pillsbury.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == nil }
-    its(:canonical_url) { should == "http://www.pillsbury.com/recipes/big-cheesy-pepperoni-pockets/a17766e6-30ce-4a0c-af08-72533bb9b449" }
+    its(:canonical_url) { should == "https://www.pillsbury.com/recipes/big-cheesy-pepperoni-pockets/a17766e6-30ce-4a0c-af08-72533bb9b449" }
     its(:cook_time) { should == nil }
     its(:description) { should == "Enjoy these cheesy pepperoni hand pies made using Pillsbury® Big & Flaky dinner rolls – a delicious dinner that’s ready in 25 minutes." }
-    its(:image_url) { should == 'http://s3.amazonaws.com/gmi-digital-library/6e04c5d1-8b2c-41aa-83e3-7dac9cb3ca40.jpg' }
+    its(:image_url) { should == 'https://images-gmi-pmc.edge-generalmills.com/bec36657-4cd8-4b87-93bb-b8f833499c7c.jpg' }
     its(:ingredients) {
       should == [
         "1 can (12 oz) Pillsbury™ Grands ®! Big & Flaky crescent dinner rolls",
@@ -49,7 +52,7 @@ Bake 13 to 15 minutes or until golden brown. Immediately remove from cookie shee
       EOS
       should == instructions.strip
     }
-    its(:prep_time) { should == nil }
+    its(:prep_time) { should == 10 }
     its(:published_date) { should == nil }
     its(:total_time) { should == 25 }
     its(:yield) { should == "4" }
