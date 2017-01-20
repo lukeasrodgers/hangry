@@ -4,8 +4,11 @@ require 'hangry'
 describe Hangry do
 
   context "drinksmixer.com recipe" do
-    let(:html) { File.read("spec/fixtures/hrecipe/drinksmixer.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/hrecipe/drinksmixer.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == nil }
     its(:canonical_url) { should == nil }

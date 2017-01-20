@@ -4,8 +4,11 @@ require 'hangry'
 describe Hangry do
 
   context "cooks.com recipe" do
-    let(:html) { File.read("spec/fixtures/hrecipe/cooks.com.html") }
-    subject { Hangry.parse(html.encode!("UTF-8", 'binary', :invalid => :replace, :undef => :replace, :replace => '')) }
+    before(:all) do
+      @html = File.read("spec/fixtures/hrecipe/cooks.com.html").encode!("UTF-8", 'binary', :invalid => :replace, :undef => :replace, :replace => '')
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == "CM" }
     its(:canonical_url) { should == nil }

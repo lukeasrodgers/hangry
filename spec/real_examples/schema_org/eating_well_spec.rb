@@ -4,11 +4,14 @@ require 'hangry'
 describe Hangry do
 
   context "eatingwell.com recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/eatingwell.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/eatingwell.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::EatingWellParser)
+      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::EatingWellParser)
     end
 
     its(:author) { should == "EatingWell Test Kitchen" }

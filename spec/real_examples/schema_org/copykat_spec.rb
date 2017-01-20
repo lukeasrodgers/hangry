@@ -5,11 +5,14 @@ require 'rspec/its'
 describe Hangry do
 
   context "copykat.com recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/copykat.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/copykat.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::CopykatParser)
+      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::CopykatParser)
     end
 
     its(:author) { should == "Stephanie Manley via CopyKat.com" }

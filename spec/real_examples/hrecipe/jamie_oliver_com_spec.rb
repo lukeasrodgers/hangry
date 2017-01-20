@@ -5,11 +5,14 @@ require 'rspec/its'
 describe Hangry do
 
   context "jamieoliver.com recipe" do
-    let(:html) { File.read("spec/fixtures/hrecipe/jamieoliver.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/hrecipe/jamieoliver.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::JamieOliverParser)
+      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::JamieOliverParser)
     end
 
     its(:author) { should == "Jamie Oliver" }

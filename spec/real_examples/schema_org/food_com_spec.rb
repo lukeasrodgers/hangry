@@ -5,8 +5,11 @@ require 'rspec/its'
 describe Hangry do
 
   context "food.com recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/food.com.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/food.com.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == "flume027" }
     its(:canonical_url) { should == "http://www.food.com/recipe/panda-express-orange-chicken-103215" }

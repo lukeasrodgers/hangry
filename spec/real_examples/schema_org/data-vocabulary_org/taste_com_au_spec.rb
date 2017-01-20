@@ -4,8 +4,11 @@ require 'hangry'
 describe Hangry do
 
   context "taste.com.au recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/data-vocabulary_org/taste.com.au.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html =File.read("spec/fixtures/schema_org/data-vocabulary_org/taste.com.au.html") 
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == "Sophia Young" }
     its(:canonical_url) { should == "/recipes/24586/lemon+melting+moments" }

@@ -5,8 +5,11 @@ require "rspec/its"
 describe Hangry do
 
   context "bbc.co.uk recipe" do
-    let(:html) { File.read("spec/fixtures/hrecipe/bbc.co.uk.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/hrecipe/bbc.co.uk.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == "Antony Worrall Thompson" }
     its(:canonical_url) { should == nil }

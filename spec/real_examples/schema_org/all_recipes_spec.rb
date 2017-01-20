@@ -4,8 +4,11 @@ require 'rspec/its'
 describe Hangry do
 
   context "allrecipes.com recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/allrecipes.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/allrecipes.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == 'United Soybean Board' }
     its(:canonical_url) { should == 'http://allrecipes.com/recipe/230347/roasted-vegetable-and-couscous-salad/'}

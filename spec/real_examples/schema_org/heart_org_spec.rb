@@ -4,8 +4,11 @@ require 'hangry'
 describe Hangry do
 
   context "heart.org recipe" do
-    let(:html) { File.read("spec/fixtures/schema_org/heart.org.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/schema_org/heart.org.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     its(:author) { should == nil }
     its(:canonical_url) { should == nil }

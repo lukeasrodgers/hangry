@@ -6,8 +6,11 @@ describe Hangry do
 
   context "bigoven.com recipe" do
 
-    let(:html) { File.read("spec/fixtures/hrecipe/bigoven.html") }
-    subject { Hangry.parse(html) }
+    before(:all) do
+      @html = File.read("spec/fixtures/hrecipe/bigoven.html")
+      @parsed = Hangry.parse(@html)
+    end
+    subject { @parsed }
 
     # it "should use the correct parser" do
       # expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::BigOvenParser)
