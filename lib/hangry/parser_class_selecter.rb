@@ -14,6 +14,7 @@ require 'hangry/parsers/non_standard/jamie_oliver_parser'
 require 'hangry/parsers/non_standard/southern_food_parser'
 require 'hangry/parsers/non_standard/taste_of_home_parser'
 require 'hangry/parsers/non_standard/mr_food_com_parser'
+require 'hangry/parsers/non_standard/rachaelray_parser'
 
 module Hangry
   class ParserClassSelecter
@@ -32,7 +33,8 @@ module Hangry
         Parsers::NonStandard::JamieOliverParser,
         Parsers::NonStandard::SouthernFoodParser,
         Parsers::NonStandard::TasteOfHomeParser,
-        Parsers::NonStandard::MrFoodComParser
+        Parsers::NonStandard::MrFoodComParser,
+        Parsers::NonStandard::RachaelRayParser
       ]
       parser_classes += [SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser, JsonLDParser]
       parser_classes << DefaultRecipeParser
