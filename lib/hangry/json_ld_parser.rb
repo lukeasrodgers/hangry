@@ -89,9 +89,7 @@ module Hangry
     end
 
     def parse_yield
-      value(node_with_itemprop(:recipeYield)) ||
-      value(node_with_itemprop(:recipeYield)) ||
-      NullObject.new
+      value(node_with_itemprop(:recipeYield)) || NullObject.new
     end
 
     def parse_time(type)
