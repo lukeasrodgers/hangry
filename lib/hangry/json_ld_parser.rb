@@ -9,10 +9,6 @@ module Hangry
       'script[type="application/ld+json"]'
     end
 
-    def self.ingredient_itemprop
-      'recipeIngredient'
-    end
-
     def initialize(nokogiri_doc)
       self.nokogiri_doc = nokogiri_doc
     end
@@ -43,7 +39,7 @@ module Hangry
 
     def contains_required_keys?(json)
       json.key?('name') &&
-      json.key?(self.class.ingredient_itemprop) &&
+      json.key?('recipeIngredient') &&
       json.key?('recipeInstructions')
     end
 
@@ -68,7 +64,9 @@ module Hangry
     end
 
     def parse_author
-      node_with_itemprop(:author)
+      author = node_with_itemprop(:author)
+      author = author["name"] if author.is_a?(Hash) && author["@type"].to_s.downcase == "person"
+      author
     end
 
     def parse_description
@@ -76,7 +74,7 @@ module Hangry
     end
 
     def parse_ingredients
-      nodes_with_itemprop(self.class.ingredient_itemprop).map(&:strip).reject(&:blank?)
+      nodes_with_itemprop('recipeIngredient').map(&:strip).reject(&:blank?)
     end
 
     def parse_name
@@ -118,7 +116,9 @@ module Hangry
     end
 
     def parse_image_url
-      node_with_itemprop(:image)
+      url = node_with_itemprop(:image)
+      url = url["url"] if url.is_a?(Hash) && url["@type"] == "ImageObject"
+      url
     end
   end
 end
