@@ -28,11 +28,11 @@ module Hangry
       when String
         clean_string(value, options)
       when Array
-        value.map { |string| clean_string(string, options) }
+        value.map { |value| clean_value(value, options) }
       when Hash
-        value.each do |key, string|
-          next unless string
-          recipe.nutrition[key] = clean_string(string, options)
+        value.each do |key, value|
+          next unless value
+          recipe.nutrition[key] = clean_value(value, options)
         end
       else
         value
