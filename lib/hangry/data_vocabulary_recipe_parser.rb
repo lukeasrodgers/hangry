@@ -9,8 +9,8 @@ module Hangry
       '[itemtype="http://data-vocabulary.org/NutritionInformation"]'
     end
 
-    def self.ingredient_itemprop
-      :ingredient
+    def self.ingredient_itemprops
+      %w{ingredient}
     end
 
     private
@@ -43,4 +43,3 @@ module Hangry
   end
 
 end
-

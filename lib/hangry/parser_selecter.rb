@@ -13,9 +13,7 @@ require 'hangry/parsers/non_standard/home_cooking_parser'
 require 'hangry/parsers/non_standard/jamie_oliver_parser'
 require 'hangry/parsers/non_standard/southern_food_parser'
 require 'hangry/parsers/non_standard/taste_of_home_parser'
-require 'hangry/parsers/non_standard/mr_food_com_parser'
 require 'hangry/parsers/non_standard/rachaelray_parser'
-require 'hangry/parsers/non_standard/nytimes_parser'
 require 'hangry/parsers/non_standard/all_recipes_parser'
 
 module Hangry
@@ -36,9 +34,7 @@ module Hangry
         Parsers::NonStandard::JamieOliverParser,
         Parsers::NonStandard::SouthernFoodParser,
         Parsers::NonStandard::TasteOfHomeParser,
-        Parsers::NonStandard::MrFoodComParser,
         Parsers::NonStandard::RachaelRayParser,
-        Parsers::NonStandard::NyTimesParser,
         Parsers::NonStandard::AllRecipesParser
       ]
       parser_classes += [JsonLDParser, SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser]
