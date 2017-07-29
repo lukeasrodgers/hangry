@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class Epicurious2Parser < SchemaOrgRecipeParser
 
-        def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'epicurious.com') && canonical_url_contains_path?(html,'recipes/member/views')
+        def can_parse?
+          canonical_url_matches_domain?('epicurious.com') && canonical_url_contains_path?('recipes/member/views')
         end
 
         def parse_description

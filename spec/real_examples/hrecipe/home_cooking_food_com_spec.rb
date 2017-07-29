@@ -10,7 +10,7 @@ describe Hangry do
     subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::HomeCookingParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::HomeCookingParser)
     end
 
     its(:author) { should == "Peggy Trowbridge Filippone" }

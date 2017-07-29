@@ -1,6 +1,6 @@
 module Hangry
   class DefaultRecipeParser < RecipeParser
-    def self.can_parse?(*)
+    def can_parse?(*)
       true
     end
 

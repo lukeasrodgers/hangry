@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class FoodNetworkParser < SchemaOrgRecipeParser
 
-        def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'foodnetwork.com')
+        def can_parse?
+          canonical_url_matches_domain?('foodnetwork.com')
         end
 
         def parse_instructions

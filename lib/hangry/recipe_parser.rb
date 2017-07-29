@@ -22,11 +22,11 @@ module Hangry
     end
 
     def self.can_parse?(html)
-      new(html).recipe_ast
+      new(html).can_parse?
     end
 
-    def self.canonical_url_matches_domain?(html, domain)
-      CanonicalUrlParser.new(html).canonical_domain == domain
+    def can_parse?
+      !!recipe_ast
     end
 
     def recipe_ast
@@ -37,6 +37,16 @@ module Hangry
     def nutrition_ast
       return @nutrition_ast if defined?(@nutrition_ast)
       @nutrition_ast = recipe_ast && recipe_ast.css(self.class.nutrition_selector)
+    end
+
+    protected
+
+    def canonical_url_matches_domain?(domain)
+      CanonicalUrlParser.new(nokogiri_doc).canonical_domain == domain
+    end
+
+    def canonical_url_includes?(phrase)
+      !CanonicalUrlParser.new(nokogiri_doc).canonical_url.nil? && CanonicalUrlParser.new(nokogiri_doc).canonical_url.include?(phrase)
     end
 
     private

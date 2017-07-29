@@ -17,8 +17,8 @@ module Hangry
       self.nokogiri_doc = nokogiri_doc
     end
 
-    def self.can_parse?(html)
-      new(html).recipe_hash
+    def can_parse?
+      !!recipe_hash
     end
 
     def recipe_ld_script

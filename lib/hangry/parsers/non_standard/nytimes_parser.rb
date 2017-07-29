@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class NyTimesParser < SchemaOrgRecipeParser
 
-        def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'nytimes.com') && new(html).recipe_ast
+        def can_parse?
+          canonical_url_matches_domain?('nytimes.com') && recipe_ast
         end
 
         def self.ingredient_itemprop

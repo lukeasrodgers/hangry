@@ -10,9 +10,9 @@ describe Hangry do
     subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::NyTimesParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::NyTimesParser)
     end
-    
+
     its(:author) { should == "Nigella Lawson" }
     its(:canonical_url) { should == "http://cooking.nytimes.com/recipes/1017945-coq-au-riesling" }
     its(:cook_time) { should == nil }

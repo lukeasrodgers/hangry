@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class SouthernFoodParser < SchemaOrgRecipeParser
 
-        def self.can_parse?(html)
-          !CanonicalUrlParser.new(html).canonical_url.nil? && CanonicalUrlParser.new(html).canonical_url.include?('southernfood.about.com')
+        def can_parse?
+          canonical_url_includes?('southernfood.about.com')
         end
 
         def parse_name
@@ -30,4 +30,3 @@ module Hangry
     end
   end
 end
-

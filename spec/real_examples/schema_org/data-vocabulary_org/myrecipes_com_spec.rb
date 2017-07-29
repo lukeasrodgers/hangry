@@ -10,9 +10,9 @@ describe Hangry do
     subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::DataVocabularyRecipeParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::DataVocabularyRecipeParser)
     end
-    
+
     its(:author) { should == "Southern Living" }
     its(:canonical_url) { should == 'http://www.myrecipes.com/recipe/best-carrot-cake-10000000257583/' }
     its(:cook_time) { should == nil }
@@ -49,7 +49,3 @@ Bake at 350° for 25 to 30 minutes or until a wooden pick inserted in center com
   end
 
 end
-
-
-
-

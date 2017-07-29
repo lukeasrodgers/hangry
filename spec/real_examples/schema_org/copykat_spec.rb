@@ -10,7 +10,7 @@ describe Hangry do
     subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::CopykatParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::CopykatParser)
     end
 
     its(:author) { should == "Stephanie Manley via CopyKat.com" }
@@ -20,11 +20,11 @@ describe Hangry do
     its(:image_url) { should == "http://www.copykat.com/wp-content/uploads/2014/12/swansons-finished-low-fat-scalloped-potatoes-150x100.jpg" }
     its(:ingredients) {
       should == [
-        "1 pound Russet potatoes", 
-        "Non-stick spray", 
-        "1 teaspoon salt", 
-        "1/2 teaspoon freshly ground black pepper", 
-        "1 (26.1 ounces) box Low Fat Swanson's Cream Starter TM", 
+        "1 pound Russet potatoes",
+        "Non-stick spray",
+        "1 teaspoon salt",
+        "1/2 teaspoon freshly ground black pepper",
+        "1 (26.1 ounces) box Low Fat Swanson's Cream Starter TM",
         "1 cup Cheddar cheese, optional"
       ]
     }

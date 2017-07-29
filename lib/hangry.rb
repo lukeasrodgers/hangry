@@ -1,5 +1,5 @@
 require "hangry/version"
-require 'hangry/parser_class_selecter'
+require 'hangry/parser_selecter'
 require 'hangry/recipe_attribute_cleaner'
 require 'active_support/core_ext/object/blank'
 require 'date'
@@ -41,8 +41,8 @@ module Hangry
 
   def self.parse(html)
     nokogiri_doc = Nokogiri::HTML(html)
-    parser_class = ParserClassSelecter.new(nokogiri_doc).parser_class
-    recipe = parser_class.new(nokogiri_doc).parse
+    parser = ParserSelector.new(nokogiri_doc).parser
+    recipe = parser.parse
     RecipeAttributeCleaner.new(recipe).clean
   end
 

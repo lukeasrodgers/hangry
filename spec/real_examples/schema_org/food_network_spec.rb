@@ -8,9 +8,9 @@ describe Hangry do
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
-    
+
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::FoodNetworkParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::FoodNetworkParser)
     end
 
     its(:canonical_url) { should == 'http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html' }

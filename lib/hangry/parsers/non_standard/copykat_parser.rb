@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class CopykatParser < SchemaOrgRecipeParser
 
-        def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'copykat.com')
+        def can_parse?
+          canonical_url_matches_domain?('copykat.com')
         end
 
         def parse_author

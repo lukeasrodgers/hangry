@@ -10,9 +10,9 @@ describe Hangry do
     subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::TasteOfHomeParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::TasteOfHomeParser)
     end
-    
+
     its(:author) { should == "" }
     its(:canonical_url) { should == 'http://www.tasteofhome.com/recipes/rhubarb-popover-pie' }
     its(:cook_time) { should == 20 }
@@ -56,7 +56,7 @@ In a large bowl, combine flour and salt. In another bowl, whisk eggs and milk.
 Place butter in an 9-in. pie plate; heat in a 425° oven for 3-5 minutes or until butter is melted. Meanwhile, stir egg mixture into dry ingredients just until moistened.
 Carefully swirl the butter in the pan to coat the sides and bottom of pan; add batter. Bake at 425° for 16-20 minutes or until puffed and golden brown.
 Meanwhile, in a large skillet, saute rhubarb and pineapple in butter until rhubarb is tender. Stir in brown sugar; bring to a boil over medium heat, stirring constantly. Pour into the center of puffed pancake; cut into six wedges. Serve immediately with whipped cream if desired.
-Yield: 6 servings.      
+Yield: 6 servings.
       EOS
       should == instructions.strip
     }

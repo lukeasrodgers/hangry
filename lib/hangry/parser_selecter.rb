@@ -19,13 +19,13 @@ require 'hangry/parsers/non_standard/nytimes_parser'
 require 'hangry/parsers/non_standard/all_recipes_parser'
 
 module Hangry
-  class ParserClassSelecter
+  class ParserSelector
     def initialize(nokogiri_doc)
       nokogiri_doc = Nokogiri::HTML(nokogiri_doc) if nokogiri_doc.is_a?(String)
       @nokogiri_doc = nokogiri_doc
     end
 
-    def parser_class
+    def parser
       # Prefer the more specific parsers
       parser_classes = [
         Parsers::NonStandard::CopykatParser,
@@ -42,8 +42,11 @@ module Hangry
         Parsers::NonStandard::AllRecipesParser
       ]
       parser_classes += [SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser, JsonLDParser]
-      parser_classes << DefaultRecipeParser
-      parser_classes.detect { |p| p.can_parse?(@nokogiri_doc) }
+      parser_classes.each do |parser_class|
+        parser = parser_class.new(@nokogiri_doc)
+        return parser if parser.can_parse?
+      end
+      DefaultRecipeParser.new(@nokogiri_doc)
     end
 
   end

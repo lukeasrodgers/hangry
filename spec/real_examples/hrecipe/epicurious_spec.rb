@@ -8,9 +8,9 @@ describe Hangry do
     subject { @parsed }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(@html).parser_class).to eq(Hangry::Parsers::NonStandard::EpicuriousParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::EpicuriousParser)
     end
-    
+
     its(:author) { should == "Janet Taylor McCracken" }
     its(:canonical_url) { should == "http://www.epicurious.com/recipes/food/views/grilled-turkey-burgers-with-cheddar-and-smoky-aioli-354289" }
     its(:cook_time) { should == 40 }

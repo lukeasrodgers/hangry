@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class JamieOliverParser < JsonLDParser
 
-        def self.can_parse?(html)
-          new(html).nokogiri_doc.css('meta[name="author"]').first['content'] == "JamieOliver.com"
+        def can_parse?
+          nokogiri_doc.css('meta[name="author"]').first['content'] == "JamieOliver.com"
         rescue NoMethodError
           false
         end

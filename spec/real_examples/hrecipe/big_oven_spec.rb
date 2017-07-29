@@ -11,7 +11,7 @@ describe Hangry do
     subject { @parsed }
 
     # it "should use the correct parser" do
-      # expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::BigOvenParser)
+      # expect(Hangry::ParserSelector.new(html).parser).to be_a(Hangry::Parsers::NonStandard::BigOvenParser)
     # end
 
     its(:author) do

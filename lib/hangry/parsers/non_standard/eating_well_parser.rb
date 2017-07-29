@@ -7,8 +7,8 @@ module Hangry
           '[itemtype="http://schema.org/Recipe"]'
         end
 
-        def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'eatingwell.com')
+        def can_parse?
+          canonical_url_matches_domain?('eatingwell.com')
         end
 
         def parse_instructions

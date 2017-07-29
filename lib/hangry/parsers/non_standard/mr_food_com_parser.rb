@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class MrFoodComParser < SchemaOrgRecipeParser
 
-        def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'MrFood.com')
+        def can_parse?
+          canonical_url_matches_domain?('MrFood.com')
         end
 
         def self.ingredient_itemprop
