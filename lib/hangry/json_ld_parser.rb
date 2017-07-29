@@ -3,7 +3,6 @@ require 'json'
 
 module Hangry
   class JsonLDParser < SchemaOrgRecipeParser
-    attr_reader :recipe_html
     attr_accessor :nokogiri_doc, :nutrition_hash, :recipe_hash, :recipe
 
     def self.root_selector
@@ -14,11 +13,10 @@ module Hangry
       'recipeIngredient'
     end
 
-    def initialize(recipe_html)
-      @recipe_html = recipe_html
+    def initialize(nokogiri_doc)
       @recipe = Recipe.new
       initialize_nutrition
-      self.nokogiri_doc = Nokogiri::HTML(recipe_html)
+      self.nokogiri_doc = nokogiri_doc
       recipe_ld_script = nokogiri_doc.css(self.class.root_selector).first
       self.recipe_hash = recipe_ld_script && JSON.parse(recipe_ld_script.content.tr("\n", ''))
       self.nutrition_hash = recipe_hash && recipe_hash['nutrition']

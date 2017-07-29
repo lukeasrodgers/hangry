@@ -2,14 +2,12 @@ require 'hangry/canonical_url_parser'
 
 module Hangry
   class RecipeParser
-    attr_reader :recipe_html
     attr_accessor :nokogiri_doc, :nutrition_ast, :recipe_ast, :recipe
 
-    def initialize(recipe_html)
-      @recipe_html = recipe_html
+    def initialize(nokogiri_doc)
       @recipe = Recipe.new
       initialize_nutrition
-      self.nokogiri_doc = Nokogiri::HTML(recipe_html)
+      self.nokogiri_doc = nokogiri_doc
       self.recipe_ast = nokogiri_doc.css(self.class.root_selector).first
       self.nutrition_ast = recipe_ast && recipe_ast.css(self.class.nutrition_selector)
     end
@@ -86,5 +84,3 @@ module Hangry
   end
 
 end
-
-

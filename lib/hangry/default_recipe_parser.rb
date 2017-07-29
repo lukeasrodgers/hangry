@@ -1,10 +1,10 @@
 module Hangry
   class DefaultRecipeParser < RecipeParser
-    def self.can_parse?(html)
+    def self.can_parse?(*)
       true
     end
 
-    def initialize(html)
+    def initialize(*)
     end
 
     def parse

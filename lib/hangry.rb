@@ -40,10 +40,10 @@ module Hangry
   Recipe = Struct.new(*RECIPE_ATTRIBUTES)
 
   def self.parse(html)
-    parser_class = ParserClassSelecter.new(html).parser_class
-    recipe = parser_class.new(html).parse
+    nokogiri_doc = Nokogiri::HTML(html)
+    parser_class = ParserClassSelecter.new(nokogiri_doc).parser_class
+    recipe = parser_class.new(nokogiri_doc).parse
     RecipeAttributeCleaner.new(recipe).clean
   end
 
 end
-
