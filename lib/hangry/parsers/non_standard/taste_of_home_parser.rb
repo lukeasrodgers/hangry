@@ -4,7 +4,7 @@ module Hangry
       class TasteOfHomeParser < SchemaOrgRecipeParser
 
         def self.root_selector
-          '[itemtype="http://schema.org/recipe"]'
+          '[itemtype*="schema.org/recipe"]'
         end
 
         def can_parse?
@@ -28,4 +28,3 @@ module Hangry
     end
   end
 end
-

@@ -3,10 +3,6 @@ module Hangry
     module NonStandard
       class EatingWellParser < SchemaOrgRecipeParser
 
-        def self.root_selector
-          '[itemtype="http://schema.org/Recipe"]'
-        end
-
         def can_parse?
           canonical_url_matches_domain?('eatingwell.com')
         end
@@ -43,4 +39,3 @@ module Hangry
     end
   end
 end
-

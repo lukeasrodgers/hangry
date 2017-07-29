@@ -2,11 +2,11 @@ module Hangry
   class SchemaOrgRecipeParser < RecipeParser
 
     def self.root_selector
-      '[itemtype="http://schema.org/Recipe"]'
+      '[itemtype*="schema.org/Recipe"]'
     end
 
     def self.nutrition_selector
-      '[itemtype="http://schema.org/NutritionInformation"]'
+      '[itemtype*="schema.org/NutritionInformation"]'
     end
 
     def self.ingredient_itemprop
@@ -32,7 +32,7 @@ module Hangry
     end
     def parse_author
       author_node = node_with_itemprop(:author)
-      author = if author_node['itemtype'] == "http://schema.org/Person"
+      author = if author_node['itemtype'] =~ /schema.org\/Person/
         #author_node.css('[itemprop = "name"]').first['content']
         author_node.css('[itemprop = "name"]').first.content
       else
