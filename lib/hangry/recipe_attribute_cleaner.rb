@@ -34,6 +34,8 @@ module Hangry
           next unless value
           recipe.nutrition[key] = clean_value(value, options)
         end
+      when Hangry::RecipeParser::NullObject
+        nil
       else
         value
       end
