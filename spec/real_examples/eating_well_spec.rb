@@ -31,13 +31,13 @@ describe Hangry do
       should == {
         calories: '257 calories;',
         cholesterol: '70',
-        fiber: '0.0',
-        protein: '26.0',
-        saturated_fat: '3.0',
+        fiber: '0',
+        protein: '26',
+        saturated_fat: '3',
         sodium: '634',
-        sugar: '1.0',
-        total_carbohydrates: '12.0',
-        total_fat: '9.0',
+        sugar: '1',
+        total_carbohydrates: '12',
+        total_fat: '9',
         trans_fat: nil,
         unsaturated_fat: nil
       }
@@ -61,4 +61,3 @@ Return the chicken and any accumulated juices to the pan, reduce heat to a simme
   end
 
 end
-

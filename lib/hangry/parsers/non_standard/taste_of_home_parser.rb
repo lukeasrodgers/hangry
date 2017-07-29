@@ -19,11 +19,6 @@ module Hangry
           value(node_with_itemprop(:recipeyield).content)
         end
 
-        def parse_instructions
-          # => rd_directions.rd_ingredient each
-          recipe_ast.css(".rd_directions").first.css(".rd_ingredient").map(&:content).join("\n")
-        end
-
       end
     end
   end

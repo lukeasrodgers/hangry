@@ -8,10 +8,7 @@ require 'hangry/json_ld_parser'
 require 'hangry/parsers/non_standard/copykat_parser'
 require 'hangry/parsers/non_standard/eating_well_parser'
 require 'hangry/parsers/non_standard/epicurious_parser'
-require 'hangry/parsers/non_standard/food_network_parser'
-require 'hangry/parsers/non_standard/home_cooking_parser'
 require 'hangry/parsers/non_standard/jamie_oliver_parser'
-require 'hangry/parsers/non_standard/southern_food_parser'
 require 'hangry/parsers/non_standard/taste_of_home_parser'
 require 'hangry/parsers/non_standard/rachaelray_parser'
 require 'hangry/parsers/non_standard/all_recipes_parser'
@@ -29,10 +26,7 @@ module Hangry
         Parsers::NonStandard::CopykatParser,
         Parsers::NonStandard::EatingWellParser,
         Parsers::NonStandard::EpicuriousParser,
-        Parsers::NonStandard::FoodNetworkParser,
-        Parsers::NonStandard::HomeCookingParser,
         Parsers::NonStandard::JamieOliverParser,
-        Parsers::NonStandard::SouthernFoodParser,
         Parsers::NonStandard::TasteOfHomeParser,
         Parsers::NonStandard::RachaelRayParser,
         Parsers::NonStandard::AllRecipesParser

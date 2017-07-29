@@ -16,7 +16,7 @@ describe Hangry do
     its(:author) { should == "Grace Parisi" }
     its(:canonical_url) { should == "http://www.foodandwine.com/recipes/honey-glazed-roasted-root-vegetables" }
     its(:cook_time) { should == nil }
-    its(:description) { should == "The secret to this sweet, slightly tangy dish: the touch of sherry vinegar in the glaze. Slideshow: More Thanksgiving Side Dishes" }
+    its(:description) { should == "The secret to this sweet, slightly tangy dish: the touch of sherry vinegar in the glaze. Slideshow: More Thanksgiving Side Dishes" }
     its(:image_url) { should == "http://cdn-image.foodandwine.com/sites/default/files/styles/551x551/public/200711-xl-honey-glazed-roasted-root-vegetables.jpg?itok=VlSDyVrG" }
     its(:ingredients) {
       should == [

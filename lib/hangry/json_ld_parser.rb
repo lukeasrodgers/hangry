@@ -1,5 +1,5 @@
 require 'hangry/canonical_url_parser'
-require 'json'
+require 'oj'
 
 module Hangry
   class JsonLDParser < SchemaOrgRecipeParser
@@ -20,7 +20,7 @@ module Hangry
     def recipe_hash
       return @recipe_hash if defined?(@recipe_hash)
       nokogiri_doc.css(self.class.root_selector).each do |script|
-        json = JSON.parse(script.content.tr("\n", ''))
+        json = Oj.load(script.content)
         return @recipe_hash = json if is_a_recipe?(json) && contains_required_keys?(json)
       end
       @recipe_hash = nil

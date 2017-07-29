@@ -6,6 +6,8 @@ gemspec
 gem "activesupport", "< 5.0" if RUBY_VERSION < "2.2.2"
 gem "nokogiri", "< 1.7.0" if RUBY_VERSION <= "2.0.0"
 
+gem "oj"
+
 group :tools do
   gem 'byebug', platform: :mri
 end

@@ -9,61 +9,52 @@ describe Hangry do
     end
     subject { @parsed }
 
-    it "should use the data-vocabulary parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::DataVocabularyRecipeParser)
+    it "should use the schema.org parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
     end
 
     its(:author) { should == "Tarla Dalal" }
-    its(:canonical_url) { should == nil }
-    its(:cook_time) { should == 15 }
-    its(:description) { should == "A Jain version of the all-time favourite veggie fried rice!" }
-    its(:image_url) { should == "images/recipe/addnewphoto.jpg" }
+    its(:canonical_url) { should == "https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r" }
+    its(:cook_time) { should == 6 }
+    its(:description) { should == "All-time favourite Vegetable Fried Rice in a Jain-friendly version, made without onions, garlic and other no-no ingredients. You will find that this delicacy retains its authentic flavour and texture despite the absence of these ingredients, which you might have thought to be indispensable in the preparation of Vegetable Fried Rice. The use of typically Oriental veggies like cabbage, capsicum and baby corn, along with tongue-tickling sauces, gives this main-course rice dish a fantastic flavour and aroma, which you will thoroughly enjoy. It is also important to stick to the cooking times mentioned in the recipe because if you under-cook the veggies, they will have a raw smell, whereas if you over-cook them, you will miss the crunch that is so typical of Chinese foods." }
+    its(:image_url) { should == "members/9306/big/big_5_spice_vegetable_fried_rice-10758.jpg?size=696X905" }
     its(:ingredients) {
       should == [
-        "4 cups 80 % cooked Rice",
-        "1/4 cup parboiled and sliced french beans",
-        "1/2 cup sliced coloured capsicum (green, yellow andred)",
-        "1/4 cup shredded cabbage",
-        "1/4 cup thinly sliced baby corn",
-        "2 tbsp chopped celery",
-        "3 tsp Chinese 5 Spice Powder",
-        "2 tbsp soy sauce",
-        "1 tbsp chilli sauce",
-        "2 tbsp oil",
-        "salt to taste",
-        "2 tbsp chopped coriander (dhania)"
+        '1/2 cup sliced capsicum (red , yellow and green)',
+        '1/2 cup diagonally cut and blanched babycorn',
+        '1/4 cup diagonally cut and blanched french beans',
+        '1/2 cup shredded cabbage',
+        '3 cups cooked long grained rice (basmati)',
+        '2 tbsp oil',
+        '1 tsp soy sauce',
+        '1 tbsp chilli sauce',
+        'salt and to taste'
       ]
     }
-    its(:name) { should == "5 Spice Vegetable Fried Rice" }
+    its(:name) { should == "Vegetable Fried Rice ( Jain )" }
     its(:nutrition) do
       should == {
-        calories: nil,
-        cholesterol: nil,
-        fiber: nil,
-        protein: nil,
+        calories: '510 cal',
+        cholesterol: '0 mg',
+        fiber: '4.9 g',
+        protein: '7.4 g',
         saturated_fat: nil,
-        sodium: nil,
+        sodium: '116.2 mg',
         sugar: nil,
-        total_carbohydrates: nil,
-        total_fat: nil,
+        total_carbohydrates: '75 g',
+        total_fat: '20.5 g',
         trans_fat: nil,
         unsaturated_fat: nil
       }
     end
 
     its(:instructions) {
-      instructions = <<-EOS
-Heat the oil in a wok over a high flame, add all vegetables and cook for 2 minutes on high flame.
-Add in rice, 5 spice powder, soya sauce, chilli sauce and salt.
-Mix well and cook for 5 minutes.
-Serve hot.
-      EOS
-      should == instructions.strip
+      should == "Heat the oil in a deep non-stick pan, add the capsicum and sauté on a medium flame for 1 minute.Add the babycorn and french beans and sauté on a medium flame for 1 to 2 minutes.Add the cabbage and sauté on a medium flame for 1 minute.Add the soya sauce and chilli sauce and mix well.Add the cooked rice, salt and pepper, mix well and cook on medium flame for 2 minutes, while stirring occasionally.Serve hot."
     }
-    its(:prep_time) { should == 20 }
+    its(:prep_time) { should == 15 }
     its(:published_date) { should == nil }
-    its(:total_time) { should == nil }
-    its(:yield) { should == "Serves 4." }
+    its(:total_time) { should == 21 }
+    its(:yield) { should == "Makes 3 servings" }
 
   end
 

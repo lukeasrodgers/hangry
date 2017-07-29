@@ -14,10 +14,10 @@ describe Hangry do
     end
 
     its(:author) { should == nil }
-    its(:canonical_url) { should == "http://www.bettycrocker.com/recipes/skillet-chicken-nachos/9bf0c3be-09dd-4b1b-8cf4-a9cfa979b232" }
+    its(:canonical_url) { should == "https://www.bettycrocker.com/recipes/skillet-chicken-nachos/9bf0c3be-09dd-4b1b-8cf4-a9cfa979b232" }
     its(:cook_time) { should == nil }
-    its(:description) { should == "Dinner ready in 20 minutes! Enjoy these delicious nachos spooned with chicken mixture sprinkled with cheese and cilantro - perfect for Mexican cuisine." }
-    its(:image_url) { should == 'http://images-gmi-pmc.edge-generalmills.com/5831d445-1435-4c97-b494-0b9c6d0e859b.jpg' }
+    its(:description) { should == "Dinner ready in 20 minutes! Enjoy these delicious nachos spooned with chicken mixture sprinkled with cheese and cilantro - perfect for Mexican cuisine. ...MORE+ LESS-" }
+    its(:image_url) { should == 'https://images-gmi-pmc.edge-generalmills.com/ec2a396d-4630-4958-8024-8844e947e06e.jpg' }
     its(:ingredients) {
       should == [
         "1 tablespoon olive or vegetable oil", "1 1/4 lb boneless skinless chicken breasts, cut into 1/4-inch pieces",

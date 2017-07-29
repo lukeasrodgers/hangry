@@ -23,7 +23,6 @@ task :update_fixtures do
     ['http://www.eatingwell.com/recipes/sauteed_chicken_breasts_with_creamy_chive_sauce.html', 'spec/fixtures/eatingwell.com.html'],
     ['http://www.food.com/recipe/panda-express-orange-chicken-103215', 'spec/fixtures/food.com.html'],
     ['http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html', 'spec/fixtures/food_network_schema_org.html'],
-    ['http://www.foodnetwork.com/recipes/food-network-kitchens/easter-bunny-cake-recipe/index.html', 'spec/fixtures/food_network_with_blank_ingredients.html'],
     ['http://www.foodandwine.com/recipes/honey-glazed-roasted-root-vegetables','spec/fixtures/foodandwine.com.html'],
     ['http://www.pillsbury.com/recipes/big-cheesy-pepperoni-hand-pies/a17766e6-30ce-4a0c-af08-72533bb9b449', 'spec/fixtures/pillsbury.com.html'],
     ['http://www.bbc.co.uk/food/recipes/paella_7100', 'spec/fixtures/bbc.co.uk.html'],
@@ -33,10 +32,9 @@ task :update_fixtures do
     ['http://www.drinksmixer.com/drink2438.html', 'spec/fixtures/drinksmixer.com.html'],
     ['http://www.epicurious.com/recipes/food/views/grilled-turkey-burgers-with-cheddar-and-smoky-aioli-354289', 'spec/fixtures/epicurious.html'],
     ['http://www.grouprecipes.com/135867/deep-dark-chocolate-cheesecake.html', 'spec/fixtures/grouprecipes.com.html'],
-    ['http://homecooking.about.com/od/muffinrecipes/r/blmuff23.htm', 'spec/fixtures/homecooking.about.com.html'],
+    ['https://www.thespruce.com/white-chocolate-key-lime-muffins-recipe-1808282', 'spec/fixtures/thespruce.com.html'],
     ['http://www.jamieoliver.com/recipes/pork-recipes/neck-fillet-steak/', 'spec/fixtures/jamieoliver.com.html'],
     ['http://www.mrfood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268', 'spec/fixtures/mrfood.com.html'],
-    ['http://southernfood.about.com/od/collardgreens/r/Kale-Saute-Recipe.htm', 'spec/fixtures/southernfood.about.com.html'],
     ['http://www.tasteofhome.com/recipes/rhubarb-popover-pie', 'spec/fixtures/tasteofhome.com.html'],
   ].each do |source, fixture|
     begin

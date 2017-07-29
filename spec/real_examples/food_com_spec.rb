@@ -20,47 +20,47 @@ describe Hangry do
     its(:image_url) { should == "http://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/10/32/15/pic7atxk2.jpg" }
     its(:ingredients) {
       should == [
-        "2 lbs boneless skinless chicken, chopped into bite sized pieces",
+        "2 lbs boneless skinless chicken, chopped into bite-sized pieces",
         "1 egg",
         "1 1/2 teaspoons salt",
         "white pepper",
         "oil (for frying)",
-        "1/2 cup cornstarch, plus",
-        "1 tablespoon cornstarch",
+        "1/2 cup cornstarch",
         "1/4 cup flour",
-        "1 tablespoon gingerroot, minced",
-        "1 teaspoon garlic, minced",
-        "1/2 teaspoon red chili pepper flakes",
-        "1/4 cup green onion, chopped",
-        "1 tablespoon rice wine",
-        "1/4 cup water",
-        "1/2 teaspoon sesame oil",
-        "1 1/2 tablespoons soy sauce",
-        "1 1/2 tablespoons water",
-        "5 tablespoons sugar",
-        "5 tablespoons white vinegar",
-        "1 orange, zest of"
+        "3 tablespoons soy sauce",
+        "3/4 cup orange juice",
+        "1/2 cup brown sugar",
+        "1 orange, zest of",
+        "1 tablespoon oil",
+        "2 tablespoons gingerroot, minced",
+        "2 teaspoons garlic, minced",
+        "1 teaspoon red chili pepper flakes",
+        "1/2 cup green onion, chopped",
+        "2 tablespoons rice wine",
+        "1/2 cup water",
+        "2 tablespoons cornstarch",
+        "1 teaspoon sesame oil"
       ]
     }
     its(:name) { should == "Panda Express Orange Chicken" }
     its(:nutrition) do
       should == {
-        calories: '305.5',
+        calories: '383.7',
         cholesterol: '128.1',
-        fiber: '0.5',
-        protein: '34.5',
-        saturated_fat: '1.2',
-        sodium: '1027.5',
-        sugar: '10.8',
-        total_carbohydrates: '26.7',
-        total_fat: '5.2',
+        fiber: '0.8',
+        protein: '35.3',
+        saturated_fat: '1.6',
+        sodium: '1288.5',
+        sugar: '20.9',
+        total_carbohydrates: '39.6',
+        total_fat: '8',
         trans_fat: nil,
         unsaturated_fat: nil
       }
     end
 
     its(:instructions) {
-      should == "Place chicken pieces in large bowl, set aside. In a medium bowl stir egg, salt, pepper and 1 tablespoon oil and mix well, set aside. In a medium bowl stir together 1/2 cup of the cornstarch and the flour. Coat chicken pieces with egg mixture, then add to flour mixture, stirring to coat. Heat oil for deep-frying in wok or deep-fryer to 375 degrees. Add chicken, small batches at a time, and fry 3 to 4 minutes or until golden crisp. (Do not overcook chicken). Remove chicken from oil with slotted spoon and drain on paper towels; set aside. Clean wok and heat 15 seconds over high heat. Add 1 tablespoon oil. Add ginger and garlic and stir-fry until fragrant; about 10 seconds. Add and stir-fry crushed chiles and green onions. Add rice wine and stir 3 seconds. Add Orange Sauce and bring to boil. Add cooked chicken, stirring until well mixed. Stir water into remaining 1 tablespoon cornstarch until smooth and add to chicken. Heat until sauce is thickned. Stir in sesame oil and orange zest if desired. Serve over jasmine rice."
+      should == "Place chicken pieces in a large bowl, set aside. In a medium bowl, stir egg, salt, pepper and 1 tablespoon oil and mix well, set aside. In a medium bowl, stir together 1/2 cup of the cornstarch and the flour. Heat oil for deep-frying in wok or deep-fryer to 375 degrees. Dip chicken pieces into egg mixture, then into the flour mixture, shaking off any excess. Add chicken to wok in small batches and fry for 3 to 4 minutes or until golden brown. (Do not overcook chicken). Remove chicken from oil with slotted spoon and drain on paper towels; set aside. FOR THE SAUCE:. In a small bowl, combine the soy sauce, orange juice, brown sugar and orange zest. Set aside. Clean wok and heat 15 seconds over high heat. Add 1 tablespoon oil, the gingerroot, garlic, crushed red chili pepper flakes and green onions and stir-fry for just a few seconds until fragrant. Now, add the rice wine and the soy sauce mixture you set aside above. Add cooked chicken, stirring until well mixed. In a small bowl, stir together the water and cornstarch, then add it to the wok and stir until sauce has thickened. Add sesame oil if desired. Serve over jasmine rice."
     }
     its(:prep_time) { should == 15 }
     its(:published_date) { should == Date.parse("2004-11-02") }

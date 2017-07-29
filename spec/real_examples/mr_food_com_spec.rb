@@ -4,6 +4,7 @@ describe Hangry do
 
   context "mrfood.com recipe" do
     before(:all) do
+      skip "mrfood.com appears not to be using any standard recipe microformat currently"
       @html = File.read("spec/fixtures/mrfood.com.html")
       @parsed = Hangry.parse(@html)
     end
@@ -14,7 +15,7 @@ describe Hangry do
     end
 
     its(:author) { should == 'rac7431 2877525' }
-    its(:canonical_url) { should == "http://www.MrFood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268" }
+    its(:canonical_url) { should == "https://www.MrFood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268" }
     its(:cook_time) { should == 320 }
     its(:description) { should == "Try this saucy pot roast over egg noodles, rice, or-for more authentic Italian flavor-polenta. It's a winner whichever way you choose!" }
     its(:image_url) { should == "//irepo.primecp.com/2015/09/235934/Saucy-Italian-Pot-Roast_Large600_ID-1183018.jpg?v=1183018" }
