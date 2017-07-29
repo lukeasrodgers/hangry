@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the h-recipe parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::HRecipeParser)
+    end
+
     its(:author) { should == nil }
     its(:canonical_url) { should == "http://www.campbellskitchen.com/recipes/savory-white-beans-spinach-60821" }
     its(:cook_time) { should == 10 }
@@ -43,7 +47,7 @@ describe Hangry do
       }
     end
 
-    its(:instructions) { 
+    its(:instructions) {
       instructions = <<-eos
 1
 Heat the oil in a 12-inch skillet over medium heat.  Add the onion and cook until tender, stirring occasionally.  Stir in the red pepper, concentrated broth and spinach.  Cover and cook until the spinach is wilted.
@@ -61,5 +65,3 @@ Add the beans, cheese and pasta and toss to coat.
   end
 
 end
-
-

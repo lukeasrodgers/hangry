@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the h-recipe parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::HRecipeParser)
+    end
+
     its(:author) { should == nil }
     its(:canonical_url) { should == nil }
     its(:cook_time) { should == nil }
@@ -32,7 +36,7 @@ describe Hangry do
       }
     end
 
-    its(:instructions) { 
+    its(:instructions) {
       instructions = <<-eos
 Crust
 Preheat oven to 350°F. Butter a 9” springform pan and line the base with parchment.
@@ -64,4 +68,3 @@ Serve with Raspberry Compote
   end
 
 end
-

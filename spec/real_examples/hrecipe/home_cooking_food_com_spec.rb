@@ -9,8 +9,8 @@ describe Hangry do
     end
     subject { @parsed }
 
-    it "should use the correct parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::HomeCookingParser)
+    it "should use a non-standard parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::Parsers::NonStandard::HomeCookingParser)
     end
 
     its(:author) { should == "Peggy Trowbridge Filippone" }

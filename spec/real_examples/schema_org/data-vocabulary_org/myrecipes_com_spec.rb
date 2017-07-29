@@ -9,8 +9,8 @@ describe Hangry do
     end
     subject { @parsed }
 
-    it "should use the correct parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::DataVocabularyRecipeParser)
+    it "should use the data-vocabulary parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::DataVocabularyRecipeParser)
     end
 
     its(:author) { should == "Southern Living" }

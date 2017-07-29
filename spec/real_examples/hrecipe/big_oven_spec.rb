@@ -10,9 +10,9 @@ describe Hangry do
     end
     subject { @parsed }
 
-    # it "should use the correct parser" do
-      # expect(Hangry::ParserSelector.new(html).parser).to be_a(Hangry::Parsers::NonStandard::BigOvenParser)
-    # end
+    it "should use the ld+json parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::JsonLDParser)
+    end
 
     its(:author) do
       should == "StevesKitchen"
@@ -71,8 +71,3 @@ Fold over and dig in, with a nice IPA or crisp white wine!
   end
 
 end
-
-
-
-
-

@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the data-vocabulary parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
+    end
+
     its(:author) { should == "Amy Wisniewski" }
     its(:canonical_url) { should == "http://www.chow.com/recipes/30700-strawberry-rhubarb-pie-with-sour-cream-crust" }
     its(:cook_time) { should == nil }
@@ -64,5 +68,3 @@ For the pie:\t1Remove the dough from the refrigerator and set it aside at room t
   end
 
 end
-
-

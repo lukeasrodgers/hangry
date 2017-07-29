@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the h-recipe parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::HRecipeParser)
+    end
+
     its(:author) { should == "CM" }
     its(:canonical_url) { should == nil }
     its(:cook_time) { should == nil }
@@ -61,6 +65,3 @@ Mix first 3 ingredients using half of the True Lemon packet (optional). Using a 
   end
 
 end
-
-
-

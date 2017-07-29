@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the schema.org parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
+    end
+
     its(:author) { should == "Antony Worrall Thompson" }
     its(:canonical_url) { should == nil }
     its(:cook_time) { should == 30 }
@@ -74,5 +78,3 @@ Scatter the chopped parsley over the paella and serve immediately.
   end
 
 end
-
-

@@ -4,10 +4,14 @@ describe Hangry do
 
   context "taste.com.au recipe" do
     before(:all) do
-      @html =File.read("spec/fixtures/schema_org/data-vocabulary_org/taste.com.au.html") 
+      @html =File.read("spec/fixtures/schema_org/data-vocabulary_org/taste.com.au.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
+
+    it "should use the data-vocabulary parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::DataVocabularyRecipeParser)
+    end
 
     its(:author) { should == "Sophia Young" }
     its(:canonical_url) { should == "/recipes/24586/lemon+melting+moments" }
@@ -41,4 +45,3 @@ describe Hangry do
   end
 
 end
-

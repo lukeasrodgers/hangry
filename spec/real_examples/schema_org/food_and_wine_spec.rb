@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the schema.org parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
+    end
+
     its(:author) { should == "Grace Parisi" }
     its(:canonical_url) { should == "http://www.foodandwine.com/recipes/honey-glazed-roasted-root-vegetables" }
     its(:cook_time) { should == nil }
@@ -50,4 +54,3 @@ Preheat the oven to 425&#176;. In a large bowl, toss the root vegetables with th
   end
 
 end
-

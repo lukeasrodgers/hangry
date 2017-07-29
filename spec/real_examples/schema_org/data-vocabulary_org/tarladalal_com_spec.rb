@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the data-vocabulary parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::DataVocabularyRecipeParser)
+    end
+
     its(:author) { should == "Tarla Dalal" }
     its(:canonical_url) { should == nil }
     its(:cook_time) { should == 15 }
@@ -64,5 +68,3 @@ Serve hot.
   end
 
 end
-
-

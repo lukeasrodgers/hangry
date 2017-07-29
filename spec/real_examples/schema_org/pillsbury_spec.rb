@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the schema.org parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
+    end
+
     its(:author) { should == nil }
     its(:canonical_url) { should == "https://www.pillsbury.com/recipes/big-cheesy-pepperoni-pockets/a17766e6-30ce-4a0c-af08-72533bb9b449" }
     its(:cook_time) { should == nil }
@@ -59,4 +63,3 @@ Bake 13 to 15 minutes or until golden brown. Immediately remove from cookie shee
   end
 
 end
-

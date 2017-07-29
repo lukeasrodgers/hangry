@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the ld+json parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::JsonLDParser)
+    end
+
     its(:author) { should == "flume027" }
     its(:canonical_url) { should == "http://www.food.com/recipe/panda-express-orange-chicken-103215" }
     its(:cook_time) { should == 30 }
@@ -66,4 +70,3 @@ describe Hangry do
   end
 
 end
-

@@ -9,8 +9,8 @@ describe Hangry do
     end
     subject { @parsed }
 
-    it "should use the correct parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_a(Hangry::Parsers::NonStandard::FoodNetworkParser)
+    it "should use a non-standard parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::Parsers::NonStandard::FoodNetworkParser)
     end
 
     its(:canonical_url) { should == 'http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html' }

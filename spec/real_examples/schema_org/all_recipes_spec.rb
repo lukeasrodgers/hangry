@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use a non-standard parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::Parsers::NonStandard::AllRecipesParser)
+    end
+
     its(:author) { should == 'United Soybean Board' }
     its(:canonical_url) { should == 'http://allrecipes.com/recipe/230347/roasted-vegetable-and-couscous-salad/'}
     its(:cook_time) { should == 15 }

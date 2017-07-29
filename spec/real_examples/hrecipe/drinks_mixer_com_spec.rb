@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the h-recipe parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::HRecipeParser)
+    end
+
     its(:author) { should == nil }
     its(:canonical_url) { should == nil }
     its(:cook_time) { should == nil }
@@ -41,7 +45,7 @@ describe Hangry do
       }
     end
 
-    its(:instructions) { 
+    its(:instructions) {
       instructions = <<-eos
 In a shaker half-filled with ice cubes, combine the gin, lemon juice, and sugar. Shake well. Strain into a collins glass almost filled with ice cubes. Add the club soda. Stir and garnish with the cherry and the orange slice.
       eos
@@ -56,4 +60,3 @@ In a shaker half-filled with ice cubes, combine the gin, lemon juice, and sugar.
   end
 
 end
-

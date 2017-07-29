@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the schema.org parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
+    end
+
     its(:author) { should == nil }
     its(:canonical_url) { should == "http://www.bettycrocker.com/recipes/skillet-chicken-nachos/9bf0c3be-09dd-4b1b-8cf4-a9cfa979b232" }
     its(:cook_time) { should == nil }
@@ -58,7 +62,3 @@ Divide tortilla chips between 6 plates. Spoon chicken mixture evenly over chips.
   end
 
 end
-
-
-
-

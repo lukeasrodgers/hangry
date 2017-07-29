@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use the data-vocabulary parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::DataVocabularyRecipeParser)
+    end
+
     its(:author) { should == nil }
     its(:canonical_url) { should == "http://www.saveur.com/article/Recipes/Smoked-Trout-Blinis-with-Creme-Fraiche-and-Dill" }
     its(:cook_time) { should == nil }
@@ -41,4 +45,3 @@ describe Hangry do
   end
 
 end
-

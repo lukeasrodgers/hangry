@@ -9,6 +9,10 @@ describe Hangry do
     end
     subject { @parsed }
 
+    it "should use a non-standard parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::Parsers::NonStandard::MrFoodComParser)
+    end
+
     its(:author) { should == 'rac7431 2877525' }
     its(:canonical_url) { should == "http://www.MrFood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268" }
     its(:cook_time) { should == 320 }
@@ -54,4 +58,3 @@ describe Hangry do
   end
 
 end
-
