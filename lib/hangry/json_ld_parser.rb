@@ -18,16 +18,16 @@ module Hangry
     end
 
     def can_parse?
-      !!recipe_hash
-    end
-
-    def recipe_ld_script
-      recipe_ast
+      !recipe_hash.nil?
     end
 
     def recipe_hash
       return @recipe_hash if defined?(@recipe_hash)
-      @recipe_hash = recipe_ld_script && JSON.parse(recipe_ld_script.content.tr("\n", ''))
+      nokogiri_doc.css(self.class.root_selector).each do |script|
+        json = JSON.parse(script.content.tr("\n", ''))
+        return @recipe_hash = json if json['@context'] =~ /schema\.org/ && json['@type'] == 'Recipe'
+      end
+      @recipe_hash = nil
     end
 
     def nutrition_hash
