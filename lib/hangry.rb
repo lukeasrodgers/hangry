@@ -45,6 +45,7 @@ module Hangry
   end
 
   def self.parser_for(html)
+    html = html.read if html.respond_to?(:read)
     nokogiri_doc = Nokogiri::HTML(html)
     ParserSelector.new(nokogiri_doc).parser
   end
