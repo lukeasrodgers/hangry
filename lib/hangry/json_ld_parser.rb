@@ -25,7 +25,7 @@ module Hangry
       return @recipe_hash if defined?(@recipe_hash)
       nokogiri_doc.css(self.class.root_selector).each do |script|
         json = JSON.parse(script.content.tr("\n", ''))
-        return @recipe_hash = json if json['@context'] =~ /schema\.org/ && json['@type'] == 'Recipe'
+        return @recipe_hash = json if is_a_recipe?(json) && contains_required_keys?(json)
       end
       @recipe_hash = nil
     end
@@ -36,6 +36,16 @@ module Hangry
     end
 
     private
+
+    def is_a_recipe?(json)
+      json.is_a?(Hash) && json['@context'] =~ /schema\.org/ && json['@type'] == 'Recipe'
+    end
+
+    def contains_required_keys?(json)
+      json.key?('name') &&
+      json.key?(self.class.ingredient_itemprop) &&
+      json.key?('recipeInstructions')
+    end
 
     def nodes_with_itemprop(itemprop)
       recipe_hash ? recipe_hash[itemprop.to_s] : NullObject.new

@@ -41,7 +41,7 @@ module Hangry
         Parsers::NonStandard::NyTimesParser,
         Parsers::NonStandard::AllRecipesParser
       ]
-      parser_classes += [SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser, JsonLDParser]
+      parser_classes += [JsonLDParser, SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser]
       parser_classes.each do |parser_class|
         parser = parser_class.new(@nokogiri_doc)
         return parser if parser.can_parse?
