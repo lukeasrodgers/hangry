@@ -39,7 +39,7 @@ module Hangry
 
     def contains_required_keys?(json)
       json.key?('name') &&
-      json.key?('recipeIngredient') &&
+      (json.key?('recipeIngredient') || json.key?('ingredients')) &&
       json.key?('recipeInstructions')
     end
 
@@ -74,7 +74,7 @@ module Hangry
     end
 
     def parse_ingredients
-      nodes_with_itemprop('recipeIngredient').map(&:strip).reject(&:blank?)
+      (nodes_with_itemprop('recipeIngredient') || nodes_with_itemprop('ingredients')).map(&:strip).reject(&:blank?)
     end
 
     def parse_name
