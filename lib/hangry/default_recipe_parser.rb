@@ -8,7 +8,7 @@ module Hangry
     end
 
     def parse
-      Recipe.new
+      NullRecipe.new
     end
   end
 end

@@ -39,6 +39,12 @@ module Hangry
 
   Recipe = Struct.new(*RECIPE_ATTRIBUTES)
 
+  class NullRecipe < Recipe
+    def nil?
+      true
+    end
+  end
+
   def self.parse(html)
     recipe = parser_for(html).parse
     RecipeAttributeCleaner.new(recipe).clean
