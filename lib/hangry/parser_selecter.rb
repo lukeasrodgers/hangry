@@ -1,5 +1,5 @@
 require 'hangry/recipe_parser'
-require 'hangry/default_recipe_parser'
+require 'hangry/null_recipe_parser'
 require 'hangry/hrecipe_parser'
 require 'hangry/schema_org_recipe_parser'
 require 'hangry/data_vocabulary_recipe_parser'
@@ -36,7 +36,7 @@ module Hangry
         parser = parser_class.new(@nokogiri_doc)
         return parser if parser.can_parse?
       end
-      DefaultRecipeParser.new(@nokogiri_doc)
+      NullRecipeParser.new(@nokogiri_doc)
     end
 
   end
