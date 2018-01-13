@@ -2,21 +2,25 @@ module Hangry
   class SchemaOrgRecipeParser < RecipeParser
 
     def self.root_selector
-      '[itemtype="http://schema.org/Recipe"]'
+      '[itemtype*="schema.org/Recipe"]'
     end
 
     def self.nutrition_selector
-      '[itemtype="http://schema.org/NutritionInformation"]'
+      '[itemtype*="schema.org/NutritionInformation"]'
     end
 
-    def self.ingredient_itemprop
-      :ingredients
+    def self.ingredient_itemprops
+      %w{recipeIngredient ingredients}
     end
 
     private
 
     def node_with_itemprop(itemprop)
       nodes_with_itemprop(itemprop).first || NullObject.new
+    end
+    def nodes_with_itemprops(*values)
+      return NullObject.new unless recipe_ast
+      recipe_ast.css(values.map { |value| "[itemprop=\"#{value}\"]" }.join(", "))
     end
     def nodes_with_itemprop(itemprop)
       recipe_ast ? recipe_ast.css("[itemprop = \"#{itemprop}\"]") : NullObject.new
@@ -32,7 +36,7 @@ module Hangry
     end
     def parse_author
       author_node = node_with_itemprop(:author)
-      author = if author_node['itemtype'] == "http://schema.org/Person"
+      author = if author_node['itemtype'] =~ /schema.org\/Person/
         #author_node.css('[itemprop = "name"]').first['content']
         author_node.css('[itemprop = "name"]').first.content
       else
@@ -56,7 +60,7 @@ module Hangry
       value(node['src']) || value(node['content'])
     end
     def parse_ingredients
-      nodes_with_itemprop(self.class.ingredient_itemprop).map { |node|
+      nodes_with_itemprops(*self.class.ingredient_itemprops).map { |node|
         node.content.strip
       }.reject(&:blank?)
     end

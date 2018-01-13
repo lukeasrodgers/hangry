@@ -3,8 +3,8 @@ module Hangry
     module NonStandard
       class RachaelRayParser < RecipeParser
 
-        def self.can_parse?(html)
-          canonical_url_matches_domain?(html, 'rachaelray.com')
+        def can_parse?
+          canonical_url_matches_domain?('rachaelray.com')
         end
 
         def self.root_selector

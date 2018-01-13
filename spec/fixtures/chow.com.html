@@ -1,0 +1,1591 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6a6c870add","applicationID":"179693","transactionName":"cg5XEhZeVAkGQR5KBlIISQMXHksNDEQ=","queueTime":0,"applicationTime":783,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UA4HV1VACQQJUlhR"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+  <title>Strawberry-Rhubarb Pie with Sour Cream Crust Recipe - Chowhound</title>
+  <meta name="description" content="A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling.">
+  <meta name="author" content="Chowhound">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property='fb:app_id' content='177874162887'>
+      <meta property='og:site_name' content='Chowhound'>
+      <meta property='og:title' content='Strawberry-Rhubarb Pie with Sour Cream Crust Recipe' />
+      <meta property='og:description' content='A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling.' />
+      <meta property='og:url' content='https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700'>
+      <meta property='og:type' content='food'>
+      <meta property='og:image' content='https://search.chow.com/thumbnail/1280/800/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg' />
+      <meta property='og:image:type' content='image/jpeg' />
+      <meta property='og:image:width' content='1280' />
+      <meta property='og:image:height' content='800' />
+
+      <script>
+         var cbsiAdGlobal = {};
+         var chowRecipeVideo = {};
+        chowRecipeVideo.videoPlayer = function() {};
+    </script>
+
+  
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:site' content='@chow' />
+<meta name='twitter:creator' content='@chow' />
+<meta name='twitter:title' content='Strawberry-Rhubarb Pie with Sour Cream Crust Recipe' />
+<meta name='twitter:description' content='A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling.' />
+<meta name='twitter:image' content='https://search.chow.com/thumbnail/1280/800/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg' />
+
+    <link rel="amphtml" href="https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700/amp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Recipe",
+    "mainEntityOfPage": "https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700",
+    "name": "Strawberry-Rhubarb Pie with Sour Cream Crust",
+    "image": {
+      "@type": "ImageObject",
+        "url": "https://www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg"
+    },
+    "author": {
+      "@type":"Person",
+      "name":"Amy Wisniewski"
+    },
+    "datePublished": "Mar 29, 2013 12:55 PM",
+    "dateModified": "Oct 21, 2014 06:11 PM",
+    "description": "A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "3"
+    },
+    "prepTime": "PT1H0M",
+    "totalTime": "PT7H0M",
+    "recipeYield": "1 (9-inch) pie, or 8 to 10 servings",
+    "recipeIngredient": ["2 1/2 cups all-purpose flour","2 tablespoons granulated sugar","1/2 teaspoon fine salt","1/2 cup shortening, frozen and cut into small pieces","10 tablespoons cold unsalted butter (1 1/4 sticks), cut into small pieces","1/2 cup plus 2 tablespoons sour cream ","All-purpose flour, for dusting the work surface","1 1/4 cups granulated sugar ","1/2 cup cornstarch","2 pounds rhubarb, ends trimmed and cut into 1/2-inch pieces (about 7 cups) ","1 pound strawberries, washed, hulled, and cut into 1/2-inch pieces (about 3 cups)","2 teaspoons freshly squeezed lemon juice ","1 large egg white, beaten"],
+    "recipeInstructions": "For the crust: In a large bowl, whisk together the flour, sugar, and salt. Toss the shortening and butter in the flour mixture until well coated. Using a pastry blender or 2 knives, cut the shortening and butter into the dry ingredients until reduced to pea-size pieces, about 3 to 4 minutes. Add the sour cream and mix just until the dough comes together, being careful not to work the dough too much. Divide the dough into 2 flat disks, one slightly larger than the other. Wrap tightly in plastic wrap and refrigerate for at least 1 hour. For the pie: Remove the dough from the refrigerator and set it aside at room temperature for 30 minutes. On a lightly floured surface, roll out the slightly larger disk to about 12 inches in diameter and 1/4 inch thick. (If the dough is very crumbly, gather it into a ball and knead it a few times to make it more pliable, then roll it out.) Line a 9-inch pie plate with the dough and trim it to leave a 1-inch overhang. Set aside. Place 1 teaspoon of the sugar in a small bowl and set it aside. Place the remaining sugar and cornstarch in a large bowl and whisk to combine. Sprinkle 2 tablespoons of the sugar-cornstarch mixture evenly over the bottom of the pie crust. Add the rhubarb, strawberries, and lemon juice to the bowl with the remaining sugar-cornstarch mixture and stir to evenly coat the fruit. Set aside. Roll out the remaining dough disk on a lightly floured surface to about 11 inches in diameter and 1/4 inch thick. Using a 1-inch round cutter, stamp out circles, leaving at least a 3-inch border from the edge and 1 1/2 inches of space between each circle (you should have about 12 cutouts). Set the cutout circles aside. Stir the rhubarb-strawberry mixture to redistribute the juices. Pour it into the prepared crust, mounding it in the center, and gently pat it down. Brush the dough overhang with the egg white. Place the top crust over the fruit and trim the excess dough to a 1-inch overhang. Fold the edge of the bottom crust over the top crust and press to seal. If desired, crimp the edge, using the forefinger of one hand to push the dough between the forefinger and thumb of the other hand. Brush the top of the pie with some of the remaining egg white. Arrange the cutout circles intermittently over the top crust (not covering the holes), and brush the cutout circles with egg white, discarding any left over. Evenly sprinkle the reserved sugar over the top of the pie. Place the pie in the freezer while the oven heats. Heat the oven to 425°F and arrange a rack on the bottom. Place a baking sheet lined with a double layer of aluminum foil on the rack. Place the pie on the hot baking sheet and bake for 30 minutes. Lower the temperature to 350°F and bake until the crust is brown and the fruit is bubbling, about 1 hour 40 minutes more. (The center of the filling should read 212°F on an instant-read thermometer for it to set properly.) If the crust around the edges of the pie starts to brown before the pie is done, cover the edges with aluminum foil. Remove the pie from the oven and let it sit on the baking sheet until the fruit stops bubbling, about 5 minutes. Transfer to a wire rack to cool completely and let the filling set before slicing, at least 3 hours.",
+    "recipeCategory": ["Dessert"],
+    "recipeCuisine": ["Comfort Food"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Chowhound",
+      "url": "https://www.chowhound.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.chowhound.com/s/touch-icon-180x180.png",
+        "width": 180,
+        "height": 180
+      }
+    }
+  }
+</script>
+
+
+
+  <link rel="shortcut icon" href="https://www.chowstatic.com/s/favicon-303daa1f570649b1917f7a06594ba02a.ico?v=2" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.chowstatic.com/s/touch-icon-76x76-b8730b86f99c210c40a3d968ad37bd31.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.chowstatic.com/s/touch-icon-120x120-d2c9ee4b10030243e91d440c3f232601.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.chowstatic.com/s/touch-icon-152x152-2d078d8f88793ec16844b88b976d14a6.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.chowstatic.com/s/touch-icon-180x180-3250f549455fa59a6eab85c68dca414b.png">
+  <link href="https://www.chowstatic.com/s/touch-icon-76x76-b8730b86f99c210c40a3d968ad37bd31.png" rel="icon" sizes="76x76" />
+  <link href="https://www.chowstatic.com/s/touch-icon-120x120-d2c9ee4b10030243e91d440c3f232601.png" rel="icon" sizes="120x120" />
+  <link href="https://www.chowstatic.com/s/touch-icon-152x152-2d078d8f88793ec16844b88b976d14a6.png" rel="icon" sizes="152x152" />
+  <link href="https://www.chowstatic.com/s/touch-icon-180x180-3250f549455fa59a6eab85c68dca414b.png" rel="icon" sizes="180x180" />
+  <link rel="apple-touch-icon-precomposed" href="https://www.chowstatic.com/s/apple-touch-icon-precomposed-0a022dd067dedc62bfd4e26e158b47bc.png">
+  <link rel="canonical" href="https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700"/>
+  
+  
+
+  <link rel="stylesheet" media="screen" href="https://www.chowstatic.com/s/freyja/ch_recipes-2cf998d16e67ae67cf4f8c2ccbccce7c.css" />
+
+
+  <script type="text/javascript">
+    window._taboola = window._taboola || [];
+    _taboola.push({other:'auto'});
+    // !function (e, f, u) {
+    //   e.async = 1;
+    //   e.src = u;
+    //   f.parentNode.insertBefore(e, f);
+    // }(document.createElement('script'),
+    // document.getElementsByTagName('script')[0],
+    // '//cdn.taboola.com/libtrc/cbsinteractive-chowhound/loader.js');
+  </script>
+
+
+<script>
+
+// for testing instart:
+//    window.I11C = {};
+//    window.I11C.Morph = 1;
+</script>
+
+
+  <style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+
+  <style>.async-hide { opacity: 0 !important} </style>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-8105127-1', 'auto');
+    ga('require', 'GTM-T6985QS');
+    (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-T6985QS':true});
+  </script>
+
+</head>
+
+<body id="" class="debates_show recipes_show recipes is_desktop no_touch" itemscope="itemscope" itemtype="http://schema.org/Recipe">
+<div class="fr_content_wrap">
+<div id='fb-root'></div>
+
+
+
+<script type="text/javascript">
+function parse(e,s,r){var n=s&&r||0,t=0;for(s=s||[],e.toLowerCase().replace(/[0-9a-f]{2}/g,function(e){16>t&&(s[n+t++]=_hexToByte[e])});16>t;)s[n+t++]=0;return s}function unparse(e,s){var r=s||0,n=_byteToHex;return n[e[r++]]+n[e[r++]]+n[e[r++]]+n[e[r++]]+"-"+n[e[r++]]+n[e[r++]]+"-"+n[e[r++]]+n[e[r++]]+"-"+n[e[r++]]+n[e[r++]]+"-"+n[e[r++]]+n[e[r++]]+n[e[r++]]+n[e[r++]]+n[e[r++]]+n[e[r++]]}function v1(e,s,r){var n=s&&r||0,t=s||[];e=e||{};var _=null!=e.clockseq?e.clockseq:_clockseq,a=null!=e.msecs?e.msecs:(new Date).getTime(),o=null!=e.nsecs?e.nsecs:_lastNSecs+1,c=a-_lastMSecs+(o-_lastNSecs)/1e4;if(0>c&&null==e.clockseq&&(_=_+1&16383),(0>c||a>_lastMSecs)&&null==e.nsecs&&(o=0),o>=1e4)throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");_lastMSecs=a,_lastNSecs=o,_clockseq=_,a+=122192928e5;var l=(1e4*(268435455&a)+o)%4294967296;t[n++]=l>>>24&255,t[n++]=l>>>16&255,t[n++]=l>>>8&255,t[n++]=255&l;var d=a/4294967296*1e4&268435455;t[n++]=d>>>8&255,t[n++]=255&d,t[n++]=d>>>24&15|16,t[n++]=d>>>16&255,t[n++]=_>>>8|128,t[n++]=255&_;for(var u=e.node||_nodeId,i=0;6>i;i++)t[n+i]=u[i];return s?s:unparse(t)}var _rng;if(window.crypto&&crypto.getRandomValues){var _rnds8=new Uint8Array(16);_rng=function(){return crypto.getRandomValues(_rnds8),_rnds8}}if(!_rng){var _rnds=new Array(16);_rng=function(){for(var e,s=0;16>s;s++)0===(3&s)&&(e=4294967296*Math.random()),_rnds[s]=e>>>((3&s)<<3)&255;return _rnds}}for(var _byteToHex=[],_hexToByte={},i=0;256>i;i++)_byteToHex[i]=(i+256).toString(16).substr(1),_hexToByte[_byteToHex[i]]=i;var _seedBytes=_rng(),_nodeId=[1|_seedBytes[0],_seedBytes[1],_seedBytes[2],_seedBytes[3],_seedBytes[4],_seedBytes[5]],_clockseq=16383&(_seedBytes[6]<<8|_seedBytes[7]),_lastMSecs=0,_lastNSecs=0;
+
+    generate_vguid = function(){
+        view_tracking_guid = v1();
+    }
+    
+    generate_vguid();
+    var utag_data = {"siteType":"responsive web","siteSection":"recipes","deviceType":"desktop","siteHier":"recipes","pageType":"section_detail","pageFindingMethod":"External","articleAuthorName":"Amy Wisniewski","articleAuthorId":"ch-User-102051","recipeId":30700,"recipeTitle":"Strawberry-Rhubarb Pie with Sour Cream Crust","recipePubDate":"2013-03-29","tags":"memorial-day|labor-day|4th-of-july|baking|dessert|dinner-party|bridal-shower|sour-cream|butter|lemon-juice|rhubarb|strawberries|fruit|pies|salt|flour|sugar|spring|summer|comfort-food|medium","pageViewGuid" : view_tracking_guid }
+
+</script>
+
+
+
+<style>
+.remark_collapsed .fr_remark_body_preview {
+  display: inline;
+ }
+.fr_remark_body_preview {
+  display: none;
+  font-size: 14px;
+  font-weight: 100;
+ }
+.remark_collapsed .remark_body {
+  display: none !important;
+}
+.debates .remark_collapsed .remark_inner {
+  left: 0;
+  right: 0px;
+  bottom: auto !important;
+  padding: 9px 50px 0 0 !important;
+  margin: 0 5px !important;
+}
+.wordpress.single .remark_collapsed .author, body.debates_show .remark_collapsed .author {
+  float: none !important;
+  overflow: hidden;
+  line-height: 1;
+}
+</style>
+
+<script>
+  var search_txt = "entire site";
+</script>
+
+<div class="freyja_overlay close_freyja_login" style="display:none"></div>
+    <div id="nav-ad"></div>
+    
+            <style>
+              .fr_eyebrow_msg {
+                background: #753A5E;
+                z-index: 99999999999;
+                position: relative;
+                padding: 10px 20px;
+                color: #FFF;
+                font-size: 14px;
+                white-space: nowrap;
+                line-height: 15px;
+                transform: translateZ(0);
+              }
+
+              .fr_eyebrow_msg strong {
+                font-weight: 800;
+              }
+
+              .fr_eyebrow_msg a {
+                color: #FFF !important;
+              }
+
+              @media (max-device-width: 767px) {
+                .fr_eyebrow_msg {
+                  background: #753A5E;
+                  position: relative;
+                  z-index: 9999999999;
+                  padding: 10px 20px;
+                  color: #FFF;
+                  font-size: 14px;
+                  line-height: 15px;
+                  white-space: normal;
+                  transform: translateZ(0);
+                }
+
+                .open_nav .fr_eyebrow_msg {
+                  display: none;
+                }
+              }
+            </style>
+
+            <div class="fr_eyebrow_msg">
+              <a href="https://www.chowhound.com/post/table-talk-michelle-tam-nom-nom-paleo-1059813">
+                <strong>Chowhound Presents:</strong> Table Talk with with Michelle Tam of Nom Nom Paleo
+                <span class="freyja_notmobile">| <strong>Ask Your Questions Now &rsaquo;</strong></span>
+              </a>
+            </div>
+
+
+
+
+
+
+<!--CHOW desktop nav-->
+<div id="freyja_top_nav" class="freyja_flip freyja_notmobile">
+    <div class="freyja_card">
+    <div id="freyja_top_nav">
+      <div id="freyja_desknav" class="freyja_desknav freyja_notmobile ">
+        <div class="freyja_nwrap act_menu">
+          
+            <span class="act_submenu" style="width:200px;display:inline-block;position:relative"><a href="https://www.chowhound.com/" class="freyja_logo" title="Chowhound.com"></a>
+                <div class="fr_fs_subm fr_cr_w fr_fs_newpdd_w ftsh">         
+
+                  <div class="fr_top_sh_pop" style="text-align:center">
+                    <h6>Follow us!</h6>
+                    <ul style="display:inline-block">
+                      <li><a class="freyja_fb fr_socbt facebook_follow" href="https://www.facebook.com/chowhound" target="_blank"></a></li>
+                      <li><a class="freyja_tw fr_socbt twitter_follow" href="https://twitter.com/Chow" target="_blank"></a></li>
+                      <li><a class="freyja_pi fr_socbt" href="https://www.pinterest.com/chowhound/" target="_blank"></a></li>
+                      <li><a class="freyja_in fr_socbt" href="https://instagram.com/chowhound/" target="_blank"></a></li>
+                      <li><a class="freyja_yt fr_socbt" href="https://www.youtube.com/user/CHOW" target="_blank"></a></li>
+                    </ul>
+                    <a href="https://www.chowhound.com/feedback" class="fr_top_sh_lk">Site Feedback</a>
+                    <a href="https://www.chowhound.com/faq" class="fr_top_sh_lk">FAQ</a>
+                  </div>
+
+                    <a href="https://www.messenger.com/t/chowhound" target="_blank"><div class="lazy fr_botpromo_nav" data-original="https://www.chowstatic.com/s/BotPromo-SiteNav-Full.jpg"></div></a>
+
+                </div>    
+            </span>
+          
+
+              
+          <form class="freyja_search" action="/search" method="get">
+            <div class="freyja_search_bar">
+              <button type="submit" class="freyja_search_button" value="Search"></button>
+              <input type="text" placeholder="Search" data-searchsection="Search entire site" class="s_input" id="primary_search" name="q" value="" autocomplete="off">
+              <input type="hidden" name="tq" value="1">
+              <input type="hidden" name="c" value="allsite">
+            </div>
+          </form>
+          <ul class="freyja_drmenu">
+            <li class="act_menu " data-menu="galleries">
+              <span class="act_submenu">
+                <a href="https://www.chowhound.com/browse/tags" class="s_b">Topics</a>
+                <div class="fr_fs_subm fr_fs_newpdd_w">         
+                    <ul>
+                    
+
+                          <li><h3>Popular Topics</h3></li>
+                            <li><a href="https://www.chowhound.com/home-cooking">Home Cooking</a></li>
+                            <li><a href="https://www.chowhound.com/cookware">Cookware</a></li>
+                            <li><a href="https://www.chowhound.com/spirits">Cocktails & Spirits</a></li>
+                            <li><a href="https://www.chowhound.com/general-discussion">General Discussion</a></li>
+                            <li><a href="https://www.chowhound.com/food-media">Food Media</a></li>
+                            <li><a href="https://www.chowhound.com/tag/baking">Baking</a></li>
+                            <li><a href="https://www.chowhound.com/tag/grilling">Grilling</a></li>
+                            <li><a href="https://www.chowhound.com/tag/canning">Canning</a></li>
+                            <li><a href="https://www.chowhound.com/tag/dish-of-the-month">Dish of the Month</a></li>
+                            <li><a href="https://www.chowhound.com/tag/cookbook-of-the-month">Cookbook of the Month</a></li>
+                      <li><a href="https://www.chowhound.com/browse/tags" class="fr_smr">See All &rsaquo;</a></li>
+                    
+                    </ul>
+                </div>
+              </span>
+            </li>
+
+            <li class="act_menu " data-menu="recipes">
+              <span class="act_submenu">
+                <a href="https://www.chowhound.com/browse/locations" class="s_b">Locations</a>
+                <div class="fr_fs_subm fr_fs_newpdd_w">         
+                    <ul>
+
+
+                          <li><h3>Popular Locations</h3></li>
+                                <li><a href="https://www.chowhound.com/tag/manhattan">Manhattan</a></li>
+                                <li><a href="https://www.chowhound.com/tag/los-angeles">Los Angeles Area</a></li>
+                                <li><a href="https://www.chowhound.com/tag/san-francisco">San Francisco Bay Area</a></li>
+                                <li><a href="https://www.chowhound.com/tag/boston">Boston Area</a></li>
+                                <li><a href="https://www.chowhound.com/tag/ontario">Ontario (inc. Toronto)</a></li>
+                                <li><a href="https://www.chowhound.com/tag/washington-dc">Washington DC &amp; Baltimore</a></li>
+                                <li><a href="https://www.chowhound.com/tag/outer-boroughs">Outer Boroughs</a></li>
+                                <li><a href="https://www.chowhound.com/tag/chicago">Chicago Area</a></li>
+                                <li><a href="https://www.chowhound.com/tag/pennsylvania">Pennsylvania</a></li>
+                                <li><a href="https://www.chowhound.com/tag/california">California</a></li>
+                      <li><a href="https://www.chowhound.com/browse/locations" class="fr_smr">See All &rsaquo;</a></li>
+
+                    </ul>
+                </div>
+              </span>
+            </li>
+
+            <li class="act_menu " data-menu="recipes">
+              <span class="act_submenu">
+                <a href="https://www.chowhound.com/recipes" class="s_b">Recipes</a>
+                <div class="fr_fs_subm fr_fs_newpdd_w">
+                    <ul>
+                        <li><a href="https://www.chowhound.com/recipes/basic-dessert-tart-crust-29542" class="fr_r_ftn">
+                          <span class="fr_r_pic lazy-bck" data-original="https://search.chow.com/thumbnail/640/0/www.chowstatic.com/assets/2014/09/29542_tart_crust_3000.jpg"></span>
+                          <span class="fr_r_rt">Easy Dessert Tart Crust<span class="fr_nw">NEW</span></span>
+                        </a></li>
+                            <li><a href="https://www.chowhound.com/recipes/easy">Easy</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/healthy">Healthy</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/breakfast">Breakfast</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/main-dish">Main Dish</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/vegetarian">Vegetarian</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/pasta">Pasta</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/salad">Salad</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/soup">Soup</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/cocktails">Cocktails</a></li>
+                            <li><a href="https://www.chowhound.com/recipes/dessert">Dessert</a></li>
+                        <li><a href="https://www.chowhound.com/recipes" class="fr_smr">See All &rsaquo;</a></li>
+                    </ul>
+                </div>
+              </span>
+            </li>
+
+            <li class="act_menu" data-menu="discover">
+              <span class="act_submenu">
+                <a href="https://www.chowhound.com/browse" class="s_b">Browse</a>
+                <div class="fr_fs_subm fr_br_w fr_fs_newpdd_w">         
+                    <ul>
+                      <li><a href="https://www.chowhound.com/latest" class="fr_mn_wic frm_late">Latest Discussions</a></li>
+                      <li><a href="https://www.chowhound.com/city-guides" class="fr_mn_wic frm_cgui">City Guides</a></li>
+                      <li><a href="https://www.chowhound.com/features" class="fr_mn_wic frm_feat">Features</a></li>
+                      <li><a href="https://www.chowhound.com/recipes" class="fr_mn_wic frm_reci">Recipes</a></li>
+                      <li><a href="https://www.chowhound.com/food-news" class="fr_mn_wic frm_art">Articles</a></li>
+                      <li><a href="https://www.chowhound.com/pictures" class="fr_mn_wic frm_phot">Photo Galleries</a></li>
+                      <li><a href="https://www.chowhound.com/videos" class="fr_mn_wic frm_vid">Videos</a></li>
+                      <!-- <li><a href="https://www.chowhound.com/cookbooks" class="fr_mn_wic frm_cook">Cookbooks</a></li> -->
+                        <li class="fr_mn_line"></li>
+                        <li>
+                          <a href="https://www.messenger.com/t/chowhound" target="_blank" class="fr_mn_wic frm_bot">
+                            <div class="fr_mn_new">New</div>
+                            <div>Recipe Search Bot</div>
+                            <div class="fr_mn_msg_txt">on Facebook Messenger</div>
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+              </span>
+            </li>
+
+
+            <li class="freyja_no_nav" style="position:relative">
+              <span class="act_submenu">
+                <a href="https://www.chowhound.com/post/new" class="newp show_login_box show_login_tab">New Post</a>
+            </span>
+            </li>
+
+              <li class="freyja_no_nav"><a class=" show_login_tab li_su" href="https://secure.chowhound.com/users/sign_in">Log In</a></li>
+              <li class="freyja_no_nav"><a class=" show_login_tab li_su li_en" href="https://secure.chowhound.com/users/sign_up">Sign Up</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+      <div class="freyja_desknav_back">
+        <div class="freyja_nwrap">
+          <a href="https://www.chowhound.com/" class="freyja_logo_small" title="Chowhound.com"></a>
+
+
+
+
+
+              <div class="freyja_nav_info">
+                <h2 class="divid"><a>Recipe</a></h2>
+
+              <h3>Strawberry-Rhubarb Pie with Sour Cream Crust</h3>
+              </div>
+
+              <div class="freyja_sharing fr_inlineshare fr_r_shar fr_r_shar_nav">
+                <ul>
+                  <li><a class="freyja_fb fr_sbt_rp custom_fb_share" data-social-location="share-bar" href="https://www.facebook.com/sharer/sharer.php?u=https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700&t=Strawberry-Rhubarb+Pie+with+Sour+Cream+Crust" target="_blank">Share<span class="hd_r"> This Recipe</span></a></li><!--
+               --><li><a class="freyja_pr fr_sbt_rp omniture_print" href="https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700/print">Print</a></li><!--
+               --><li><a class="freyja_em fr_sbt_rp act_emailit omniture_email" rel="nofollow" data-shareimg="https://www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" data-sharetitle="Strawberry-Rhubarb Pie with Sour Cream Crust" data-shareurl="https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700" data-sharedescription="A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling.">Email</a></li>
+                </ul>
+              </div>
+
+
+        </div>
+      </div>
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+uli = 0;
+ismob = 0;
+</script>
+
+<div id="out"></div>
+<div id="alert_container"></div>
+
+  <script>
+  var original_recipe_id = 30700;
+  var relatedrecipes = [{"title":"Latticed Rhubarb Pie","id":30329,"url":"https://www.chowhound.com/recipes/latticed-rhubarb-pie-30329","img":"https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/recipe_photos/30329_rhubarb_pie.jpg"},{"title":"Rhubarb and Strawberry Compote ","id":10903,"url":"https://www.chowhound.com/recipes/rhubarb-and-strawberry-compote-10903","img":"https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/2013/04/10903_RecipeImage_620x413_rhubarb_strawberry_compote.jpg"},{"title":"Mindy Segal's Rhubarb and Strawberry Consommé","id":29782,"url":"https://www.chowhound.com/recipes/mindy-segals-rhubarb-and-strawberry-consomme-29782","img":"https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/2011/07/MindySegal_Dish2_620.jpg"},{"title":"Sour Cream Cornbread","id":31640,"url":"https://www.chowhound.com/recipes/cornbread-recipe-31640","img":"https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/2015/10/Sour Cream Cornbread.jpg"},{"title":"Sour Cream Coffee Cake ","id":30339,"url":"https://www.chowhound.com/recipes/sour-cream-coffee-cake-30339","img":"https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/recipe_photos/30339_sour_cream_coffee_cake2.jpg"},{"title":"Sour Cream Mashed Potatoes","id":29028,"url":"https://www.chowhound.com/recipes/sour-cream-mashed-potatoes-29028","img":"https://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/recipe_photos/29028_sour_cream_mashed_potatoes.jpg"}];
+</script>
+<div id="r_30700"></div>
+<div class="frajax_recipe_head">
+  <div class="freyja_recipe_head freayja_recipe_head_30700 "
+       data-recipetags="sour-cream,rhubarb,strawberries,memorial-day,labor-day,4th-of-july,baking,dessert,dinner-party,bridal-shower,butter,lemon-juice,fruit,pies,salt,flour,sugar,spring,summer,comfort-food,medium" 
+       data-recipeid="30700"
+       data-recipetitle="recipe_Strawberry-Rhubarb Pie with Sour Cream Crust"
+       data-recipeurl="https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700"
+       data-fbshare="https://www.facebook.com/sharer/sharer.php?u=https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700&t=Strawberry-Rhubarb+Pie+with+Sour+Cream+Crust"
+       data-twshare="https://twitter.com/intent/tweet?text=Strawberry-Rhubarb+Pie+with+Sour+Cream+Crust https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700 @Chow"
+       data-ptshare="http://pinterest.com/pin/create/button/?url=https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700&media=https://search.chow.com/thumbnail/1200/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg&description=Strawberry-Rhubarb+Pie+with+Sour+Cream+Crust"
+       data-pubdate="2013-03-29"
+       data-authorname="Amy Wisniewski"
+       data-authorid="ch-User-102051"
+       data-adid=""
+       data-cid="strawberry-rhubarb-pie-with-sour-cream-crust"
+       data-feat=""
+       data-collection="egglands"
+       data-description="A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling."
+  >
+
+    <div class="fr_r_info">
+
+
+
+          <a class="pinterest-pin-hd share_pinterest"
+   title="Pin it on Pinterest!"
+   data-social-location="header-image"
+   target="_blank"
+   data-href="http://pinterest.com/pin/create/button/?url=https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700&description=A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling.&media=https://search.chow.com/thumbnail/1600/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg"
+></a>
+
+
+        <h1 itemprop="name">Strawberry-Rhubarb Pie with Sour Cream Crust</h1>
+        
+
+        <div class="freyja_box7 fr_tagswrap">
+          <div class="freyja_tagslist fr_bigger fr_collapsible_tags white">
+                <a class="freyja_tag act_filter act_filter_reset" data-seo="sour-cream" data-id="1997" data-name="Sour Cream" href="https://www.chowhound.com/recipes/sour-cream">
+                    <span>Sour Cream</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="rhubarb" data-id="2260" data-name="Rhubarb" href="https://www.chowhound.com/recipes/rhubarb">
+                    <span>Rhubarb</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="strawberries" data-id="2266" data-name="Strawberries" href="https://www.chowhound.com/recipes/strawberries">
+                    <span>Strawberries</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="memorial-day" data-id="96" data-name="Memorial Day" href="https://www.chowhound.com/recipes/memorial-day">
+                    <span>Memorial Day</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="labor-day" data-id="97" data-name="Labor Day" href="https://www.chowhound.com/recipes/labor-day">
+                    <span>Labor Day</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="4th-of-july" data-id="102" data-name="4th of July" href="https://www.chowhound.com/recipes/4th-of-july">
+                    <span>4th of July</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="baking" data-id="165" data-name="Baking" href="https://www.chowhound.com/recipes/baking">
+                    <span>Baking</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="dessert" data-id="315" data-name="Dessert" href="https://www.chowhound.com/recipes/dessert">
+                    <span itemprop="recipeCategory">Dessert</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="dinner-party" data-id="342" data-name="Dinner Party" href="https://www.chowhound.com/recipes/dinner-party">
+                    <span>Dinner Party</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="bridal-shower" data-id="356" data-name="Bridal Shower" href="https://www.chowhound.com/recipes/bridal-shower">
+                    <span>Bridal Shower</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="butter" data-id="2007" data-name="Butter" href="https://www.chowhound.com/recipes/butter">
+                    <span>Butter</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="lemon-juice" data-id="2213" data-name="Lemon Juice" href="https://www.chowhound.com/recipes/lemon-juice">
+                    <span>Lemon Juice</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="fruit" data-id="2273" data-name="Fruit" href="https://www.chowhound.com/recipes/fruit">
+                    <span>Fruit</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="pies" data-id="3581" data-name="Pies" href="https://www.chowhound.com/recipes/pies">
+                    <span>Pies</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="salt" data-id="3748" data-name="Salt" href="https://www.chowhound.com/recipes/salt">
+                    <span>Salt</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="flour" data-id="3896" data-name="Flour" href="https://www.chowhound.com/recipes/flour">
+                    <span>Flour</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="sugar" data-id="3897" data-name="Sugar" href="https://www.chowhound.com/recipes/sugar">
+                    <span>Sugar</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="spring" data-id="4019" data-name="Spring" href="https://www.chowhound.com/recipes/spring">
+                    <span>Spring</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="summer" data-id="4020" data-name="Summer" href="https://www.chowhound.com/recipes/summer">
+                    <span>Summer</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="comfort-food" data-id="4042" data-name="Comfort Food" href="https://www.chowhound.com/recipes/comfort-food">
+                    <span itemprop="recipeCuisine">Comfort Food</span>
+</a>                <a class="freyja_tag act_filter act_filter_reset" data-seo="medium" data-id="4352" data-name="Medium" href="https://www.chowhound.com/recipes/medium">
+                    <span>Medium</span>
+</a>          </div>
+        </div>
+
+
+        <span class="frr_save save_recipe show_login_box" style="margin-right:7px" data-recipeid="30700" data-savec="147"><span class="mt"></span><i>Save</i> <span class="frr_sc_thin">(147)</span></span>
+
+          <div style="position:relative;width:0;display:inline-block">
+            <div class="fr_onbm fr_onfl fr_ar_l" style="top:44px;text-align:left;padding:10px 40px 10px 20px;width:auto;left:-182px;white-space:nowrap">
+              Sign up to save this recipe to your profile <a href="https://www.chowhound.com/users/sign_up" class="act_onb_signup" data-omcat="onboarding" data-omev="save_recipe">Sign Up Now ›</a>
+              <span class="fa fa-times act_close_onbm"></span>
+            </div>
+          </div>
+            <div class="frr_ratewrap fr_rela" style="display:inline-block">
+              <a href="#" class="frr_rateit ratencomment_expander show_login_box" data-url="/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700/discussion.json">Rate</a>
+              <div class="frr_ratencomment">
+              </div>
+            </div>
+    </div>
+    <img id="recipe_top_img" itemprop="image" alt="Strawberry-Rhubarb Pie with Sour Cream Crust" width="320" style="display:none" srcset="https://search.chow.com/thumbnail/640/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg 2x, https://search.chow.com/thumbnail/960/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg 3x" src="https://search.chow.com/thumbnail/320/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" />
+    
+          <div data-original="https://search.chow.com/thumbnail/1600/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" data-original-2x="https://search.chow.com/thumbnail/3200/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" data-original-3x="https://search.chow.com/thumbnail/4800/0/www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" class="freyja_featimg lazy"></div>
+    
+
+
+    <div class="fr_r_meta">
+      <div class="fr_inwrap">
+
+        <span class="frr_serves fr_sep" itemprop="recipeYield">1 (9-inch) pie, or 8 to 10 servings</span>
+
+            <a style="color: #FFFFFF" href="https://www.chowhound.com/recipes/medium"><span class="frr_difficulty fr_sep">Medium</span></a>
+            <!-- <span class="frr_difficulty fr_sep">Medium</span> -->
+
+      <span class="fr_sep">
+
+        <div class="ratings_wrapper medium frr_ratings">
+        <div class="chow_rating_display" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+          <ul class="viewport" style="width:97.2px;text-align:left">
+            <li class="star" data-stars="5"></li><li class="star" data-stars="4"></li><li class="star" data-stars="3"></li><li class="star" data-stars="2"></li><li class="star" data-stars="1"></li>
+          </ul>
+          <ul class="lower_layer hollow">
+            <li class="star"></li><li class="star"></li><li class="star"></li><li class="star"></li><li class="star"></li>
+          </ul>
+          <span style="display:none" itemprop="ratingValue">4.5</span>
+          <span style="display:none" itemprop="reviewCount">3</span>
+        </div>
+        </div>
+        <span class="frr_ccnt">(3)</span>
+      </span>
+
+        <span class="frr_totaltime"><i>Total:</i> <time itemprop="totalTime" content="PT7H0M">3 hrs, plus 4 hrs chilling and cooling time</time></span>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+  <a class="fr_relarrow_prev fr_relarrow" onclick="om.trackEvent({eventCategory: 'recirculation', eventAction: 'header_arrow_prev'});" href="https://www.chowhound.com/recipes/sour-cream-mashed-potatoes-29028">
+  <span class="fr_relwrap_prev">
+    <span class="fr_relimg" style="background-image:url(https://search.chow.com/thumbnail/0/200/www.chowstatic.com/assets/recipe_photos/29028_sour_cream_mashed_potatoes.jpg)"></span>
+    <span class="fr_prenex">PREVIOUS:</span>
+    <span class="fr_reltitle">Sour Cream Mashed Potatoes</span>
+  </span>
+  </a>
+
+
+  <a class="fr_relarrow_next fr_relarrow" onclick="om.trackEvent({eventCategory: 'recirculation', eventAction: 'header_arrow_next'});" href="https://www.chowhound.com/recipes/latticed-rhubarb-pie-30329">
+  <span class="fr_relwrap_next">
+    <span class="fr_relimg" style="background-image:url(https://search.chow.com/thumbnail/0/200/www.chowstatic.com/assets/recipe_photos/30329_rhubarb_pie.jpg)"></span>
+    <span class="fr_prenex">NEXT:</span>
+    <span class="fr_reltitle">Latticed Rhubarb Pie</span>
+  </span>
+  </a>
+
+
+  <style>
+  .freyja_mainbody {border-bottom:1px solid #efefef;}
+  .next_ajax_recipe { position: relative;}
+  .freyja_ads_lb { background: none !important }
+  .freyja_container + .freyja_ads_lb { display: none }
+  .freyja_mainbody > .gu12 { padding-left: 0 !important }
+  </style>
+
+
+
+
+
+
+      <div class="freyja_ads_lb">
+          <div id="leader_plus_top"></div>
+      </div>
+
+
+
+<div class="freyja_container clearit freyja_mainbody bt_body">
+
+
+
+
+
+
+
+
+
+  <section class="col gu12">
+    <section class="freyja_colwrapper fr_recipewrapper">
+  <section class="col gu3 freyja_notmobile nopad">
+  <div class="freyja_box freyja_box81">
+    <h3><span>Ingredients (13)</span></h3>
+    <h4>For the crust:</h4><ul>
+<li itemprop="ingredients">2 1/2 cups all-purpose flour</li>
+<li itemprop="ingredients">2 tablespoons granulated sugar</li>
+<li itemprop="ingredients">1/2 teaspoon fine salt</li>
+<li itemprop="ingredients">1/2 cup shortening, frozen and cut into small pieces</li>
+<li itemprop="ingredients">10 tablespoons cold unsalted butter (1 1/4 sticks), cut into small pieces</li>
+<li itemprop="ingredients">1/2 cup plus 2 tablespoons sour cream </li>
+</ul><h4>For the pie:</h4><ul>
+<li itemprop="ingredients">All-purpose flour, for dusting the work surface</li>
+<li itemprop="ingredients">1 1/4 cups granulated sugar </li>
+<li itemprop="ingredients">1/2 cup cornstarch</li>
+<li itemprop="ingredients">2 pounds rhubarb, ends trimmed and cut into 1/2-inch pieces (about 7 cups) </li>
+<li itemprop="ingredients">1 pound strawberries, washed, hulled, and cut into 1/2-inch pieces (about 3 cups)</li>
+<li itemprop="ingredients">2 teaspoons freshly squeezed lemon juice </li>
+<li itemprop="ingredients">1 large egg white, beaten</li>
+</ul>
+  </div>
+
+
+  <span class="popcart-wrapper" style="margin-bottom:20px"><div class="popcart-buy-button"></div></span>
+
+  <div id="mpu_plus_top" class="mpu_plus_top_30700"></div>
+
+</section>
+
+
+  
+
+  <section class="col gu9 nopad">
+    <div class="freyja_box freyja_box82 clearit ">
+
+      <div class="frr_summary" itemprop="description">
+          <div class="ad_box" style="background:#e8e8e8;float:right;margin:0 0 20px 20px">
+            <div id="strnative_top_recipe_container">
+                <div id="strnative_top" class="strnative_top_30700">
+                </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+              <p>In this pie, sweet strawberries and tart rhubarb make a harmonious sweet-tart filling. The crust has a bit of richness from sour cream, and though rolling out pie dough can be a challenge, you can manhandle this dough a little without fear of toughening it up. Once the pie is finished baking, be sure to wait until it’s totally cooled to let the filling set, then enjoy with a scoop of <a target="_blank" href="https://www.chowhound.com/recipes/vanilla-bean-ice-cream-11117">ice cream</a>.</p>
+<p><strong>Special equipment:</strong> A <a target="_blank" href="http://www.amazon.com/Ateco-5357-Piece-Plain-Cutter/dp/B00004S1CI">1-inch round cutter</a> is needed to cut out the vents in the top crust of the pie.</p>
+<p>You’ll also need an instant-read thermometer and a pastry brush for this recipe.</p>
+      </div>
+
+      <div class="fr_byline full_summ ">
+        <span class="by_line">
+              by <a href="https://www.chowhound.com/search?q=Amy%20Wisniewski">
+                  <span itemprop="author">Amy Wisniewski</span>
+                </a>
+</span>
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="freyja_box freyja_box82 ">
+      <h3><span>Instructions</span></h3>
+      <div class="frr_wrap" itemprop="recipeInstructions">
+        <strong>For the crust:</strong>
+<ol>
+	<li>
+<span class="number_divider">1</span>In a large bowl, whisk together the flour, sugar, and salt. Toss the shortening and butter in the flour mixture until well coated. Using a pastry blender or 2 knives, cut the shortening and butter into the dry ingredients until reduced to pea-size pieces, about 3 to 4 minutes.</li>
+	<li>
+<span class="number_divider">2</span>Add the sour cream and mix just until the dough comes together, being careful not to work the dough too much.</li>
+	<li>
+<span class="number_divider">3</span>Divide the dough into 2 flat disks, one slightly larger than the other. Wrap tightly in plastic wrap and refrigerate for at least 1 hour.</li>
+</ol>
+<p><strong>For the pie:</strong></p>
+<ol>
+	<li>
+<span class="number_divider">1</span>Remove the dough from the refrigerator and set it aside at room temperature for 30 minutes.</li>
+	<li>
+<span class="number_divider">2</span>On a lightly floured surface, roll out the slightly larger disk to about 12 inches in diameter and 1/4 inch thick. (If the dough is very crumbly, gather it into a ball and knead it a few times to make it more pliable, then roll it out.) Line a 9-inch pie plate with the dough and trim it to leave a 1-inch overhang. Set aside.</li>
+	<li>
+<span class="number_divider">3</span>Place 1 teaspoon of the sugar in a small bowl and set it aside. Place the remaining sugar and cornstarch in a large bowl and whisk to combine. Sprinkle 2 tablespoons of the sugar-cornstarch mixture evenly over the bottom of the pie crust.</li>
+	<li>
+<span class="number_divider">4</span>Add the rhubarb, strawberries, and lemon juice to the bowl with the remaining sugar-cornstarch mixture and stir to evenly coat the fruit. Set aside.</li>
+	<li>
+<span class="number_divider">5</span>Roll out the remaining dough disk on a lightly floured surface to about 11 inches in diameter and 1/4 inch thick. Using a 1-inch round cutter, stamp out circles, leaving at least a 3-inch border from the edge and 1 1/2 inches of space between each circle (you should have about 12 cutouts). Set the cutout circles aside.</li>
+	<li>
+<span class="number_divider">6</span>Stir the rhubarb-strawberry mixture to redistribute the juices. Pour it into the prepared crust, mounding it in the center, and gently pat it down. Brush the dough overhang with the egg white. Place the top crust over the fruit and trim the excess dough to a 1-inch overhang. Fold the edge of the bottom crust over the top crust and press to seal. If desired, crimp the edge, using the forefinger of one hand to push the dough between the forefinger and thumb of the other hand. <img src="" alt="" data-src="https://search.chow.com/thumbnail/800/0/www.chowstatic.com/assets/2013/03/30700_InlineImage_480x320_strawberry_rhubarb_pie3.jpg" class="lazy">
+</li>
+	<li>
+<span class="number_divider">7</span>Brush the top of the pie with some of the remaining egg white. Arrange the cutout circles intermittently over the top crust (not covering the holes), and brush the cutout circles with egg white, discarding any left over. Evenly sprinkle the reserved sugar over the top of the pie. Place the pie in the freezer while the oven heats.</li>
+	<li>
+<span class="number_divider">8</span>Heat the oven to 425°F and arrange a rack on the bottom. Place a baking sheet lined with a double layer of aluminum foil on the rack.</li>
+	<li>
+<span class="number_divider">9</span>Place the pie on the hot baking sheet and bake for 30 minutes. Lower the temperature to 350°F and bake until the crust is brown and the fruit is bubbling, about 1 hour 40 minutes more. (The center of the filling should read 212°F on an instant-read thermometer for it to set properly.) If the crust around the edges of the pie starts to brown before the pie is done, cover the edges with aluminum foil.</li>
+	<li>
+<span class="number_divider">10</span>Remove the pie from the oven and let it sit on the baking sheet until the fruit stops bubbling, about 5 minutes. Transfer to a wire rack to cool completely and let the filling set before slicing, at least 3 hours.</li>
+</ol>
+
+
+          <div class="fr_r_shw"><div class="freyja_sharing fr_inlineshare fr_r_shar" style="clear:both">
+<ul>
+  <li><a class="freyja_fb fr_sbt_rp custom_fb_share" href="https://www.facebook.com/sharer/sharer.php?u=https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700&t=Strawberry-Rhubarb+Pie+with+Sour+Cream+Crust" target="_blank">Share<span class="hd_r"> This Recipe</span></a></li><!--
+  --><li><a class="freyja_pr fr_sbt_rp omniture_print" href="https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700/print">Print</a></li><!--
+  --><li><a class="freyja_em fr_sbt_rp act_emailit omniture_email" rel="nofollow" data-shareimg="https://www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" data-sharetitle="Strawberry-Rhubarb Pie with Sour Cream Crust" data-shareurl="https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700" data-sharedescription="A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling.">Email</a></li><!--
+  --><li style="min-width:150px;max-width:200px"><span class="frr_save save_recipe show_login_box" data-recipeid="30700" data-savec="147"><span class="mt"></span><i>Save</i> <span class="frr_sc_thin">(147)</span></span></li>
+</ul>
+</div>
+
+</div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+  </section>
+
+    <section class="col gu12 nopad frr_comments">
+      <div class="freyja_bigbt comment_expander" data-url="/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700/discussion.json">Load Comments</div>
+<div id="embedded_discussion_wrapper" class="frr_replies_wrap">
+      <div id="embedded_discussion_wrapper" class="clearfix">
+          <div id='discussion_placeholder' class="tac" data-url="/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700/discussion.json">
+  
+
+</div>
+    </div>
+
+</div>
+    </section>
+
+
+
+
+
+
+
+
+
+<section class="col gu12 nopad frp_mfrc ">
+
+  <div class="freyja_box">
+    <h3><span>Recommended from Chowhound</span></h3>
+  </div>
+
+  <div class="fr_r_related_wrap">
+
+    <div class="fr_r_related_left_col">
+
+
+          <div
+            class="fr_r_smart_wrap fr_r_smart_wrap-30700"
+            data-video-content-ids="129793,129724,128705,55335,129403"
+            data-playlist-id="30700"
+          >
+                <div class="fr_white_bck"></div>
+                <a class="lazy fr_bck fr_r_main_vid_thumb fr_related_vid_thumb fr_main_vid_thumb fr_related_item"
+                   data-original="https://search.chow.com/thumbnail/800/0/www.chowstatic.com/assets/models/videos/main_images/129793/original/1260616200_4449612020001_video-still-for-video-4445397176001_1132033_640x360.jpg"
+                   data-playlist-id="30700"
+                   data-video-id="129793"
+
+                   data-current-page-type="Recipe"
+                   data-content-type="Video"
+                   data-title="How to Make Low-Calorie Sour Cream Donuts"
+                   data-rank="1"
+                   data-total-related="10"
+                ></a>
+          </div>
+
+            <div class="fr_related_main_vid_info fr_related_main_vid_info-30700-129793"
+            >
+              <div class="fr_r_vid_duration">(01:10)</div>
+              <div class="fr_related_main_vid_title">How to Make Low-Calorie Sour Cream Donuts</div>
+                  <div class="fr_vid_partner_wrap ">
+      <div>Presented by </div>
+          <a class="fr_partner_name" target="_blank" href="https://www.chowhound.com/videos/cooking-light">Cooking Light</a>
+    </div>
+
+              <div class="fr_related_vid_desc">Oven-ready in just 20 minutes, these whole-grain donuts are much lighter in calories and sugar than the typical sour cream cake donut. Topped with a touch of glaze and nutty pecans, these delightful bites are a truly satisfying breakfast treat.</div>
+            </div>
+            <div class="fr_related_main_vid_info fr_related_main_vid_info-30700-129724"
+                    style="display: none"
+            >
+              <div class="fr_r_vid_duration">(00:49)</div>
+              <div class="fr_related_main_vid_title">Easy Pie Crust</div>
+              
+              <div class="fr_related_vid_desc">Homemade pie crust really elevates your desserts (and savory tarts and quiches too), and isn't as hard as you might think, especially if you use a food processor to make the dough. Even if you don't roll it out exactly evenly or press it in to your pie plate perfectly, the buttery taste and flaky texture will more than make up for any cosmetic imperfections. Give this easy pie crust recipe a try next time you bake -- and if you want to use it for a savory dish, just leave out the sugar in the recipe.</div>
+            </div>
+            <div class="fr_related_main_vid_info fr_related_main_vid_info-30700-128705"
+                    style="display: none"
+            >
+              <div class="fr_r_vid_duration">(03:46)</div>
+              <div class="fr_related_main_vid_title">How to Make a Strawberry Rhubarb Cobbler</div>
+                  <div class="fr_vid_partner_wrap ">
+      <div>Presented by </div>
+          <a class="fr_partner_name" target="_blank" href="https://www.chowhound.com/videos/proper-pour-charlotte-voisey">Small Screen</a>
+    </div>
+
+              <div class="fr_related_vid_desc">If you were alive in the late 18th and early 19th century, as some of you might have been, you know that it was no guarantee that your cocktail would be served or cooled with ice. In fact, there was a good chance the tavern or bar you were in had no ice at all. Especially if you lived in the American South or a stone's throw from the equator. You can thank Frederic Tudor, the “Boston Ice King,” for remedying that. His ice deliveries from the Northeast to hotter climates paved the way for creative uses of ice like the crushed “cobble stone”-like pieces of ice found in the cobbler. Grab your Lewis Bag and get crackin’!</div>
+            </div>
+            <div class="fr_related_main_vid_info fr_related_main_vid_info-30700-55335"
+                    style="display: none"
+            >
+              <div class="fr_r_vid_duration">(03:09)</div>
+              <div class="fr_related_main_vid_title">How to Make Pumpkin Pie with Boris Portnoy</div>
+              
+              <div class="fr_related_vid_desc"><p>Pastry chef <a target="_blank" href="http://www.borisportnoy.com/">Boris Portnoy</a> gives new life to a Thanksgiving clich&#233;. Generic, canned pumpkin pie mix plus freezer-burned pie crust equals fake smiles on the faces of your friends and families. Real smiles come from choosing your own pumpkin&#8212;there are many heirloom varieties to pick from&#8212;and then customizing and experimenting as you go, using <a target="_blank" href="https://www.chowhound.com/recipes/27926">Portnoy&#8217;s recipe</a> as a guide.</p>
+
+</div>
+            </div>
+            <div class="fr_related_main_vid_info fr_related_main_vid_info-30700-129403"
+                    style="display: none"
+            >
+              <div class="fr_r_vid_duration">(00:48)</div>
+              <div class="fr_related_main_vid_title">How to Make a Chocolate Pie Crust</div>
+                  <div class="fr_vid_partner_wrap ">
+      <div>Presented by </div>
+          <a class="fr_partner_name" target="_blank" href="https://www.chowhound.com/videos/cooking-light">Cooking Light</a>
+    </div>
+
+              <div class="fr_related_vid_desc">Every so often, everyone needs a treat. Whether stuffed with berries, peanut butter, or anything in between, this pie crust is one indulgent recipe that’s worth every single bite.</div>
+            </div>
+
+      <div class="fr_r_related_gals_wrap">
+            <div
+            class="freyja_box7 fr_r_related_gal fr_related_item"
+            data-current-page-type="Recipe"
+            data-content-type="Gallery"
+            data-title="Strawberry Dishes to Serve at Your Summer Picnic"
+            data-rank="2"
+            data-total-related="10"
+            >
+              <a title="Strawberry Dishes to Serve at Your Summer Picnic" href="https://www.chowhound.com/pictures/strawberry-recipes-summer-picnic">
+                <div data-original="https://search.chow.com/thumbnail/640/0/www.chowstatic.com/assets/recipe_photos/30347_strawberry_tart_citrus_cream.jpg" data-original-2x="https://search.chow.com/thumbnail/1280/0/www.chowstatic.com/assets/recipe_photos/30347_strawberry_tart_citrus_cream.jpg" data-original-3x="https://search.chow.com/thumbnail/1920/0/www.chowstatic.com/assets/recipe_photos/30347_strawberry_tart_citrus_cream.jpg" class="fr_bck lazy"></div>
+              </a>
+
+              <div class="fr_r_r_deets_wrap">
+                <div class="fr_r_r_label">Photo Gallery</div>
+
+                <a title="Strawberry Dishes to Serve at Your Summer Picnic" href="https://www.chowhound.com/pictures/strawberry-recipes-summer-picnic"><h2>Strawberry Dishes to Serve at Your Summer Picnic</h2></a>
+
+                <div class="fr_r_r_pic_count">11 Photos</div>
+
+              </div>
+            </div>
+
+            <div
+            class="freyja_box7 fr_r_related_gal fr_related_item"
+            data-current-page-type="Recipe"
+            data-content-type="Gallery"
+            data-title="Dessert Recipes to Celebrate Spring"
+            data-rank="3"
+            data-total-related="10"
+            >
+              <a title="Dessert Recipes to Celebrate Spring" href="https://www.chowhound.com/pictures/dessert-recipes-to-celebrate-spring">
+                <div data-original="https://search.chow.com/thumbnail/640/0/www.chowstatic.com/assets/recipe_photos/30425_apricot_meringue_pie-2.jpg" data-original-2x="https://search.chow.com/thumbnail/1280/0/www.chowstatic.com/assets/recipe_photos/30425_apricot_meringue_pie-2.jpg" data-original-3x="https://search.chow.com/thumbnail/1920/0/www.chowstatic.com/assets/recipe_photos/30425_apricot_meringue_pie-2.jpg" class="fr_bck lazy"></div>
+              </a>
+
+              <div class="fr_r_r_deets_wrap">
+                <div class="fr_r_r_label">Photo Gallery</div>
+
+                <a title="Dessert Recipes to Celebrate Spring" href="https://www.chowhound.com/pictures/dessert-recipes-to-celebrate-spring"><h2>Dessert Recipes to Celebrate Spring</h2></a>
+
+                <div class="fr_r_r_pic_count">41 Photos</div>
+
+                    <div class="freyja_tagslist fr_collapsible_tags">
+                          <a href="https://www.chowhound.com/tags/dessert" class="freyja_tag act_filter act_filter_reset" data-seo="dessert" data-id="315" data-name="Dessert">Dessert</a>
+                          <a href="https://www.chowhound.com/tags/spring" class="freyja_tag act_filter act_filter_reset" data-seo="spring" data-id="4019" data-name="Spring">Spring</a>
+                    </div>
+              </div>
+            </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="fr_r_related_right_col fr_r_related_right_col-30700">
+      <div class="fr_related_next_vids_wrap">
+            <div
+              class="fr_related_next_vid fr_related_next_vid-129793 "
+                  style="display: none;"
+
+            >
+              <a
+              class="fr_next_vid_pic_wrap fr_related_vid_thumb"
+              data-playlist-id="30700"
+              data-video-id="129793"
+              >
+                <div class="fr_related_dummy_56"></div>
+                <div data-original="https://search.chow.com/thumbnail/283/159/www.chowstatic.com/assets/models/videos/main_images/129793/original/1260616200_4449612020001_video-still-for-video-4445397176001_1132033_640x360.jpg" data-original-2x="https://search.chow.com/thumbnail/566/318/www.chowstatic.com/assets/models/videos/main_images/129793/original/1260616200_4449612020001_video-still-for-video-4445397176001_1132033_640x360.jpg" data-original-3x="https://search.chow.com/thumbnail/849/477/www.chowstatic.com/assets/models/videos/main_images/129793/original/1260616200_4449612020001_video-still-for-video-4445397176001_1132033_640x360.jpg" class="fr_related_lazy lazy"></div>
+              </a>
+              <div class="fr_related_next_info">
+                <div class="fr_related_next ">Up Next</div>
+                <a
+                  class="fr_related_vid_thumb fr_related_next_vid_title"
+                  data-playlist-id="30700"
+                  data-video-id="129793"
+                >How to Make Low-Calorie Sour Cream Donuts</a>
+                <div class="fr_related_next_duration">(01:10)</div>
+              </div>
+            </div>
+            <div
+              class="fr_related_next_vid fr_related_next_vid-129724 fr_related_item"
+
+                data-current-page-type="Recipe"
+                data-content-type="Video"
+                data-title="Easy Pie Crust"
+                data-rank="4"
+                data-total-related="10"
+            >
+              <a
+              class="fr_next_vid_pic_wrap fr_related_vid_thumb"
+              data-playlist-id="30700"
+              data-video-id="129724"
+              >
+                <div class="fr_related_dummy_56"></div>
+                <div data-original="https://search.chow.com/thumbnail/283/159/www.chowstatic.com/assets/models/videos/main_images/129724/original/EasyPieCrustThumbnail_1128647_640x360.jpg" data-original-2x="https://search.chow.com/thumbnail/566/318/www.chowstatic.com/assets/models/videos/main_images/129724/original/EasyPieCrustThumbnail_1128647_640x360.jpg" data-original-3x="https://search.chow.com/thumbnail/849/477/www.chowstatic.com/assets/models/videos/main_images/129724/original/EasyPieCrustThumbnail_1128647_640x360.jpg" class="fr_related_lazy lazy"></div>
+              </a>
+              <div class="fr_related_next_info">
+                <div class="fr_related_next fr_next_up_vid">Up Next</div>
+                <a
+                  class="fr_related_vid_thumb fr_related_next_vid_title"
+                  data-playlist-id="30700"
+                  data-video-id="129724"
+                >Easy Pie Crust</a>
+                <div class="fr_related_next_duration">(00:49)</div>
+              </div>
+            </div>
+            <div
+              class="fr_related_next_vid fr_related_next_vid-128705 fr_related_item"
+
+                data-current-page-type="Recipe"
+                data-content-type="Video"
+                data-title="How to Make a Strawberry Rhubarb Cobbler"
+                data-rank="5"
+                data-total-related="10"
+            >
+              <a
+              class="fr_next_vid_pic_wrap fr_related_vid_thumb"
+              data-playlist-id="30700"
+              data-video-id="128705"
+              >
+                <div class="fr_related_dummy_56"></div>
+                <div data-original="https://search.chow.com/thumbnail/283/159/www.chowstatic.com/assets/models/videos/main_images/128705/original/the_proper_pour_cobbler_1280_720_s_c1_1004802_640x360.jpg" data-original-2x="https://search.chow.com/thumbnail/566/318/www.chowstatic.com/assets/models/videos/main_images/128705/original/the_proper_pour_cobbler_1280_720_s_c1_1004802_640x360.jpg" data-original-3x="https://search.chow.com/thumbnail/849/477/www.chowstatic.com/assets/models/videos/main_images/128705/original/the_proper_pour_cobbler_1280_720_s_c1_1004802_640x360.jpg" class="fr_related_lazy lazy"></div>
+              </a>
+              <div class="fr_related_next_info">
+                <div class="fr_related_next ">Up Next</div>
+                <a
+                  class="fr_related_vid_thumb fr_related_next_vid_title"
+                  data-playlist-id="30700"
+                  data-video-id="128705"
+                >How to Make a Strawberry Rhubarb Cobbler</a>
+                <div class="fr_related_next_duration">(03:46)</div>
+              </div>
+            </div>
+            <div
+              class="fr_related_next_vid fr_related_next_vid-55335 fr_related_item"
+                  style="display: none;"
+
+                data-current-page-type="Recipe"
+                data-content-type="Video"
+                data-title="How to Make Pumpkin Pie with Boris Portnoy"
+                data-rank="6"
+                data-total-related="10"
+            >
+              <a
+              class="fr_next_vid_pic_wrap fr_related_vid_thumb"
+              data-playlist-id="30700"
+              data-video-id="55335"
+              >
+                <div class="fr_related_dummy_56"></div>
+                <div data-original="https://search.chow.com/thumbnail/283/159/www.chowstatic.com/blog-media/2009/11/ydiaw_pumpkin_pie_620.jpg" data-original-2x="https://search.chow.com/thumbnail/566/318/www.chowstatic.com/blog-media/2009/11/ydiaw_pumpkin_pie_620.jpg" data-original-3x="https://search.chow.com/thumbnail/849/477/www.chowstatic.com/blog-media/2009/11/ydiaw_pumpkin_pie_620.jpg" class="fr_related_lazy lazy"></div>
+              </a>
+              <div class="fr_related_next_info">
+                <div class="fr_related_next ">Up Next</div>
+                <a
+                  class="fr_related_vid_thumb fr_related_next_vid_title"
+                  data-playlist-id="30700"
+                  data-video-id="55335"
+                >How to Make Pumpkin Pie with Boris Portnoy</a>
+                <div class="fr_related_next_duration">(03:09)</div>
+              </div>
+            </div>
+            <div
+              class="fr_related_next_vid fr_related_next_vid-129403 fr_related_item"
+                  style="display: none;"
+
+                data-current-page-type="Recipe"
+                data-content-type="Video"
+                data-title="How to Make a Chocolate Pie Crust"
+                data-rank="7"
+                data-total-related="10"
+            >
+              <a
+              class="fr_next_vid_pic_wrap fr_related_vid_thumb"
+              data-playlist-id="30700"
+              data-video-id="129403"
+              >
+                <div class="fr_related_dummy_56"></div>
+                <div data-original="https://search.chow.com/thumbnail/283/159/www.chowstatic.com/assets/models/videos/main_images/129403/original/1260616200_4396428049001_video-still-for-video-4382107625001_1110881_640x360.jpg" data-original-2x="https://search.chow.com/thumbnail/566/318/www.chowstatic.com/assets/models/videos/main_images/129403/original/1260616200_4396428049001_video-still-for-video-4382107625001_1110881_640x360.jpg" data-original-3x="https://search.chow.com/thumbnail/849/477/www.chowstatic.com/assets/models/videos/main_images/129403/original/1260616200_4396428049001_video-still-for-video-4382107625001_1110881_640x360.jpg" class="fr_related_lazy lazy"></div>
+              </a>
+              <div class="fr_related_next_info">
+                <div class="fr_related_next ">Up Next</div>
+                <a
+                  class="fr_related_vid_thumb fr_related_next_vid_title"
+                  data-playlist-id="30700"
+                  data-video-id="129403"
+                >How to Make a Chocolate Pie Crust</a>
+                <div class="fr_related_next_duration">(00:48)</div>
+              </div>
+            </div>
+      </div>
+      <div id="mpu_bottom" class="mpu_bottom mpu_bottom_30700"></div>
+
+      <div class="fr_related_rec_list">
+            <div
+            class="fr_related_item fr_related_recipe_wrap"
+            data-current-page-type="Recipe"
+            data-content-type="Recipe"
+            data-title="Latticed Rhubarb Pie"
+            data-rank="8"
+            data-total-related="10"
+            >
+              <a href="https://www.chowhound.com/recipes/latticed-rhubarb-pie-30329" class="fr_related_recipe_img_wrap">
+                <div data-original="https://search.chow.com/thumbnail/640/0/www.chowstatic.com/assets/recipe_photos/30329_rhubarb_pie.jpg" data-original-2x="https://search.chow.com/thumbnail/1280/0/www.chowstatic.com/assets/recipe_photos/30329_rhubarb_pie.jpg" data-original-3x="https://search.chow.com/thumbnail/1920/0/www.chowstatic.com/assets/recipe_photos/30329_rhubarb_pie.jpg" class="fr_bck fr_related_recipe_img lazy"></div>
+              </a>
+              <div class="fr_related_recipe_info">
+                <div class="fr_related_recipe_label">Recipe</div>
+                <a href="https://www.chowhound.com/recipes/latticed-rhubarb-pie-30329"><h5>Latticed Rhubarb Pie</h5></a>
+              </div>
+            </div>
+            <div
+            class="fr_related_item fr_related_recipe_wrap"
+            data-current-page-type="Recipe"
+            data-content-type="Recipe"
+            data-title="Rhubarb and Strawberry Compote "
+            data-rank="9"
+            data-total-related="10"
+            >
+              <a href="https://www.chowhound.com/recipes/rhubarb-and-strawberry-compote-10903" class="fr_related_recipe_img_wrap">
+                <div data-original="https://search.chow.com/thumbnail/640/0/www.chowstatic.com/assets/2013/04/10903_RecipeImage_620x413_rhubarb_strawberry_compote.jpg" data-original-2x="https://search.chow.com/thumbnail/1280/0/www.chowstatic.com/assets/2013/04/10903_RecipeImage_620x413_rhubarb_strawberry_compote.jpg" data-original-3x="https://search.chow.com/thumbnail/1920/0/www.chowstatic.com/assets/2013/04/10903_RecipeImage_620x413_rhubarb_strawberry_compote.jpg" class="fr_bck fr_related_recipe_img lazy"></div>
+              </a>
+              <div class="fr_related_recipe_info">
+                <div class="fr_related_recipe_label">Recipe</div>
+                <a href="https://www.chowhound.com/recipes/rhubarb-and-strawberry-compote-10903"><h5>Rhubarb and Strawberry Compote </h5></a>
+              </div>
+            </div>
+            <div
+            class="fr_related_item fr_related_recipe_wrap"
+            data-current-page-type="Recipe"
+            data-content-type="Recipe"
+            data-title="Mindy Segal&#39;s Rhubarb and Strawberry Consommé"
+            data-rank="10"
+            data-total-related="10"
+            >
+              <a href="https://www.chowhound.com/recipes/mindy-segals-rhubarb-and-strawberry-consomme-29782" class="fr_related_recipe_img_wrap">
+                <div data-original="https://search.chow.com/thumbnail/640/0/www.chowstatic.com/assets/2011/07/MindySegal_Dish2_620.jpg" data-original-2x="https://search.chow.com/thumbnail/1280/0/www.chowstatic.com/assets/2011/07/MindySegal_Dish2_620.jpg" data-original-3x="https://search.chow.com/thumbnail/1920/0/www.chowstatic.com/assets/2011/07/MindySegal_Dish2_620.jpg" class="fr_bck fr_related_recipe_img lazy"></div>
+              </a>
+              <div class="fr_related_recipe_info">
+                <div class="fr_related_recipe_label">Recipe</div>
+                <a href="https://www.chowhound.com/recipes/mindy-segals-rhubarb-and-strawberry-consomme-29782"><h5>Mindy Segal&#39;s Rhubarb and Strawberry Consommé</h5></a>
+              </div>
+            </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  </section>
+
+
+    <section class="col gu12 nopad">
+      <div class="freyja_box freyja_box83">
+        
+
+
+
+<!-- TABOOLA AD taboola-bottom-page-thumbnails_30700 -->
+<div id="taboola-bottom-page-thumbnails_30700"></div>
+
+  <script type="text/javascript" >
+    window._taboola = window._taboola || [];
+    _taboola.push({
+      mode: 'thumbnails-c',
+      container: 'taboola-bottom-page-thumbnails_30700',
+      placement: 'Desktop Recipe Bottom Page Thumbnails',
+      target_type: 'mix'
+    });
+    var placement_name = "Desktop Recipe Bottom Page Thumbnails";
+  </script>
+
+      </div>
+    </section>
+
+    <div class="ad_box_foot_wrap" style="float:left;width:100%">
+      <div class="ad_box ad_box_foot" style="margin-bottom:10px">
+        <div id="leader_bottom" class="freyjaad_72890 leader_bottom leader_bottom_30700"></div>
+      </div>
+    </div>
+
+
+
+
+
+</section>
+</span>
+
+  </section>
+
+
+
+
+</div>
+
+
+  <div class="freyja_ads_lb">
+    <div id="leader_bottom"></div>
+  </div>
+
+
+  <div class="next_ajax_recipe"></div>
+  <style>.fr_wp_more_articles{ display: none !important }.fa-clock-o{ position: relative; top: -6px;}</style>
+
+
+<section id="freyja_footer">
+  <div class="freyja_container rela">
+    <div class="freyja_footwrap">
+      <div class="fr_foot_h">
+        <a href="https://www.chowhound.com/" class="freyja_logo" title="chowhound.com"></a>
+        <div class="freyja_mob_follow in_foot">
+          <h3>Follow us!</h3>
+          <ul>
+            <li><a class="freyja_fb facebook_follow" href="https://www.facebook.com/chowhound" target="_blank"></a></li>
+            <li><a class="freyja_tw twitter_follow" href="https://twitter.com/Chow" target="_blank"></a></li>
+            <li><a class="freyja_pi" href="https://www.pinterest.com/chowhound/" target="_blank"></a></li>
+            <li><a class="freyja_in" href="https://instagram.com/chowhound/" target="_blank"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fr_foot_f freyja_notmobile">
+        <ul class="fr_fcol">
+          <li><h4>CBS Interactive</h4></li>
+          <li><a href="http://www.cbsinteractive.com/" target="_blank">About CBS Interactive</a></li>
+          <li><a href="https://www.cbscorporation.com/" target="_blank">CBS Corporation</a></li>
+          <li><a href="http://www.cbsinteractive.com/careers" target="_blank">Careers</a></li>
+          <li><a href="https://www.cbsinteractive.com/legal/cbsi/privacy-policy/managing-cookies" target="_blank">Cookies</a></li>
+          <li><a href="https://www.guide.com/" target="_blank">Product Reviews on Guide.com</a></li>
+        </ul>
+        <ul class="fr_fcol">
+          <li><h4>Chowhound</h4></li>
+          <li><a href="https://www.chowhound.com/about">About Chowhound</a></li>
+          <li><a href="https://www.chowhound.com/faq">FAQ</a></li>
+          <li><a href="https://www.chowhound.com/guidelines">Posting Guidelines</a></li>
+          <li><a href="https://www.chowhound.com/feedback">Feedback</a></li>
+          <li><a href="https://www.chowhound.com/editorial-sitemap">Editorial Sitemap</a></li>
+        </ul>
+        <ul class="fr_fcol">
+          <li><h4>Topics</h4></li>
+          <li><a href="https://www.chowhound.com/home-cooking">Home Cooking</a></li>
+          <li><a href="https://www.chowhound.com/restaurants">Restaurants &amp; Bars</a></li>
+          <li><a href="https://www.chowhound.com/cookware">Cookware</a></li>
+          <li><a href="https://www.chowhound.com/tag/whats-for-dinner">What&#39;s for Dinner</a></li>
+          <li><a href="https://www.chowhound.com/tag/cookbook-of-the-month">Cookbook of the Month</a></li>
+        </ul>
+        <ul class="fr_fcol">
+          <li><h4><a href="https://www.chowhound.com/recipes/">Recipes</a></h4></li>
+          <li><a href="https://www.messenger.com/t/chowhound" target="_blank">Recipe Search Bot</a></li>
+          <li><a href="https://www.chowhound.com/recipes/healthy">Healthy Recipes</a></li>
+          <li><a href="https://www.chowhound.com/recipes/main-dish">Main Dish Recipes</a></li>
+          <li><a href="https://www.chowhound.com/recipes/dessert">Dessert Recipes</a></li>
+          <li><a href="https://www.chowhound.com/recipes/drink">Drink Recipes</a></li>
+        </ul>
+        <ul class="fr_fcol">
+          <li><h4>Editorial</h4></li>
+          <li><a href="https://www.chowhound.com/city-guides">City Guides</a></li>
+          <li><a href="https://www.chowhound.com/food-news">Articles</a></li>
+          <li><a href="https://www.chowhound.com/videos">Videos</a></li>
+          <li><a href="https://www.chowhound.com/features">Features</a></li>
+          <li><a href="https://www.chowhound.com/pictures">Photo Galleries</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="freyja_ff">
+    <div class="freyja_container rela">
+    <div class="freyja_footwrap">
+    &copy; CBS Interactive, All rights reserved | <a href="http://www.tvguide.com/" rel="nofollow" target="_blank">A TV Guide site</a> | <a href="https://cbsi.secure.force.com/CBSi/articles/FAQ/Privacy-Policy-Highlights" target="_blank">Privacy Policy</a> | <a href="https://cbsi.secure.force.com/CBSi/articles/FAQ/mThird-Party-Online-Advertising" target="_blank">Ad Choice</a> | <a href="https://cbsi.secure.force.com/CBSi/articles/FAQ/CBS-Interactive--Terms-of-Use?retURL=%2FCBSi%2Fapex%2Fknowledgehome%3Freferer%3DmobileTerms.com&popup=false&categories=CBS_Interactive%3AmTOU&template=template_mobileTerms&referer=mobileTerms.com" target="_blank">Terms of Use</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<script type="text/javascript">
+    var vglnk = { key: 'de1ca4a39035d42afcc2fd1441684b35' };
+
+    // (function(d, t) {
+    //     var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    //     s.src = '//cdn.viglink.com/api/vglnk.js';
+    //     var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+    // }(document, 'script'));
+</script>
+
+<script type="text/javascript">
+    is_prod = true;
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    //TODO: This should improve page speed, but needs to be tested by ad team
+  
+
+    //pageview counter code
+    googletag.CBSigetCookieValue = function(ckNm) {
+        var value = null;
+        var allCookies = document.cookie;
+        var pos = allCookies.indexOf(ckNm);
+        if (pos != -1) {
+            var start = pos + ckNm.length + 1;
+            var end = allCookies.indexOf(";", start);
+            if (end == -1) end = allCookies.length;
+            value = allCookies.substring(start, end);
+         }
+         return value;
+    };
+     
+    // determine if it's DST in the Eastern Timezone on the given date
+    googletag.CBSiisEDT = function(dt) {
+        // EDT starts second Sunday of March
+        var edtStart = new Date(dt.getFullYear(), 2, 1);
+        edtStart = Date.UTC(edtStart.getUTCFullYear(), 2, 14-(edtStart.getUTCDay()+13)%7, 5);
+        // EDT ends first Sunday of November
+        var edtEnd = new Date(dt.getFullYear(), 10, 1);
+        edtEnd = Date.UTC(edtEnd.getUTCFullYear(), 10, 7-(edtEnd.getUTCDay()+6)%7, 4);
+        // see if current date is within the EDT range
+        return dt.getTime() >= edtStart && dt.getTime() < edtEnd;
+    };
+     
+    googletag.CBSiaddPageView = function () {
+        var pv=1;
+        var cookiename="pv";
+        //If there's a cookie, get the current value and add one to it.
+        if (document.cookie.indexOf(cookiename)!=-1) {
+            pv=parseInt(googletag.CBSigetCookieValue(cookiename));
+            if(isNaN(pv))
+            {  pv=1;
+            } else {
+                pv+=1;
+            }
+        }
+        // set expiration to midnight using EDT or EST offset (4|5)
+        var dt = new Date();
+        var exp = Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate(), googletag.CBSiisEDT(dt) ? 4 : 5);
+        // adjust 1 day if set to midnight of previous day
+        exp += exp > dt.getTime() ? 0 : 24*60*60*1000;
+        exp = new Date(exp).toUTCString();
+        // get L2 domain
+        var domainArr = document.domain.split('.').reverse();
+        var l2domain=document.domain;
+        if(domainArr[1]!=null)
+        {   l2domain = domainArr[1] + "." + domainArr[0];
+        }
+     
+        // save the value in the cookie
+        document.cookie = cookiename + "=" + pv + ";path=/;domain=" + l2domain + ";expires=" + exp;
+        //update the value for the next ad call
+        googletag.pubads().setTargeting("pv",""+pv);
+    };
+    //end pageview counter
+
+
+
+
+        // (function() {
+        //   var gads = document.createElement("script");
+        //   gads.async = true;
+        //   gads.type = "text/javascript";
+        //   var useSSL = "https:" == document.location.protocol;
+        //   gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+        //   var node =document.getElementsByTagName("script")[0];
+        //   node.parentNode.insertBefore(gads, node);
+        //  })();
+
+</script>
+
+
+
+<script>
+    var mpu_top, mpu_plus_top, mpu_bottom, leader_plus_top, leader_top, leader_bottom, mantle_skin, power_bar_incontent, intromercial, mobile_banner_top, mobile_banner_middle, mobile_flex_0, mobile_flex_1, mobile_mpu_top, mobile_mpu_bottom, mobile_flex_top, mobile_flex_bottom;
+
+
+    xfp_id = '8264/aw-chowhound/recipes';
+
+
+            googletag.cmd.push(function() {
+
+                var env = is_prod ? "production" : "staging"
+
+
+                  leader_plus_top=googletag.defineSlot("8264/aw-chowhound/recipes", [[728,90],[970,66],[728,91],[970,250]], "leader_plus_top").addService(googletag.pubads()).setTargeting("pos", "top")
+                          .setCollapseEmptyDiv(true,true);
+
+
+                  mpu_plus_top=googletag.defineSlot("8264/aw-chowhound/recipes", [[300, 250],[300, 600]], "mpu_plus_top").addService(googletag.pubads()).setTargeting("pos", "top");
+
+                    sharethrough_key = "54ee49f3";
+                    sharethrough=googletag.defineSlot("8264/aw-chowhound/recipes", [11, 11], "strnative_top").addService(googletag.pubads()).setTargeting("pos", "top").setTargeting("strnativekey", "54ee49f3");
+
+                  mpu_bottom=googletag.defineSlot("8264/aw-chowhound/recipes", [300, 250], "mpu_bottom").addService(googletag.pubads()).setTargeting("pos", "bottom");
+
+
+                  leader_bottom=googletag.defineSlot("8264/aw-chowhound/recipes", [[728,90],[970,66],[728,92]], "leader_bottom").addService(googletag.pubads()).setTargeting("pos", "bottom");
+
+
+
+
+                    if (window.I11C && window.I11C.Morph && window.I11C.Morph === 1) {
+                      googletag.defineSlot("8264/aw-chowhound/recipes", [7,7], "nav-ad").addService(googletag.pubads()).setTargeting("pos", "nav").setTargeting("miirefresh","0");
+                    }
+
+                googletag.pubads().setTargeting("ptype", "section_detail");
+
+                    googletag.pubads().setTargeting("tag", "sour-cream,rhubarb,strawberries,memorial-day,labor-day,4th-of-july,baking,dessert,dinner-party,bridal-shower,butter,lemon-juice,fruit,pies,salt,flour,sugar,spring,summer,comfort-food,medium");
+                    utag_taglist = "sour-cream|rhubarb|strawberries|memorial-day|labor-day|4th-of-july|baking|dessert|dinner-party|bridal-shower|butter|lemon-juice|fruit|pies|salt|flour|sugar|spring|summer|comfort-food|medium";
+                    utag_data.tags = utag_taglist;
+
+
+                googletag.pubads().setTargeting("loggedin", "0");googletag.pubads().setTargeting("cid", "strawberry-rhubarb-pie-with-sour-cream-crust");
+                googletag.pubads().setTargeting("env", env);
+                googletag.pubads().setTargeting("vguid", view_tracking_guid); 
+
+                googletag.CBSiaddPageView(); //pv counter
+                googletag.pubads().enableAsyncRendering();
+                googletag.pubads().enableSingleRequest();
+                googletag.pubads().disableInitialLoad();
+                googletag.enableServices();
+            // });
+
+
+            // googletag.cmd.push(function() {
+            if(typeof index_headertag_lightspeed !== 'undefined') {
+                index_headertag_lightspeed.add_session_end_hook(function(){
+                var slots = googletag.pubads().getSlots();
+                index_headertag_lightspeed.set_slot_targeting(slots);
+
+                
+                  googletag.display("leader_plus_top");
+
+
+                  googletag.display("mpu_plus_top");
+
+
+                  googletag.display("mpu_bottom");
+
+                  googletag.display("leader_bottom");
+
+
+
+
+                  googletag.pubads().refresh();
+
+                }, true);
+                    index_headertag_lightspeed.refresh();
+                } else {
+
+                
+                  googletag.display("leader_plus_top");
+
+
+                  googletag.display("mpu_plus_top");
+
+
+                  googletag.display("mpu_bottom");
+
+                  googletag.display("leader_bottom");
+
+
+
+
+                    googletag.pubads().refresh();
+
+                }
+            });
+            
+
+</script>
+
+
+<script type="text/javascript">
+/*!
+  * $script.js JS loader & dependency manager
+  * https://github.com/ded/script.js
+  * (c) Dustin Diaz 2014 | License MIT
+  */
+(function(e,t){typeof module!="undefined"&&module.exports?module.exports=t():typeof define=="function"&&define.amd?define(t):this[e]=t()})("$script",function(){function p(e,t){for(var n=0,i=e.length;n<i;++n)if(!t(e[n]))return r;return 1}function d(e,t){p(e,function(e){return t(e),1})}function v(e,t,n){function g(e){return e.call?e():u[e]}function y(){if(!--h){u[o]=1,s&&s();for(var e in f)p(e.split("|"),g)&&!d(f[e],g)&&(f[e]=[])}}e=e[i]?e:[e];var r=t&&t.call,s=r?t:n,o=r?e.join(""):t,h=e.length;return setTimeout(function(){d(e,function t(e,n){if(e===null)return y();!n&&!/^https?:\/\//.test(e)&&c&&(e=e.indexOf(".js")===-1?c+e+".js":c+e);if(l[e])return o&&(a[o]=1),l[e]==2?y():setTimeout(function(){t(e,!0)},0);l[e]=1,o&&(a[o]=1),m(e,y)})},0),v}function m(n,r){var i=e.createElement("script"),u;i.onload=i.onerror=i[o]=function(){if(i[s]&&!/^c|loade/.test(i[s])||u)return;i.onload=i[o]=null,u=1,l[n]=2,r()},i.async=1,i.src=h?n+(n.indexOf("?")===-1?"?":"&")+h:n,t.insertBefore(i,t.lastChild)}var e=document,t=e.getElementsByTagName("head")[0],n="string",r=!1,i="push",s="readyState",o="onreadystatechange",u={},a={},f={},l={},c,h;return v.get=m,v.order=function(e,t,n){(function r(i){i=e.shift(),e.length?v(i,r):v(i,t,n)})()},v.path=function(e){c=e},v.urlArgs=function(e){h=e},v.ready=function(e,t,n){e=e[i]?e:[e];var r=[];return!d(e,function(e){u[e]||r[i](e)})&&p(e,function(e){return u[e]})?t():!function(e){f[e]=f[e]||[],f[e][i](t),n&&n(r)}(e.join("|")),v},v.done=function(e){v([null],e)},v})
+</script>
+
+
+    <script>
+      var load_popcart = 1;
+      var ads_loaded = [];
+      page = "is_recipe";
+      ads_loaded.push(30700);
+      fr_pinterest_modal = "<h2>Thanks for pinning!<\/h2>\n<h2>Follow us for more great suggestions.<\/h2>\n\n<div class=\"fr_pt_follow_wrapper\">\n  <a href=\"https://www.pinterest.com/chowhound/\"\n     data-pin-do=\"buttonFollow\">\n    Follow Chowhound\n  <\/a>\n<\/div>\n\n<h4>Here are some more pins we think you might like:<\/h4>\n\n<div class=\"fr_embbed_pins_wrapper\">\n  <div class=\"fr_embed_pin\" data-social-location=\"thanks-modal\">\n    <a data-pin-do=\"embedPin\" href=\"https://www.pinterest.com/pin/176695985359488789/\"><\/a>\n  <\/div>\n  <div class=\"fr_embed_pin\" data-social-location=\"thanks-modal\">\n    <a data-pin-do=\"embedPin\" href=\"https://www.pinterest.com/pin/176695985359378383/\"><\/a>\n  <\/div>\n  <div class=\"fr_embed_pin\" data-social-location=\"thanks-modal\">\n    <a data-pin-do=\"embedPin\" href=\"https://www.pinterest.com/pin/176695985359385732/\"><\/a>\n  <\/div>\n<\/div>\n\n<a href=\"https://www.pinterest.com/chowhound/\" target=\"_blank\" class=\"freyja_bigbt fr_pin_btn\"><span class=\"fr_pin_btn_arrow\">Show me More<\/span><\/a>\n\n<div class=\"fr_suppress_pin_wrapper\">\n  <label for=\"fr_suppress_pin_modal\"><input type=\"checkbox\" name=\"fr_suppress_pin_modal\" class=\"fr_suppress_pin_modal\" id=\"fr_suppress_pin_modal\">Don\'t show me this again<\/label>\n<\/div>\n";
+
+    </script>
+    <script type="text/javascript" src="//native.sharethrough.com/assets/tag.js" async></script>
+    <script>
+    $script.ready('recipes_script', function(){
+      chowRecipe.loadedPosts.push(30700);
+      chowRecipe.loadedAds.push(30700);
+    })
+    </script>
+
+
+
+<script type="text/javascript">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  $script('//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', 'jquery', function() {
+      $script('https://www.chowstatic.com/s/freyja/application-9de937ffeb54cb87eaafb1324d7ff3a9.js', 'freyja_main', function() {
+        $script('//js-sec.indexww.com/ht/ls-chowhound.js', 'lsch', function() {
+          $script('//www.googletagservices.com/tag/js/gpt.js', 'gpt', function() {
+
+            $script('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js', 'jquery_ui', function() {
+              $script('https://www.chowstatic.com/s/main-21e67fffbde38172e1f02f0951a2193f.js', 'main', function() {
+                $script('https://www.chowstatic.com/s/application-fdc713d6c1c735a4916783a6bd8f890d.js', 'application', function() {
+                });
+              });
+            });
+
+            $script('//tags.tiqcdn.com/utag/cbsi/chowsite/prod/utag.js', 'utag', function() {
+            $script('//native.sharethrough.com/assets/tag.js', 'sharethrough', function() {
+            $script('//cdn.taboola.com/libtrc/cbsinteractive-chowhound/loader.js', 'taboola');
+              $script('//cdn.viglink.com/api/vglnk.js','vglnks');
+              });
+            });
+          });
+        });
+
+        $script('https://www.chowstatic.com/s/freyja/parsley-db00bb21e3eb49bf28bbe19dafde77af.js', 'parsley');
+    $script('https://www.chowstatic.com/s/freyja/recipe-8f3133bf1615f91ff14330025b6f8c57.js', 'recipes_script');
+
+
+    });
+  });
+</script>
+
+  
+  <script>
+    
+    function pageInit() {
+        var signedInStatus = ((typeof jQuery.cookie('cs_sig')) == "string") ? 'Yes' : 'No';
+        chow_js.init();
+        
+                
+                
+                
+                
+        
+        var css = '.needs_js { visibility: visible; }',
+            head = document.head || document.getElementsByTagName('head')[0],
+            style = document.createElement('style');
+            style.type = 'text/css';
+        if (style.styleSheet){
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        head.appendChild(style);
+    } // end pageInit
+
+    $script.ready('application', function(){
+      pageInit();
+    });
+  </script>
+
+
+</div>
+
+
+<script type="text/javascript">
+    document.domain = 'chowhound.com';
+    is_mobile = false;
+    is_ipad = false;
+    is_tablet = false;
+    is_prod = true;
+    var chow_js_files = chow_js_files || [];
+    chowSecureURL = 'https://secure.chowhound.com';
+    chowThumbnailerUrl = 'https://search.chow.com/thumbnail'
+    fr_email_share_form = "<h4 class=\"fr_email_title\">Share with Your Friends<\/h4>\n<div id=\"chow_email_modal_form_msg\" style=\"display:none;width:450px;padding:50px 0;font-size:18px\"><\/div>\n<form class=\"mt15 reset_on_close fr_email_sharer\" data-submit-btn-id=\"chow_email_modal_submit\" id=\"chow_email_modal_form\" style=\"width:450px\" action=\"/share_tools/email\" accept-charset=\"UTF-8\" method=\"post\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"qwCsB91mvUc9R2XconzG6j3sgkInngRCmPzZJGwAVIy2ndvizwMBMsJU29RjXPpptxjB+OQYBfH8ZbV8ICsG6w==\" />\n  <input type=\"hidden\" name=\"email_image\" value=\"SHARE_IMG\"><input type=\"hidden\" name=\"email_title\" value=\"SHARE_TITLE\"><input type=\"hidden\" name=\"email_link\" value=\"SHARE_URL\"><input type=\"hidden\" name=\"email_description\" value=\"SHARE_DESCRIPTION\"><input type=\"hidden\" name=\"content_type\" value=\"Recipe\">\n\n  <p>To: Separate multiple addresses with commas (limit 5)<\/p>\n  <input id=\"email_recipients\" name=\"email_recipients\" class=\"text_input required validate_email validate_recipient_limit has_default_text default_text\" placeholder=\"Recipient(s) email address(es)\" style=\"outline:none\" data-parsley-myvalidator type=\"text\" >\n\n  <p>From:<\/p>\n  <input id=\"email_sender_name\" name=\"email_sender_name\" class=\"text_input required validate_email has_default_text default_text\" placeholder=\"Your email address\" type=\"text\" data-parsley-type=\"email\" style=\"outline:none\">\n\n  <p>Message:<\/p>\n  <textarea id=\"email_message\" name=\"email_message\" class=\"text_input\" rows=\"4\" style=\"outline:none\" placeholder=\"Your message\" data-parsley-required data-parsley-minlength=\"2\" data-parsley-maxlength=\"500\" data-parsley-minlength-message=\"Add a message between 2 and 500 characters.\" data-parsley-validation-threshold=\"10\"><\/textarea>\n\n  <div class=\"fr_sharepreview\"><span class=\"pr_img\" style=\"background-image:url(SHARE_IMG)\"><\/span>\n    <h5><span class=\"tit\">Share:<\/span>SHARE_TITLE<\/h5><span class=\"freyja_logo fr_smver\"><\/span><\/div>\n  <script src=\"//www.google.com/recaptcha/api.js\" async=\"\" defer=\"\"><\/script>\n  <div style=\"text-align:center\">\n    <div style=\"display:inline-block\">\n      <div class=\"g-recaptcha\" data-sitekey=\"6LfjswUTAAAAAHTdozHCMpQck5GAr21sLKadcw1p\"><\/div>\n    <\/div>\n  <\/div>\n  <a type=\"submit\" href=\"#\" onclick=\"return false\" class=\"clear freyja_bigbt act_emailshare\" style=\"display:block;margin:18px auto 0 auto\">Send<\/a>\n<\/form>"
+    var fbApiKey = '0278fc1adf6dc1daf1156f306ce2c5cc';
+    var unconfirmed_user = false;
+    var unconfirmed_user_has_already_replied = false;
+          var log_in_url = "https://secure.chowhound.com/users/sign_in";
+      var sign_up_url = "https://secure.chowhound.com/users/sign_up";
+    lightweight_action_target = '';
+
+    
+
+        rating_module_classes = "";
+
+
+    
+            
+            
+            
+            
+</script>
+
+
+
+</body>
+</html>
+
+
+

@@ -1,34 +1,47 @@
 require 'hangry/canonical_url_parser'
-require 'json'
+require 'oj'
 
 module Hangry
   class JsonLDParser < SchemaOrgRecipeParser
-    attr_reader :recipe_html
-    attr_accessor :nokogiri_doc, :nutrition_hash, :recipe_hash, :recipe
+    attr_accessor :nokogiri_doc, :recipe
 
     def self.root_selector
       'script[type="application/ld+json"]'
     end
 
-    def self.ingredient_itemprop
-      'recipeIngredient'
+    def initialize(nokogiri_doc)
+      self.nokogiri_doc = nokogiri_doc
     end
 
-    def initialize(recipe_html)
-      @recipe_html = recipe_html
-      @recipe = Recipe.new
-      initialize_nutrition
-      self.nokogiri_doc = Nokogiri::HTML(recipe_html)
-      recipe_ld_script = nokogiri_doc.css(self.class.root_selector).first
-      self.recipe_hash = recipe_ld_script && JSON.parse(recipe_ld_script.content.tr("\n", ''))
-      self.nutrition_hash = recipe_hash && recipe_hash['nutrition']
+    def can_parse?
+      !recipe_hash.nil?
     end
 
-    def self.can_parse?(html)
-      new(html).recipe_hash
+    def recipe_hash
+      return @recipe_hash if defined?(@recipe_hash)
+      nokogiri_doc.css(self.class.root_selector).each do |script|
+        json = Oj.load(script.content)
+        return @recipe_hash = json if is_a_recipe?(json) && contains_required_keys?(json)
+      end
+      @recipe_hash = nil
+    end
+
+    def nutrition_hash
+      return @nutrition_hash if defined?(@nutrition_hash)
+      @nutrition_hash = recipe_hash && recipe_hash['nutrition']
     end
 
     private
+
+    def is_a_recipe?(json)
+      json.is_a?(Hash) && json['@context'] =~ /schema\.org/ && json['@type'] == 'Recipe'
+    end
+
+    def contains_required_keys?(json)
+      json.key?('name') &&
+      (json.key?('recipeIngredient') || json.key?('ingredients')) &&
+      json.key?('recipeInstructions')
+    end
 
     def nodes_with_itemprop(itemprop)
       recipe_hash ? recipe_hash[itemprop.to_s] : NullObject.new
@@ -51,7 +64,9 @@ module Hangry
     end
 
     def parse_author
-      node_with_itemprop(:author)
+      author = node_with_itemprop(:author)
+      author = author["name"] if author.is_a?(Hash) && author["@type"].to_s.downcase == "person"
+      author
     end
 
     def parse_description
@@ -59,7 +74,7 @@ module Hangry
     end
 
     def parse_ingredients
-      nodes_with_itemprop(self.class.ingredient_itemprop).map(&:strip).reject(&:blank?)
+      (nodes_with_itemprop('recipeIngredient') || nodes_with_itemprop('ingredients')).map(&:strip).reject(&:blank?)
     end
 
     def parse_name
@@ -72,9 +87,7 @@ module Hangry
     end
 
     def parse_yield
-      value(node_with_itemprop(:recipeYield)) ||
-      value(node_with_itemprop(:recipeYield)) ||
-      NullObject.new
+      value(node_with_itemprop(:recipeYield)) || NullObject.new
     end
 
     def parse_time(type)
@@ -103,7 +116,9 @@ module Hangry
     end
 
     def parse_image_url
-      node_with_itemprop(:image)
+      url = node_with_itemprop(:image)
+      url = url["url"] if url.is_a?(Hash) && url["@type"] == "ImageObject"
+      url
     end
   end
 end

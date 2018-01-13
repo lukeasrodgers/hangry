@@ -1,5 +1,5 @@
 require "hangry/version"
-require 'hangry/parser_class_selecter'
+require 'hangry/parser_selecter'
 require 'hangry/recipe_attribute_cleaner'
 require 'active_support/core_ext/object/blank'
 require 'date'
@@ -39,11 +39,21 @@ module Hangry
 
   Recipe = Struct.new(*RECIPE_ATTRIBUTES)
 
+  class NullRecipe < Recipe
+    def nil?
+      true
+    end
+  end
+
   def self.parse(html)
-    parser_class = ParserClassSelecter.new(html).parser_class
-    recipe = parser_class.new(html).parse
+    recipe = parser_for(html).parse
     RecipeAttributeCleaner.new(recipe).clean
   end
 
-end
+  def self.parser_for(html)
+    html = html.read if html.respond_to?(:read)
+    nokogiri_doc = Nokogiri::HTML(html)
+    ParserSelector.new(nokogiri_doc).parser
+  end
 
+end

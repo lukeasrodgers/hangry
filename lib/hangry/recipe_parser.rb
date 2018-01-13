@@ -2,19 +2,15 @@ require 'hangry/canonical_url_parser'
 
 module Hangry
   class RecipeParser
-    attr_reader :recipe_html
-    attr_accessor :nokogiri_doc, :nutrition_ast, :recipe_ast, :recipe
+    attr_accessor :nokogiri_doc, :recipe
 
-    def initialize(recipe_html)
-      @recipe_html = recipe_html
-      @recipe = Recipe.new
-      initialize_nutrition
-      self.nokogiri_doc = Nokogiri::HTML(recipe_html)
-      self.recipe_ast = nokogiri_doc.css(self.class.root_selector).first
-      self.nutrition_ast = recipe_ast && recipe_ast.css(self.class.nutrition_selector)
+    def initialize(nokogiri_doc)
+      self.nokogiri_doc = nokogiri_doc
     end
 
     def parse
+      @recipe = Recipe.new
+      initialize_nutrition
       RECIPE_ATTRIBUTES.each do |attribute|
         attr_value = value(send("parse_#{attribute}"))
         recipe.public_send("#{attribute}=", attr_value)
@@ -26,11 +22,31 @@ module Hangry
     end
 
     def self.can_parse?(html)
-      new(html).recipe_ast
+      new(html).can_parse?
     end
 
-    def self.canonical_url_matches_domain?(html, domain)
-      CanonicalUrlParser.new(html).canonical_domain == domain
+    def can_parse?
+      !!recipe_ast
+    end
+
+    def recipe_ast
+      return @recipe_ast if defined?(@recipe_ast)
+      @recipe_ast = nokogiri_doc.css(self.class.root_selector).first
+    end
+
+    def nutrition_ast
+      return @nutrition_ast if defined?(@nutrition_ast)
+      @nutrition_ast = recipe_ast && recipe_ast.css(self.class.nutrition_selector)
+    end
+
+    protected
+
+    def canonical_url_matches_domain?(domain)
+      CanonicalUrlParser.new(nokogiri_doc).canonical_domain == domain
+    end
+
+    def canonical_url_includes?(phrase)
+      !CanonicalUrlParser.new(nokogiri_doc).canonical_url.nil? && CanonicalUrlParser.new(nokogiri_doc).canonical_url.include?(phrase)
     end
 
     private
@@ -86,5 +102,3 @@ module Hangry
   end
 
 end
-
-
