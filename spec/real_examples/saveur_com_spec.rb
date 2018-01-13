@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "saveur.com recipe" do
     before(:all) do
       skip "saveur.com appears to be using schema.org / RDFa format which will call for a new parser"
@@ -42,7 +41,5 @@ describe Hangry do
     its(:published_date) { should == Date.parse("2013-03-12") }
     its(:total_time) { should == nil }
     its(:yield) { should == nil }
-
   end
-
 end

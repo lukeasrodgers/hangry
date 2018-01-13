@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "grouprecipes.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/grouprecipes.com.html")
@@ -64,7 +63,5 @@ Serve with Raspberry Compote
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
     its(:yield) { should == nil }
-
   end
-
 end

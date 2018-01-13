@@ -38,6 +38,5 @@ module Hangry
       end
       NullRecipeParser.new(@nokogiri_doc)
     end
-
   end
 end

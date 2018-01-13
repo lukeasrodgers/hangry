@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "heart.org recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/heart.org.html")
@@ -46,7 +45,5 @@ Heat 1 tablespoon oil in a large nonstick skillet over medium heat. Add gnocchi 
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
     its(:yield) { should == "Serves: 6" }
-
   end
-
 end

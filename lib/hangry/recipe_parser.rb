@@ -55,6 +55,7 @@ module Hangry
       def method_missing(*args, &block)
         self
       end
+
       def blank?; true; end
       def present?; false; end
       def to_a; []; end
@@ -98,7 +99,5 @@ module Hangry
       # Try to just convert to an integer.. Assuming minutes?
       iso8601_string.to_i
     end
-
   end
-
 end

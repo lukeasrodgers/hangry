@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "allrecipes.com lasagna recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/all_recipes_lasagna.html")
@@ -14,7 +13,7 @@ describe Hangry do
     end
 
     its(:author) { should == 'John Chandler' }
-    its(:canonical_url) { should == 'http://allrecipes.com/recipe/23600/worlds-best-lasagna/'}
+    its(:canonical_url) { should == 'http://allrecipes.com/recipe/23600/worlds-best-lasagna/' }
     its(:description) { should == '"It takes a little work, but it is worth it."' }
     its(:image_url) { should == 'http://images.media-allrecipes.com/userphotos/560x315/3359675.jpg' }
     its(:ingredients) {
@@ -73,7 +72,5 @@ Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25 mi
     its(:total_time) { should == 195 }
     its(:published_date) { should == nil }
     its(:yield) { should == '12' }
-
   end
-
 end

@@ -2,7 +2,6 @@ module Hangry
   module Parsers
     module NonStandard
       class TasteOfHomeParser < SchemaOrgRecipeParser
-
         def self.root_selector
           '[itemtype*="schema.org/recipe"]'
         end
@@ -18,7 +17,6 @@ module Hangry
         def parse_yield
           value(node_with_itemprop(:recipeyield).content)
         end
-
       end
     end
   end

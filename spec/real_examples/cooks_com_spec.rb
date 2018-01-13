@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "cooks.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/cooks.com.html").encode!("UTF-8", 'binary', :invalid => :replace, :undef => :replace, :replace => '')
@@ -61,7 +60,5 @@ Mix first 3 ingredients using half of the True Lemon packet (optional). Using a 
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
     its(:yield) { should == nil }
-
   end
-
 end

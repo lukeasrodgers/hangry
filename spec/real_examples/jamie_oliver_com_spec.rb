@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "jamieoliver.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/jamieoliver.com.html")
@@ -59,9 +58,5 @@ Turn the steaks over after two minutes, then turn every minute until they’ve h
     its(:published_date) { should == Date.parse('2015-09-16') }
     its(:total_time) { should == 20 }
     its(:yield) { should == "4" }
-
   end
-
 end
-
-

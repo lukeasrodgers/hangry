@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "mrfood.com recipe" do
     before(:all) do
       skip "mrfood.com appears not to be using any standard recipe microformat currently"
@@ -55,7 +54,5 @@ describe Hangry do
     its(:published_date) { should == Date.parse('July 26, 2011') }
     its(:total_time) { should == nil }
     its(:yield) { should == "10" }
-
   end
-
 end

@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "copykat.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/copykat.com.html")
@@ -55,8 +54,5 @@ Preheat oven to 350 degrees. Wash potatoes, and if desired peel before slicing. 
     its(:published_date) { should == nil }
     its(:total_time) { should == 55 }
     its(:yield) { should == "6" }
-
   end
-
 end
-

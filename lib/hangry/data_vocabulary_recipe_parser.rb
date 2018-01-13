@@ -1,6 +1,5 @@
 module Hangry
   class DataVocabularyRecipeParser < SchemaOrgRecipeParser
-
     def self.root_selector
       '[itemtype="http://data-vocabulary.org/Recipe"]'
     end
@@ -37,9 +36,7 @@ module Hangry
     end
 
     def parse_total_time
-      recipe_ast.css(".duration").first.content.gsub(/\D/,'').to_i unless recipe_ast.css(".duration").empty?
+      recipe_ast.css(".duration").first.content.gsub(/\D/, '').to_i unless recipe_ast.css(".duration").empty?
     end
-
   end
-
 end

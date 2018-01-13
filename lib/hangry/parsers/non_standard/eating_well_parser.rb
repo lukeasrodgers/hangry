@@ -2,7 +2,6 @@ module Hangry
   module Parsers
     module NonStandard
       class EatingWellParser < SchemaOrgRecipeParser
-
         def can_parse?
           canonical_url_matches_domain?('eatingwell.com')
         end
@@ -34,7 +33,6 @@ module Hangry
         def parse_description
           nokogiri_doc.css('meta[itemprop="description"]').first['content']
         end
-
       end
     end
   end

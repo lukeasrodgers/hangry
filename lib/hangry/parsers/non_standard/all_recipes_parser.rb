@@ -2,7 +2,6 @@ module Hangry
   module Parsers
     module NonStandard
       class AllRecipesParser < SchemaOrgRecipeParser
-
         def can_parse?
           canonical_url_matches_domain?('allrecipes.com')
         end
@@ -10,7 +9,7 @@ module Hangry
         def parse_name
           name = super
           if name.blank?
-            name = nokogiri_doc.css('title').first.content.strip.sub(/-\s*Allrecipes.com$/,'')
+            name = nokogiri_doc.css('title').first.content.strip.sub(/-\s*Allrecipes.com$/, '')
           end
           name
         end
@@ -23,7 +22,6 @@ module Hangry
             ''
           end
         end
-
       end
     end
   end

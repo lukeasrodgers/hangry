@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "campbellskitchen.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/campbellskitchen.com.html")
@@ -61,7 +60,5 @@ Add the beans, cheese and pasta and toss to coat.
     its(:published_date) { should == nil }
     its(:total_time) { should == 30 }
     its(:yield) { should == "4" }
-
   end
-
 end

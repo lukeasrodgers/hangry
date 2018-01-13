@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "bbc.co.uk recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/bbc.co.uk.html")
@@ -74,7 +73,5 @@ Scatter the chopped parsley over the paella and serve immediately.
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
     its(:yield) { should == "Serves 8" }
-
   end
-
 end

@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "allrecipes.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/allrecipes.html")
@@ -14,7 +13,7 @@ describe Hangry do
     end
 
     its(:author) { should == 'United Soybean Board' }
-    its(:canonical_url) { should == 'http://allrecipes.com/recipe/230347/roasted-vegetable-and-couscous-salad/'}
+    its(:canonical_url) { should == 'http://allrecipes.com/recipe/230347/roasted-vegetable-and-couscous-salad/' }
     its(:cook_time) { should == 15 }
     its(:description) { should == '"This better-for-you main-dish salad is quick, colorful and full of satisfying texture. To explore a variety of grains, substitute 3 cups cooked regular couscous, brown rice or quinoa."' }
     its(:image_url) { should == 'http://images.media-allrecipes.com/userphotos/250x250/987785.jpg' }
@@ -61,7 +60,5 @@ You may substitute 3 cups cooked regular couscous, brown rice or quinoa.
     its(:published_date) { should == nil }
     its(:total_time) { should == 30 }
     its(:yield) { should == '6' }
-
   end
-
 end

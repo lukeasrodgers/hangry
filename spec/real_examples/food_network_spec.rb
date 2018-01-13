@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "standard food network recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/food_network_schema_org.html")

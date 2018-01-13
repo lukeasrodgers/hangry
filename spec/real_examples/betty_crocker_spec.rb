@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "bettycrocker.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/betty_crocker.html")
@@ -58,7 +57,5 @@ Divide tortilla chips between 6 plates. Spoon chicken mixture evenly over chips.
     its(:published_date) { should == nil }
     its(:total_time) { should == 20 }
     its(:yield) { should == "6" }
-
   end
-
 end
