@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "rachaelray.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/rachaelray.com.html")
@@ -64,7 +63,5 @@ Stir in parsley and dill, remove bay leaves and serve. This is a thick soup. Add
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
     its(:yield) { should == nil }
-
   end
-
 end

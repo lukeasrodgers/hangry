@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "chow.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/chow.com.html")
@@ -61,7 +60,5 @@ describe Hangry do
     its(:published_date) { should == Date.new(2013, 3, 29) }
     its(:total_time) { should == 420 }
     its(:yield) { should == "1 (9-inch) pie, or 8 to 10 servings" }
-
   end
-
 end

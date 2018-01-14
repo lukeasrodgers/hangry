@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "foodandwine.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/foodandwine.com.html")
@@ -50,7 +49,5 @@ Preheat the oven to 425&#176;. In a large bowl, toss the root vegetables with th
     its(:published_date) { should == nil }
     its(:total_time) { should == 90 }
     its(:yield) { should == "12" }
-
   end
-
 end

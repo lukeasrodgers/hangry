@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "eatingwell.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/eatingwell.com.html")
@@ -24,7 +23,8 @@ describe Hangry do
         "1 teaspoon kosher salt, divided", "¼ cup plus 1 tablespoon all-purpose flour, divided",
         "3 teaspoons extra-virgin olive oil, divided", "2 large shallots, finely chopped",
         "½ cup dry white wine", "1 14-ounce can reduced-sodium chicken broth", "⅓ cup reduced-fat sour cream",
-        "1 tablespoon Dijon mustard", "½ cup chopped chives, (about 1 bunch)"]
+        "1 tablespoon Dijon mustard", "½ cup chopped chives, (about 1 bunch)"
+      ]
     }
     its(:name) { should == "Sauteed Chicken Breasts with Creamy Chive Sauce" }
     its(:nutrition) do
@@ -57,7 +57,5 @@ Return the chicken and any accumulated juices to the pan, reduce heat to a simme
     its(:published_date) { should == nil }
     its(:total_time) { should == 35 }
     its(:yield) { should == "4" }
-
   end
-
 end

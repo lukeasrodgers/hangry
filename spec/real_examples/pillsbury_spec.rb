@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "pillsbury.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/pillsbury.com.html")
@@ -59,7 +58,5 @@ Bake 13 to 15 minutes or until golden brown. Immediately remove from cookie shee
     its(:published_date) { should == nil }
     its(:total_time) { should == 25 }
     its(:yield) { should == "4" }
-
   end
-
 end

@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "tasteofhome.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/tasteofhome.com.html")
@@ -76,7 +75,5 @@ target_type: 'mix'
     its(:published_date) { should == nil }
     its(:total_time) { should == 45 }
     its(:yield) { should == "6 servings" }
-
   end
-
 end

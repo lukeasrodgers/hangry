@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "drinksmixer.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/drinksmixer.com.html")
@@ -56,7 +55,5 @@ In a shaker half-filled with ice cubes, combine the gin, lemon juice, and sugar.
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
     its(:yield) { should == nil }
-
   end
-
 end

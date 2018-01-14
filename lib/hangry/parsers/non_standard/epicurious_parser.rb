@@ -2,7 +2,6 @@ module Hangry
   module Parsers
     module NonStandard
       class EpicuriousParser < SchemaOrgRecipeParser
-
         def can_parse?
           canonical_url_matches_domain?('epicurious.com')
         end
@@ -14,7 +13,6 @@ module Hangry
         def parse_instructions
           node_with_itemprop("recipeInstructions").css("li.preparation-step").map(&:content).join("\n")
         end
-
       end
     end
   end

@@ -1,9 +1,7 @@
 # encoding: utf-8
 
 describe Hangry do
-
   context "bigoven.com recipe" do
-
     before(:all) do
       @html = File.read("spec/fixtures/bigoven.html")
       @parsed = Hangry.parse(@html)
@@ -28,7 +26,8 @@ describe Hangry do
         "1 tablespoon corn meal", "2 tablespoons olive oil you could use peanut oil or butter also",
         "2 limes fresh, you'll use the juice", "1 tablespoon cider vinegar", "1 red onion small; diced",
         "1 tomato diced", "2 cups red cabbage shredded", "cilantro chopped fine; optional", "Jalapenos optional",
-        "Seasoning mix:", "Ground Cumin", "Ground Coriander", "Hot sauce"]
+        "Seasoning mix:", "Ground Cumin", "Ground Coriander", "Hot sauce"
+      ]
     }
     its(:instructions) do
       instructions = <<-eos
@@ -67,7 +66,5 @@ Fold over and dig in, with a nice IPA or crisp white wine!
     its(:published_date) { should == nil }
     its(:total_time) { should == 45 }
     its(:yield) { should == "6" }
-
   end
-
 end

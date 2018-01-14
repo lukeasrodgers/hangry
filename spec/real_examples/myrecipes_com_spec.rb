@@ -1,7 +1,6 @@
 # encoding: utf-8
 
 describe Hangry do
-
   context "myrecipes.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/myrecipes.com.html")
@@ -60,7 +59,5 @@ Bake at 350° for 25 to 30 minutes or until a wooden pick inserted in center com
     its(:published_date) { should == Date.new(1998, 12, 9) }
     its(:total_time) { should == nil }
     its(:yield) { should == "1 (9-inch) cake" }
-
   end
-
 end

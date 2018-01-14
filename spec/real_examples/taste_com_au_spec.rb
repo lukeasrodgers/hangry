@@ -1,10 +1,9 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "taste.com.au recipe" do
     before(:all) do
-      @html =File.read("spec/fixtures/taste.com.au.html")
+      @html = File.read("spec/fixtures/taste.com.au.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
@@ -18,18 +17,20 @@ describe Hangry do
     its(:cook_time) { should == 15 }
     its(:description) { should == "Take a trip down memory lane with these buttery biccies. They're great for teatime or with coffee for your next dinner party." }
     its(:image_url) { should == 'http://img.taste.com.au/y8u5JWmh/taste/2016/11/lemon-melting-moments-79344-1.jpeg' }
-    its(:ingredients) { should == [
-      '200g (1 1/3 cups) plain flour',
-      '100g (2/3 cup) cornflour',
-      '225g unsalted butter, chopped, softened',
-      '80g (1/2 cup) icing sugar, sifted, plus extra, to dust',
-      '3 lemons, zested',
-      '1 teaspoon vanilla extract',
-      '4 passionfruit, pulp removed',
-      '200g (1 1/4 cups) icing sugar, sifted',
-      '1 tablespoon liquid glucose',
-      '80g unsalted butter, softened'
-    ] }
+    its(:ingredients) {
+      should == [
+        '200g (1 1/3 cups) plain flour',
+        '100g (2/3 cup) cornflour',
+        '225g unsalted butter, chopped, softened',
+        '80g (1/2 cup) icing sugar, sifted, plus extra, to dust',
+        '3 lemons, zested',
+        '1 teaspoon vanilla extract',
+        '4 passionfruit, pulp removed',
+        '200g (1 1/4 cups) icing sugar, sifted',
+        '1 tablespoon liquid glucose',
+        '80g unsalted butter, softened'
+      ]
+    }
     its(:name) { should == "Lemon melting moments" }
     its(:nutrition) do
       should == {
@@ -52,7 +53,5 @@ describe Hangry do
     its(:published_date) { should == Date.new(2010, 8, 18) }
     its(:total_time) { should == 45 }
     its(:yield) { should == 0 }
-
   end
-
 end

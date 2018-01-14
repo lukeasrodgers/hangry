@@ -1,9 +1,7 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   describe "schema.org" do
-
     let(:html) do
       <<-eos
       <!DOCTYPE html>
@@ -55,7 +53,7 @@ describe Hangry do
     its(:image_url) { should == "bananabread.jpg" }
     its(:ingredients) { should == ["3 or 4 ripe bananas, smashed", "1 egg", "3/4 cup of sugar"] }
     its(:instructions) { should == "Preheat the oven to 350 degrees. Mix in the ingredients in a bowl. Add the flour last. Pour the mixture into a loaf pan and bake for one hour." }
-        
+
     its(:name) { should == "Mom's World Famous Banana Bread" }
     its(:prep_time) { should == 15 }
     its(:published_date) { should == Date.parse("2009-05-08") }
@@ -69,11 +67,9 @@ describe Hangry do
           expect(subject.send(attribute)).to be_nil
         end
       end
-
     end
 
     context "time duration parsing" do
-
       let(:html) do
         <<-eos
         <!DOCTYPE html>
@@ -92,10 +88,6 @@ describe Hangry do
         expect(subject.prep_time).to eq(75)
         expect(subject.cook_time).to eq(60)
       end
-
     end
-
   end
-
 end
-

@@ -2,7 +2,6 @@ module Hangry
   module Parsers
     module NonStandard
       class JamieOliverParser < JsonLDParser
-
         def can_parse?
           nokogiri_doc.css('meta[name="author"]').first['content'] == "JamieOliver.com"
         rescue NoMethodError

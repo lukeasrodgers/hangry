@@ -2,7 +2,6 @@ module Hangry
   module Parsers
     module NonStandard
       class RachaelRayParser < RecipeParser
-
         def can_parse?
           canonical_url_matches_domain?('rachaelray.com')
         end
@@ -58,7 +57,7 @@ module Hangry
         end
 
         def parse_instructions
-          nokogiri_doc.css('h2 + p').children.map(&:content).reject{|x| x.blank? }.map(&:strip).join("\n")
+          nokogiri_doc.css('h2 + p').children.map(&:content).reject { |x| x.blank? }.map(&:strip).join("\n")
         end
 
         def parse_name

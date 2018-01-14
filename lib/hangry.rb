@@ -55,5 +55,4 @@ module Hangry
     nokogiri_doc = Nokogiri::HTML(html)
     ParserSelector.new(nokogiri_doc).parser
   end
-
 end

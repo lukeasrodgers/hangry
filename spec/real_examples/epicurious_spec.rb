@@ -1,5 +1,4 @@
 describe Hangry do
-
   context "epicurious.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/epicurious.html")
@@ -34,7 +33,7 @@ describe Hangry do
         '4 sesame-seed hamburger buns',
         'Arugula',
         'Pickle wedges',
-        'Corn chips',
+        'Corn chips'
       ]
     }
 
@@ -52,11 +51,5 @@ Grill turkey burgers 5 minutes. Turn over; grill until almost cooked through, ab
     its(:name) { should == "Grilled Turkey Burgers with Cheddar and Smoky Aioli" }
     its(:published_date) { should == nil }
     its(:yield) { should == "Makes 4" }
-
   end
-
 end
-
-
-
-

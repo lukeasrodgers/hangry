@@ -1,6 +1,5 @@
 module Hangry
   class RecipeAttributeCleaner
-
     MULTILINE_ATTRIBUTES = [:instructions]
 
     attr_reader :recipe
@@ -23,7 +22,7 @@ module Hangry
       clean_value(value, preserve_newlines: MULTILINE_ATTRIBUTES.include?(attribute))
     end
 
-    def clean_value(value, options={})
+    def clean_value(value, options = {})
       case value
       when String
         clean_string(value, options)
@@ -41,7 +40,7 @@ module Hangry
       end
     end
 
-    def clean_string(string, options={})
+    def clean_string(string, options = {})
       preserve_newlines = options.fetch(:preserve_newlines, false)
 
       string.strip!                     # remove leading and trailing spaces
@@ -53,6 +52,5 @@ module Hangry
       end
       string
     end
-
   end
 end

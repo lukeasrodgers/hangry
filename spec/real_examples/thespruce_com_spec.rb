@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 describe Hangry do
-
   context "thespruce.com recipe" do
     before(:all) do
       @html = File.read("spec/fixtures/thespruce.com.html")
@@ -60,7 +59,5 @@ describe Hangry do
     its(:published_date) { should == Date.parse('2008-03-10T09:09:57.000Z') }
     its(:total_time) { should == 35 }
     its(:yield) { should == '18 muffins/18 servings' }
-
   end
-
 end

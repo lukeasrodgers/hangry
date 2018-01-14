@@ -1,6 +1,5 @@
 module Hangry
   class HRecipeParser < RecipeParser
-
     def self.nutrition_selector
       '.nutrition'
     end
@@ -100,8 +99,5 @@ module Hangry
     def parse_yield
       node_with_class(:yield).content
     end
-
   end
-
 end
-
