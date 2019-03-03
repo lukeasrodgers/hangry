@@ -38,7 +38,7 @@ describe Hangry do
 
     its(:instructions) { should == nil }
     its(:prep_time) { should == nil }
-    its(:published_date) { should == Date.parse("2013-03-12") }
+    its(:published_date) { should == Date.new(2013, 3, 12) }
     its(:total_time) { should == nil }
     its(:yield) { should == nil }
   end

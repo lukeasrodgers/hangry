@@ -56,7 +56,7 @@ describe Hangry do
 
     its(:name) { should == "Mom's World Famous Banana Bread" }
     its(:prep_time) { should == 15 }
-    its(:published_date) { should == Date.parse("2009-05-08") }
+    its(:published_date) { should == Date.new(2009, 5, 8) }
     its(:yield) { should == '1 loaf' }
 
     context "with no input" do

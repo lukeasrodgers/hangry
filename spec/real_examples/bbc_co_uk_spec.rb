@@ -8,15 +8,15 @@ describe Hangry do
     end
     subject { @parsed }
 
-    it "should use the schema.org parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
+    it "should use the ld+json parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::JsonLDParser)
     end
 
     its(:author) { should == "Antony Worrall Thompson" }
-    its(:canonical_url) { should == "http://www.bbc.co.uk/food/recipes/paella_7100" }
+    its(:canonical_url) { should == "https://www.bbc.com/food/recipes/paella_7100" }
     its(:cook_time) { should == 30 }
-    its(:description) { should == "An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt." }
-    its(:image_url) { should == 'http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/paella_7100_16x9.jpg' }
+    its(:description) { should == "An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo. Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt." }
+    its(:image_url) { should == 'https://food-images.files.bbci.co.uk/food/recipes/paella_7100_16x9.jpg' }
     its(:ingredients) {
       should == [
         "170g/6oz chorizo, cut into thin slices",
@@ -45,15 +45,15 @@ describe Hangry do
     its(:name) { should == "Paella" }
     its(:nutrition) do
       should == {
-        calories: nil,
+        calories: "660kcal",
         cholesterol: nil,
-        fiber: nil,
-        protein: nil,
-        saturated_fat: nil,
+        fiber: "3.5g",
+        protein: "51g",
+        saturated_fat: "6g",
         sodium: nil,
-        sugar: nil,
-        total_carbohydrates: nil,
-        total_fat: nil,
+        sugar: "5g",
+        total_carbohydrates: "65g",
+        total_fat: "20g",
         trans_fat: nil,
         unsaturated_fat: nil
       }

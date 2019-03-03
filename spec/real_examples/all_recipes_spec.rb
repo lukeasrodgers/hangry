@@ -13,10 +13,10 @@ describe Hangry do
     end
 
     its(:author) { should == 'United Soybean Board' }
-    its(:canonical_url) { should == 'http://allrecipes.com/recipe/230347/roasted-vegetable-and-couscous-salad/' }
+    its(:canonical_url) { should == 'https://www.allrecipes.com/recipe/230347/roasted-vegetable-and-couscous-salad/' }
     its(:cook_time) { should == 15 }
     its(:description) { should == '"This better-for-you main-dish salad is quick, colorful and full of satisfying texture. To explore a variety of grains, substitute 3 cups cooked regular couscous, brown rice or quinoa."' }
-    its(:image_url) { should == 'http://images.media-allrecipes.com/userphotos/250x250/987785.jpg' }
+    its(:image_url) { should == 'https://images.media-allrecipes.com/userphotos/250x250/987785.jpg' }
     its(:ingredients) {
       should == [
         '3 cups broccoli florets, cut into 1/2-inch pieces',
@@ -32,15 +32,15 @@ describe Hangry do
     its(:name) { should == "Roasted Vegetable and Couscous Salad" }
     its(:nutrition) do
       should == {
-        calories: '305 kcal',
-        cholesterol: '0 mg',
+        calories: "305 calories;",
+        cholesterol: '0',
         fiber: nil,
-        protein: '6.8 g',
+        protein: '6.8',
         saturated_fat: nil,
-        sodium: '217 mg',
+        sodium: '217',
         sugar: nil,
-        total_carbohydrates: '38.3g',
-        total_fat: '14.2 g',
+        total_carbohydrates: '38.3',
+        total_fat: '14.2',
         trans_fat: nil,
         unsaturated_fat: nil
       }

@@ -11,12 +11,12 @@ describe Hangry do
     end
 
     its(:author) { should == "Janet Taylor McCracken" }
-    its(:canonical_url) { should == "http://www.epicurious.com/recipes/food/views/grilled-turkey-burgers-with-cheddar-and-smoky-aioli-354289" }
+    its(:canonical_url) { should == "https://www.epicurious.com/recipes/food/views/grilled-turkey-burgers-with-cheddar-and-smoky-aioli-354289" }
     its(:cook_time) { should == 40 }
     its(:description) { should == "A simple Moroccan-spiced aioli is mixed in with the ground turkey to keep the burgers moist and give them tons of flavor. Smoked paprika is available in the spice aisle of most supermarkets." }
     its(:prep_time) { should == 40 }
     its(:total_time) { should == nil }
-    its(:image_url) { should == 'http://assets.epicurious.com/photos/5609a5d96a59cdb91b5ff5c0/master/pass/354289_hires.jpg' }
+    its(:image_url) { should == "https://assets.epicurious.com/photos/5609a5d96a59cdb91b5ff5c0/master/pass/354289_hires.jpg" }
     its(:ingredients) {
       should == [
         '1/2 teaspoon cumin seeds',

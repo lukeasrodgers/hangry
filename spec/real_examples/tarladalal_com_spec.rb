@@ -33,22 +33,22 @@ describe Hangry do
     its(:name) { should == "Vegetable Fried Rice ( Jain )" }
     its(:nutrition) do
       should == {
-        calories: '510 cal',
-        cholesterol: '0 mg',
-        fiber: '4.9 g',
-        protein: '7.4 g',
+        calories: nil,
+        cholesterol: nil,
+        fiber: nil,
+        protein: nil,
         saturated_fat: nil,
-        sodium: '116.2 mg',
+        sodium: nil,
         sugar: nil,
-        total_carbohydrates: '75 g',
-        total_fat: '20.5 g',
+        total_carbohydrates: nil,
+        total_fat: nil,
         trans_fat: nil,
         unsaturated_fat: nil
       }
     end
 
     its(:instructions) {
-      should == "Heat the oil in a deep non-stick pan, add the capsicum and sauté on a medium flame for 1 minute.Add the babycorn and french beans and sauté on a medium flame for 1 to 2 minutes.Add the cabbage and sauté on a medium flame for 1 minute.Add the soya sauce and chilli sauce and mix well.Add the cooked rice, salt and pepper, mix well and cook on medium flame for 2 minutes, while stirring occasionally.Serve hot."
+      should == "MethodHeat the oil in a deep non-stick pan, add the capsicum and sauté on a medium flame for 1 minute.Add the babycorn and french beans and sauté on a medium flame for 1 to 2 minutes.Add the cabbage and sauté on a medium flame for 1 minute.Add the soya sauce and chilli sauce and mix well.Add the cooked rice, salt and pepper, mix well and cook on medium flame for 2 minutes, while stirring occasionally.Serve hot."
     }
     its(:prep_time) { should == 15 }
     its(:published_date) { should == nil }

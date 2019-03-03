@@ -1,770 +1,476 @@
-<!DOCTYPE html>
-<html class="no-touch" lang="en">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-        <!-- Nav Env: live -->
-<!-- Analytics Web Module: 69 -->
-<!-- NavID Web Module: 0.2.0-143 -->
-<!-- Searchbox Web Module: 129 -->
-<!-- Promo Web Module: 0.0.0-232.b2a8044 -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="fb:admins" content="100004154058350"><link rel="stylesheet" href="https://nav.files.bbci.co.uk/orbit/1.0.0-494.b5fc4d4/css/orb-ltr.min.css"><!--[if (lt IE 9) & (!IEMobile)]>
-    <link rel="stylesheet" href="https://nav.files.bbci.co.uk/orbit/1.0.0-494.b5fc4d4/css/orb-ie-ltr.min.css">
+<!doctype html>
+    <html class="no-touch blocks-touchscreen-disabled b-reith-sans-font b-reith-serif-font b-pw-1280" lang="en">
+      <head>
+        
+  <link rel='preconnect' href='//nav.files.bbci.co.uk' crossorigin />
+  <link rel='preconnect' href='//mybbc.files.bbci.co.uk' />
+  <link rel='preconnect' href='//fig.bbc.co.uk' />
+  <link rel='preconnect' href='//mvt.api.bbc.com' />
+  <link rel='preconnect' href='//idcta.api.bbc.co.uk' />
+  <link rel='preconnect' href='//ichef.bbci.co.uk' />
+  <link rel='preconnect' href='//static.chartbeat.com' />
+  <link rel='preconnect' href='//ping.chartbeat.net' />
+  <link rel='preconnect' href='//sa.bbc.co.uk' />
+  
+  <link rel='preload' as='script' href='https://food.files.bbci.co.uk/kandl-food/2573/javascript/foodApp.js' />
+  <link rel='preload' as='style' href='https://food.files.bbci.co.uk/kandl-food/2573/css/foodApp.css' />
+  <link rel='preload' as='style' href='https://food.files.bbci.co.uk/kandl-food/2573/css/print.css' />
+  <!-- Nav Env: live -->
+<!-- Analytics Web Module: 0.0.1-253.6a16793 -->
+<!-- NavID Web Module: 0.2.0-26.cd5363e -->
+<!-- Searchbox Web Module: 1.1.0-9.4f867d9 -->
+<!-- Promo Web Module: 2.0.0-92.0d3e169 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="fb:admins" content="100004154058350"><link rel="stylesheet" href="https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/css/orb-ltr.min.css"><!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/css/orb-ie-ltr.min.css">
     <![endif]--><script type="text/javascript">/*<![CDATA[*/
         window.orb = {
             lang: 'en',
-            bbcBaseUrl: 'http://www.bbc.co.uk',
-            staticHost: 'https://nav.files.bbci.co.uk/orbit/1.0.0-494.b5fc4d4',
+            bbcBaseUrl: 'https://www.bbc.co.uk',
+            bbcUrlPrefix: 'https://www.',
+            staticHost: 'https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc',
             figUrl: 'https://fig.bbc.co.uk/frameworks/fig/2/fig.js',
             partialCookieOvenUrl: 'https://cookie-oven.api.bbc'
         };
 
         document.documentElement.className += (document.documentElement.className? ' ' : '') + 'orb-js';
-        window.orb.worldwideNavlinks = '<li class="orb-nav-home"><a href="http://www.bbc.com/">Home</a></li><li class="orb-nav-newsdotcom"><a href="http://www.bbc.com/news">News</a></li><li class="orb-nav-sport"><a href="http://www.bbc.com/sport/">Sport</a></li><li class="orb-nav-weather"><a href="http://www.bbc.com/weather/">Weather</a></li><li class="orb-nav-shop"><a href="http://shop.bbc.com/">Shop</a></li><li class="orb-nav-earthdotcom"><a href="http://www.bbc.com/earth/">Earth</a></li><li class="orb-nav-travel-dotcom"><a href="http://www.bbc.com/travel/">Travel</a></li><li class="orb-nav-capital"><a href="http://www.bbc.com/capital/">Capital</a></li><li class="orb-nav-culture"><a href="http://www.bbc.com/culture/">Culture</a></li><li class="orb-nav-future"><a href="http://www.bbc.com/future/">Future</a></li><li class="orb-nav-tv"><a href="http://www.bbc.co.uk/tv/">TV</a></li><li class="orb-nav-radio"><a href="http://www.bbc.co.uk/radio/">Radio</a></li><li class="orb-nav-cbbc"><a href="http://www.bbc.co.uk/cbbc">CBBC</a></li><li class="orb-nav-cbeebies"><a href="http://www.bbc.co.uk/cbeebies">CBeebies</a></li><li class="orb-nav-food"><a href="http://www.bbc.co.uk/food/">Food</a></li><li class="orb-nav-bitesize"><a href="http://www.bbc.co.uk/education">Bitesize</a></li><li class="orb-nav-music"><a href="http://www.bbc.co.uk/music/">Music</a></li><li class="orb-nav-arts"><a href="http://www.bbc.co.uk/arts/">Arts</a></li><li class="orb-nav-makeitdigital"><a href="http://www.bbc.co.uk/makeitdigital">Make It Digital</a></li><li class="orb-nav-taster"><a href="http://www.bbc.co.uk/taster">Taster</a></li><li class="orb-nav-nature"><a href="http://www.bbc.com/nature/">Nature</a></li><li class="orb-nav-local"><a href="http://www.bbc.co.uk/local/">Local</a></li>';
-     /*]]>*/</script><!-- orb/api must be in the HEAD while the rest of orb.js should be at end of BODY --><script src="https://nav.files.bbci.co.uk/orbit/1.0.0-494.b5fc4d4/js/api.min.js"></script><script type="text/javascript">window.bbcFlagpoles_istats="ON",require.config({paths:{"istats-1":"//nav.files.bbci.co.uk/nav-analytics/0.1.0-69/js/istats-1","megavolt-client":"//nav.files.bbci.co.uk/nav-analytics/0.1.0-69/js/megavolt-client"}}),require.defined("orb/cookies")||(window.bbccookies?define("orb/cookies",function(){return window.bbccookies}):define("orb/cookies",function(){return{isAllowed:function(e){return!1}}})),require(["megavolt-client","istats-1","orb/cookies"],function(e,t,o){if(o.isAllowed("s1")){e.setMegavoltUrl("https://mvt.api.bbc.com");e.setMegavoltTimeout("1000");t.addCollector({name:"default",url:"https://sa.bbc.co.uk/bbc/bbc/s",separator:"&"});var i="unknown";t.setCountername(i),window.istats_countername&&t.setCountername(window.istats_countername),t.addLabels("ml_name=webmodule&ml_version=69&blq_e=orbit&blq_r=orbit&blq_s=orbit&blq_v=default&language=en")}});</script><link rel="stylesheet" href="//static.bbc.co.uk/id/0.37.24/style/id-cta.css"><link rel="stylesheet" href="//static.bbc.co.uk/id/0.37.24/style/id-cta-v5.css"><!--[if IE 8]><link href="//static.bbc.co.uk/id/0.37.24/style/ie8.css" rel="stylesheet"/> <![endif]--><script type="text/javascript">/* <![CDATA[ */ var map = {};  if (typeof(map['jssignals-1']) == 'undefined') { map['jssignals-1'] = 'https://static.bbc.co.uk/frameworks/jssignals/0.3.6/modules/jssignals-1'; }  require({paths: map}); /* ]]> */</script><script src="//static.bbc.co.uk/id/0.37.24/modules/idcta/dist/idcta-1.min.js"></script><script type="text/javascript">(function () { if (!window.require) { throw new Error('idcta: could not find require module'); } if(typeof(map) == 'undefined') { var map = {}; } if(!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect) { document.documentElement.className += ' id-svg'; } var ptrt = RegExp("[\\?&]ptrt=([^&#]*)").exec(document.location.href); var ENDPOINT_URL = '//' + ((window.location.protocol == "https:") ? ('ssl.bbc.co.uk').replace("www.", "ssl.") : ('ssl.bbc.co.uk').replace("ssl.", "www.")); var ENDPOINT_CONFIG = ('/idcta/config?callback&amp;locale=en-GB&ptrt=' + encodeURI((ptrt ? ptrt[1] : document.location.href))).replace(/\&amp;/g, '&'); var ENDPOINT_TRANSLATIONS = '/idcta/translations?callback&locale=en-GB'; map['idapp-1'] = '//static.bbc.co.uk/idapp/0.72.58/modules/idapp/idapp-1'; map['idcta'] = '//static.bbc.co.uk/id/0.37.24/modules/idcta'; map['idcta/config'] = [ENDPOINT_URL + ENDPOINT_CONFIG, '//static.bbc.co.uk/id/0.37.24/modules/idcta/fallbackConfig']; map['idcta/translations'] = [ENDPOINT_URL + ENDPOINT_TRANSLATIONS, '//static.bbc.co.uk/id/0.37.24/modules/idcta/fallbackTranslations']; require({paths: map}); /* * Temporary code * To be removed when old id-statusbar-config is no longer supported */ define('id-statusbar-config', ['idcta/id-config'], function(conf) { return conf; }); define('idcta/id-statusbar-config', ['idcta/id-config'], function(conf) { return conf; }); })();</script><link rel="stylesheet" href="//mybbc.files.bbci.co.uk/notification-ui/3.8.1/css/main.min.css"><script type="text/javascript">// Globally available search context
-  window.SEARCHBOX={"variant":"default","locale":"en","navSearchboxStaticPrefix":"//nav.files.bbci.co.uk/searchbox/1.0.0-129","searchboxAppStaticPrefix":"//search.files.bbci.co.uk/searchbox-app/1.0.16","searchFormHtml":"<div tabindex=\"-1\" data-reactid=\".2fvssx2jgg\" data-react-checksum=\"1923032532\"><div data-reactid=\".2fvssx2jgg.0\"><section class=\"se-searchbox-panel\" data-reactid=\".2fvssx2jgg.0.0\"><div class=\"se-g-wrap\" data-reactid=\".2fvssx2jgg.0.0.0\"><div class=\"se-g-layout\" data-reactid=\".2fvssx2jgg.0.0.0.0\"><div class=\"se-g-layout__item se-searchbox-title\" aria-hidden=\"true\" data-reactid=\".2fvssx2jgg.0.0.0.0.0\">search</div><div class=\"se-g-layout__item se-searchbox\" data-reactid=\".2fvssx2jgg.0.0.0.0.1\"><form accept-charset=\"utf-8\" id=\"searchboxDrawerForm\" method=\"get\" action=\"//search.bbc.co.uk/search\" data-reactid=\".2fvssx2jgg.0.0.0.0.1.0\"><label class=\"se-searchbox__input\" for=\"se-searchbox-input-field\" data-reactid=\".2fvssx2jgg.0.0.0.0.1.0.0\"><span class=\"se-sr-only\" data-reactid=\".2fvssx2jgg.0.0.0.0.1.0.0.0\">Search Term</span><input name=\"q\" type=\"text\" value=\"\" id=\"se-searchbox-input-field\" class=\"se-searchbox__input__field\" maxlength=\"512\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\" tabindex=\"0\" data-reactid=\".2fvssx2jgg.0.0.0.0.1.0.0.1\"/></label><input type=\"hidden\" name=\"scope\" value=\"\" data-reactid=\".2fvssx2jgg.0.0.0.0.1.0.2\"/><button type=\"submit\" class=\"se-searchbox__submit\" tabindex=\"0\" data-reactid=\".2fvssx2jgg.0.0.0.0.1.0.3\">Search</button><button type=\"button\" class=\"se-searchbox__clear se-searchbox__clear--visible\" tabindex=\"0\" data-reactid=\".2fvssx2jgg.0.0.0.0.1.0.4\">Close</button></form></div></div></div></section><div aria-live=\"polite\" aria-atomic=\"true\" class=\"se-suggestions-container\" data-reactid=\".2fvssx2jgg.0.1\"><section class=\"se-g-wrap\" data-reactid=\".2fvssx2jgg.0.1.0\"></section></div></div></div>","searchScopePlaceholder":"","searchScopeParam":"","searchScopeTemplate":"","searchPlaceholderWrapperStart":"","searchPlaceholderWrapperEnd":""};
+        window.orb.worldwideNavlinks = '<li class="orb-nav-home"><a href="https://www.bbc.com/">Home</a></li><li class="orb-nav-newsdotcom"><a href="https://www.bbc.com/news">News</a></li><li class="orb-nav-sport"><a href="https://www.bbc.com/sport">Sport</a></li><li class="orb-nav-weather"><a href="https://www.bbc.com/weather">Weather</a></li><li class="orb-nav-shop"><a href="https://shop.bbc.com/">Shop</a></li><li class="orb-nav-reeldotcom"><a href="https://www.bbc.com/reel/">Reel</a></li><li class="orb-nav-traveldotcom"><a href="https://www.bbc.com/travel/">Travel</a></li><li class="orb-nav-capital"><a href="https://www.bbc.com/capital/">Capital</a></li><li class="orb-nav-culture"><a href="https://www.bbc.com/culture/">Culture</a></li><li class="orb-nav-future"><a href="https://www.bbc.com/future/">Future</a></li><li class="orb-nav-sounds"><a href="https://www.bbc.co.uk/sounds">Sounds</a></li><li class="orb-nav-cbbc"><a href="https://www.bbc.co.uk/cbbc">CBBC</a></li><li class="orb-nav-cbeebies"><a href="https://www.bbc.co.uk/cbeebies">CBeebies</a></li><li class="orb-nav-food"><a href="https://www.bbc.com/food/">Food</a></li><li class="orb-nav-bitesize"><a href="https://www.bbc.com/bitesize">Bitesize</a></li><li class="orb-nav-arts"><a href="https://www.bbc.co.uk/arts/">Arts</a></li><li class="orb-nav-makeitdigital"><a href="https://www.bbc.co.uk/makeitdigital">Make It Digital</a></li><li class="orb-nav-taster"><a href="https://www.bbc.co.uk/taster">Taster</a></li><li class="orb-nav-nature"><a href="https://www.bbc.com/nature/">Nature</a></li><li class="orb-nav-local"><a href="https://www.bbc.co.uk/news/localnews">Local</a></li><li class="orb-nav-tv"><a href="https://www.bbc.co.uk/tv/">TV</a></li><li class="orb-nav-radio"><a href="https://www.bbc.co.uk/radio/">Radio</a></li>';
+
+
+     /*]]>*/</script><script>// Promise polyfill from https://github.com/bramstein/promis
+        (function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}} function r(a,b){if(a.a==p){if(b==a)throw new TypeError;a.a=1;a.b=b;v(a)}}function v(a){l(function(){if(a.a!=p)for(;a.f.length;){var b=a.f.shift(),c=b[0],d=b[1],e=b[2],b=b[3];try{0==a.a?"function"==typeof c?e(c.call(void 0,a.b)):e(a.b):1==a.a&&("function"==typeof d?e(d.call(void 0,a.b)):b(a.b))}catch(h){b(h)}}})}n.prototype.g=function(a){return this.c(void 0,a)};n.prototype.c=function(a,b){var c=this;return new n(function(d,e){c.f.push([a,b,d,e]);v(c)})}; function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d;e+=1;e==a.length&&b(h)}}var e=0,h=[];0==a.length&&b(h);for(var k=0;k<a.length;k+=1)u(a[k]).c(d(k),c)})}function x(a){return new n(function(b,c){for(var d=0;d<a.length;d+=1)u(a[d]).c(b,c)})};window.Promise||(window.Promise=n,window.Promise.resolve=u,window.Promise.reject=t,window.Promise.race=x,window.Promise.all=w,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g);}());
+    
+        //Element.prototype.matches polyfill
+        //from https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
+        if (!Element.prototype.matches) {
+          Element.prototype.matches = Element.prototype.msMatchesSelector ||
+                                      Element.prototype.webkitMatchesSelector;
+        }
+        //NodeList.forEach Polyfill
+        //from https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach#Polyfill
+        if (window.NodeList && !NodeList.prototype.forEach) {
+          NodeList.prototype.forEach = Array.prototype.forEach;
+        }
+    
+        // Object.assign polyfill from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill
+        if (typeof Object.assign != 'function') {
+          // Must be writable: true, enumerable: false, configurable: true
+          Object.defineProperty(Object, "assign", {
+            value: function assign(target, varArgs) { // .length of function is 2
+              'use strict';
+              if (target == null) { // TypeError if undefined or null
+                throw new TypeError('Cannot convert undefined or null to object');
+              }
+    
+              var to = Object(target);
+    
+              for (var index = 1; index < arguments.length; index++) {
+                var nextSource = arguments[index];
+    
+                if (nextSource != null) { // Skip over if undefined or null
+                  for (var nextKey in nextSource) {
+                    // Avoid bugs when hasOwnProperty is shadowed
+                    if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                      to[nextKey] = nextSource[nextKey];
+                    }
+                  }
+                }
+              }
+              return to;
+            },
+            writable: true,
+            configurable: true
+          });
+        }
+    
+        if (typeof window.CustomEvent !== 'function') {
+    
+          function CustomEvent(event, params) {
+            params = params || { bubbles: false, cancelable: false, detail: null };
+            var evt = document.createEvent('CustomEvent');
+            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+            return evt;
+          }
+    
+          CustomEvent.prototype = window.Event.prototype;
+    
+          window.CustomEvent = CustomEvent;
+    
+        }
+    
+        (function() {
+    
+            var language = 'en';
+                language = 'en';
+    
+            var modal = false;
+    
+    
+            var istatsLabels = {name: 'food.recipes.paella_7100.page' || undefined};
+            istatsLabels['app_name'] = 'food';
+            istatsLabels['app_type'] = 'responsive';
+            istatsLabels['bbc_site'] = 'food';
+            istatsLabels['prod_name'] = 'food';
+    
+            function getMetaValue(propertyName) {
+              var metaTag = document.querySelector(
+                "meta[property='" + propertyName + "'], " +
+                "meta[name='" + propertyName + "']");
+              if (metaTag) {
+                return metaTag.getAttribute("content");
+              } else {
+                throw new Error('No meta tag called: ' + propertyName)
+              }
+            }
+    
+            function generateCountername() {
+                var pathName = window.location.pathname
+                    .replace(/\/$/, "")
+                    .replace(/^\//, "")
+                    .replace(/\//g, '.');
+                return pathName + '.page';
+            }
+    
+            var additionalPageProperties = {};
+    
+            var page = {
+                name: 'food.recipes.paella_7100.page' || istatsLabels.name || generateCountername(),
+                destination: 'FOOD' || null,
+                producer: 'FOOD' || null,
+                section: 'Recipes' || null,
+                site: '' || istatsLabels.bbc_site || istatsLabels.app_name || istatsLabels.prod_name || null,
+                contentId: 'urn:bbc:food:recipes.paella_7100' || null,
+                contentType: 'article' || null,
+                edition: 'domestic' || null,
+                additionalProperties: additionalPageProperties
+            };
+    
+            function updatePageData(newData) {
+                page = Object.assign(page, newData);
+            }
+    
+            document.addEventListener('bbc-page-reset', function(event) {
+                if (event.detail && event.detail.page) {
+                    updatePageData(event.detail.page);
+                }
+                document.dispatchEvent(new Event('bbc-page-updated'));
+            });
+    
+            window.bbcpage = {
+                loadModule: function(deps) {
+                    return new Promise(function (resolve, reject) {
+                        window.require(deps, function () {
+                            resolve.apply(this, arguments);
+                        },
+                        function (error) {
+                            reject(error);
+                        });
+                    })
+                },
+                loadCSS: function (url, timeout) {
+                    return window.bbcpage.loadModule(['orb/lib/_$'])
+                        .then(function($) {
+                            return new Promise(function(resolve, reject) {
+                                var stylesheet = loadCSS(url);
+                                $.onloadCSS(stylesheet, function() {
+                                    resolve();
+                                });
+                                if (timeout) {
+                                    setTimeout(function () { reject(); }, timeout);
+                                }
+                            });
+                    });
+                },
+                isModal: function () {
+                    return modal;
+                },
+                getLanguage: function () {
+                    return new Promise(function(resolve, reject) {
+                        resolve(language);
+                    });
+                },
+                trackRegion: function (region, labels) {
+                    return window.bbcpage.loadModule(['istats-1'])
+                        .then(function(istats) {
+    
+                            var trackLabels = {
+                                region: region
+                            };
+    
+                            for (var label in labels) {
+                                trackLabels[label] = labels[label];
+                            }
+    
+                            var linkType = labels.linkType || 'internal';
+    
+                            istats.track(linkType, trackLabels);
+                        });
+                },
+                getName: function() {
+                    return Promise.resolve(page.name);
+                },
+                getDestination: function() {
+                    return Promise.resolve(page.destination);
+                },
+                getProducer: function() {
+                    return Promise.resolve(page.producer);
+                },
+                getSite: function() {
+                    return Promise.resolve(page.site);
+                },
+                getSection: function() {
+                    return Promise.resolve(page.section);
+                },
+                getContentType: function() {
+                    return Promise.resolve(page.contentType);
+                },
+                getContentId: function() {
+                    return Promise.resolve(page.contentId);
+                },
+                getEdition: function() {
+                  return new Promise(function (resolve, reject) {
+                    if (page.edition) {
+                      resolve(page.edition);
+                      return;
+                    }
+                    try {
+                      resolve(getMetaValue('x-audience').toLowerCase());
+                    } catch (err){
+                      // This property is related to Chartbeat; see http://support.chartbeat.com/docs/
+                      if (window._sf_async_config) {
+                        resolve(window._sf_async_config.region || null);
+                      }
+                    }
+                    resolve(null);
+                  });
+                },
+                getAdditionalProperties: function() {
+                  return Promise.resolve(page.additionalProperties);
+                }
+            };
+    
+            var country;
+                    country = 'us';
+    
+            var sanitiseCountry = function(country) {
+                return country ? country.replace(/ /g, '') : undefined;
+            }
+    
+            window.bbcuser = {
+                getHashedId: function() {
+                    if (modal) {
+                        return undefined;
+                    }
+                    return window.bbcpage.loadModule(['idcta-v2/idcta-1'])
+                        .then(function(idcta) {
+                            return idcta.getCookieInstance().getHidFromCookie();
+                    });
+                },
+                getCountry: function() {
+                    if (country) {
+                        return new Promise(function(resolve, reject) {
+                            resolve(sanitiseCountry(country));
+                        })
+                    }
+                    else {
+                        return window.bbcpage.loadModule(['orb/fig'])
+                            .then(function(orbFig) {
+                                return new Promise(function(resolve, reject) {
+                                    orbFig.load(function (fig) {
+                                        if (fig.geo.isUK()) {
+                                            resolve('GB');
+                                        } else if (fig.geo.isEU()) {
+                                            resolve('EU');
+                                        } else {
+                                            resolve(undefined);
+                                        }
+                                    }, function () {
+                                        reject('Error determining country. Timeout?');
+                                    });
+                                });
+                            });
+    
+                    }
+                },
+                isUKCombined: function(inputCountry) {
+                    return window.bbcpage.loadModule(['orb/bbcuser'])
+                        .then(function(service) {
+                            return new Promise(function(resolve, reject) {
+                                if (inputCountry) {
+                                    resolve(service.isUKCombined(sanitiseCountry(inputCountry)));
+                                }
+                                else {
+                                    window.bbcuser.getCountry().then(function(fetchedCountry){
+                                        resolve(service.isUKCombined(fetchedCountry));
+                                    })
+                                }
+                            });
+                        });
+                },
+                isEU: function(inputCountry) {
+                    return window.bbcpage.loadModule(['orb/bbcuser'])
+                        .then(function(service) {
+                            return new Promise(function(resolve, reject) {
+                                if (inputCountry) {
+                                    resolve(service.isEU(sanitiseCountry(inputCountry)));
+                                }
+                                else {
+                                    window.bbcuser.getCountry().then(function(fetchedCountry){
+                                        resolve(service.isEU(fetchedCountry));
+                                    })
+                                }
+                            });
+                        });
+                },
+                allowsPerformanceCookies: function() {
+                    return window.bbcpage.loadModule(['orb/cookies'])
+                            .then(function(bbccookies) {
+                                return !!bbccookies.cookiesEnabled() && !!bbccookies.readPolicy('performance');
+                            });
+                },
+                allowsFunctionalCookies: function() {
+                    return window.bbcpage.loadModule(['orb/cookies'])
+                            .then(function(bbccookies) {
+                                return !!bbccookies.cookiesEnabled() && !!bbccookies.readPolicy('personalisation');
+                            });
+                },
+                getCookieValue: function(cookieName) {
+                    return window.bbcpage.loadModule(['orb/cookies'])
+                            .then(function(bbccookies) {
+                                return bbccookies.get(cookieName);
+                            });
+                },
+                resetCookiesPreferences: function() {
+                    return window.bbcpage.loadModule(['orb/cookies'])
+                            .then(function(bbccookies) {
+                                bbccookies.setDefaultCookiesSingleDomain();
+                            });
+                },
+                hasCookiesEnabled: function() {
+                    return window.bbcpage.loadModule(['orb/cookies'])
+                            .then(function(bbccookies) {
+                                return !!bbccookies.cookiesEnabled();
+                            });
+                },
+                hasSeenCookieBanner: function() {
+                    return window.bbcpage.loadModule(['orb/cookies'])
+                            .then(function (bbccookies) {
+                                return !!bbccookies.isCookiePolicySet();
+                            });
+                },
+                logEvent: function (verb, noun, extraLabels) {
+                    return window.bbcuser.hasCookiesEnabled()
+                        .then(function(allowsCookies) {
+                            if (allowsCookies) {
+                                return window.bbcpage.loadModule(['istats-1'])
+                                    .then(function(istats) {
+                                        istats.log(verb, noun, extraLabels);
+                                    });
+                            } else {
+                                throw new Error('User cannot be tracked due to cookies preferences.');
+                            }
+                        });
+                },
+            };
+    
+        }());</script><script src="https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/js/require.min.js"></script>  <script type="text/javascript">require.config({
+                paths: {
+                    'orb/cookies': 'https://nav.files.bbci.co.uk/orbit-webmodules/0.0.1-253.6a16793/cookie-banner/cookie-library.min'
+                }
+            })</script> <script src="https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/js/api-light.min.js"></script><script type="text/javascript">require.config({
+                paths: {
+                    'orb/fig': 'https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/js/asyncFig.min',
+                }
+            });
+
+            (function () {
+                var country = 'us'
+                window.orb.fig.init(country);
+            })();</script>  <script type="text/javascript">window.bbcFlagpoles_istats="ON",require.config({paths:{"istats-1":"https://nav.files.bbci.co.uk/orbit-webmodules/0.0.1-253.6a16793/istats/istats-1"}}),require(["istats-1","orb/cookies"],function(a,t){if(t.isAllowed("s1")){var e=(o=document.location.href.match(/^(?:https|http):\/\/\w*\.(?:(int|test|stage|live|)\.)?bbc\.(?:co\.uk|com)/))?void 0===o[1]||""===o[1]||"live"===o[1]?"//sa.bbc.co.uk/bbc/bbc/s":"//sa.bbc.co.uk/bbc/"+o[1]+"/s":"//sa.bbc.co.uk/bbc/test/s";a.addCollector({name:"default",url:e,separator:"&"});var s="food.recipes.paella_7100.page";a.setCountername(s),window.istats_countername&&a.setCountername(window.istats_countername),a.addLabels("ml_name=webmodule&ml_version=0.0.1-253.6a16793&blq_e=orbit&blq_r=orbit&blq_s=orbit&blq_v=default&language=en&app_name=food&app_type=responsive&bbc_site=food&prod_name=food")}var o});</script> <link rel="stylesheet" href="https://mybbc.files.bbci.co.uk/s/id/account-idcta/1.10.0/style/id-cta.css"><!--[if IE 8]><link href="https://mybbc.files.bbci.co.uk/s/id/account-idcta/1.10.0/style/ie8.css" rel="stylesheet"/> <![endif]--><script type="text/javascript">(function() {if (!window.require) {throw new Error('idcta: could not find require module');}if (typeof(map) == 'undefined') {var map = {};}if (!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) {document.documentElement.className += ' id-svg';}var ptrt = new RegExp("[\\?&]ptrt=([^&]*)").exec(document.location.href);var ENDPOINT_URL = 'https://idcta.api.bbc.co.uk';var ENDPOINT_CONFIG = ('/idcta/config?callback=&ptrt=' + encodeURIComponent((ptrt ? ptrt[1] : document.location.href))).replace(/\&amp;/g, '&');var ENDPOINT_TRANSLATIONS = '/idcta/translations?callback=';function hasPromise() {var P = window.Promise;var promiseToString = null;if (P) {try {promiseToString = Object.prototype.toString.call(P.resolve());} catch(e) {/*silently ignored*/}}return (promiseToString === '[object Promise]' && !P.cast);}if (hasPromise()) {define('idcta/es6-promise', function() {return window.Promise;});define('idcta-v2/es6-promise', function() {return window.Promise;});}map['idcta-v2'] = 'https://mybbc.files.bbci.co.uk/s/id/account-idcta/1.10.0/modules/idcta-v2';map['idcta-v2/config'] = ENDPOINT_URL + ENDPOINT_CONFIG;map['idcta-v2/translations'] = ENDPOINT_URL + ENDPOINT_TRANSLATIONS;map['idcta'] = 'https://mybbc.files.bbci.co.uk/s/id/account-idcta/1.8.2/modules/idcta';map['idcta-v2/idcta-1'] = 'https://mybbc.files.bbci.co.uk/s/id/account-idcta/1.10.0/modules/idcta-v2/dist/idcta-1.min';const idctaShim = {deps: ['idcta-v2/idcta-1'],};require({shim: {'idcta-v2/statusbar': idctaShim,'idcta-v2/id-config': idctaShim},map: {'*': {'idcta/idcta-1': 'idcta-v2/idcta-1','idcta': 'idcta-v2',}},paths: map});window.idctaBaseUrl = ENDPOINT_URL;define('idcta/config', ['idcta-v2/config'], function(data) {return data;});define('idcta/translations', ['idcta-v2/translations'], function(data) {return data;});})();</script><!-- BBCDOTCOM head --><script type="text/javascript">/*<![CDATA[*/ var _sf_startpt = (new Date()).getTime(); /*]]>*/</script><style type="text/css">.bbccom_display_none{display:none;}</style><script type="text/javascript">/*<![CDATA[*/ var bbcdotcomConfig, googletag = googletag || {}; googletag.cmd = googletag.cmd || [], bbcdotcomScripts = [], tp = window.tp || []; var bbcdotcom = false; (function(){ if(typeof require !== 'undefined') { require({ paths:{ "bbcdotcom":"https://static.bbc.co.uk/bbcdotcom/1.98.757/script" } }); } })(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ var bbcdotcom = { adverts: { keyValues: { set: function() {} } }, advert: { write: function () {}, show: function () {}, isActive: function () { return false; }, layout: function() { return { reset: function() {} } } }, config: { init: function() {}, isActive: function() {}, setSections: function() {}, isAdsEnabled: function() {}, setAdsEnabled: function() {}, isAnalyticsEnabled: function() {}, setAnalyticsEnabled: function() {}, setAssetPrefix: function() {}, setVersion: function () {}, setJsPrefix: function() {}, setSwfPrefix: function() {}, setCssPrefix: function() {}, setConfig: function() {}, getAssetPrefix: function() {}, getJsPrefix: function () {}, getSwfPrefix: function () {}, getCssPrefix: function () {}, isOptimizelyEnabled: function() {} }, survey: { init: function(){ return false; } }, data: {}, init: function() {}, objects: function(str) { return false; }, locale: { set: function() {}, get: function() {} }, setAdKeyValue: function() {}, utils: { addEvent: function() {}, addHtmlTagClass: function() {}, log: function () {} }, addLoadEvent: function() {} }; /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (typeof orb !== 'undefined' && typeof orb.fig === 'function') { if (orb.fig('ad') && orb.fig('uk') == 0) { bbcdotcom.data = { ads: (orb.fig('ad') ? 1 : 0), stats: (orb.fig('uk') == 0 ? 1 : 0), statsProvider: orb.fig('ap') }; } } else { document.write('<script type="text/javascript" src="https://www.bbc.com/wwscripts/data">\x3C/script>'); } })(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (typeof orb === 'undefined' || typeof orb.fig !== 'function') { bbcdotcom.data = { ads: bbcdotcom.data.a, stats: bbcdotcom.data.b, statsProvider: bbcdotcom.data.c }; } if (bbcdotcom.data.ads == 1) { document.write('<script type="text/javascript" src="https://www.bbc.com/wwscripts/flag">\x3C/script>'); } })(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (window.bbcdotcom && (typeof bbcdotcom.flag == 'undefined' || (typeof bbcdotcom.data.ads !== 'undefined' && bbcdotcom.flag.a != 1))) { bbcdotcom.data.ads = 0; } if (/[?|&]ads/.test(window.location.href) || /(^|; )ads=on; /.test(document.cookie) || /; ads=on(; |$)/.test(document.cookie)) { bbcdotcom.data.ads = 1; bbcdotcom.data.stats = 1; } if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) { bbcdotcom.assetPrefix = "https://static.bbc.co.uk/bbcdotcom/1.98.757/"; if (/(sandbox|int)(.dev)*.bbc.co*/.test(window.location.href) || /[?|&]ads-debug/.test(window.location.href) || document.cookie.indexOf('ads-debug=') !== -1) { document.write('<script type="text/javascript" src="https://static.bbc.co.uk/bbcdotcom/1.98.757/script/dist/bbcdotcom.dev.js">\x3C/script>'); } else { document.write('<script type="text/javascript" src="https://static.bbc.co.uk/bbcdotcom/1.98.757/script/dist/bbcdotcom.js">\x3C/script>'); } } })(); /*]]>*/</script><script type="text/javascript">if (window.bbcdotcom && bbcdotcom.data.stats == 1) { document.write('<link rel="dns-prefetch" href="//secure-us.imrworldwide.com/">'); document.write('<link rel="dns-prefetch" href="//me-cdn.effectivemeasure.net/">'); document.write('<link rel="dns-prefetch" href="//ssc.api.bbc.com/">'); } if (window.bbcdotcom && bbcdotcom.data.ads == 1) { document.write('<link rel="dns-prefetch" href="//www.googletagservices.com/">'); document.write('<link rel="dns-prefetch" href="//bbc.gscontxt.net/">'); document.write('<link rel="dns-prefetch" href="//tags.crwdcntrl.net/">'); document.write('<link rel="dns-prefetch" href="//ad.crwdcntrl.net/">'); }</script><script type="text/javascript">if (window.bbcdotcom && bbcdotcom.data.ads == 1) { document.write('<meta name="google-site-verification" content="auTeTTwSt_KBY_4iDoR00Lwb7-qzx1IgzJy6ztaWgEI" />'); }</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) { bbcdotcomConfig = {"adFormat":"standard","adKeyword":"","adMode":"smart","adsEnabled":true,"appAnalyticsSections":"","asyncEnabled":true,"disableInitialLoad":false,"advertInfoPageUrl":"https:\/\/www.bbc.com\/privacy\/cookies\/international\/","advertisementText":"Advertisement","analyticsEnabled":true,"sherlockEnabled":false,"appName":"","assetPrefix":"https:\/\/static.bbc.co.uk\/bbcdotcom\/1.98.757\/","customAdParams":[],"customStatsParams":[],"headline":"","id":"","inAssociationWithText":"in association with","keywords":"","language":"","orbTransitional":false,"lotameWSEnabled":false,"optimizelyEnabled":true,"palEnv":"live","productName":"","sections":[],"comScoreEnabled":true,"comscoreSite":"bbc","comscoreID":"19293874","comscorePageName":"","slots":"","sponsoredByText":"is sponsored by","adsByGoogleText":"Ads by Google","summary":"","type":"","features":{"testfeature":{"name":"testfeature","envs":["sandbox","int","test"],"on":true,"options":{},"override":null},"lxadverts":{"name":"lxadverts","envs":[],"on":true,"options":{},"override":null}},"staticBase":"\/bbcdotcom","staticHost":"https:\/\/static.bbc.co.uk","staticVersion":"1.98.757","staticPrefix":"https:\/\/static.bbc.co.uk\/bbcdotcom\/1.98.757","dataHttp":"tps.bbc.com","dataHttps":"www.bbc.com","flagHttp":"www.bbc.co.uk","flagHttps":"www.bbc.co.uk","analyticsHttp":"sa.bbc.com","analyticsHttps":"ssa.bbc.com"}; bbcdotcom.config.init(bbcdotcomConfig, bbcdotcom.data, window.location, window.document); bbcdotcom.config.setFlagpoles(bbcdotcom.flag || {}); bbcdotcom.config.setAssetPrefix("https://static.bbc.co.uk/bbcdotcom/1.98.757/"); bbcdotcom.config.setVersion("1.98.757"); document.write('<!--[if IE 7]><script type="text/javascript">bbcdotcom.config.setIE7(true);\x3C/script><![endif]-->'); document.write('<!--[if IE 8]><script type="text/javascript">bbcdotcom.config.setIE8(true);\x3C/script><![endif]-->'); document.write('<!--[if IE 9]><script type="text/javascript">bbcdotcom.config.setIE9(true);\x3C/script><![endif]-->'); if (/[?|&]ex-dp/.test(window.location.href) || document.cookie.indexOf('ex-dp=') !== -1) { bbcdotcom.utils.addHtmlTagClass('bbcdotcom-ex-dp'); } } })(); /*]]>*/</script><script type="text/javascript">var initOptimizely = (function(isEnabled){ if(!isEnabled) return; var logger = window.bbcdotcom.Logger('bbcdotcom:head:optimizely'); /* Allow Optimizely in these paths */ var allowPaths = ['/', '/wwhp']; /* Only run on optimizely on homepage */ if (bbcdotcom.utils && allowPaths.indexOf(window.location.pathname) !== -1 && window.bbccookies && bbccookies.readPolicy('performance') ){ /* set correct OptimizelyURL for prod or sandbox */ var optimizelyURL = "https://cdn.optimizely.com/public/4621041136/s/bbccom_sandbox.js"; if(window.location.hostname === 'www.bbc.com') { optimizelyURL = "https://cdn.optimizely.com/public/4621041136/s/bbccom_prod.js"; } /* Set cookie to 1 year */ window['optimizely'] = window['optimizely'] || []; window['optimizely'].push({ "type": "cookieExpiration", "cookieExpirationDays": 365 }); document.write('<script type="text/javascript" src="'+optimizelyURL+'">\x3C/script>'); } })( bbcdotcom.config.isOptimizelyEnabled() );</script><script type="text/javascript">/*<![CDATA[*/ if ( window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.ads && bbcdotcom.data.ads == 1 && bbcdotcom.config && bbcdotcom.config.isGrapeshotEnabled && bbcdotcom.config.isGrapeshotEnabled() && bbcdotcom.config.isWorldService && !bbcdotcom.config.isWorldService() ) { var gs_channels="DEFAULT"; (function () { var gsurl = window.location.href.split("?")[0]; bbcdotcomScripts.push({src:'https://bbc.gscontxt.net/?url='+encodeURIComponent(gsurl)}); })(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.stats && bbcdotcom.data.stats == 1 && bbcdotcom.config && bbcdotcom.config.isLotameEnabled && bbcdotcom.config.isLotameEnabled()){ (function () { var clientId, lotameUrl, lotameAudienceUrl; clientId = (bbcdotcom.config.isWorldService && bbcdotcom.config.isWorldService()) ? '10826' : '10816'; lotameUrl = 'https://tags.crwdcntrl.net/c/'+clientId+'/cc.js?ns='+clientId; lotameAudienceUrl = 'https://ad.crwdcntrl.net/5/c=10815/pe=y/var=ccauds'; bbcdotcomScripts.push({src:lotameUrl,id:"LOTCC"+clientId}); bbcdotcomScripts.push({src:lotameAudienceUrl}); })(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ /** * ASYNC waits to make any gpt requests until the bottom of the page */ if ( window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.ads && bbcdotcom.data.ads == 1 && bbcdotcom.config && bbcdotcom.config.isAsync && bbcdotcom.config.isAsync() ) { (function () { bbcdotcomScripts.push({src:'https://www.googletagservices.com/tag/js/gpt.js'}); })(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ /* Load Lotame, Grapeshot and GPT without blocking rendering but executing in order */ if ( bbcdotcomScripts && bbcdotcomScripts.length > 0 ) { (function () { bbcdotcomScripts.forEach(function(item) { var script = document.createElement('script'); script.async = false; if(item.id) script.id = item.id; script.src = item.src; document.head.appendChild(script); }); })(); } /*]]>*/</script><script type="text/javascript" async="true">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.stats && bbcdotcom.data.stats == 1 && bbcdotcom.config && bbcdotcom.config.isLotameEnabled && bbcdotcom.config.isLotameEnabled() && bbcdotcom.lotame){ (function () { bbcdotcom.lotame.callback(); })(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function() { window.bbcdotcom.head = true; }()); /*]]>*/</script><script type="text/javascript">// Globally available search context
+  window.SEARCHBOX={"variant":"default","locale":"en","navSearchboxStaticPrefix":"https://nav.files.bbci.co.uk/searchbox/1.1.0-9.4f867d9","searchboxAppStaticPrefix":"https://nav.files.bbci.co.uk/searchbox/1.1.0-9.4f867d9/drawer","searchFormHtml":"<div tabindex=\"-1\" data-reactroot=\"\" data-reactid=\"1\" data-react-checksum=\"729995048\"><div data-reactid=\"2\"><section class=\"se-searchbox-panel\" data-reactid=\"3\"><div class=\"se-g-wrap\" data-reactid=\"4\"><div class=\"se-g-layout\" data-reactid=\"5\"><div class=\"se-g-layout__item se-searchbox-title\" aria-hidden=\"true\" data-reactid=\"6\">search</div><div class=\"se-g-layout__item se-searchbox\" data-reactid=\"7\"><form accept-charset=\"utf-8\" id=\"searchboxDrawerForm\" method=\"get\" action=\"https://search.bbc.co.uk/search\" data-reactid=\"8\"><label class=\"se-searchbox__input\" for=\"se-searchbox-input-field\" data-reactid=\"9\"><span class=\"se-sr-only\" data-reactid=\"10\">Search Term</span><input type=\"text\" name=\"q\" value=\"\" id=\"se-searchbox-input-field\" class=\"se-searchbox__input__field\" maxlength=\"512\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\" tabindex=\"0\" data-reactid=\"11\"/></label><input type=\"hidden\" name=\"scope\" value=\"\" data-reactid=\"12\"/><button type=\"submit\" class=\"se-searchbox__submit\" tabindex=\"0\" data-reactid=\"13\">Search</button><button type=\"button\" class=\"se-searchbox__clear se-searchbox__clear--visible\" tabindex=\"0\" data-reactid=\"14\">Close</button></form></div></div></div></section><div aria-live=\"polite\" aria-atomic=\"true\" class=\"se-suggestions-container\" data-reactid=\"15\"><section class=\"se-g-wrap\" data-reactid=\"16\"></section></div></div></div>","searchScopePlaceholder":"","searchScopeParam":"","searchScopeTemplate":"","searchPlaceholderWrapperStart":"","searchPlaceholderWrapperEnd":""};
   window.SEARCHBOX.suppress = false;
-  window.SEARCHBOX.searchScope = SEARCHBOX.searchScopeTemplate.split('-')[0];</script><link rel="stylesheet" href="//nav.files.bbci.co.uk/searchbox/1.0.0-129/css/main.css"><!--[if IE 8]>
-  <script type="text/javascript" src="//nav.files.bbci.co.uk/searchbox/1.0.0-129/script/html5shiv.min.js"></script>
+  window.SEARCHBOX.searchScope = SEARCHBOX.searchScopeTemplate.split('-')[0];</script><link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/1.1.0-9.4f867d9/css/main.css"><!--[if IE 8]>
+  <script type="text/javascript" src="https://nav.files.bbci.co.uk/searchbox/1.1.0-9.4f867d9/script/html5shiv.min.js"></script>
   <script type="text/javascript">window['searchboxIEVersion'] = 8;</script>
-  <link rel="stylesheet" href="//nav.files.bbci.co.uk/searchbox/1.0.0-129/css/ie8.css">
+  <link rel="stylesheet" href="https://nav.files.bbci.co.uk/searchbox/1.1.0-9.4f867d9/css/ie8.css">
 <![endif]--><!--[if IE 9]>
   <script type="text/javascript">window['searchboxIEVersion'] = 9;</script>
 <![endif]--><script type="text/javascript">require.config({
         "paths": {
-            "orb/async/_footerpromo": 'https://nav.files.bbci.co.uk/nav-promo/0.0.0-232.b2a8044/js/async/_footerpromo'
+            "orb/async/_footerpromo": 'https://nav.files.bbci.co.uk/navpromo/2.0.0-92.0d3e169/js/async/_footerpromo'
         }
-    });</script><!-- BBCDOTCOM head --><script type="text/javascript">/*<![CDATA[*/ var _sf_startpt = (new Date()).getTime(); /*]]>*/</script><style type="text/css">.bbccom_display_none{display:none;}</style><script type="text/javascript">/*<![CDATA[*/ var bbcdotcomConfig, googletag = googletag || {}; googletag.cmd = googletag.cmd || []; var bbcdotcom = false; (function(){ if(typeof require !== 'undefined') { require({ paths:{ "bbcdotcom":"https://static.bbc.co.uk/bbcdotcom/1.61.0/script" } }); } })(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ var bbcdotcom = { adverts: { keyValues: { set: function() {} } }, advert: { write: function () {}, show: function () {}, isActive: function () { return false; }, layout: function() { return { reset: function() {} } } }, config: { init: function() {}, isActive: function() {}, setSections: function() {}, isAdsEnabled: function() {}, setAdsEnabled: function() {}, isAnalyticsEnabled: function() {}, setAnalyticsEnabled: function() {}, setAssetPrefix: function() {}, setVersion: function () {}, setJsPrefix: function() {}, setSwfPrefix: function() {}, setCssPrefix: function() {}, setConfig: function() {}, getAssetPrefix: function() {}, getJsPrefix: function () {}, getSwfPrefix: function () {}, getCssPrefix: function () {} }, survey: { init: function(){ return false; } }, data: {}, init: function() {}, objects: function(str) { return false; }, locale: { set: function() {}, get: function() {} }, setAdKeyValue: function() {}, utils: { addEvent: function() {}, addHtmlTagClass: function() {}, log: function () {} }, addLoadEvent: function() {} }; /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (typeof orb !== 'undefined' && typeof orb.fig === 'function') { if (orb.fig('ad') && orb.fig('uk') == 0) { bbcdotcom.data = { ads: (orb.fig('ad') ? 1 : 0), stats: (orb.fig('uk') == 0 ? 1 : 0), statsProvider: orb.fig('ap') }; } } else { document.write('<script type="text/javascript" src="'+('https:' == document.location.protocol ? 'https://www.bbc.com' : 'http://tps.bbc.com')+'/wwscripts/data">\x3C/script>'); } })(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (typeof orb === 'undefined' || typeof orb.fig !== 'function') { bbcdotcom.data = { ads: bbcdotcom.data.a, stats: bbcdotcom.data.b, statsProvider: bbcdotcom.data.c }; } if (bbcdotcom.data.ads == 1) { document.write('<script type="text/javascript" src="'+('https:' == document.location.protocol ? 'https://www.bbc.co.uk' : 'http://www.bbc.co.uk')+'/wwscripts/flag">\x3C/script>'); } })(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (window.bbcdotcom && (typeof bbcdotcom.flag == 'undefined' || (typeof bbcdotcom.data.ads !== 'undefined' && bbcdotcom.flag.a != 1))) { bbcdotcom.data.ads = 0; } if (/[?|&]ads/.test(window.location.href) || /(^|; )ads=on; /.test(document.cookie) || /; ads=on(; |$)/.test(document.cookie)) { bbcdotcom.data.ads = 1; bbcdotcom.data.stats = 1; } if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) { bbcdotcom.assetPrefix = "https://static.bbc.co.uk/bbcdotcom/1.61.0/"; if (/(sandbox|int)(.dev)*.bbc.co*/.test(window.location.href) || /[?|&]ads-debug/.test(window.location.href) || document.cookie.indexOf('ads-debug=') !== -1) { document.write('<link rel="stylesheet" type="text/css" href="https://static.bbc.co.uk/bbcdotcom/1.61.0/style/dist/bbcdotcom.dev.css" />'); } else { document.write('<link rel="stylesheet" type="text/css" href="https://static.bbc.co.uk/bbcdotcom/1.61.0/style/dist/bbcdotcom.css" />'); } (function() { var useSSL = 'https:' == document.location.protocol; var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; document.write('<scr' + 'ipt src="' + src + '">\x3C/script>'); })(); if (/(sandbox|int)(.dev)*.bbc.co*/.test(window.location.href) || /[?|&]ads-debug/.test(window.location.href) || document.cookie.indexOf('ads-debug=') !== -1) { document.write('<script type="text/javascript" src="https://static.bbc.co.uk/bbcdotcom/1.61.0/script/dist/bbcdotcom.dev.js">\x3C/script>'); } else { document.write('<script type="text/javascript" src="https://static.bbc.co.uk/bbcdotcom/1.61.0/script/dist/bbcdotcom.js">\x3C/script>'); } } })(); /*]]>*/</script><script type="text/javascript">if (window.bbcdotcom && bbcdotcom.data.stats == 1) { document.write('<link rel="dns-prefetch" href="//secure-us.imrworldwide.com/">'); document.write('<link rel="dns-prefetch" href="//me-cdn.effectivemeasure.net/">'); document.write('<link rel="dns-prefetch" href="//ssc.api.bbc.com/">'); } if (window.bbcdotcom && bbcdotcom.data.ads == 1) { document.write('<link rel="dns-prefetch" href="//www.googletagservices.com/">'); }</script><script type="text/javascript">/*<![CDATA[*/ (function(){ if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) { bbcdotcomConfig = {"adFormat":"standard","adKeyword":"","adMode":"smart","adsEnabled":true,"appAnalyticsSections":"","asyncEnabled":false,"disableInitialLoad":false,"advertInfoPageUrl":"http:\/\/www.bbc.com\/privacy\/cookies\/international\/","advertisementText":"Advertisement","analyticsEnabled":true,"appName":"","assetPrefix":"https:\/\/static.bbc.co.uk\/bbcdotcom\/1.61.0\/","customAdParams":[],"customStatsParams":[],"headline":"","id":"","inAssociationWithText":"in association with","keywords":"","language":"","orbTransitional":false,"outbrainEnabled":true,"adsenseEnabled":true,"adsportappEnabled":true,"palEnv":"live","productName":"","sections":[],"comScoreEnabled":true,"comscoreSite":"bbc","comscoreID":"19293874","comscorePageName":"","slots":"","sponsoredByText":"is sponsored by","adsByGoogleText":"Ads by Google","summary":"","type":"","features":{"testfeature":{"name":"testfeature","envs":["sandbox","int","test"],"on":true,"options":{},"override":null},"lxadverts":{"name":"lxadverts","envs":[],"on":true,"options":{},"override":null}},"staticBase":"\/bbcdotcom","staticHost":"https:\/\/static.bbc.co.uk","staticVersion":"1.61.0","staticPrefix":"https:\/\/static.bbc.co.uk\/bbcdotcom\/1.61.0","dataHttp":"tps.bbc.com","dataHttps":"www.bbc.com","flagHttp":"www.bbc.co.uk","flagHttps":"www.bbc.co.uk","analyticsHttp":"sa.bbc.com","analyticsHttps":"ssa.bbc.com"}; bbcdotcom.config.init(bbcdotcomConfig, bbcdotcom.data, window.location, window.document); bbcdotcom.config.setAssetPrefix("https://static.bbc.co.uk/bbcdotcom/1.61.0/"); bbcdotcom.config.setVersion("1.61.0"); document.write('<!--[if IE 7]><script type="text/javascript">bbcdotcom.config.setIE7(true);\x3C/script><![endif]-->'); document.write('<!--[if IE 8]><script type="text/javascript">bbcdotcom.config.setIE8(true);\x3C/script><![endif]-->'); document.write('<!--[if IE 9]><script type="text/javascript">bbcdotcom.config.setIE9(true);\x3C/script><![endif]-->'); if (/[?|&]ex-dp/.test(window.location.href) || document.cookie.indexOf('ex-dp=') !== -1) { bbcdotcom.utils.addHtmlTagClass('bbcdotcom-ex-dp'); } } })(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function() { window.bbcdotcom.head = true; }()); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/
-        require(['istats-1', 'orb/cookies', 'orb/fig'], function (istats, bbccookies, orbFig) {
-            istats.addLabels({ 'bbc_mc': bbccookies.analyticsPolicyString() });
+    });</script> <script type="text/javascript">"use strict";require.config({paths:{reverb:"https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-0.7.0"}}),function(){var e=function(a){require(["reverb"],function(e){if(a&&a.detail){var t=a.detail.label,n=a.detail.type,i=a.detail.elem,r=a.detail.originalEvent;e.userActionEvent(n,t,a.detail,i,r)}})};document.addEventListener("bbc-user-event",e),document.addEventListener("bbc-user-click",e),document.addEventListener("bbc-page-updated",function(){require(["reverb"],function(t){t.getOrbitVariables().then(function(e){e&&(t.setDestination(e.destination),e.producer&&t.setProducer(e.producer),e.name&&t.setPageName(e.name),t.trackPage(e))})})})}();</script><script type="text/javascript">/*<![CDATA[*/
+        bbcpage.loadModule(['orb/cookies'])
+            .then(function(bbccookies) {
+                require(['istats-1', 'orb/fig'], function (istats, orbFig) {
+                    istats.addLabels({ 'bbc_mc': bbccookies.analyticsPolicyString() });
 
-            var domesticBlqV = istats._getLabels().blq_v;
-            var worldwideBlqV = istats._getLabels().blq_v + '-ww';
+                    var domesticBlqV = istats._getLabels().blq_v;
+                    var worldwideBlqV = istats._getLabels().blq_v + '-ww';
 
-            function setBlqVLabel(fig) {
-                if (fig.geo.isUK()) {
-                    istats.addLabels({'blq_v': domesticBlqV});
-                } else {
-                    istats.addLabels({'blq_v': worldwideBlqV});
-                }
-            }
+                    function setBlqVLabel(fig) {
+                        if (fig.geo.isUK()) {
+                            istats.addLabels({'blq_v': domesticBlqV});
+                        } else {
+                            istats.addLabels({'blq_v': worldwideBlqV});
+                        }
+                    }
 
-            // Guess with synchronous API first (might be cached and the async version might be too slow)
-            setBlqVLabel(orbFig);
-            orbFig.load(function (fig) {
-                setBlqVLabel(fig);
+                    orbFig.load(function (fig) {
+                        setBlqVLabel(fig);
+                    });
+                });
             });
-        });
     /*]]>*/</script>
-        <script type="text/javascript">
-    require({
-        baseUrl: 'http://static.bbci.co.uk/',
-        paths: {
-            "bump-3":"//emp.bbci.co.uk/emp/bump-3/bump-3",
-            "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.9.1",
-            "relay-1":"http://static.bbci.co.uk/frameworks/relay/0.2.6/sharedmodules/relay-1"
-        },
-        waitSeconds: 30
+  <script>
+    window.require({
+      baseUrl: 'https://static.bbci.co.uk/',
+      paths: {
+        'bump-3': '//emp.bbci.co.uk/emp/bump-3/bump-3',
+        'bump-4': '//emp.bbci.co.uk/emp/bump-4/bump-4',
+        'istats-1': 'https://nav.files.bbci.co.uk/nav-analytics/0.1.0-89/js/istats-1',
+        'jquery-1.9': 'https://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.9.1',
+        
+      },
+      waitSeconds: 30,
     });
-</script>
+  </script>
+  
+  <link rel="stylesheet" href='https://food.files.bbci.co.uk/kandl-food/2573/css/foodApp.css' key="foodAppStylesheet" />
+  <link rel="stylesheet" href='https://food.files.bbci.co.uk/kandl-food/2573/css/print.css' media="print" key="printStylesheet" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: http: https: 'unsafe-inline' 'unsafe-eval'; frame-src edigitalsurvey.com chartbeat.com static2.chartbeat.com  *.bbc.co.uk *.bbci.co.uk *.bbc.com *.bbci.com *.edigitalsurvey.com edigitalsurvey.com; connect-src 'self' edigitalsurvey.com  6z7ho2klnfhotoml2c2qrxn3du.appsync-api.eu-west-1.amazonaws.com *.bbc.co.uk *.bbci.co.uk *.bbc.com *.bbci.com *.edigitalsurvey.com edigitalsurvey.com; font-src 'self' *.bbc.co.uk *.bbci.co.uk *.bbc.com *.bbci.com *.edigitalsurvey.com edigitalsurvey.com; form-action 'self' *.bbc.co.uk *.bbci.co.uk *.bbc.com *.bbci.com *.edigitalsurvey.com edigitalsurvey.com; img-src 'self' data: https: http:; script-src 'self' static.chartbeat.com static2.chartbeat.com  'unsafe-inline' 'unsafe-eval' *.bbc.co.uk *.bbci.co.uk *.bbc.com *.bbci.com *.edigitalsurvey.com edigitalsurvey.com; style-src 'self' 'unsafe-inline'  *.bbc.co.uk *.bbci.co.uk *.bbc.com *.bbci.com *.edigitalsurvey.com edigitalsurvey.com" />
+        <title data-react-helmet="true">Paella recipe - BBC Food</title>
+        <meta data-react-helmet="true" name="description" content="An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.
 
+Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt."/><meta data-react-helmet="true" property="og:title" content="Paella"/><meta data-react-helmet="true" property="og:site_name" content="BBC Food"/><meta data-react-helmet="true" property="og:description" content="An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.
 
-        <script type="text/javascript">
-    require(['istats-1'], function (istats) {
-        istats.setSite('food');
+Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt."/><meta data-react-helmet="true" property="og:image" content="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/paella_7100_16x9.jpg"/><meta data-react-helmet="true" property="og:image:secure_url" content="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/paella_7100_16x9.jpg"/><meta data-react-helmet="true" property="og:image:type" content="image/jpeg"/><meta data-react-helmet="true" property="og:image:width" content="448"/><meta data-react-helmet="true" property="og:image:height" content="224"/><meta data-react-helmet="true" property="og:image:alt" content="Paella"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:site" content="@BBCFood"/><meta data-react-helmet="true" name="twitter:title" content="Paella"/><meta data-react-helmet="true" name="twitter:description" content="An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.
 
-        if ('food.recipes.paella_7100.page'.length > 0) {
-            istats.setCountername('food.recipes.paella_7100.page');
-        }
-    });
-</script>
-
-        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
-
-
-        <title>BBC Food - Recipes - Paella</title>
-
-        <script src="http://food.files.bbci.co.uk/kandl-food/1294-1.el6/javascript/vendors/modernizr.js"></script>
-
-        <!--[if (lt IE 9) & (!IEMobile)]>
-            <link rel='stylesheet' href='http://food.files.bbci.co.uk/kandl-food/1294-1.el6/css/ie8.css'/>
-        <![endif]-->
-
-        <!--[if gt IE 8]><!-->
-            <link rel='stylesheet' href='http://food.files.bbci.co.uk/kandl-food/1294-1.el6/css/style.css'/>
-        <!--<![endif]-->
-
-        <link rel='stylesheet' href='http://food.files.bbci.co.uk/kandl-food/1294-1.el6/css/print.css' media="print"/>
-
+Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt."/><meta data-react-helmet="true" name="twitter:image" content="https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/paella_7100_16x9.jpg"/>
+        <link data-react-helmet="true" rel="canonical" href="https://www.bbc.com/food/recipes/paella_7100"/><link data-react-helmet="true" rel="amphtml" href="https://www.bbc.com/food/recipes/paella_7100/amp"/>
         
-        <link rel="canonical" href="http://www.bbc.co.uk/food/recipes/paella_7100" />
-        
+      </head>
+      <body >
+        <noscript><p style="position: absolute; top: -999em"><img src="https://sa.bbc.co.uk/bbc/bbc/s?name=food.recipes.paella_7100.page&ml_name=webmodule&ml_version=-1&blq_e=orbit&blq_r=orbit&blq_s=orbit&blq_v=default&language=en&app_name=food&app_type=responsive&bbc_site=food&prod_name=food&blq_js_enabled=0" height="1" width="1" alt=""></p></noscript>  <!-- BBCDOTCOM bodyFirst --><div id="bbccom_interstitial_ad" class="bbccom_display_none"></div><div id="bbccom_interstitial" class="bbccom_display_none"><script type="text/javascript">/*<![CDATA[*/ (function() { if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { googletag.cmd.push(function() { googletag.display('bbccom_interstitial'); }); } }()); /*]]>*/</script></div><div id="bbccom_wallpaper_ad" class="bbccom_display_none"></div><div id="bbccom_wallpaper" class="bbccom_display_none"><script type="text/javascript">/*<![CDATA[*/ (function() { var wallpaper; if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { if (bbcdotcom.config.isAsync()) { googletag.cmd.push(function() { googletag.display('bbccom_wallpaper'); }); } else if (typeof googletag !== "undefined" && typeof googletag.display === "function") { googletag.display("wallpaper"); } wallpaper = bbcdotcom.adverts.adRegister.getAd('wallpaper'); } }()); /*]]>*/</script></div><script type="text/javascript">/*<![CDATA[*/ (function() { if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { document.write(unescape('%3Cscript id="gnlAdsEnabled" class="bbccom_display_none"%3E%3C/script%3E')); } if (window.bbcdotcom && bbcdotcom.config.isActive('analytics')) { document.write(unescape('%3Cscript id="gnlAnalyticsEnabled" class="bbccom_display_none"%3E%3C/script%3E')); } }()); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function() { window.bbcdotcom.bodyFirst = true; }()); /*]]>*/</script> <div id="cookiePrompt"></div>  <!--[if (gt IE 8) | (IEMobile)]><!--><header id="orb-banner" role="banner" aria-label="BBC"><!--<![endif]--><!--[if (lt IE 9) & (!IEMobile)]>
+            <![if (IE 8)]>
+                <header id="orb-banner" role="banner" class="orb-old-ie orb-ie8" aria-label="BBC">
+            <![endif]>
 
-        
-<meta name="description" content="An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.
+            <![if (IE 7)]>
+                <header id="orb-banner" role="banner" class="orb-old-ie orb-ie7" aria-label="BBC">
+            <![endif]>
 
-Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt."/>
-
-<meta property="og:title" content="Paella" />
-<meta property="og:site_name" content="BBC Food" />
-<meta property="og:description" content="An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.
-
-Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt."/>
-<meta property="og:image" content="http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/paella_7100_16x9.jpg"/>
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@BBCFood">
-<meta name="twitter:title" content="Paella">
-<meta name="twitter:description" content="An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.
-
-Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt.">
-<meta name="twitter:image" content="http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/paella_7100_16x9.jpg">
-
-
-    </head>
-
-    <!--[if lt IE 10]><body class="lt-ie10 nojs"><![endif]-->
-    <!--[if gt IE 9]><!--><body class="nojs"><!--<![endif]-->
-
-        <noscript><p style="position: absolute; top: -999em"><img src="https://sa.bbc.co.uk/bbc/bbc/s?name=unknown&amp;ml_name&#x3D;webmodule&amp;ml_version&#x3D;69&amp;blq_e&#x3D;orbit&amp;blq_r&#x3D;orbit&amp;blq_s&#x3D;orbit&amp;blq_v&#x3D;default&amp;language&#x3D;en&amp;blq_js_enabled=0" height="1" width="1" alt=""></p></noscript><!-- BBCDOTCOM bodyFirst --><div id="bbccom_interstitial_ad" class="bbccom_display_none"></div><div id="bbccom_interstitial" class="bbccom_display_none"><script type="text/javascript">/*<![CDATA[*/ (function() { if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { googletag.cmd.push(function() { googletag.display('bbccom_interstitial'); }); } }()); /*]]>*/</script></div><div id="bbccom_wallpaper_ad" class="bbccom_display_none"></div><div id="bbccom_wallpaper" class="bbccom_display_none"><script type="text/javascript">/*<![CDATA[*/ (function() { var wallpaper; if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { if (bbcdotcom.config.isAsync()) { googletag.cmd.push(function() { googletag.display('bbccom_wallpaper'); }); } else { googletag.display("wallpaper"); } wallpaper = bbcdotcom.adverts.adRegister.getAd('wallpaper'); } }()); /*]]>*/</script></div><script type="text/javascript">/*<![CDATA[*/ (function() { if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { document.write(unescape('%3Cscript id="gnlAdsEnabled" class="bbccom_display_none"%3E%3C/script%3E')); } if (window.bbcdotcom && bbcdotcom.config.isActive('analytics')) { document.write(unescape('%3Cscript id="gnlAnalyticsEnabled" class="bbccom_display_none"%3E%3C/script%3E')); } }()); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function() { window.bbcdotcom.bodyFirst = true; }()); /*]]>*/</script><div id="blq-global"><div id="blq-pre-mast"></div></div><div id="cookiePrompt"></div><!--[if (gt IE 8) | (IEMobile)]><!--><header id="orb-banner" role="banner" aria-label="BBC"><!--<![endif]--><!--[if (lt IE 9) & (!IEMobile)]>
-        <![if (IE 8)]>
-            <header id="orb-banner" role="banner" class="orb-old-ie orb-ie8" aria-label="BBC">
-        <![endif]>
-
-        <![if (IE 7)]>
-            <header id="orb-banner" role="banner" class="orb-old-ie orb-ie7" aria-label="BBC">
-        <![endif]>
-
-        <![if (IE 6)]>
-            <header id="orb-banner" role="banner" class="orb-old-ie orb-ie6" aria-label="BBC">
-        <![endif]>
-    <![endif]--><div id="orb-header" class="orb-nav-pri orb-nav-pri-white orb-nav-empty" dir="ltr"><div class="orb-nav-pri-container b-r b-g-p"><div class="orb-nav-section orb-nav-blocks"><a href="http://www.bbc.co.uk">Homepage</a></div><section><div class="orb-skip-links"><h2>Accessibility links</h2><ul><li><a href="#orb-modules">Skip to content</a></li><li><a id="orb-accessibility-help" href="/accessibility/">Accessibility Help</a></li></ul></div></section><div id="mybbc-wrapper" class="orb-nav-section orb-nav-id orb-nav-focus orb-nav-id-default"><div id="idcta-statusbar" class="orb-nav-section orb-nav-focus"><a id="idcta-link" href="https://account.bbc.com/account"><span id="idcta-username">BBC iD</span></a></div><script type="text/javascript">require(['idcta/statusbar'], function(statusbar) { new statusbar.Statusbar({"id":"idcta-statusbar","publiclyCacheable":true}); });</script><a id="notification-link" class="js-notification-link animated three" href="#"><span class="hidden-span">Notifications</span><div class="notification-link--triangle"></div><div class="notification-link--triangle"></div><span id="not-num"></span></a></div><nav role="navigation" aria-label="BBC" class="orb-nav"><div class="orb-nav-section orb-nav-links orb-nav-focus" id="orb-nav-links"><ul><li class="orb-nav-home"><a href="http://www.bbc.co.uk/">Home</a></li><li class="orb-nav-news"><a href="http://www.bbc.co.uk/news">News</a></li><li class="orb-nav-sport"><a href="http://www.bbc.co.uk/sport">Sport</a></li><li class="orb-nav-weather"><a href="http://www.bbc.co.uk/weather">Weather</a></li><li class="orb-nav-iplayer"><a href="http://www.bbc.co.uk/iplayer">iPlayer</a></li><li class="orb-nav-tv"><a href="http://www.bbc.co.uk/tv">TV</a></li><li class="orb-nav-radio"><a href="http://www.bbc.co.uk/radio">Radio</a></li><li class="orb-nav-cbbc"><a href="http://www.bbc.co.uk/cbbc">CBBC</a></li><li class="orb-nav-cbeebies"><a href="http://www.bbc.co.uk/cbeebies">CBeebies</a></li><li class="orb-nav-food"><a href="http://www.bbc.co.uk/food">Food</a></li><li class="orb-nav-bitesize"><a href="http://www.bbc.co.uk/education">Bitesize</a></li><li class="orb-nav-music"><a href="http://www.bbc.co.uk/music">Music</a></li><li class="orb-nav-earth"><a href="http://www.bbc.com/earth">Earth</a></li><li class="orb-nav-arts"><a href="http://www.bbc.co.uk/arts">Arts</a></li><li class="orb-nav-digital"><a href="http://www.bbc.co.uk/makeitdigital">Make It Digital</a></li><li class="orb-nav-taster"><a href="http://www.bbc.co.uk/taster">Taster</a></li><li class="orb-nav-local"><a href="http://www.bbc.co.uk/local">Local</a></li><li id="orb-nav-more" style="width: 88px" aria-controls="orb-panel-more"><a href="#orb-footer" data-alt="More" class="istats-notrack">Menu<span class="orb-icon orb-icon-arrow"></span></a></li></ul></div></nav><div class="orb-nav-section orb-nav-search"><a class="orb-search__button" href="http://search.bbc.co.uk/search" title="Search the BBC">Search</a><form class="b-f" id="orb-search-form" role="search" method="get" action="//search.bbc.co.uk/search" accept-charset="utf-8"><div><label for="orb-search-q">Search the BBC</label><input id="orb-search-q" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="q" placeholder="Search"><button id="orb-search-button" class="orb-search__button">Search the BBC</button><input type="hidden" name="suggid" id="orb-search-suggid"></div></form></div></div><div id="orb-panels"></div></div></header><!-- Styling hook for shared modules only -->
+            <![if (IE 6)]>
+                <header id="orb-banner" role="banner" class="orb-old-ie orb-ie6" aria-label="BBC">
+            <![endif]>
+        <![endif]--><div id="orb-header" class="orb-nav-pri orb-nav-pri-white orb-nav-empty" dir="ltr"><div class="orb-nav-pri-container b-r b-g-p"><div class="orb-nav-section orb-nav-blocks"><a href="https://www.bbc.co.uk">Homepage</a></div><section><div class="orb-skip-links"><h2>Accessibility links</h2><ul><li><a href="#orb-modules">Skip to content</a></li><li><a id="orb-accessibility-help" href="/accessibility/">Accessibility Help</a></li></ul></div></section><div id="mybbc-wrapper" class="orb-nav-section orb-nav-id orb-nav-focus orb-nav-id-default"><div id="idcta-statusbar" class="orb-nav-section orb-nav-focus"><a id="idcta-link" href="https://account.bbc.com/account"><span id="idcta-username">BBC Account</span></a></div><script type="text/javascript">require(['idcta/statusbar'], function (statusbar) {new statusbar.Statusbar({id: 'idcta-statusbar', publiclyCacheable: true});});</script><!-- Because we are now loading the notification bell CSS asynchronously, we need this inline style hack to ensure that the notification div 
+		 is hidden by default, and shown only if and when the bell code is loaded from notification-ui --><a id="notification-link" class="js-notification-link animated three" href="#" style="display: none"><span class="hidden-span">Notifications</span><div class="notification-link--triangle"></div><div class="notification-link--triangle"></div><span id="not-num"></span></a></div><nav role="navigation" aria-label="BBC" class="orb-nav"><div class="orb-nav-section orb-nav-links orb-nav-focus" id="orb-nav-links"><ul><li class="orb-nav-home"><a href="https://www.bbc.co.uk">Home</a></li><li class="orb-nav-news"><a href="https://www.bbc.co.uk/news">News</a></li><li class="orb-nav-sport"><a href="https://www.bbc.co.uk/sport">Sport</a></li><li class="orb-nav-weather"><a href="https://www.bbc.co.uk/weather">Weather</a></li><li class="orb-nav-iplayer"><a href="https://www.bbc.co.uk/iplayer">iPlayer</a></li><li class="orb-nav-sounds"><a href="https://www.bbc.co.uk/sounds">Sounds</a></li><li class="orb-nav-cbbc"><a href="https://www.bbc.co.uk/cbbc">CBBC</a></li><li class="orb-nav-cbeebies"><a href="https://www.bbc.co.uk/cbeebies">CBeebies</a></li><li class="orb-nav-food"><a href="https://www.bbc.com/food">Food</a></li><li class="orb-nav-bitesize"><a href="https://www.bbc.com/bitesize">Bitesize</a></li><li class="orb-nav-earth"><a href="https://www.bbc.com/earth">Earth</a></li><li class="orb-nav-arts"><a href="https://www.bbc.co.uk/arts">Arts</a></li><li class="orb-nav-digital"><a href="https://www.bbc.co.uk/makeitdigital">Make It Digital</a></li><li class="orb-nav-taster"><a href="https://www.bbc.co.uk/taster">Taster</a></li><li class="orb-nav-local"><a href="https://www.bbc.co.uk/news/localnews">Local</a></li><li class="orb-nav-tomorrowsworld"><a href="https://www.bbc.co.uk/tomorrowsworld">Tomorrow&#x27;s World</a></li><li class="orb-nav-tv"><a href="https://www.bbc.co.uk/tv">TV</a></li><li class="orb-nav-radio"><a href="https://www.bbc.co.uk/radio">Radio</a></li><li id="orb-nav-more" style="width: 88px" aria-controls="orb-panel-more"><a href="#orb-footer" data-alt="More" class="istats-notrack">Menu<span class="orb-icon orb-icon-arrow"></span></a></li></ul></div></nav><div class="orb-nav-section orb-nav-search"><a class="orb-search__button" href="https://search.bbc.co.uk/search" title="Search the BBC">Search</a><form class="b-f" id="orb-search-form" role="search" method="get" action="https://search.bbc.co.uk/search" accept-charset="utf-8"><div><label for="orb-search-q">Search the BBC</label><input id="orb-search-q" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="q" placeholder="Search"><button id="orb-search-button" class="orb-search__button">Search the BBC</button><input type="hidden" name="suggid" id="orb-search-suggid"></div></form></div></div><div id="orb-panels"></div></div></header>  <!-- Styling hook for shared modules only -->
 <div id="orb-modules">
 
-
-        <div class="browser-upgrade-alert-message">
-            <span class="browser-upgrade-alert">This site is optimised for modern web browsers,
-    and does not fully support your version of Internet Explorer</span>
-
-        </div>
-    
-        <div class="food-body summer summer_banner_1">
-            <div class="food-wrapper">
-                <div class="food-header">
-                    <div class="page-title">
-                        <div class="page-title__logo-wrapper">
-                            <a class="page-title__logo" href="/food/" title="Food homepage">Food</a>
-                            <span class="page-title__text">Recipes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-menu" role="navigation">
-
-    <div class="mobile-nav-toggle">
-    <div class="mobile-nav-toggle__button-wrapper">
-        <label class="mobile-nav-toggle__descriptive-text" for="mobile-nav-button">Open All Food menu</label>
-        <button class="mobile-nav-toggle__button" id="mobile-nav-button">
-            <span class="mobile-nav-toggle__icon"></span>
-            All Food
-        </button>
-    </div>
-</div>
-
-
-    <nav class="main-menu__navigation main-menu__navigation--recipes">
-        <ul>
-            
-                
-                    <li class="main-menu__item main-menu__item--primary main-menu__item--index ">
-                        <a class="main-menu__link" href="/food/">Home</a>
-                    </li>
-                
-            
-                
-                    <li class="main-menu__item main-menu__item--primary main-menu__item--recipes  main-menu__item--active">
-                        <a class="main-menu__link" href="/food/recipes">Recipes<span class="main-menu__item__icon"></span></a>
-
-                        <ul class="main-menu__secondary-navigation">
-                            
-                                <li class="main-menu__secondary-item">
-                                    <a class="main-menu__secondary-link" href="/food/seasons">In Season</a>
-                                </li>
-                            
-                                <li class="main-menu__secondary-item">
-                                    <a class="main-menu__secondary-link" href="/food/occasions">Occasions</a>
-                                </li>
-                            
-                                <li class="main-menu__secondary-item">
-                                    <a class="main-menu__secondary-link" href="/food/cuisines">Cuisines</a>
-                                </li>
-                            
-                                <li class="main-menu__secondary-item">
-                                    <a class="main-menu__secondary-link" href="/food/dishes">Dishes</a>
-                                </li>
-                            
-                        </ul>
-                    </li>
-                
-            
-                
-                    <li class="main-menu__item main-menu__item--primary main-menu__item--chefs ">
-                        <a class="main-menu__link" href="/food/chefs">Chefs</a>
-                    </li>
-                
-            
-                
-                    <li class="main-menu__item main-menu__item--primary main-menu__item--programmes ">
-                        <a class="main-menu__link" href="/food/programmes">Programmes</a>
-                    </li>
-                
-            
-                
-                    <li class="main-menu__item main-menu__item--primary main-menu__item--ingredients ">
-                        <a class="main-menu__link" href="/food/ingredients">Ingredients</a>
-                    </li>
-                
-            
-                
-                    <li class="main-menu__item main-menu__item--primary main-menu__item--techniques ">
-                        <a class="main-menu__link" href="/food/techniques">Techniques</a>
-                    </li>
-                
-            
-                
-                    <li class="main-menu__item main-menu__item--primary main-menu__item--about ">
-                        <a class="main-menu__link" href="/food/about">FAQs</a>
-                    </li>
-                
-            
-            
-            
-                <li class="main-menu__item main-menu__item--favorites" >
-                    <a class="main-menu__link" href="/food/my/favourites">Your Favourites</a>
-                </li>
-            
-        </ul>
-    </nav>
-</div>
-
-
-            <div class="food-grid">
-                <div class="food-content-wrapper">
-                    
-<div class="recipe-finder-link__wrap">
-    <div class="recipe-layout">
-        <div class="recipe-finder-link">
-            <div class="recipe-search-quick-link__wrapper">
-    <div class="recipe-search-quick-link">
-        <a href="#recipe-finder__box" class="recipe-search-quick-link__link">
-            <span class="recipe-search-quick-link__text">Quick recipe finder</span>
-            <span class="recipe-search-quick-link__icon"></span>
-        </a>
-    </div>
-</div>
-
-        </div>
-    </div>
-</div>
-<div itemscope itemtype="http://schema.org/Recipe" class="">
-    <div class="recipe-wrap">
-        <div class="recipe-layout">
-            
-                
-            
-
-            <div class="recipe-main-info">
-                <div class="recipe-title--small-spacing">
-                    
-    <h1 class="content-title__text" itemprop="name">Paella</h1>
-
-
-                </div>
-
-                <div class="recipe-leading-info">
-                    
-                        <div class="recipe-media">
-                            
-
-
-    <img class="recipe-media__image responsive-images" src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/paella_7100_16x9.jpg" itemprop="image" alt="" 
-    data-image-recipe="http://ichef.bbci.co.uk/food/ic/$recipe/recipes/paella_7100_16x9.jpg"/>
-
-
-                        </div>
-                    
-
-                    <div class="recipe-metadata">
-                        
-    <div class="recipe-metadata-wrap">
-        <p class="recipe-metadata__heading">Preparation time</p>
+        <div id="main-content"><div class="food-body gel-pica spring spring_banner_4"><div class="gel-wrap page-title"><div class="gel-layout"><div class="gel-layout__item"></div><div class="gel-layout__item"><a class="page-title__logo" href="/food/" title="Food homepage">Food</a><span class="page-title__text b-reith-sans-font">RECIPES</span></div></div></div><div class="main-menu main-menu--full-width"><nav class="main-menu__navigation"><ul class="main-menu__primary-navigation gel-wrap"><li class="main-menu__item main-menu__item--primary main-menu__item--home"><a aria-label="Home" class="main-menu__link gel-brevier" href="/food/">Home</a></li><li class="main-menu__item main-menu__item--primary main-menu__item--recipes main-menu__item--active"><a aria-label="Recipes" class="main-menu__link gel-brevier" href="/food/recipes">Recipes<span class="main-menu__item__icon"></span></a><div class="main-menu__secondary-nav__bg"><ul class="main-menu__secondary-navigation gel-wrap"><li class="main-menu__secondary-item "><a aria-label="In Season" class="main-menu__secondary-link gel-brevier" href="/food/seasons">In Season</a></li><li class="main-menu__secondary-item "><a aria-label="Occasions" class="main-menu__secondary-link gel-brevier" href="/food/occasions">Occasions</a></li><li class="main-menu__secondary-item "><a aria-label="Cuisines" class="main-menu__secondary-link gel-brevier" href="/food/cuisines">Cuisines</a></li><li class="main-menu__secondary-item "><a aria-label="Dishes" class="main-menu__secondary-link gel-brevier" href="/food/dishes">Dishes</a></li></ul></div></li><li class="main-menu__item main-menu__item--primary main-menu__item--chefs"><a aria-label="Chefs" class="main-menu__link gel-brevier" href="/food/chefs">Chefs</a></li><li class="main-menu__item main-menu__item--primary main-menu__item--diets"><a aria-label="Diets" class="main-menu__link gel-brevier" href="/food/diets">Diets</a></li><li class="main-menu__item main-menu__item--primary main-menu__item--programmes"><a aria-label="Programmes" class="main-menu__link gel-brevier" href="/food/programmes">Programmes</a></li><li class="main-menu__item main-menu__item--primary main-menu__item--ingredients"><a aria-label="Ingredients" class="main-menu__link gel-brevier" href="/food/ingredients">Ingredients</a></li><li class="main-menu__item main-menu__item--primary main-menu__item--techniques"><a aria-label="Techniques" class="main-menu__link gel-brevier" href="/food/techniques">Techniques</a></li><li class="main-menu__item main-menu__item--primary main-menu__item--faqs"><a aria-label="FAQs" class="main-menu__link gel-brevier" href="/food/faqs">FAQs</a></li><li class="main-menu__item main-menu__item--favorites"><a class="main-menu__link gel-brevier" href="/food/my/favourites">Your Favourites</a></li></ul></nav></div><div class="food-grid food-grid--full-width"><div class="food-content-wrapper"><div class="searchbar__wrap gel-wrap"><div class="searchbar__layout gel-layout"><div class="searchbar"><form action="/food/search" method="GET" autoComplete="off" class="searchbar__search-form"><div class="searchbar__input-container"><input type="text" class="compact-finder__search-box" name="q" value=""/><input type="submit" aria-label="Search BBC Food&#x27;s recipes" class="searchbar__search-button" id="searchbar-search-button" name="searchButton" value=""/><span class="searchbar__close-button" role="button" tabindex="0"></span></div><div class="searchbar__results" style="height:0px"></div></form></div></div></div><div class="recipe-wrap gel-wrap"><div class="gel-layout"><div class="recipe-main-info gel-layout__item gel-1/1 gel-2/3@l"><div class="gel-layout"><div class="gel-layout__item gel-1/1 gel-2/3@m gel-3/4@l recipe-title--small-spacing"><h1 class="gel-trafalgar content-title__text">Paella</h1></div></div><div class="recipe-ratings"><div><div class="recipe-ratings--cta gel-pica"><span class="recipe-ratings--loading-icon"></span><span class="recipe-ratings--loading-text">Loading</span></div></div></div><div class="recipe-leading-info"><div class="gel-layout"><div class="gel-layout__item gel-1/1 gel-3/4@l"><div class="recipe-media"><div class="responsive-image-container__16/9"><img alt="Paella" class="recipe-media__image" data-class="recipe-media__image" src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg" srcSet="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 160w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 208w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 280w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 320w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 448w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 506w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 608w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 832w, https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/paella_7100_16x9.jpg 1600w"/></div></div><div class="recipe-leading-info__main-metadata"><div class="gel-layout"><div class="recipe-metadata-wrap gel-layout__item gel-1/2 gel-1/1@l gel-pica"><p class="recipe-metadata__heading gel-long-primer">Preparation time</p><p class="recipe-metadata__prep-time" content="PT1H">30 mins to 1 hour</p></div><div class="recipe-metadata-wrap gel-layout__item gel-1/2 gel-1/1@l gel-pica"><p class="recipe-metadata__heading gel-long-primer">Cooking time</p><p class="recipe-metadata__cook-time" content="PT30M">10 to 30 mins</p></div><div class="recipe-metadata-wrap gel-layout__item gel-1/2 gel-1/1@l gel-pica"><p class="recipe-metadata__heading gel-long-primer">Serves</p><p class="recipe-metadata__serving">Serves 8</p></div></div></div><div class="recipe-description"><p class="recipe-description__text">An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.<br/><br/>
+Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt.</p></div><div class="chef gel-brevier"><a class="chef__image-link" href="/food/chefs/antony_worrall_thompson" title="Antony Worrall Thompson"><div class=""><img alt="" class="chef__image" data-class="chef__image" data-src="https://ichef.bbci.co.uk/food/ic/food_1x1_72/chefs/antony_worrall_thompson_1x1.jpg"/></div></a><div class="chef__about"><div class="chef__name"><span class="gel-brevier-bold">By</span> <a class="chef__link" href="/food/chefs/antony_worrall_thompson">Antony Worrall Thompson</a></div></div></div><div class="recipe-actions gel-layout"><div class="recipe-actions-wrap gel-layout__item gel-1/1 gel-1/2@m" id="share-component-btn-container"><div class="ec-share-tools"><button class="ec-share-button ec-share-button__share"><span class="ec-share-icon__svg"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32"><path d="M6.8 22.2c1.6 0 3-.7 4-1.8l9 4.8c-.1.4-.2.8-.2 1.3 0 3 2.5 5.5 5.5 5.5s5.5-2.4 5.5-5.5-2.5-5.5-5.5-5.5c-1.6 0-3 .7-4 1.8l-9.5-5.2-.1-2.8 9.7-5.5c1 1 2.3 1.5 3.8 1.5 3 0 5.5-2.5 5.5-5.5S28.2 0 25.2 0s-5.5 2.4-5.5 5.5c0 .6.1 1.1.2 1.6l-9.3 5.7c-1-.9-2.3-1.5-3.8-1.5-3 0-5.5 2.4-5.5 5.5.1 2.9 2.5 5.4 5.5 5.4z"></path></svg></span><span class="ec-share-cta-text">Share</span></button><div class="ec-share-panel"><div class="ec-share-panel__header"><span class="ec-share-panel__header-text">Share this with</span><button class="ec-share-panel__close-button"><span class="ec-share-panel__close-button-icon"><svg focusable="false" viewBox="0 0 32 32" width="16" height="16"><path d="M32 3.5L28.5 0 16 12.5 3.5 0 0 3.5 12.5 16 0 28.5 3.5 32 16 19.5 28.5 32l3.5-3.5L19.5 16"></path></svg></span></button></div><div class="ec-share-panel__body"><ul class="ec-share-panel__items"><li class="ec-share-panel__item"><button class="ec-share-button ec-share-button--transparent ec-share-button--facebook"><span class="ec-share-icon__svg ec-share-icon__svg--facebook"><svg focusable="false" viewBox="0 0 32 32"><path d="M12.1 32V17H8v-5.4h4.1V7c0-3.6 2.4-7 8-7 2.2 0 3.9.2 3.9.2l-.1 5.1h-3.6c-2 0-2.3.9-2.3 2.4v3.9h6l-.3 5.4H18v15h-5.9z"></path></svg></span><span class="ec-share-cta-text">Facebook</span></button></li><li class="ec-share-panel__item"><button class="ec-share-button ec-share-button--transparent ec-share-button--twitter"><span class="ec-share-icon__svg ec-share-icon__svg--twitter"><svg focusable="false" viewBox="0 0 32 32"><path d="M32 6.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.7 3.8 24 3 22.2 3c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 3 1.8 6.5 2.9 10.2 2.9 12.1 0 18.7-10 18.7-18.7v-.9c1.2-.9 2.3-2 3.2-3.3z"></path></svg></span><span class="ec-share-cta-text">Twitter</span></button></li><li class="ec-share-panel__item"><button class="ec-share-button ec-share-button--transparent ec-share-button--pinterest"><span class="ec-share-icon__svg ec-share-icon__svg--pinterest"><svg focusable="false" viewBox="-3 -3 82 82"><path d="M27.5 71c3.3 1 6.7 1.6 10.3 1.6C57 72.6 72.6 57 72.6 37.8 72.6 18.6 57 3 37.8 3 18.6 3 3 18.6 3 37.8c0 14.8 9.3 27.5 22.4 32.5-.3-2.7-.6-7.2 0-10.3l4-17.2s-1-2-1-5.2c0-4.8 3-8.4 6.4-8.4 3 0 4.4 2.2 4.4 5 0 3-2 7.3-3 11.4C35.6 49 38 52 41.5 52c6.2 0 11-6.6 11-16 0-8.3-6-14-14.6-14-9.8 0-15.6 7.3-15.6 15 0 3 1 6 2.6 8 .3.2.3.5.2 1l-1 3.8c0 .6-.4.8-1 .4-4.4-2-7-8.3-7-13.4 0-11 7.8-21 22.8-21 12 0 21.3 8.6 21.3 20 0 12-7.4 21.6-18 21.6-3.4 0-6.7-1.8-7.8-4L32 61.7c-.8 3-3 7-4.5 9.4z"></path></svg></span><span class="ec-share-cta-text">Pinterest</span></button></li><li class="ec-share-panel__item"><button class="ec-share-button ec-share-button--transparent ec-share-button--whatsapp"><span class="ec-share-icon__svg ec-share-icon__svg--whatsapp"><svg focusable="false" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg></span><span class="ec-share-cta-text">WhatsApp</span></button></li><li class="ec-share-panel__item"><button class="ec-share-button ec-share-button--transparent ec-share-button--yummly"><span class="ec-share-icon__svg ec-share-icon__svg--yummly"><svg focusable="false" viewBox="-3 0 29 29"><path d="m23.55,22c0,-0.2 -0.2,-0.3 -0.3,-0.3c-0.3,-0.1 -0.5,0 -1.3,-0.4c-0.6,-0.3 -3.5,-1.7 -7.5,-2.1l2.9,-16.4c0.1,-0.7 0.1,-1.3 -0.1,-1.7c-0.3,-0.6 -1.1,-0.7 -1.9,-0.6c-0.7,0.1 -1.2,0.3 -1.3,0.4s-0.2,0.2 -0.2,0.4c0,0.3 0.3,0.6 0.1,1.7c0,0.3 -1,5.5 -1.8,10c-2.1,1.3 -4.9,1.9 -5.5,1.1c-0.3,-0.4 -0.2,-1.1 0.1,-2.2c0.1,-0.2 1.3,-4.9 1.6,-6.3c0.7,-2.6 0.2,-4.9 -2.5,-5.2c-2.3,-0.2 -4.5,1.1 -5.2,1.9c-0.5,0.5 -0.3,1.1 0.1,1.9c0.3,0.6 0.8,1 0.9,1c0.1,0.1 0.3,0.1 0.4,0c0.8,-0.9 2.2,-1.5 2.7,-1.1c0.4,0.4 0.3,1 0.1,1.7c0,0 -1.5,5.6 -2.1,8c-0.4,1.7 0,3.3 1.3,4.1c0.9,0.6 2.3,0.5 3.4,0.4c2.4,-0.3 3.8,-1.3 4,-1.5c-0.3,1.5 -0.4,2.5 -0.4,2.5s-2.7,0.2 -4.9,1.6c-2.9,1.7 -4.1,5.7 -2.2,7.8c1.9,2.1 5.1,1.3 6.5,0.4c1.3,-0.9 2.9,-2.7 3.7,-6.8c4.4,0.2 5.5,2.5 7.4,2.6c1.2,-0.2 2.1,-1.5 2,-2.9zm-15,4c-0.6,0.4 -1.3,0.4 -1.7,0c-0.4,-0.5 -0.5,-3.1 3.6,-3.8c0,-0.1 -0.7,3 -1.9,3.8z" id="svg_8"></path></svg></span><span class="ec-share-cta-text">Yummly</span></button></li><li class="ec-share-panel__item"><div class="ec-share-copy-link"><label class="ec-share-copy-link__text">Copy link</label><input type="text" class="ec-share-copy-link__input" readonly="" value=""/></div></li><li class="ec-share-panel__item"><a class="ec-share-panel__read-more-link" href="http://www.bbc.co.uk/faqs/questions/bbc_online/sharing">Read more about sharing.</a></li></ul></div></div></div></div><div class="recipe-actions-wrap gel-layout__item gel-1/1 gel-1/2@m" id="add-to-favourites-btn-container"><div class="my-favourites-recipes__start-adding recipe-actions-text--button"><button class="recipe-actions-link__button gel-long-primer" disabled="" id="add-to-favourites-button" name="favouritesLink" type="button"><span name="favouritesLinkIcon" class="recipe-actions__favourites-icon recipe-actions__adding-favourites-icon"></span>Loading<!-- --> </button></div></div><div class="recipe-actions-wrap gel-layout__item gel-1/1 gel-1/2@m gel-long-primer"><p class="my-favourites-recipes__start-adding"><a class="recipe-actions-link" href="/food/recipes/paella_7100/shopping-list"><span class="recipe-actions__shopping-list-icon"></span>Shopping list</a></p></div><div class="recipe-actions-wrap gel-layout__item gel-1/1 gel-1/2@m gel-long-primer"><p class="my-favourites-recipes__start-adding"><a class="recipe-actions-link" href="javascript:window.print()"><span class="recipe-actions__print-link-icon"></span>Print recipe</a></p></div></div></div><div class="gel-layout__item gel-1/4 recipe-leading-info__side-bar"><div class="gel-layout"><div class="recipe-metadata-wrap gel-layout__item gel-1/2 gel-1/1@l gel-pica"><p class="recipe-metadata__heading gel-long-primer">Preparation time</p><p class="recipe-metadata__prep-time" content="PT1H">30 mins to 1 hour</p></div><div class="recipe-metadata-wrap gel-layout__item gel-1/2 gel-1/1@l gel-pica"><p class="recipe-metadata__heading gel-long-primer">Cooking time</p><p class="recipe-metadata__cook-time" content="PT30M">10 to 30 mins</p></div><div class="recipe-metadata-wrap gel-layout__item gel-1/2 gel-1/1@l gel-pica"><p class="recipe-metadata__heading gel-long-primer">Serves</p><p class="recipe-metadata__serving">Serves 8</p></div></div></div></div></div><div class="gel-layout recipe-ingredient-list"><div class="gel-layout__item"><div class="recipe-ingredients-wrapper"><h2 class="recipe-ingredients__heading gel-double-pica">Ingredients</h2><ul class="recipe-ingredients__list"><li class="recipe-ingredients__list-item">170g/6oz <a href="/food/chorizo" class="recipe-ingredients__link">chorizo</a>, cut into thin slices</li><li class="recipe-ingredients__list-item">110g/4oz <a href="/food/pancetta" class="recipe-ingredients__link">pancetta</a>, cut into small dice</li><li class="recipe-ingredients__list-item">2 cloves <a href="/food/garlic" class="recipe-ingredients__link">garlic</a> finely chopped</li><li class="recipe-ingredients__list-item">1 large Spanish <a href="/food/onion" class="recipe-ingredients__link">onion</a>, finely diced</li><li class="recipe-ingredients__list-item">1 red pepper, diced</li><li class="recipe-ingredients__list-item">1 tsp soft <a href="/food/thyme" class="recipe-ingredients__link">thyme</a> leaves</li><li class="recipe-ingredients__list-item">¼ tsp dried red chilli flakes</li><li class="recipe-ingredients__list-item">570ml/1pint calasparra (Spanish short-grain) rice</li><li class="recipe-ingredients__list-item">1 tsp <a href="/food/paprika" class="recipe-ingredients__link">paprika</a></li><li class="recipe-ingredients__list-item">125ml/4fl oz dry <a href="/food/white_wine" class="recipe-ingredients__link">white wine</a></li><li class="recipe-ingredients__list-item">1.2 litres/2 pints <a href="/food/chicken_stock" class="recipe-ingredients__link">chicken stock</a>, heated with ¼ tsp saffron strands</li><li class="recipe-ingredients__list-item">8 <a href="/food/chicken" class="recipe-ingredients__link">chicken</a> thighs, each chopped in half and browned</li><li class="recipe-ingredients__list-item">18 small <a href="/food/clams" class="recipe-ingredients__link">clams</a>, cleaned</li><li class="recipe-ingredients__list-item">110g/4oz fresh or frozen <a href="/food/pea" class="recipe-ingredients__link">peas</a></li><li class="recipe-ingredients__list-item">4 large <a href="/food/tomato" class="recipe-ingredients__link">tomatoes</a>, de-seeded and diced</li><li class="recipe-ingredients__list-item">50ml/2fl oz good <a href="/food/olive_oil" class="recipe-ingredients__link">olive oil</a></li><li class="recipe-ingredients__list-item">1 head <a href="/food/garlic" class="recipe-ingredients__link">garlic</a>, cloves separated and peeled</li><li class="recipe-ingredients__list-item">12 jumbo raw <a href="/food/prawn" class="recipe-ingredients__link">prawns</a>, in shells</li><li class="recipe-ingredients__list-item">450g/1lb <a href="/food/squid" class="recipe-ingredients__link">squid</a>, cleaned and chopped into bite-sized pieces</li><li class="recipe-ingredients__list-item">5 tbsp chopped flatleaf <a href="/food/parsley" class="recipe-ingredients__link">parsley</a></li><li class="recipe-ingredients__list-item">Salt and freshly ground <a href="/food/black_pepper" class="recipe-ingredients__link">black pepper</a></li></ul></div></div></div><div class="gel-layout"><div class="recipe-quick-links gel-layout__item gel-1/1"><div class="recipe-quick-links-wrapper"><a href="#recipe-tips" class="recipe-quick-link recipe-quick-link--tips gel-long-primer"><span class="recipe-quick-link__icon"></span><span class="recipe-quick-link__text">Recipe tips</span></a><a href="#recipe-how-to-videos" class="recipe-quick-link recipe-quick-link--how-to-videos gel-long-primer"><span class="recipe-quick-link__icon"></span><span class="recipe-quick-link__text">How-to-videos</span></a></div></div></div><div class="gel-layout recipe-method-list"><div class="recipe-method gel-layout__item"><div class="recipe-method-wrapper"><h2 class="recipe-method__heading gel-double-pica">Method</h2><ol class="recipe-method__list"><li class="recipe-method__list-item"><p class="recipe-method__list-item-text">Heat half the olive oil in a paella dish or heavy-based saucepan. Add the chorizo and pancetta and fry until crisp. Add the garlic, onion and pepper and heat until softened. Add the thyme, chilli flakes and calasparra rice, and stir until all the grains of rice are nicely coated and glossy. Now add the paprika and dry white wine and when it is bubbling, pour in the hot chicken stock, add the chicken thighs and cook for 5-10 minutes.</p></li><li class="recipe-method__list-item"><p class="recipe-method__list-item-text">Now place the clams into the dish with the join facing down so that the edges open outwards. Sprinkle in the peas and chopped tomatoes and continue to cook gently for another 10 minutes.</p></li><li class="recipe-method__list-item"><p class="recipe-method__list-item-text">Meanwhile, heat the remaining oil with the garlic cloves in a separate pan and add the prawns. Fry quickly for a minute or two then add them to the paella. Now do the same with the squid and add them to the paella too.</p></li><li class="recipe-method__list-item"><p class="recipe-method__list-item-text">Scatter the chopped parsley over the paella and serve immediately.</p></li></ol></div></div></div><div id="recipe-tips" class="recipe-extra-information__wrapper gel-wrap"><div class="recipe-extra-information__item gel-layout"><div class="gel-layout__item gel-1/1"><span class="recipe-extra-information__icon recipe-extra-information__icon--tips"></span><h3 class="recipe-extra-information__title gel-great-primer-bold">Recipe Tips</h3><p class="recipe-extra-information__text gel-pica">If you don't have a pan large enough to hold all of the rice and paella ingredients, use two pans and divide the rice between them.</p></div></div></div><div id="recipe-how-to-videos" class="recipe-extra-information__wrapper gel-wrap"><div class="recipe-extra-information__item gel-layout"><div class="gel-layout__item gel-1/1"><span class="recipe-extra-information__icon recipe-extra-information__icon--how-to-videos"></span><h3 class="recipe-extra-information__title gel-great-primer-bold">How-to videos</h3><div class="recipe-how-to-videos gel-layout"><div class="gel-layout__item gel-1/1 gel-1/2@m"><div class="video-wrapper"><div class="responsive-image-container__16/9"><img alt="" src="https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg" srcSet="https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 160w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 208w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 280w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 320w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 448w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 506w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 608w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 832w, https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg 1600w"/></div><div class="video-wrapper__video"></div></div><a class="recipe-how-to-videos__link gel-pica-bold" href="/food/techniques/chopping_vegetables">Knife skills: how to finely chop</a></div><div class="gel-layout__item gel-1/1 gel-1/2@m"><div class="video-wrapper"><div class="responsive-image-container__16/9"><img alt="" src="https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg" srcSet="https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 160w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 208w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 280w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 320w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 448w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 506w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 608w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 832w, https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg 1600w"/></div><div class="video-wrapper__video"></div></div><a class="recipe-how-to-videos__link gel-pica-bold" href="/food/techniques/de-seeding_tomatoes">De-seeding tomatoes</a></div><div class="gel-layout__item gel-1/1 gel-1/2@m"><div class="video-wrapper"><div class="responsive-image-container__16/9"><img alt="" src="https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg" srcSet="https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 160w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 208w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 280w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 320w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 448w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 506w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 608w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 832w, https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg 1600w"/></div><div class="video-wrapper__video"></div></div><a class="recipe-how-to-videos__link gel-pica-bold" href="/food/techniques/cleaning_squid">How to clean and prepare squid</a></div></div></div></div></div></div><div class="grid-list-wrapper gel-layout__item gel-1/1 gel-1/3@l"><a class="seasonal-promo-block" href="/food/occasions/pancake_day" style="background-image:url(https://food-images.files.bbci.co.uk/food/timed_promos/pancakeday.jpg)"><div><p class="gel-double-pica-bold">Pancake Day</p><p class="gel-double-pica seasonal-promo-block__recipes">Recipes<!-- --> <span class="icon icon--next" aria-label="Next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><polygon points="26,16 0,0 0,7.2 14.6,16 0,24.8 0,32"></polygon></svg></span></p></div></a><div class="grid-list-panel--dark"><div class="grid-list-panel__item"><div class="related-recipes__content gel-wrap"><div class="related-recipes__item related-recipes__item--primary"><h2 class="related-recipes__header gel-great-primer">Related Recipes</h2><div class="related-recipes__about related-recipes__about--collection"><a href="/food/recipes/chorizoandbeanquesad_76375" class="related-recipes__image-link"><div class="related-recipes__image-container gel-1/1"><div class="responsive-image-container__16/9"><img alt="" class="related-recipes__image gel-1/1" data-class="related-recipes__image gel-1/1" data-src="https://ichef.bbci.co.uk/food/ic/food_16x9_{width}/recipes/chorizoandbeanquesad_76375_16x9.jpg"/></div></div></a><div class="related-recipes__information"><a href="/food/recipes/chorizoandbeanquesad_76375" class="related-recipes__title-link"><h3 class="related-recipes__title gel-pica-bold">Chorizo and bean quesadilla</h3></a><p class="related-recipes__author gel-long-primer"><strong>By</strong> <span class="related-recipes__author-name">Paul Rankin</span></p></div></div><p class="related-recipes__more gel-long-primer"><strong>See more</strong> <a href="/food/collections/cooking_with_chorizo" class="related-recipes__more-link"><span class="related-recipes__more-name">Cooking with chorizo</span> recipes<!-- --> <span class="related-recipes__more-amount">(22)</span></a></p></div><div class="related-recipes__item related-recipes__item--secondary"><div class="related-recipes__about related-recipes__about--dish"><a href="/food/recipes/marias_fideu_61565" class="related-recipes__image-link"><div class="related-recipes__image-container gel-1/2 gel-1/1@m gel-1/2@l"><div class="responsive-image-container__16/9"><img alt="" class="related-recipes__image gel-1/1" data-class="related-recipes__image gel-1/1" data-src="https://ichef.bbci.co.uk/food/ic/food_16x9_{width}/recipes/marias_fideu_61565_16x9.jpg"/></div></div></a><div class="related-recipes__information gel-1/2 gel-1/1@m gel-1/2@l"><a href="/food/recipes/marias_fideu_61565" class="related-recipes__title-link"><h3 class="related-recipes__title gel-pica-bold">Fideuà </h3></a><p class="related-recipes__author gel-long-primer"><strong>By</strong> <span class="related-recipes__author-name">Maria Grimwood</span></p></div></div><p class="related-recipes__more gel-long-primer"><strong>See more</strong> <a href="/food/paella" class="related-recipes__more-link"><span class="related-recipes__more-name">paella</span> recipes<!-- --> <span class="related-recipes__more-amount">(15)</span></a></p></div><div class="related-recipes__item related-recipes__item--secondary related-recipes__item--last"><div class="related-recipes__about related-recipes__about--ingredient"><a href="/food/recipes/griddledartichokeand_91479" class="related-recipes__image-link"><div class="related-recipes__image-container gel-1/2 gel-1/1@m gel-1/2@l"><div class="responsive-image-container__16/9"><img alt="" class="related-recipes__image gel-1/1" data-class="related-recipes__image gel-1/1" data-src="https://ichef.bbci.co.uk/food/ic/food_16x9_{width}/recipes/griddledartichokeand_91479_16x9.jpg"/></div></div></a><div class="related-recipes__information gel-1/2 gel-1/1@m gel-1/2@l"><a href="/food/recipes/griddledartichokeand_91479" class="related-recipes__title-link"><h3 class="related-recipes__title gel-pica-bold">Vegetarian paella</h3></a><p class="related-recipes__author gel-long-primer"><strong>By</strong> <span class="related-recipes__author-name">Simon Rimmer</span></p></div></div><p class="related-recipes__more gel-long-primer"><strong>See more</strong> <a href="/food/calasparra_rice" class="related-recipes__more-link"><span class="related-recipes__more-name">calasparra rice</span> recipes<!-- --> <span class="related-recipes__more-amount">(6)</span></a></p></div></div></div></div><div class="social-promo"><div class="social-promo-wrapper gel-layout"><div class="social-promo-twitter__wrapper gel-layout__item gel-1/1 gel-1/3@m"><a href="http://www.twitter.com/BBCFood" class="social-promo-twitter-link gel-long-primer-bold"><span class="social-promo-twitter-icon"></span><div class="social-promo-link-text">Follow <div class="social-promo-site-name">BBC Food</div></div></a></div><div class="social-promo-facebook__wrapper gel-layout__item gel-1/1 gel-1/3@m"><a href="http://www.facebook.com/bbcfood" class="social-promo-facebook-link gel-long-primer-bold"><span class="social-promo-facebook-icon"></span><div class="social-promo-link-text">Like <div class="social-promo-site-name">BBC Food</div></div></a></div><div class="social-promo-pinterest__wrapper gel-layout__item gel-1/1 gel-1/3@m"><a href="http://www.pinterest.com/bbcfood" class="social-promo-pinterest-link gel-long-primer-bold"><span class="social-promo-pinterest-icon"></span><div class="social-promo-link-text">Follow <div class="social-promo-site-name">BBC Food</div></div></a></div></div></div></div></div></div><div class="food-body__padding-bottom food-body__faqs-background"><div class="food-footer__wrap gel-wrap"><div class="gel-layout"><div class="gel-layout__item"><div class="gel-body-copy footer__faqs"><a href="/food/faqs" class="footer__faqs-link">FAQs</a><span> about BBC Food</span></div><h2 class="gel-body-copy footer__social-links__title">Find us here</h2><div class="footer__social-links__icon-list"><a class="footer__social-links__link" href="https://twitter.com/bbcfood" aria-label="Follow BBC Food on twitter"><span class="footer__social-links__icon twitter"></span></a><a class="footer__social-links__link" href="https://www.facebook.com/bbcfood" aria-label="Follow BBC Food on facebook"><span class="footer__social-links__icon facebook"></span></a><a class="footer__social-links__link" href="https://www.instagram.com/bbcfood" aria-label="Follow BBC Food on instagram"><span class="footer__social-links__icon instagram"></span></a><a class="footer__social-links__link" href="https://www.pinterest.co.uk/bbcfood" aria-label="Follow BBC Food on pinterest"><span class="footer__social-links__icon pinterest"></span></a></div></div></div></div></div></div></div></div><div></div><script type="application/ld+json">{"@context":"https://schema.org","@type":"Recipe","aggregateRating":{"ratingCount":1,"ratingValue":5},"author":{"@type":"Person","name":"Antony Worrall Thompson"},"cookTime":"PT30M","description":"An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.\r\n\r\nEach serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt.","image":["https://food-images.files.bbci.co.uk/food/recipes/paella_7100_16x9.jpg"],"keywords":"cooking with chorizo, perfect paella, mother's day, paella, Calasparra rice, dairy free, egg free, gluten free, healthy, winter, spring, autumn","name":"Paella","nutrition":{"calories":"660kcal","carbohydrateContent":"65g","fatContent":"20g","fiberContent":"3.5g","proteinContent":"51g","saturatedFatContent":"6g","sugarContent":"5g"},"prepTime":"PT1H","recipeCategory":"Main course","recipeCuisine":"Spanish","recipeIngredient":["170g/6oz chorizo, cut into thin slices","110g/4oz pancetta, cut into small dice","2 cloves garlic finely chopped","1 large Spanish onion, finely diced","1 red pepper, diced","1 tsp soft thyme leaves","¼ tsp dried red chilli flakes","570ml/1pint calasparra (Spanish short-grain) rice","1 tsp paprika","125ml/4fl oz dry white wine","1.2 litres/2 pints chicken stock, heated with ¼ tsp saffron strands","8 chicken thighs, each chopped in half and browned","18 small clams, cleaned","110g/4oz fresh or frozen peas","4 large tomatoes, de-seeded and diced","50ml/2fl oz good olive oil","1 head garlic, cloves separated and peeled","12 jumbo raw prawns, in shells","450g/1lb squid, cleaned and chopped into bite-sized pieces","5 tbsp chopped flatleaf parsley","Salt and freshly ground black pepper"],"recipeInstructions":["Heat half the olive oil in a paella dish or heavy-based saucepan. Add the chorizo and pancetta and fry until crisp. Add the garlic, onion and pepper and heat until softened. Add the thyme, chilli flakes and calasparra rice, and stir until all the grains of rice are nicely coated and glossy. Now add the paprika and dry white wine and when it is bubbling, pour in the hot chicken stock, add the chicken thighs and cook for 5-10 minutes.","Now place the clams into the dish with the join facing down so that the edges open outwards. Sprinkle in the peas and chopped tomatoes and continue to cook gently for another 10 minutes.","Meanwhile, heat the remaining oil with the garlic cloves in a separate pan and add the prawns. Fry quickly for a minute or two then add them to the paella. Now do the same with the squid and add them to the paella too.","Scatter the chopped parsley over the paella and serve immediately."],"recipeYield":"Serves 8","suitableForDiet":["http://schema.org/LowLactoseDiet","http://schema.org/GlutenFreeDiet","http://schema.org/LowCalorieDiet"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://www.bbc.com/food","potentialAction":[{"@type":"SearchAction","target":"https://www.bbc.com/food/recipes/search?keywords={query}","query-input":"required name=query"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","description":"Make sure to take care of your fingers and thumbs when learning to finely chop.","duration":"PT1M23S","name":"Knife skills: how to finely chop","thumbnailUrl":["https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg"],"uploadDate":"2014-10-03T14:49:33.000Z"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","description":"Three ways to de-seed tomatoes.","duration":"PT1M4S","name":"De-seeding tomatoes","thumbnailUrl":["https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg"],"uploadDate":"2014-10-03T13:44:37.000Z"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","description":"How to clean and prepare a squid.","duration":"PT2M56S","name":"How to clean and prepare squid","thumbnailUrl":["https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg"],"uploadDate":"2014-10-06T08:55:16.000Z"}</script></div>
         
-            <p class="recipe-metadata__prep-time" itemprop="prepTime" content="PT1H">30 mins to 1 hour</p>
-        
-    </div>
-
-
-
-    <div class="recipe-metadata-wrap">
-        <p class="recipe-metadata__heading">Cooking time</p>
-        
-            <p class="recipe-metadata__cook-time" itemprop="cookTime" content="PT30M">10 to 30 mins</p>
-        
-    </div>
-
-
-
-    <div class="recipe-metadata-wrap">
-        <p class="recipe-metadata__heading">Serves</p>
-        <p class="recipe-metadata__serving" itemprop="recipeYield">Serves 8</p>
-    </div>
-
-
-
-
-                    </div>
-
-                    
-                        <div class="recipe-description">
-                            <p class="recipe-description__text" itemprop="description">
-    An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.<br/><br/>Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt.
-</p>
-
-                        </div>
-                    
-
-                    
-                        <div class="recipe-chef">
-                            
-<div class="chef">
-    
-    <a class="chef__image-link" href="/food/chefs/antony_worrall_thompson" itemprop="author" title="Antony Worrall Thompson">
-        <img class="chef__image" src="http://ichef.bbci.co.uk/food/ic/food_1x1_72/chefs/antony_worrall_thompson_1x1.jpg" alt=""/>
-    </a>
-    
-    <div class="chef__about">
-        <div class="chef__name">
-            <span class="chef__preposition">By</span> <a class="chef__link" href="/food/chefs/antony_worrall_thompson" itemprop="author">Antony Worrall Thompson</a>
-        </div>
-    
-    </div>
-</div>
-
-
-                        </div>
-                    
-
-                    <div class="recipe-actions">
-                        
-<div class="recipe-actions-wrap recipe-actions-wrap--js-only" id="add-to-favourites-btn-container">
-    <p class="my-favourites-recipes__start-adding recipe-actions-text--button">
-        <button name="favouritesLink" type="button" class="recipe-actions-link__button" id="add-to-favourites-button" title="Paella">
-            <span name="favouritesLinkIcon" class="recipe-actions__adding-favourites-icon"></span>&nbsp;
-        </button>
-    </p>
-    <p class="my-favourites-recipes__start-adding--error">
-        Unfortunately we are unable to add this recipe to your favourites, please try again later.
-    </p>
-</div>
-
-
-<div class="recipe-actions-wrap">
-    <p class="my-favourites-recipes__start-adding">
-        <a class="recipe-actions-link" id="send-to-mobile-link"
-           href="/food/recipes/paella_7100/share">
-            <span class="recipe-actions__send-to-mobile-icon"></span>Send to mobile
-        </a>
-    </p>
-</div>
-
-<div class="recipe-actions-wrap">
-    <p class="my-favourites-recipes__start-adding">
-        <a class="recipe-actions-link" id="shopping-list-link"
-           href="/food/recipes/paella_7100/shopping-list">
-            <span class="recipe-actions__shopping-list-icon"></span>Shopping list
-        </a>
-    </p>
-</div>
-
-<div class="recipe-actions-wrap--js-only">
-    <p class="my-favourites-recipes__start-adding">
-        <a class="recipe-actions-link" id="print-link"
-           href="javascript:window.print()">
-            <span class="recipe-actions__print-link-icon"></span>Print recipe
-        </a>
-    </p>
-</div>
-
-                    </div>
-                </div>
-
-                <div class="recipe-ingredients">
-                    <div class="recipe-ingredients-wrapper">
-    <h2 class="recipe-ingredients__heading">Ingredients</h2>
-
-
-    
-    <ul class="recipe-ingredients__list">
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 170g/6oz <a href="/food/chorizo" class="recipe-ingredients__link">chorizo</a>, cut into thin slices</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 110g/4oz <a href="/food/pancetta" class="recipe-ingredients__link">pancetta</a>, cut into small dice</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 2 cloves <a href="/food/garlic" class="recipe-ingredients__link">garlic</a> finely chopped</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 1 large Spanish <a href="/food/onion" class="recipe-ingredients__link">onion</a>, finely diced</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 1 red pepper, diced</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 1 tsp soft <a href="/food/thyme" class="recipe-ingredients__link">thyme</a> leaves</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> ¼ tsp dried red chilli flakes</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 570ml/1pint calasparra (Spanish short-grain) rice</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 1 tsp <a href="/food/paprika" class="recipe-ingredients__link">paprika</a></li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 125ml/4fl oz dry <a href="/food/white_wine" class="recipe-ingredients__link">white wine</a></li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 1.2 litres/2 pints <a href="/food/chicken_stock" class="recipe-ingredients__link">chicken stock</a>, heated with ¼ tsp saffron strands</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 8 <a href="/food/chicken" class="recipe-ingredients__link">chicken</a> thighs, each chopped in half and browned</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 18 small <a href="/food/clams" class="recipe-ingredients__link">clams</a>, cleaned</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 110g/4oz fresh or frozen <a href="/food/pea" class="recipe-ingredients__link">peas</a></li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 4 large <a href="/food/tomato" class="recipe-ingredients__link">tomatoes</a>, de-seeded and diced</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 50ml/2fl oz good <a href="/food/olive_oil" class="recipe-ingredients__link">olive oil</a></li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 1 head <a href="/food/garlic" class="recipe-ingredients__link">garlic</a>, cloves separated and peeled</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 12 jumbo raw <a href="/food/prawn" class="recipe-ingredients__link">prawns</a>, in shells</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 450g/1lb <a href="/food/squid" class="recipe-ingredients__link">squid</a>, cleaned and chopped into bite-sized pieces</li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> 5 tbsp chopped flatleaf <a href="/food/parsley" class="recipe-ingredients__link">parsley</a></li>
-    
-        <li class="recipe-ingredients__list-item" itemprop="ingredients"> Salt and freshly ground <a href="/food/black_pepper" class="recipe-ingredients__link">black pepper</a></li>
-    
-    </ul>
-
-</div>
-
-                </div>
-
-                
-                    <div class="recipe-quick-links">
-                <div class="recipe-quick-links-wrapper">
-    
-        <a href="#recipe-tips" class="recipe-quick-link recipe-quick-link--tips">
-            <span class="recipe-quick-link__icon"></span>
-            <span class="recipe-quick-link__text">Recipe tips</span>
-        </a>
-    
-
-    
-
-    
-</div>
-
-                    </div>
-                
-
-                <div class="recipe-method ">
-                    <div class="recipe-method-wrapper">
-    <h2 class="recipe-method__heading">Method</h2>
-
-    <ol class="recipe-method__list">
-        
-            <li class="recipe-method__list-item" itemprop="recipeInstructions">
-                <p class="recipe-method__list-item-text">Heat half the olive oil in a paella dish or heavy-based saucepan. Add the chorizo and pancetta and fry until crisp. Add the garlic, onion and pepper and heat until softened. Add the thyme, chilli flakes and calasparra rice, and stir until all the grains of rice are nicely coated and glossy. Now add the paprika and dry white wine and when it is bubbling, pour in the hot chicken stock, add the chicken thighs and cook for 5-10 minutes.</p>
-            </li>
-        
-            <li class="recipe-method__list-item" itemprop="recipeInstructions">
-                <p class="recipe-method__list-item-text">Now place the clams into the dish with the join facing down so that the edges open outwards. Sprinkle in the peas and chopped tomatoes and continue to cook gently for another 10 minutes.</p>
-            </li>
-        
-            <li class="recipe-method__list-item" itemprop="recipeInstructions">
-                <p class="recipe-method__list-item-text">Meanwhile, heat the remaining oil with the garlic cloves in a separate pan and add the prawns. Fry quickly for a minute or two then add them to the paella. Now do the same with the squid and add them to the paella too.</p>
-            </li>
-        
-            <li class="recipe-method__list-item" itemprop="recipeInstructions">
-                <p class="recipe-method__list-item-text">Scatter the chopped parsley over the paella and serve immediately.</p>
-            </li>
-        
-    </ol>
-</div>
-
-
-                </div>
-
-                
-                <div class="recipe-extra-information__wrapper">
-                    <div class="recipe-extra-information__item">
-                        <div id="recipe-tips" class ="recipe-tips-wrapper">
-    <h3 class="recipe-tips__sub-heading">Recipe Tips</h3>
-    <span class="recipe-tips__icon"></span>
-    <p class="recipe-tips__text">
-        If you don't have a pan large enough to hold all of the rice and paella ingredients, use two pans and divide the rice between them.
-    </p>
-</div>
-
-                    </div>
-                </div>
-                
-
-                
-
-                
-            </div>
-
-            <div class="grid-list-wrapper">
-                <div class="grid-list-finder-panel">
-                    <div class="grid-list-panel__item">
-                        <div class="recipe-finder">
-                            
-                            
-<form method="POST" action="http://www.bbc.co.uk/food/recipes/search" class="recipe-finder__search-form">
-    <label for="searchInput-large" class="recipe-finder__search-box-label">
-        Find a recipe on BBC Food
-    </label>
-    <input type="text" placeholder="Find a recipe on BBC Food" name="keywords" class="recipe-finder__search-box" id="searchInput-large">
-    <div class="recipe-finder__seach-options">
-        <input type="checkbox" class="recipe-finder__q-e-checkbox" name="quickAndEasy" value="true" id="quickAndEasy-large">
-        <label for="quickAndEasy-large" class="recipe-finder__q-e-label">
-            <span class="recipe-finder__q-e-span">
-            </span>
-             Quick & Easy
-        </label>
-        <input type="checkbox" class="recipe-finder__veg-checkbox" name="diets[]" value="vegetarian" id="vegetarian-large">
-        <label for="vegetarian-large" class="recipe-finder__veg-label">
-            <span class="recipe-finder__veg-span">
-            </span>
-             Vegetarian
-        </label>
-        <label for="recipe-finder-search-button" class="recipe-finder__search-button-label">
-            Search BBC Food's recipes
-        </label>
-        <input type="submit" class="recipe-finder__search-button" value="" id="recipe-finder-search-button">
-    </div>
-</form>
-
-
-
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                
-                <div class="grid-list-panel--dark">
-                    <div class="grid-list-panel__item">
-                        <div class="related-recipes__content">
-
-    
-
-        
-            <div class="related-recipes__item related-recipes__item--primary ">
-                <h2 class="related-recipes__header">Related Recipes</h2>
-        
-
-            <div class="related-recipes__about related-recipes__about--collection">
-                
-                <a href="/food/recipes/beachside_paella_41859" class="related-recipes__image-link">
-                    <img src="http://ichef.bbci.co.uk/food/ic/food_16x9_160/recipes/beachside_paella_41859_16x9.jpg" alt="Beachside paella" class="related-recipes__image responsive-images"
-                    data-image-recipe="http://ichef.bbci.co.uk/food/ic/$recipe/recipes/beachside_paella_41859_16x9.jpg" />
-                </a>
-                
-                <div class="related-recipes__information">
-                    <a href="/food/recipes/beachside_paella_41859" class="related-recipes__title-link">
-                        <h3 class="related-recipes__title">Beachside paella</h3>
-                    </a>
-                    <p class="related-recipes__author">
-                        <strong>By</strong>
-                        <span class="related-recipes__author-name">The Hairy Bikers</span>
-                    </p>
-                </div>
-            </div>
-            <p class="related-recipes__more">
-                <strong>See more</strong>
-                <a href="/food/collections/perfect_paella"
-                   class="related-recipes__more-link">
-                    <span class="related-recipes__more-name">Perfect paella</span>
-                    
-                        recipes
-                    
-                    <span class="related-recipes__more-amount">(5)</span>
-                </a>
-            </p>
-        </div>
-
-    
-
-        
-            <div class="related-recipes__item related-recipes__item--secondary related-recipes__item--secondary--image ">
-        
-
-            <div class="related-recipes__about related-recipes__about--ingredient">
-                
-                <a href="/food/recipes/arroz_verde_49624" class="related-recipes__image-link">
-                    <img src="http://ichef.bbci.co.uk/food/ic/food_16x9_160/recipes/arroz_verde_49624_16x9.jpg" alt="Arroz verde" class="related-recipes__image responsive-images"
-                    data-image-recipe="http://ichef.bbci.co.uk/food/ic/$recipe/recipes/arroz_verde_49624_16x9.jpg" />
-                </a>
-                
-                <div class="related-recipes__information">
-                    <a href="/food/recipes/arroz_verde_49624" class="related-recipes__title-link">
-                        <h3 class="related-recipes__title">Arroz verde</h3>
-                    </a>
-                    <p class="related-recipes__author">
-                        <strong>By</strong>
-                        <span class="related-recipes__author-name">Rick Stein</span>
-                    </p>
-                </div>
-            </div>
-            <p class="related-recipes__more">
-                <strong>See more</strong>
-                <a href="/food/calasparra_rice"
-                   class="related-recipes__more-link">
-                    <span class="related-recipes__more-name">calasparra rice</span>
-                    
-                        recipes
-                    
-                    <span class="related-recipes__more-amount">(3)</span>
-                </a>
-            </p>
-        </div>
-
-    
-
-        
-            <div class="related-recipes__item related-recipes__item--secondary related-recipes__item--secondary--image related-recipes__item--last">
-        
-
-            <div class="related-recipes__about related-recipes__about--dish">
-                
-                <a href="/food/recipes/rice_with_clams_prawns_49946" class="related-recipes__image-link">
-                    <img src="http://ichef.bbci.co.uk/food/ic/food_16x9_160/recipes/rice_with_clams_prawns_49946_16x9.jpg" alt="Rice with clams, prawns and aioli" class="related-recipes__image responsive-images"
-                    data-image-recipe="http://ichef.bbci.co.uk/food/ic/$recipe/recipes/rice_with_clams_prawns_49946_16x9.jpg" />
-                </a>
-                
-                <div class="related-recipes__information">
-                    <a href="/food/recipes/rice_with_clams_prawns_49946" class="related-recipes__title-link">
-                        <h3 class="related-recipes__title">Rice with clams, prawns and aioli</h3>
-                    </a>
-                    <p class="related-recipes__author">
-                        <strong>By</strong>
-                        <span class="related-recipes__author-name">Rick Stein</span>
-                    </p>
-                </div>
-            </div>
-            <p class="related-recipes__more">
-                <strong>See more</strong>
-                <a href="/food/paella"
-                   class="related-recipes__more-link">
-                    <span class="related-recipes__more-name">paella</span>
-                    
-                        recipes
-                    
-                    <span class="related-recipes__more-amount">(17)</span>
-                </a>
-            </p>
-        </div>
-
-    
-
-</div>
-
-                    </div>
-                </div>
-                
-
-                
-
-                
-                <div class="social-promo">
-                    <div class="social-promo-wrapper">
-    <div class="social-promo-twitter__wrapper">
-        <a href="http://www.twitter.com/BBCFood" class="social-promo-twitter-link">
-            <span class="social-promo-twitter-icon"></span>
-            <div class="social-promo-link-text">
-                Follow
-                <div class="social-promo-site-name">BBC Food</div>
-            </div>
-        </a>
-    </div>
-
-    <div class="social-promo-facebook__wrapper">
-        <a href="http://www.facebook.com/bbcfood" class="social-promo-facebook-link">
-            <span class="social-promo-facebook-icon"></span>
-            <div class="social-promo-link-text">
-                Like
-                <div class="social-promo-site-name">BBC Food</div>
-            </div>
-        </a>
-    </div>
-    <div class="social-promo-pinterest__wrapper">
-        <a href="http://www.pinterest.com/bbcfood" class="social-promo-pinterest-link">
-            <span class="social-promo-pinterest-icon"></span>
-            <div class="social-promo-link-text">
-                Follow
-                <div class="social-promo-site-name">BBC Food</div>
-            </div>
-        </a>
-    </div>
-</div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="recipe-finder__wrap" id="recipe-finder__box">
-        <div class="recipe-layout">
-            <div class="recipe-finder">
-                
-                
-<form method="POST" action="http://www.bbc.co.uk/food/recipes/search" class="recipe-finder__search-form">
-    <label for="searchInput-small" class="recipe-finder__search-box-label">
-        Find a recipe on BBC Food
-    </label>
-    <input type="text" placeholder="Find a recipe on BBC Food" name="keywords" class="recipe-finder__search-box" id="searchInput-small">
-    <div class="recipe-finder__seach-options">
-        <input type="checkbox" class="recipe-finder__q-e-checkbox" name="quickAndEasy" value="true" id="quickAndEasy-small">
-        <label for="quickAndEasy-small" class="recipe-finder__q-e-label">
-            <span class="recipe-finder__q-e-span">
-            </span>
-             Quick & Easy
-        </label>
-        <input type="checkbox" class="recipe-finder__veg-checkbox" name="diets[]" value="vegetarian" id="vegetarian-small">
-        <label for="vegetarian-small" class="recipe-finder__veg-label">
-            <span class="recipe-finder__veg-span">
-            </span>
-             Vegetarian
-        </label>
-        <label for="recipe-finder-search-button" class="recipe-finder__search-button-label">
-            Search BBC Food's recipes
-        </label>
-        <input type="submit" class="recipe-finder__search-button" value="" id="recipe-finder-search-button">
-    </div>
-</form>
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-                </div>
-            </div>
-        </div>
-
-        </div>
-<div id="orb-footer" class="orb-footer" dir="ltr"><div id="navp-orb-footer-promo"></div><aside role="complementary"><div id="orb-aside" class="orb-nav-sec b-r b-g-p"><div class="orb-footer-inner" role="navigation" aria-label="BBC"><h2 class="orb-footer-lead">Explore the BBC</h2><div class="orb-footer-primary-links"><ul><li class="orb-nav-home"><a href="http://www.bbc.co.uk/">Home</a></li><li class="orb-nav-news"><a href="http://www.bbc.co.uk/news">News</a></li><li class="orb-nav-sport"><a href="http://www.bbc.co.uk/sport">Sport</a></li><li class="orb-nav-weather"><a href="http://www.bbc.co.uk/weather">Weather</a></li><li class="orb-nav-iplayer"><a href="http://www.bbc.co.uk/iplayer">iPlayer</a></li><li class="orb-nav-tv"><a href="http://www.bbc.co.uk/tv">TV</a></li><li class="orb-nav-radio"><a href="http://www.bbc.co.uk/radio">Radio</a></li><li class="orb-nav-cbbc"><a href="http://www.bbc.co.uk/cbbc">CBBC</a></li><li class="orb-nav-cbeebies"><a href="http://www.bbc.co.uk/cbeebies">CBeebies</a></li><li class="orb-nav-food"><a href="http://www.bbc.co.uk/food">Food</a></li><li class="orb-nav-bitesize"><a href="http://www.bbc.co.uk/education">Bitesize</a></li><li class="orb-nav-music"><a href="http://www.bbc.co.uk/music">Music</a></li><li class="orb-nav-earth"><a href="http://www.bbc.com/earth">Earth</a></li><li class="orb-nav-arts"><a href="http://www.bbc.co.uk/arts">Arts</a></li><li class="orb-nav-digital"><a href="http://www.bbc.co.uk/makeitdigital">Make It Digital</a></li><li class="orb-nav-taster"><a href="http://www.bbc.co.uk/taster">Taster</a></li><li class="orb-nav-local"><a href="http://www.bbc.co.uk/local">Local</a></li></ul></div></div></div></aside><footer role="contentinfo"><div id="orb-contentinfo" class="orb-nav-sec b-r b-g-p"><script>window.orb.worldwideFooterlinks = '<li class="orb-footer-ads"><a href="https://advertising.bbcworldwide.com/">Advertise with us<'+'/a><'+'/li><li class="orb-footer-adchoices"><a href="http://www.bbc.com/usingthebbc/cookies/what-is-online-behavioural-advertising/">Ad choices<'+'/a><'+'/li>';</script><div class="orb-footer-inner"><ul><li class="orb-footer-terms"><a href="http://www.bbc.co.uk/usingthebbc/terms/">Terms of Use</a></li><li class="orb-footer-about"><a href="http://www.bbc.co.uk/aboutthebbc">About the BBC</a></li><li class="orb-footer-privacy"><a href="http://www.bbc.co.uk/usingthebbc/privacy/">Privacy Policy</a></li><li class="orb-footer-cookies"><a href="http://www.bbc.co.uk/usingthebbc/cookies/">Cookies</a></li><li class="orb-footer-accessibility"><a href="http://www.bbc.co.uk/accessibility/">Accessibility Help</a></li><li class="orb-footer-parental"><a href="http://www.bbc.co.uk/guidance">Parental Guidance</a></li><li class="orb-footer-contact"><a href="http://www.bbc.co.uk/contact">Contact the BBC</a></li></ul><small><em class="orb-hilight">Copyright &copy; 2017 BBC.</em> The BBC is not responsible for the content of external sites. <span class="orb-footer-links"><a href="http://www.bbc.co.uk/help/web/links/" class="orb-hilight">Read about our approach to external linking.</a></span></small></div></div></footer></div><script id="orb-js-script" data-assetpath="https://nav.files.bbci.co.uk/orbit/1.0.0-494.b5fc4d4/" src="https://nav.files.bbci.co.uk/orbit/1.0.0-494.b5fc4d4/js/orb.min.js"></script><script type="text/javascript">require(['orb/lib/_$'], function($) {
+          </div>
+<div id="orb-footer" class="orb-footer" dir="ltr"><div id="navp-orb-footer-promo"></div><aside role="complementary"><div id="orb-aside" class="orb-nav-sec b-r b-g-p"><div class="orb-footer-inner" role="navigation" aria-label="BBC"><h2 class="orb-footer-lead">Explore the BBC</h2><div class="orb-footer-primary-links"><ul><li class="orb-nav-home"><a href="https://www.bbc.co.uk">Home</a></li><li class="orb-nav-news"><a href="https://www.bbc.co.uk/news">News</a></li><li class="orb-nav-sport"><a href="https://www.bbc.co.uk/sport">Sport</a></li><li class="orb-nav-weather"><a href="https://www.bbc.co.uk/weather">Weather</a></li><li class="orb-nav-iplayer"><a href="https://www.bbc.co.uk/iplayer">iPlayer</a></li><li class="orb-nav-sounds"><a href="https://www.bbc.co.uk/sounds">Sounds</a></li><li class="orb-nav-cbbc"><a href="https://www.bbc.co.uk/cbbc">CBBC</a></li><li class="orb-nav-cbeebies"><a href="https://www.bbc.co.uk/cbeebies">CBeebies</a></li><li class="orb-nav-food"><a href="https://www.bbc.com/food">Food</a></li><li class="orb-nav-bitesize"><a href="https://www.bbc.com/bitesize">Bitesize</a></li><li class="orb-nav-earth"><a href="https://www.bbc.com/earth">Earth</a></li><li class="orb-nav-arts"><a href="https://www.bbc.co.uk/arts">Arts</a></li><li class="orb-nav-digital"><a href="https://www.bbc.co.uk/makeitdigital">Make It Digital</a></li><li class="orb-nav-taster"><a href="https://www.bbc.co.uk/taster">Taster</a></li><li class="orb-nav-local"><a href="https://www.bbc.co.uk/news/localnews">Local</a></li><li class="orb-nav-tomorrowsworld"><a href="https://www.bbc.co.uk/tomorrowsworld">Tomorrow&#x27;s World</a></li><li class="orb-nav-tv"><a href="https://www.bbc.co.uk/tv">TV</a></li><li class="orb-nav-radio"><a href="https://www.bbc.co.uk/radio">Radio</a></li></ul></div></div></div></aside><footer role="contentinfo"><div id="orb-contentinfo" class="orb-nav-sec b-r b-g-p"><script>window.orb.worldwideFooterlinks = '<li class="orb-footer-ads"><a href="https://advertising.bbcworldwide.com/">Advertise with us<'+'/a><'+'/li><li class="orb-footer-adchoices"><a href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/">Ad choices<'+'/a><'+'/li>';</script><div class="orb-footer-inner"> <ul><li class="orb-footer-terms"><a href="https://www.bbc.co.uk/usingthebbc/terms/">Terms of Use</a></li><li class="orb-footer-about"><a href="https://www.bbc.co.uk/aboutthebbc">About the BBC</a></li><li class="orb-footer-privacy"><a href="https://www.bbc.co.uk/usingthebbc/privacy/">Privacy Policy</a></li><li class="orb-footer-cookies"><a href="https://www.bbc.co.uk/usingthebbc/cookies/">Cookies</a></li><li class="orb-footer-accessibility"><a href="https://www.bbc.co.uk/accessibility/">Accessibility Help</a></li><li class="orb-footer-parental"><a href="https://www.bbc.co.uk/guidance">Parental Guidance</a></li><li class="orb-footer-contact"><a href="https://www.bbc.co.uk/contact">Contact the BBC</a></li><li class="orb-footer-newsletter"><a href="https://www.bbc.co.uk/bbcnewsletter">Get Personalised Newsletters</a></li></ul><small><em class="orb-hilight">Copyright &copy; 2019 BBC.</em> The BBC is not responsible for the content of external sites. <span class="orb-footer-links"><a href="https://www.bbc.co.uk/help/web/links/" class="orb-hilight">Read about our approach to external linking.</a></span></small></div></div></div></footer></div><script id="orb-js-script" data-assetpath="https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/" src="https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/js/orb.min.js"></script> <script type="text/javascript">require(['orb/lib/_$'], function($) {
         $.ready(function() {
             initialiseFooter();
         });
@@ -847,88 +553,66 @@ Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars
         }
 
     })</script><script type="text/javascript">/*<![CDATA[*/
-        require(['orb/fig', 'orb/nav'], function(fig, nav) {
-            fig.load(function(fig) {
-                if (fig.geo.isUK()) {
-                    nav.loadJs('https://nav.files.bbci.co.uk/orbit/1.0.0-494.b5fc4d4/js/edr.min.js');
-                }
-            });
-        });
-    /*]]>*/</script><script type="text/javascript">require(["megavolt-client","istats-1","orb/cookies"],function(t,e,i){function o(){return"true"===l&&s&&t&&"function"==typeof t.addMVTIStatsLabels}function n(){!c&&o()?setTimeout(function(){e.invoke()},"1000"):e.invoke()}var a=navigator.userAgent.toLowerCase(),s=!(a.indexOf("msie")>-1)||parseInt(a.split("msie")[1],10)>10,c=!1,l="false";if(i.isAllowed("s1"))try{if(o()&&t.addMVTIStatsLabels(function(t){e.addLabels(t),c=!0}),!require.s.contexts._.config.paths.idcta)return void n();require(["idcta/idcta-1"],function(t){t&&"function"==typeof t.getIStatsLabels&&e.addLabels(t.getIStatsLabels()),n()},function(t){throw t})}catch(t){console&&"function"==typeof console.log&&console.log("an exception occurred while adding idcta labels to istats, invoking istats without them",t),n()}});</script><script type="text/javascript">require.config({
+                require(['orb/fig', 'orb/nav'], function(fig, nav) {
+                    fig.load(function(fig) {
+                        if (fig.geo.isUK()) {
+                            nav.loadJs('https://nav.files.bbci.co.uk/orbit/2.0.0-516.0013ebc/js/edr.min.js');
+                        }
+                    });
+                });
+            /*]]>*/</script><script type="text/javascript">require.config({
             paths: {
-                "mybbc/templates": '//mybbc.files.bbci.co.uk/notification-ui/3.8.1/templates',
-                "mybbc/notifications": '//mybbc.files.bbci.co.uk/notification-ui/3.8.1/js'
+                "mybbc/templates": '//mybbc.files.bbci.co.uk/notification-ui/3.9.8/templates',
+                "mybbc/notifications": '//mybbc.files.bbci.co.uk/notification-ui/3.9.8/js'
             }
         });
 
         require(['mybbc/notifications/NotificationsMain', 'idcta/idcta-1'], function (NotificationsMain, idcta) {
-            var loadNotifications = function (fig) {
-                if (fig.geo.isUK()) {
-                    NotificationsMain.run(idcta, '//mybbc.files.bbci.co.uk/notification-ui/3.8.1/');
+
+            var loadNotifications = function (isUK) {
+                if (isUK) {
+                    window.bbcpage.loadCSS('//mybbc.files.bbci.co.uk/notification-ui/3.9.8/css/main.min.css').then(function() {
+                        NotificationsMain.run(idcta, '//mybbc.files.bbci.co.uk/notification-ui/3.9.8/');
+                    });
                 }
             };
-            var orbFig = window.orb.fig;
-            if (typeof orbFig.load === 'function') {
-                // Use new async API from Orbit
-                orbFig.load(loadNotifications, loadNotifications);
+            
+            if (window.bbcuser && window.bbcuser.isUKCombined && typeof(window.bbcuser.isUKCombined) === 'function') {
+                // Use new API from Orbit if available
+                window.bbcuser.isUKCombined().then(function(isUK) {
+                    loadNotifications(isUK);  
+                });
             } else {
-                // Use old sync-only API from PAL orbfig project
-                loadNotifications(orbFig);
+                // Fallback to fig (ORB support)
+                var orbFig = window.orb.fig;
+                loadNotifications(orbFig.geo.isUK());
             }
-        });</script><script type="text/javascript">if( window.SEARCHBOX.suppress === false && window.SEARCHBOX.locale && /^en-?.*?/.test(window.SEARCHBOX.locale) ){
-   require.config({
-     paths: {
-       "search/searchbox": window.SEARCHBOX.searchboxAppStaticPrefix
-     }
-   });
-
-   require(['search/searchbox/searchboxDrawer'], function(SearchboxDrawer) {
-     SearchboxDrawer.run(window.SEARCHBOX);
-   });
- }</script><!-- BBCDOTCOM bodyLast --><div class="bbccom_display_none"><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && window.bbcdotcom.analytics && bbcdotcom.config && !bbcdotcom.config.isSportApp()) { bbcdotcom.analytics.page(); } /*]]>*/</script><noscript><img src="//ssc.api.bbc.com/?c1=2&c2=19293874&ns_site=bbc&name=" height="1" width="1" alt=""></noscript><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.currencyProviders) { bbcdotcom.currencyProviders.write(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.currencyProviders) { bbcdotcom.currencyProviders.postWrite(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.stats && bbcdotcom.data.stats === 1 && bbcdotcom.utils && window.location.pathname === '/' && window.bbccookies && bbccookies.readPolicy('performance') ) { var wwhpEdition = bbcdotcom.utils.getMetaPropertyContent('wwhp-edition'); var _sf_async_config={}; /** CONFIGURATION START **/ _sf_async_config.uid = 50924; _sf_async_config.domain = "bbc.co.uk"; _sf_async_config.title = "Homepage"+(wwhpEdition !== '' ? ' - '+wwhpEdition : ''); _sf_async_config.sections = "Homepage"+(wwhpEdition !== '' ? ', Homepage - '+wwhpEdition : ''); _sf_async_config.region = wwhpEdition; _sf_async_config.path = "/"+(wwhpEdition !== '' ? '?'+wwhpEdition : ''); /** CONFIGURATION END **/ (function(){ function loadChartbeat() { window._sf_endpt=(new Date()).getTime(); var e = document.createElement("script"); e.setAttribute("language", "javascript"); e.setAttribute("type", "text/javascript"); e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js'); document.body.appendChild(e); } var oldonload = window.onload; window.onload = (typeof window.onload != "function") ? loadChartbeat : function() { oldonload(); loadChartbeat(); }; })(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function() { window.bbcdotcom.bodyLast = true; }()); /*]]>*/</script></div><!-- BBCDOTCOM all code in page -->
-
-        <script src="http://food.files.bbci.co.uk/kandl-food/1294-1.el6/javascript/foodPage.js"></script>
-        <script>
-            require(['foodPage'], function (F) {
-                var foodPage = new F({cssAnimationsOff: false});
-                foodPage.init();
-                
-    foodPage.addToFavouritesButton.initialise({
-        "recipeId": "paella_7100",
-        "signInUrl": "https://session.bbc.co.uk/session?ptrt=http%3A%2F%2Fwww.bbc.co.uk%2Ffood%2Frecipes%2Fpaella_7100",
-        "foodFavouritesBaseUrl": "https://ssl.bbc.co.uk/food/favourites/"
+        });</script><!-- BBCDOTCOM bodyLast --><div class="bbccom_display_none"><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && window.bbcdotcom.analytics && bbcdotcom.config && !bbcdotcom.config.isSportApp() && !bbcdotcom.config.isReel()) { bbcdotcom.analytics.page(); } /*]]>*/</script><noscript><img src="//ssc.api.bbc.com/?c1=2&c2=19293874&ns_site=bbc&name=" height="1" width="1" alt=""></noscript><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.currencyProviders) { bbcdotcom.currencyProviders.write(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.currencyProviders) { bbcdotcom.currencyProviders.postWrite(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.stats && bbcdotcom.data.stats === 1 && bbcdotcom.utils && window.location.pathname === '/' && window.bbccookies && bbccookies.readPolicy('performance') ) { var wwhpEdition = bbcdotcom.utils.getMetaPropertyContent('wwhp-edition'); var _sf_async_config={}; /** CONFIGURATION START **/ _sf_async_config.uid = 50924; _sf_async_config.domain = "bbc.co.uk"; _sf_async_config.title = "Homepage"+(wwhpEdition !== '' ? ' - '+wwhpEdition : ''); _sf_async_config.sections = "Homepage"+(wwhpEdition !== '' ? ', Homepage - '+wwhpEdition : ''); _sf_async_config.region = wwhpEdition; _sf_async_config.path = "/"+(wwhpEdition !== '' ? '?'+wwhpEdition : ''); /** CONFIGURATION END **/ (function(){ function loadChartbeat() { window._sf_endpt=(new Date()).getTime(); var e = document.createElement("script"); e.setAttribute("language", "javascript"); e.setAttribute("type", "text/javascript"); e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js'); document.body.appendChild(e); } var oldonload = window.onload; window.onload = (typeof window.onload != "function") ? loadChartbeat : function() { oldonload(); loadChartbeat(); }; })(); } /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ (function() { window.bbcdotcom.bodyLast = true; }()); /*]]>*/</script></div><!-- BBCDOTCOM all code in page --><script type="text/javascript">if (window.SEARCHBOX.suppress === false && window.SEARCHBOX.locale && /^en-?.*?/.test(window.SEARCHBOX.locale)) {
+    require.config({
+      paths: {
+        "search/searchbox": window.SEARCHBOX.searchboxAppStaticPrefix,
+      }
     });
 
-            });
-        </script>
-        <script type="text/javascript">
-
-    if (bbccookies.cookiesEnabled() && bbccookies.readPolicy('performance')) {
-        var _sf_async_config={};
-
-        /** CONFIGURATION START **/
-        _sf_async_config.uid = 50924;
-        _sf_async_config.domain = 'bbc.co.uk';
-        _sf_async_config.useCanonical = true;
-        _sf_async_config.sections = 'kandlfood';
-        _sf_async_config.authors = '';
-
-        /** CONFIGURATION END **/
-        (function(){
-            function loadChartbeat() {
-                window._sf_endpt=(new Date()).getTime();
-                var e = document.createElement('script');
-                e.setAttribute('language', 'javascript');
-                e.setAttribute('type', 'text/javascript');
-                e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
-                document.body.appendChild(e);
+    if (bbcuser && bbcuser.isUKCombined) {
+        bbcuser.isUKCombined().then(function (isUK) {
+            if (isUK) {
+                require(['search/searchbox/searchboxDrawer'], function (SearchboxDrawer) {
+                  SearchboxDrawer.run(window.SEARCHBOX);
+                });
             }
-            var oldonload = window.onload;
-            window.onload = (typeof window.onload != 'function') ?
-                    loadChartbeat : function() { oldonload(); loadChartbeat(); };
-        })();
+        });
     }
-</script>
 
-    </body>
-</html>
+  }</script>  <script>"use strict";define("orb/cookies-adapter",["orb/cookies"],function(c){function e(e){return c._setPolicy("ads",e),c._setPolicy("personalisation",e),c._setPolicy("performance",e),c._setPolicy("necessary",e)}return{isOrbitEnvironment:function(){return"object"==typeof bbccookies&&"function"!=typeof bbccookies._getCookieName},set:function(e,n){var o=new Date;if(o.setYear(o.getFullYear()+1),this.isOrbitEnvironment())return c.set(e,n,{domain:c._getCurrentDomain(),path:"/",expires:o});var i=window.location.host.match(/(.bbc(?:\.co\.uk))(:\d+)?(\/.*)?$/i),t=e+"="+n+";domain="+(i&&".bbc.co.uk"===i[1]?".bbc.co.uk":".bbc.com")+";path=/;expires="+o.toUTCString()+";";return c.set(t)},get:function(e){return this.isOrbitEnvironment()?c.get(e):c.getCrumb(e)},copyPolicyCookiesCrossDomain:function(e){if(this.isOrbitEnvironment())return c.copyPolicyCookiesCrossDomain(e);e()},setDefaultCookiesSingleDomain:function(){return this.isOrbitEnvironment()?c.setDefaultCookiesSingleDomain():e(!1)},setDefaultCookiesCrossDomain:function(){return this.isOrbitEnvironment()?c.setDefaultCookiesCrossDomain():e(!1)},optInToAllCookiesCrossDomain:function(){if(this.isOrbitEnvironment()){return c.setCookiePolicyCrossDomain({ads:!0,personalisation:!0,performance:!0,necessary:!0})}return e(!0)},isCookiePolicySet:function(){return this.isOrbitEnvironment()?c.isCookiePolicySet():null!==this.get("ckns_policy")}}}),require(["orb/lib/_script","orb/cookies-adapter"],function(s,r){var a="ckns_privacy",b="ckns_explicit",l="1";function t(){var e=r.get(b);return null!==e&&e===l}function u(e,n){e.style.display="none",n.style.display="none"}function k(e,n){t()||(e.style.display="none",n.style.display="block",window.bbcpage.trackRegion(n,{linkLocation:"nav-banner-cookies"}),window.bbcuser.logEvent("view","nav-banner-cookies"))}function c(){var e=document.getElementById("bbcprivacy"),n=document.getElementById("bbccookies");document.getElementById("bbcprivacy-continue-button").addEventListener("click",function(){u(e,n),k(e,n),window.bbcuser.logEvent("click-cta","nav-banner-privacy")}),document.getElementById("bbccookies-continue-button").addEventListener("click",function(){u(e,n),window.bbcuser.logEvent("click-continue","nav-banner-cookies"),r.optInToAllCookiesCrossDomain(),r.set(b,l)});var o,i,t,c=document.getElementById("bbccookies-settings").getElementsByTagName("a")[0];c.addEventListener("click",(o=!1,function(e){o||(r.copyPolicyCookiesCrossDomain(function(){o=!0,c.click()}),r.set(b,l),e.preventDefault())})),null!==r.get(a)?k(e,n):(t=n,(i=e).style.display="block",t.style.display="none",window.bbcpage.trackRegion(i,{linkLocation:"nav-banner-privacy"}),window.bbcuser.logEvent("view","nav-banner-privacy"),r.set(a,"1"))}function m(e,c,r){var n,o,i="https://nav.files.bbci.co.uk/orbit-webmodules/0.0.1-253.6a16793/cookie-banner//cookie-prompt/",t=i+(o="en","string"==typeof(n=e)&&2<=n.length&&(o=n.trim().substring(0,2).toLowerCase()),-1!==["en","cy","gd","ga"].indexOf(o)?o:"en")+".min.js";window.bbcpage.loadCSS("https://nav.files.bbci.co.uk/orbit-webmodules/0.0.1-253.6a16793/cookie-banner//cookie-prompt/bbccookies.min.css").then(function(){s.jsonp(t,function(e){var n=e.replace(/<<bbcUrlPrefix>>/g,function(){if(window.orb.bbcUrlPrefix){var e=window.orb.bbcUrlPrefix+"bbc.com",n=window.location.host.match(/(bbc(?:\.co\.uk))(:\d+)?(\/.*)?$/i);return n&&"bbc.co.uk"===n[1]&&(e=e.replace("bbc.com","bbc.co.uk")),e}return""}());document.getElementById("cookiePrompt").innerHTML=n;for(var o=document.querySelectorAll("[data-region-filter]"),i=0;i<o.length;i++){var t=o[i];t.getAttribute("data-region-filter")!==r&&(t.style.display="none")}c()},{callbackName:"cookiePrompt"})})}Promise.all([window.bbcuser.isUKCombined(),window.bbcuser.isEU(),window.bbcpage.getLanguage()]).then(function(e){var n=e[0];if(e[1]||n){var o=null!==r.get(a);if(!(r.isCookiePolicySet()&&t()&&o)){t()||r.set(b,"0"),r.isCookiePolicySet()||r.setDefaultCookiesSingleDomain();var i=n?"gb":"eu";m(e[2],c,i)}}}).catch(function(){m("en",c,"gb")})});</script><script type="text/javascript">require(["istats-1","orb/cookies"],function(o,t){if(t.isAllowed("s1"))try{if(!require.s.contexts._.config.paths.idcta)return void i();require(["idcta/idcta-1"],function(t){t&&"function"==typeof t.getIStatsLabels&&o.addLabels(t.getIStatsLabels()),i()},function(t){throw t})}catch(t){console&&"function"==typeof console.log&&console.log("an exception occurred while adding idcta labels to istats, invoking istats without them",t),i()}function i(){o.invoke()}});</script><script type="text/javascript">"use strict";require(["reverb"],function(t){var n={},i=function(e){return e&&t.setUserInfo(e.bbc_hid,"1"===e.bbc_identity),t.invoke({useAti:!0,atiOpts:n},function(){t.getOrbitVariables().then(function(e){e&&(t.setDestination(e.destination),e.producer&&t.setProducer(e.producer),e.name&&t.setPageName(e.name),t.trackPage(e))}).catch(function(e){console.log(e)})})};try{if(!require.s.contexts._.config.paths.idcta)return i();require(["idcta/idcta-1"],function(e){var t=e.getIStatsLabels();return i(t)},function(e){throw e})}catch(e){return console&&"function"==typeof console.log&&console.log("an exception occurred while adding idcta labels to Reverb, invoking Reverb without them",e),i()}});</script><script>if("function"!=typeof window.CustomEvent){function CustomEvent(t,e){e=e||{bubbles:!1,cancelable:!1,detail:null};var n=document.createEvent("CustomEvent");return n.initCustomEvent(t,e.bubbles,e.cancelable,e.detail),n}CustomEvent.prototype=window.Event.prototype,window.CustomEvent=CustomEvent}require(["detectview","parseContentForEvent"],function(t,n){window.addEventListener("pageshow",function(t){var e=navigator.vendor&&-1<navigator.vendor.indexOf("Apple");t.persisted&&e&&document.location.reload()}),t(["[data-bbc-context]","[data-bbc-container]"],function(t){var e=new CustomEvent("bbc-user-event",{bubbles:!0,detail:n(t)});t.dispatchEvent(e)})}),require(["parseContentForEvent","getParentWithSelector"],function(i,a){document.body.addEventListener("click",function(t){var e=a(t.target,"[data-bbc-container]"),n=a(t.target,"a");if(e&&n){var r=i(e);r.elem=n,r.originalEvent=t;var o=new CustomEvent("bbc-user-click",{bubbles:!0,detail:r});n.dispatchEvent(o)}})}),define("getParentWithSelector",function(){return Element.prototype.matches||(Element.prototype.matches=Element.prototype.msMatchesSelector||Element.prototype.webkitMatchesSelector),function t(e,n){return e.matches(n)?e:!!e.parentElement&&t(e.parentElement,n)}}),define("parseContentForEvent",["getParentWithSelector"],function(i){return function(t){return{container:t.getAttribute("data-bbc-container")||t.getAttribute("data-bbc-context"),label:(o=t,encodeURIComponent(o.getAttribute("data-bbc-title")||o.getAttribute("data-bbc-content-label")||o.innerText.split("\n")[0])),source:(r=t,r.getAttribute("data-bbc-source")||r.innerText.trim().split("\n").pop()),personalisation:function(t){var e=i(t,"[data-bbc-personalisation]");if(e)return JSON.parse(e.getAttribute("data-bbc-personalisation"));var n=i(t,"[data-stats]");if(!n)return{};var r=JSON.parse(n.getAttribute("data-stats"));return{SEG:r.hp_sgm_id+"::"+r.hp_sgm_user_score}}(t),metadata:(e=t,n=i(e,"[data-bbc-metadata]"),n?JSON.parse(n.getAttribute("data-bbc-metadata")):{}),result:function t(e){if(e.hasAttribute("href"))return encodeURIComponent(e.getAttribute("href"));for(var n=e.children,r=0;r<n.length;r++){var o=t(n[r]);if(null!==o)return o}return null}(t)};var e,n,r,o}}),define("detectview",["verge","throttle"],function(f,s){return function(t,o,e){var i=[],n=(e=e||{}).throttleWaitMs||250,a=e.elementViewedFraction||.5,u=e.elementViewedDurationMs||1e3,c=function(t){return-1<i.indexOf(t)},l=function(t,e){var n=f.rectangle(t),r=f.inY(t,n.height*e*-1);return f.inX(t,n.width*e*-1)&&r},d=function(t,e,n,r){l(t,e)&&setTimeout(function(){l(t,e)&&!c(t)&&(i.push(t),r(t))},n)},r=function(){t.forEach(function(t){for(var e=document.querySelectorAll(t),n=0;n<e.length;n++){var r=e[n];c(r)||d(r,a,u,o)}})};r=s(r,n),["scroll","resize","load"].forEach(function(t){window.addEventListener(t,r)}),r()}}),define("throttle",function(){return function(n,r,o){var i,a,u,c=null,l=0;o||(o={});var d=function(){l=!1===o.leading?0:Date.now(),c=null,u=n.apply(i,a),c||(i=a=null)};return function(){var t=Date.now();l||!1!==o.leading||(l=t);var e=r-(t-l);return i=this,a=arguments,e<=0||r<e?(c&&(clearTimeout(c),c=null),l=t,u=n.apply(i,a),c||(i=a=null)):c||!1===o.trailing||(c=setTimeout(d,e)),u}}}),define("verge",[],function(){var t={},n="undefined"!=typeof window&&window,e="undefined"!=typeof document&&document,r=e&&e.documentElement,o=n.matchMedia||n.msMatchMedia,i=o?function(t){return!!o.call(n,t).matches}:function(){return!1},a=t.viewportW=function(){var t=r.clientWidth,e=n.innerWidth;return t<e?e:t},u=t.viewportH=function(){var t=r.clientHeight,e=n.innerHeight;return t<e?e:t};function c(){return{width:a(),height:u()}}function l(t,e){return!(!(t=t&&!t.nodeType?t[0]:t)||1!==t.nodeType)&&(n=t.getBoundingClientRect(),r=+(r=e)||0,(o={}).width=(o.right=n.right+r)-(o.left=n.left-r),o.height=(o.bottom=n.bottom+r)-(o.top=n.top-r),o);var n,r,o}return t.mq=i,t.matchMedia=o?function(){return o.apply(n,arguments)}:function(){return{}},t.viewport=c,t.scrollX=function(){return n.pageXOffset||r.scrollLeft},t.scrollY=function(){return n.pageYOffset||r.scrollTop},t.rectangle=l,t.aspect=function(t){var e=(t=null==t?c():1===t.nodeType?l(t):t).height,n=t.width;return e="function"==typeof e?e.call(t):e,(n="function"==typeof n?n.call(t):n)/e},t.inX=function(t,e){var n=l(t,e);return!!n&&0<=n.right&&n.left<=a()},t.inY=function(t,e){var n=l(t,e);return!!n&&0<=n.bottom&&n.top<=u()},t.inViewport=function(t,e){var n=l(t,e);return!!n&&0<=n.bottom&&0<=n.right&&n.top<=u()&&n.left<=a()},t});</script>
+          <script>
+            window.cdnUrl = "https://food.files.bbci.co.uk/kandl-food/2573/";
+            window.__reactInitialState__ = {"ampReducer":{"ampAnalyticsEvents":{}},"chefReducer":{"id":"","azCounts":{},"biog":"","context":"featured","displayName":"","items":[],"links":[],"hasImage16x9":"","page":1},"collectionReducer":{"id":"","description":"","title":"","occasionName":""},"cuisineReducer":{"azCounts":{},"totalCount":0,"context":"","id":"","letter":"a","page":1,"title":"","description":"","recipeCount":0},"articlePageReducer":{"title":"","metaDescription":"","modifiedDateTime":"","primaryCollection":{},"secondaryCollection":{},"blocksBody":""},"favouriteReducer":{"confirmationList":[],"currentPage":1,"favouriteRecipes":[],"pageState":"loading","recipeCountPerPage":24,"removeButtonState":{},"totalRecipes":0,"shouldShowFavouritesTooltip":false},"foodsReducer":{"title":"","description":"","recipesUsingCollection":[],"recipesUsingTotalCount":0,"recipesForCollection":[],"recipesForTotalCount":0,"relatedCollections":[]},"homeReducer":{},"idctaReducer":{},"indexPageReducer":{"title":"","metaDescription":"","promoCollections":[],"headerTitle":"","entity":""},"occasionsIndexReducer":{"occasions":[],"heroOccasionId":"","recipeCount":0},"occasionReducer":{"azCounts":{},"baseUrl":"","ogImage":"","description":"","id":"","name":"","totalCount":0,"relatedCollections":[],"relatedMenus":[],"relatedDishes":[],"relatedIngredients":[],"relatedRecipes":[],"title":"","context":"","page":1,"letter":"a"},"pageReducer":{"activePageId":"recipes","ampAnalyticsEvents":{},"background":"","isAMP":false,"pageTitle":"Recipes","reverb":{"log":"a1","domain":".api.bbc.co.uk","siteId":"598267","siteName":"FOOD","name":"food.recipes.paella_7100.page","contentId":"urn:bbc:food:recipes.paella_7100","contentType":"article","section":"Recipes"},"season":"","seasonalPromo":{"startDate":"2019-03-01T00:00:00.000Z","endDate":"2019-03-07T00:00:00.000Z","title":"Pancake Day","url":"/occasions/pancake_day","id":"pancakeday","backgroundColorLeft":"#c6dae7","backgroundColorRight":"#224846"},"shouldShowPersonalisation":true,"isMobile":false,"baseURL":"https://www.bbc.com","canonical":"https://www.bbc.com/food/recipes/paella_7100","cdnUrl":"https://food.files.bbci.co.uk/kandl-food/2573/","chartbeat":{"domain":"bbc.co.uk","section":"kandlfood","uid":"50924"},"date":"2019-03-03T17:49:42.067Z","dials":{"blocksEnvironment":"live","optimizely":"off","reverb":"on","search":"on"},"env":"production","foodImagesPath":"https://food-images.files.bbci.co.uk","graphql":{"apiKey":"da2-3tzi72jxv5an7oyubbuuw5mcnu","endpoint":"https://6z7ho2klnfhotoml2c2qrxn3du.appsync-api.eu-west-1.amazonaws.com/graphql"},"ichefBasePath":"https://ichef.bbci.co.uk/","idctaPath":"https://idcta.api.bbc.com/idcta/init?ptrt=https%3A%2F%2Fwww.bbc.com%2Ffood%2Frecipes%2Fpaella_7100","istatsCounter":"food.recipes.paella_7100.page","isUserSignedIn":false,"registerUrl":"https://session.bbc.com/session?action=register&ptrt=https%3A%2F%2Fwww.bbc.com%2Ffood%2Frecipes%2Fpaella_7100","signInUrl":"https://session.bbc.com/session?ptrt=https%3A%2F%2Fwww.bbc.com%2Ffood%2Frecipes%2Fpaella_7100","azEntities":["chefs","recipes","ingredients","dishes"]},"programmesIndexReducer":{},"recipesIndexReducer":{"allTimeFavDishes":[],"ingredients":[],"recipeCollections":[],"thrownErrorFrom":"","thrownErrorStatus":500},"recipeReducer":{"recipe":{"id":"paella_7100","course":{"id":"main_course","title":"Main course"},"cuisine":{"id":"spanish","title":"Spanish"},"diets":[{"id":"dairy_free","title":"dairy-free"},{"id":"egg_free","title":"egg-free"},{"id":"gluten_free","title":"gluten-free"},{"id":"healthy","title":"healthy"}],"title":"Paella","status":"published","programmeClip":null,"hasImage":true,"description":"An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo.\r\n\r\nEach serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt.","tips":"If you don't have a pan large enough to hold all of the rice and paella ingredients, use two pans and divide the rice between them.","collections":[{"id":"cooking_with_chorizo","title":"Cooking with chorizo","hasImage":"false","isMenu":"false","chef":null},{"id":"perfect_paella","title":"Perfect paella","hasImage":"true","isMenu":"false","chef":null}],"wines":"","chefDetails":{"id":"antony_worrall_thompson","hasImage":true,"name":"Antony Worrall Thompson"},"seasons":[{"id":"january","startDate":1,"name":"January","endDate":31},{"id":"february","startDate":32,"name":"February","endDate":59},{"id":"march","startDate":60,"name":"March","endDate":90},{"id":"november","startDate":305,"name":"November","endDate":334},{"id":"december","startDate":335,"name":"December","endDate":365}],"stages":[{"ingredients":[{"technique":null,"text":"170g/6oz <a href=\"/food/chorizo\" class=\"recipe-ingredients__link\">chorizo</a>, cut into thin slices","foods":[{"id":"chorizo","isKeyIngredient":"false","title":"chorizo","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"110g/4oz <a href=\"/food/pancetta\" class=\"recipe-ingredients__link\">pancetta</a>, cut into small dice","foods":[{"id":"pancetta","isKeyIngredient":"false","title":"pancetta","supermarketLocation":"Meat, fish and poultry"}]},{"technique":{"id":"chopping_vegetables","hasImage":"false","title":"Knife skills: how to finely chop","programmeClip":{"id":"p027vznw"}},"text":"2 cloves <a href=\"/food/garlic\" class=\"recipe-ingredients__link\">garlic</a> finely chopped","foods":[{"id":"garlic","isKeyIngredient":"false","title":"garlic","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"1 large Spanish <a href=\"/food/onion\" class=\"recipe-ingredients__link\">onion</a>, finely diced","foods":[{"id":"onion","isKeyIngredient":"false","title":"onion","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"1 red pepper, diced","foods":[{"id":"capsicum","isKeyIngredient":"false","title":"capsicum","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"1 tsp soft <a href=\"/food/thyme\" class=\"recipe-ingredients__link\">thyme</a> leaves","foods":[{"id":"thyme","isKeyIngredient":"false","title":"thyme","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"¼ tsp dried red chilli flakes","foods":[{"id":"dried_chilli","isKeyIngredient":"false","title":"dried chilli","supermarketLocation":"Tins, packets and jars"}]},{"technique":null,"text":"570ml/1pint calasparra (Spanish short-grain) rice","foods":[{"id":"calasparra_rice","isKeyIngredient":"true","title":"Calasparra rice","supermarketLocation":"Tins, packets and jars"}]},{"technique":null,"text":"1 tsp <a href=\"/food/paprika\" class=\"recipe-ingredients__link\">paprika</a>","foods":[{"id":"paprika","isKeyIngredient":"false","title":"paprika","supermarketLocation":"Cooking ingredients"}]},{"technique":null,"text":"125ml/4fl oz dry <a href=\"/food/white_wine\" class=\"recipe-ingredients__link\">white wine</a>","foods":[{"id":"white_wine","isKeyIngredient":"false","title":"white wine","supermarketLocation":"Drinks"}]},{"technique":null,"text":"1.2 litres/2 pints <a href=\"/food/chicken_stock\" class=\"recipe-ingredients__link\">chicken stock</a>, heated with ¼ tsp saffron strands","foods":[{"id":"chicken_stock","isKeyIngredient":"false","title":"chicken stock","supermarketLocation":"Tins, packets and jars"}]},{"technique":null,"text":"8 <a href=\"/food/chicken\" class=\"recipe-ingredients__link\">chicken</a> thighs, each chopped in half and browned","foods":[{"id":"chicken","isKeyIngredient":"false","title":"chicken","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"18 small <a href=\"/food/clams\" class=\"recipe-ingredients__link\">clams</a>, cleaned","foods":[{"id":"clams","isKeyIngredient":"false","title":"clams","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"110g/4oz fresh or frozen <a href=\"/food/pea\" class=\"recipe-ingredients__link\">peas</a>","foods":[{"id":"pea","isKeyIngredient":"false","title":"peas","supermarketLocation":"Frozen"}]},{"technique":{"id":"de-seeding_tomatoes","hasImage":"false","title":"De-seeding tomatoes","programmeClip":{"id":"p027vsqr"}},"text":"4 large <a href=\"/food/tomato\" class=\"recipe-ingredients__link\">tomatoes</a>, de-seeded and diced","foods":[{"id":"tomato","isKeyIngredient":"false","title":"tomato","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"50ml/2fl oz good <a href=\"/food/olive_oil\" class=\"recipe-ingredients__link\">olive oil</a>","foods":[{"id":"olive_oil","isKeyIngredient":"false","title":"olive oil","supermarketLocation":"Cooking ingredients"}]},{"technique":null,"text":"1 head <a href=\"/food/garlic\" class=\"recipe-ingredients__link\">garlic</a>, cloves separated and peeled","foods":[{"id":"garlic","isKeyIngredient":"false","title":"garlic","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"12 jumbo raw <a href=\"/food/prawn\" class=\"recipe-ingredients__link\">prawns</a>, in shells","foods":[{"id":"prawn","isKeyIngredient":"false","title":"prawn","supermarketLocation":"Meat, fish and poultry"}]},{"technique":{"id":"cleaning_squid","hasImage":"false","title":"How to clean and prepare squid","programmeClip":{"id":"p02826h5"}},"text":"450g/1lb <a href=\"/food/squid\" class=\"recipe-ingredients__link\">squid</a>, cleaned and chopped into bite-sized pieces","foods":[{"id":"squid","isKeyIngredient":"false","title":"squid","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"5 tbsp chopped flatleaf <a href=\"/food/parsley\" class=\"recipe-ingredients__link\">parsley</a>","foods":[{"id":"parsley","isKeyIngredient":"false","title":"parsley","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"Salt and freshly ground <a href=\"/food/black_pepper\" class=\"recipe-ingredients__link\">black pepper</a>","foods":[{"id":"black_pepper","isKeyIngredient":"false","title":"black pepper","supermarketLocation":"Cooking ingredients"}]}],"title":null}],"stagesWithoutLinks":[{"ingredients":[{"technique":null,"text":"170g/6oz chorizo, cut into thin slices","foods":[{"id":"chorizo","isKeyIngredient":"false","title":"chorizo","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"110g/4oz pancetta, cut into small dice","foods":[{"id":"pancetta","isKeyIngredient":"false","title":"pancetta","supermarketLocation":"Meat, fish and poultry"}]},{"technique":{"id":"chopping_vegetables","hasImage":"false","title":"Knife skills: how to finely chop","programmeClip":{"id":"p027vznw"}},"text":"2 cloves garlic finely chopped","foods":[{"id":"garlic","isKeyIngredient":"false","title":"garlic","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"1 large Spanish onion, finely diced","foods":[{"id":"onion","isKeyIngredient":"false","title":"onion","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"1 red pepper, diced","foods":[{"id":"capsicum","isKeyIngredient":"false","title":"capsicum","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"1 tsp soft thyme leaves","foods":[{"id":"thyme","isKeyIngredient":"false","title":"thyme","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"¼ tsp dried red chilli flakes","foods":[{"id":"dried_chilli","isKeyIngredient":"false","title":"dried chilli","supermarketLocation":"Tins, packets and jars"}]},{"technique":null,"text":"570ml/1pint calasparra (Spanish short-grain) rice","foods":[{"id":"calasparra_rice","isKeyIngredient":"true","title":"Calasparra rice","supermarketLocation":"Tins, packets and jars"}]},{"technique":null,"text":"1 tsp paprika","foods":[{"id":"paprika","isKeyIngredient":"false","title":"paprika","supermarketLocation":"Cooking ingredients"}]},{"technique":null,"text":"125ml/4fl oz dry white wine","foods":[{"id":"white_wine","isKeyIngredient":"false","title":"white wine","supermarketLocation":"Drinks"}]},{"technique":null,"text":"1.2 litres/2 pints chicken stock, heated with ¼ tsp saffron strands","foods":[{"id":"chicken_stock","isKeyIngredient":"false","title":"chicken stock","supermarketLocation":"Tins, packets and jars"}]},{"technique":null,"text":"8 chicken thighs, each chopped in half and browned","foods":[{"id":"chicken","isKeyIngredient":"false","title":"chicken","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"18 small clams, cleaned","foods":[{"id":"clams","isKeyIngredient":"false","title":"clams","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"110g/4oz fresh or frozen peas","foods":[{"id":"pea","isKeyIngredient":"false","title":"peas","supermarketLocation":"Frozen"}]},{"technique":{"id":"de-seeding_tomatoes","hasImage":"false","title":"De-seeding tomatoes","programmeClip":{"id":"p027vsqr"}},"text":"4 large tomatoes, de-seeded and diced","foods":[{"id":"tomato","isKeyIngredient":"false","title":"tomato","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"50ml/2fl oz good olive oil","foods":[{"id":"olive_oil","isKeyIngredient":"false","title":"olive oil","supermarketLocation":"Cooking ingredients"}]},{"technique":null,"text":"1 head garlic, cloves separated and peeled","foods":[{"id":"garlic","isKeyIngredient":"false","title":"garlic","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"12 jumbo raw prawns, in shells","foods":[{"id":"prawn","isKeyIngredient":"false","title":"prawn","supermarketLocation":"Meat, fish and poultry"}]},{"technique":{"id":"cleaning_squid","hasImage":"false","title":"How to clean and prepare squid","programmeClip":{"id":"p02826h5"}},"text":"450g/1lb squid, cleaned and chopped into bite-sized pieces","foods":[{"id":"squid","isKeyIngredient":"false","title":"squid","supermarketLocation":"Meat, fish and poultry"}]},{"technique":null,"text":"5 tbsp chopped flatleaf parsley","foods":[{"id":"parsley","isKeyIngredient":"false","title":"parsley","supermarketLocation":"Fruit and vegetables"}]},{"technique":null,"text":"Salt and freshly ground black pepper","foods":[{"id":"black_pepper","isKeyIngredient":"false","title":"black pepper","supermarketLocation":"Cooking ingredients"}]}],"title":null}],"methods":[{"technique":null,"text":"Heat half the olive oil in a paella dish or heavy-based saucepan. Add the chorizo and pancetta and fry until crisp. Add the garlic, onion and pepper and heat until softened. Add the thyme, chilli flakes and calasparra rice, and stir until all the grains of rice are nicely coated and glossy. Now add the paprika and dry white wine and when it is bubbling, pour in the hot chicken stock, add the chicken thighs and cook for 5-10 minutes."},{"technique":null,"text":"Now place the clams into the dish with the join facing down so that the edges open outwards. Sprinkle in the peas and chopped tomatoes and continue to cook gently for another 10 minutes."},{"technique":null,"text":"Meanwhile, heat the remaining oil with the garlic cloves in a separate pan and add the prawns. Fry quickly for a minute or two then add them to the paella. Now do the same with the squid and add them to the paella too."},{"technique":null,"text":"Scatter the chopped parsley over the paella and serve immediately."}],"occasions":[{"id":"mothers_day","title":"Mother's Day recipes"}],"programmeTopLevel":null,"programmeEpisode":null,"metadata":{"prepTime":"30 mins to 1 hour","cookingTime":"10 to 30 mins","serving":"Serves 8","prepTimeMeta":"PT1H","cookTimeMeta":"PT30M"},"food":{"id":"paella","title":"paella"},"nutrition":{"kcal":"660","protein":"51g","carbohydrate":"65g","fat":"20g","fibre":"3.5g","salt":"2.1g","saturates":"6g","sugars":"5g"}},"hasRecipeIsFrom":false,"howToVideos":[{"brandTitle":"BBC Food","description":"Make sure to take care of your fingers and thumbs when learning to finely chop.","duration":"PT1M23S","durationSeconds":83,"masterBrandId":"bbc_webonly","id":"chopping_vegetables","image":"https://ichef.bbci.co.uk/images/ic/640x360/p027vzb8.jpg","title":"Knife skills: how to finely chop","versionPid":"p027vzpv","updatedAt":"2014-10-03T14:49:33.000Z"},{"brandTitle":"BBC Food","description":"Three ways to de-seed tomatoes.","duration":"PT1M4S","durationSeconds":64,"masterBrandId":"bbc_webonly","id":"de-seeding_tomatoes","image":"https://ichef.bbci.co.uk/images/ic/640x360/p027vs6s.jpg","title":"De-seeding tomatoes","versionPid":"p027vsr1","updatedAt":"2014-10-03T13:44:37.000Z"},{"brandTitle":"BBC Food","description":"How to clean and prepare a squid.","duration":"PT2M56S","durationSeconds":176,"masterBrandId":"bbc_webonly","id":"cleaning_squid","image":"https://ichef.bbci.co.uk/images/ic/640x360/p02826gp.jpg","title":"How to clean and prepare squid","versionPid":"p02826h8","updatedAt":"2014-10-06T08:55:16.000Z"}],"relatedRecipes":[{"amount":22,"chef":"Paul Rankin","course":{"id":"light_meals_and_snacks","title":"Light meals & snacks"},"hasImage":true,"recipeId":"chorizoandbeanquesad_76375","recipeTitle":"Chorizo and bean quesadilla","relationId":"cooking_with_chorizo","relationIsMenu":false,"relationType":"collection","relationTitle":"Cooking with chorizo"},{"amount":15,"chef":"Maria Grimwood","course":{"id":"main_course","title":"Main course"},"hasImage":true,"recipeId":"marias_fideu_61565","recipeTitle":"Fideuà ","relationId":"paella","relationIsMenu":false,"relationType":"dish","relationTitle":"paella"},{"amount":6,"chef":"Simon Rimmer","course":{"id":"main_course","title":"Main course"},"hasImage":true,"recipeId":"griddledartichokeand_91479","recipeTitle":"Vegetarian paella","relationId":"calasparra_rice","relationIsMenu":false,"relationType":"ingredient","relationTitle":"calasparra rice"}],"rating":{"total":1,"value":5}},"ratingsReducer":{"showRatingsTooltip":false,"showSignInTooltip":false,"status":"LOADING"},"schemaReducer":{"promos":{},"videos":{}},"seasonReducer":{"azCounts":{},"baseUrl":"","id":"","name":"","description":"","relatedRecipes":[],"ogImage":""},"shoppingListReducer":{"contentTitle":"","ingredients":[],"recipeId":""},"searchBarReducer":{"shouldSubmit":false,"searchResults":[],"searchTerm":"","displaySearchTerm":""},"searchReducer":{"searchTerm":"","page":1,"recipes":[],"totalCount":0,"filterCounts":{},"selected":{},"displayNames":{},"openFilter":"","prevOpenFilter":"","loading":false,"error":false},"graphqlSearchReducer":{"includeFilters":[{"type":"chef","items":[]},{"type":"cookingTime","items":[]},{"type":"course","items":[]},{"type":"cuisine","items":[]},{"type":"diets","items":[]},{"type":"food","items":[]},{"type":"occasions","items":[]},{"type":"prepTime","items":[]},{"type":"programmeTopLevel","items":[]},{"type":"quickAndEasy","items":[]},{"type":"seasons","items":[]}],"excludeFilters":[{"type":"chef","items":[]},{"type":"cookingTime","items":[]},{"type":"course","items":[]},{"type":"cuisine","items":[]},{"type":"diets","items":[]},{"type":"food","items":[]},{"type":"occasions","items":[]},{"type":"prepTime","items":[]},{"type":"programmeTopLevel","items":[]},{"type":"quickAndEasy","items":[]},{"type":"seasons","items":[]}]},"techniquesIndexReducer":{"techniquesByCategory":[]},"techniqueReducer":{"id":"","title":"","description":"","category":"","equipment":"","difficulty":"","programmeVpid":"","relatedRecipes":[],"azCounts":{},"context":"","letter":"","page":1},"textPageReducer":{"metaDescription":"","text":"","title":""},"azPageReducer":{"entity":"","letter":"","page":1,"pages":1,"promos":[],"totalCount":0,"azCounts":{}}};
+            ;
+          </script>
+          
+          <script>window.__LOADABLE_STATE__ = {"children":[{"id":"./page/PageIndex","children":[{"id":"./recipe/Page"}]}]};</script>
+          <script async src="https://food.files.bbci.co.uk/kandl-food/2573/javascript/foodApp.js"></script>
+          
+      </body>
+    </html>

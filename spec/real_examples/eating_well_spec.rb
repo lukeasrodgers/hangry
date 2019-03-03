@@ -15,8 +15,8 @@ describe Hangry do
     its(:author) { should == "EatingWell Test Kitchen" }
     its(:canonical_url) { should == "http://www.eatingwell.com/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/" }
     its(:cook_time) { should == 35 }
-    its(:description) { should == "Here's a sauce so delicious, it's missing only one thing: a little crunchy bread to dip in it. Make It a Meal: Serve with steamed asparagus or cauliflower, mashed potatoes or orzo pasta, and a glass of Vinho Verde." }
-    its(:image_url) { should == "http://images.media-allrecipes.com/userphotos/960x960/3755910.jpg" }
+    its(:description) { should == "This quick chicken recipe is low in calories thanks to a few healthy cooking tech" }
+    its(:image_url) { should == "https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/70354b55-2ee5-4dc6-afbc-bccf64994807/cd57020e-fce2-478a-9836-6ff2c803e5df/465x310/match/image.jpg" }
     its(:ingredients) {
       should == [
         "4 boneless, skinless chicken breasts, (about 1 pound), trimmed of fat",
@@ -26,7 +26,7 @@ describe Hangry do
         "1 tablespoon Dijon mustard", "½ cup chopped chives, (about 1 bunch)"
       ]
     }
-    its(:name) { should == "Sauteed Chicken Breasts with Creamy Chive Sauce" }
+    its(:name) { should == "Healthy Dinner: Chicken with Creamy Chive Sauce Recipe" }
     its(:nutrition) do
       should == {
         calories: '257 calories;',

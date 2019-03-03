@@ -7,11 +7,7 @@ module Hangry
         end
 
         def parse_name
-          name = super
-          if name.blank?
-            name = nokogiri_doc.css('title').first.content.strip.sub(/-\s*Allrecipes.com$/, '')
-          end
-          name
+          recipe_ast.css('h1[itemprop="name"]').first.content
         end
 
         def parse_description

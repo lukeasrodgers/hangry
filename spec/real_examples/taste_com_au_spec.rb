@@ -13,10 +13,10 @@ describe Hangry do
     end
 
     its(:author) { should == "Sophia Young" }
-    its(:canonical_url) { should == 'http://www.taste.com.au/recipes/lemon-melting-moments/e5384539-ac49-4852-939d-1c44a4917674' }
+    its(:canonical_url) { should == 'https://www.taste.com.au/recipes/lemon-melting-moments/e5384539-ac49-4852-939d-1c44a4917674' }
     its(:cook_time) { should == 15 }
     its(:description) { should == "Take a trip down memory lane with these buttery biccies. They're great for teatime or with coffee for your next dinner party." }
-    its(:image_url) { should == 'http://img.taste.com.au/y8u5JWmh/taste/2016/11/lemon-melting-moments-79344-1.jpeg' }
+    its(:image_url) { should == 'https://img.taste.com.au/y8u5JWmh/taste/2016/11/lemon-melting-moments-79344-1.jpeg' }
     its(:ingredients) {
       should == [
         '200g (1 1/3 cups) plain flour',

@@ -13,10 +13,10 @@ describe Hangry do
     end
 
     its(:author) { should == "flume027" }
-    its(:canonical_url) { should == "http://www.food.com/recipe/panda-express-orange-chicken-103215" }
+    its(:canonical_url) { should == "https://www.geniuskitchen.com/recipe/panda-express-orange-chicken-103215" }
     its(:cook_time) { should == 30 }
     its(:description) { should == "A copycat recipe from Panda Express. This chicken is tangy and flavorful. Give it a try! I'm sure you and your family will enjoy it." }
-    its(:image_url) { should == "http://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/10/32/15/pic7atxk2.jpg" }
+    its(:image_url) { should == "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/10/32/15/W6FoUgXyRnaFTQjc1Nkw_0S9A2630.jpg" }
     its(:ingredients) {
       should == [
         "2 lbs boneless skinless chicken, chopped into bite-sized pieces",
@@ -59,10 +59,10 @@ describe Hangry do
     end
 
     its(:instructions) {
-      should == "Place chicken pieces in a large bowl, set aside. In a medium bowl, stir egg, salt, pepper and 1 tablespoon oil and mix well, set aside. In a medium bowl, stir together 1/2 cup of the cornstarch and the flour. Heat oil for deep-frying in wok or deep-fryer to 375 degrees. Dip chicken pieces into egg mixture, then into the flour mixture, shaking off any excess. Add chicken to wok in small batches and fry for 3 to 4 minutes or until golden brown. (Do not overcook chicken). Remove chicken from oil with slotted spoon and drain on paper towels; set aside. FOR THE SAUCE:. In a small bowl, combine the soy sauce, orange juice, brown sugar and orange zest. Set aside. Clean wok and heat 15 seconds over high heat. Add 1 tablespoon oil, the gingerroot, garlic, crushed red chili pepper flakes and green onions and stir-fry for just a few seconds until fragrant. Now, add the rice wine and the soy sauce mixture you set aside above. Add cooked chicken, stirring until well mixed. In a small bowl, stir together the water and cornstarch, then add it to the wok and stir until sauce has thickened. Add sesame oil if desired. Serve over jasmine rice."
+      should == "Place chicken pieces in a large bowl, set aside.\nIn a medium bowl, stir egg, salt, pepper and 1 tablespoon oil and mix well, set aside.\nIn a medium bowl, stir together 1/2 cup of the cornstarch and the flour.\nHeat oil for deep-frying in wok or deep-fryer to 375 degrees.\nDip chicken pieces into egg mixture, then into the flour mixture, shaking off any excess.\nAdd chicken to wok in small batches and fry for 3 to 4 minutes or until golden brown.\n(Do not overcook chicken).\nRemove chicken from oil with slotted spoon and drain on paper towels; set aside.\nFOR THE SAUCE:.\nIn a small bowl, combine the soy sauce, orange juice, brown sugar and orange zest. Set aside.\nClean wok and heat 15 seconds over high heat.\nAdd 1 tablespoon oil, the gingerroot, garlic, crushed red chili pepper flakes and green onions and stir-fry for just a few seconds until fragrant.\nNow, add the rice wine and the soy sauce mixture you set aside above.\nAdd cooked chicken, stirring until well mixed.\nIn a small bowl, stir together the water and cornstarch, then add it to the wok and stir until sauce has thickened. Add sesame oil if desired.\nServe over jasmine rice."
     }
     its(:prep_time) { should == 15 }
-    its(:published_date) { should == Date.parse("2004-11-02") }
+    its(:published_date) { should == Date.new(2004, 11, 2) }
     its(:total_time) { should == 45 }
     its(:yield) { should == "6 serving(s)" }
   end

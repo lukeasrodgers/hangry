@@ -52,6 +52,7 @@ module Hangry
 
   def self.parser_for(html)
     html = html.read if html.respond_to?(:read)
+    html = html.sub("\xEF\xBB\xBF", "") # Remove the UTF-8 Byte-Order Mark (BOM)
     nokogiri_doc = Nokogiri::HTML(html)
     ParserSelector.new(nokogiri_doc).parser
   end

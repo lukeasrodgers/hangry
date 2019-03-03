@@ -41,7 +41,7 @@ describe Hangry do
         "3/4 cup grated Parmesan cheese"
       ]
     }
-    its(:name) { should == "World's Best Lasagna Recipe" }
+    its(:name) { should == "World's Best Lasagna" }
     its(:nutrition) do
       should == {
         calories: '448 kcal',

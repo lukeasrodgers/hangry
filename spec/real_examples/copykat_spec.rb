@@ -8,37 +8,36 @@ describe Hangry do
     end
     subject { @parsed }
 
-    it "should use a non-standard parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::Parsers::NonStandard::CopykatParser)
+    it "should use the ld+json parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::JsonLDParser)
     end
 
-    its(:author) { should == "Stephanie Manley via CopyKat.com" }
-    its(:canonical_url) { should == "http://www.copykat.com/2014/12/03/low-fat-scalloped-potatoes/" }
+    its(:author) { should == "Stephanie Manley @CopyKat.com" }
+    its(:canonical_url) { should == "https://copykat.com/2014/12/03/low-fat-scalloped-potatoes/" }
     its(:cook_time) { should == 40 }
-    its(:description) { should == "Enjoy these low fat scalloped potatoes. These are so tasty you won't even miss the butter and cream." }
-    its(:image_url) { should == "http://www.copykat.com/wp-content/uploads/2014/12/swansons-finished-low-fat-scalloped-potatoes-150x100.jpg" }
+    its(:description) { should == "You can remove the fat and keep the flavor.&nbsp;" }
+    its(:image_url) { should == "https://copykat.com/wp-content/uploads/2014/12/swansons-finished-low-fat-scalloped-potatoes.jpg" }
     its(:ingredients) {
       should == [
         "1 pound Russet potatoes",
-        "Non-stick spray",
         "1 teaspoon salt",
         "1/2 teaspoon freshly ground black pepper",
-        "1 (26.1 ounces) box Low Fat Swanson's Cream Starter TM",
-        "1 cup Cheddar cheese, optional"
+        "26.1 ounces Low Fat Swanson's Cream Starter TM",
+        "1 cup Cheddar cheese (optional)"
       ]
     }
     its(:name) { should == "Low Fat Scalloped Potatoes" }
     its(:nutrition) do
       should == {
-        calories: nil,
-        cholesterol: nil,
-        fiber: nil,
-        protein: nil,
-        saturated_fat: nil,
-        sodium: nil,
-        sugar: nil,
-        total_carbohydrates: nil,
-        total_fat: nil,
+        calories: "204 kcal",
+        cholesterol: "24 mg",
+        fiber: "1 g",
+        protein: "8 g",
+        saturated_fat: "4 g",
+        sodium: "916 mg",
+        sugar: "2 g",
+        total_carbohydrates: "23 g",
+        total_fat: "8 g",
         trans_fat: nil,
         unsaturated_fat: nil
       }
@@ -51,7 +50,7 @@ Preheat oven to 350 degrees. Wash potatoes, and if desired peel before slicing. 
       should == instructions.strip
     }
     its(:prep_time) { should == 15 }
-    its(:published_date) { should == nil }
+    its(:published_date) { should == Date.new(2014, 12, 03) }
     its(:total_time) { should == 55 }
     its(:yield) { should == "6" }
   end

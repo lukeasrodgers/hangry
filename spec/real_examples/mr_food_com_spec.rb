@@ -3,21 +3,20 @@
 describe Hangry do
   context "mrfood.com recipe" do
     before(:all) do
-      skip "mrfood.com appears not to be using any standard recipe microformat currently"
       @html = File.read("spec/fixtures/mrfood.com.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
 
-    it "should use the schema.org parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
+    it "should use the ld+json parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::JsonLDParser)
     end
 
-    its(:author) { should == 'rac7431 2877525' }
+    its(:author) { should == 'Ginsburg Enterprises' }
     its(:canonical_url) { should == "https://www.MrFood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268" }
     its(:cook_time) { should == 320 }
     its(:description) { should == "Try this saucy pot roast over egg noodles, rice, or-for more authentic Italian flavor-polenta. It's a winner whichever way you choose!" }
-    its(:image_url) { should == "//irepo.primecp.com/2015/09/235934/Saucy-Italian-Pot-Roast_Large600_ID-1183018.jpg?v=1183018" }
+    its(:image_url) { should == "http://irepo.primecp.com/2015/09/235934/Saucy-Italian-Pot-Roast_ExtraLarge1000_ID-1183022.jpg?v=1183022" }
     its(:ingredients) {
       should == [
         "1 (8-ounce) package sliced fresh baby Portobello mushrooms",
@@ -48,11 +47,11 @@ describe Hangry do
       }
     end
 
-    its(:instructions) { should == "Place mushrooms and onion in a 6-quart slow cooker; add roast. Sprinkle roast evenly with sauce mix and crushed red pepper. Pour diced tomatoes and tomato sauce over roast.Cover and cook on HIGH setting 5 to 6 hours or until meat is very tender. Remove roast from slow cooker, and cut into large chunks; keep warm.Skim fat from juices in slow cooker; discard fat. Stir together cornstarch and water in a small bowl until smooth; add to juices in slow cooker, stirring until blended.Cover and cook on HIGH setting 20 to 30 more minutes or until mixture is thickened, stirring once. Add roast pieces back to slow cooker. Cover and cook until thoroughly heated." }
+    its(:instructions) { should == "" }
 
     its(:prep_time) { should == nil }
-    its(:published_date) { should == Date.parse('July 26, 2011') }
+    its(:published_date) { should == Date.new(2018, 5, 17) }
     its(:total_time) { should == nil }
-    its(:yield) { should == "10" }
+    its(:yield) { should == nil }
   end
 end

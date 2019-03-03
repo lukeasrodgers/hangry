@@ -12,11 +12,11 @@ describe Hangry do
       expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::SchemaOrgRecipeParser)
     end
 
-    its(:author) { should == nil }
+    its(:author) { should == "Betty Crocker Kitchens" }
     its(:canonical_url) { should == "https://www.bettycrocker.com/recipes/skillet-chicken-nachos/9bf0c3be-09dd-4b1b-8cf4-a9cfa979b232" }
     its(:cook_time) { should == nil }
-    its(:description) { should == "Dinner ready in 20 minutes! Enjoy these delicious nachos spooned with chicken mixture sprinkled with cheese and cilantro - perfect for Mexican cuisine. ...MORE+ LESS-" }
-    its(:image_url) { should == 'https://images-gmi-pmc.edge-generalmills.com/ec2a396d-4630-4958-8024-8844e947e06e.jpg' }
+    its(:description) { should == "Looking for a dinner ready in 20 minutes? This recipe's delicious nacho mixture is made in your skillet, then spooned onto tortilla chips and sprinkled with cheese and cilantro before serving." }
+    its(:image_url) { should == 'https://images-gmi-pmc.edge-generalmills.com/5e36ef32-db65-43b3-ade9-8c32fbe7f1dd.jpg' }
     its(:ingredients) {
       should == [
         "1 tablespoon olive or vegetable oil", "1 1/4 lb boneless skinless chicken breasts, cut into 1/4-inch pieces",

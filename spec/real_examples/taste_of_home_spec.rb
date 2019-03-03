@@ -8,15 +8,15 @@ describe Hangry do
     end
     subject { @parsed }
 
-    it "should use a non-standard parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::Parsers::NonStandard::TasteOfHomeParser)
+    it "should use the ld+json parser" do
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::JsonLDParser)
     end
 
-    its(:author) { should == "" }
-    its(:canonical_url) { should == 'https://www.tasteofhome.com/recipes/rhubarb-popover-pie' }
+    its(:author) { should == "Taste of Home" }
+    its(:canonical_url) { should == 'https://www.tasteofhome.com/recipes/rhubarb-popover-pie/' }
     its(:cook_time) { should == 20 }
-    its(:description) { should == 'This fabulous spring breakfast "pie" is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!—Patricia Kile, Elizabethtown, Pennsylvania.' }
-    its(:image_url) { should == 'https://cdn2.tmbi.com/TOH/Images/Photos/37/300x300/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg' }
+    its(:description) { should == 'This fabulous spring breakfast "pie" is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!&mdash;Patricia Kile, Elizabethtown, Pennsylvania.' }
+    its(:image_url) { should == 'https://tmbidigitalassetsazure.blob.core.windows.net/secure/RMS/attachments/37/1200x1200/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg' }
     its(:ingredients) {
       should == [
         "1/2 cup all-purpose flour",
@@ -35,7 +35,7 @@ describe Hangry do
     its(:name) { should == "Rhubarb Popover Pie" }
     its(:nutrition) do
       should == {
-        calories: "279 calories: 1 piece",
+        calories: "279 calories",
         cholesterol: '109mg cholesterol',
         fiber: "1g fiber)",
         protein: "4g protein.",
@@ -50,30 +50,12 @@ describe Hangry do
     end
 
     its(:instructions) {
-      instructions = <<-EOS
-Directions
-In a large bowl, combine flour and salt. In another bowl, whisk eggs and milk.
-Place butter in an 9-in. pie plate; heat in a 425° oven for 3-5 minutes or until butter is melted. Meanwhile, stir egg mixture into dry ingredients just until moistened.
-Carefully swirl the butter in the pan to coat the sides and bottom of pan; add batter. Bake at 425° for 16-20 minutes or until puffed and golden brown.
-Meanwhile, in a large skillet, saute rhubarb and pineapple in butter until rhubarb is tender. Stir in brown sugar; bring to a boil over medium heat, stirring constantly. Pour into the center of puffed pancake; cut into six wedges. Serve immediately with whipped cream if desired.
-Yield: 6 servings.
-Editor's Note: If using frozen rhubarb, measure rhubarb while still frozen, then thaw completely. Drain in a colander, but do not press liquid out.
-Originally published as Rhubarb Popover Pie in Taste of Home's Holiday & Celebrations Cookbook
-Annual 2010, p157
-window._taboola = window._taboola || [];
-_taboola.push({
-mode: 'thumbnails-i',
-container: 'taboola-native-stream-thumbnails',
-placement: 'Native Stream Thumbnails Redesign',
-target_type: 'mix'
-});
-      EOS
-      should == instructions.strip
+      should == "In a large bowl, combine flour and salt. In another bowl, whisk eggs and milk., Place butter in an 9-in. pie plate; heat in a 425&deg; oven for 3-5 minutes or until butter is melted. Meanwhile, stir egg mixture into dry ingredients just until moistened., Carefully swirl the butter in the pan to coat the sides and bottom of pan; add batter. Bake at 425&deg; for 16-20 minutes or until puffed and golden brown., Meanwhile, in a large skillet, saute rhubarb and pineapple in butter until rhubarb is tender. Stir in brown sugar; bring to a boil over medium heat, stirring constantly. Pour into the center of puffed pancake; cut into six wedges. Serve immediately with whipped cream if desired."
     }
 
     its(:prep_time) { should == 25 }
     its(:published_date) { should == nil }
     its(:total_time) { should == 45 }
-    its(:yield) { should == "6 servings" }
+    its(:yield) { should == "6 servings." }
   end
 end

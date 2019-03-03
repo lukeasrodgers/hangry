@@ -55,7 +55,7 @@ Turn the steaks over after two minutes, then turn every minute until they’ve h
     }
 
     its(:prep_time) { should == nil }
-    its(:published_date) { should == Date.parse('2015-09-16') }
+    its(:published_date) { should == Date.new(2015, 9, 16) }
     its(:total_time) { should == 20 }
     its(:yield) { should == "4" }
   end
