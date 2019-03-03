@@ -1,0 +1,1623 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"55db0cb698","applicationID":"133803854","transactionName":"YwABYUUDXUIABRZbCVpKLmN0TWFUAg8SVyVbCxdHWA5fVBNJK1wCUR0=","queueTime":0,"applicationTime":97,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQ4OVVdaGwIDV1lSBAkCUg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,N=y.hash,this[u]=g.now()}function o(){M--,y.hash!==N&&i(0,!0);var t=g.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=g.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,g=t("loader");if(w[v]&&g.xhrWrappable){var b=t(10),x=t(11),E=t(8),O=t(6),P=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),S=j.get("tracer");t(15),g.features.spa=!0;var N,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(l,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),P.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),R.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),b.buffer([u]),x.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+s),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(8);var b=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,e){var n=t[0];n instanceof b&&i("bst",[n,e,this.bstStart,g.now()])}),a.on(m,function(t,e,n){this.bstStart=g.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(24)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(21);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(24)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(24)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-"),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(24)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(24),a=t("ee").get("promise"),s=i(a),c=t(21),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(24)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(24)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(24)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,b),b.prototype=l.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(e.cat=c.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),l=t(19),h=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,l&&(l>34||l<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<d;s++)e.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],24:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[n]];return d&&d.push([b,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},b={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(g,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+x.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(17),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}]},{},["loader",2,15,5,3,4]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sauteed Chicken Breasts with Creamy Chive Sauce Recipe - EatingWell</title>
+
+
+    <link rel="icon" href="https://images.media-allrecipes.com/EatingWellAssets/assets/icon/favicon.ico" />
+    
+
+
+<meta property="og:site_name" content="EatingWell" />
+
+<meta property="og:title" content="Sauteed Chicken Breasts with Creamy Chive Sauce Recipe" />
+<meta property="og:name" content="Sauteed Chicken Breasts with Creamy Chive Sauce Recipe" />
+
+<meta property="fb:pages" content="11260655797" />
+
+
+    <meta id="metaDescription" name="description" content="Here&#39;s a sauce so delicious, it&#39;s missing only one thing: a little crunchy bread to dip in it. Make It a Meal: Serve with steamed asparagus or cauliflower, mashed potatoes or orzo pasta, and a glass of Vinho Verde.">
+    <meta property="og:description" content="Here&#39;s a sauce so delicious, it&#39;s missing only one thing: a little crunchy bread to dip in it. Make It a Meal: Serve with steamed asparagus or cauliflower, mashed potatoes or orzo pasta, and a glass of Vinho Verde." />
+
+
+    <meta name="robots" content="noodp,noydir" />
+
+
+    <link id="canonicalUrl" rel="canonical" href="http://www.eatingwell.com/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/" />
+    <meta property="og:url" />
+
+
+    <link rel="next" href="http://www.eatingwell.com/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/reviews/?page=2" />
+<meta property="og:type" content="recipe"/>
+
+    <meta property="og:image" content="http://images.media-allrecipes.com/userphotos/960x960/3755910.jpg" />
+
+    
+    <!-- ARLOG SERVER: RD0003FFA84BEF LOCAL_IP: 10.255.22.159 MERCH_KEY: MerchData_4_1_1_251798_US_68 -->
+    <!-- set domain to avoid cross domain issue-->
+    <script>
+        document.domain = "www.eatingwell.com";
+    </script>
+
+        <!-- Begin Monetate tag v6. Place at start of document head. DO NOT ALTER. -->
+        <script type="text/javascript">
+            var mdp = mdp || {};
+
+            mdp.apiConfig = {
+                "apigeeEnabled": false,
+                "apiKey": "Rqtk7wjnaOji4Zh4UgJaPMRvsWLm5fIa",
+                "appId": "fullSiteReg",
+                "domain": "eatingwell.com",
+                "environment": "prod",
+                "color": "#000000"
+            };
+
+        </script>
+        <!-- End Monetate tag. -->
+        <script src="https://secure.static.meredith.com/web/js-min/common/js/mdpApi/mdpApi.js"></script>
+        <script src="https://secure.static.meredith.com/web/js-min/common/js/mdpTargeting.js"></script>
+
+    <!-- Begin comScore Tag - Part 1 -->
+    <script>
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "6036305", c3: "EATINGWELL.COM", cs_ucfr: "1" });
+        (function () {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+            s.async = true;
+            s.src = (document.location.protocol === "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+    <!-- End comScore Tag Part 1-->
+
+    <script src='http://js01.media-allrecipes.com/EatingWellAssets/assets/deployables/v-1.161.0.2309/eatingWell-js-eager.bundled.js' ></script>
+
+    
+    <script src='http://js01.media-allrecipes.com/EatingWellAssets/assets/deployables/v-1.161.0.2309/eatingWell-js-grocery-server.bundled.js' ></script>
+
+
+    <link href='https://images.media-allrecipes.com/EatingWellAssets/assets/deployables/v-1.161.0.2309/eatingWell-css.bundled.Css' rel='stylesheet'/>
+
+
+
+
+</head>
+<body>
+    <script>
+    var pubsub = new Pubsub();
+
+window.dataLayer={"version":"1.0","pageInstanceId":"www.eatingwell.com/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/","externalLinkId":"","page":{"pageInfo":{"pageId":"251798","pageName":"recipes:view:Sauteed Chicken Breasts with Creamy Chive Sauce","destinationUrl":"http://www.eatingwell.com/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/","sysEnv":"RD0003FFA84BEF","variant":"Control","version":"20161112","issueDate":"03/03/2019 21:09:06","effectiveDate":"03/03/2019 21:09:06","domain":"www.eatingwell.com","parameters":{},"contentCreationDate":"11/12/2016"},"category":{"primaryCategory":"healthyrecipes","contentType":"recipe","subContentType":"","adZone":"","adKeys":"status=unrecognized;oid=;fit=1;r=251798;id=251798;k=[1,24,53,81,112,125,146,147,150,169,170,205,216,229,241,252,265,574,586,657,699,719]","contentSource":"1","statusCode":""},"attributes":{"contentId":"251798","title":"Sauteed Chicken Breasts with Creamy Chive Sauce","country":"USA"}},"event":[],"user":[{"analyticsId":"","segment":{"adStatus":"unrecognized","visitorType":"anonymous","loginStatus":"no"},"profile":[{"profileInfo":{"profileId":"0","loginType":"None"}}],"magFollower":false}],"newsletter":{"mailingId":"","mailingName":"","mailingDate":"","mailingLinkGroup":"","mailingLinkName":""}};
+    if (typeof (window.dataLayer) !== "undefined" && window.dataLayer) {
+        var clientAnalytics = new ClientAnalytics(window.dataLayer);
+
+        window.dataLayer.AnalyticsData_Category_cd2 = "";
+        window.dataLayer.AnalyticsData_SubCategory_cd3 = "";
+        window.dataLayer.AnalyticsData_Story_cd18 = "";
+
+        window.gtmDataLayer = [];
+        var gtmShim = new GoogleTagManagerShim(window.dataLayer, window.gtmDataLayer);
+
+        var comscoreShim = new ComscoreShim(window.dataLayer, pubsub);
+    }
+
+    </script>
+    
+    <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P7HM9G"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'gtmDataLayer', 'GTM-P7HM9G');
+</script>
+<!-- End Google Tag Manager -->
+
+
+    <!-- Begin comScore Tag - Part 2 -->
+    <noscript>
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=6036305&cv=2.0&cj=1&cs_ucfr=1" />
+    </noscript>
+    <!-- End comScore Tag - Part 2 -->
+
+        <div id="monetate_lightbox"></div>
+
+    <div id="eatingWellAppId" ng-app="eatingWell">
+        <div class="sliderContainer" global-ui-events>
+            <div class="siteContent">
+                <header class="layoutHeader">
+                    
+
+
+
+<section id="anchoringTopAdPartial" class="ad-container-nostyle anchoringTopAdDefault">
+    <div>
+        <div id="region-ad">
+            <span class="advertisement">ADVERTISEMENT</span>
+            
+            <div id="div-gpt-leaderboard-flex-1" data-tier="1"></div>
+        </div>
+    </div>
+</section>
+<section ng-controller="ewNavigationHeaderInterimController">
+    <section class="layoutHeaderSection" ng-controller="ewNavigationHeaderController">
+        <div class="headerBarContentContainer">
+            <div class="headerBarContentLinks">
+                <a href="http://www.eatingwell.com/digital">Digital Editions</a>
+                <a href="http://www.eatingwell.com/newsletter_subscription">Newsletters</a>
+            </div>
+            <!-- The NEW 'Search Bar' is made up of two <div>'s.  The OLD 'Search Bar' is made up of a <form> and a <div>. -->
+            <ul class="menu-left">
+                <li class="search-tab" ng-controller="ew_controllers_search">
+                    <div class="materialize-row no-side-spacing nav-search" popup-trigger="topNavSearchMenu">
+                        <!--topNavSearchMenu_showing comes from the popup panel, and is used here to show the right state of the spyglass-->
+                        <span class="col m3 search-spyglass" ng-hide="topNavSearchMenu_showing">
+                            <img alt="Search" height="23" width="23" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/shared/search-magnifier-green.svg" />
+                        </span>
+                        <span class="col m3 search-spyglass active" ng-cloak ng-hide="!topNavSearchMenu_showing">
+                            <img alt="Search" height="23" width="23" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/shared/search-magnifier-grey.svg" />
+                        </span>
+                        <input id="searchText" class="col m9" type="text" placeholder="Search EatingWell" ng-model="search.keywords">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-tab nav-tab__search ng-hide" popup-panel="topNavSearchMenu" ng-cloak>
+            
+
+
+
+<div class="materialize-row searchOverlay" data-ng-controller="ew_controllers_search">
+    <div class="materialize-row col m3 searchTerm">
+        <span class="col m12 inputTitle">Keywords</span>
+        <input id="searchformText" type="text" placeholder=" Ex. taco salad" ng-model="search.keywords" ng-keydown="(isEnterKey($event) && performSearch())" class="col m12 inputBar setFocus-keywordSearch" tabindex="1">
+    </div>
+    
+    <div class="materialize-row col m3 ingredients"
+            ew-assign-scrollable-classes="{ outermostWrapper: 'ingredients', clippingFrame: 'ingredient-clipping-frame', draggableElement: 'ingredient-scroller' }">
+        <span class="col m11 inputTitle">Include Ingredients</span>
+        <div class="materialize-row col m11 ingredientEntryWrapper">
+            <div class="inputBar col m10">
+                <div class="ingredient-clipping-frame">
+                    <ul class="ingredient-scroller"
+                        ng-mousedown="mouseDown($event)" ng-mouseup="mouseUp($event)"
+                        ar-touchstart="touchStart($event)" ar-touchend="touchEnd($event)" unselectable="on" onselectstart="return false;">
+
+                        <li ng-repeat="ingredient in search.ingredientsInclude">
+                            <span>
+                                <span ng-bind="::ingredient"></span>
+                                <span class="icon--x ignore-ar-touchstart ignore-ar-touchend" ng-click="removeIngredientInclude(ingredient, $event)" unsubscribe-global-click-handler>&#x2715;</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ingredient-add-exclude">
+                    
+                    <input id="includeIngText" type="text" ng-attr-placeholder="{{includeIngPlaceholderText}}" name="txtIncludeIng"
+                            ng-model="includeIngredient" ng-focus="hideAds();" ng-blur="showAds()"
+                            ng-keydown="(isBackspaceKey($event) && removeLastIngredientInclude($event)) || ((isTabKey($event) || isEnterKey($event)) && addIngredientInclude($event))" class="setFocus-includeIng" tabindex="2">
+                </div>
+            </div>
+            <div class="col m2 add-exclude-button">
+                <button class="btnGreenApple btnBasic--tiny ingredientButton" ng-click="addIngredientInclude($event)" ar-event-focus="click" ar-event-focus-id="setFocus-includeIng" ng-class="{ 'grayed-out': includeIngHitMax }">+</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="materialize-row col m3 ingredients"
+            ew-assign-scrollable-classes="{ outermostWrapper: 'ingredients', clippingFrame: 'ingredient-clipping-frame', draggableElement: 'ingredient-scroller' }">
+        <span class="col m11 inputTitle">Exclude Ingredients</span>
+        <div class="materialize-row col m11 ingredientEntryWrapper">
+            <div class="col m10 inputBar">
+                <div class="ingredient-clipping-frame">
+                    <ul class="ingredient-scroller"
+                        ng-mousedown="mouseDown($event)" ng-mouseup="mouseUp($event)"
+                        ar-touchstart="touchStart($event)" ar-touchend="touchEnd($event)" unselectable="on" onselectstart="return false;">
+
+                        <li ng-repeat="ingredient in search.ingredientsExclude">
+                            <span>
+                                <span ng-bind="::ingredient" class="exclude-item"></span>
+                                <span class="icon--x ignore-ar-touchstart ignore-ar-touchend" ng-click="removeIngredientExclude(ingredient, $event)" unsubscribe-global-click-handler>&#x2715;</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ingredient-add-exclude">
+                    
+                    <input id="excludeIngText" type="text" ng-attr-placeholder="{{excludeIngPlaceholderText}}" name="txtExcludeIng"
+                            ng-model="excludeIngredient" ng-focus="hideAds();" ng-blur="showAds()"
+                            ng-keydown="(isBackspaceKey($event) && removeLastIngredientExclude($event)) || ((isTabKey($event) || isEnterKey($event)) && addIngredientExclude($event))" class="setFocus-excludeIng" tabindex="3">
+                </div>
+            </div>
+            <div class="col m2 add-exclude-button">
+                <button class="btnOrangeRed addBottomPadding btnBasic--tiny ingredientButton" ng-class="{ 'grayed-out': excludeIngHitMax }" ng-click="addIngredientExclude($event)" ar-event-focus="click" ar-event-focus-id="setFocus-excludeIng">-</button>
+            </div>
+        </div>
+    </div>
+    <div class="materialize-row col m3 searchPaneButtonWrapper">
+        <div class="materialize-row col m6 ingredientSearch">
+            <button class="btnTinyLong btnGreenApple actionButton col offset-m1 m11" ng-click="performSearch()" ng-cloak>Search</button>
+        </div>
+        <div class="materialize-row col m6 ingredientSearch">
+            <button class="btnTinyLong btnGreenApple actionButton col offset-m1 m11" hideWhenClicked ng-cloak>Cancel</button>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="eatingWellLogo">
+            <a href="http://www.eatingwell.com">
+            <img alt="EatingWell" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/shared/eatingwell_logo.svg" />
+            </a>
+        </div>
+        <div class="headerBarContentContainer">
+            <div class="headerBarContentLinks flushRight">
+                <span id="mnt-topNavSubLink">
+                    <a href="https://secure.eatingwell.com/order/?containerName=i63ver111&psrc=I63VER111">EatingWell Magazine Subscribe Now!</a>
+                </span>
+            </div>
+            <div class="headerBarContentMain">
+                <div class="headerProfile">
+                    <div>
+                        <a href="http://www.eatingwell.com/account/authenticationwelcome">
+                        <span class="userSignIn"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobileMenuButton hideDesktop">
+                    <a popup-trigger="topHamburgerMenu">
+                        <div class="hamburgerNav" ng-class="{'active':topHamburgerMenu_showing}">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mobileMenuList ng-hide" ng-cloak popup-panel="topUserMenu">
+        <ul class="menuNavigationProfile">
+    <li>
+        <a href="http://www.eatingwell.com/profile/my/">
+            <span>Favorites</span>
+        </a>
+    </li>
+    <li>
+        <a href="http://www.eatingwell.com/profile/my/profile-settings">
+            <span>Profile</span>
+        </a>
+    </li>
+    <li>
+        <a href="http://www.eatingwell.com/profile/my/alerts-notifications">
+            <span>Newsletters</span>
+        </a>
+    </li>
+    <li>
+        <a href="http://www.eatingwell.com/profile/my/account-settings">
+            <span>Account Settings</span>
+        </a>
+    </li>
+    <li class="divider"></li>
+    <li class="menuSignOut">
+        <a href="http://www.eatingwell.com/account/SignOut/">Log Out</a>
+    </li>
+</ul>
+
+    </section>
+
+    <section class="bottom-bar ng-hide" popup-panel="topHamburgerMenu">
+        
+
+<div class="nav-bar" ng-class="mobileMenuActiveClass">
+    <nav class="bottom-bar">
+        <ul class="interimMobileOnly interimMenuAccount">
+                <li><a href="http://www.eatingwell.com/account/authenticationwelcome">Join EatingWell</a></li>
+                            <li>
+                    <a href="http://www.eatingwell.com/account/signin">
+                        Sign In
+                    </a>
+                </li>
+        </ul>
+        <ul class="dl-menuopen menu-left interimMenuTopNav">
+            <li class="" ng-class="recipesNavActiveClass[0]">
+                <a class="interimDesktopOnly nav-top-level-desktop" href="http://www.eatingwell.com/recipes/" ng-mouseenter="toggleRecipesSubNav(0,true);" ng-mouseleave="toggleRecipesSubNav(0,false);">Healthy Recipes</a>
+                <a class="interimMobileOnly nav-top-level-mobile" href="http://www.eatingwell.com/recipes/">Healthy Recipes</a>
+                <a class="nav-sub-expander" ng-click="toggleRecipesSubNav(0);$event.stopPropagation();">></a>
+                <div class="interimMenuSubnav nav-item-contains-lower-link" ng-show="togglerRecipesSubNav[0]" ng-cloak ng-mouseenter="toggleRecipesSubNav(0,true);" ng-mouseleave="toggleRecipesSubNav(0,false);">
+                    <ul class="nav-recipe-hubs">
+                        
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17916/mealtimes/breakfast-brunch/">Breakfast Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17949/drinks/">Drink Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17896/clean-eating/">Clean-Eating Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17942/cooking-methods/">Cooking Methods</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17963/mealtimes/lunch/">Lunch Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17965/main-dishes/">Main Dish Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17899/diabetic/">Diabetes-Friendly Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17959/holidays-occasions/">Holiday &amp; Occasion Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17947/mealtimes/dinner/">Dinner Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17981/salad/">Salad Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18012/low-calorie/">Low Calorie Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18043/ingredients/">Ingredients</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18041/appetizer/">Appetizer Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/17986/side-dishes/">Side Dish Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18045/weight-loss-diet/">Weight Loss Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18003/vegan/">Vegan Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18044/desserts/">Dessert Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18042/soup/">Soup Recipes</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18024/special-diets/">More Special Diets</a>
+                        </li>
+                        <li>
+                            <a href="http://www.eatingwell.com/recipes/18005/vegetarian/">Vegetarian Recipes</a>
+                        </li>
+                    </ul>
+                    <a class="nav-browse-recipes" href="http://www.eatingwell.com/recipes/">Browse all EatingWell recipes</a>
+                </div>
+            </li>
+            <li class="" ng-class="recipesNavActiveClass[1]">
+                <a class="interimDesktopOnly nav-top-level-desktop" href="http://www.eatingwell.com/category/4236/weight-loss/" ng-mouseenter="toggleRecipesSubNav(1,true);" ng-mouseleave="toggleRecipesSubNav(1,false);">Weight Loss</a>
+                <a class="interimMobileOnly nav-top-level-mobile" href="http://www.eatingwell.com/category/4236/weight-loss/">Weight Loss</a>
+                <a class="nav-sub-expander" ng-click="toggleRecipesSubNav(1);$event.stopPropagation();">></a>
+                <div class="interimMenuSubnav" ng-show="togglerRecipesSubNav[1]" ng-cloak ng-mouseenter="toggleRecipesSubNav(1,true);" ng-mouseleave="toggleRecipesSubNav(1,false);">
+                    <ul class="nav-recipe-hubs">
+                        <li><a href="http://www.eatingwell.com/category/4237/how-to-lose-weight/">How to Lose Weight</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4238/quick-weight-loss/">Quick Weight-Loss</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4239/best-foods-for-weight-loss/">Best Foods for Weight-Loss</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4240/weight-loss-motivation/">Weight-Loss Motivation</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4241/guide-to-popular-diets-weight-loss-programs/">Popular Diet Program Reviews</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4242/weight-loss-challenge/">Weight Loss Challenge</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="" ng-class="recipesNavActiveClass[2]">
+                <a class="interimDesktopOnly nav-top-level-desktop" href="http://www.eatingwell.com/category/4243/special-diets/" ng-mouseenter="toggleRecipesSubNav(2,true);" ng-mouseleave="toggleRecipesSubNav(2,false);">Special Diets</a>
+                <a class="interimMobileOnly nav-top-level-mobile" href="http://www.eatingwell.com/category/4243/special-diets/">Special Diets</a>
+                <a class="nav-sub-expander" ng-click="toggleRecipesSubNav(2);$event.stopPropagation();">></a>
+                <div class="interimMenuSubnav" ng-show="togglerRecipesSubNav[2]" ng-cloak ng-mouseenter="toggleRecipesSubNav(2,true);" ng-mouseleave="toggleRecipesSubNav(2,false);">
+                    <ul class="nav-recipe-hubs">
+                        <li><a href="http://www.eatingwell.com/category/4244/clean-eating-diet-center/">Clean Eating Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4247/dairy-free-diet-center/">Dairy-Free Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4248/diabetes-diet-center/">Diabetes Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4251/gluten-free-diet-center/">Gluten-Free Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4254/healthy-aging-diet-center/">Healthy Aging Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4256/heart-healthy-diet-center/">Heart-Healthy Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4259/high-blood-pressure-diet-center/">High Blood Pressure Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4262/high-fiber-diet-center/">High-Fiber Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4267/low-carb-diet-center/">Low-Carb Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4268/cholesterol-diet-center/">Cholesterol Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4271/low-sodium-diet-center/">Low-Sodium Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4274/mediterranean-diet-center/">Mediterranean Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4277/pregnancy-diet-center/">Pregnancy Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4280/vegan-diet-center/">Vegan Diet Center</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4283/vegetarian-diet-center/">Vegetarian Diet Center</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="" ng-class="recipesNavActiveClass[3]">
+                <a class="interimDesktopOnly nav-top-level-desktop" href="http://www.eatingwell.com/category/4286/meal-plans/" ng-mouseenter="toggleRecipesSubNav(3,true);" ng-mouseleave="toggleRecipesSubNav(3,false);">Meal Plans</a>
+                <a class="interimMobileOnly nav-top-level-mobile" href="http://www.eatingwell.com/category/4286/meal-plans/">Meal Plans</a>
+                <a class="nav-sub-expander" ng-click="toggleRecipesSubNav(3);$event.stopPropagation();">></a>
+                <div class="interimMenuSubnav" ng-show="togglerRecipesSubNav[3]" ng-cloak ng-mouseenter="toggleRecipesSubNav(3,true);" ng-mouseleave="toggleRecipesSubNav(3,false);">
+                    <ul class="nav-recipe-hubs">
+                        <li><a href="http://www.eatingwell.com/category/4287/meal-planning-101/">Meal Planning 101</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4288/dinner-plans/">Dinner Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4289/clean-eating-meal-plans/">Clean Eating Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4290/dairy-free-meal-plans/">Dairy-Free Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4291/meal-plans-for-diabetes/">Meal Plans for Diabetes</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4292/blood-pressure-meal-plans/">Blood Pressure Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4293/high-fiber-meal-plans/">High-Fiber Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4294/gluten-free-meal-plans/">Gluten-Free Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4295/anti-aging-meal-plans/">Anti-Aging Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4296/healthy-kids-meal-plans/">Healthy Kids Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4297/heart-healthy-meal-plans/">Heart-Healthy Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4298/low-carb-meal-plans/">Low-Carb Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4299/low-cholesterol-meal-plans/">Low Cholesterol Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4300/mediterranean-diet-meal-plans/">Mediterranean Diet Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4301/pregnancy-meal-plans/">Pregnancy Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4302/low-sodium-meal-plans/">Low Sodium Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4303/vegan-meal-plans/">Vegan Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4304/vegetarian-meal-plans/">Vegetarian Meal Plans</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4305/weight-loss-meal-plans/">Weight-Loss Meal     Plans</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="" ng-class="recipesNavActiveClass[4]">
+                <a class="interimDesktopOnly nav-top-level-desktop" href="http://www.eatingwell.com/category/4306/healthy-eating-101/" ng-mouseenter="toggleRecipesSubNav(4,true);" ng-mouseleave="toggleRecipesSubNav(4,false);">Healthy Eating 101</a>
+                <a class="interimMobileOnly nav-top-level-mobile" href="http://www.eatingwell.com/category/4306/healthy-eating-101/">Healthy Eating 101</a>
+                <a class="nav-sub-expander" ng-click="toggleRecipesSubNav(4);$event.stopPropagation();">></a>
+                <div class="interimMenuSubnav" ng-show="togglerRecipesSubNav[4]" ng-cloak ng-mouseenter="toggleRecipesSubNav(4,true);" ng-mouseleave="toggleRecipesSubNav(4,false);">
+                    <ul class="nav-recipe-hubs">
+                        <li><a href="http://www.eatingwell.com/category/4319/eat-more-vegetables/">Eat More Vegetables</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4307/how-to-eat-healthy/">How to Eat Healthy</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4320/plant-your-plate/">Plant Your Plate</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4308/best-healthy-foods/">Best Healthy Foods</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4309/healthy-cooking-how-tos/">Healthy Cooking How-Tos</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4310/entertaining/">Entertaining</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4311/healthy-eating-for-kids/">Healthy Eating for Kids</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4312/ask-the-test-kitchen/">Ask the Test Kitchen</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4313/wine-beer-spirits-guide/">Wine, Beer & Spirits Guide</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4314/budget-cooking-guide/">Budget Cooking Guide</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4315/healthy-pets/">Healthy Pets</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4316/green-and-sustainable-eating/">Green and Sustainable Eating</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4317/30-day-challenges/">30-Day Challenges</a></li>
+                        <li><a href="http://www.eatingwell.com/category/4318/healthy-in-real-life/">EatingWell in Real Life</a></li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+            
+            <li ng-class="recipesNavActiveClass[5]">
+                
+                <a class="interimDesktopOnly nav-top-level-desktop" href="http://www.eatingwell.com/shop" ng-mouseenter="toggleRecipesSubNav(5,true);" ng-mouseleave="toggleRecipesSubNav(5,false);">Shop</a>
+                
+                <a class="interimMobileOnly nav-top-level-mobile" href="http://www.eatingwell.com/shop">Shop</a>
+                
+                <a class="nav-sub-expander" ng-click="toggleRecipesSubNav(5);$event.stopPropagation();">></a>
+                
+                <div class="interimMenuSubnav" ng-show="togglerRecipesSubNav[5]" ng-cloak ng-mouseenter="toggleRecipesSubNav(5,true);" ng-mouseleave="toggleRecipesSubNav(5,false);">
+                    
+                    <ul class="nav-recipe-hubs">
+                        <li><a href="http://eatingwell.com/frozenfresh">EatingWell Frozen Meals</a></li>
+                        <li><a href="http://www.eatingwell.com/shop">EatingWell Cookbooks &amp; More</a></li>
+                        <li><a href="http://www.eatingwell.com/free_downloads/free_recipes_free_cookbooks_free_meal_plans_to_download?psrc=R1310EWTN1005R962PD">Free Digital Cookbooks</a></li>
+                        <li><a href="http://promo.eatingwell.com">Promotions &amp; Events</a></li>
+                        <li><a href="https://secure.eatingwell.com/order/?containerName=i54geri05&ordersrc=ShopCategory_I54GERI05">Subscribe to our magazine</a></li>
+                        <li><a href="https://secure.eatingwell.com/order/?containerName=i56geti28">Give a Gift</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="">
+                <a class="nav-top-level-mobile nav-top-level-desktop" href="http://www.eatingwell.com/videos/">Videos</a>
+            </li>
+            <li class="">
+                <a class="nav-top-level-mobile nav-top-level-desktop" href="http://www.eatingwell.com/about_us/">About Us</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+    </section>
+</section>
+
+                </header>
+                
+                
+
+                <div class="containerContent bodyContent">
+                    
+
+
+
+
+
+<div id="ad-is-mobile"></div>
+<div id="ad-is-tablet"></div>
+<script>
+    (function($) {
+        
+        window.adConfiguration = {
+            "settings": {
+                "responsiveGridSlots": 0 }
+        };
+
+        
+        var mobileAdElem = document.getElementById('ad-is-mobile');
+        var isMobileAds = !(mobileAdElem.offsetWidth === 0 && mobileAdElem.offsetHeight === 0);
+
+        var isTablet = $ && $('#ad-is-tablet').css('display') === 'none';
+
+        
+        window.karma = window.karma || {};
+        window.karma.config = {
+            apiVersion: 3,
+            allTiersAllTheTime: true,
+            isDesktop: window.innerWidth > 1024,
+            isMobile: isMobileAds,
+            tabletAds: isTablet,
+            unitValues: {
+
+                channel: ""
+            },
+            targeting: {
+                                    type: "recipe", 
+                                    channel: "healthyrecipes",
+                mention_category: "",
+                mention: "",
+                "refreshType":"hard",
+                "status": "unrecognized",
+                "oid": "",
+                "fit": "1",
+                "r": "251798",
+                "id": "251798",
+                "k": [1,24,53,81,112,125,146,147,150,169,170,205,216,229,241,252,265,574,586,657,699,719]
+            }
+        };
+    })();
+    
+    !function (a, e) {
+        if (window.suppress_karma) {
+            return true;
+        }
+        function r() {
+            if (a.karma.vars = a.karma.vars || {}, !(a.karma.vars.kismetReported || null !== e.querySelector('img[src$="kismet/spacer.png"]'))) {
+                a.karma.vars.kismetReported = !0;
+                var r = e.createElement("img");
+                r.src = "/kismet/spacer.png", e.body.appendChild(r)
+            }
+        }
+        a.karma.cmd = a.karma.cmd || [], a.karma.config.go = function () {
+            a.karma.cmd.push("go")
+        };
+        var t = e.createElement("script");
+        t.src = "https://karma.mdpcdn.com/service/js-min/karma.js", t.onload = t.onreadystatechange = function () {
+            var a = this.readyState;
+            a && "complete" != a && "loaded" != a && r()
+        }, t.onerror = r;
+        var m = e.getElementsByTagName("script")[0];
+        m.parentNode.insertBefore(t, m)
+    }(window, document);
+
+</script>
+
+<span class="showOnTabletToDesktop recipePageBreadcrumb">
+
+
+<div ng-class="hubNavClass" class="breadCrumbs" data-recipe-hub-sticky-nav>  <!-- FIXME: style -->
+    
+    <div class="recipe_hub--similar">
+        <ol class="breadCrumbs" itemscope itemtype="http://schema.org/BreadcrumbList" data-scroll-left>
+            <li data-list-item itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <meta itemprop="item" content="http://www.eatingwell.com"/>
+               
+                <a data-internal-referrer-link="hub nav" data-link-name="hub nav exposed" data-click-id="hub nav 1" href="http://www.eatingwell.com" target="_self" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                    <span class="toggle-similar__title" itemprop="name">
+                                        Home
+                                    </span>
+                    <span class="icon--chevronRight"></span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+
+                <li data-list-item itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <meta itemprop="item" content="http://www.eatingwell.com/recipes/"/>
+                  
+                 
+
+
+                        <a data-internal-referrer-link="hub nav" data-link-name="hub nav exposed" data-click-id="hub nav 2" href="http://www.eatingwell.com/recipes/" target="_self"  itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                            <span class="toggle-similar__title" itemprop="name">
+                                Recipes
+                            </span>
+                            <span class="icon--chevronRight"></span>
+                        </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li data-list-item itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <meta itemprop="item" content="http://www.eatingwell.com/recipes/18043/ingredients/"/>
+                  
+                 
+
+
+                        <a data-internal-referrer-link="hub nav" data-link-name="hub nav exposed" data-click-id="hub nav 3" href="http://www.eatingwell.com/recipes/18043/ingredients/" target="_self"  itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                            <span class="toggle-similar__title" itemprop="name">
+                                Ingredients
+                            </span>
+                            <span class="icon--chevronRight"></span>
+                        </a>
+                    <meta itemprop="position" content="3" />
+                </li>
+                <li data-list-item itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <meta itemprop="item" content="http://www.eatingwell.com/recipes/22777/ingredients/meat-poultry/"/>
+                  
+                 
+
+
+                        <a data-internal-referrer-link="hub nav" data-link-name="hub nav exposed" data-click-id="hub nav 4" href="http://www.eatingwell.com/recipes/22777/ingredients/meat-poultry/" target="_self"  itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                            <span class="toggle-similar__title" itemprop="name">
+                                Meat & Poultry
+                            </span>
+                            <span class="icon--chevronRight"></span>
+                        </a>
+                    <meta itemprop="position" content="4" />
+                </li>
+                <li data-list-item itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <meta itemprop="item" content="http://www.eatingwell.com/recipes/18241/ingredients/meat-poultry/chicken/"/>
+                  
+                 
+
+
+                        <a data-internal-referrer-link="hub nav" data-link-name="hub nav exposed" data-click-id="hub nav 5" href="http://www.eatingwell.com/recipes/18241/ingredients/meat-poultry/chicken/" target="_self"  itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                            <span class="toggle-similar__title" itemprop="name">
+                                Chicken
+                            </span>
+                            <span class="icon--chevronRight"></span>
+                        </a>
+                    <meta itemprop="position" content="5" />
+                </li>
+                <li data-list-item itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <meta itemprop="item" content="http://www.eatingwell.com/recipes/17932/ingredients/meat-poultry/chicken/main-dish/"/>
+                  
+                 
+
+
+                        <a data-internal-referrer-link="hub nav" data-link-name="hub nav exposed" data-click-id="hub nav 6" href="http://www.eatingwell.com/recipes/17932/ingredients/meat-poultry/chicken/main-dish/" target="_self"  itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                            <span class="toggle-similar__title" itemprop="name">
+                                Main Dish
+                            </span>
+                            <span class="icon--chevronRight"></span>
+                        </a>
+                    <meta itemprop="position" content="6" />
+                </li>
+                <li data-list-item itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <meta itemprop="item" content="http://www.eatingwell.com/recipes/22243/ingredients/meat-poultry/chicken/main-dish/creamy/"/>
+                  
+                 
+
+
+                        <a data-internal-referrer-link="hub nav" data-link-name="hub nav exposed" data-click-id="hub nav 7" href="http://www.eatingwell.com/recipes/22243/ingredients/meat-poultry/chicken/main-dish/creamy/" target="_self"  itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                            <span class="toggle-similar__title" itemprop="name">
+                                Creamy
+                            </span>
+                            <span class="icon--chevronRight"></span>
+                        </a>
+                    <meta itemprop="position" content="7" />
+                </li>
+
+        </ol>
+    </div>
+</div>
+
+</span>
+<div class="recipeContainer-outer">
+    <section class="ewRecipeIndex full-page" itemscope itemtype="http://schema.org/Recipe">
+        <meta itemprop="mainEntityOfPage" content="True" />
+          <meta itemprop="recipeCategory" content="Ingredients" />
+          <meta itemprop="recipeCategory" content="Meat &amp; Poultry" />
+          <meta itemprop="recipeCategory" content="Chicken" />
+          <meta itemprop="recipeCategory" content="Main Dish" />
+          <meta itemprop="recipeCategory" content="Creamy" />
+                    <div itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                <meta itemprop="thumbnailUrl" content="https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/70354b55-2ee5-4dc6-afbc-bccf64994807/bfa889ce-e83c-419c-8aee-a2050fb25961/135x90/match/image.jpg" />
+                <meta itemprop="embedUrl" content="http://c.brightcove.com/services/viewer/federated_f9?&amp;width=640&amp;height=360&amp;flashID=myExperience1086638575001&amp;bgcolor=%23FFFFFF&amp;playerID=1094141761001&amp;playerKey=AQ~~%2CAAAA8JJyvME~%2CK4ozHF41iv1geq61oV_5IVDU4aWxAYLa&amp;wmode=transparent&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;%40videoPlayer=5118964675001&amp;autoStart=true&amp;debuggerID=" />
+                <meta itemprop="name" content="Healthy Dinner: Chicken with Creamy Chive Sauce Recipe" />
+                <meta itemprop="image" content="https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/70354b55-2ee5-4dc6-afbc-bccf64994807/cd57020e-fce2-478a-9836-6ff2c803e5df/465x310/match/image.jpg" />
+                <meta itemprop="description" content="This quick chicken recipe is low in calories thanks to a few healthy cooking tech" />
+                <meta itemprop="interactionCount" content="1655" />
+                <meta itemprop="duration" content="PT1M53.9S" />
+                <meta itemprop="contentURL" content="https://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5118192885001/70354b55-2ee5-4dc6-afbc-bccf64994807/10s/master.m3u8?fastly_token=NWM3ZThiYjFfOGIzMzZiNjU2OTkyOWZkMmU4MjA0YWQwZjQyZjg5NzY1OGE1MTgwNTg4YTFkZTBhNTE4MjE2MWI5N2M4YTIwNQ%3D%3D" />
+
+              <meta itemprop="uploadDate" content="2016-11-12 07:19:10" />
+         </div>
+        
+        
+
+<meta itemprop="image" content="http://images.media-allrecipes.com/userphotos/960x960/3755910.jpg" />
+<meta property="og:rating" content="4.63793087005615" />
+<meta property="og:rating_scale" content="5" />
+<meta itemprop="description" content="Here&#39;s a sauce so delicious, it&#39;s missing only one thing: a little crunchy bread to dip in it. Make It a Meal: Serve with steamed asparagus or cauliflower, mashed potatoes or orzo pasta, and a glass of Vinho Verde." />
+<section ng-controller="ewHintsController"></section>
+
+<section class="recipeDetailSummary" ng-controller="ewRecipeDetailSummaryController" ng-init="init(251798, 'Recipe', 'Sauteed Chicken Breasts with Creamy Chive Sauce', 'http://images.media-allrecipes.com/userphotos/960x960/3755910.jpg')">
+
+    <div>
+        <h3 class="recipeDetailHeader hideOnTabletToDesktop">Sauteed Chicken Breasts with Creamy Chive Sauce</h3>
+        <div class="recipeDetailSummaryImage">
+            
+            <div class="recipeDetailSummaryImageContainer">
+                <a href="http://images.media-allrecipes.com/userphotos/960x960/3755910.jpg" target="_blank">
+                    <img class="recipeDetailSummaryImageMain" src="http://images.media-allrecipes.com/userphotos/960x960/3755910.jpg" alt="Sauteed Chicken Breasts with Creamy Chive Sauce"/>
+                </a>
+
+                    <div class="icon-hasVideo">
+                        <a id="btn_RecipeVideo" class="icon--videoplay" href="http://www.eatingwell.com/video/6842/healthy-dinner-chicken-with-creamy-chive-sauce-recipe/">
+                            <span class="watch-video-text">Watch</span>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <div class="recipeDetailSummaryDetails">
+            <h3 class="recipeDetailHeader showOnTabletToDesktop" itemprop="name">Sauteed Chicken Breasts with Creamy Chive Sauce</h3>
+            <div class="recipeRating" title="4.6" data-scroll-to-anchor="reviews" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <meta itemprop="ratingValue" content="4.64">
+                <meta itemprop="reviewCount" content="116">
+                
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-half.svg" />
+
+
+                <span>116 Reviews</span>
+            </div>
+
+<div>
+            <span>From the EatingWell Kitchen</span>
+</div>
+
+
+            <div class="recipeSubmitter">
+                <p title="Here&#39;s a sauce so delicious, it&#39;s missing only one thing: a little crunchy bread to dip in it. Make It a Meal: Serve with steamed asparagus or cauliflower, mashed potatoes or orzo pasta, and a glass of Vinho Verde.">
+                    Here&#39;s a sauce so delicious, it&#39;s missing only one thing: a little crunchy bread to dip in it. Make It a Meal: Serve with steamed asparagus or cauliflower, mashed potatoes or orzo pasta, and a glass of Vinho Verde.
+                </p>
+                <ul itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <li class="submitterLogo"><img src="https://images.media-allrecipes.com/userphotos/50x50/5346107.jpg" alt="EatingWell Test Kitchen" title="EatingWell Test Kitchen" itemprop="image"/></li>
+                    <li class="submitterDetails">
+                        <span class="submittedBy centerLineHeight">By:</span>
+                        <span class="submitterTitle centerLineHeight" itemprop="name">EatingWell Test Kitchen</span>
+                        <span class="submitterRole noneDisplay"></span>
+                    </li>
+                    <li class="sponsorLogo">
+                        <div id="karma-lazy-sponsorLogo"></div>
+                    </li>
+                </ul>
+            </div>
+                <div class="nutritionTagContainer">
+                    <h2 class="headingH2GuttersNutritionTag">
+                        <a href="http://www.eatingwell.com/eatingwell_nutrition_and_recipe_guidelines" target="_blank" class="helpIcon">Nutrition profile</a>
+                    </h2>
+                    <ul class="twoRowList">
+                            <li><span class="nutritionTag"><a href="http://www.eatingwell.com/recipes/18053/lifestyle-diets/healthy-aging/">Healthy Aging</a></span></li>
+                            <li><span class="nutritionTag"><a href="http://www.eatingwell.com/recipes/18012/low-calorie/">Low-Calorie</a></span></li>
+                            <li><span class="nutritionTag"><a href="http://www.eatingwell.com/recipes/18013/lifestyle-diets/low-carb/">Low Carbohydrate</a></span></li>
+                    </ul>
+                </div>
+            <nav id="recipeActionBar" class="recipeDetailSummaryActionBar" ng-controller="ew_controllers_share_item">
+                <ul>
+                    <li id="recipeFavoriteButton" class="navHeart" ng-class="actionBarfavoriteStateClass" ng-click="saveOnClick()">
+                        <a title="Save">
+                            <span class="svg-icon--recipe-navbar--ew-icon-heart  svg-icon--recipe-navbar--ew-icon-heart-dims"></span>
+                            <span class="svg-icon--recipe-navbar--ew-icon-heart-white  svg-icon--recipe-navbar--ew-icon-heart-white-dims"></span>
+                        </a>
+                    </li>
+                    <li class="navRateIt">
+                        <a href="" ng-click="rateItOnClick(true)" title="Rate it">
+                            <span class="svg-icon--recipe-navbar--ew-nav-rate-it svg-icon--recipe-navbar--ew-nav-rate-it-dims"></span>
+                        </a>
+                    </li>
+                    <li class="navPrint">
+                        <a href="print/" title="Print recipe">
+                            <span class="svg-icon--recipe-navbar--ew-icon-print  svg-icon--recipe-navbar--ew-icon-print-dims"></span>
+                        </a>
+                    </li>
+                    <li class="navEmail">
+                        <a href="mailto:?Subject=Sauteed%20Chicken%20Breasts%20with%20Creamy%20Chive%20Sauce&amp;Body=http://www.eatingwell.com/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/" title="Email recipe">
+                            <span class="svg-icon--recipe-navbar--ew-icon-email svg-icon--recipe-navbar--ew-icon-email-dims"></span>
+                        </a>
+                    </li>
+                    <li class="bgFaceBook ">
+                        <a href="" title="Facebook" ng-click="socialShareStart('251798', 'facebook'); socialShareNavigate('https://facebook.com/sharer.php?u=http%3a%2f%2fwww.eatingwell.com%2frecipe%2f251798%2fsauteed-chicken-breasts-with-creamy-chive-sauce%2f', '_blank');">
+                            <span class="svg-icon--recipe-navbar--icon-facebook2 svg-icon--recipe-navbar--icon-facebook2-dims"></span>
+                        </a>
+                    </li>
+                    <li class="bgPinterest ">
+                        <a href="" title="Pinterest" ng-click="socialShareStart('251798', 'pinterest'); socialShareNavigate('http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.eatingwell.com%2frecipe%2f251798%2fsauteed-chicken-breasts-with-creamy-chive-sauce%2f&amp;media=http%3a%2f%2fimages.media-allrecipes.com%2fuserphotos%2f250x250%2f3755910.jpg&amp;description=Sauteed+Chicken+Breasts+with+Creamy+Chive+Sauce+-+EatingWell.com', '_blank');">
+                            <span class="svg-icon--recipe-navbar--icon-pinterest2 svg-icon--recipe-navbar--icon-pinterest2-dims"></span>
+                        </a>
+                    </li>
+                    <li class="bgTwitter">
+                        <a href="" title="Twitter" ng-click="socialShareStart('251798', 'twitter'); socialShareNavigate('https://twitter.com/intent/tweet?url=http%3a%2f%2fwww.eatingwell.com%2frecipe%2f251798%2fsauteed-chicken-breasts-with-creamy-chive-sauce%2f&amp;text=Sauteed+Chicken+Breasts+with+Creamy+Chive+Sauce+-+EatingWell.com&amp;via=EatingWell', '_blank');">
+                            <span class="svg-icon--recipe-navbar--icon-twitter2 svg-icon--recipe-navbar--icon-twitter2-dims"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+</section> 
+
+        <div data-ad-container-autocollapse class="ad-recipe-page-middle-container ad-mobile-only ad-container-nostyle">
+    <div id="ad-recipepagemiddle-2" class="ad-recipe-page-middle-2">
+        <div id="div-gpt-mob-square-fixed-1" data-tier="1"></div>
+    </div>
+    <span class="advertisement">ADVERTISEMENT</span>
+</div>
+
+ 
+
+<section class="recipeIngredients" ng-controller="ew_controllers_recipe_ingredient" ng-init="init(4, 251798, 'Recipe')">
+
+    <h2 class="headingH2GuttersIngredients">
+    Ingredients
+    <span class="recipeIngredientsHeaderToggles">
+        <meta id="metaRecipeServings" itemprop="recipeYield" content="4">
+
+        
+
+        
+        <a href="javascript:void(0)" id="servings-button" style="cursor: default;">
+            
+            <span class="servingsCount" ng-class="{'active': servingsSection_showing}">
+                
+                <span>4 servings</span> 
+                
+            </span>
+            <span class="iconAdjustServings" ng-class="{'active': servingsSection_showing}"></span>
+        </a>
+    </span>
+</h2>
+    <section class="adjustServings panel ng-hide" ng-class="isServingsPopup ? 'navTab' : ''" popup-panel="servingsSection" ignore-global="{{ isServingsPopup ? false : true }}" ng-cloak>
+    <div id="msg-scale">for serving adjustment</div>
+    <div>Serving size has been adjusted!</div>
+    <div class="subtext">Original recipe yields 4 servings</div>
+
+    <div class="adjustServingsSubContainer">
+        <div class="adjustServingsTextBox">
+            <input ng-model="servings" type="number" name="servings" data-role="none" id="servings" class="" min="0" max="300" value="4" data-original="4" ng-focus="hideAds()" ng-blur="showAds()"/>
+        </div>
+        <div class="adjustServingsButton">
+            <a class="btnsOne-small" href="" ng-click="getIngredients(251798,'Recipe', true)" id="btn-adjust">Adjust</a>
+
+        </div>
+        <div class="adjustServingsRadioButton">
+            <label>
+                <input type="radio" data-role="none" name="isMetric" checked="checked" ng-value="false" ng-model="isMetric"/>
+                <span class="radioButtonCircle"></span>
+            </label>
+            <span class="measurementTitle">US</span>
+        </div>
+        <div class="adjustServingsRadioButton">
+            <label>
+                <input type="radio" data-role="none" name="isMetric" ng-value="true" ng-model="isMetric"/>
+                <span class="radioButtonCircle"></span>
+            </label>
+            <span class="measurementTitle">Metric</span>
+        </div>
+    </div>
+    <div id="msg-directions" style="display: none;">Note: Recipe directions are for original size.</div>
+    <div class="disclaimer subtext">Nutrition per serving may change if servings are adjusted.</div>
+</section>
+
+    <div class="gsWidgetTarget"></div>
+
+        <ul class="multiColumn listIngredients clearfix" ng-hide="ingredientsReloaded">
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="4 boneless, skinless chicken breasts, (about 1 pound), trimmed of fat">4 boneless, skinless chicken breasts, (about 1 pound), trimmed of fat</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="1 teaspoon kosher salt, divided">1 teaspoon kosher salt, divided</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="¼ cup plus 1 tablespoon all-purpose flour, divided">¼ cup plus 1 tablespoon all-purpose flour, divided</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="3 teaspoons extra-virgin olive oil, divided">3 teaspoons extra-virgin olive oil, divided</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="2 large shallots, finely chopped">2 large shallots, finely chopped</span>
+                    </li>
+
+        </ul>
+        <ul class="multiColumn listIngredients clearfix" ng-hide="ingredientsReloaded">
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="½ cup dry white wine">½ cup dry white wine</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="1 14-ounce can reduced-sodium chicken broth">1 14-ounce can reduced-sodium chicken broth</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="⅓ cup reduced-fat sour cream">⅓ cup reduced-fat sour cream</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="1 tablespoon Dijon mustard">1 tablespoon Dijon mustard</span>
+                    </li>
+                    <li class="checkListListItem checkListLine ">
+                        <span itemprop="ingredients" title="½ cup chopped chives, (about 1 bunch)">½ cup chopped chives, (about 1 bunch)</span>
+                    </li>
+
+        </ul>
+
+    
+    <ul ng-cloak ng-repeat="column in ingredientColumns" class="multiColumn listIngredients clearfix" id="{{ 'lst_ingredients_' + column.index }}">
+        <li ng-repeat="ingredient in ingredients | ew_filters_slice:column.start:column.end" class="checkListListItem checkListLine" ng-class="{boldFont: ingredient.displayType.toUpperCase() === 'HEADING'}">
+            <span class="recipeIngredTxt" data-id="{{ingredient.ingredientID}}" data-nameid="{{ingredient.ingredientid}}"><span ng-bind="ingredient.displayValue"></span></span>
+        </li>
+    </ul>
+
+    <div class="gsMayWeSuggestTarget"></div>
+
+
+
+
+</section>
+<section class="recipeDirections">
+    <h2 class="headingH2Gutters">Preparation</h2>
+    <div class="directions--section">
+        <div class="directionsSectionSteps">
+
+<!-- cooking stats -->
+    <ul class="prepTime">
+        <li class="prepTime__item"><span class="icon--statsClock"></span></li>
+                    <li class="prepTime__item">
+                <p class="prepTime__item--type">Active</p><time itemprop="cookTime" datetime="PT35M"><span class="prepTime__item--time">35</span> m</time>
+            </li>
+                    <li class="prepTime__item">
+                <p class="prepTime__item--type">Ready In</p><time itemprop="totalTime" datetime="PT35M"><span class="prepTime__item--time">35</span> m</time>
+            </li>
+    </ul>
+
+            <ol class="listNumbers recipeDirectionsList" itemprop="recipeInstructions">
+                        <li class="step" ng-class="{'finished': stepIsActive0}" ng-click="stepIsActive0 = !stepIsActive0"><span class="recipeDirectionsListItem">Place chicken between sheets of plastic wrap and pound with a meat mallet or heavy skillet until flattened to an even thickness, about &#189; inch. Season both sides of the chicken with &#189; teaspoon salt. Place &#188; cup flour in a shallow glass baking dish and dredge the chicken in it. Discard the excess flour.</span></li>
+                        <li class="step" ng-class="{'finished': stepIsActive1}" ng-click="stepIsActive1 = !stepIsActive1"><span class="recipeDirectionsListItem">Heat 2 teaspoons oil in a large nonstick skillet over medium-high heat. Add the chicken and cook until golden brown, 1 to 2 minutes per side. Transfer to a plate, cover and keep warm.</span></li>
+                        <li class="step" ng-class="{'finished': stepIsActive2}" ng-click="stepIsActive2 = !stepIsActive2"><span class="recipeDirectionsListItem">Heat the remaining 1 teaspoon oil in the pan over medium-high heat. Add shallots and cook, stirring constantly and scraping up any browned bits, until golden brown, 1 to 2 minutes. Sprinkle with the remaining 1 tablespoon flour; stir to coat. Add wine, broth and the remaining &#189; teaspoon salt; bring to a boil, stirring often.</span></li>
+                        <li class="step" ng-class="{'finished': stepIsActive3}" ng-click="stepIsActive3 = !stepIsActive3"><span class="recipeDirectionsListItem">Return the chicken and any accumulated juices to the pan, reduce heat to a simmer, and cook until heated through and no longer pink in the center, about 6 minutes. Stir in sour cream and mustard until smooth; turn the chicken to coat with the sauce. Stir in chives and serve immediately.</span></li>
+            </ol>
+            <ol class="listNumbers recipeDirectionsList recipeNotes ng-hide" ng-show="itemNote" ng-cloak>
+                <li class="step"><span class="recipeDirectionsListItem" ng-bind-html="itemNote"></span></li>
+            </ol>
+
+
+    <div class="recipeFootnotes">
+            <ul>
+            </ul>
+            </div>
+
+            <div id="karma-lazy-seriesDetails"></div>
+        </div>
+        <div class="directionsSectionTipsAndTricks">
+            <div class="magazineOffer">
+                <h4 class="directions--section__tipsAndTricks__title__font">Subscribe to the Magazine</h4>
+                <a href="https://secure.eatingwell.com/order/?containerName=i63vetb10&psrc=I63VETB10"><img class="getTheMagazineImg" src="http://bed56888308e93972c04-0dfc23b7b97881dee012a129d9518bae.r34.cf1.rackcdn.com/sites/default/files/u9/magazine/gift_cover.jpg" alt="" /></a>
+                <div class="offerText">
+                    <a href="https://secure.eatingwell.com/order/?containerName=i63vetb10&psrc=I63VETB10">
+                        <h5>Limited time 3-for-1 deal!</h5>
+                        <p>Get a full year of EatingWell&reg;, Rachael Ray Every Day&trade; and Shape&reg; for just $11.</p>
+                    </a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+<section ng-controller="ew_controllers_share_item" id="shareRecipe">
+    <section class="recipeShare">
+        <a href="mailto:?Subject=Sauteed%20Chicken%20Breasts%20with%20Creamy%20Chive%20Sauce&amp;Body=http%3a%2f%2fwww.eatingwell.com%2frecipe%2f251798%2fsauteed-chicken-breasts-with-creamy-chive-sauce%2f"><span class="svg-icon--recipe-navbar--ew-icon-email svg-icon--recipe-navbar--ew-icon-email-dims"></span></a>
+        <a ng-click="socialShareStart('251798', 'facebook'); socialShareNavigate('https://facebook.com/sharer.php?u=http%3a%2f%2fwww.eatingwell.com%2frecipe%2f251798%2fsauteed-chicken-breasts-with-creamy-chive-sauce%2f', '_blank');"><span class="svg-icon--recipe-navbar--icon-facebook2 svg-icon--recipe-navbar--icon-facebook2-dims"></span></a>
+        <a ng-click="socialShareStart('251798', 'pinterest'); socialShareNavigate('http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.eatingwell.com%2frecipe%2f251798%2fsauteed-chicken-breasts-with-creamy-chive-sauce%2f&amp;media=http%3a%2f%2fimages.media-allrecipes.com%2fuserphotos%2f250x250%2f3755910.jpg&amp;description=Sauteed+Chicken+Breasts+with+Creamy+Chive+Sauce+-+EatingWell.com', '_blank');"><span class="svg-icon--recipe-navbar--icon-pinterest2 svg-icon--recipe-navbar--icon-pinterest2-dims"></span></a>
+        <a ng-click="socialShareStart('251798', 'twitter'); socialShareNavigate('https://twitter.com/intent/tweet?url=http%3a%2f%2fwww.eatingwell.com%2frecipe%2f251798%2fsauteed-chicken-breasts-with-creamy-chive-sauce%2f&amp;text=Sauteed+Chicken+Breasts+with+Creamy+Chive+Sauce+-+EatingWell.com&amp;via=EatingWell', '_blank');"><span class="svg-icon--recipe-navbar--icon-twitter2 svg-icon--recipe-navbar--icon-twitter2-dims"></span></a>
+    </section>
+</section>
+
+<div class="headingh2GuttersNutrition">
+    <h2>Nutrition information</h2> <a class="nutritionQuestion" href="http://www.eatingwell.com/eatingwell_nutrition_and_recipe_guidelines"></a>
+</div>
+
+<section class="Nutrition" itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
+
+    <ul class="nutritionInfoList">
+            <li>Serving size: <span>3 oz. chicken breast &amp; &#189; cup sauce</span></li>
+      
+        <li>
+            Per serving: 
+            <span>
+ <span itemprop="calories">257 calories;</span>                  <span itemprop="fatContent">9</span> g fat(<span itemprop="saturatedFatContent">3</span> g sat);                  <span itemprop="fiberContent">0</span> g fiber;                  <span itemprop="carbohydrateContent">12</span> g carbohydrates;                  <span itemprop="proteinContent">26</span> g protein;                  47 mcg folate;                  <span itemprop="cholesterolContent">70</span> mg cholesterol;                  <span itemprop="sugarContent">1</span> g sugars;                  0 g added sugars;                  500 IU vitamin A;                  5 mg vitamin C;                  46 mg calcium;                  2 mg iron;                  <span itemprop="sodiumContent">634</span> mg sodium;                  390 mg potassium             </span>
+        </li>
+
+
+        <li>Carbohydrate Servings: <span>1 </span></li>
+
+            <li>Exchanges: <span>&#189; starch, 4 lean meat, 1 fat </span></li>
+    </ul>
+</section>
+
+
+
+        
+
+<h2 class="recipeReviewHeader" id="reviews">
+    Reviews <span class="recipeReviewCount">116</span>
+</h2>
+
+<div class="recipeReviewUserWithReviews">
+    <script>var userReview = {"recipeId":0,"userReview":{"text":null,"rating":0.0,"date":null}};</script>
+
+<section id="recipeReviewUser" ng-controller="ewRateAndReviewController">
+    <div class="recipeReviewUserWrapper">
+            <div class="recipeReviewUserImage"></div>
+            <a href="javascript:void(0);" ng-click="openRating()">
+                <div class="rateAndReviewButton">
+                    Rate and Review
+                </div>
+            </a>
+    </div>
+</section>
+</div>
+
+
+<div class="recipeReviewsWrapper" ng-controller="ewRecipeUserReviewsController" ng-init="init(9, 116,null)">
+
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">October 03, 2018</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/250x250/1198494.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">Judy Karasch</span>
+                </div>
+                <div class="recipeReviewEntryContentText">My husband, who is a picky eater, loiked it!  It&#39;s a repeat in our house....</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">July 16, 2018</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/5674162.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">Jeanne Sailor</span>
+                </div>
+                <div class="recipeReviewEntryContentText">The only thing my husband changed was that he put the chicken in oven for a little bit just to ensure it was cooked  thoroughly through and we then put the sauce on when we ready to eat ! It was great we bothed loved it !</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">February 01, 2018</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/5674138.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">Sarah Renee Jacquez</span>
+                </div>
+                <div class="recipeReviewEntryContentText">I pretty much added everything to taste. I used a Sav Blanc that has some acidic qualities and ended up adding more because it makes a delicious sauce. (Also did a little extra mustard and sour cream) I also added some pepper and sage. I accidentally used regular chicken broth but only used 1 can. I think it would have been better with the low sodium but I can&#39;t imagine you need more than 1 can. You get so much sauce. I have never really prepared chicken like that before but I thought it had the perfect amount of flour. Mind you I just powdered the surface of the chicken and didn&#39;t smother it. I put it with yellow rice and broccoli. I have food for days now. Huge serving. Felt healthy and felt full. Next time if I get the low sodium and continue with my minor tweaks I think it will be perfect. Im also going to try mushrooms next time because I think it would be really good with mushrooms. I really enjoyed this! I also have a lot of extra sauce so I think Ill put it over some pasta.</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">January 24, 2018</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/5614249.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">nikkieats</span>
+                </div>
+                <div class="recipeReviewEntryContentText">Loved this recipe! I wouldn&#39;t cover the cutlets after cooking while making the sauce, they tend to get soggy and we prefer a crispy cutlet vs soggy/mushy.  paired with roasted potatoes and a salad. YUM</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">January 14, 2018</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/250x250/4806015.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">Nicole Bauman</span>
+                </div>
+                <div class="recipeReviewEntryContentText">I may make it again, but not too sure how I feel about it. It was okay. I couldn&#39;t buy dry white wine so I used white cooking wine (not too sure if that lessens the quality of how the dish tasted). The store didn&#39;t have shallots at the moment so I used onion instead - which shouldn&#39;t have been an issue because I love onion. The first bite took a little bit of getting used to the taste, but after that it was better.</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">July 28, 2017</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/5674140.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">I love Lemons</span>
+                </div>
+                <div class="recipeReviewEntryContentText">Great recipe. The sauce was great and full of flavor.</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">May 26, 2017</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/5614284.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">Jenny Marie</span>
+                </div>
+                <div class="recipeReviewEntryContentText">Just not good. I did NOT like the mustard-wine combo. I, too, found it bland and floury. I make chicken often and am always trying to find ways to mix it up so my hubby doesn&#39;t get &quot;chickened-out.&quot; You can find better chicken recipes out there.</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">March 25, 2017</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/5614247.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">Dawn Fekete</span>
+                </div>
+                <div class="recipeReviewEntryContentText">Taste like an expensive dinner out. Rich, lots of flavor</div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeReviewAngularWrapper">
+        <div class="recipeReviewEntry">
+            <div class="recipeReviewEntryRating">
+                <div class="recipeReviewEntryRatingStars">
+                    
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="20" width="20" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+
+
+                </div>
+                <div class="recipeReviewEntryRatingDate">March 07, 2017</div>
+            </div>
+            <img class="recipeReviewEntryImage" alt="profile image" src="https://images.media-allrecipes.com/userphotos/250x250/2375436.jpg" />
+            <div class="recipeReviewEntryContent">
+                <div class="recipeReviewEntryContentName">
+                    By: <span class="noLink">Sarah Rauner Antczak</span>
+                </div>
+                <div class="recipeReviewEntryContentText">So good! We used an unoaked  chardonnay, and followed recipe exactly. Paired with garlic crusted asparagus. I have a hard time eating chicken because it&#39;s bland to me but this could turn any chicken in to a juicy mouth watering dinner. Bet it would be good on steak as well. Can&#39;t wait to make it again.</div>
+            </div>
+        </div>
+    </div>
+    <div ng-bind-html="divReviews" class="recipeReviewsMoreReviews"></div>
+    <a ng-href="reviews/?page={{+model.nextPage}}" ng-click="$event.preventDefault();loadMore('/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/Reviews')" ng-hide="hideMoreResultsButton" class="recipeReviewsMoreButton ng-cloak">More Reviews</a>
+</div>
+
+        <section class="syndicatedContent">
+            
+<script id='mNCC' language='javascript'> medianet_width='630'; medianet_height= '175'; medianet_crid='846313298'; </script>
+<script id='mNSC' src='http://contextual.media.net/nmedianet.js?cid=8CUPTG615' language='javascript'></script>
+
+
+            
+<div class="OUTBRAIN" data-src="http://www.eatingwell.com/recipe/251798/sauteed-chicken-breasts-with-creamy-chive-sauce/" data-widget-id="AR_3" data-ob-template="EatingWell.com"></div>
+<script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script>
+
+        </section>
+
+    </section>
+    <section class="ewSideNav">
+        <div id="recipe-page-right-rail" class="recipe-page-right-rail">
+            
+
+<!-- Tier 1 300x250 -->
+<div class="ad-search-grid ad-container-nostyle" data-ad-container-autocollapse>
+    <div id="ad-skyscrapermultisize" class="ad-skyscrapermultisize">
+        <div id="div-gpt-square-flex-1" data-tier="1"></div>
+    </div>
+    <span class="advertisement">ADVERTISEMENT</span>
+</div>
+
+<!-- Tier 2 300x250 -->
+<div class="ad-search-grid ad-container-nostyle" data-ad-container-autocollapse>
+    <div id="ad-bottom-right2" class="ad-skyscrapermultisize">
+        <div id="div-gpt-square-fixed-1" data-tier="2"></div>
+    </div>
+    <span class="advertisement">ADVERTISEMENT</span>
+</div>
+
+
+            
+
+<div class="ad-search-grid hide-on-mobile">
+    <div id="mnt-rightRailTopAd" class="mnt">
+        <a href="http://www.eatingwell.com/free_downloads/20_minute_dinner_recipes_cookbook?psrc=R1401ETWTR7915R1068">
+            <img src="http://images.eatingwell.com/promotions/300x130/20-minute-dinner-recipes.jpg" alt="20 minute dinner recipes" title="20 minute dinner recipes" style="display: none;">
+            <div id="monetate_selectorBanner_b993a552_00">
+                <img alt="" src="http://b.monetate.net/img/1/321/529476.jpg" usemap="#monetate_selectorBanner_b993a552_00Map" style="border: none; outline: none;">
+                <map id="monetate_selectorBanner_b993a552_00Map" name="monetate_selectorBanner_b993a552_00Map">
+                    <area shape="rect" coords="0,0,299,149" href="http://www.eatingwell.com/nutrition_health/meal_plans#/step1?psrc=R507ERB1471WL" style="outline: none;">
+                </map>
+            </div>
+        </a>
+    </div>
+    <span class="advertisement">ADVERTISEMENT</span>
+</div>
+
+
+    <h2 class="recipeRelatedContentHeader">
+        More You'll Love
+    </h2>
+<div class="recipeRelatedContentContainer simpleMasonryContainer">
+
+        <a href="http://www.eatingwell.com/recipe/249633/chicken-breasts-with-mushroom-cream-sauce/" title ="Chicken Breasts with Mushroom Cream Sauce">
+            <div class="recipeRelatedContentItem simpleMasonryItem">
+                <img alt="Chicken Breasts with Mushroom Cream Sauce" class="recipeRelatedContentItemImage" src="http://images.media-allrecipes.com/userphotos/150x150/3727772.jpg" />
+                <span class="recipeRelatedContentItemTitle">Chicken Breasts with Mushroom Cream Sauce</span>
+
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-half.svg" />
+
+                    <span class="recipeRelatedContentItemReviewCount">98</span>
+            </div>
+        </a>
+        <a href="http://www.eatingwell.com/recipe/250830/creamy-mustard-chicken/" title ="Creamy Mustard Chicken ">
+            <div class="recipeRelatedContentItem simpleMasonryItem">
+                <img alt="Creamy Mustard Chicken " class="recipeRelatedContentItemImage" src="http://images.media-allrecipes.com/userphotos/150x150/4214665.jpg" />
+                <span class="recipeRelatedContentItemTitle">Creamy Mustard Chicken </span>
+
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-half.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+
+                    <span class="recipeRelatedContentItemReviewCount">16</span>
+            </div>
+        </a>
+        <a href="http://www.eatingwell.com/recipe/249345/chicken-cutlets-with-grape-shallot-sauce/" title ="Chicken Cutlets with Grape-Shallot Sauce">
+            <div class="recipeRelatedContentItem simpleMasonryItem">
+                <img alt="Chicken Cutlets with Grape-Shallot Sauce" class="recipeRelatedContentItemImage" src="http://images.media-allrecipes.com/userphotos/150x150/3747007.jpg" />
+                <span class="recipeRelatedContentItemTitle">Chicken Cutlets with Grape-Shallot Sauce</span>
+
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+
+                    <span class="recipeRelatedContentItemReviewCount">10</span>
+            </div>
+        </a>
+        <a href="http://www.eatingwell.com/recipe/252082/chicken-saute-with-creamy-mushroom-leek-sauce/" title ="Chicken Saute with Creamy Mushroom &amp; Leek Sauce">
+            <div class="recipeRelatedContentItem simpleMasonryItem">
+                <img alt="Chicken Saute with Creamy Mushroom &amp; Leek Sauce" class="recipeRelatedContentItemImage" src="http://images.media-allrecipes.com/userphotos/150x150/3746207.jpg" />
+                <span class="recipeRelatedContentItemTitle">Chicken Saute with Creamy Mushroom &amp; Leek Sauce</span>
+
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-null.svg" />
+
+                    <span class="recipeRelatedContentItemReviewCount">6</span>
+            </div>
+        </a>
+        <a href="http://www.eatingwell.com/recipe/252659/chicken-breasts-with-green-chile-almond-cream-sauce/" title ="Chicken Breasts with Green Chile-Almond Cream Sauce">
+            <div class="recipeRelatedContentItem simpleMasonryItem">
+                <img alt="Chicken Breasts with Green Chile-Almond Cream Sauce" class="recipeRelatedContentItemImage" src="http://images.media-allrecipes.com/userphotos/150x150/4473565.jpg" />
+                <span class="recipeRelatedContentItemTitle">Chicken Breasts with Green Chile-Almond Cream Sauce</span>
+
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-full.svg" />
+        <img height="16" width="16" src="https://images.media-allrecipes.com/EatingWellAssets/assets/svg/icon/recipe-rating-stars/eating-well-star-half.svg" />
+
+                    <span class="recipeRelatedContentItemReviewCount">4</span>
+            </div>
+        </a>
+        <a href="http://www.eatingwell.com/recipe/262995/sauteed-chicken-breasts-with-simple-chive-sauce/" title ="Saut&#233;ed Chicken Breasts with Simple Chive Sauce">
+            <div class="recipeRelatedContentItem simpleMasonryItem">
+                <img alt="Saut&#233;ed Chicken Breasts with Simple Chive Sauce" class="recipeRelatedContentItemImage" src="http://images.media-allrecipes.com/userphotos/150x150/5202657.jpg" />
+                <span class="recipeRelatedContentItemTitle">Saut&#233;ed Chicken Breasts with Simple Chive Sauce</span>
+            </div>
+        </a>
+</div>
+
+            
+            <div id="mnt-rightRailTopAd"></div>
+            
+
+<!-- Tier 3 300x250 -->
+<div class="ad-search-grid ad-container-nostyle" data-ad-container-autocollapse>
+    <div id="ad-bottom-right1" class="ad-skyscrapermultisize">
+        <div id="div-gpt-square-fixed-2" data-tier="3"></div>
+    </div>
+    <span class="advertisement">ADVERTISEMENT</span>
+</div>
+
+
+
+        </div>
+    </section>
+
+</div>
+
+
+                </div>
+
+                <div id='ad-footer' class="adMobileBottom">
+    <div id="div-gpt-mob-adhesive-banner-fixed" data-tier="1"></div>
+</div>
+
+                <footer class="pageFooter fullPage">
+                    
+
+<section class="grid gridFixed">
+    <article class="gridCol gridCol--tiles">
+
+        <ul class="socialSharing__icons">
+
+            <li><a id="footer_facebook" href="https://www.facebook.com/EatingWell/?fref=ts" title="Facebook" target="_blank" class="ui-link"><img title="Facebook" src="https://secureimages.allrecipes.com/ar-images/spacer.gif" alt="Facebook"></a></li>
+            <li><a id="footer_pinterest" href="https://www.pinterest.com/eatingwell/" title="Pinterest" target="_blank" class="ui-link"><img title="Pinterest" src="https://secureimages.allrecipes.com/ar-images/spacer.gif" alt="Pinterest"></a></li>
+            <li><a id="footer_twitter" href="https://twitter.com/EatingWell" title="Twitter" target="_blank" class="ui-link"><img id="ctl00_Image3" title="Twitter" src="https://secureimages.allrecipes.com/ar-images/spacer.gif" alt="Twitter"></a></li>
+            <li><a id="footer_instagram" href="http://instagram.com/eatingwell/" title="Instagram" target="_blank" class="ui-link"><img title="Instagram" src="https://secureimages.allrecipes.com/ar-images/spacer.gif" alt="Instagram"></a></li>
+            <li><a id="footer_tumblr" href="http://eatingwellmagazine.tumblr.com/" title="Tumblr" target="_blank" class="ui-link"><img title="Tumblr" src="https://secureimages.allrecipes.com//ar-images/spacer.gif" alt="Tumblr"></a></li>
+            <li><a id="footer_googleplus" href="https://plus.google.com/+eatingwell/" title="Google Plus" target="_blank" class="ui-link"><img title="Google Plus" src="https://secureimages.allrecipes.com//ar-images/spacer.gif" alt="Google Plus"></a></li>
+            <li><a id="footer_stumbleupon" href="#" title="StumbleUpon" target="_blank" class="ui-link"><img title="StumbleUpon" src="https://secureimages.allrecipes.com//ar-images/spacer.gif" alt="StumbleUpon"></a></li>
+            <li><a id="footer_youtube" href="https://www.youtube.com/user/eatingwell" title="YouTube" target="_blank" class="ui-link"><img title="YouTube" src="https://secureimages.allrecipes.com//ar-images/spacer.gif" alt="YouTube"></a></li>
+        </ul>
+    </article>
+    <article class="gridCol gridCol--tiles">
+        <ul>
+            <li>About Us</li>
+            <li><a id="footer_jobs" href="http://www.eatingwell.com/about_us/" target="_self">About Us</a></li>
+            <li><a id="footer_jobs" href="http://www.eatingwell.com/jobs_internships" target="_self">Jobs at EatingWell</a></li>
+        </ul>
+    </article>
+    <article class="gridCol gridCol--tiles footer_advertising">
+        <ul>
+            <li>Advertising</li>
+            <li><a id="footer_advertisewithus" class="" href="http://www.meredith.com/national-media/digital" target="_self">Advertise with Us</a></li>
+            <li><a id="footer_womensnetwork" class="" href="http://www.meredith.com/marketing_solutions/interactive_media.html" target="_self">Meredith Women's Network</a></li>
+        </ul>
+    </article>
+    <article class="gridCol gridCol--tiles">
+        <ul>
+            <li>Support</li>
+            <li><a id="footer_technical_questions" href="http://www.eatingwell.com/article/290688/technical-questions/">Technical Questions</a></li>
+            <li><a id="footer_contactus" href="http://www.eatingwell.com/contact_us" target="_self">Contact Us</a></li>
+            <li><a id="footer_customersupport" href="http://www.eatingwell.com/article/14864/feedback/" target="_self">Feedback</a></li>
+            <li> <a id="footer_contactus" href="http://www.eatingwell.com/article/290690/customer-service/" target="_self">Customer Service</a></li>
+        </ul>
+    </article>
+
+
+    <article class="gridCol gridCol--tiles">
+        <ul>
+            <li>Magazine</li>
+
+            <li><a href="https://secure.bhg.com/order/?splitName=etg_onsite_gift_footerlink" target="_blank">Give a Gift</a></li>
+            <li class="menu-59883 first"><a href="http://www.eatingwell.com/digital" title="">Digital Editions</a></li>
+            <li class="menu-1607"><a href="https://w1.buysub.com/servlet/OrdersGateway?cds_mag_code=ETG&amp;cds_page_id=139051" title="Subscribe to the magazine" style="display: none;">Subscribe</a><a href="https://w1.buysub.com/servlet/OrdersGateway?cds_mag_code=ETG&amp;cds_page_id=139051" title="Subscribe to the magazine"><a href="https://secure.eatingwell.com/order/?containerName=i57ver307&amp;psrc=I57VER307">Subscribe</a></a></li>
+            <li class="menu-1609"><a href="http://www.eatingwell.com/food_news_origins/eatingwell_magazine" title="Browse the table of contents.">Current Issue</a></li>
+            <li class="menu-6766"><a href="http://www.eatingwell.com/article/290682/eatingwells-annual-recipe-index-archive/" title="">Recipe Index</a></li>
+            <li class="menu-69087 last"><a href="http://www.eatingwell.com/affiliates/index.html" title="">Affiliate Program</a></li>
+            <li class="last"><a id="footer_dsar" href="" target="_blank" rel="noopener">EU Data Subject Requests</a></li>
+        </ul>
+    </article>
+    <article class="gridCol gridCol--tiles copyright">
+        <ul>
+            <li>©2019 Eating Well, Inc.</li>
+            <li>EatingWell</li>
+            <li>120 Graham Way</li>
+            <li>Suite 100</li>
+            <li>Shelburne, VT 05482, USA</li>
+            <li><a href="http://www.eatingwell.com">www.EatingWell.com</a></li>
+            <li><a href="http://www.meredith.com/datapolicy.html">Data Policy</a></li>
+            <li><a href="http://www.meredith.com/legal/privacy">Privacy Policy Your California Rights</a></li>
+            <li><a href="http://www.meredith.com/legal/eu-privacy">EU Privacy Policy</a></li>
+            <li><a href="http://www.meredith.com/legal/terms"> Terms of Service</a></li>
+        </ul>
+    </article>
+</section>
+<div class="footer_content">
+    <hr />
+    <p>&copy; 2018 EatingWell.com is part of the Allrecipes Food Group. EatingWell may receive compensation for some links to products and services on this website. Offers may be subject to change without notice. All Rights Reserved. Use of this site constitutes acceptance of our <a href="http://www.meredith.com/legal/terms" target="_blank">Terms of Use</a>, <a href="http://www.meredith.com/legal/privacy" target="_blank">Privacy Policy (Your California Privacy Rights)</a>, and <a href="http://www.meredith.com/datapolicy.html" target="_blank">Data Policy</a>.</p>
+</div>
+
+<script type="text/javascript">
+    
+    function readCookieValue(cookieName) {
+        var cookieValueRegex = new RegExp('(?:(?:^|.*;\\s*)' + cookieName + '\\s*\\=\\s*([^;]*).*$)|^.*$');
+        var cookieValue = document.cookie.replace(cookieValueRegex, "$1");
+        return cookieValue;     // empty string, if cookie not found
+    }
+
+    
+    var dsarUrl = "https://app-de.onetrust.com/app/#/webform/0c410d51-8e85-4308-9bb9-37c24a461ccb?";
+
+    var dsarUserId = readCookieValue("euConsentId");
+    if (!dsarUserId) {
+        dsarUserId = readCookieValue("globalTI_SID");
+    }
+    if (dsarUserId) {
+        dsarUrl += 'uid=' + dsarUserId + '&';
+    }
+
+    var siteDomain = document.domain.replace(/^.*\.([^.]+\.\w+)$/i, "$1");
+    dsarUrl += 'domain=' + siteDomain;
+
+    document.getElementById("footer_dsar").href = dsarUrl;
+
+    
+    var notificationDsar = document.getElementById("privacy-notification_dsar");
+    if (notificationDsar != null) {
+        notificationDsar.href = dsarUrl;
+    }
+</script>
+                    <div data-ng-controller="ewControllersDeferredAction" data-ng-init="wireupAdIntegrationListeners();executePostLoginEvents();">
+                        <ew-notification></ew-notification>
+                        <div data-loading-indicator></div>
+                    </div>
+                </footer>
+
+            </div>
+
+            <script>
+                var ew_services_environment = {
+                    url: 'https://apps.allrecipes.com/',
+                    baseDomain: '',
+                    imageServerUrl: '',
+                    scriptServerUrl: 'http://js01.media-allrecipes.com/EatingWellAssets/',
+                    scriptServerUrlSecure: 'https://js01.media-allrecipes.com/EatingWellAssets/',
+                    cssServerUrl: 'https://images.media-allrecipes.com/EatingWellAssets/',
+                    cssServerUrlSecure: 'https://images.media-allrecipes.com/EatingWellAssets/'
+                };
+
+                ew_services_environment.GetScriptServerUrl = function() {
+                    if (window.location.protocol !== 'https:') {
+                        return this.scriptServerUrl;
+                    } else {
+                        return this.scriptServerUrlSecure;
+                    }
+                };
+
+                var siteCollectionId = 29;
+
+                var array = new Array();
+
+
+                window.Toggles = array;
+
+window.userinfo = { 'id' : 0 };
+            </script>
+            <script src='http://js01.media-allrecipes.com/EatingWellAssets/assets/deployables/v-1.161.0.2309/eatingWell-js-lazy.bundled.js' ></script>
+
+            
+    <script src='http://js01.media-allrecipes.com/EatingWellAssets/assets/deployables/v-1.161.0.2309/eatingWell-js-recipe.bundled.js' ></script>
+
+    <script>angular.module("eatingWell").value("userReview", userReview);</script>
+
+        </div>
+        <script src='https://images.media-allrecipes.com/EatingWellAssets/assets/deployables/v-1.161.0.2309/eatingWell-templates.bundled.js' ></script>
+
+    </div>
+</body>
+</html>

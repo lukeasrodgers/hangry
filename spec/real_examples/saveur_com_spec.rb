@@ -4,7 +4,7 @@ describe Hangry do
   context "saveur.com recipe" do
     before(:all) do
       skip "saveur.com appears to be using schema.org / RDFa format which will call for a new parser"
-      @html = File.read("spec/fixtures/saveur.com.html")
+      @html = File.read("spec/fixtures/www.saveur.com.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }

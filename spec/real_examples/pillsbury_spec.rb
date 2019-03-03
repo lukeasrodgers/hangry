@@ -3,7 +3,7 @@
 describe Hangry do
   context "pillsbury.com recipe" do
     before(:all) do
-      @html = File.read("spec/fixtures/pillsbury.com.html")
+      @html = File.read("spec/fixtures/www.pillsbury.com.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }

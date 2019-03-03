@@ -1,0 +1,2170 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head><title>
+	Vegetable Fried Rice ( Jain ) recipe
+</title>
+
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1035919/RecipeBlockAd', [300, 250], 'div-gpt-ad-1547644488096-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/RecipePageHeader728x90', [728, 90], 'div-gpt-ad-1547687860664-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/Rcp_Left_Tower', [160, 600], 'div-gpt-ad-1547688400012-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/RecipePageFooter728x90', [728, 90], 'div-gpt-ad-1547688687701-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/RightTopTower160x600', [160, 600], 'div-gpt-ad-1548602149526-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/RightBottomTower160x600', [160, 600], 'div-gpt-ad-1548602291967-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/MidListBanner', [728, 90], 'div-gpt-ad-1548320692495-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/RecipePageRightAd1160x600', [160, 600], 'div-gpt-ad-1547689002337-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/HindiRecipePageBottomTower', [160, 600], 'div-gpt-ad-1550464944475-0').addService(googletag.pubads());
+    googletag.defineSlot('/1035919/HindiRecipePageTopTower', [160, 600], 'div-gpt-ad-1550465011910-0').addService(googletag.pubads());
+
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+
+   
+    <link rel="stylesheet" href="td5.css?ver=3.7" type="text/css" /><link rel="stylesheet" href="css/jquery.thumbnailScroller.css" type="text/css" /><link rel="stylesheet" href="css/tdhm2.css" type="text/css" /><link rel="SHORTCUT ICON" href="images/favicon.ico" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="jquery.thumbnailScroller.js?ver=1.1"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.13.custom.min.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    
+    <link type="text/css" rel="stylesheet" href="jquery.ratings.css" />
+    <script src="scripts/_newcomments_system.js?ver=1.4"></script>
+    <script src="jquery.ratings.js"></script>
+    <script src="rating.js"></script>
+    <script type="text/javascript" async="async" src="https://widgets.outbrain.com/outbrain.js"></script> 
+   
+  
+        <!-- Begin Kiosked -->
+       
+<!-- End Kiosked -->
+    <script type="text/javascript" src="https://assets.pinterest.com/js/pinit.js" data-pin-hover="true" data-pin-height="28" data-pin-color="red"></script>
+
+       <script type="text/javascript" src="https://scdn.grmtas.com/pub/ga_pub_7382_s.js"></script>
+
+ 
+
+    <style>
+         .red {
+            color: rgb(237,125,49);
+        }
+        .blue {
+            color: rgb(0,112,192);
+        }
+        .yellow {
+            color:rgb(255,255,0);
+        }
+        .lightblue {
+            color:rgb(0,176,240);
+
+        }
+        .green {
+            color:rgb(112,173,71);
+        }
+          .bold1 {
+            font-weight:bold;
+        }
+    </style>
+  
+
+ 
+
+
+
+
+
+
+
+<script>
+
+
+
+        function signinCallback(authResult) {
+
+            gapi.client.load('plus', 'v1', function () {
+                if (authResult['access_token']) {
+                    gapi.client.plus.people.get({ 'userId': 'me' }).execute(
+        function (resp) {
+            //            alert(resp.emails[0].value)
+            //            alert(resp.id)
+            //            alert(resp.displayName)
+            var userstatus = ""
+            document.getElementById('loginoptions').style.display = 'none';
+            //            document.getElementById("tarla_login").style.display = 'none';
+            document.getElementById('social_login_details').style.display = 'block';
+            document.getElementById('FBId').innerHTML = resp.id;
+            document.getElementById('auth-displayname').innerHTML = resp.displayName;
+            document.getElementById('DisplayEmail').innerHTML = resp.emails[0].value;
+            document.getElementById('thirdpartyname').innerHTML = 'google';
+
+
+            userstatus = getUserStatus(resp.emails[0].value, resp.id, 'google');
+            //            document.getElementById('signinButton').setAttribute('style', 'display: none');
+
+            if (userstatus === "Registered") {
+                document.getElementById('userstatus').innerHTML = "Registered";
+                document.getElementById('fblogin').innerHTML = "Welcome back !<br/>You have successfully signed in to Tarladalal.com <br/><span style='" + "cursor:pointer;text-decoration:underline;" + "'>Click here</span> to continue.<br/>";
+
+                document.getElementById('fblogin').style.display = 'block';
+
+            }
+            else if (userstatus === "Valid") {
+                document.getElementById('userstatus').innerHTML = "Valid";
+                document.getElementById('fblogin').innerHTML = "Welcome To Tarladalal.com .<br/>A new Tarladalal.com account will be created for you to access all the website functionality. <br/><span style='" + "cursor:pointer;text-decoration:underline;" + "'>Click here</span> to proceed.";
+                document.getElementById('cancel_login').innerHTML = "<span style='" + "cursor:pointer;text-decoration:underline;" + "'>Click here</span> to sign out and prevent this from happening.<br/>Note : For security reasons (specially on shared computers), proceed to Google and sign out from your Google account."
+                document.getElementById('cancel_login').style.display = 'block';
+                document.getElementById('fblogin').style.display = 'block';
+
+            }
+
+        });
+
+                } else if (authResult['error']) {
+                    if (document.getElementById('thirdpartyname').innerHTML !== 'facebook') {
+                        // There was an error, which means the user is not signed in.
+                        // As an example, you can handle by writing to the console:
+                        // As an example, you can handle by writing to the console:
+                        console.log('There was an error: ' + authResult['error']);
+
+                        document.getElementById('loginoptions').style.display = 'block';
+                        //                 document.getElementById("tarla_login").style.display = 'block';
+                        //                 document.getElementById('signinButton').style.display = 'block';
+                        document.getElementById('social_login_details').style.display = 'none';
+                        document.getElementById('fblogin').innerHTML = "";
+
+
+                    }
+                }
+                console.log('authResult', authResult);
+
+            });
+        }
+          
+</script>
+      
+
+
+
+<script type="text/javascript">
+function justdoit() {
+  
+  $get('c').innerHTML="Hey I did it";
+}
+  
+  
+function ckbk_addrcp(ckbkid,rcpid) {
+   // var x=$get('c');
+   // x.innerHTML="Started the call " + 100;
+   CookbkSvc.AddToCookbook(ckbkid,rcpid,"",callComplete,callError);
+}
+
+function ckbk_createbook(memname,bkname,rcpid) {
+
+    CookbkSvc.CreateCookbook(memname,bkname,"",rcpid,callComplete,callError);
+}
+
+function callComplete(result) {
+   $get('c').innerHTML="Recipe added to cookbook";
+}
+
+function callError(result) {
+  
+$get('c').innerHTML=result.get_message();
+
+}
+$(document).ready(function () {
+
+    $("#rcpimg div img").hover(
+     function () {
+         $(this).css({ "opacity": "0.3" });
+     },
+
+            function () {
+                $(this).css({ "opacity": "1" });
+            }
+ );
+    var currentpage = location.pathname
+    currentpage = currentpage.toLowerCase();
+
+
+    index_cook_book__by_td = currentpage.indexOf("-by-Tarla-Dalal");
+
+    if (index > -1) {
+        //document.getElementById("display_comments").style.display = 'none';
+        document.getElementById("display_comments").style.display = 'block';
+    }
+
+    if (index_cook_book__by_td > -1) {
+        document.getElementById("display_comments").style.display = 'block';
+    }
+    var userloggedinstatus = IsUserLoggedIN();
+
+    if (userloggedinstatus === true) {
+        document.getElementById('edit_comment_recipepage').style.display = 'block';
+        document.getElementById('edit_comment_open_recipepage').style.display = 'none';
+        if (document.getElementById("edit_rating").innerHTML === '') {
+            $("#edit_rating").ratings(5, 5);
+
+        }
+        document.getElementById("edit-rating-1").innerHTML = "5"
+
+    }
+    else {
+        document.getElementById('edit_comment_recipepage').style.display = 'none';
+        document.getElementById('edit_comment_open_recipepage').style.display = 'block';
+        if (document.getElementById("edit_rating_open").innerHTML === '') {
+            $("#edit_rating_open").ratings(5, 5);
+
+        }
+        document.getElementById("edit-rating-1_open").innerHTML = "5"
+    }
+    AllClickfunctions();
+
+
+});
+     function disconnectFromGoogleApp() {
+
+        // Revoke the access token.
+        $.ajax({
+            type: 'GET',
+            url: 'https://accounts.google.com/o/oauth2/revoke?token=' +
+            gapi.auth.getToken().access_token,
+            async: false,
+            contentType: 'application/json',
+            dataType: 'jsonp',
+            success: function (result) {
+                console.log('revoke response: ' + result);
+                $('#authOps').hide();
+                $('#profile').empty();
+                $('#visiblePeople').empty();
+                $('#authResult').empty();
+                $('#gConnect').show();
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+    }
+jQuery.fn.center = function () {
+    this.css("position", "fixed");
+    this.css("top", ($(window).height() / 2) - (this.outerHeight() / 2));
+    this.css("left", ($(window).width() / 2) - (this.outerWidth() / 2));
+    return this;
+}
+    
+
+
+function IsUserLoggedIN() {
+    var jsonObject;
+    $.ajax({
+        type: 'POST',
+        url: 'WebService1.asmx/ISUserLoggedIN',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: '{}',
+        success: function (msg) {
+            try {
+                jsonObject = JSON.parse(getMain(msg)); //Returned response is a JSON string
+            } catch (Error) {
+                jsonObject = getMain(msg); // Returned response is JSON itself so no need to parse
+            };
+
+
+
+        },
+        error: function () {
+            alert('could not determine if item is a group or not');
+        }
+
+    });
+    return jsonObject
+}
+
+
+</script>
+
+
+
+    
+    <script type="text/javascript">
+        GA_googleFetchAds();
+     
+    </script>
+    
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-255257-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+     </script>
+    
+<link href="https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r" rel="canonical" /><link href="https://m.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r?amp=1" rel="amphtml" /><link href="https://m.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r" rel="alternate" /><link href="https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r" rel="alternate" hreflang="en" /><link href="https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-hindi-8631r" rel="alternate" hreflang="hi" /><meta name="description" content="5 Spice Vegetable Fried Rice is a jain version of the all-time favourite veggie fried rice!" /></head>
+
+<body>
+    <div id="fb-root"></div>
+
+
+
+<script>
+    // Load the SDK Asynchronously
+
+
+
+    //(function (d) {
+    //    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    //    if (d.getElementById(id)) { return; }
+    //    js = d.createElement('script'); js.id = id; js.async = true;
+    //    js.src = "//connect.facebook.net/en_US/all.js";
+    //    ref.parentNode.insertBefore(js, ref);
+    //} (document));
+
+    // Init the SDK upon load
+//    window.fbAsyncInit = function () {
+//        FB.init({
+//            appId: '748109668620301', //Production App ID
+////            appId: '1553557944884840',
+//            //                        appId: '1472582673009274', //Development App ID
+//            channelUrl: '//' + window.location.hostname + '/channel', // Path to your Channel File
+//            status: true, // check login status
+//            cookie: true, // enable cookies to allow the server to access the session
+//            xfbml: true  // parse XFBML
+//        });
+
+//        FB.Event.subscribe('auth.statusChange', function (response) {
+//            if (response.authResponse) {
+//                document.getElementById("loginoptions").style.display = 'none';
+//                //                document.getElementById("tarla_login").style.display = 'none';
+
+
+//                // user has auth'd your app and is logged into Facebook
+//                FB.api('/me?fields=id,name,gender,email,birthday', function (me) {
+//                    if (me.name) {
+//                        document.getElementById('social_login_details').style.display = 'block';
+//                        document.getElementById('auth-displayname').innerHTML = me.name;
+//                        document.getElementById('FBId').innerHTML = me.id;
+//                        document.getElementById('DisplayEmail').innerHTML = me.email;
+//                        document.getElementById('thirdpartyname').innerHTML = 'facebook'
+//                        //                        document.getElementById('Gender').innerHTML = me.gender;
+//                        //                        document.getElementById('DOB').innerHTML = me.birthday;
+
+//                        var userstatus = getUserStatus(me.email, me.id, 'facebook');
+//                        if (userstatus === "Registered") {
+//                            document.getElementById('userstatus').innerHTML = "Registered";
+//                            document.getElementById('fblogin').innerHTML = "Welcome back !<br/>You have successfully signed in to Tarladalal.com  <br/><span style='" + "cursor:pointer;text-decoration:underline;" + "'>Click here</span> to continue.";
+
+//                            document.getElementById('fblogin').style.display = 'block';
+
+//                        }
+//                        else if (userstatus === "Valid") {
+//                            document.getElementById('userstatus').innerHTML = "Valid";
+//                            document.getElementById('fblogin').innerHTML = "Welcome To Tarladalal.com .<br/>A new Tarladalal.com account will be created for you to access all the website functionality. <br/><span style='" + "cursor:pointer;text-decoration:underline;" + "'>Click here</span> to proceed.";
+//                            document.getElementById('cancel_login').innerHTML = "<span style='" + "cursor:pointer;text-decoration:underline;" + "'>Click here</span> to sign out and prevent this from happening."
+//                            document.getElementById('cancel_login').style.display = 'block';
+//                            document.getElementById('fblogin').style.display = 'block';
+
+//                        }
+
+
+
+
+
+//                    }
+//                })
+//                //                document.getElementById('auth-loggedout').style.display = 'none';
+//                //                document.getElementById('auth-loggedin').style.display = 'block';
+//            } else {
+
+//                //                document.getElementById('auth-loggedout').style.display = 'block';
+//                //                document.getElementById('loginoptions').style.display = 'none';
+//                //                document.getElementById('fblogin').innerHTML = "you are not looged in please login with tarla dalal or google or facebook";
+//                //                document.getElementById('fblogin').style.display = 'block';
+//            }
+//        });
+//    }
+  
+
+   
+</script>
+
+<!-- Begin comScore Tag -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "14917720" });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+     <script type="text/javascript">var switchTo5x = true;</script>
+<script type="text/javascript" id="st_insights_js" src="https://ws.sharethis.com/button/buttons.js?publisher=4a0c8d01-3957-4b8d-9df9-97f2fbedfd9d"></script>
+<script type="text/javascript">stLight.options({ publisher: "4a0c8d01-3957-4b8d-9df9-97f2fbedfd9d", doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
+<noscript>
+  <img src="https://b.scorecardresearch.com/p?c1=2&c2=14917720&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+    <div id="wrapper">
+    
+    <form name="aspnetForm" method="post" action="recipe.aspx?recipeid=8631" onsubmit="javascript:return WebForm_OnSubmit();" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_imgsearch')" id="aspnetForm">
+
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=qUkQmp-_RQ720zAyNxJHK8SuIRQNVQqLUaV-vt-ygMfXwX56KrqwCHCulc1ql4aHFl4C1n8107glZdPbehdL1a_3Pwk1&amp;t=635588816575142005" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=lPoNp4UO4EmST_5wwwpNRPxKuHc9-itPyNfPKLIjAmmTSTfJjkX3ADBaifM8bDfSzi3UoV41EzdpibF-6Zo-KhxOObzM7bY_bPPs7jdLaaJ_42R-unq9ZqoOq317p-yakmphsQ7m9aYfSH4PGBAuBwnD8X8njbsZFWaz6rchlH8eaYOr0&amp;t=635175349941728390" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=qAK7RR6je4fCUHO88UnIaur6RGHKRprqgqDZTsTRXR7U4qLZETobVWXOYyc7B8hsmhVVn_SZvXjEotDrghY1i6D2BvLd_mo_343VZwmf71fUrtHoDPwQEsMtH8quySm0RJWwGaHtrcisigvjxEqCDaGgkYYtM6DfPdZgkY7Tvy7bf-Fx0&amp;t=635175349941728390" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=vYEXxz2YyFoFKKm6BQ1zUceZDuAw0oup4mi6x9U-XGdskxI2ZsGIiHdfA-2JSpNaua2s-WyOK_idSGZF-7Ac1uRZoOcCmN9SEr1YHUZb5E29vWOokwsrxcLIDYRiJboCB55gKjqaFkTrSegZ_W3nO_pK6e41&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=e7hsI_o0XUzYmZH_ll4Iyl7Al2l65N-xD4d6Sqb4eulqgosjiOmPSson_AwIAell62gjg9aFhqoQrlUBbprgt1pXTK87uQ05k-y0VVOb6nX-GPhsZ0ZSEFGXCuL7Hh-dy046DBRHONQKRy3gOdUWlsiu6no1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=nxqgbH5BIO3GliCeYTsvZDIbVxLlr5WashzP6YgULXcxFPErlpKcbSXqS8I-sCXlV1QO96-ZneYRMxN4KxQmxSuo3hRXWMflNrB1wa8Dc-x3lPl50gXoOJJKLdft9Rxt24A9rrQZcJqM5RLuaDpwnqv4XVgowYjIJ1yu3TxWv6xouDR40&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=E5y7574qzXZIvrKTFh4kyoeLphkfdLGfxnQrwgIp8f7w1578pwlAMVm-ufQe9YWC7n3pAb5DxSTQR5fXvmNbgXNsjDRvgnDFLWBwyYLMEltud5OliTtjwvsy-y1eC8x69aSF9rGfC_6Ur5K7E3CjNhKo3BlwWgE94U-iZd4kedZhxmXy0&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Mi2AzKigjYd_t6dHsH0ABqGr-X5YHjWuz5u4P0WHI1ztFnYMFpza-weCL2NNW_dultrRqXTmAOklWJTTfFK8pZlzLR47VCi_lgZIDVcjVXf74y0F4-CYlz46t65X8k3xe54i_1ACZUVqN4Y8lzx1UUxrjrE1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=aZgGQtugcF8-f9Y_iRmEZloblrStzlVxS15Mr-fLWzfaXZ8k3GwJ8KRD5NJgxhDU96-nEVZfE_5rtsMCMHLQ3VBX9_jpK1689yykGauiaLkQRNSlrESTnSn28SqPR0rhaUQtcTbRUBdxH-XDXRdOyFeZxS01&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=uprpPFtZB32DrOoqPnqHSzOqra-JT2zInAKzO_l95j6gcpzIcmPqUqraLd4DyU3k0N88FhQTlJvou56dmwmSoW9NfBE2wdPIgiKm6WwogIrBOqpMnpRz1gcjw0OYc_mXA5pE3VSjgQ3t5bESd4D1EyHx42o1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=rLDrodNbQHW2HqOGBAEBn2NfgO9T86SqAk8lheSFpLtFaVTiPze8Y63tU0WgKGeHN3Zy0i2Ln4ZgJ3BFFUg5iHFKqMEU4ZI9JPkz4XW5kEF65W_SV7hHEye-_MFneTwz5FhwJ_jtR_x9AS55-DGXDMmyPAs1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=H5DJSer5TeX31XlgRQ0Iov7F3gXvzpZ4Xz4koVTxPWCK7qqsQbCNr9H1HR2Va_2o3DoiW3jUX5f6kFZvBbZn94kqjEYVO6XDJUyokvCNyX-2QKXfuUziN2U1urF4wjGNCJzYSq4zAC6VqL4PS8KKxk8TLbWLIzqFSa1iYPf4OvONlCZ-0&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=jbq-2HyVp92rVpHbv4FK4Eee-FkSjR3QobHHo2f8cseUhhtIs2HtUsCjDlCZia4KvqsxKKk8MpfFJaVZPFc8IeYno7tTyWJt4WVeEPHW-fdb4poeyr8QuPm2gO0fkbKiael1CUUVHIwBDfA_6Oqg3aeHpCQ1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=pLckcLazmBD3qto9Mw5V9yNNl_Ov63SJJRhrCwjUv4Di308SGfWd01YINb1H78cqO2o7qpYR9JiKs4ywZByPkAAppADY526-jzKrXjSExYKULvISO0QmCSeO_S8HV5QD2HpOkb8OWdelbzw6WNOSmIEfs27Uk0cX_gmyTL56B7hG0XUC0&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=1RH6v3BGcgD4Kcar2xcpxibFI_jZm-rxi0CSgJiArNBQg2nMVm6sLK3jNUuhKCWkEokwliS_5SRXna1JJr0Cta4T_5TXMC6D-b1JZ6VznSwWfe-GgCNupyvSysCRJQs9n9tyO3PYYOhC3hVKYCdwJR1f7YlzULTem31EDAOTym_LHMIk0&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=pkOB5B5JmXxDRFr5wINaJIvS-0pRt5bPfv6CRtbOZpbNrHrZ_beo8gQMY5S-5idfn4Bh43st3Dg_Ky3SWSaHqhkkyXD1jrbcv5AoefJuuo3HEYRNs0Yw6cswCV4K7UlslszpPW1FqptZXD57ItxC0vw4oW3kkdZjB3jGJnSu-MtxfFl10&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=HmhMK5zBV0LXR3JCVpfEU7OBXlyMRbcaFqkCYw1f9FSTKjduWCg8dpGrjcF33WsnNvsYdfMPz_sVNaE7fZrSOKptLSrZ3vtgL5uYz0qIiitDnr1-s3Y_V5yFspQobbBGM5k2RiEvvYdUkDDUc9Zy7POTfuo1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=JtCf_U2sVOO2k8L85RN_c9YBQISRTpRv7ZeOy4lE5ea-uTICXWwPIx_s6Lzg0HN0tj8o-2unKRiXXqPfGp7buKhCxqAUdQsBiChOZ9hMSQt22fWU6SwNRhVIksxS5M_SruuCeYeAO9JcuUuO8WM-Mvze6K8SAYwlGVtKLOwP1qLxYh6q0&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=zCvjL9fniKUhSZIefJb8S_IVIHKzi7LFK2f1dtnL9pn870mocP05Itg77B3fGZUqnqasiR_hDfKPrVjmhg-hn8h3vUFXVjWM_ugUIZLQ8MrM5rwnFy2xdO9lWVI-yGn47dTIwA3phV4s8simzMZtyakhz-Q1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=XfdN0wh1yTSHBXhU3vb1UEE5xzw6ZZ7v-8Bn9DbSKcdEz5g4hCekmVwJVsKiiiXNfc0VgoWQMSBv3P6dfF2QQBBcOPvYbK_wJFllE_AoZyvqOfXD9pMGxUbu5zx_03S3l37073SGWEHdxB_3TwWkuE7xwDI1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=0WsDSenX8IFfbO5Ilpl7N2iQUxo0QT66fWeGRXLSW1AKkUuLhWf-tIRyQZTdWOtYgAp7eCgm-yNX1yxEdY9Q-l7Q8ke19YJ4crigIJr8ES-T80eQ13hGj0WLYkVNg1aitz-ZDDvnG2xnbffcAFIBhlZfUHM1&amp;t=634009922430741250" type="text/javascript"></script>
+<script src="svc/CookbkSvc.asmx/jsdebug" type="text/javascript"></script>
+<script src="svc/RcpSvc.asmx/jsdebug" type="text/javascript"></script>
+<script src="/WebResource.axd?d=OEwvLxwLnSqyV5mQZVr4yHOWxspJpZ7IAt81CEVZNdCp8KRheBjGPERbaPIKH4t8o7D6MrFeLjmma4RPHJARY0Vb8d41&amp;t=635588816575142005" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$tdscriptmanager', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+        
+    
+    
+    <div id="mainwrapper">
+        
+        <div id="blockwithlogo">
+                
+                
+                <div id="makehomepage">
+                   <a href="#" onclick="this.style.behavior = 'url(#default#homepage)'; this.setHomePage('https://www.tarladalal.com');">Make TarlaDalal.com my Homepage</a>
+                   
+                   
+                   
+                </div>
+                <div id="td_social">
+                               
+			                  <ul id="td_digital">
+			                    <li><a target="_blank" href="https://www.youtube.com/user/TarlaDalalsKitchen"></a></li>
+			                    <li><a target="_blank" href="https://www.facebook.com/pages/TarlaDalal/207464147348"></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/tarladalal/"></a></li>
+			                    <li><a target="_blank" href="https://plus.google.com/107883620848727803776"></a></li>
+			                    <li><a target="_blank" href="https://pinterest.com/tarladalal/"></a></li>
+			                    <li><a target="_blank" href="free-recipe-app.aspx" ></a></li>
+			 		            <li><a id="shop_td" href="shopping-list.aspx"></a></li>
+			                    <li><a target="_blank" href="https://twitter.com/Tarla_Dalal"></a></li>
+			                         </ul>    
+			                  <div class="curtainpull"></div>
+                         </div>
+               <nav>
+                <div id="toplinks">
+                    
+                    <a id="ctl00_TDloginStatus" class="toplinkitem" href="javascript:__doPostBack('ctl00$TDloginStatus$ctl02','')">Sign In</a>&nbsp;|&nbsp;
+                    
+                    <a id="ctl00_lbtn4" title="View my page" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lbtn4&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MyPage.aspx&quot;, false, true))">My Page</a>&nbsp;|&nbsp;
+                    <a href="MyCookbooks.aspx" title="View your cookbooks">My Cookbooks</a>&nbsp;|&nbsp;
+                    <a href="English-Cookbooks-by-Tarla-Dalal" title="Shop for books by Tarla Dalal">Shopping</a>&nbsp;|&nbsp;
+                    <a href="RecipeAtoZ.aspx" title="Recipea A to Z" >Recipe A To Z</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                   </nav>
+                <div class="curtainpull"></div>
+          </div>
+            
+        <div id="block1">
+        
+             
+        <header>
+            <div id="header">
+                    <div id="subhead1">
+                      <div id="subhead1_inner">
+                        <div style="width:220px;float:left;margin-left:20px;margin-top:12px;">
+                            <div id="logo">
+                                 <a href="https://www.tarladalal.com" title="GoTo Home Page"><img alt="TarlaDalal.com Home Page" src="images/tdlogo.jpg" /></a>
+                                  
+                     
+                                 
+                                 
+                   
+                            </div>
+                        
+                           
+                        </div>
+                        
+                        
+                          <div style="float:left;width:735px;height:140px;">
+                            
+                            <div id="searchbox1">
+                                
+                                <div id="ctl00_Panel1" class="srchpanel">
+	
+                                     <div id="srch_inner">
+                                         
+<div id="stats">
+  <span id="ctl00_assetcnt_lblrcpcount">21114 RECIPES </span>&nbsp;<span style="font-size:1.5em;">|</span> &nbsp;
+  <span id="ctl00_assetcnt_lblimgcount">12671 IMAGES&nbsp<span style="font-size:1.5em;">|</span>&nbsp</span>&nbsp
+  <span id="ctl00_assetcnt_lblcookbkcount">201277 COOKBOOKS</span>
+</div>
+                                         
+                                          
+                                          
+                                          <div id="search">
+                                              <input name="ctl00$txtsearch" type="text" id="ctl00_txtsearch" class="txtsearch" style="font-size:22px;height:28px;width:345px;" />
+                                               <input type="submit" name="ctl00$imgsearch" value="search" id="ctl00_imgsearch" class="searchbtn" AlternateText="Start your search" />
+
+                                              
+                                               <input type="hidden" name="ctl00$wmsearch_ClientState" id="ctl00_wmsearch_ClientState" value="Focused" />
+                                            
+                                          </div>
+                                          
+                                            
+                                          
+                                          
+                                         
+                                          
+
+
+<div id="searchoptions">
+      <a href="recipecategories.aspx?srchboxopt=r" class="sel">Recipes</a><img src="images/searchopt_separator.png" /><a href="glossarysearch.aspx?srchboxopt=i">Glossary</a><img src="images/searchopt_separator.png" /><a href="latest_recipe_videos.aspx?srchboxopt=v">Videos</a><img src="images/searchopt_separator.png" /><a href="cookbooks.aspx?srchboxopt=c">Cookbooks</a>
+      <div class="curtainpull"></div>                          
+</div>
+                                          
+                                          
+                                      </div>    
+                              
+</div>
+                            </div>
+                            <div class="curtainpull"></div>
+                        </div>
+                        
+                        <div class="curtainpull"></div>
+                       </div>
+                        
+                    </div>
+                    
+                    <div id="menucontainer">
+                    <nav>
+                        <div id="ctl00_MenuNavigation_EnglishMenu">
+	
+ 
+   <div style="margin-top:7px;margin-left:10px;float:left;">
+       
+    <ul id="nav">
+    <li><a href="RecipeCategories.aspx">
+        
+         <div class="menucontainer_div" style="width:100px;">RECIPES</div>     </a>
+        <ul style="margin-top:18px;">
+         <li><a href="RecipeCategories.aspx?focus=cuisine">Cuisine</a>
+             <ul>
+                 <li><a href="recipes-for-punjabi-3">Punjabi</a></li>
+                 <li><a href="recipes-for-gujarati-24">Gujarati</a></li>
+                 <li><a href="recipes-for-rajasthani-15">Rajasthani</a></li>
+                 <li><a href="recipes-for-maharashtrian-52">Maharashtrian</a></li>
+                 <li><a href="recipes-for-south-indian-44">South Indian</a></li>
+                 <li><a href="recipes-for-chinese-77">Chinese</a></li>
+                 <li><a href="recipes-for-italian-105">Italian</a></li>
+             </ul>
+         </li>
+         <li><a href="RecipeCategories.aspx?focus=health">Health</a>
+            <ul>
+                 <li><a href="recipes-for-low-calorie-weight-loss-383">Low calorie / Weight Loss</a></li>
+                 <li><a href="recipes-for-delicious-diabetic-recipes-370">Delicious Diabetic Recipes</a></li>
+                 <li><a href="recipes-for-healthy-heart-recipes-377">Healthy Heart</a></li>
+                 <li><a href="recipes-for-high-blood-pressure-644">High Blood Pressure</a></li>
+                 <li><a href="recipes-for-iron-rich-recieps-379">Iron Rich Recipes</a></li>
+                 <li><a href="recipes-for-calcium-rich-recipes-375">Calcium Rich Recipes</a></li>
+                 <li><a href="recipes-for-pregnancy-369">Pregnancy Recipes</a></li>
+                 <li><a href="recipes-for-zero-oil-recipes-403">Zero Oil</a></li>
+                 <li><a href="recipes-for-healthy-breakfast-489">Healthy Breakfast</a></li>
+                 <li><a href="recipes-for-healthy-soups-372">Healthy Soups</a></li>
+                 <li><a href="recipes-for-healthy-salads-373">Healthy Salads</a></li>
+                 <li><a href="recipes-for-healthy-subzis-382">Healthy Subzis</a></li>
+             </ul>
+         </li>
+         <li><a href="RecipeCategories.aspx?focus=kids">Kids</a>
+            <ul>
+                 <li><a href="recipes-for-kids-corner-quick-recipes-350">Quick Recipes</a></li>
+                 <li><a href="recipes-for-kids-corner-tiffin-snacks-344">Tiffin Treats</a></li>
+                 <li><a href="recipes-for-kids-corner-recipes-for-weaning-7-to-9-months-621">Recipes for Weaning ( 7 to 9 months)</a></li>
+                 <li><a href="recipes-for-kids-corner-recipes-for-baby-10-to-12-months-622">Recipes for Babies (10 to 12 months)</a></li>
+                 <li><a href="recipes-for-kids-corner-recipes-for-toddlers-1-3-years-358">Recipes for Toddlers ( 1 to 3 yrs) </a></li>
+                 <li><a href="recipes-for-kids-corner-let-your-kids-cook-351">Let your kids cook</a></li>
+            </ul>     
+         </li>
+         <li><a href="recipes-for-quick-recipe-325">Quick Recipes</a>
+           <ul>
+                 <li><a href="recipes-for-quick-recipe-breakfast-328">Breakfast</a></li>
+                 <li><a href="recipes-for-quick-recipe-stir-fries-336">Stir-fries</a></li>
+                 <li><a href="recipes-for-quick-recipe-soups-326">Soups</a></li>
+                 <li><a href="recipes-for-quick-recipe-snacks-starters-327">Snacks/Starters</a></li>
+                 
+                 <li><a href="recipes-for-quick-recipe-rotis-parathas-329">Rotis / Parathas</a></li>
+                 <li><a href="recipes-for-quick-recipe-subzis-332">Subzis</a></li>
+            </ul>  
+         </li>
+         <li><a href="RecipeCategories.aspx?focus=course">Course</a>
+            <ul>
+                 <li><a href="recipes-for-breakfast-151">Breakfast</a></li>
+                 <li><a href="recipes-for-salads-167">Salads</a></li>
+                 <li><a href="recipes-for-starters-snacks-177">Starters / Snacks</a></li>
+                 <li><a href="recipes-for-beverages-141">Beverages</a></li>
+                 <li><a href="recipes-for-soups-160">Soups</a></li>
+                 <li><a href="recipes-for-main-197">Main Course</a></li>
+                 <li><a href="recipes-for-desserts-250">Dessert</a></li>
+                 
+            </ul> 
+         </li>
+         
+      </ul>
+    </li>
+    <li><a href="recipesinhindi.aspx" title="View your favorite recipes in Hindi">
+        
+        <div class="menucontainer_div" style="width:100px;font-size:14px;">हिंदी रेसिपी</div>
+        </a></li>
+    <li><a href="recipes-in-gujarati.aspx" title="View your favorite recipes in Gujarati">
+        
+        <div class="menucontainer_div" style="width:135px;font-size:14px;">ગુજરાતી વાનગીઓ</div>
+        </a></li>
+    <li><a href="recipe_sliders.aspx" title="View exciting themed recipe sliders">
+        
+        <div class="menucontainer_div" style="width:120px;">RECIPE SLIDER</div>
+        </a></li>
+    <li><a href="latest_recipe_videos.aspx" title="Watch videos of your favorite Tarla Dalal recipes">
+        
+           <div class="menucontainer_div" style="width:80px;">VIDEOS</div>     </a>
+        <ul style="margin-top:18px;">
+            <li><a href="latest_recipe_videos.aspx">Latest Recipe Videos</a></li>
+            <li><a href="recipe_video_categories.aspx">Recipe Video Categories</a></li>
+        </ul>
+    </li>
+    <li><a href="English-Cookbooks-by-Tarla-Dalal" title="Buy cookbooks by Tarla Dalal">
+        
+         <div class="menucontainer_div" style="width:100px;">BUY TD BOOK</div>
+        </a></li>
+    
+    
+    <li><a href="cookingtips_healthfoodtips.aspx">
+        
+         <div class="menucontainer_div" style="width:80px;">TIPS</div>  </a>
+    <ul style="margin-top:18px;">
+        <li><a href="helpful-food-cooking-tips.aspx?parentcat=1">Health Food Tips</a></li>
+        <li><a href="helpful-food-cooking-tips.aspx?parentcat=14">Cooking Tips</a></li>
+        <li><a href="helpful-food-cooking-tips.aspx?parentcat=28">Home Remedies</a></li>
+        <li><a href="helpful-food-cooking-tips.aspx?parentcat=49">Storing Food Tips</a></li>
+        <li><a href="helpful-food-cooking-tips.aspx?parentcat=59">Buying Food Tips</a></li>
+    </ul>
+    </li>
+        <li><a href="latest_top_10_recipe_articles.aspx" title="View exciting themed recipe sliders">
+            
+           <div class="menucontainer_div" style="width:180px;">Top 10 Recipe Articles</div> </a>  
+        </li>
+
+        
+    
+      
+    </ul>
+           
+    <div class="curtainpull"></div>
+    </div>
+   
+ 
+</div>
+
+
+ 
+
+
+
+
+                        </nav>
+                       
+    
+    
+  
+            
+                    </div>
+                    
+                   
+                  
+                    
+                    <div id="top_banner">
+                        
+                        
+
+                        <!-- /1035919/RecipePageHeader728x90 -->
+<div id='div-gpt-ad-1547687860664-0' style='height:90px; width:728px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547687860664-0'); });
+</script>
+</div>
+
+                        
+                     
+                    
+                    </div>
+
+                    
+             <div id="pagedesc">
+                        
+                         
+                         
+                         
+                         
+
+<div style="float:right;width:300px;height:30px;vertical-align:middle;text-align:right;color:Purple;font-family:Trebuchet MS;font-size:18px;padding-right:10px;padding:-top:4px;">
+
+   <span id="login_name"></span><a id="signinlink" class="pagedesclinks" href="login.aspx?ReturnUrl=%2fVegetable-Fried-Rice-(-Jain-)-8631r" title="Sign in to your existing membership account">Sign In</a>&nbsp;|&nbsp;<a class="pagedesclinks" href="Register.aspx" title="New visitors can sign up for a free membership account">Register for free</a>
+
+</div>
+
+                         
+                       
+                        
+                        
+                        <img src="images/recipes.jpg" style="padding-left:40px;"/>
+                        
+                        
+                        
+                    </div>
+                    
+                    
+                    
+            </div>
+            </header>
+            
+            <div id="maincontent">
+            
+               
+                   
+     <div style="width:0px;"></div>
+
+
+              
+               
+              
+                   
+    <main>
+    <div id="rightpanel" style="width:988px;">
+  
+  <div id="rcpmain" style="width:813px;">  
+<article lang="en">
+    <div id="show_breadcrumb" style="margin:10px;padding:5px;">
+              <div class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">You are here: <span class="breadcrumb-link-wrap" itemprop = "itemListElement" itemscope = "" itemtype="https://schema.org/ListItem"><a href="https://www.tarladalal.com/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1" /></span><span aria-label="breadcrumb separator"> > &nbsp;</span><span class="breadcrumb-link-wrap" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a href="recipes-for-cuisine-1" class="cattraillinks" itemprop="item"><span itemprop="name">Cuisine</span></a><meta itemprop="position" content="2" /></span>&nbsp; <span aria-label="breadcrumb separator">> &nbsp;</span><span class="breadcrumb-link-wrap" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a href="recipes-for-Chinese-Veg-Chinese-Recipes-77" class="cattraillinks" itemprop="item"><span itemprop="name">Chinese</span></a><meta itemprop="position" content="3" /></span>&nbsp; <span aria-label="breadcrumb separator">> &nbsp;</span><span class="breadcrumb-link-wrap" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a href="recipes-for-Chinese-Rice-Dishes-83" class="cattraillinks" itemprop="item"><span itemprop="name">Chinese Rice Dishes</span></a><meta itemprop="position" content="4" /></span>&nbsp; <span aria-label="breadcrumb separator">> &nbsp;</span>Vegetable Fried Rice ( Jain )</div>
+    </div>
+
+     <div id="recipesubpanel" itemscope itemtype="https://schema.org/Recipe" style="width:100% !important;">
+          <div id="recipehead">
+            <div style="float:right;">
+             
+               
+               
+        
+            </div>
+            <div style="float:left;">
+               <h1><span><span id="ctl00_cntrightpanel_lblRecipeName" itemprop="name">Vegetable Fried Rice ( Jain )</span></span></h1><br />by <span id="ctl00_cntrightpanel_lblContribby" itemprop="author" style="font-size:12pt;">Tarla Dalal</span>
+            </div>
+              
+
+            <div class="curtainpull"></div>
+          </div>
+          <div class="rcc_caticons" style="clear:both;border-top:solid 1px #636770;margin:0px 10px;padding:5px 0px;"><img style="padding:0px 6px;" src="images/recipe/quick.gif"/></div>
+          
+          <div id="recipedetleft">
+          <section>
+          <div id="rcpimg" style="width:100% !important;">
+              <div align="center">
+                    <img id="ctl00_cntrightpanel_imgRecipe" itemprop="image" src="members/9306/big/big_5_spice_vegetable_fried_rice-10758.jpg?size=696X905" alt="Vegetable Fried Rice ( Jain )" style="border-width:0px;margin-top:15px;" />
+                </div>
+              <div style="display:none;"><span id="ctl00_cntrightpanel_LblpublishingDate" itemprop="datePublished">16 Dec 2008</span></div>
+              
+              <div class="curtainpull"></div>
+              
+              
+            
+            <div id="rcpimgcap"><div style="float:left;"><span id="ctl00_cntrightpanel_lblPhotoCap"></span></div>
+                
+                <div id="ctl00_cntrightpanel_pnlShowSlides" style="font-family:Verdana;font-size:12px;/*margin-left:15px;color:Gray;*/float:left;width:250px;margin-left:10px;">
+	
+
+         
+                <input type="image" name="ctl00$cntrightpanel$btnNextPhoto" id="ctl00_cntrightpanel_btnNextPhoto" src="images/recipe/nxtimg.jpg" style="border-width:0px;" />
+                <input type="image" name="ctl00$cntrightpanel$btnPrevPhoto" id="ctl00_cntrightpanel_btnPrevPhoto" src="images/recipe/prvimg.jpg" style="border-width:0px;" />
+                <input type="submit" name="ctl00$cntrightpanel$btnSShow" value="Auto Play" id="ctl00_cntrightpanel_btnSShow" style="margin-left:15px;" />
+                
+            
+</div>
+                <div class="curtainpull"></div>
+
+                </div>
+              <div id="menupanel" style="width:100%;margin-top:10px;">
+                  
+            <div style="width:100%;margin:0px;padding:0px;float:left;">
+                   
+
+                    
+
+                    
+                   
+                <span id="ctl00_cntrightpanel_ibtnckbk" class="menupanel_btn" style="font-weight:bold;padding-top:2px;"> add to my cookbook </span>
+                <span id="ctl00_cntrightpanel_ibtnShoplist" class="menupanel_btn" style="font-weight:bold;padding-top:2px;"> add to shopping list </span>
+                
+                <input type="submit" name="ctl00$cntrightpanel$ibtnRcpMail" value="email recipe to friend" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cntrightpanel$ibtnRcpMail&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MailToFriend.aspx?typ=rcp&amp;id=8631&quot;, false, false))" id="ctl00_cntrightpanel_ibtnRcpMail" class="menupanel_btn" style="font-weight:bold;" />
+                <input type="submit" name="ctl00$cntrightpanel$ibtnRcpPrint" value="print recipe" id="ctl00_cntrightpanel_ibtnRcpPrint" class="menupanel_btn" style="font-weight:bold;" />
+                <input type="submit" name="ctl00$cntrightpanel$iBtnAddPhoto" value="add photo" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cntrightpanel$iBtnAddPhoto&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Add_photo.aspx?recipeid=8631&quot;, false, false))" id="ctl00_cntrightpanel_iBtnAddPhoto" class="menupanel_btn" style="font-weight:bold;" />
+                
+                             
+                    
+            </div>
+    
+    
+                   <div class="curtainpull"></div>
+                    <div id="fillerdiv">
+                     </div> 
+    
+                    <div id="ctl00_cntrightpanel_pnlAddCookbook" style="background-color:#FFFCC7;width:400px;display:none;border:solid 1px #e5e5e5;padding:10px;z-index:10000">
+	
+                    
+                        <span style="font-family:Tahoma;font-size:14px;">You are not signed in. Please sign in to access your cookbooks</span><br/><br/><a style="text-decoration:underline;color:black;font-family:verdana;font-size:12px;" href="login.aspx" style="text-decoration:none;">Existing members click here to sign in</a><br/><br/><a style="text-decoration:underline;color:black;font-family:verdana;font-size:12px;" href="register.aspx" style="text-decoration:none;">New visitors click here to sign up</a><br/>
+                          <br />          
+                        <br /><div style="height:15px;"><span id="c" style="width:50px;font-size:10px;font-family:Verdana;"></span> </div>              
+                    
+</div>
+                
+                    
+    
+                    <div id="ctl00_cntrightpanel_pnlAddToShopList" style="background-color:#FFFCC7;width:400px;display:none;border:solid 1px #e5e5e5;padding:10px;z-index:1000;">
+	
+                        <div id="ctl00_cntrightpanel_pnlSelShoplist">
+		
+        
+                            <p>Please <a href="login.aspx">sign in</a> to create shopping lists!</p><br />
+                        
+                        
+	</div>
+                        
+                    
+</div>
+    
+                    
+    
+    
+    
+      </div>
+
+              <div class="curtainpull"></div>
+
+              </div>
+               </section>
+            </div>
+               
+            
+             <div style="width:21%;margin:10px auto;">
+                                  <span class='st_facebook_large' displayText='Facebook'></span>
+                                  <span class='st_twitter_large' displayText='Tweet'></span>
+                                  <span class='st_pinterest_large' displayText='Pinterest'></span>                                  
+                                  <span class='st_googleplus_large' displayText='Google +'></span> 
+                      </div>
+            
+              <div style="font-size:12px;line-height:1.6em;margin-left:10px;">
+                  <div style="width:95%;margin:15px 4%;">
+                
+                  
+              
+             
+             
+             
+                     
+
+                      <br/>
+                       <div id="ctl00_cntrightpanel_rsRecipe_pnlRatingSummary" style="width: 100%;margin-top:10px;margin-bottom:15px;">
+	
+    <div style="background-color: #f3f0cd;" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+        <div style="text-align: left; width:600px;">
+            <div style="background-image:url(images/recipe/0starMEMs.gif);background-position:top left;background-repeat:no-repeat;width:106px;height:21px;float:left;margin-right:5px;padding-bottom:5px;"><div style="background-image:url(images/recipe/5starMEMs.gif);background-position:top left;background-repeat:no-repeat;width:80%;height:21px;"></div></div>
+            
+
+            <span style="font-size: 10px; text-align: right; color: #EB7C01;">
+                <span id="ctl00_cntrightpanel_rsRecipe_lblrating" itemprop="ratingValue">4</span>/5 stars&nbsp;</span><span style="font-size: 12px; text-align: right;">&nbsp;<span id="ctl00_cntrightpanel_rsRecipe_lblRatio">100% LIKED IT</span></span>
+            
+
+        
+            &nbsp;&nbsp;
+        <span style="font-size: 16px;">
+            <a href="display-comments-for-url.aspx?cpi=1&url=Vegetable-Fried-Rice-(-Jain-)-8631r" style="text-decoration:underline;color:black;"><span itemprop="reviewCount">5</span> REVIEWS</a></span>
+        <span style="font-size: 8px;">
+            <span id="ctl00_cntrightpanel_rsRecipe_lblGoodBad">ALL GOOD</span></span><br />
+    </div>
+        <div class="curtainpull"></div>
+
+    </div>
+
+
+</div>
+                  </div>
+
+             
+              <div id="ctl00_cntrightpanel_pnlRcpVid" style="background-color:#E8F3C9;border-radius:5px;margin:10px;">
+	
+                <div style="text-align:center;padding:5px;color:#229175;"><a target="_blank" style="color:inherit;text-decoration:none;" href="jain-vegetable-fried-rice-video-by-tarla-dalal-1049v">Jain Vegetable Fried Rice Video</a>&nbsp;<img src="images/viewit.png" alt="View a video of this recipe here..." /></div>
+            
+</div>
+            <div id="ctl00_cntrightpanel_ReadRecipeInEnglish" style="background-color:#E8F3C9;border-radius:5px;margin:10px;">
+	
+                <div style="text-align:center;padding:5px;color:#229175;"><a target="_blank" style="color:inherit;text-decoration:none;" href="Vegetable-Fried-Rice-(-Jain-)-hindi-8631r">वेजिटेबल फ्राईड राईस, जैन</a> - हिन्दी में पढ़ें&nbsp;</div>
+            
+</div>
+                  
+                  
+                  <br />
+
+            <div style="padding:4px 0px;">
+              <span id="ctl00_cntrightpanel_lblCkbkCount" style="color:#273F63;">Added to 307 cookbooks</span> &nbsp;
+              <span id="ctl00_cntrightpanel_lblViewCount" title="View counts since 26 Sep 2010" style="color:#273F63;">This recipe has been viewed 255024 times</span>
+            </div>
+              
+          </div>
+            
+            
+             
+            <div>
+               
+              
+                
+          
+            </div>
+            
+            
+            
+            <!-- TestBlock1 -->
+              
+
+
+         <div style="float:left;width:340px;">
+              
+             <!-- /1035919/RecipeBlockAd -->
+<div id='div-gpt-ad-1547644488096-0' style='height:250px; width:300px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547644488096-0'); });
+</script>
+</div>
+         
+         </div>
+              <div id="recipe_details_left" style="float:left;margin-left:20px; margin-top:15px;
+    width:420px; text-align:left;
+   font-family:Verdana;font-size:12px;
+   color:#0d0d0d; line-height:1.6em;">
+                   
+            
+            
+            
+
+            
+            
+           <section>
+                <p style="font-size:15px;line-height:1.7em;"><span id="ctl00_cntrightpanel_lblDesc" itemprop="description">All-time favourite Vegetable Fried Rice in a Jain-friendly version, made without onions, garlic and other no-no ingredients. You will find that this delicacy retains its authentic flavour and texture despite the absence of these ingredients, which you might have thought to be indispensable in the preparation of Vegetable Fried Rice. The use of typically Oriental veggies like cabbage, capsicum and baby corn, along with tongue-tickling sauces, gives this main-course rice dish a fantastic flavour and aroma, which you will thoroughly enjoy. It is also important to stick to the cooking times mentioned in the recipe because if you under-cook the veggies, they will have a raw smell, whereas if you over-cook them, you will miss the crunch that is so typical of Chinese foods.</span></p>
+              </section>
+              </div>
+                 
+              <div class="curtainpull"></div>
+              <div style="font-size:12px;margin-left:10px;line-height:2.0em;font-family:Verdana;color:#0d0d0d;">
+              <div id="ctl00_cntrightpanel_pnlRecipeScale" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_cntrightpanel_btnScale')">
+	
+                
+                
+          
+                
+                <a id="ctl00_cntrightpanel_lbtnAddPrivateNote" href="javascript:__doPostBack('ctl00$cntrightpanel$lbtnAddPrivateNote','')" style="color:#228811;font-size:12pt;">Add your private note</a>
+                   
+           
+            
+            
+            
+           
+                 
+                <section>
+                        <p>
+                                
+                                <h2><span>
+                                    <span id="ctl00_cntrightpanel_lblrecipeNameH2" itemprop="name">Vegetable Fried Rice ( Jain ) recipe - How to make Vegetable Fried Rice ( Jain )</span>
+                                    </span></h2>
+                                <div class="tags">
+                                    <h2><span>Tags</span></h2>
+                                    <a href="recipes-for-Jain-International-42" itemprop="recipeCuisine">Jain International</a><a href="recipes-for-Chinese-Rice-Dishes-83" itemprop="recipeCuisine">Chinese Rice Dishes</a><a href="recipes-for-main-one-meal-dinner-242" itemprop="recipeCategory">One Meal Dinner</a><a href="recipes-for-main-rice-delicacies-quick-rice-recipes-225" itemprop="recipeCategory">Quick Rice Recipes</a><a href="recipes-for-quick-rice-330" itemprop="recipeCategory">Quick Vegetarian Rice Recipes</a>
+                                </div>
+                                <p style="font-size:15px;line-height:1.7em;">
+                                    Preparation Time:&nbsp;<time itemprop="prepTime" datetime="PT15M">15 mins</time>&nbsp &nbspCooking Time:&nbsp;<time itemprop="cookTime" datetime="PT6M">6 mins</time>&nbsp &nbspTotal Time:&nbsp;<time itemprop="totalTime" datetime="PT21M">21 mins </time>&nbsp &nbsp
+                                    <span id="ctl00_cntrightpanel_lblServes" itemprop="recipeYield">Makes 3 servings</span>
+
+                                    <br/>
+                                    
+                                   <span style="display:none;" itemprop="keywords" content=""></span>
+
+                                    <span id="ctl00_cntrightpanel_lblScale">Show me for</span>
+                                    <input name="ctl00$cntrightpanel$txtScale" type="text" id="ctl00_cntrightpanel_txtScale" style="width:31px;" />
+                                    <span id="ctl00_cntrightpanel_lblSrv">servings</span>
+                                    <input type="submit" name="ctl00$cntrightpanel$btnScale" value="Go" id="ctl00_cntrightpanel_btnScale" />
+                                    
+                                    
+                                </p>
+                                <p>
+                                </p>
+                        </p>
+                    
+                    
+                    
+                    
+                    
+                    
+                 
+
+                   
+                    
+                   
+                   
+                    
+                   
+                
+                    </section>
+          
+</div>
+                  </div>
+             
+             
+              
+              
+               <div style="float:left;margin-left:10px; margin-right:10px; margin-top:15px;width:375px; text-align:left;font-family:Verdana;font-size:12px;color:#0d0d0d; line-height:1.6em;">
+                   <section>
+                   <span class="recipe_subheader">
+                        
+                        Ingredients</span><br />
+                    
+                   
+                    
+                    <div id="rcpinglist">
+                        <div style="margin:0;padding:0;display:inline;font-weight:normal;font-size:15px;line-height:1.7em;">
+                            <span itemprop="recipeIngredient"><span>1/2 cup</span> sliced capsicum  (<a href="glossary-sliced-red-capsicum-2176i"><span>red</span></a>  ,   <a href="glossary-sliced-yellow-capsicum-2178i"><span>yellow</span></a> and <a href="glossary-sliced-capsicum-165i"><span>green</span></a>)</span><br/><span itemprop="recipeIngredient"><span>1/2 cup</span> <a href="glossary-diagonally-cut-and-blanched-baby-corn-2308i"><span>diagonally cut and blanched babycorn</span></a></span><br/><span itemprop="recipeIngredient"><span>1/4 cup</span> <a href="glossary-diagonally-cut-and-blanched-French-beans-2439i"><span>diagonally cut and blanched french beans</span></a></span><br/><span itemprop="recipeIngredient"><span>1/2 cup</span> <a href="glossary-shredded-cabbage-763i"><span>shredded cabbage</span></a></span><br/><span itemprop="recipeIngredient"><span>3 cups</span> <a href="cooked-long-grained-rice--(basmati)-22657r"><span>cooked long grained rice  (basmati)</span></a></span><br/><span itemprop="recipeIngredient"><span>2 tbsp</span> <a href="glossary-oil-671i"><span>oil</span></a></span><br/><span itemprop="recipeIngredient"><span>1 tsp</span> <a href="glossary-soy-sauce-864i"><span>soy sauce</span></a></span><br/><span itemprop="recipeIngredient"><span>1 tbsp</span> <a href="glossary-Red-Chilli-Sauce-810i"><span>chilli sauce</span></a></span><br/><span itemprop="recipeIngredient"><span></span> <a href="glossary-salt-418i"><span>salt</span></a> and to taste</span><br/>
+
+                        </div>
+                    </div>
+                       </section>
+              </div>
+              <div style="width:375px;margin-left:10px;
+    margin-right:10px; margin-top:15px;
+    text-align:left;
+   font-family:Verdana;font-size:1px;
+   color:#0d0d0d; line-height:1.7em;float:left;">
+                  <section>
+                  <div id="ctl00_cntrightpanel_pnlRcpMethod">
+	                    
+                      <span class="recipe_subheader">Method</span>
+                      <span style="margin:0;padding:0;display:inline;font-weight:normal;font-size:15px;line-height:1.7em;">                       
+                       <ol itemprop="recipeInstructions" itemscope itemType="https://schema.org/HowToSection" class="rcpprocsteps"><span style="display:none;" itemprop="name">Method</span><li itemprop="itemListElement" itemscope itemType="https://schema.org/HowToStep" ><span itemprop="text">Heat the oil in a deep non-stick pan, add the capsicum and sauté on a medium flame for 1 minute.</span></li><li itemprop="itemListElement" itemscope itemType="https://schema.org/HowToStep" ><span itemprop="text">Add the babycorn and french beans and sauté on a medium flame for 1 to 2 minutes.</span></li><li itemprop="itemListElement" itemscope itemType="https://schema.org/HowToStep" ><span itemprop="text">Add the cabbage and sauté on a medium flame for 1 minute.</span></li><li itemprop="itemListElement" itemscope itemType="https://schema.org/HowToStep" ><span itemprop="text">Add the soya sauce and chilli sauce and mix well.</span></li><li itemprop="itemListElement" itemscope itemType="https://schema.org/HowToStep" ><span itemprop="text">Add the cooked rice, salt and pepper, mix well and cook on medium flame for 2 minutes, while stirring occasionally.</span></li><li itemprop="itemListElement" itemscope itemType="https://schema.org/HowToStep" ><span itemprop="text">Serve hot.</span></li></ol></span>                       
+                            
+                                          
+                
+</div>
+</section>
+              </div>
+              <div class="curtainpull"></div>
+            <div id="rcp_vid_details">
+                <div style="margin:10px auto;width:560px;">
+
+                    <h2 style="color:#1679B3;"><span>
+                    Jain Vegetable Fried Rice Video by Tarla Dalal
+                        </span></h2>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WoUjVGWzZeI" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                
+                        <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="thumbnailUrl" content="https://www.tarladalal.com/v/Jain Fried Rice.jpg" /><meta itemprop="duration" content="PT2M53S" /><meta itemprop="uploadDate" content="2015-12-11" /><link itemprop="embedUrl" href="https://www.youtube.com/embed/WoUjVGWzZeI" /><meta itemprop="interactionCount" content="3398" /><meta itemprop="name" content="Jain Vegetable Fried Rice Video by Tarla Dalal" /><meta itemprop="description" content="All-time favourite Vegetable Fried Rice in a Jain-friendly version, made without onions, garlic and other no-no ingredients. You will find that this delicacy retains its authentic flavour and texture despite the absence of these ingredients, which you might have thought to be indispensable in the preparation of Vegetable Fried Rice. The use of typically Oriental veggies like cabbage, capsicum and baby corn, along with tongue-tickling sauces, gives this main-course rice dish a fantastic flavour and aroma, which you will thoroughly enjoy. It is also important to stick to the cooking times mentioned in the recipe because if you under-cook the veggies, they will have a raw smell, whereas if you over-cook them, you will miss the crunch that is so typical of Chinese foods.
+" /></div>
+                   
+            </div>
+         <div class="curtainpull"></div>
+
+          
+
+
+              <div id="rcpfbbox" style="float:left;width:375px;margin:2px 10px;">
+            
+<div class="fb-recommendations" data-site="www.tarladalal.com" data-width="250" data-height="300" data-header="true"></div></div>
+
+
+
+            <div id="relatedrecipes" style="display:none;">
+            <span style="font-size:14px;color:#1679B3;"><span id="ctl00_cntrightpanel_lblrelated">Other Related Recipes</span></span><br />
+            
+            <h5>
+            </h5>
+
+            </div>
+          <div id="InRead"> </div>
+            <div id="accompaniments" style="float:left;width:350px;margin:10px 10px;">
+            <span style="font-size:14px;color:#1679B3;"></span><br />
+  
+            <h4>
+            </h4>
+                 
+            
+            
+            </div>
+              
+              <div class="curtainpull"></div>
+         <aside>
+            
+             </aside>
+            
+            
+          
+          <div>
+          </div>
+          
+          
+
+
+          
+          
+              
+                
+                <br />
+                   
+                
+                
+                
+                <p></p>
+                
+                
+                
+                
+         
+    
+          
+         
+         <div id="rcpsourcebook"><span style="color:#555555;font-family:MS Trebuchet;margin-right:5px;">RECIPE SOURCE : </span><a href="Jain-International-by-Tarla-Dalal-221b">Jain International</a><a style="margin-left:5px;position:absolute;" href="Jain-International-by-Tarla-Dalal-221b"><img src="images/recipe/rcp_buy.jpg" style="border:none;" alt="Buy this cookbook"/></a></div>
+           </div>
+    </article>
+       
+
+    
+           <div id="ctl00_cntrightpanel_pnlSharedRecipe" style="margin:0px;padding:0px;">
+	
+          
+          <div id="recipedetright" style="display:none;"></div>
+          
+</div>
+          <div class="curtainpull"></div>
+          
+          
+          
+                
+          
+          <div id="ctl00_cntrightpanel_PnlRltdRecipeScroller">
+	
+
+            <div style="width:700px;margin:10px auto;">
+                <div class="OUTBRAIN" data-src="https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r" data-widget-id="AR_1" data-ob-template="Tarladalal"></div>
+                <div itemprop="ItemList" itemscope itemtype="https://schema.org/ItemList">
+                <p itemprop="name" class="hmslidehdr" style="background-color:#0273c1;width:700px;margin:10px auto;">
+                            Also View These Related Recipes
+                </p>
+
+                <aside>
+                 
+<div>
+<div id="tdfavs"><div><div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="5 Spice Tofu and Bean Sprouts Rice" href="5-Spice-Tofu-and-Bean-Sprouts-Rice-22769r"><img itemprop="image" src="members/9306/images/5_spice_tofu_and_bean_sprouts_rice-9685.jpg" alt="5 Spice Tofu and Bean Sprouts Rice" style="width:100%;" /><br/><meta itemprop="name" content="5 Spice Tofu and Bean Sprouts Rice"/>5 Spice Tofu and Bean Sprouts Rice</a><meta itemprop="position" content="1" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Chana Spinach Rice" href="Chana-Spinach-Rice-30847r"><img itemprop="image" src="members/9306/images/chana_spinach_rice-7491.jpg" alt="Chana Spinach Rice" style="width:100%;" /><br/><meta itemprop="name" content="Chana Spinach Rice"/>Chana Spinach Rice</a><meta itemprop="position" content="2" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Babycorn and Mushroom Curry Rice" href="Babycorn-and-Mushroom-Curry-Rice-457r"><img itemprop="image" src="members/9306/images/babycorn_and_mushroom_curry_rice-8769.jpg" alt="Babycorn and Mushroom Curry Rice" style="width:100%;" /><br/><meta itemprop="name" content="Babycorn and Mushroom Curry Rice"/>Babycorn and Mushroom Curry Rice</a><meta itemprop="position" content="3" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Vegetable Fried Rice ( Easy Chinese Cooking )" href="Vegetable-Fried-Rice-(-Easy-Chinese-Cooking-)-4165r"><img itemprop="image" src="members/9306/images/vegetable-fried-rice-(-easy-chinese-cooking-)-1030.jpg" alt="Vegetable Fried Rice ( Easy Chinese Cooking )" style="width:100%;" /><br/><meta itemprop="name" content="Vegetable Fried Rice ( Easy Chinese Cooking )"/>Vegetable Fried Rice ( Easy Chinese Cooking )</a><meta itemprop="position" content="4" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Vermicelli Rice, Lebanese Rice with Vermicelli" href="Vermicelli-Rice-Lebanese-Rice-with-Vermicelli-22607r"><img itemprop="image" src="members/9306/images/vermicelli_rice-7248.jpg" alt="Vermicelli Rice, Lebanese Rice with Vermicelli" style="width:100%;" /><br/><meta itemprop="name" content="Vermicelli Rice, Lebanese Rice with Vermicelli"/>Vermicelli Rice, Lebanese Rice with Vermicelli</a><meta itemprop="position" content="5" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Jalfrazie Layered Brown Rice (zero Oil, Low Calorie and Diabetic)" href="Jalfrazie-Layered-Brown-Rice-(zero-Oil-Low-Calorie-and-Diabetic)-22152r"><img itemprop="image" src="members/9306/images/jalfrazie_layered_brown_rice-6208.jpg" alt="Jalfrazie Layered Brown Rice (zero Oil, Low Calorie and Diabetic)" style="width:100%;" /><br/><meta itemprop="name" content="Jalfrazie Layered Brown Rice (zero Oil, Low Calorie and Diabetic)"/>Jalfrazie Layered Brown Rice (zero Oil, Low Calorie and Diabetic)</a><meta itemprop="position" content="6" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Massaman Curried Rice" href="Massaman-Curried-Rice-463r"><img itemprop="image" src="members/9306/images/massaman_curried_rice-7968.jpg" alt="Massaman Curried Rice" style="width:100%;" /><br/><meta itemprop="name" content="Massaman Curried Rice"/>Massaman Curried Rice</a><meta itemprop="position" content="7" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Baked Beans with Buttered Rice" href="Baked-Beans-with-Buttered-Rice-2217r"><img itemprop="image" src="members/9306/images/baked_beans_with_buttered_rice-11749.jpg" alt="Baked Beans with Buttered Rice" style="width:100%;" /><br/><meta itemprop="name" content="Baked Beans with Buttered Rice"/>Baked Beans with Buttered Rice</a><meta itemprop="position" content="8" /></span></div><div style="float:left;width:200px;height:350px;margin:10px;"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="url" itemprop="item" style="color:black;text-decoration:none;font-size:18px;" title="Coriander Curd Rice ( Baby and Toddler)" href="Coriander-Curd-Rice-(-Baby-and-Toddler)-3070r"><img itemprop="image" src="members/9306/images/coriander_curd_rice_(__baby_and_toddler)-10133.jpg" alt="Coriander Curd Rice ( Baby and Toddler)" style="width:100%;" /><br/><meta itemprop="name" content="Coriander Curd Rice ( Baby and Toddler)"/>Coriander Curd Rice ( Baby and Toddler)</a><meta itemprop="position" content="9" /></span></div></div></div></div><div class="curtainpull"></div> 
+
+</div>
+                    </aside>
+                    </div>
+                
+               
+              </div>
+            
+</div>
+          <div class="curtainpull"></div>
+          
+     
+     
+     
+     <div id="feedbackpanel" style="display:none;">
+       <div id="review_hdr">
+       
+           <span id="ctl00_cntrightpanel_lblreviewscnt">Review count</span>
+     
+       </div>
+       
+       <div id="ctl00_cntrightpanel_rvwFavor_pnlreview" class="rvw_placard" style="width:268px;">
+	
+<div class="rvwtypcount" ><span id="ctl00_cntrightpanel_rvwFavor_lblhowmany">6 FAVOURABLE REVIEWS</span></div>
+         
+         <div id="bestreview" style="font-family:verdana;font-size:12px;line-height:1.3em; padding-right:10px;padding-top:10px;padding-bottom:10px;margin-top:5px;">
+         <p><span id="ctl00_cntrightpanel_rvwFavor_lblrvwtyp">The most Helpful Favorable review</span></p>
+         &nbsp;Reviewed By<br />
+         &nbsp;<span id="ctl00_cntrightpanel_rvwFavor_lblrvwdt"></span><br /><br />
+         <span id="ctl00_cntrightpanel_rvwFavor_lblrvwdesc"></span> 
+         </div>
+         
+         
+         5 of 10 users found this review useful
+         
+         <div id="ctl00_cntrightpanel_rvwFavor_pnlmorefrvw">
+		
+             See other <a id="ctl00_cntrightpanel_rvwFavor_hl5" style="color:Red;text-decoration:underline;">5 star</a>, <a id="ctl00_cntrightpanel_rvwFavor_hl4" style="color:Red;text-decoration:underline;">4 star</a>, <a id="ctl00_cntrightpanel_rvwFavor_hl3" style="color:Red;text-decoration:underline;">3 star</a> reviews.
+         
+	</div>
+                  
+         
+         <a id="ctl00_cntrightpanel_rvwFavor_hlmorervw" class="more_rvw_link" style="text-decoration:none;">See more reviews</a>
+         <br /><br />
+       
+
+
+
+</div>
+<div id="ctl00_cntrightpanel_rvwFavor_pnlnoreview" class="rvw_placard" style="width:268px;">
+	
+
+   No review of this type was found
+
+
+</div>
+       
+       <div id="ctl00_cntrightpanel_rvwCritic_pnlreview" class="rvw_placard" style="width:268px;">
+	
+<div class="rvwtypcount" ><span id="ctl00_cntrightpanel_rvwCritic_lblhowmany">6 FAVOURABLE REVIEWS</span></div>
+         
+         <div id="bestreview" style="font-family:verdana;font-size:12px;line-height:1.3em; padding-right:10px;padding-top:10px;padding-bottom:10px;margin-top:5px;">
+         <p><span id="ctl00_cntrightpanel_rvwCritic_lblrvwtyp">The most Helpful Favorable review</span></p>
+         &nbsp;Reviewed By<br />
+         &nbsp;<span id="ctl00_cntrightpanel_rvwCritic_lblrvwdt"></span><br /><br />
+         <span id="ctl00_cntrightpanel_rvwCritic_lblrvwdesc"></span> 
+         </div>
+         
+         
+         5 of 10 users found this review useful
+         
+         <div id="ctl00_cntrightpanel_rvwCritic_pnlmorefrvw">
+		
+             See other <a id="ctl00_cntrightpanel_rvwCritic_hl5" style="color:Red;text-decoration:underline;">5 star</a>, <a id="ctl00_cntrightpanel_rvwCritic_hl4" style="color:Red;text-decoration:underline;">4 star</a>, <a id="ctl00_cntrightpanel_rvwCritic_hl3" style="color:Red;text-decoration:underline;">3 star</a> reviews.
+         
+	</div>
+                  
+         
+         <a id="ctl00_cntrightpanel_rvwCritic_hlmorervw" class="more_rvw_link" style="text-decoration:none;">See more reviews</a>
+         <br /><br />
+       
+
+
+
+</div>
+<div id="ctl00_cntrightpanel_rvwCritic_pnlnoreview" class="rvw_placard" style="width:268px;">
+	
+
+   No review of this type was found
+
+
+</div>
+        
+      
+       <div style="clear:both;border-bottom: dotted 1px #957F66;">
+       <div style="width:580px;margin:0px auto;position:relative;">
+       
+  <div class="fb-comments" data-href="http://www.tarladalal.com/$URL$" data-num-posts="10" data-width="580"></div>
+</div>
+       <div class="curtainpull"></div>
+       </div>
+       
+       
+       <div id="ctl00_cntrightpanel_morevreviews" style="width:100%;margin-top:10px;font-family:Verdana;font-size:12px;">
+	
+         
+         
+         
+         
+         
+         
+          <div>
+          <div style="color:#1d6b9b;font-size:20px;margin:10px 0px;">
+               Helpful reviews for this recipe
+               <div style="width:100%;text-align:right;font-size:10px;">
+            <a id="ctl00_cntrightpanel_hlallreviews" style="color:Black;text-decoration:none;">See all reviews...</a>
+         </div>
+          </div>
+        
+    </div>
+    
+         <div style="width:100%;text-align:right;font-size:10px;">
+            <a id="ctl00_cntrightpanel_hlallreviews2" style="color:Black;text-decoration:none;">See all reviews...</a>
+         </div>
+         
+         
+</div>
+       </div>
+       
+       
+        <div id="ctl00_cntrightpanel_pnldoreview" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_cntrightpanel_iBtnRateSubmit1')" style="height:320px;width:320px;display:none;padding:10px;background-color:#A0D28D;border:3px solid #22cc22;text-align:left;">
+	
+                 <div style="text-align:right;">
+                   <img id="ctl00_cntrightpanel_imgCloseBox" src="images/Site/closebox.jpg" style="border-width:0px;" />
+                 </div>
+                 <div style="margin-bottom:5px;">
+                 Sign in to your account<br />
+                 <span style="font-family:verdana;font-size:20px;color:white;">Rate this recipe</span><br />
+                 
+                               <div id="ctl00_cntrightpanel_rate_rcp" style="float:left;">
+		<input type="hidden" name="ctl00$cntrightpanel$rate_rcp_RatingExtender_ClientState" id="ctl00_cntrightpanel_rate_rcp_RatingExtender_ClientState" value="5" />
+                                <a href="#" id="ctl00_cntrightpanel_rate_rcp_A" title="5" style="text-decoration:none"><span id="ctl00_cntrightpanel_rate_rcp_Star_1" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_cntrightpanel_rate_rcp_Star_2" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_cntrightpanel_rate_rcp_Star_3" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_cntrightpanel_rate_rcp_Star_4" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_cntrightpanel_rate_rcp_Star_5" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span></a>
+	</div>
+                                <br />
+                                
+                    </div>
+                    <div class="curtainpull"></div>
+                            <div style="margin-top:15px;">
+                            <span style="font-family:verdana;font-size:16px;color:white;">Review this recipe (optional)</span><br />
+                            <textarea name="ctl00$cntrightpanel$txtrvw" rows="2" cols="20" id="ctl00_cntrightpanel_txtrvw" style="font-size:12px;height:130px;width:300px;"></textarea><br />
+                            <input type="hidden" name="ctl00$cntrightpanel$twm1_ClientState" id="ctl00_cntrightpanel_twm1_ClientState" />
+                            </div>
+                            <div style="text-align:right;margin-top:10px;margin-right:30px;">
+                                    <input type="image" name="ctl00$cntrightpanel$iBtnRateSubmit1" id="ctl00_cntrightpanel_iBtnRateSubmit1" src="images/Site/rate_submit.jpg" alt="Submit your review" style="border-width:0px;" />
+                            </div>
+                            
+                            
+                 
+                 
+                 
+</div>
+                 
+                 
+                 <div id="ctl00_cntrightpanel_pnlEditPrivateNote" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_cntrightpanel_ibtnNoteSubmit')" style="height:320px;width:320px;display:none;padding:10px;background-color:#A0D28D;border:3px solid #22cc22;text-align:left;">
+	
+                     <div style="text-align:right;">
+                       <img id="ctl00_cntrightpanel_imgCloseNote" src="images/Site/closebox.jpg" style="border-width:0px;" />
+                     </div>
+                
+                    <div style="margin-top:15px;">
+                        
+                        You are not signed in. To post a private recipe note requires you to <a href="login.aspx?ReturnUrl=Vegetable-Fried-Rice-(-Jain-)-8631r&for=rcp_addnote" style="color:#990000;text-decoration:underline;font-family:verdana;font-size:14px;">Sign In</a> to your Gold or Silver account<br/>
+                        <br />
+                        <span style="font-family:verdana;font-size:16px;color:white;">Add your private note to this recipe</span><br />
+                        <textarea name="ctl00$cntrightpanel$txtpnote" rows="2" cols="20" id="ctl00_cntrightpanel_txtpnote" style="font-size:12px;height:130px;width:300px;"></textarea><br />
+                    </div>
+                    
+                    <div style="text-align:right;margin-top:10px;margin-right:30px;">
+                        <input type="image" name="ctl00$cntrightpanel$ibtnNoteSubmit" id="ctl00_cntrightpanel_ibtnNoteSubmit" disabled="disabled" src="images/Site/rate_submit.jpg" alt="Submit your note" style="border-width:0px;" />
+                    </div>
+                                     
+                 
+</div>
+                 
+                 
+     
+    
+    </div>
+        
+     
+     
+     
+
+     <div id="rhssubpanel">
+         
+         
+       
+       
+        
+        
+     
+         
+
+          <div>
+            
+              <!-- /1035919/Rcp_Left_Tower -->
+<div id='div-gpt-ad-1547688400012-0' style='height:600px; width:120px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547688400012-0'); });
+</script>
+</div>
+         </div>
+           <div id="justadded" style="margin-top:15px;">        
+                
+<div>
+        
+       <div id="ctl00_cntrightpanel_JustAdd_pnlJustAdd">
+	
+            
+            <div style="height:25px;padding:5px 0px;background-color:#E9642B;color:White;text-align:center;font-family:verdana;font-size:16px;">
+            Just Added
+            </div>
+            <div style="text-align:left;padding:5px;">
+                    <a href="latest_recipe_videos.aspx" class="hmpg_just_add" title="Click here for the latest recipe videos">20 new videos&nbsp;<img src="images/repeat_search_go.png" alt=""/></a><br/><a href="latest_recipes.aspx" class="hmpg_just_add" title="Click here for the latest member recipes">494 new recipes&nbsp;<img src="images/repeat_search_go.png" alt=""/></a><br/><a href="latest_photos.aspx" class="hmpg_just_add" title="Click here for the latest recipe photos">30 new photos&nbsp;<img src="images/repeat_search_go.png" alt=""/></a><br/><a href="latest_cookbooks.aspx" class="hmpg_just_add" title="Click here for the latest member cookbooks">39 new cookbooks&nbsp;<img src="images/repeat_search_go.png" alt=""/></a><br/><a href="latest_reviews.aspx" class="hmpg_just_add" title="Click here for the latest recipe reviews">126 new reviews&nbsp;<img src="images/repeat_search_go.png" alt=""/></a><br/><a href="latest_hindi_recipes.aspx" class="hmpg_just_add" title="Click here for the latest Hindi recipes">36  नई हिंदी रेसिपी&nbsp;<img src="images/repeat_search_go.png" alt=""/></a><br/><a href="latest_gujarati_recipes.aspx" class="hmpg_just_add" title="Click here for the latest Gujarati recipes">31 નવી ગુજરાતી રેસીપી&nbsp;<img src="images/repeat_search_go.png" alt=""/></a>
+					
+            </div>  
+       
+</div>
+        
+</div>
+
+          
+           </div>
+         <div id="toparticles" style="margin-top:15px;    color: #3d5d34;    background-color: #dbfbb0;    font-weight: bold;    margin-right: 5px;    padding: 5px 10px;    text-align: center;    height: 32px;    display: table;margin:15px auto;">   
+             Related Articles     
+             </div>
+         <div style="margin-top:15px;text-align:left;padding:7px;">
+                <ul><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-parsley-344">  Benefits Of Parsley</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-basil-holy-basil-tulsi-345">  Benefits Of Basil Holy Basil Tulsi</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-uses-of-paneer-cottage-cheese-346">  Uses Of Paneer Cottage Cheese</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-sweet-potatoes-shakarkand-347">  Benefits Of Sweet Potatoes Shakarkand</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-dried-figs-anjeer-348">  Benefits Of Dried Figs Anjeer</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-fresh-figs-fresh-anjeer-349">  Benefits Of Fresh Figs Fresh Anjeer</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-uses-of-sweet-potatoes-shakarkand-350">  Uses Of Sweet Potatoes Shakarkand</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-french-beans-fansi-351">  Benefits Of French Beans Fansi</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-celery-ajmoda-352">  Benefits Of Celery Ajmoda</a></li><li style="list-style-type:disc;"><a style="color:#1679B3;text-decoration:none;font-size:12px;" href="article-benefits-of-quinoa-353">  Benefits Of Quinoa</a></li></ul>          
+             </div>
+           
+          <div id="rcppost" style="
+    color: #3d5d34;
+    background-color: #dbfbb0;
+    font-weight: bold;
+    margin-right: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    height: 32px;
+    display: table;margin:15px auto;">
+      <a href="post-a-recipe.aspx" title="Make your recipe available for viewing on this website" style="color: #3d5d34;
+    text-decoration: none;
+    font: inherit;display:table-cell;vertical-align:middle;">Post your own recipe</a>
+    </div>
+          <div id="contest" style="">
+       <div id="rcpconhdr" style="color: #3d5d34;
+    background-color: #dbfbb0;
+    font-weight: bold;
+    margin: 15px 0px;
+    padding: 5px 10px;
+    text-align: center;">
+          Recipe Contest
+       </div>
+       
+<div>
+    <a style="font-family:Verdana;font-size:14px;color:Black;text-decoration:none;;" href="Recipe_Contest.aspx?contestid=181">Holi Recipes</a>
+    
+    <br /><br /><a href="recipe_contest_winners.aspx" style="text-decoration:underline;font:inherit;color:inherit;font-size:70%;">View contest archive....</a>
+</div>
+     </div>
+         
+         <!-- /1035919/RecipePageRightAd1160x600 -->
+<div id='div-gpt-ad-1547689002337-0' style='height:600px; width:160px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547689002337-0'); });
+</script>
+</div>
+
+                 
+             
+            
+             
+                 
+                 
+                 <div id="ctl00_cntrightpanel_pnlrateprompt" style="padding-top:10px;">
+	
+                     <img id="imgClickToRate" alt="Rate and review this recipe and get 15 days FREE bonus membership!" src="images/rate_and_review.png" />
+                     
+                 
+</div>
+                 
+                
+                 
+             
+     
+         
+         
+         
+        
+         
+         
+         <div id="ctl00_cntrightpanel_rdUserSearches_pnlLstSearches" style="margin-bottom:8px;width:94%;">
+	
+       
+           
+    <div id="lastsearches" style=""><img alt="Your most recent searches" style="text-align:center;margin-bottom:10px;" src="images/lst_search_header.png" /><br /><a class="lstsrchlink" href="Vegetable-Fried-Rice-(-Jain-)-8631r">Vegetable Fried Rice ( Jain )&nbsp;<img src="images/repeat_search_go.png" alt="Repeat this search"/></a><br /></div>
+         
+
+</div>
+         
+         
+
+<div id="foodmailer">
+         
+             <img alt="Subscribe to the free food mailer" src="images/food_mail_header.png" /><br />
+             <p style="margin:0px;padding:5px;border-bottom:solid 1px #e5e5e5;">
+                 
+                 <a class="lstsrchlink" title="View latest mailer" href="mailer-10-best-steamed-food-recipes!-479">10 best steamed food recipes!<br/><img src="nl/479/tnw1.jpg" style="border:none;width:86px;margin:3px auto;"/></a>
+                 <br />
+                 <span style="color:#5C5757;font-size:x-small;position:relative;top:-7px;">Missed out on our mailers?<br />Our mailers are now online!</span><br />
+                 <a class="lstsrchlink" href="mailer_archive.aspx">View Mailer Archive</a></p>
+             
+             
+             <div id="ctl00_cntrightpanel_foodmailer_pnlms" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_cntrightpanel_foodmailer_btnmailer')" style="margin:0px;padding:5px;">
+	
+             
+             <input name="ctl00$cntrightpanel$foodmailer$txtMailerEmail" type="text" id="ctl00_cntrightpanel_foodmailer_txtMailerEmail" style="color:graytext;font-size:8pt;width:98%;" /><br />
+             <input type="hidden" name="ctl00$cntrightpanel$foodmailer$wmemail_ClientState" id="ctl00_cntrightpanel_foodmailer_wmemail_ClientState" />
+              
+              <a id="ctl00_cntrightpanel_foodmailer_btnmailer" href="javascript:__doPostBack('ctl00$cntrightpanel$foodmailer$btnmailer','')" style="color:#5C5757;font-size:16px;letter-spacing:1.2px;text-decoration:none;">Subscribe Now</a>
+                
+              
+</div>
+            
+             
+                 <span style="font-size:8px;color:#5C5757;">Privacy Policy: We never give away your email</span>
+                 
+             
+</div>
+
+         
+         
+         
+         <!-- img alt="Remove ads with membership" src="images/rem_ads.PNG" style="text-align:left;"/ -->   
+         
+
+
+       
+
+        
+        
+         <!--create a div for sticky ad .  -->
+
+         
+         <div style="width:100%;margin:10px auto;line-height:1.4em;">
+              
+
+         </div>
+         <div id="ctl00_cntrightpanel_adTower2_adholder" style="border-style:None;text-align:center;">
+	         
+          
+             <div style="margin:0px auto;position:relative;width:160px;height:600px;margin-bottom:10px;margin-left:9px;margin-top:10px;text-align:center;"><script type="text/javascript"><!-- 
+e9 = new Object(); 
+e9.size = "160x600";
+//--></script>
+<script type="text/javascript" src="//tags.expo9.exponential.com/tags/Tarladalalcom/ROS/tags.js"></script></div>
+             
+          
+</div>
+          
+
+
+
+         
+ <!-- TestTower1 -->
+
+       </div>            
+
+      
+     
+     
+              
+              <div id="ctl00_cntrightpanel_pnlContribmenu" style="background-color:#FFFCC7;height:169px;width:130px;visibility:hidden;border:solid 1px #e5e5e5;">
+	
+                   <div class="divContribMenu">
+                     <ul style="margin:0px;padding:0px;list-style-type:none;">
+                       
+                       
+                     </ul>
+                
+                   </div>
+                
+                
+                
+</div>
+                
+                
+
+    </div>
+    
+      </main>
+   
+
+                    <div class="curtainpull"></div>
+               <div id="logindetails">
+               <div style="float:left;width:450px;">
+                <div id="loginoptions">
+               
+                <div id="tarla_login" style="color: rgb(123,120,120);float:left;width:275px;">
+                <p style="font-size:11px;"><a href="Register.aspx" style="color:rgb(2, 202, 249);text-decoration:none;font-weight:bold;">REGISTER NOW</a> If you are a new user. <br/> Or Sign In here, if you are an existing member. </p>
+                     
+                        
+                        
+                        <div id="loginbox">
+                        <table>
+                          <tr><td>  Login Name </td><td> <input type="text" id="loginid" style="width:200px;" /></td> </tr>
+                            <tr><td>Password  </td><td><input type="password" id="password" placeholder="password" style="width:200px;" /></td></tr>
+                         
+                          <tr><td></td><td width="50%"><button id="login_td" style="cursor:pointer;background-image:url('images/login_button.jpg');width:52px;height:22px;background-repeat:no-repeat;" type="button"></button></td></tr>
+                           <tr><td width="100%"><p id="loginerrormsg"></p></td></tr>
+                       </table>
+                            <div style="font-size:11px;color:rgb(123,120,120);text-decoration:none;margin-left:75px;float:left;">Forgot Login / Passowrd?<a href="Forgotpassword.aspx" style="font-size:11px;text-decoration:none;color:rgb(2, 202, 249);font-weight:bold;">Click here</a></div>
+                            
+
+                        </div>
+                       
+                   </div>
+                   
+                   <img src="images/image_or_forlogin.jpg" style="display:block;float:left;height:180px;" />
+                   <div id="otherlogin" style="float:left;margin: 60px 10px 0px 0px;width:130px;">
+                   <div id="fblogin_" style="margin:0px 0px 0px 10px;">
+                   
+                    <div id="auth-loggedout">
+                            <div class="fb-login-button" autologoutlink="true" scope="email,user_checkins"></div>                        
+                   </div>
+                   </div>
+               
+                   <div id="google_login" style="margin:10px 0px 0px 10px;">
+                   <div>
+                <span id="signinButton">
+  <span
+    class="g-signin"
+    data-callback="signinCallback"
+    data-clientid="488436777961-tocgaappdr3ujlirm3ths279iocelt9h.apps.googleusercontent.com"
+    data-cookiepolicy="single_host_origin"
+    data-requestvisibleactions="https://schema.org/AddAction"
+    data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email"">
+  </span>
+  
+</span>
+<div id="login_details_google">
+  
+  </div>
+                   </div>
+                   </div>
+                   </div>
+                   <div class="curtainpull"></div>
+                 <p id="exisitinglogin_note" style="font-size:11px;width:450px;margin:10px auto;text-align:center;">
+                       If your Gmail or Facebook email id is registered with Tarladalal.com, the accounts will be merged. If the respective id is not registered, a new Tarladalal.com account will be created.
+                   </p>
+                   
+                   </div>
+                   <div id="social_login_details" style="display:none;">
+                   Hi, <span id="auth-displayname"></span>
+                             <span id="FBId" style="display:none;"></span><br/>
+                             <span id="DisplayEmail" style="display:none;"></span><br/>
+                            <span id="thirdpartyname" style="display:none;"></span>
+                            <span id="msg"></span>
+                            
+                   <span id="userstatus" style="display:none;"></span>
+                   
+                  </div>
+                   <p id="fblogin" style="display:none;float:left;"></p>
+                   <p id="cancel_login" style="display:none;float:left;"></p>
+                   </div>
+                   <img id="closebutton" src="images/close-img.jpg" style="float:right;" alt="" />
+                   </div>
+                   
+
+                   <div class="curtainpull"></div>
+               
+                   
+                  
+                
+                  <div id="comment_status">
+                    <div id="comment_status_text"></div>
+                    <button id="ok_status" style="background-image:url('images/button_ok_status.png');width:75px;height:40px;"></button>
+                  </div>
+                  <div id="delete_comment">
+                    <span id="delete_comment_id" style="display:none;"></span>
+                    <p>Are you sure you want to delete this review ?</p>
+                    <button id="delete_post" style="background-image:url('images/button_remove_comment.png');width:125px;height:40px;"></button>
+                    <button id="cancel_delete" style="background-image:url('images/button_cancel_post_comment.png');width:110px;height:40px;"></button>
+                  </div>
+                   <div id="google_logout_msg">
+                    <span id="google_logout" style="display:none;"></span>
+                    <p>Click OK to sign out from tarladalal.<br/> For security reasons (specially on shared computers), proceed to Google and sign out from your Google account.</p>
+                    <button id="button_google_logout_ok" style="background-image:url('images/button_ok_status.png');width:75px;height:40px;"></button>
+                    <button id="button_google_logout_cancel" style="background-image:url('images/button_cancel_post_comment.png');width:110px;height:40px;"></button>
+                  </div>
+
+
+                 <div style="width: 615px;padding: 20px 20px;margin: 0 auto;margin-left: 130px;" id="display_comments">
+                 
+                  <div class="curtainpull"></div>
+
+                     <div id="edit_comment_recipepage" style="display:none;">
+                   <div style="width:100%;margin:0 auto;">
+                   <div style="width:90%;float:left;">
+                        <p id="p_edit">Your Rating</p> 
+                         <div id="edit_rating"></div> <br />
+                         <div class="curtainpull"></div>
+                    <span id="edit-rating-1" style="display:none;"></span>
+                    <span id="edit_comment_id" style="display:none;"></span>
+                  <textarea id="edit_comment_text" style="font-size:16px;color:black;width:87%;height:160px;" placeholder="If you have tried this recipe or liked this tip, tell us about your experience! Was the recipe delightful to prepare and joyous to serve or was the tip helpful? Or, do you have suggestions to improve it? " onfocus="this.placeholder=''" onblur=" this.placeholder='If you have tried this recipe or liked this tip, tell us about your experience! Was the recipe delightful to prepare and joyous to serve or was the tip helpful? Or, do you have suggestions to improve it?'"></textarea>
+                  <button id="edit_post" style="background-image:url('images/post_comment.jpg');width: 60px;height: 27px;border-radius: 8px;"></button>
+                    
+                    </div>
+                     <div class="curtainpull"></div>
+                    </div>
+                  </div>
+                     <div class="curtainpull"></div>
+                <div id="edit_comment_open_recipepage" style="display:none;">
+                   <div style="width:100%;margin:0 auto;">
+                   <div style="width:90%;float:left;">
+                        <p id="p_edit_open">Your Rating</p> 
+                         <div id="edit_rating_open"></div> <br />
+                         <div class="curtainpull"></div>
+                    <span id="edit-rating-1_open" style="display:none;"></span>
+                    <span id="edit_comment_id_open" style="display:none;"></span>
+                       <input type="text" placeholder="Name" id="open_rating_name" onfocus="this.placeholder=''" onblur=" this.placeholder='Name'" style="width:85%;margin:10px;padding:10px;" />
+                       <input type="text" placeholder="Email" id="open_rating_email" onfocus="this.placeholder=''" onblur=" this.placeholder='Email'" style="width:85%;margin:10px;padding:10px;" />
+
+                  <textarea id="edit_comment_text_open" style="font-size:16px;color:black;width:87%;height:160px;" placeholder="If you have tried this recipe, tell us about your experience. Was the recipe delightful to prepare and joyous to serve? Or, do you have suggestions to improve it? " onfocus="this.placeholder=''" onblur=" this.placeholder='If you have tried this recipe, tell us about your experience. Was the recipe delightful to prepare and joyous to serve? Or, do you have suggestions to improve it?'"></textarea>
+                  <button id="edit_post_open" style="background-image:url('images/post_comment.jpg');width: 60px;height: 27px;border-radius: 8px;"></button>
+                    
+                    </div>
+                     
+                    </div>
+                  </div>
+                    <div class="curtainpull"></div>
+                  
+                   
+                 <p class="hmslidehdr" style="background-color:#0273c1;width:600px;margin:10px auto;">
+                            Reviews
+                </p>
+                    
+<div style="width:100%;font-family:Verdana;">
+
+    <div class="maincomment" itemscope itemtype="https://schema.org/Review" id="c9990"><div class=="commentdetails"><div itemprop="itemReviewed" style="display:none;" itemscope itemtype="https://schema.org/CreativeWork"><span itemprop="name">Vegetable Fried Rice ( Jain )</span><span itemprop="url">https://www.tarladalal.comVegetable-Fried-Rice-(-Jain-)-8631r</span></div><div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="commentrating"><span style="display:none;" itemprop="ratingValue">5</span><div style="background-image:url(images/recipe/unfilled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:106px;height:21px;float:left;"><div style="background-image:url(images/recipe/filled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:100%;height:21px;"></div></div></div><div style="margin-left:20px;float:left;width:450px;"><div class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span style="display:none;width:0px;" itemprop="name">Dips Shah</span><a href="#">Dips Shah</a></div><div class="commentdate">&nbsp;on 04 Mar 16 01:37 PM</div><br/><br/><span id="comtxt9990" itemprop="reviewBody">Hey,  I like all your recipes. You make it smile and fast,  not compromising on taste. The best part is which ever cuisine,  in your recipes I get everything in my kitchen. That makes things simple. Thanks a lot.  </span><span style="display:none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Tarla Dalal"></span></div><div class="curtainpull"></div></div><div class="reply"><a id="btn9990">Reply</a></div><div id="parent9990" class="parent"> | Hide Replies</div><div class="curtainpull"></div><div class="post_a_reply" id="9990"><textarea id="txt9990" rows="5" cols="75"></textarea><div class="post" style="float:left;"><button id="post9990">Post</button></div><div class="cancelpost" style="float:left;"><button id="cancel9990">Cancel</button></div><div class="curtainpull"></div></div></div><div class="child" id="child9990"><div class="childcomment" id="c9991" style="margin-left:30px"><div class="commentdetails"><img src="images/comment-image-tarla.png"><span class="name"><a href="myreviews.aspx?memid=9306">Tarla Dalal</a></span> &nbsp&nbsp<span id="comtxt9991"> Thanks Dips. We are delighted you loved the Jain Rice recipe. Please keep posting your thoughts and feedback. </span></div><div class="reply"><a id="btn9991">Reply</a> <div class="child_commentdate">04 Mar 16 01:42 PM</div></div><div class="curtainpull"></div><div class="post_a_reply" id="9991"><textarea id="txt9991" rows="5" cols="70"></textarea><div class="post" style="float:left;"><button id="post9991">Post</button></div><div class="cancelpost" style="float:left;"><button id="cancel9991">Cancel</button></div><div class="curtainpull"></div></div></div></div><div class="maincomment" itemscope itemtype="https://schema.org/Review" id="c9241"><div class=="commentdetails"><div itemprop="itemReviewed" style="display:none;" itemscope itemtype="https://schema.org/CreativeWork"><span itemprop="name">Vegetable Fried Rice ( Jain )</span><span itemprop="url">https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r</span></div><div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="commentrating"><span style="display:none;" itemprop="ratingValue">5</span><div style="background-image:url(images/recipe/unfilled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:106px;height:21px;float:left;"><div style="background-image:url(images/recipe/filled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:100%;height:21px;"></div></div></div><div style="margin-left:20px;float:left;width:450px;"><div class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span style="display:none;width:0px;" itemprop="name">Jeena Suraj</span></div><div class="name"><a href="myreviews.aspx?memid=638145">Jeena Suraj</a></div><div class="commentdate">&nbsp;on 31 Jan 16 11:46 AM</div><br/><br/><span itemprop="reviewBody" id="comtxt9241">Vegetable fried rice in Jain version, really very helpful and Nice. </span><span style="display:none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Tarla Dalal"></span></div><div class="curtainpull"></div></div><div class="reply"><a id="btn9241">Reply</a></div><div id="parent9241" class="parent"> | Hide Replies</div>  <div class="curtainpull"></div><div class="post_a_reply" id="9241"><textarea id="txt9241" rows="5" cols="75"></textarea><div class="post" style="float:left;"><button id="post9241">Post</button></div><div class="cancelpost" style="float:left;"><button id="cancel9241">Cancel</button></div><div class="curtainpull"></div></div></div><div class="child" id="child9241"><div class="childcomment" id="c9265" style="margin-left:30px"><div class="commentdetails"><img src="images/comment-image-tarla.png"><span class="name"><a href="myreviews.aspx?memid=9306">Tarla Dalal</a></span> &nbsp&nbsp<span id="comtxt9265"> Thanks Jeena. We are delighted you loved the Jain recipe. Please keep posting your thoughts and feedback.
+ </span></div><div class="reply"><a id="btn9265">Reply</a> <div class="child_commentdate">01 Feb 16 10:00 AM</div></div><div class="curtainpull"></div><div class="post_a_reply" id="9265"><textarea id="txt9265" rows="5" cols="70"></textarea><div class="post" style="float:left;"><button id="post9265">Post</button></div><div class="cancelpost" style="float:left;"><button id="cancel9265">Cancel</button></div><div class="curtainpull"></div></div></div></div><div class="maincomment" itemscope itemtype="https://schema.org/Review" id="c7971"><div class=="commentdetails"><div itemprop="itemReviewed" style="display:none;" itemscope itemtype="https://schema.org/CreativeWork"><span itemprop="name">5 Spice Vegetable Fried Rice</span><span itemprop="url">https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r</span></div><div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="commentrating"><span style="display:none;" itemprop="ratingValue">5</span><div style="background-image:url(images/recipe/unfilled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:106px;height:21px;float:left;"><div style="background-image:url(images/recipe/filled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:100%;height:21px;"></div></div></div><div style="margin-left:20px;float:left;width:450px;"><div class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span style="display:none;width:0px;" itemprop="name">Kalyan Food Lover</span></div><div class="name"><a href="myreviews.aspx?memid=29697">Kalyan Food Lover</a></div><div class="commentdate">&nbsp;on 04 Nov 15 04:44 PM</div><br/><br/><span itemprop="reviewBody" id="comtxt7971">Ekdam mast </span><span style="display:none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Tarla Dalal"></span></div><div class="curtainpull"></div></div><div class="reply"><a id="btn7971">Reply</a></div>  <div class="curtainpull"></div><div class="post_a_reply" id="7971"><textarea id="txt7971" rows="5" cols="75"></textarea><div class="post" style="float:left;"><button id="post7971">Post</button></div><div class="cancelpost" style="float:left;"><button id="cancel7971">Cancel</button></div><div class="curtainpull"></div></div></div><div class="maincomment" itemscope itemtype="https://schema.org/Review" id="c4313"><div class=="commentdetails"><div itemprop="itemReviewed" style="display:none;" itemscope itemtype="https://schema.org/CreativeWork"><span itemprop="name">5 Spice Vegetable Fried Rice</span><span itemprop="url">https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r</span></div><div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="commentrating"><span style="display:none;" itemprop="ratingValue">5</span><div style="background-image:url(images/recipe/unfilled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:106px;height:21px;float:left;"><div style="background-image:url(images/recipe/filled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:100%;height:21px;"></div></div></div><div style="margin-left:20px;float:left;width:450px;"><div class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span style="display:none;width:0px;" itemprop="name">Love good recipes</span></div><div class="name"><a href="myreviews.aspx?memid=590393">Love good recipes</a></div><div class="commentdate">&nbsp;on 02 Sep 13 10:29 AM</div><br/><br/><span itemprop="reviewBody" id="comtxt4313">Excellent Chinese rice with cabbage, capsicum and baby corn and flavored with 5 spice powder and soya sauce.</span><span style="display:none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Tarla Dalal"></span></div><div class="curtainpull"></div></div><div class="reply"><a id="btn4313">Reply</a></div>  <div class="curtainpull"></div><div class="post_a_reply" id="4313"><textarea id="txt4313" rows="5" cols="75"></textarea><div class="post" style="float:left;"><button id="post4313">Post</button></div><div class="cancelpost" style="float:left;"><button id="cancel4313">Cancel</button></div><div class="curtainpull"></div></div></div><div class="maincomment" itemscope itemtype="https://schema.org/Review" id="c365"><div class=="commentdetails"><div itemprop="itemReviewed" style="display:none;" itemscope itemtype="https://schema.org/CreativeWork"><span itemprop="name">5 Spice Vegetable Fried Rice</span><span itemprop="url">https://www.tarladalal.com/Vegetable-Fried-Rice-(-Jain-)-8631r</span></div><div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="commentrating"><span style="display:none;" itemprop="ratingValue">3</span><div style="background-image:url(images/recipe/unfilled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:106px;height:21px;float:left;"><div style="background-image:url(images/recipe/filled_5star_white.gif);background-position:top left;background-repeat:no-repeat;width:60%;height:21px;"></div></div></div><div style="margin-left:20px;float:left;width:450px;"><div class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span style="display:none;width:0px;" itemprop="name">Foodie #494330</span></div><div class="name"><a href="myreviews.aspx?memid=494330">Foodie #494330</a></div><div class="commentdate">&nbsp;on 28 Sep 10 01:19 PM</div><br/><br/><span itemprop="reviewBody" id="comtxt365">amazing recipe...easy to cook and relished by one and all.</span><span style="display:none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Tarla Dalal"></span></div><div class="curtainpull"></div></div><div class="reply"><a id="btn365">Reply</a></div>  <div class="curtainpull"></div><div class="post_a_reply" id="365"><textarea id="txt365" rows="5" cols="75"></textarea><div class="post" style="float:left;"><button id="post365">Post</button></div><div class="cancelpost" style="float:left;"><button id="cancel365">Cancel</button></div><div class="curtainpull"></div></div></div>
+    <div style="clear:both;"></div>
+    
+</div>
+                </div>
+
+              
+               
+               <div class="curtainpull"></div>
+               
+
+    <script type="text/javascript">
+        /* jQuery.noConflict() for using the plugin along with other libraries. 
+
+        You can remove it if you won't use other libraries (e.g. prototype, scriptaculous etc.) or 
+
+        if you include jQuery before other libraries in yourdocument's head tag. 
+
+        [more info: http://docs.jquery.com/Using_jQuery_with_Other_Libraries]
+
+        jQuery.noConflict(); 
+
+        calling thumbnailScroller function with options as parameters */
+        (function ($) {
+            window.onload = function () {
+                $("#tdfavs").thumbnailScroller({
+                    scrollerType: "clickButtons",
+                    scrollerOrientation: "horizontal",
+                    scrollSpeed: 2,
+                    scrollEasing: "easeOutCirc",
+                    scrollEasingAmount: 600,
+                    acceleration: 4,
+                    scrollSpeed: 800,
+                    noScrollCenterSpace: 10,
+                    autoScrolling: 0,
+                    autoScrollingSpeed: 2000,
+                    autoScrollingEasing: "easeInOutQuad",
+                    autoScrollingDelay: 500
+                });
+                $("#tvid").thumbnailScroller({
+                    scrollerType: "clickButtons",
+                    scrollerOrientation: "horizontal",
+                    scrollSpeed: 2,
+                    scrollEasing: "easeOutCirc",
+                    scrollEasingAmount: 600,
+                    acceleration: 4,
+                    scrollSpeed: 800,
+                    noScrollCenterSpace: 10,
+                    autoScrolling: 0,
+                    autoScrollingSpeed: 2000,
+                    autoScrollingEasing: "easeInOutQuad",
+                    autoScrollingDelay: 500
+                });
+
+            }
+        })(jQuery);
+
+</script>
+<!-- thumbnailScroller script -->
+
+<script type="text/javascript" src="jquery.thumbnailScroller.js"></script>
+
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
+
+
+               
+               <!-- div style="clear:both;width:100%;margin:0px;padding:0px;height:15px;background: url(images/pgcrnr_rb.png) no-repeat bottom right;"></div -->
+               
+            </div>
+            
+            
+            
+        </div>
+        
+       <footer>
+        <div id="footer">
+        
+        
+         
+         <div id="ftr_adspace">
+          
+              
+                 
+             <!-- /1035919/RecipePageFooter728x90 -->
+<div id='div-gpt-ad-1547688687701-0' style='height:90px; width:728px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1547688687701-0'); });
+</script>
+</div>
+             
+             
+                   
+
+
+             
+         
+          </div>
+          
+          
+          
+<div id="td_ftrlinks">
+     <div class="ftr_col" style="width:25%;">
+         <div class="ftr_sec">
+           <h3>TARLA DIGITAL</h3>
+           
+                     
+                     <div id="td_social_ftr">
+                               
+		                    
+		                    
+
+                         <ul id="td_digital_ftr">
+                                
+			                    <li><a target="_blank" href="https://www.youtube.com/user/TarlaDalalsKitchen"></a></li>
+			                    <li><a target="_blank" href="https://www.facebook.com/pages/TarlaDalal/207464147348"></a></li>
+                                <li><a target="_blank" href="https://instagram.com/tarladalal/"></a></li>
+			                    <li><a target="_blank" href="https://plus.google.com/107883620848727803776"></a></li>
+			                    <li><a target="_blank" href="https://pinterest.com/tarladalal/"></a></li>
+                                <li><a target="_blank" href="free-recipe-app.aspx"></a></li>
+                                
+                                
+			                    
+			                  <ul id="td_digital_ftr_2items">
+                                <li><a id="shop_td" href="shopping-list.aspx"></a></li>
+			                    <li><a target="_blank" id="twitter_td" href="https://twitter.com/Tarla_Dalal"></a></li>
+                            </ul>  
+			                   	            
+			                    
+		                    </ul>
+		                    
+		                    
+		                    <div class="curtainpull"></div>
+                         </div>
+                     
+         </div>
+         <div class="ftr_sec">
+           <h3>OTHER FEATURES</h3>
+           
+              <a href="asktarla.aspx">Ask Tarla</a><br />
+                     <a href="recipeatoz.aspx">Recipe A To Z</a><br />
+                     <a href="post-a-recipe.aspx">Post A Recipe</a><br />
+                     <a href="recipe_contest.aspx">Recipe Contest</a> <br />
+                     <a href="glossarysearch.aspx">Glossary</a> <br />
+                     <a href="cooking_tip.aspx">Contribute your cooking tip</a>
+                 
+          
+         </div>
+      
+     </div>
+
+     <div class="ftr_col" style="width:25%;">
+         <div class="ftr_sec">
+         <h3>WHAT'S LATEST</h3>
+         <a href="Partner_Offers.aspx">Promotional Offers</a><br />
+                   <a href="productlist.aspx?categoryid=200">Tarla Dalal's Recently Launched Cookbooks</a> <br/>
+                   <a href="latest_recipe_videos.aspx">Newest Videos</a> <br/>
+                   <a href="latest_recipes.aspx">Latest Recipes</a> <br/>
+                   <a href="latest_cookbooks.aspx">Latest Members Cookbooks</a> <br/>
+                   
+                   <a href="cooking_tip.aspx">Tarla's Cooking Tip of the Day</a> <br/>
+                   
+                   <a href="mailer_archive.aspx">Mailer Archive</a>
+         </div>
+    </div>
+    
+    <div class="ftr_col" style="width:24%;">
+         <div class="ftr_sec">
+         <h3>HELP</h3>
+         <a href="membership_help.aspx">Membership FAQ</a> <br/>
+                 
+                 <a href="recipe_contributing_help.aspx">Recipe Contributing Help</a> <br/>
+                 <a href="shopping_help.aspx">Shopping Help</a> <br/>
+                 <a href="cooking_help.aspx">Cookbook Help</a>
+         </div>
+         
+         <div class="ftr_sec">
+         <h3>ASSOCIATE WITH US</h3>
+         <a href="about_tarladalal_page1.aspx">About Tarla Dalal</a> <br/>
+         <a href="tribute-to-tarla-dalal.aspx">Tribute to Tarla Dalal</a> <br/>
+                     <a href="advertise_with_us_page1.aspx">Advertise With Us</a> <br/>
+                     <a href="workwithus.aspx">Work With Us</a> <br/>
+                     <a href="join_associate_program.aspx">Join Associate Program</a> <br/>
+                     <a href="corporate_book_deals.aspx">Corporate Deals</a> <br/>
+                     <a href="Special-Deals-on-Cookbooks-by-Tarla-Dalal">Special Deals</a> <br/>
+                     <a href="contact_us.aspx">Contact Us</a> <br/>
+                     <a href="asktarla.aspx">Site Feedback</a>
+         </div>
+         
+    </div>
+    
+    <div class="ftr_col" style="width:24%;border:0;">
+         <div class="ftr_sec">
+         <h3>FINE PRINT</h3>
+         <a href="termsofusage.aspx">Terms Of Use</a> <br/>
+                     <a href="aboutcopyrights.aspx">About Copyrights</a> <br/>
+                     <a href="privacypolicy.aspx">Privacy Policy</a> <br/>
+                     
+                     <a href="asktarla.aspx">Shopping Policy</a> <br/>
+                     
+                     <a href="credits.aspx">Credits</a>
+         </div>
+    </div>     
+
+    <div class="curtainpull"></div>
+
+
+
+
+         
+              <div style="text-align:left;padding-left:188px;padding-bottom:10px;color:Black;font-size:10px;font-family:Arial;">
+              &copy;&nbsp;Sanjay&nbsp;&amp;&nbsp;Co. All rights reserved
+              </div>
+          </div>
+        
+        
+        
+        </div>
+        
+        </footer>
+        
+    </div>
+    
+    
+    
+                    
+                    
+                   <div id="ctl00_pnlMyPagemenu" style="background-color:#FFFCC7;width:130px;display:none;border:solid 1px #e5e5e5;z-index:110;">
+	
+                   <div class="divContribMenu">
+                     <ul style="margin:0px;padding:0px;list-style-type:none;">
+                       <li><a class="drpmenu_mem" href="MyPage.aspx">My Page</a></li>
+                       <li><a class="drpmenu_mem" href="MyAccount.aspx">My Account</a></li>
+                       <li><a class="drpmenu_mem" href="order_history.aspx">My Order History</a></li>
+                       <li><a class="drpmenu_mem" href="MyRecipes.aspx">My Recipes</a></li>
+                       <li><a class="drpmenu_mem" href="MyPhotos.aspx">My Photos</a></li>
+                       <li><a class="drpmenu_mem" href="MyCookbooks.aspx">My Cookbooks</a></li>
+                       <li><a class="drpmenu_mem" href="shopping-list.aspx">My Shopping Lists</a></li>
+                       <li><a class="drpmenu_mem" href="MyReviews.aspx">My Reviews</a></li>
+                       <li><a class="drpmenu_mem" href="MyReviewsRecd.aspx">My Reviews Received</a></li>
+                      
+                     </ul>
+                
+                   </div>
+                
+                
+                
+</div>
+                
+                
+                
+        
+    
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DAB00D92" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="eYhxPnKjoDxR7QAKWVwkX5ag3RxLSfWUXLpqJ1UznRkqthYuv-zOBsymK3mHqZmXJl1EmT48o-_Lc5jRphVTii7hYRo1" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=7yW-NlJOwIqxj64h3JlvYP9RCyQXhw1fUGKVL5F0jZa4yHhNgeuejbW_wOcYDTmA9RsR6V0v1g3LupXSFPy6FWBhWyk1&t=635588816575142005';
+WebForm_InitCallback();WebForm_AutoFocus('txtsearch');Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_wmsearch_ClientState","WatermarkCssClass":"wmtext","WatermarkText":"Search recipes","id":"ctl00_wmsearch"}, null, null, $get("ctl00_txtsearch"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.PopupControlBehavior, {"OffsetX":50,"OffsetY":5,"PopupControlID":"ctl00_cntrightpanel_pnlAddCookbook","Position":3,"dynamicServicePath":"/recipe.aspx","id":"ctl00_cntrightpanel_pceAddToCookbook"}, null, null, $get("ctl00_cntrightpanel_ibtnckbk"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.PopupControlBehavior, {"OffsetX":50,"OffsetY":5,"PopupControlID":"ctl00_cntrightpanel_pnlAddToShopList","Position":3,"dynamicServicePath":"/recipe.aspx","id":"ctl00_cntrightpanel_pceAddToShopList"}, null, null, $get("ctl00_cntrightpanel_ibtnShoplist"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.SlideShowBehavior, {"contextKey":"8631","id":"ctl00_cntrightpanel_ssRcpPhoto","imageDescriptionLabelID":"ctl00_cntrightpanel_lblPhotoCap","loop":true,"nextButtonID":"ctl00_cntrightpanel_btnNextPhoto","playButtonID":"ctl00_cntrightpanel_btnSShow","playButtonText":"Auto Play","playInterval":6000,"previousButtonID":"ctl00_cntrightpanel_btnPrevPhoto","slideShowServiceMethod":"GetBigPhotos","slideShowServicePath":"svc/RcpSvc.asmx","stopButtonText":"Stop","useContextKey":true}, null, null, $get("ctl00_cntrightpanel_imgRecipe"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"popupbg","CancelControlID":"ctl00_cntrightpanel_imgCloseNote","PopupControlID":"ctl00_cntrightpanel_pnlEditPrivateNote","dynamicServicePath":"/recipe.aspx","id":"ctl00_cntrightpanel_mceAddPrivateNote"}, null, null, $get("ctl00_cntrightpanel_lbtnAddPrivateNote"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.RatingBehavior, {"AutoPostBack":false,"CallbackID":"ctl00$cntrightpanel$rate_rcp","ClientStateFieldID":"ctl00_cntrightpanel_rate_rcp_RatingExtender_ClientState","EmptyStarCssClass":"emptyRatingStar","FilledStarCssClass":"filledRatingStar","Rating":5,"StarCssClass":"ratingStar","WaitingStarCssClass":"savedRatingStar","id":"ctl00_cntrightpanel_rate_rcp_RatingExtender"}, null, null, $get("ctl00_cntrightpanel_rate_rcp"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_cntrightpanel_twm1_ClientState","WatermarkText":"Tell us what you like about this recipe like taste, texture, ease of cooking, occasion you cooked it for.\r\nDid your family and friends enjoy this recipe?","id":"ctl00_cntrightpanel_twm1"}, null, null, $get("ctl00_cntrightpanel_txtrvw"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_cntrightpanel_foodmailer_wmemail_ClientState","WatermarkCssClass":"wmtext","WatermarkText":"Type email & click below","id":"ctl00_cntrightpanel_foodmailer_wmemail"}, null, null, $get("ctl00_cntrightpanel_foodmailer_txtMailerEmail"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"PopupPosition":3,"dynamicServicePath":"/recipe.aspx","id":"ctl00_pceMyPage","popupElement":$get("ctl00_pnlMyPagemenu")}, null, null, $get("ctl00_lbtn4"));
+});
+//]]>
+</script><div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzk5Mzg1NDM3D2QWAmYPZBYCAgMPZBYOAgMPZBYCAgcPFgIeDVdhdGVybWFya1RleHQFDlNlYXJjaCByZWNpcGVzZAIED2QWAmYPDxYCHgdWaXNpYmxlZ2RkAgUPZBYCZg9kFgICAQ8WAh4EVGV4dAWRATxkaXYgaWQ9Ikd1amFyYXRpX1JjcF9IZHIiPjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij5nb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKXtnb29nbGV0YWcuZGlzcGxheSgnR3VqYXJhdGlfUmNwX0hkcicpO30pOzwvc2NyaXB0PjwvZGl2PiBkAgYPZBYCAgEPFgIfAgXXAjxzcGFuIGlkPSJsb2dpbl9uYW1lIj48L3NwYW4+PGEgaWQ9InNpZ25pbmxpbmsiIGNsYXNzPSJwYWdlZGVzY2xpbmtzIiBocmVmPSJsb2dpbi5hc3B4P1JldHVyblVybD0lMmZWZWdldGFibGUtRnJpZWQtUmljZS0oLUphaW4tKS04NjMxciIgdGl0bGU9IlNpZ24gaW4gdG8geW91ciBleGlzdGluZyBtZW1iZXJzaGlwIGFjY291bnQiPlNpZ24gSW48L2E+Jm5ic3A7fCZuYnNwOzxhIGNsYXNzPSJwYWdlZGVzY2xpbmtzIiBocmVmPSJSZWdpc3Rlci5hc3B4IiB0aXRsZT0iTmV3IHZpc2l0b3JzIGNhbiBzaWduIHVwIGZvciBhIGZyZWUgbWVtYmVyc2hpcCBhY2NvdW50Ij5SZWdpc3RlciBmb3IgZnJlZTwvYT5kAggPZBYsAgEPFgIfAgXQCzxkaXYgY2xhc3M9ImJyZWFkY3J1bWIiIGl0ZW1zY29wZT0iIiBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL0JyZWFkY3J1bWJMaXN0Ij5Zb3UgYXJlIGhlcmU6IDxzcGFuIGNsYXNzPSJicmVhZGNydW1iLWxpbmstd3JhcCIgaXRlbXByb3AgPSAiaXRlbUxpc3RFbGVtZW50IiBpdGVtc2NvcGUgPSAiIiBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL0xpc3RJdGVtIj48YSBocmVmPSJodHRwczovL3d3dy50YXJsYWRhbGFsLmNvbS8iIGl0ZW1wcm9wPSJpdGVtIj48c3BhbiBpdGVtcHJvcD0ibmFtZSI+SG9tZTwvc3Bhbj48L2E+PG1ldGEgaXRlbXByb3A9InBvc2l0aW9uIiBjb250ZW50PSIxIiAvPjwvc3Bhbj48c3BhbiBhcmlhLWxhYmVsPSJicmVhZGNydW1iIHNlcGFyYXRvciI+ID4gJm5ic3A7PC9zcGFuPjxzcGFuIGNsYXNzPSJicmVhZGNydW1iLWxpbmstd3JhcCIgaXRlbXByb3A9Iml0ZW1MaXN0RWxlbWVudCIgaXRlbXNjb3BlPSIiIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvTGlzdEl0ZW0iPjxhIGhyZWY9InJlY2lwZXMtZm9yLWN1aXNpbmUtMSIgY2xhc3M9ImNhdHRyYWlsbGlua3MiIGl0ZW1wcm9wPSJpdGVtIj48c3BhbiBpdGVtcHJvcD0ibmFtZSI+Q3Vpc2luZTwvc3Bhbj48L2E+PG1ldGEgaXRlbXByb3A9InBvc2l0aW9uIiBjb250ZW50PSIyIiAvPjwvc3Bhbj4mbmJzcDsgPHNwYW4gYXJpYS1sYWJlbD0iYnJlYWRjcnVtYiBzZXBhcmF0b3IiPj4gJm5ic3A7PC9zcGFuPjxzcGFuIGNsYXNzPSJicmVhZGNydW1iLWxpbmstd3JhcCIgaXRlbXByb3A9Iml0ZW1MaXN0RWxlbWVudCIgaXRlbXNjb3BlPSIiIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvTGlzdEl0ZW0iPjxhIGhyZWY9InJlY2lwZXMtZm9yLUNoaW5lc2UtVmVnLUNoaW5lc2UtUmVjaXBlcy03NyIgY2xhc3M9ImNhdHRyYWlsbGlua3MiIGl0ZW1wcm9wPSJpdGVtIj48c3BhbiBpdGVtcHJvcD0ibmFtZSI+Q2hpbmVzZTwvc3Bhbj48L2E+PG1ldGEgaXRlbXByb3A9InBvc2l0aW9uIiBjb250ZW50PSIzIiAvPjwvc3Bhbj4mbmJzcDsgPHNwYW4gYXJpYS1sYWJlbD0iYnJlYWRjcnVtYiBzZXBhcmF0b3IiPj4gJm5ic3A7PC9zcGFuPjxzcGFuIGNsYXNzPSJicmVhZGNydW1iLWxpbmstd3JhcCIgaXRlbXByb3A9Iml0ZW1MaXN0RWxlbWVudCIgaXRlbXNjb3BlPSIiIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvTGlzdEl0ZW0iPjxhIGhyZWY9InJlY2lwZXMtZm9yLUNoaW5lc2UtUmljZS1EaXNoZXMtODMiIGNsYXNzPSJjYXR0cmFpbGxpbmtzIiBpdGVtcHJvcD0iaXRlbSI+PHNwYW4gaXRlbXByb3A9Im5hbWUiPkNoaW5lc2UgUmljZSBEaXNoZXM8L3NwYW4+PC9hPjxtZXRhIGl0ZW1wcm9wPSJwb3NpdGlvbiIgY29udGVudD0iNCIgLz48L3NwYW4+Jm5ic3A7IDxzcGFuIGFyaWEtbGFiZWw9ImJyZWFkY3J1bWIgc2VwYXJhdG9yIj4+ICZuYnNwOzwvc3Bhbj5WZWdldGFibGUgRnJpZWQgUmljZSAoIEphaW4gKTwvZGl2PmQCBw8PFgIfAgULVGFybGEgRGFsYWxkZAIMDw8WBB4ISW1hZ2VVcmwFSG1lbWJlcnMvOTMwNi9iaWcvYmlnXzVfc3BpY2VfdmVnZXRhYmxlX2ZyaWVkX3JpY2UtMTA3NTguanBnP3NpemU9Njk2WDkwNR4NQWx0ZXJuYXRlVGV4dAUdVmVnZXRhYmxlIEZyaWVkIFJpY2UgKCBKYWluIClkZAIODw8WAh8CBQsxNiBEZWMgMjAwOGRkAiQPZBYEAgEPZBYCAgEPFgIfAgVIPHA+UGxlYXNlIDxhIGhyZWY9ImxvZ2luLmFzcHgiPnNpZ24gaW48L2E+IHRvIGNyZWF0ZSBzaG9wcGluZyBsaXN0cyE8L3A+ZAIDDw8WAh8BaGRkAiwPDxYCHwFnZGQCNA8WBB4NVXNlQ29udGV4dEtleWceCkNvbnRleHRLZXkFBDg2MzFkAjoPZBYMAgMPFgIeB0VuYWJsZWRnZAIFDw8WAh8BaGRkAgcPFgIfB2hkAgkPZBYCZg9kFgICAQ8WAh8CZWQCDQ8WAh8CBeYDPGEgaHJlZj0icmVjaXBlcy1mb3ItSmFpbi1JbnRlcm5hdGlvbmFsLTQyIiBpdGVtcHJvcD0icmVjaXBlQ3Vpc2luZSI+SmFpbiBJbnRlcm5hdGlvbmFsPC9hPjxhIGhyZWY9InJlY2lwZXMtZm9yLUNoaW5lc2UtUmljZS1EaXNoZXMtODMiIGl0ZW1wcm9wPSJyZWNpcGVDdWlzaW5lIj5DaGluZXNlIFJpY2UgRGlzaGVzPC9hPjxhIGhyZWY9InJlY2lwZXMtZm9yLW1haW4tb25lLW1lYWwtZGlubmVyLTI0MiIgaXRlbXByb3A9InJlY2lwZUNhdGVnb3J5Ij5PbmUgTWVhbCBEaW5uZXI8L2E+PGEgaHJlZj0icmVjaXBlcy1mb3ItbWFpbi1yaWNlLWRlbGljYWNpZXMtcXVpY2stcmljZS1yZWNpcGVzLTIyNSIgaXRlbXByb3A9InJlY2lwZUNhdGVnb3J5Ij5RdWljayBSaWNlIFJlY2lwZXM8L2E+PGEgaHJlZj0icmVjaXBlcy1mb3ItcXVpY2stcmljZS0zMzAiIGl0ZW1wcm9wPSJyZWNpcGVDYXRlZ29yeSI+UXVpY2sgVmVnZXRhcmlhbiBSaWNlIFJlY2lwZXM8L2E+ZAITDxYCHwIFQjxzcGFuIHN0eWxlPSJkaXNwbGF5Om5vbmU7IiBpdGVtcHJvcD0ia2V5d29yZHMiIGNvbnRlbnQ9IiI+PC9zcGFuPmQCQA8WAh8CBS5KYWluIFZlZ2V0YWJsZSBGcmllZCBSaWNlIFZpZGVvIGJ5IFRhcmxhIERhbGFsZAJCDxYCHwIFejxpZnJhbWUgd2lkdGg9IjU2MCIgaGVpZ2h0PSIzMTUiIHNyYz0iaHR0cHM6Ly93d3cueW91dHViZS5jb20vZW1iZWQvV29ValZHV3paZUkiIGZyYW1lYm9yZGVyPSIwIiBhbGxvd2Z1bGxzY3JlZW4+PC9pZnJhbWU+ZAJEDxYCHwIFkgo8ZGl2IGl0ZW1wcm9wPSJ2aWRlbyIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvVmlkZW9PYmplY3QiPjxtZXRhIGl0ZW1wcm9wPSJ0aHVtYm5haWxVcmwiIGNvbnRlbnQ9Imh0dHBzOi8vd3d3LnRhcmxhZGFsYWwuY29tL3YvSmFpbiBGcmllZCBSaWNlLmpwZyIgLz48bWV0YSBpdGVtcHJvcD0iZHVyYXRpb24iIGNvbnRlbnQ9IlBUMk01M1MiIC8+PG1ldGEgaXRlbXByb3A9InVwbG9hZERhdGUiIGNvbnRlbnQ9IjIwMTUtMTItMTEiIC8+PGxpbmsgaXRlbXByb3A9ImVtYmVkVXJsIiBocmVmPSJodHRwczovL3d3dy55b3V0dWJlLmNvbS9lbWJlZC9Xb1VqVkdXelplSSIgLz48bWV0YSBpdGVtcHJvcD0iaW50ZXJhY3Rpb25Db3VudCIgY29udGVudD0iMzM5OCIgLz48bWV0YSBpdGVtcHJvcD0ibmFtZSIgY29udGVudD0iSmFpbiBWZWdldGFibGUgRnJpZWQgUmljZSBWaWRlbyBieSBUYXJsYSBEYWxhbCIgLz48bWV0YSBpdGVtcHJvcD0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkFsbC10aW1lIGZhdm91cml0ZSBWZWdldGFibGUgRnJpZWQgUmljZSBpbiBhIEphaW4tZnJpZW5kbHkgdmVyc2lvbiwgbWFkZSB3aXRob3V0IG9uaW9ucywgZ2FybGljIGFuZCBvdGhlciBuby1ubyBpbmdyZWRpZW50cy4gWW91IHdpbGwgZmluZCB0aGF0IHRoaXMgZGVsaWNhY3kgcmV0YWlucyBpdHMgYXV0aGVudGljIGZsYXZvdXIgYW5kIHRleHR1cmUgZGVzcGl0ZSB0aGUgYWJzZW5jZSBvZiB0aGVzZSBpbmdyZWRpZW50cywgd2hpY2ggeW91IG1pZ2h0IGhhdmUgdGhvdWdodCB0byBiZSBpbmRpc3BlbnNhYmxlIGluIHRoZSBwcmVwYXJhdGlvbiBvZiBWZWdldGFibGUgRnJpZWQgUmljZS4gVGhlIHVzZSBvZiB0eXBpY2FsbHkgT3JpZW50YWwgdmVnZ2llcyBsaWtlIGNhYmJhZ2UsIGNhcHNpY3VtIGFuZCBiYWJ5IGNvcm4sIGFsb25nIHdpdGggdG9uZ3VlLXRpY2tsaW5nIHNhdWNlcywgZ2l2ZXMgdGhpcyBtYWluLWNvdXJzZSByaWNlIGRpc2ggYSBmYW50YXN0aWMgZmxhdm91ciBhbmQgYXJvbWEsIHdoaWNoIHlvdSB3aWxsIHRob3JvdWdobHkgZW5qb3kuIEl0IGlzIGFsc28gaW1wb3J0YW50IHRvIHN0aWNrIHRvIHRoZSBjb29raW5nIHRpbWVzIG1lbnRpb25lZCBpbiB0aGUgcmVjaXBlIGJlY2F1c2UgaWYgeW91IHVuZGVyLWNvb2sgdGhlIHZlZ2dpZXMsIHRoZXkgd2lsbCBoYXZlIGEgcmF3IHNtZWxsLCB3aGVyZWFzIGlmIHlvdSBvdmVyLWNvb2sgdGhlbSwgeW91IHdpbGwgbWlzcyB0aGUgY3J1bmNoIHRoYXQgaXMgc28gdHlwaWNhbCBvZiBDaGluZXNlIGZvb2RzLg0KIiAvPjwvZGl2PmQCRg8PFgIfAWhkZAJODw8WAh8BaGRkAlQPDxYCHwFoZGQCXA9kFgQCAQ8WAh8CBZoBPGRpdiBjbGFzcz0iT1VUQlJBSU4iIGRhdGEtc3JjPSJodHRwczovL3d3dy50YXJsYWRhbGFsLmNvbS9WZWdldGFibGUtRnJpZWQtUmljZS0oLUphaW4tKS04NjMxciIgZGF0YS13aWRnZXQtaWQ9IkFSXzEiIGRhdGEtb2ItdGVtcGxhdGU9IlRhcmxhZGFsYWwiPjwvZGl2PmQCAw9kFgICAQ8WAh8CBcguPGRpdiBpZD0idGRmYXZzIj48ZGl2PjxkaXY+PGRpdiBzdHlsZT0iZmxvYXQ6bGVmdDt3aWR0aDoyMDBweDtoZWlnaHQ6MzUwcHg7bWFyZ2luOjEwcHg7Ij48c3BhbiBpdGVtcHJvcD0iaXRlbUxpc3RFbGVtZW50IiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9MaXN0SXRlbSI+PGEgaXRlbXByb3A9InVybCIgaXRlbXByb3A9Iml0ZW0iIHN0eWxlPSJjb2xvcjpibGFjazt0ZXh0LWRlY29yYXRpb246bm9uZTtmb250LXNpemU6MThweDsiIHRpdGxlPSI1IFNwaWNlIFRvZnUgYW5kIEJlYW4gU3Byb3V0cyBSaWNlIiBocmVmPSI1LVNwaWNlLVRvZnUtYW5kLUJlYW4tU3Byb3V0cy1SaWNlLTIyNzY5ciI+PGltZyBpdGVtcHJvcD0iaW1hZ2UiIHNyYz0ibWVtYmVycy85MzA2L2ltYWdlcy81X3NwaWNlX3RvZnVfYW5kX2JlYW5fc3Byb3V0c19yaWNlLTk2ODUuanBnIiBhbHQ9IjUgU3BpY2UgVG9mdSBhbmQgQmVhbiBTcHJvdXRzIFJpY2UiIHN0eWxlPSJ3aWR0aDoxMDAlOyIgLz48YnIvPjxtZXRhIGl0ZW1wcm9wPSJuYW1lIiBjb250ZW50PSI1IFNwaWNlIFRvZnUgYW5kIEJlYW4gU3Byb3V0cyBSaWNlIi8+NSBTcGljZSBUb2Z1IGFuZCBCZWFuIFNwcm91dHMgUmljZTwvYT48bWV0YSBpdGVtcHJvcD0icG9zaXRpb24iIGNvbnRlbnQ9IjEiIC8+PC9zcGFuPjwvZGl2PjxkaXYgc3R5bGU9ImZsb2F0OmxlZnQ7d2lkdGg6MjAwcHg7aGVpZ2h0OjM1MHB4O21hcmdpbjoxMHB4OyI+PHNwYW4gaXRlbXByb3A9Iml0ZW1MaXN0RWxlbWVudCIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvTGlzdEl0ZW0iPjxhIGl0ZW1wcm9wPSJ1cmwiIGl0ZW1wcm9wPSJpdGVtIiBzdHlsZT0iY29sb3I6YmxhY2s7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Zm9udC1zaXplOjE4cHg7IiB0aXRsZT0iQ2hhbmEgU3BpbmFjaCBSaWNlIiBocmVmPSJDaGFuYS1TcGluYWNoLVJpY2UtMzA4NDdyIj48aW1nIGl0ZW1wcm9wPSJpbWFnZSIgc3JjPSJtZW1iZXJzLzkzMDYvaW1hZ2VzL2NoYW5hX3NwaW5hY2hfcmljZS03NDkxLmpwZyIgYWx0PSJDaGFuYSBTcGluYWNoIFJpY2UiIHN0eWxlPSJ3aWR0aDoxMDAlOyIgLz48YnIvPjxtZXRhIGl0ZW1wcm9wPSJuYW1lIiBjb250ZW50PSJDaGFuYSBTcGluYWNoIFJpY2UiLz5DaGFuYSBTcGluYWNoIFJpY2U8L2E+PG1ldGEgaXRlbXByb3A9InBvc2l0aW9uIiBjb250ZW50PSIyIiAvPjwvc3Bhbj48L2Rpdj48ZGl2IHN0eWxlPSJmbG9hdDpsZWZ0O3dpZHRoOjIwMHB4O2hlaWdodDozNTBweDttYXJnaW46MTBweDsiPjxzcGFuIGl0ZW1wcm9wPSJpdGVtTGlzdEVsZW1lbnQiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL0xpc3RJdGVtIj48YSBpdGVtcHJvcD0idXJsIiBpdGVtcHJvcD0iaXRlbSIgc3R5bGU9ImNvbG9yOmJsYWNrO3RleHQtZGVjb3JhdGlvbjpub25lO2ZvbnQtc2l6ZToxOHB4OyIgdGl0bGU9IkJhYnljb3JuIGFuZCBNdXNocm9vbSBDdXJyeSBSaWNlIiBocmVmPSJCYWJ5Y29ybi1hbmQtTXVzaHJvb20tQ3VycnktUmljZS00NTdyIj48aW1nIGl0ZW1wcm9wPSJpbWFnZSIgc3JjPSJtZW1iZXJzLzkzMDYvaW1hZ2VzL2JhYnljb3JuX2FuZF9tdXNocm9vbV9jdXJyeV9yaWNlLTg3NjkuanBnIiBhbHQ9IkJhYnljb3JuIGFuZCBNdXNocm9vbSBDdXJyeSBSaWNlIiBzdHlsZT0id2lkdGg6MTAwJTsiIC8+PGJyLz48bWV0YSBpdGVtcHJvcD0ibmFtZSIgY29udGVudD0iQmFieWNvcm4gYW5kIE11c2hyb29tIEN1cnJ5IFJpY2UiLz5CYWJ5Y29ybiBhbmQgTXVzaHJvb20gQ3VycnkgUmljZTwvYT48bWV0YSBpdGVtcHJvcD0icG9zaXRpb24iIGNvbnRlbnQ9IjMiIC8+PC9zcGFuPjwvZGl2PjxkaXYgc3R5bGU9ImZsb2F0OmxlZnQ7d2lkdGg6MjAwcHg7aGVpZ2h0OjM1MHB4O21hcmdpbjoxMHB4OyI+PHNwYW4gaXRlbXByb3A9Iml0ZW1MaXN0RWxlbWVudCIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvTGlzdEl0ZW0iPjxhIGl0ZW1wcm9wPSJ1cmwiIGl0ZW1wcm9wPSJpdGVtIiBzdHlsZT0iY29sb3I6YmxhY2s7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Zm9udC1zaXplOjE4cHg7IiB0aXRsZT0iVmVnZXRhYmxlIEZyaWVkIFJpY2UgKCBFYXN5IENoaW5lc2UgQ29va2luZyApIiBocmVmPSJWZWdldGFibGUtRnJpZWQtUmljZS0oLUVhc3ktQ2hpbmVzZS1Db29raW5nLSktNDE2NXIiPjxpbWcgaXRlbXByb3A9ImltYWdlIiBzcmM9Im1lbWJlcnMvOTMwNi9pbWFnZXMvdmVnZXRhYmxlLWZyaWVkLXJpY2UtKC1lYXN5LWNoaW5lc2UtY29va2luZy0pLTEwMzAuanBnIiBhbHQ9IlZlZ2V0YWJsZSBGcmllZCBSaWNlICggRWFzeSBDaGluZXNlIENvb2tpbmcgKSIgc3R5bGU9IndpZHRoOjEwMCU7IiAvPjxici8+PG1ldGEgaXRlbXByb3A9Im5hbWUiIGNvbnRlbnQ9IlZlZ2V0YWJsZSBGcmllZCBSaWNlICggRWFzeSBDaGluZXNlIENvb2tpbmcgKSIvPlZlZ2V0YWJsZSBGcmllZCBSaWNlICggRWFzeSBDaGluZXNlIENvb2tpbmcgKTwvYT48bWV0YSBpdGVtcHJvcD0icG9zaXRpb24iIGNvbnRlbnQ9IjQiIC8+PC9zcGFuPjwvZGl2PjxkaXYgc3R5bGU9ImZsb2F0OmxlZnQ7d2lkdGg6MjAwcHg7aGVpZ2h0OjM1MHB4O21hcmdpbjoxMHB4OyI+PHNwYW4gaXRlbXByb3A9Iml0ZW1MaXN0RWxlbWVudCIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvTGlzdEl0ZW0iPjxhIGl0ZW1wcm9wPSJ1cmwiIGl0ZW1wcm9wPSJpdGVtIiBzdHlsZT0iY29sb3I6YmxhY2s7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Zm9udC1zaXplOjE4cHg7IiB0aXRsZT0iVmVybWljZWxsaSBSaWNlLCBMZWJhbmVzZSBSaWNlIHdpdGggVmVybWljZWxsaSIgaHJlZj0iVmVybWljZWxsaS1SaWNlLUxlYmFuZXNlLVJpY2Utd2l0aC1WZXJtaWNlbGxpLTIyNjA3ciI+PGltZyBpdGVtcHJvcD0iaW1hZ2UiIHNyYz0ibWVtYmVycy85MzA2L2ltYWdlcy92ZXJtaWNlbGxpX3JpY2UtNzI0OC5qcGciIGFsdD0iVmVybWljZWxsaSBSaWNlLCBMZWJhbmVzZSBSaWNlIHdpdGggVmVybWljZWxsaSIgc3R5bGU9IndpZHRoOjEwMCU7IiAvPjxici8+PG1ldGEgaXRlbXByb3A9Im5hbWUiIGNvbnRlbnQ9IlZlcm1pY2VsbGkgUmljZSwgTGViYW5lc2UgUmljZSB3aXRoIFZlcm1pY2VsbGkiLz5WZXJtaWNlbGxpIFJpY2UsIExlYmFuZXNlIFJpY2Ugd2l0aCBWZXJtaWNlbGxpPC9hPjxtZXRhIGl0ZW1wcm9wPSJwb3NpdGlvbiIgY29udGVudD0iNSIgLz48L3NwYW4+PC9kaXY+PGRpdiBzdHlsZT0iZmxvYXQ6bGVmdDt3aWR0aDoyMDBweDtoZWlnaHQ6MzUwcHg7bWFyZ2luOjEwcHg7Ij48c3BhbiBpdGVtcHJvcD0iaXRlbUxpc3RFbGVtZW50IiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9MaXN0SXRlbSI+PGEgaXRlbXByb3A9InVybCIgaXRlbXByb3A9Iml0ZW0iIHN0eWxlPSJjb2xvcjpibGFjazt0ZXh0LWRlY29yYXRpb246bm9uZTtmb250LXNpemU6MThweDsiIHRpdGxlPSJKYWxmcmF6aWUgTGF5ZXJlZCBCcm93biBSaWNlICh6ZXJvIE9pbCwgTG93IENhbG9yaWUgYW5kIERpYWJldGljKSIgaHJlZj0iSmFsZnJhemllLUxheWVyZWQtQnJvd24tUmljZS0oemVyby1PaWwtTG93LUNhbG9yaWUtYW5kLURpYWJldGljKS0yMjE1MnIiPjxpbWcgaXRlbXByb3A9ImltYWdlIiBzcmM9Im1lbWJlcnMvOTMwNi9pbWFnZXMvamFsZnJhemllX2xheWVyZWRfYnJvd25fcmljZS02MjA4LmpwZyIgYWx0PSJKYWxmcmF6aWUgTGF5ZXJlZCBCcm93biBSaWNlICh6ZXJvIE9pbCwgTG93IENhbG9yaWUgYW5kIERpYWJldGljKSIgc3R5bGU9IndpZHRoOjEwMCU7IiAvPjxici8+PG1ldGEgaXRlbXByb3A9Im5hbWUiIGNvbnRlbnQ9IkphbGZyYXppZSBMYXllcmVkIEJyb3duIFJpY2UgKHplcm8gT2lsLCBMb3cgQ2Fsb3JpZSBhbmQgRGlhYmV0aWMpIi8+SmFsZnJhemllIExheWVyZWQgQnJvd24gUmljZSAoemVybyBPaWwsIExvdyBDYWxvcmllIGFuZCBEaWFiZXRpYyk8L2E+PG1ldGEgaXRlbXByb3A9InBvc2l0aW9uIiBjb250ZW50PSI2IiAvPjwvc3Bhbj48L2Rpdj48ZGl2IHN0eWxlPSJmbG9hdDpsZWZ0O3dpZHRoOjIwMHB4O2hlaWdodDozNTBweDttYXJnaW46MTBweDsiPjxzcGFuIGl0ZW1wcm9wPSJpdGVtTGlzdEVsZW1lbnQiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL0xpc3RJdGVtIj48YSBpdGVtcHJvcD0idXJsIiBpdGVtcHJvcD0iaXRlbSIgc3R5bGU9ImNvbG9yOmJsYWNrO3RleHQtZGVjb3JhdGlvbjpub25lO2ZvbnQtc2l6ZToxOHB4OyIgdGl0bGU9Ik1hc3NhbWFuIEN1cnJpZWQgUmljZSIgaHJlZj0iTWFzc2FtYW4tQ3VycmllZC1SaWNlLTQ2M3IiPjxpbWcgaXRlbXByb3A9ImltYWdlIiBzcmM9Im1lbWJlcnMvOTMwNi9pbWFnZXMvbWFzc2FtYW5fY3VycmllZF9yaWNlLTc5NjguanBnIiBhbHQ9Ik1hc3NhbWFuIEN1cnJpZWQgUmljZSIgc3R5bGU9IndpZHRoOjEwMCU7IiAvPjxici8+PG1ldGEgaXRlbXByb3A9Im5hbWUiIGNvbnRlbnQ9Ik1hc3NhbWFuIEN1cnJpZWQgUmljZSIvPk1hc3NhbWFuIEN1cnJpZWQgUmljZTwvYT48bWV0YSBpdGVtcHJvcD0icG9zaXRpb24iIGNvbnRlbnQ9IjciIC8+PC9zcGFuPjwvZGl2PjxkaXYgc3R5bGU9ImZsb2F0OmxlZnQ7d2lkdGg6MjAwcHg7aGVpZ2h0OjM1MHB4O21hcmdpbjoxMHB4OyI+PHNwYW4gaXRlbXByb3A9Iml0ZW1MaXN0RWxlbWVudCIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvTGlzdEl0ZW0iPjxhIGl0ZW1wcm9wPSJ1cmwiIGl0ZW1wcm9wPSJpdGVtIiBzdHlsZT0iY29sb3I6YmxhY2s7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Zm9udC1zaXplOjE4cHg7IiB0aXRsZT0iQmFrZWQgQmVhbnMgd2l0aCBCdXR0ZXJlZCBSaWNlIiBocmVmPSJCYWtlZC1CZWFucy13aXRoLUJ1dHRlcmVkLVJpY2UtMjIxN3IiPjxpbWcgaXRlbXByb3A9ImltYWdlIiBzcmM9Im1lbWJlcnMvOTMwNi9pbWFnZXMvYmFrZWRfYmVhbnNfd2l0aF9idXR0ZXJlZF9yaWNlLTExNzQ5LmpwZyIgYWx0PSJCYWtlZCBCZWFucyB3aXRoIEJ1dHRlcmVkIFJpY2UiIHN0eWxlPSJ3aWR0aDoxMDAlOyIgLz48YnIvPjxtZXRhIGl0ZW1wcm9wPSJuYW1lIiBjb250ZW50PSJCYWtlZCBCZWFucyB3aXRoIEJ1dHRlcmVkIFJpY2UiLz5CYWtlZCBCZWFucyB3aXRoIEJ1dHRlcmVkIFJpY2U8L2E+PG1ldGEgaXRlbXByb3A9InBvc2l0aW9uIiBjb250ZW50PSI4IiAvPjwvc3Bhbj48L2Rpdj48ZGl2IHN0eWxlPSJmbG9hdDpsZWZ0O3dpZHRoOjIwMHB4O2hlaWdodDozNTBweDttYXJnaW46MTBweDsiPjxzcGFuIGl0ZW1wcm9wPSJpdGVtTGlzdEVsZW1lbnQiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL0xpc3RJdGVtIj48YSBpdGVtcHJvcD0idXJsIiBpdGVtcHJvcD0iaXRlbSIgc3R5bGU9ImNvbG9yOmJsYWNrO3RleHQtZGVjb3JhdGlvbjpub25lO2ZvbnQtc2l6ZToxOHB4OyIgdGl0bGU9IkNvcmlhbmRlciBDdXJkIFJpY2UgKCBCYWJ5IGFuZCBUb2RkbGVyKSIgaHJlZj0iQ29yaWFuZGVyLUN1cmQtUmljZS0oLUJhYnktYW5kLVRvZGRsZXIpLTMwNzByIj48aW1nIGl0ZW1wcm9wPSJpbWFnZSIgc3JjPSJtZW1iZXJzLzkzMDYvaW1hZ2VzL2NvcmlhbmRlcl9jdXJkX3JpY2VfKF9fYmFieV9hbmRfdG9kZGxlciktMTAxMzMuanBnIiBhbHQ9IkNvcmlhbmRlciBDdXJkIFJpY2UgKCBCYWJ5IGFuZCBUb2RkbGVyKSIgc3R5bGU9IndpZHRoOjEwMCU7IiAvPjxici8+PG1ldGEgaXRlbXByb3A9Im5hbWUiIGNvbnRlbnQ9IkNvcmlhbmRlciBDdXJkIFJpY2UgKCBCYWJ5IGFuZCBUb2RkbGVyKSIvPkNvcmlhbmRlciBDdXJkIFJpY2UgKCBCYWJ5IGFuZCBUb2RkbGVyKTwvYT48bWV0YSBpdGVtcHJvcD0icG9zaXRpb24iIGNvbnRlbnQ9IjkiIC8+PC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj5kAmgPZBYCAgUPZBYCZg8WAh4KQ2FsbGJhY2tJRAUcY3RsMDAkY250cmlnaHRwYW5lbCRyYXRlX3JjcGQCag9kFgQCAw8WAh8CBZsCWW91IGFyZSBub3Qgc2lnbmVkIGluLiBUbyBwb3N0IGEgcHJpdmF0ZSByZWNpcGUgbm90ZSByZXF1aXJlcyB5b3UgdG8gPGEgaHJlZj0ibG9naW4uYXNweD9SZXR1cm5Vcmw9VmVnZXRhYmxlLUZyaWVkLVJpY2UtKC1KYWluLSktODYzMXImZm9yPXJjcF9hZGRub3RlIiBzdHlsZT0iY29sb3I6Izk5MDAwMDt0ZXh0LWRlY29yYXRpb246dW5kZXJsaW5lO2ZvbnQtZmFtaWx5OnZlcmRhbmE7Zm9udC1zaXplOjE0cHg7Ij5TaWduIEluPC9hPiB0byB5b3VyIEdvbGQgb3IgU2lsdmVyIGFjY291bnQ8YnIvPmQCBw8PFgIfB2hkZAJ0D2QWAgIDD2QWAgIBD2QWAmYPFgIfCAUeY3RsMDAkY250cmlnaHRwYW5lbCRyYXRlUmVjaXBlZAJ4D2QWAmYPZBYCAgEPFgIfAgXUAjxkaXYgaWQ9Imxhc3RzZWFyY2hlcyIgc3R5bGU9IiI+PGltZyBhbHQ9IllvdXIgbW9zdCByZWNlbnQgc2VhcmNoZXMiIHN0eWxlPSJ0ZXh0LWFsaWduOmNlbnRlcjttYXJnaW4tYm90dG9tOjEwcHg7IiBzcmM9ImltYWdlcy9sc3Rfc2VhcmNoX2hlYWRlci5wbmciIC8+PGJyIC8+PGEgY2xhc3M9ImxzdHNyY2hsaW5rIiBocmVmPSJWZWdldGFibGUtRnJpZWQtUmljZS0oLUphaW4tKS04NjMxciI+VmVnZXRhYmxlIEZyaWVkIFJpY2UgKCBKYWluICkmbmJzcDs8aW1nIHNyYz0iaW1hZ2VzL3JlcGVhdF9zZWFyY2hfZ28ucG5nIiBhbHQ9IlJlcGVhdCB0aGlzIHNlYXJjaCIvPjwvYT48YnIgLz48L2Rpdj5kAnoPZBYCAgEPFgIfAgXUATxhIGNsYXNzPSJsc3RzcmNobGluayIgdGl0bGU9IlZpZXcgbGF0ZXN0IG1haWxlciIgaHJlZj0ibWFpbGVyLTEwLWJlc3Qtc3RlYW1lZC1mb29kLXJlY2lwZXMhLTQ3OSI+MTAgYmVzdCBzdGVhbWVkIGZvb2QgcmVjaXBlcyE8YnIvPjxpbWcgc3JjPSJubC80NzkvdG53MS5qcGciIHN0eWxlPSJib3JkZXI6bm9uZTt3aWR0aDo4NnB4O21hcmdpbjozcHggYXV0bzsiLz48L2E+ZAJ8DxYCHwIFgAI8ZGl2IGNsYXNzPSJPVVRCUkFJTiIgZGF0YS1zcmM9Imh0dHBzOi8vd3d3LnRhcmxhZGFsYWwuY29tL1ZlZ2V0YWJsZS1GcmllZC1SaWNlLSgtSmFpbi0pLTg2MzFyIiBkYXRhLXdpZGdldC1pZD0iU0JfMSIgZGF0YS1vYi10ZW1wbGF0ZT0iVGFybGFkYWxhbCIgPjwvZGl2PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBhc3luYz0iYXN5bmMiIHNyYz0iaHR0cHM6Ly93aWRnZXRzLm91dGJyYWluLmNvbS9vdXRicmFpbi5qcyI+PC9zY3JpcHQ+ZAKAAQ9kFgJmD2QWAgIBDxYCHwIF3wI8ZGl2IHN0eWxlPSJtYXJnaW46MHB4IGF1dG87cG9zaXRpb246cmVsYXRpdmU7d2lkdGg6MTYwcHg7aGVpZ2h0OjYwMHB4O21hcmdpbi1ib3R0b206MTBweDttYXJnaW4tbGVmdDo5cHg7bWFyZ2luLXRvcDoxMHB4O3RleHQtYWxpZ246Y2VudGVyOyI+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwhLS0gDQplOSA9IG5ldyBPYmplY3QoKTsgDQplOS5zaXplID0gIjE2MHg2MDAiOw0KLy8tLT48L3NjcmlwdD4NCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vdGFncy5leHBvOS5leHBvbmVudGlhbC5jb20vdGFncy9UYXJsYWRhbGFsY29tL1JPUy90YWdzLmpzIj48L3NjcmlwdD48L2Rpdj5kAgkPDxYCHg1Ub3RhbFJvd0NvdW50AgVkFgQCAQ8WAh8CBeRZPGRpdiBjbGFzcz0ibWFpbmNvbW1lbnQiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL1JldmlldyIgaWQ9ImM5OTkwIj48ZGl2IGNsYXNzPT0iY29tbWVudGRldGFpbHMiPjxkaXYgaXRlbXByb3A9Iml0ZW1SZXZpZXdlZCIgc3R5bGU9ImRpc3BsYXk6bm9uZTsiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL0NyZWF0aXZlV29yayI+PHNwYW4gaXRlbXByb3A9Im5hbWUiPlZlZ2V0YWJsZSBGcmllZCBSaWNlICggSmFpbiApPC9zcGFuPjxzcGFuIGl0ZW1wcm9wPSJ1cmwiPmh0dHBzOi8vd3d3LnRhcmxhZGFsYWwuY29tVmVnZXRhYmxlLUZyaWVkLVJpY2UtKC1KYWluLSktODYzMXI8L3NwYW4+PC9kaXY+PGRpdiBpdGVtcHJvcD0icmV2aWV3UmF0aW5nIiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9SYXRpbmciIGNsYXNzPSJjb21tZW50cmF0aW5nIj48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lOyIgaXRlbXByb3A9InJhdGluZ1ZhbHVlIj41PC9zcGFuPjxkaXYgc3R5bGU9ImJhY2tncm91bmQtaW1hZ2U6dXJsKGltYWdlcy9yZWNpcGUvdW5maWxsZWRfNXN0YXJfd2hpdGUuZ2lmKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOnRvcCBsZWZ0O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdDt3aWR0aDoxMDZweDtoZWlnaHQ6MjFweDtmbG9hdDpsZWZ0OyI+PGRpdiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoaW1hZ2VzL3JlY2lwZS9maWxsZWRfNXN0YXJfd2hpdGUuZ2lmKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOnRvcCBsZWZ0O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdDt3aWR0aDoxMDAlO2hlaWdodDoyMXB4OyI+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBzdHlsZT0ibWFyZ2luLWxlZnQ6MjBweDtmbG9hdDpsZWZ0O3dpZHRoOjQ1MHB4OyI+PGRpdiBjbGFzcz0ibmFtZSIgaXRlbXByb3A9ImF1dGhvciIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvUGVyc29uIj48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lO3dpZHRoOjBweDsiIGl0ZW1wcm9wPSJuYW1lIj5EaXBzIFNoYWg8L3NwYW4+PGEgaHJlZj0iIyI+RGlwcyBTaGFoPC9hPjwvZGl2PjxkaXYgY2xhc3M9ImNvbW1lbnRkYXRlIj4mbmJzcDtvbiAwNCBNYXIgMTYgMDE6MzcgUE08L2Rpdj48YnIvPjxici8+PHNwYW4gaWQ9ImNvbXR4dDk5OTAiIGl0ZW1wcm9wPSJyZXZpZXdCb2R5Ij5IZXksICBJIGxpa2UgYWxsIHlvdXIgcmVjaXBlcy4gWW91IG1ha2UgaXQgc21pbGUgYW5kIGZhc3QsICBub3QgY29tcHJvbWlzaW5nIG9uIHRhc3RlLiBUaGUgYmVzdCBwYXJ0IGlzIHdoaWNoIGV2ZXIgY3Vpc2luZSwgIGluIHlvdXIgcmVjaXBlcyBJIGdldCBldmVyeXRoaW5nIGluIG15IGtpdGNoZW4uIFRoYXQgbWFrZXMgdGhpbmdzIHNpbXBsZS4gVGhhbmtzIGEgbG90LiAgPC9zcGFuPjxzcGFuIHN0eWxlPSJkaXNwbGF5Om5vbmU7IiBpdGVtcHJvcD0icHVibGlzaGVyIiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9Pcmdhbml6YXRpb24iPjxtZXRhIGl0ZW1wcm9wPSJuYW1lIiBjb250ZW50PSJUYXJsYSBEYWxhbCI+PC9zcGFuPjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJyZXBseSI+PGEgaWQ9ImJ0bjk5OTAiPlJlcGx5PC9hPjwvZGl2PjxkaXYgaWQ9InBhcmVudDk5OTAiIGNsYXNzPSJwYXJlbnQiPiB8IEhpZGUgUmVwbGllczwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48ZGl2IGNsYXNzPSJwb3N0X2FfcmVwbHkiIGlkPSI5OTkwIj48dGV4dGFyZWEgaWQ9InR4dDk5OTAiIHJvd3M9IjUiIGNvbHM9Ijc1Ij48L3RleHRhcmVhPjxkaXYgY2xhc3M9InBvc3QiIHN0eWxlPSJmbG9hdDpsZWZ0OyI+PGJ1dHRvbiBpZD0icG9zdDk5OTAiPlBvc3Q8L2J1dHRvbj48L2Rpdj48ZGl2IGNsYXNzPSJjYW5jZWxwb3N0IiBzdHlsZT0iZmxvYXQ6bGVmdDsiPjxidXR0b24gaWQ9ImNhbmNlbDk5OTAiPkNhbmNlbDwvYnV0dG9uPjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJjaGlsZCIgaWQ9ImNoaWxkOTk5MCI+PGRpdiBjbGFzcz0iY2hpbGRjb21tZW50IiBpZD0iYzk5OTEiIHN0eWxlPSJtYXJnaW4tbGVmdDozMHB4Ij48ZGl2IGNsYXNzPSJjb21tZW50ZGV0YWlscyI+PGltZyBzcmM9ImltYWdlcy9jb21tZW50LWltYWdlLXRhcmxhLnBuZyI+PHNwYW4gY2xhc3M9Im5hbWUiPjxhIGhyZWY9Im15cmV2aWV3cy5hc3B4P21lbWlkPTkzMDYiPlRhcmxhIERhbGFsPC9hPjwvc3Bhbj4gJm5ic3AmbmJzcDxzcGFuIGlkPSJjb210eHQ5OTkxIj4gVGhhbmtzIERpcHMuIFdlIGFyZSBkZWxpZ2h0ZWQgeW91IGxvdmVkIHRoZSBKYWluIFJpY2UgcmVjaXBlLiBQbGVhc2Uga2VlcCBwb3N0aW5nIHlvdXIgdGhvdWdodHMgYW5kIGZlZWRiYWNrLiA8L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0icmVwbHkiPjxhIGlkPSJidG45OTkxIj5SZXBseTwvYT4gPGRpdiBjbGFzcz0iY2hpbGRfY29tbWVudGRhdGUiPjA0IE1hciAxNiAwMTo0MiBQTTwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48ZGl2IGNsYXNzPSJwb3N0X2FfcmVwbHkiIGlkPSI5OTkxIj48dGV4dGFyZWEgaWQ9InR4dDk5OTEiIHJvd3M9IjUiIGNvbHM9IjcwIj48L3RleHRhcmVhPjxkaXYgY2xhc3M9InBvc3QiIHN0eWxlPSJmbG9hdDpsZWZ0OyI+PGJ1dHRvbiBpZD0icG9zdDk5OTEiPlBvc3Q8L2J1dHRvbj48L2Rpdj48ZGl2IGNsYXNzPSJjYW5jZWxwb3N0IiBzdHlsZT0iZmxvYXQ6bGVmdDsiPjxidXR0b24gaWQ9ImNhbmNlbDk5OTEiPkNhbmNlbDwvYnV0dG9uPjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtYWluY29tbWVudCIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvUmV2aWV3IiBpZD0iYzkyNDEiPjxkaXYgY2xhc3M9PSJjb21tZW50ZGV0YWlscyI+PGRpdiBpdGVtcHJvcD0iaXRlbVJldmlld2VkIiBzdHlsZT0iZGlzcGxheTpub25lOyIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvQ3JlYXRpdmVXb3JrIj48c3BhbiBpdGVtcHJvcD0ibmFtZSI+VmVnZXRhYmxlIEZyaWVkIFJpY2UgKCBKYWluICk8L3NwYW4+PHNwYW4gaXRlbXByb3A9InVybCI+aHR0cHM6Ly93d3cudGFybGFkYWxhbC5jb20vVmVnZXRhYmxlLUZyaWVkLVJpY2UtKC1KYWluLSktODYzMXI8L3NwYW4+PC9kaXY+PGRpdiBpdGVtcHJvcD0icmV2aWV3UmF0aW5nIiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9SYXRpbmciIGNsYXNzPSJjb21tZW50cmF0aW5nIj48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lOyIgaXRlbXByb3A9InJhdGluZ1ZhbHVlIj41PC9zcGFuPjxkaXYgc3R5bGU9ImJhY2tncm91bmQtaW1hZ2U6dXJsKGltYWdlcy9yZWNpcGUvdW5maWxsZWRfNXN0YXJfd2hpdGUuZ2lmKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOnRvcCBsZWZ0O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdDt3aWR0aDoxMDZweDtoZWlnaHQ6MjFweDtmbG9hdDpsZWZ0OyI+PGRpdiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoaW1hZ2VzL3JlY2lwZS9maWxsZWRfNXN0YXJfd2hpdGUuZ2lmKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOnRvcCBsZWZ0O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdDt3aWR0aDoxMDAlO2hlaWdodDoyMXB4OyI+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBzdHlsZT0ibWFyZ2luLWxlZnQ6MjBweDtmbG9hdDpsZWZ0O3dpZHRoOjQ1MHB4OyI+PGRpdiBjbGFzcz0ibmFtZSIgaXRlbXByb3A9ImF1dGhvciIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvUGVyc29uIj48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lO3dpZHRoOjBweDsiIGl0ZW1wcm9wPSJuYW1lIj5KZWVuYSBTdXJhajwvc3Bhbj48L2Rpdj48ZGl2IGNsYXNzPSJuYW1lIj48YSBocmVmPSJteXJldmlld3MuYXNweD9tZW1pZD02MzgxNDUiPkplZW5hIFN1cmFqPC9hPjwvZGl2PjxkaXYgY2xhc3M9ImNvbW1lbnRkYXRlIj4mbmJzcDtvbiAzMSBKYW4gMTYgMTE6NDYgQU08L2Rpdj48YnIvPjxici8+PHNwYW4gaXRlbXByb3A9InJldmlld0JvZHkiIGlkPSJjb210eHQ5MjQxIj5WZWdldGFibGUgZnJpZWQgcmljZSBpbiBKYWluIHZlcnNpb24sIHJlYWxseSB2ZXJ5IGhlbHBmdWwgYW5kIE5pY2UuIDwvc3Bhbj48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lOyIgaXRlbXByb3A9InB1Ymxpc2hlciIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvT3JnYW5pemF0aW9uIj48bWV0YSBpdGVtcHJvcD0ibmFtZSIgY29udGVudD0iVGFybGEgRGFsYWwiPjwvc3Bhbj48L2Rpdj48ZGl2IGNsYXNzPSJjdXJ0YWlucHVsbCI+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0icmVwbHkiPjxhIGlkPSJidG45MjQxIj5SZXBseTwvYT48L2Rpdj48ZGl2IGlkPSJwYXJlbnQ5MjQxIiBjbGFzcz0icGFyZW50Ij4gfCBIaWRlIFJlcGxpZXM8L2Rpdj4gIDxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48ZGl2IGNsYXNzPSJwb3N0X2FfcmVwbHkiIGlkPSI5MjQxIj48dGV4dGFyZWEgaWQ9InR4dDkyNDEiIHJvd3M9IjUiIGNvbHM9Ijc1Ij48L3RleHRhcmVhPjxkaXYgY2xhc3M9InBvc3QiIHN0eWxlPSJmbG9hdDpsZWZ0OyI+PGJ1dHRvbiBpZD0icG9zdDkyNDEiPlBvc3Q8L2J1dHRvbj48L2Rpdj48ZGl2IGNsYXNzPSJjYW5jZWxwb3N0IiBzdHlsZT0iZmxvYXQ6bGVmdDsiPjxidXR0b24gaWQ9ImNhbmNlbDkyNDEiPkNhbmNlbDwvYnV0dG9uPjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJjaGlsZCIgaWQ9ImNoaWxkOTI0MSI+PGRpdiBjbGFzcz0iY2hpbGRjb21tZW50IiBpZD0iYzkyNjUiIHN0eWxlPSJtYXJnaW4tbGVmdDozMHB4Ij48ZGl2IGNsYXNzPSJjb21tZW50ZGV0YWlscyI+PGltZyBzcmM9ImltYWdlcy9jb21tZW50LWltYWdlLXRhcmxhLnBuZyI+PHNwYW4gY2xhc3M9Im5hbWUiPjxhIGhyZWY9Im15cmV2aWV3cy5hc3B4P21lbWlkPTkzMDYiPlRhcmxhIERhbGFsPC9hPjwvc3Bhbj4gJm5ic3AmbmJzcDxzcGFuIGlkPSJjb210eHQ5MjY1Ij4gVGhhbmtzIEplZW5hLiBXZSBhcmUgZGVsaWdodGVkIHlvdSBsb3ZlZCB0aGUgSmFpbiByZWNpcGUuIFBsZWFzZSBrZWVwIHBvc3RpbmcgeW91ciB0aG91Z2h0cyBhbmQgZmVlZGJhY2suCiA8L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0icmVwbHkiPjxhIGlkPSJidG45MjY1Ij5SZXBseTwvYT4gPGRpdiBjbGFzcz0iY2hpbGRfY29tbWVudGRhdGUiPjAxIEZlYiAxNiAxMDowMCBBTTwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48ZGl2IGNsYXNzPSJwb3N0X2FfcmVwbHkiIGlkPSI5MjY1Ij48dGV4dGFyZWEgaWQ9InR4dDkyNjUiIHJvd3M9IjUiIGNvbHM9IjcwIj48L3RleHRhcmVhPjxkaXYgY2xhc3M9InBvc3QiIHN0eWxlPSJmbG9hdDpsZWZ0OyI+PGJ1dHRvbiBpZD0icG9zdDkyNjUiPlBvc3Q8L2J1dHRvbj48L2Rpdj48ZGl2IGNsYXNzPSJjYW5jZWxwb3N0IiBzdHlsZT0iZmxvYXQ6bGVmdDsiPjxidXR0b24gaWQ9ImNhbmNlbDkyNjUiPkNhbmNlbDwvYnV0dG9uPjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJtYWluY29tbWVudCIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvUmV2aWV3IiBpZD0iYzc5NzEiPjxkaXYgY2xhc3M9PSJjb21tZW50ZGV0YWlscyI+PGRpdiBpdGVtcHJvcD0iaXRlbVJldmlld2VkIiBzdHlsZT0iZGlzcGxheTpub25lOyIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvQ3JlYXRpdmVXb3JrIj48c3BhbiBpdGVtcHJvcD0ibmFtZSI+NSBTcGljZSBWZWdldGFibGUgRnJpZWQgUmljZTwvc3Bhbj48c3BhbiBpdGVtcHJvcD0idXJsIj5odHRwczovL3d3dy50YXJsYWRhbGFsLmNvbS9WZWdldGFibGUtRnJpZWQtUmljZS0oLUphaW4tKS04NjMxcjwvc3Bhbj48L2Rpdj48ZGl2IGl0ZW1wcm9wPSJyZXZpZXdSYXRpbmciIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL1JhdGluZyIgY2xhc3M9ImNvbW1lbnRyYXRpbmciPjxzcGFuIHN0eWxlPSJkaXNwbGF5Om5vbmU7IiBpdGVtcHJvcD0icmF0aW5nVmFsdWUiPjU8L3NwYW4+PGRpdiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoaW1hZ2VzL3JlY2lwZS91bmZpbGxlZF81c3Rhcl93aGl0ZS5naWYpO2JhY2tncm91bmQtcG9zaXRpb246dG9wIGxlZnQ7YmFja2dyb3VuZC1yZXBlYXQ6bm8tcmVwZWF0O3dpZHRoOjEwNnB4O2hlaWdodDoyMXB4O2Zsb2F0OmxlZnQ7Ij48ZGl2IHN0eWxlPSJiYWNrZ3JvdW5kLWltYWdlOnVybChpbWFnZXMvcmVjaXBlL2ZpbGxlZF81c3Rhcl93aGl0ZS5naWYpO2JhY2tncm91bmQtcG9zaXRpb246dG9wIGxlZnQ7YmFja2dyb3VuZC1yZXBlYXQ6bm8tcmVwZWF0O3dpZHRoOjEwMCU7aGVpZ2h0OjIxcHg7Ij48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IHN0eWxlPSJtYXJnaW4tbGVmdDoyMHB4O2Zsb2F0OmxlZnQ7d2lkdGg6NDUwcHg7Ij48ZGl2IGNsYXNzPSJuYW1lIiBpdGVtcHJvcD0iYXV0aG9yIiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9QZXJzb24iPjxzcGFuIHN0eWxlPSJkaXNwbGF5Om5vbmU7d2lkdGg6MHB4OyIgaXRlbXByb3A9Im5hbWUiPkthbHlhbiBGb29kIExvdmVyPC9zcGFuPjwvZGl2PjxkaXYgY2xhc3M9Im5hbWUiPjxhIGhyZWY9Im15cmV2aWV3cy5hc3B4P21lbWlkPTI5Njk3Ij5LYWx5YW4gRm9vZCBMb3ZlcjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50ZGF0ZSI+Jm5ic3A7b24gMDQgTm92IDE1IDA0OjQ0IFBNPC9kaXY+PGJyLz48YnIvPjxzcGFuIGl0ZW1wcm9wPSJyZXZpZXdCb2R5IiBpZD0iY29tdHh0Nzk3MSI+RWtkYW0gbWFzdCA8L3NwYW4+PHNwYW4gc3R5bGU9ImRpc3BsYXk6bm9uZTsiIGl0ZW1wcm9wPSJwdWJsaXNoZXIiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL09yZ2FuaXphdGlvbiI+PG1ldGEgaXRlbXByb3A9Im5hbWUiIGNvbnRlbnQ9IlRhcmxhIERhbGFsIj48L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0iY3VydGFpbnB1bGwiPjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlcGx5Ij48YSBpZD0iYnRuNzk3MSI+UmVwbHk8L2E+PC9kaXY+ICA8ZGl2IGNsYXNzPSJjdXJ0YWlucHVsbCI+PC9kaXY+PGRpdiBjbGFzcz0icG9zdF9hX3JlcGx5IiBpZD0iNzk3MSI+PHRleHRhcmVhIGlkPSJ0eHQ3OTcxIiByb3dzPSI1IiBjb2xzPSI3NSI+PC90ZXh0YXJlYT48ZGl2IGNsYXNzPSJwb3N0IiBzdHlsZT0iZmxvYXQ6bGVmdDsiPjxidXR0b24gaWQ9InBvc3Q3OTcxIj5Qb3N0PC9idXR0b24+PC9kaXY+PGRpdiBjbGFzcz0iY2FuY2VscG9zdCIgc3R5bGU9ImZsb2F0OmxlZnQ7Ij48YnV0dG9uIGlkPSJjYW5jZWw3OTcxIj5DYW5jZWw8L2J1dHRvbj48L2Rpdj48ZGl2IGNsYXNzPSJjdXJ0YWlucHVsbCI+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWFpbmNvbW1lbnQiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL1JldmlldyIgaWQ9ImM0MzEzIj48ZGl2IGNsYXNzPT0iY29tbWVudGRldGFpbHMiPjxkaXYgaXRlbXByb3A9Iml0ZW1SZXZpZXdlZCIgc3R5bGU9ImRpc3BsYXk6bm9uZTsiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL0NyZWF0aXZlV29yayI+PHNwYW4gaXRlbXByb3A9Im5hbWUiPjUgU3BpY2UgVmVnZXRhYmxlIEZyaWVkIFJpY2U8L3NwYW4+PHNwYW4gaXRlbXByb3A9InVybCI+aHR0cHM6Ly93d3cudGFybGFkYWxhbC5jb20vVmVnZXRhYmxlLUZyaWVkLVJpY2UtKC1KYWluLSktODYzMXI8L3NwYW4+PC9kaXY+PGRpdiBpdGVtcHJvcD0icmV2aWV3UmF0aW5nIiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9SYXRpbmciIGNsYXNzPSJjb21tZW50cmF0aW5nIj48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lOyIgaXRlbXByb3A9InJhdGluZ1ZhbHVlIj41PC9zcGFuPjxkaXYgc3R5bGU9ImJhY2tncm91bmQtaW1hZ2U6dXJsKGltYWdlcy9yZWNpcGUvdW5maWxsZWRfNXN0YXJfd2hpdGUuZ2lmKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOnRvcCBsZWZ0O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdDt3aWR0aDoxMDZweDtoZWlnaHQ6MjFweDtmbG9hdDpsZWZ0OyI+PGRpdiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoaW1hZ2VzL3JlY2lwZS9maWxsZWRfNXN0YXJfd2hpdGUuZ2lmKTtiYWNrZ3JvdW5kLXBvc2l0aW9uOnRvcCBsZWZ0O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdDt3aWR0aDoxMDAlO2hlaWdodDoyMXB4OyI+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBzdHlsZT0ibWFyZ2luLWxlZnQ6MjBweDtmbG9hdDpsZWZ0O3dpZHRoOjQ1MHB4OyI+PGRpdiBjbGFzcz0ibmFtZSIgaXRlbXByb3A9ImF1dGhvciIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvUGVyc29uIj48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lO3dpZHRoOjBweDsiIGl0ZW1wcm9wPSJuYW1lIj5Mb3ZlIGdvb2QgcmVjaXBlczwvc3Bhbj48L2Rpdj48ZGl2IGNsYXNzPSJuYW1lIj48YSBocmVmPSJteXJldmlld3MuYXNweD9tZW1pZD01OTAzOTMiPkxvdmUgZ29vZCByZWNpcGVzPC9hPjwvZGl2PjxkaXYgY2xhc3M9ImNvbW1lbnRkYXRlIj4mbmJzcDtvbiAwMiBTZXAgMTMgMTA6MjkgQU08L2Rpdj48YnIvPjxici8+PHNwYW4gaXRlbXByb3A9InJldmlld0JvZHkiIGlkPSJjb210eHQ0MzEzIj5FeGNlbGxlbnQgQ2hpbmVzZSByaWNlIHdpdGggY2FiYmFnZSwgY2Fwc2ljdW0gYW5kIGJhYnkgY29ybiBhbmQgZmxhdm9yZWQgd2l0aCA1IHNwaWNlIHBvd2RlciBhbmQgc295YSBzYXVjZS48L3NwYW4+PHNwYW4gc3R5bGU9ImRpc3BsYXk6bm9uZTsiIGl0ZW1wcm9wPSJwdWJsaXNoZXIiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL09yZ2FuaXphdGlvbiI+PG1ldGEgaXRlbXByb3A9Im5hbWUiIGNvbnRlbnQ9IlRhcmxhIERhbGFsIj48L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0iY3VydGFpbnB1bGwiPjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9InJlcGx5Ij48YSBpZD0iYnRuNDMxMyI+UmVwbHk8L2E+PC9kaXY+ICA8ZGl2IGNsYXNzPSJjdXJ0YWlucHVsbCI+PC9kaXY+PGRpdiBjbGFzcz0icG9zdF9hX3JlcGx5IiBpZD0iNDMxMyI+PHRleHRhcmVhIGlkPSJ0eHQ0MzEzIiByb3dzPSI1IiBjb2xzPSI3NSI+PC90ZXh0YXJlYT48ZGl2IGNsYXNzPSJwb3N0IiBzdHlsZT0iZmxvYXQ6bGVmdDsiPjxidXR0b24gaWQ9InBvc3Q0MzEzIj5Qb3N0PC9idXR0b24+PC9kaXY+PGRpdiBjbGFzcz0iY2FuY2VscG9zdCIgc3R5bGU9ImZsb2F0OmxlZnQ7Ij48YnV0dG9uIGlkPSJjYW5jZWw0MzEzIj5DYW5jZWw8L2J1dHRvbj48L2Rpdj48ZGl2IGNsYXNzPSJjdXJ0YWlucHVsbCI+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ibWFpbmNvbW1lbnQiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL1JldmlldyIgaWQ9ImMzNjUiPjxkaXYgY2xhc3M9PSJjb21tZW50ZGV0YWlscyI+PGRpdiBpdGVtcHJvcD0iaXRlbVJldmlld2VkIiBzdHlsZT0iZGlzcGxheTpub25lOyIgaXRlbXNjb3BlIGl0ZW10eXBlPSJodHRwczovL3NjaGVtYS5vcmcvQ3JlYXRpdmVXb3JrIj48c3BhbiBpdGVtcHJvcD0ibmFtZSI+NSBTcGljZSBWZWdldGFibGUgRnJpZWQgUmljZTwvc3Bhbj48c3BhbiBpdGVtcHJvcD0idXJsIj5odHRwczovL3d3dy50YXJsYWRhbGFsLmNvbS9WZWdldGFibGUtRnJpZWQtUmljZS0oLUphaW4tKS04NjMxcjwvc3Bhbj48L2Rpdj48ZGl2IGl0ZW1wcm9wPSJyZXZpZXdSYXRpbmciIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL1JhdGluZyIgY2xhc3M9ImNvbW1lbnRyYXRpbmciPjxzcGFuIHN0eWxlPSJkaXNwbGF5Om5vbmU7IiBpdGVtcHJvcD0icmF0aW5nVmFsdWUiPjM8L3NwYW4+PGRpdiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTp1cmwoaW1hZ2VzL3JlY2lwZS91bmZpbGxlZF81c3Rhcl93aGl0ZS5naWYpO2JhY2tncm91bmQtcG9zaXRpb246dG9wIGxlZnQ7YmFja2dyb3VuZC1yZXBlYXQ6bm8tcmVwZWF0O3dpZHRoOjEwNnB4O2hlaWdodDoyMXB4O2Zsb2F0OmxlZnQ7Ij48ZGl2IHN0eWxlPSJiYWNrZ3JvdW5kLWltYWdlOnVybChpbWFnZXMvcmVjaXBlL2ZpbGxlZF81c3Rhcl93aGl0ZS5naWYpO2JhY2tncm91bmQtcG9zaXRpb246dG9wIGxlZnQ7YmFja2dyb3VuZC1yZXBlYXQ6bm8tcmVwZWF0O3dpZHRoOjYwJTtoZWlnaHQ6MjFweDsiPjwvZGl2PjwvZGl2PjwvZGl2PjxkaXYgc3R5bGU9Im1hcmdpbi1sZWZ0OjIwcHg7ZmxvYXQ6bGVmdDt3aWR0aDo0NTBweDsiPjxkaXYgY2xhc3M9Im5hbWUiIGl0ZW1wcm9wPSJhdXRob3IiIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cHM6Ly9zY2hlbWEub3JnL1BlcnNvbiI+PHNwYW4gc3R5bGU9ImRpc3BsYXk6bm9uZTt3aWR0aDowcHg7IiBpdGVtcHJvcD0ibmFtZSI+Rm9vZGllICM0OTQzMzA8L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0ibmFtZSI+PGEgaHJlZj0ibXlyZXZpZXdzLmFzcHg/bWVtaWQ9NDk0MzMwIj5Gb29kaWUgIzQ5NDMzMDwvYT48L2Rpdj48ZGl2IGNsYXNzPSJjb21tZW50ZGF0ZSI+Jm5ic3A7b24gMjggU2VwIDEwIDAxOjE5IFBNPC9kaXY+PGJyLz48YnIvPjxzcGFuIGl0ZW1wcm9wPSJyZXZpZXdCb2R5IiBpZD0iY29tdHh0MzY1Ij5hbWF6aW5nIHJlY2lwZS4uLmVhc3kgdG8gY29vayBhbmQgcmVsaXNoZWQgYnkgb25lIGFuZCBhbGwuPC9zcGFuPjxzcGFuIHN0eWxlPSJkaXNwbGF5Om5vbmU7IiBpdGVtcHJvcD0icHVibGlzaGVyIiBpdGVtc2NvcGUgaXRlbXR5cGU9Imh0dHBzOi8vc2NoZW1hLm9yZy9Pcmdhbml6YXRpb24iPjxtZXRhIGl0ZW1wcm9wPSJuYW1lIiBjb250ZW50PSJUYXJsYSBEYWxhbCI+PC9zcGFuPjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJyZXBseSI+PGEgaWQ9ImJ0bjM2NSI+UmVwbHk8L2E+PC9kaXY+ICA8ZGl2IGNsYXNzPSJjdXJ0YWlucHVsbCI+PC9kaXY+PGRpdiBjbGFzcz0icG9zdF9hX3JlcGx5IiBpZD0iMzY1Ij48dGV4dGFyZWEgaWQ9InR4dDM2NSIgcm93cz0iNSIgY29scz0iNzUiPjwvdGV4dGFyZWE+PGRpdiBjbGFzcz0icG9zdCIgc3R5bGU9ImZsb2F0OmxlZnQ7Ij48YnV0dG9uIGlkPSJwb3N0MzY1Ij5Qb3N0PC9idXR0b24+PC9kaXY+PGRpdiBjbGFzcz0iY2FuY2VscG9zdCIgc3R5bGU9ImZsb2F0OmxlZnQ7Ij48YnV0dG9uIGlkPSJjYW5jZWwzNjUiPkNhbmNlbDwvYnV0dG9uPjwvZGl2PjxkaXYgY2xhc3M9ImN1cnRhaW5wdWxsIj48L2Rpdj48L2Rpdj48L2Rpdj5kAgMPFgQfAmUfAWhkAgsPZBYCZg9kFgICAQ8WAh8CBZEBPGRpdiBpZD0iR3VqYXJhdGlfUmNwX0Z0ciI+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPmdvb2dsZXRhZy5jbWQucHVzaChmdW5jdGlvbigpe2dvb2dsZXRhZy5kaXNwbGF5KCdHdWphcmF0aV9SY3BfRnRyJyk7fSk7PC9zY3JpcHQ+PC9kaXY+IGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgYFGWN0bDAwJFREbG9naW5TdGF0dXMkY3RsMDEFGWN0bDAwJFREbG9naW5TdGF0dXMkY3RsMDMFIGN0bDAwJGNudHJpZ2h0cGFuZWwkYnRuTmV4dFBob3RvBSBjdGwwMCRjbnRyaWdodHBhbmVsJGJ0blByZXZQaG90bwUjY3RsMDAkY250cmlnaHRwYW5lbCRpQnRuUmF0ZVN1Ym1pdDEFImN0bDAwJGNudHJpZ2h0cGFuZWwkaWJ0bk5vdGVTdWJtaXQ7Sj23jVi1Vy/zFr0cRYSfOd/sUQ==" />
+</div>
+</form>
+    
+    </div>
+    
+
+<script type="text/javascript" language="JavaScript">
+/*
+ * Updated to use the function-based method described in http://www.phpied.com/social-button-bffs/
+ * Better handling of scripts without supplied ids.
+ *
+ * N.B. Be sure to include Google Analytics's _gaq and Facebook's fbAsyncInit prior to this function.
+ */
+ 
+(function(doc, script) {
+    var js,
+        fjs = doc.getElementsByTagName(script)[0],
+        add = function(url, id) {
+            if (doc.getElementById(id)) { return; }
+            js = doc.createElement(script);
+            js.async = true;
+            js.src = url;
+            id && (js.id = id);
+            fjs.parentNode.insertBefore(js, fjs);
+        };
+
+    // Google Analytics
+    //add(('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js', 'ga');
+    // Google+ button
+    // add('https://apis.google.com/js/plusone.js');
+    // Facebook SDK
+    //add('//connect.facebook.net/en_US/all.js', 'facebook-jssdk');
+    // Twitter SDK
+    //add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+    // add('//assets.pinterest.com/js/pinit.js', 'pin-js');
+    //add('http://c1.zedo.com/jsc/c1/fo.js', 'zedo-js');
+
+} (document, 'script'));
+
+</script>
+
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script'); po.type =
+'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+
+
+<script>    !function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.async = true; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel:  slider ad , publisher: Test Publisher , Ad Dimension: Slider - 1 x 1 -->
+
+
+
+
+    
+         <!-- Javascript tag  -->
+<!-- begin ZEDO for channel:  Tarladalal.com , publisher: Tarladalal.com , Ad Dimension: Slider - 1 x 1 -->
+
+<!-- end ZEDO for channel:  Tarladalal.com , publisher: Tarladalal.com , Ad Dimension: Slider - 1 x 1 -->
+
+    <!-- /1035919/Float_1x1 -->
+
+<div id='div-gpt-ad-1525095783657-0' style='height:1px; width:1px;'>
+
+<script>
+
+    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1525095783657-0'); });
+
+</script>
+
+</div>
+
+
+</body>
+
+</html>

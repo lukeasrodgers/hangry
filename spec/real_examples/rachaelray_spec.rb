@@ -3,7 +3,7 @@
 describe Hangry do
   context "rachaelray.com recipe" do
     before(:all) do
-      @html = File.read("spec/fixtures/rachaelray.com.html")
+      @html = File.read("spec/fixtures/www.rachaelray.com.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
@@ -13,7 +13,7 @@ describe Hangry do
     end
 
     its(:author) { should == "Rachael Ray" }
-    its(:canonical_url) { should == 'http://www.rachaelray.com/recipe/quick-chick-and-noodle-soup/' }
+    its(:canonical_url) { should == "https://www.rachaelray.com/recipes/quick-chick-and-noodle-soup/" }
     its(:cook_time) { should == nil }
     its(:description) { should == "This hearty recipes yields 2 quarts of soup – that’s 4 big bowls! Parsnips, which look like white carrots, but taste like sweet turnips or spicy potatoes, are best when cooked until soft to bring out their natural mellow sweetness." }
     its(:image_url) { should == nil }
@@ -51,12 +51,7 @@ describe Hangry do
     end
 
     its(:instructions) {
-      instructions = <<-EOS
-Place a large pot over moderate heat and add extra virgin olive oil, 2 turns around the pan. Work close to the stove and add vegetables to the pot as you chop, in the order they are listed.
-Add bay leaves and season vegetables with salt and pepper, to taste. Add stock to the pot and raise flame to bring liquid to a boil. Add diced chicken tenderloins, return soup to a boil, and reduce heat back to moderate. Cook chicken 2 minutes and add noodles. Cook soup an additional 6 minutes or until noodles are tender and remove soup from the heat.
-Stir in parsley and dill, remove bay leaves and serve. This is a thick soup. Add up to 2 cups of water if you like chicken soup with lots of broth.
-      EOS
-      should == instructions.strip
+      should == "Place a large\npot\nover moderate heat and add extra virgin olive oil, 2 turns around the\npan\n. Work close to the stove and add vegetables to the\npot\nas you chop, in the order they are listed.\nAdd bay leaves and season vegetables with salt and pepper, to taste. Add stock to the pot and raise flame to bring liquid to a boil. Add diced chicken tenderloins, return soup to a boil, and reduce heat back to moderate. Cook chicken 2 minutes and add noodles. Cook soup an additional 6 minutes or until noodles are tender and remove soup from the heat.\nStir in parsley and dill, remove bay leaves and serve. This is a thick soup. Add up to 2 cups of water if you like chicken soup with lots of broth."
     }
 
     its(:prep_time) { should == nil }

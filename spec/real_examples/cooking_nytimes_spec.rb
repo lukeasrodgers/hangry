@@ -14,8 +14,8 @@ describe Hangry do
     end
 
     its(:author) { should == "Nigella Lawson" }
-    its(:canonical_url) { should == "http://cooking.nytimes.com/recipes/1017945-coq-au-riesling" }
-    its(:cook_time) { should == nil }
+    its(:canonical_url) { should == "https://cooking.nytimes.com/recipes/1017945-coq-au-riesling" }
+    its(:cook_time) { should == 90 }
     its(:description) { should == "The chicken stew here does have an authentic origin, but I have lightened it a little by dispensing with the cream that would be added luxuriously in its country of origin. And you can cheerfully use a dry or semi-dry from anywhere in the world. I have nothing against the regular coq au vin, but I might actually prefer this sprightlier version. It's certainly easier to make: in place of all those whole baby onions, which have to be peeled one by one, you can just chop your onions the usual and considerably less bothersome way. And since I always think that the breast meat of a chicken can be a bit stringy when cooked for a long time, I instead choose thigh portions. So no dismembering of a carcass is required either. Featured in: At My Table; Simply French: Comfort Food With Style. " }
     its(:prep_time) { should == nil }
     its(:total_time) { should == nil }
