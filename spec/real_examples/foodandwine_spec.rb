@@ -40,7 +40,7 @@ describe Hangry do
     end
 
     its(:instructions) {
-      should == "Preheat the oven to 425°. In a large bowl, toss the root vegetables with the oil, honey and thyme and season with salt and pepper. Divide between 2 large, sturdy rimmed baking sheets. Cover with foil and roast for 40 minutes, shifting the pans once, until the vegetables are tender. Remove the foil and roast for 10 minutes longer, until glazed. Return them to the bowl and stir in the vinegar then season with salt and pepper. Serve right away."
+      should == "Preheat the oven to 425&#xB0;. In a large bowl, toss the root vegetables with the oil, honey and thyme and season with salt and pepper. Divide between 2 large, sturdy rimmed baking sheets. Cover with foil and roast for 40 minutes, shifting the pans once, until the vegetables are tender. Remove the foil and roast for 10 minutes longer, until glazed. Return them to the bowl and stir in the vinegar then season with salt and pepper. Serve right away."
     }
     its(:prep_time) { should == nil }
     its(:published_date) { should == Date.new(2013, 12, 6) }

@@ -13,6 +13,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MWLCD7');</script>
     <!-- End Google Tag Manager -->
+    
+    
+    
+    
+    
+    
+    
+    
 
     <script type="text/javascript">
         if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -56,11 +64,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="google-site-verification" content="google-site-verification=i-dEpuwlmUOTCYcLJFaX5wwAw767IUbwAmxVwrY2Plg">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>    <meta name="apple-mobile-web-app-title" content="BigOven">
-    <script src="/bundles/bigovenfull?v=Wgx4MOLsDtc-xlNysTSCHMUWP5kInOMoy1izdir_xog1"></script>
+    <script src="/bundles/bigovenfull?v=naEcWxDBJH40J_JfN4ElSTGcDc5HuMbX2Zj_THhSQ_01"></script>
 
     <link href="/bundles/jqueryuicss?v=I5yCEZAD2fgdIGudBjbIbhPW72Q4rs1hWM-SPn4mNuE1" rel="stylesheet"/>
 
-    <link href="/content/bootstrapbundle?v=8_m0PXTxtcH71O9VkUKSaEY6SiHZAAxNjQr4VDP6Isc1" rel="stylesheet"/>
+    <link href="/content/bootstrapbundle?v=PZkPEp4gjpaW9Cnl-vD9G1Fig7GxK9Uk7e7yWXkhqHs1" rel="stylesheet"/>
 
     
     
@@ -169,7 +177,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             head.appendChild(script);
         }
     </script>
+
     <!-- If User is not premium load ads script after page is loaded -->
+
             <script type="text/javascript" async="async" data-cfasync="false">
                 loadScript("https://ads.blogherads.com/static/blogherads.js");
                 loadScript("https://ads.blogherads.com/bh/17/172/172657/2602040/header.js");
@@ -555,187 +565,237 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .buttons-wrapper {
         margin: 0 !important;
     }
+    .home-icon {
+        position: relative;
+        top: 15px;
+        font-size: 20px;
+        color: #e05050;
+    }
+    .home-icon:hover {
+        color: #a55151;
+    }
+    @media only screen and (max-width: 360px) {
+        
+        .search-input {
+        font-size: 12px !important;
+        }
+        .home-icon {
+        right: 10px;
+        }
+    }
+     @media only screen and (max-width: 375px) { 
+     
+     .search-input {
+             font-size: 14px !important;
+             }
+     .home-icon {
+             right: 10px;
+             }
+     }
+     @media only screen and (min-width: 568px) {
+      
+      .home-icon {
+          left: 40px;
+        }
+     }
+      @media only screen and (min-width: 640px) {
+           
+           .home-icon {
+               left: 40px;
+             }
+          }
+     @media only screen and (min-width: 731px) {
+              
+              .home-icon {
+                  left: 80px;
+                }
+             }
 </style>
 <script type="text/javascript" src="/assets/js/userstate.js"></script>
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navigationBar">
     <div class="container nav-container">
-    <div class="navbar-header">
-        <form class="visible-xs" style="float: left;" role="search">
-            <div>
-                <div class="searchBox" style="margin-top: 9px; background-color: transparent;">
-                    <span style="margin-left: 5px; float: left; min-width: 98px;">
-                        <input type="text" id="txtSearchCollapse" class="form-control" placeholder="Find a recipe">
-                    </span>
-                    <span style="float: left; margin-left: 0.2em;">
-                        <input type="button" onclick="doSearchCollapsed();" value="Go" class="btn btn-primary btnstateless"/>
-                    </span>
-                </div>
-            </div>
-        </form>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-
-        <a class="navbar-brand hidden-xs" href="/">
-            <img class="hidden-xs bigoven-logo" src="/assets/images/icons/bigOvn-logo.png" title="BigOven 500,000+ Recipes">
-        </a>
-    
-    
-    </div>
-    <div id="navbar" class="nav-collapse collapse no-transition">
-        <ul class="nav navbar-nav navbar-left navbar-choices">
-    
-            <li>
-                <div class="input-group nav-tool-bar-collapse visible-xs no-transition">
+        <div class="navbar-header">
+            <div class="visible-xs">
+                <div class="col-xs-9">
+                    <form class="visible-xs" style="float: left;" role="search">
                     <div>
-                        <div>
-    
+                        <div class="searchBox" style="margin-top: 9px; background-color: transparent;">
+                            <span style="margin-left: 5px; float: left; min-width: 98px;">
+                                <input type="text" id="txtSearchCollapse" class="form-control search-input" placeholder="Find a recipe">
+                            </span>
+                            <span style="float: left; margin-left: 0.2em;">
+                                <input type="button" onclick="doSearchCollapsed();" value="Go" class="btn btn-primary btnstateless"/>
+                            </span>
                         </div>
-    
-                        <ul id="collapsedMenu">
-                            <li class="visible-if-unauthenticated">
-                                <a class="r24" href="javascript:void(0);" onclick="showLoginDialog('/myrecipes'); " style="margin-right: 22px;">My Recipes</a>
-                            </li>
-                            <li class="visible-if-authenticated">
-                                <a class="r24" href="/grocery">Grocery List</a>
-                            </li>
-                            <li class="visible-if-unauthenticated">
-                                <a class="r24" href="javascript:void(0);" onclick="showLoginDialog('/grocery'); ">Grocery List</a>
-                            </li>
-                            
-                            
-                            
-                            
-                            
-                            
-                            <li class="visible-if-unauthenticated">
-                                <a class="r24" href="/recipes/leftover">Use Up Leftovers</a>
-                            </li>
-                            
-                            
-                            
-                                
-                                    <li class="visible-if-authenticated">
-                                        <a class="r24" href="/recipes/leftover">Use Up Leftovers</a>
-                                    </li>
-                                
-                                
-                                
-                                
-                            
-                            <li class="visible-if-authenticated">
-                                <a href="/utils/redirect/myprofile">My Profile</a>
-                            </li>
-                            <li class="visible-if-authenticated" style="display: none; float: right; padding-bottom: 1em; padding-right: 0px;">
-                                <a href="/account/logout">Sign out</a>
-                            </li>
-                            <li class="visible-if-unauthenticated pull-right">
-                                <div class="input-group navbar-right nav-tool-bar">
-                                    <a href="https://www.bigoven.com/account/join" class="btn btnstateless btn-join">Join Free</a>
-                                    <a href="/account/login?ReturnUrl=%2frecipe%2fsteves-fish-tacos%2f178920" class="btn btn-sign-in btnstateless">Sign In</a>
-                                </div>
-                            </li>
-    
-                        </ul>
                     </div>
+                </form>
                 </div>
-            </li>
-        </ul>
-    </div>
-    
-    
-    <div class="visible-sm visible-md visible-lg">
-    
-        <div class="nav navbar-nav navbar-left">
-            
-            <div class="nav-options">
-                <ul class="nav navbar-nav"> 
-                    <li>
-                    <a href="/plan" class="r24 navbar-right tip " data-toggle="tooltip" data-placement="bottom" title="Plan meals days, weeks or months in advance">
-                        <span class="hidden-sm r24">Planner</span><span class="visible-sm r24" style="margin-right: 0px;">Plan</span>
-                    </a>
-                </li>
-                    <li>
-                    <a href="/grocery" class="r24 navbar-right tip " data-toggle="tooltip" data-placement="bottom" title="Build a sorted, mobile, shareable grocery list">
-                        <span class="hidden-sm r24">Grocery List</span><span class="visible-sm r24">Grocery</span>
-                    </a>
-                </li>
-                    <li>
-                    <a href="/myrecipes" class="r24 navbar-right tip " data-toggle="tooltip" data-placement="bottom" title="Organize all your recipes">
-                        My Recipes
-                    </a>
-                </li>
-                    <li>
-                    <a href="/recipes" class="navbar-right tip                                                                        nav-active
-" data-toggle="tooltip" data-placement="bottom" title="Get seasonal recipe ideas and use up leftovers!">
-                        <span class="hidden-sm r24">Ideas</span><span class="visible-sm r24">Ideas</span>
-                    </a>
-                </li>
-                   
-                    
-                        
-                                
-                        
-                   
-                        
-                            <li>
-                                <a href="/recipes/leftover" class="navbar-right tip 
-                                            "data-toggle="tooltip" data-placement="bottom" title="Use Up Leftovers!">
-                                    Use Up Leftovers
-                                </a>
-                            </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
-                </ul>
+                    <div class="col-xs-1">
+                    <a href="/"><i class="ss-home home-icon"></i></a>
+                </div>
             </div>
-            
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand hidden-xs" href="/">
+                <img class="hidden-xs bigoven-logo" src="/assets/images/icons/bigOvn-logo.png" title="BigOven 500,000+ Recipes">
+            </a>
+        
+        
         </div>
-    
-        <ul class="nav navbar-nav navbar-right navbar-ipad">
-                <li class="visible-if-unauthenticated" style="margin-top: 17px;">
-                    <div class="input-group navbar-right nav-tool-bar buttons-wrapper">
-                        
-                        
-                        <a href="https://www.bigoven.com/account/join" class="btn btnstateless btn-join">Join Free</a>
-                        <a href="/account/login?ReturnUrl=%2frecipe%2fsteves-fish-tacos%2f178920" class="btn btn-sign-in btnstateless">Sign In</a>
-                    </div>
-                </li>
-    
-        </ul>
-    
-            <ul class="nav navbar-nav hidden-xs hidden-sm hidden-md navbar-right">
+        <div id="navbar" class="nav-collapse collapse no-transition">
+            <ul class="nav navbar-nav navbar-left navbar-choices">
                 <li>
-                    <form class="navbar-form navbar-right navbar-search" role="search">
-                        <div class="searchBox">
-                            <span class="ss ss-search search-icon"></span>
-                            <input type="text" id="txtSearch" class="form-control" placeholder="Search Recipes">
+                    <div class="input-group nav-tool-bar-collapse visible-xs no-transition">
+                        <div>
+                            <div>
+                            </div>
+        
+                            <ul id="collapsedMenu">
+                                <li class="visible-if-unauthenticated">
+                                    <a class="r24" href="javascript:void(0);" onclick="showLoginDialog('/myrecipes'); " style="margin-right: 22px;">My Recipes</a>
+                                </li>
+                                <li class="visible-if-authenticated">
+                                    <a class="r24" href="/myrecipes" style="margin-right: 22px;">My Recipes</a>
+                                </li>
+                                <li class="visible-if-authenticated">
+                                    <a class="r24" href="/grocery">Grocery List</a>
+                                </li>
+                                <li class="visible-if-unauthenticated">
+                                    <a class="r24" href="javascript:void(0);" onclick="showLoginDialog('/grocery'); ">Grocery List</a>
+                                </li>
+                                
+                                
+                                
+                                
+                                
+                                
+                                <li class="visible-if-unauthenticated">
+                                    <a class="r24" href="/recipes/leftover">Use Up Leftovers</a>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class="visible-if-authenticated">
+                                            <a class="r24" href="/recipes/leftover">Use Up Leftovers</a>
+                                        </li>
+                                    
+                                    
+                                    
+                                    
+                                
+                                <li class="visible-if-authenticated">
+                                    <a href="/utils/redirect/myprofile">My Profile</a>
+                                </li>
+                                <li class="visible-if-authenticated" style="display: none; float: right; padding-bottom: 1em; padding-right: 0px;">
+                                    <a href="/account/logout">Sign out</a>
+                                </li>
+                                <li class="visible-if-unauthenticated pull-right">
+                                    <div class="input-group navbar-right nav-tool-bar">
+                                        <a href="https://www.bigoven.com/account/join" class="btn btnstateless btn-join">Join Free</a>
+                                        <a href="/account/login?ReturnUrl=%2frecipe%2fsteves-fish-tacos%2f178920" class="btn btn-sign-in btnstateless">Sign In</a>
+                                    </div>
+                                </li>
+        
+                            </ul>
                         </div>
-                    </form>
+                    </div>
                 </li>
             </ul>
-    </div>
+        </div>
+        
+        <div class="visible-sm visible-md visible-lg">
+        
+            <div class="nav navbar-nav navbar-left">
+                
+                <div class="nav-options">
+                    <ul class="nav navbar-nav"> 
+                        <li>
+                        <a href="/plan" class="r24 navbar-right tip " data-toggle="tooltip" data-placement="bottom" title="Plan meals days, weeks or months in advance">
+                            <span class="hidden-sm r24">Planner</span><span class="visible-sm r24" style="margin-right: 0px;">Plan</span>
+                        </a>
+                    </li>
+                        <li>
+                        <a href="/grocery" class="r24 navbar-right tip " data-toggle="tooltip" data-placement="bottom" title="Build a sorted, mobile, shareable grocery list">
+                            <span class="hidden-sm r24">Grocery List</span><span class="visible-sm r24">Grocery</span>
+                        </a>
+                    </li>
+                        <li>
+                        <a href="/myrecipes" class="r24 navbar-right tip " data-toggle="tooltip" data-placement="bottom" title="Organize all your recipes">
+                            My Recipes
+                        </a>
+                    </li>
+                        <li>
+                        <a href="/recipes" class="navbar-right tip                                                                            nav-active
+" data-toggle="tooltip" data-placement="bottom" title="Get seasonal recipe ideas and use up leftovers!">
+                            <span class="hidden-sm r24">Ideas</span><span class="visible-sm r24">Ideas</span>
+                        </a>
+                    </li>
+                       
+                        
+                            
+                                    
+                            
+                       
+                            
+                                <li>
+                                    <a href="/recipes/leftover" class="navbar-right tip 
+                                                "data-toggle="tooltip" data-placement="bottom" title="Use Up Leftovers!">
+                                        Use Up Leftovers
+                                    </a>
+                                </li>
+
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        
+            <ul class="nav navbar-nav navbar-right navbar-ipad">
+                    <li class="visible-if-unauthenticated" style="margin-top: 17px;">
+                        <div class="input-group navbar-right nav-tool-bar buttons-wrapper">
+                            
+                            
+                            <a href="https://www.bigoven.com/account/join" class="btn btnstateless btn-join">Join Free</a>
+                            <a href="/account/login?ReturnUrl=%2frecipe%2fsteves-fish-tacos%2f178920" class="btn btn-sign-in btnstateless">Sign In</a>
+                        </div>
+                    </li>
+        
+            </ul>
+        
+                <ul class="nav navbar-nav hidden-xs hidden-sm hidden-md navbar-right">
+                    <li>
+                        <form class="navbar-form navbar-right navbar-search" role="search">
+                            <div class="searchBox">
+                                <span class="ss ss-search search-icon"></span>
+                                <input type="text" id="txtSearch" class="form-control" placeholder="Search Recipes">
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+        </div>
+        
     </div>
-
-
 </nav>
 
 <script>
@@ -797,7 +857,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     var suppressTabComplete = false;
     var inboxCount = 0;
 
-    establishboUserFromViewBag({"UserID":0,"UserName":null,"ImageURL":"https://bigoven-res.cloudinary.com/image/upload/avatar-default.png","ImageURL48":"https://bigoven-res.cloudinary.com/image/upload/t_recipe-48,d_avatar-default.png/avatar-default.png","ImageURL64":"https://bigoven-res.cloudinary.com/image/upload/t_recipe-64,d_avatar-default.png/avatar-default.png","ImageURL128":"https://bigoven-res.cloudinary.com/image/upload/t_recipe-128,d_avatar-default.png/avatar-default.png","PhotoUrl":"https://photos.bigoven.com/photo/avatar/avatar-default.png","HomeUrl":"","IsPremium":false,"CreditBalance":0,"FullName":"","FirstName":null,"LastName":null,"MemberSince":"\/Date(1551647343945)\/","AboutMe":null,"TrySoonCount":0,"FavoritesCount":0,"AddedCount":0,"MenusCount":0,"PremiumExpiryDate":null,"OwnsDomain":null,"IsGroceryListFree":false,"IsMenuPlanFree":false,"GroceryListSponsor":"","MenuPlanSponsor":"","FBNotifyRecipeRaves":null,"FBNotifyPhotoApproved":null,"FBNotifyRecipePost":null,"FBNotifyMeWhenFriendsJoin":null,"FBNotifyIveFavorited":null,"FBNotifyIveTrySooned":null,"FBNotifyMenuSaved":null,"FBNotifyIveReviewed":null,"FBNotifyAddedMenu":null,"FBNotifyReviewReceived":null,"FBNotifyMedalReceived":null,"FBNotifyIveMade":null,"FacebookID":null,"OfflineAccessToken":null,"AdFreeEnabled":false,"PowerFeaturesEnabled":false,"IsCurator":false,"AmFollowing":null,"BackgroundUrl":null,"FollowingCount":0,"FollowersCount":0,"BOAuthToken":null,"UserLevel":"unauthenticated","PrivateRecipeCount":0,"PublicRecipeCount":0,"TotalRecipes":null,"LastChangeLogID":null,"UserType":0,"FriendlyName":"Guest","EatingStyle":null,"Email":null},
+    establishboUserFromViewBag({"UserID":0,"UserName":null,"ImageURL":"https://bigoven-res.cloudinary.com/image/upload/avatar-default.png","ImageURL48":"https://bigoven-res.cloudinary.com/image/upload/t_recipe-48,d_avatar-default.png/avatar-default.png","ImageURL64":"https://bigoven-res.cloudinary.com/image/upload/t_recipe-64,d_avatar-default.png/avatar-default.png","ImageURL128":"https://bigoven-res.cloudinary.com/image/upload/t_recipe-128,d_avatar-default.png/avatar-default.png","PhotoUrl":"https://photos.bigoven.com/photo/avatar/avatar-default.png","HomeUrl":"","IsPremium":false,"CreditBalance":0,"FullName":"","FirstName":null,"LastName":null,"MemberSince":"\/Date(1572210335876)\/","AboutMe":null,"TrySoonCount":0,"FavoritesCount":0,"AddedCount":0,"MenusCount":0,"PremiumExpiryDate":null,"OwnsDomain":null,"IsGroceryListFree":false,"IsMenuPlanFree":false,"GroceryListSponsor":"","MenuPlanSponsor":"","FBNotifyRecipeRaves":null,"FBNotifyPhotoApproved":null,"FBNotifyRecipePost":null,"FBNotifyMeWhenFriendsJoin":null,"FBNotifyIveFavorited":null,"FBNotifyIveTrySooned":null,"FBNotifyMenuSaved":null,"FBNotifyIveReviewed":null,"FBNotifyAddedMenu":null,"FBNotifyReviewReceived":null,"FBNotifyMedalReceived":null,"FBNotifyIveMade":null,"FacebookID":null,"OfflineAccessToken":null,"AdFreeEnabled":false,"PowerFeaturesEnabled":false,"IsCurator":false,"AmFollowing":null,"BackgroundUrl":null,"FollowingCount":0,"FollowersCount":0,"BOAuthToken":null,"UserLevel":"unauthenticated","PrivateRecipeCount":0,"PublicRecipeCount":0,"TotalRecipes":null,"LastChangeLogID":null,"UserType":0,"FriendlyName":"Guest","EatingStyle":null,"Email":null},
         true,
         function() {
             if ((boUser.UserID) > 0) {
@@ -981,7 +1041,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="yield">
             <i class="ss ss-users" style="position: relative; bottom: -2px;" title="Recipe yield"></i> 6 Servings
         </div>
-            <div class="trying light-med-grey hidden-xs"><i class="fa fa-bookmark" style="position: relative; bottom: 1px;" title="657 want to try"></i> 657 want to try</div>
+            <div class="trying light-med-grey hidden-xs"><i class="fa fa-bookmark" style="position: relative; bottom: 1px;" title="677 want to try"></i> 677 want to try</div>
     </div>
 
     <div class="layout">
@@ -1824,11 +1884,11 @@ Fold over and dig in, with a nice IPA or crisp white wine!</textarea>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="row row-flex">
 
-                                        <a href="https://www.bigoven.com/recipe/tacos/771060"><div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 recipe-mobile-view mobile-padding"><div class="mini-tile-300x250"><img class="img-responsive" src="https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/tacos-18.jpg"><div class="recipe-title" class=""><h2>Tacos</h2></div><div class="by-line"><div><a href="https://www.bigoven.com/user/rebawri"> <div><img class="img-responsive avatar-img" src="https://bigoven-res.cloudinary.com/image/upload/h_48,w_48,c_fill/avatar/avatar-default.png"><span>by rebawri</span></div></a></div></div></div></div></a>
-                                        
                                         <a href="https://www.bigoven.com/recipe/tacos/289003"><div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 recipe-mobile-view mobile-padding"><div class="mini-tile-300x250"><img class="img-responsive" src="https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/tacos-6.jpg"><div class="recipe-title" class=""><h2>Tacos</h2></div><div class="by-line"><div><a href="https://www.bigoven.com/user/celestemillett"> <div><img class="img-responsive avatar-img" src="https://bigoven-res.cloudinary.com/image/upload/h_48,w_48,c_fill/avatar/celestemillett.jpg"><span>by celestemillett</span></div></a></div></div></div></div></a>
                                         
-                                        <a href="https://www.bigoven.com/recipe/tacos/259783"><div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 recipe-mobile-view mobile-padding"><div class="mini-tile-300x250"><img class="img-responsive" src="https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/tacos-11.jpg"><div class="recipe-title" class=""><h2>Tacos</h2></div><div class="by-line"><div><a href="https://www.bigoven.com/user/zander528"> <div><img class="img-responsive avatar-img" src="https://bigoven-res.cloudinary.com/image/upload/h_48,w_48,c_fill/avatar/180709010314506470.jpg"><span>by zander528</span></div></a></div></div></div></div></a>
+                                        <a href="https://www.bigoven.com/recipe/tacos/748684"><div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 recipe-mobile-view mobile-padding"><div class="mini-tile-300x250"><img class="img-responsive" src="https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/tacos-16.jpg"><div class="recipe-title" class=""><h2>Tacos</h2></div><div class="by-line"><div><a href="https://www.bigoven.com/user/havenbornhoft"> <div><img class="img-responsive avatar-img" src="https://bigoven-res.cloudinary.com/image/upload/h_48,w_48,c_fill/avatar/havenbornhoft.jpg"><span>by havenbornhoft</span></div></a></div></div></div></div></a>
+                                        
+                                        <a href="https://www.bigoven.com/recipe/tacos/1044087"><div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 recipe-mobile-view mobile-padding"><div class="mini-tile-300x250"><img class="img-responsive" src="https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/tacos-24.jpg"><div class="recipe-title" class=""><h2>Tacos</h2></div><div class="by-line"><div><a href="https://www.bigoven.com/user/bargerons"> <div><img class="img-responsive avatar-img" src="https://bigoven-res.cloudinary.com/image/upload/h_48,w_48,c_fill/avatar/avatar-default.png"><span>by bargerons</span></div></a></div></div></div></div></a>
                                         
                             </div>
                     </div>
@@ -1909,7 +1969,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</textarea>
 
                         <div class="below-review-bar">
                             <div class="pull-left" style="color: #ccc;">
-1y                            </div>
+2y                            </div>
                               <a href="javascript:void(0);" id="reply-btn-58bb8b0da9c81b5a0830f16e" class="pull-right accent" onclick="replyMessageNew('reply-btn-58bb8b0da9c81b5a0830f16e', 267494);">Reply</a>
 
 
@@ -1941,7 +2001,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</textarea>
 
                         <div class="below-review-bar">
                             <div class="pull-left" style="color: #ccc;">
-2y                            </div>
+3y                            </div>
 
 
                         </div>
@@ -1959,7 +2019,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</textarea>
                                                     EditorBigOven
                                                 </a>
 
-                                                <span style="float:right; color: #ccc;">2y</span>
+                                                <span style="float:right; color: #ccc;">3y</span>
                                             </div>
                                                 <div style="clear: both;" class="commentReplies">Swai should work just fine. Depending on its thickness, you might need to adjust the cooking time.</div>
                                 <a href="javascript:void(0);" id="reply-btn-576041fdd2de21111460d95e" class="pull-right" onclick="replyMessageNew('reply-btn-576041fdd2de21111460d95e', 254454);">Reply</a>
@@ -1982,7 +2042,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</textarea>
 
                         <div class="below-review-bar">
                             <div class="pull-left" style="color: #ccc;">
-2y                            </div>
+3y                            </div>
                               <a href="javascript:void(0);" id="reply-btn-57427c8e523a3531001992ec" class="pull-right accent" onclick="replyMessageNew('reply-btn-57427c8e523a3531001992ec', 253561);">Reply</a>
 
 
@@ -2110,7 +2170,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</textarea>
 
                         <div class="below-review-bar">
                             <div class="pull-left" style="color: #ccc;">
-5y                            </div>
+6y                            </div>
                               <a href="javascript:void(0);" id="reply-btn-56d4c0d0a225914f8898450a" class="pull-right accent" onclick="replyMessageNew('reply-btn-56d4c0d0a225914f8898450a', 146243);">Reply</a>
 
 
@@ -2143,7 +2203,7 @@ They were a keeper request by my husband &amp; I&#39;m making it again tonight!!
 
                         <div class="below-review-bar">
                             <div class="pull-left" style="color: #ccc;">
-5y                            </div>
+6y                            </div>
                               <a href="javascript:void(0);" id="reply-btn-56d4af97a225904f88e77ccc" class="pull-right accent" onclick="replyMessageNew('reply-btn-56d4af97a225904f88e77ccc', 134491);">Reply</a>
 
 
@@ -2644,7 +2704,7 @@ Fold over and dig in, with a nice IPA or crisp white wine! "
 
     try {
         $("#noteDate").datepicker();
-        $("#noteDate").val('3/3/2019 ');
+        $("#noteDate").val('10/27/2019 ');
     } catch (e) {
     }
 
@@ -2894,7 +2954,7 @@ Fold over and dig in, with a nice IPA or crisp white wine! "
 
         try {
             $("#noteDate").datepicker();
-            $("#noteDate").val('3/3/2019 ');
+            $("#noteDate").val('10/27/2019 ');
             $('.comment_form :radio.star').rating();
         } catch (e) {
         }
@@ -2954,9 +3014,13 @@ Fold over and dig in, with a nice IPA or crisp white wine! "
         background-attachment: scroll;
         background-position: 0% 0%;
         background: rgb(175, 175, 175);
+        
         bottom: 0pt;
         left: 0pt;
         color: white;
+    }
+    .footer-main {
+       margin-top: 0px;
     }
 
     .footer-contents {
@@ -3027,7 +3091,7 @@ Fold over and dig in, with a nice IPA or crisp white wine! "
         <span class="tryProText">Add unlimited recipes. Remove ads. Custom folders. Find recipes for your diet.</span>
         <a href="/pro" class="btn btn-primary tryProButton" style="position:relative;top:-10px;" data-loading-text="Try BigOven Pro Free">Try BigOven Pro Free</a>
     </div>
-<footer id="footer">
+<footer id="footer" class="footer-main">
    <div class="container footerLinks">
         <div class="col-xs-6 col-sm-3">
             <h3>BigOven</h3>
@@ -3060,7 +3124,7 @@ Fold over and dig in, with a nice IPA or crisp white wine! "
                 <li><a href="http://facebook.com/bigoven"><i class="fa fa-facebook"></i> Facebook</a></li>
                 <li><a href="http://instagram.com/bigoven"><i class="fa fa-instagram"></i> Instagram</a></li>
                 <li><a href="http://pinterest.com/bigoven"><i class="fa fa-pinterest"></i> Pinterest</a></li>
-                <li><a href="https://plus.google.com/104376583525004369221/posts"><i class="fa fa-google-plus"></i> Google+</a></li>
+                
             </ul>
         </div>
         <div class="col-xs-6 col-sm-3">
@@ -3078,18 +3142,21 @@ Fold over and dig in, with a nice IPA or crisp white wine! "
     <div class="footer">
         <div class="container linksInFooter">
             <p class="footer-contents footer-contentsSml">Ad Partners: <a class="a-footer a-footerSml" href="http://www.sheknows.com/" target="_blank"> SheKnows Media - Lifestyle </a> - <a class="a-footer a-footerSml" href="/site/advertise"> See Full Partners List</a></></p>
-            <p class="footer-contents2 footer-contents2Sml" style="color: black">Lakefront Software, LLC | Copyright &copy;2018</p>
+            <p class="footer-contents2 footer-contents2Sml" style="color: black">Lakefront Software, LLC | Copyright &copy; 2019</p>
         </div>
     </div>
-        <!-- BLOGHER ADS Begin 300x50 ad  -->
-        <div class="hidden-lg hidden-md visible-xs visible-sm visible-if-not-pro-member text-center" style="padding-top: 5px">
-            <div id="skm-ad-tinybanner"></div>
 
-            <script type="text/javascript">
-                blogherads.adq.push(['tinybanner', 'skm-ad-tinybanner']);
-            </script>
-            <!-- BLOGHER ADS End 300x50 ad  -->
-        </div>
+
+
+
+
+
+
+
+
+
+
+
    </footer>
 <script type="text/javascript">
     if ($.cookie("bigovenapp") != undefined) {

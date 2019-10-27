@@ -16,7 +16,7 @@ describe Hangry do
     its(:canonical_url) { should == "https://www.MrFood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268" }
     its(:cook_time) { should == 320 }
     its(:description) { should == "Try this saucy pot roast over egg noodles, rice, or-for more authentic Italian flavor-polenta. It's a winner whichever way you choose!" }
-    its(:image_url) { should == "http://irepo.primecp.com/2015/09/235934/Saucy-Italian-Pot-Roast_ExtraLarge1000_ID-1183022.jpg?v=1183022" }
+    its(:image_url) { should == "https://irepo.primecp.com/2015/09/235934/Saucy-Italian-Pot-Roast_ExtraLarge1000_ID-1183022.jpg?v=1183022" }
     its(:ingredients) {
       should == [
         "1 (8-ounce) package sliced fresh baby Portobello mushrooms",

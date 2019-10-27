@@ -3,13 +3,14 @@
 describe Hangry do
   context "cooks.com recipe" do
     before(:all) do
-      @html = File.read("spec/fixtures/www.cooks.com.html").encode!("UTF-8", "binary", invalid: :replace, undef: :replace, replace: '')
+      skip "cooks.com is no longer using a microformat"
+      @html = File.read("spec/fixtures/www.cooks.com.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
 
     it "should use the h-recipe parser" do
-      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::HRecipeParser)
+      expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::NullRecipeParser)
     end
 
     its(:author) { should == "CM" }

@@ -12,8 +12,8 @@ describe Hangry do
       expect(Hangry::ParserSelector.new(@html).parser).to be_an_instance_of(Hangry::JsonLDParser)
     end
 
-    its(:author) { should == "Stephanie Manley @CopyKat.com" }
-    its(:canonical_url) { should == "https://copykat.com/2014/12/03/low-fat-scalloped-potatoes/" }
+    its(:author) { should == "Stephanie Manley" }
+    its(:canonical_url) { should == "https://copykat.com/low-fat-scalloped-potatoes/" }
     its(:cook_time) { should == 40 }
     its(:description) { should == "You can remove the fat and keep the flavor.&nbsp;" }
     its(:image_url) { should == "https://copykat.com/wp-content/uploads/2014/12/swansons-finished-low-fat-scalloped-potatoes.jpg" }

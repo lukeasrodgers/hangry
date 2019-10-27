@@ -32,14 +32,26 @@ module Hangry
     def parse_recipe_hash
       nokogiri_doc.css(self.class.root_selector).each do |script|
         [Oj.load(script.content)].flatten.each do |json|
-          return json if is_a_recipe?(json) && contains_required_keys?(json)
+          next unless json.is_a?(Hash)
+          next unless json['@context'] =~ /schema\.org/
+
+          # b/c of www.thespruceeats.com in the specs
+          json = json['mainEntity'] if json.dig('mainEntity', '@type') == 'Recipe'
+
+          return json if is_a_recipe?(json)
+
+          if json['@graph'].is_a?(Array)
+            json['@graph'].each do |item|
+              return item if is_a_recipe?(item)
+            end
+          end
         end
       end
       nil
     end
 
     def is_a_recipe?(json)
-      json.is_a?(Hash) && json['@context'] =~ /schema\.org/ && json['@type'] == 'Recipe'
+      json['@type'] == 'Recipe' && contains_required_keys?(json)
     end
 
     def contains_required_keys?(json)
@@ -148,6 +160,8 @@ module Hangry
         node.fetch("itemListElement").flat_map(&method(:parse_to_list))
       elsif type.member?("ListItem") || type.member?("HowToStep")
         [node.fetch("text")]
+      elsif type.member?("HowToSection")
+        [node["name"], *parse_list_to_text(*node.fetch("itemListElement")), ""]
       else
         fail NotImplementedError, "Unexpected node @type #{type.inspect}"
       end

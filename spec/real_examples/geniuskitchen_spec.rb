@@ -3,7 +3,7 @@
 describe Hangry do
   context "food.com recipe" do
     before(:all) do
-      @html = File.read("spec/fixtures/www.geniuskitchen.com.html")
+      @html = File.read("spec/fixtures/www.food.com.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
@@ -13,10 +13,10 @@ describe Hangry do
     end
 
     its(:author) { should == "flume027" }
-    its(:canonical_url) { should == "https://www.geniuskitchen.com/recipe/panda-express-orange-chicken-103215" }
+    its(:canonical_url) { should == "https://www.food.com/recipe/panda-express-orange-chicken-103215" }
     its(:cook_time) { should == 30 }
     its(:description) { should == "A copycat recipe from Panda Express. This chicken is tangy and flavorful. Give it a try! I'm sure you and your family will enjoy it." }
-    its(:image_url) { should == "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/10/32/15/W6FoUgXyRnaFTQjc1Nkw_0S9A2630.jpg" }
+    its(:image_url) { should == "https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/10/32/15/W6FoUgXyRnaFTQjc1Nkw_0S9A2630.jpg" }
     its(:ingredients) {
       should == [
         "2 lbs boneless skinless chicken, chopped into bite-sized pieces",

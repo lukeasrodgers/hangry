@@ -16,7 +16,7 @@ describe Hangry do
     its(:canonical_url) { should == "https://www.chowhound.com/recipes/strawberry-rhubarb-pie-with-sour-cream-crust-30700" }
     its(:cook_time) { should == nil }
     its(:description) { should == "A strawberry and rhubarb pie recipe with a tender crust and a tart-sweet filling." }
-    its(:image_url) { should == "https://www.chowstatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" }
+    its(:image_url) { should == "https://chowhound1.cbsistatic.com/assets/recipe_photos/30700_strawberry_rhubarb_pie2.jpg" }
     its(:ingredients) {
       should == [
         "2 1/2 cups all-purpose flour",

@@ -3,7 +3,7 @@
 describe Hangry do
   context "bbc.co.uk recipe" do
     before(:all) do
-      @html = File.read("spec/fixtures/www.bbc.com.html")
+      @html = File.read("spec/fixtures/www.bbc.co.uk.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
@@ -13,7 +13,7 @@ describe Hangry do
     end
 
     its(:author) { should == "Antony Worrall Thompson" }
-    its(:canonical_url) { should == "https://www.bbc.com/food/recipes/paella_7100" }
+    its(:canonical_url) { should == "https://www.bbc.co.uk/food/recipes/paella_7100" }
     its(:cook_time) { should == 30 }
     its(:description) { should == "An authentic seafood and chicken paella that boasts some of Spain’s finest ingredients, from calasparra rice to chorizo. Each serving provides 660kcal, 51g protein, 65g carbohydrate (of which 5g sugars), 20g fat (of which 6g saturates), 3.5g fibre and 2.1g salt." }
     its(:image_url) { should == 'https://food-images.files.bbci.co.uk/food/recipes/paella_7100_16x9.jpg' }

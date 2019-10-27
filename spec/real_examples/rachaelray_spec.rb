@@ -19,7 +19,7 @@ describe Hangry do
     its(:image_url) { should == nil }
     its(:ingredients) {
       should == [
-        '2 tablespoons extra virgin olive oil (EVOO)',
+        '2 tablespoons extra virgin olive oil ( EVOO)',
         '2 medium carrots, peeled and chopped',
         '1 parsnip, peeled and chopped',
         '1 medium onion, chopped',
@@ -51,7 +51,15 @@ describe Hangry do
     end
 
     its(:instructions) {
-      should == "Place a large\npot\nover moderate heat and add extra virgin olive oil, 2 turns around the\npan\n. Work close to the stove and add vegetables to the\npot\nas you chop, in the order they are listed.\nAdd bay leaves and season vegetables with salt and pepper, to taste. Add stock to the pot and raise flame to bring liquid to a boil. Add diced chicken tenderloins, return soup to a boil, and reduce heat back to moderate. Cook chicken 2 minutes and add noodles. Cook soup an additional 6 minutes or until noodles are tender and remove soup from the heat.\nStir in parsley and dill, remove bay leaves and serve. This is a thick soup. Add up to 2 cups of water if you like chicken soup with lots of broth."
+      should == <<~TEXT.chomp
+        Place a
+        large pot
+        over moderate heat and add extra virgin olive oil, 2 turns around the
+        pan
+        . Work close to the stove and add vegetables to the pot as you chop, in the order they are listed.
+        Add bay leaves and season vegetables with salt and pepper, to taste. Add stock to the pot and raise flame to bring liquid to a boil. Add diced chicken tenderloins, return soup to a boil, and reduce heat back to moderate. Cook chicken 2 minutes and add noodles. Cook soup an additional 6 minutes or until noodles are tender and remove soup from the heat.
+        Stir in parsley and dill, remove bay leaves and serve. This is a thick soup. Add up to 2 cups of water if you like chicken soup with lots of broth.
+      TEXT
     }
 
     its(:prep_time) { should == nil }
