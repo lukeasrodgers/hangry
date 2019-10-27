@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Coq au Riesling Recipe - NYT Cooking</title>
 
@@ -8,28 +8,74 @@
       window.googletag.cmd = window.googletag.cmd || [];
     </script>
 
-      <script type='text/javascript' src='//cdn.optimizely.com/js/3190820019.js'></script>
+    <script>
+    if (typeof window.nyt_et === 'function') {
+        window.nyt_et('init', 'https://a.et.nytimes.com/', 'nytcooking', {
+            subject: 'page',
+            assetUrl: (document.querySelector('link[rel=canonical]') || {}).href,
+            assetId: (document.querySelector('meta[name=articleid]') || {}).content,
+            nyt_uri: (document.querySelector('meta[name=nyt_uri]') || {}).content,
+            url: location.href,
+            referrer: document.referrer || void 0,
+            client_tz_offset: (new Date).getTimezoneOffset(),
+        });
+    }
+</script>
 
-    <meta charset="utf-8">
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d13c5a39f2","applicationID":"4032859","transactionName":"IQtXFUsJCV9UE04WVgBLSwRaDxVWQk4SCVwV","queueTime":0,"applicationTime":79,"agent":""}</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+
+    <script>
+      var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function e(t){var e=r[t];return e&&e[1]||null}function n(t,e){if(t){var n,r,o=e[0],i=e[1],c=0,u=0;if(1!==i.length||4294967296!==i[0])for(n=a(t+" "+o)>>>0,c=0,u=0;r=i[c++];)if(n<(u+=r[0]))return r}}function a(t){for(var e,n,a,r,o,i,c,u=0,h=0,l=[],s=[e=1732584193,n=4023233417,~e,~n,3285377520],f=[],p=t.length;h<=p;)f[h>>2]|=(h<p?t.charCodeAt(h):128)<<8*(3-h++%4);for(f[c=p+8>>2|15]=p<<3;u<=c;u+=16){for(e=s,h=0;h<80;e=[0|[(i=((t=e[0])<<5|t>>>27)+e[4]+(l[h]=h<16?~~f[u+h]:i<<1|i>>>31)+1518500249)+((n=e[1])&(a=e[2])|~n&(r=e[3])),o=i+(n^a^r)+341275144,i+(n&a|n&r|a&r)+882459459,o+1535694389][0|h++/20],t,n<<30|n>>>2,a,r])i=l[h-3]^l[h-8]^l[h-14]^l[h-16];for(h=5;h;)s[--h]=s[h]+e[h]|0}return s[0]}var r,o={};return t.dataLayer=t.dataLayer||[],e.init=function(e){var a,o,i,c,u,h,l,s,f,p,d=[],v=[],m=(t.document.cookie.match(/(?:^|;) *nyt-a=([^;]*)/)||[])[1],b=(t.document.cookie.match(/(?:^|;) *ab7=([^;]*)/)||[])[1],g=(t.location.search.match(/(?:^\?|&)abra=([^&]*)/)||[])[1];if(r)throw new Error("can't init twice");for(r={},u=(decodeURIComponent(b||"")+"&"+decodeURIComponent(g||"")).split("&"),a=u.length-1;a>=0;a--)h=u[a].split("="),h.length<2||(l=h[0])&&!r[l]&&(s=h[1]||null,r[l]=[,s,1],s&&d.push(l+"="+s),v.push({test:l,variant:s||"0"}));for(a=0;a<e.length;a++)i=e[a],(o=i[0])in r||(c=n(m,i)||[],c[0],f=c[1],p=!!c[2],r[o]=c,f&&d.push(o.replace(/[^\w-]/g)+"="+(""+f).replace(/[^\w-]/g)),p&&v.push({test:o,variant:f||"0"}));d.length&&t.document.documentElement.setAttribute("data-nyt-ab",d.join(" ")),v.length&&t.dataLayer.push({event:"ab-alloc",abtest:{batch:v}})},e.reportExposure=function(e,n){if(!o[e]){o[e]=1;var a=r[e];if(a){var i=a[1];a[2]&&t.dataLayer.push({event:"ab-expose",abtest:{test:e,variant:i||"0"}})}n&&t.setTimeout(function(){n(null)},0)}},e}(this);
+
+        NYTD.Abra.init([
+  [
+    "COOK_TP3_FreePayBalance",
+    [
+      [
+        429496730,
+        "0_control",
+        1
+      ],
+      [
+        429496730,
+        "1_paid",
+        1
+      ],
+      [
+        3435973836,
+        "holdout",
+        0
+      ]
+    ]
+  ]
+], '//et.nytimes.com');
+    </script>
+
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"dea65dec80","applicationID":"38387186","transactionName":"cAleTBBWWVVRRBtDVlFJQl0BUEVcRxlHXFxE","queueTime":0,"applicationTime":271,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
 <meta name="sourceApp" content="nytcooking" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+<meta name="CG" content="npv">
+<meta name="SCG" content="cooking">
+<meta name="PT" content="recipe">
+
+<link rel="manifest" href="/manifest.json">
 
 <meta name="apple-itunes-app"
       content="app-id=911422904, app-argument=nytcooking://cooking.nytimes.com/recipes/1017945">
 
 
-  <meta property="og:url" content="http://cooking.nytimes.com/recipes/1017945-coq-au-riesling"/>
-  <link rel="canonical" href="http://cooking.nytimes.com/recipes/1017945-coq-au-riesling" />
+  <meta property="og:url" content="https://cooking.nytimes.com/recipes/1017945-coq-au-riesling"/>
+  <link rel="canonical" href="https://cooking.nytimes.com/recipes/1017945-coq-au-riesling" />
 
   <meta property="og:title" content="Coq au Riesling Recipe" />
 <meta property="og:type" content="article"/>
 <meta property="og:site_name" content="NYT Cooking"/>
-<meta property="article:publisher" content="https://www.facebook.com/nytfood"/>
+<meta property="article:publisher" content="https://www.facebook.com/nytcooking"/>
 <meta property="fb:app_id" content="422306974586348" />
 
-  <meta property="og:image" content="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-superJumbo.jpg"/>
+  <meta property="og:image" content="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-mediumThreeByTwo440.jpg"/>
 
   <meta property="og:description" content="The chicken stew here does have an authentic origin, but I have lightened it a little by dispensing with the cream that would be added luxuriously in its country of origin And you can cheerfully use a dry or semi-dry from anywhere in the world I have nothing against the regular coq au vin, but I might actually prefer this sprightlier version"/>
 
@@ -44,7 +90,7 @@
 
 <link rel="shortcut icon" href="/favicon.ico" />
 
-    <script async src="//typeface.nytimes.com/plw8kql.js"></script>
+  <script async src="//typeface.nytimes.com/plw8kql.js"></script>
 
 
       <script>
@@ -52,99 +98,37 @@
       'pageCategory': 'recipeDetails',
     }];
     bootstrap = window.bootstrap || {};
-    bootstrap.suggestionsData = [{"recipe":{"id":12375,"url":"/recipes/12375-coq-au-vin-blanc","name":"Coq au Vin Blanc","byline":"By Florence Fabricant","cookingTime":"1 hour 20 minutes","kicker":null,"image":{"url":"https://static01.nyt.com/images/2012/03/14/dining/14pair-span/14pair-span-videoSixteenByNine310.jpg","resizeWidth":false}},"type":"SimilarSuggestion"},{"recipe":{"id":1016390,"url":"/recipes/1016390-afton-club-punch","name":"Afton Club Punch","byline":"By Maria Newman","cookingTime":"","kicker":null,"image":{"url":"https://static01.nyt.com/images/2014/05/21/dining/21PUNCH1/21PUNCH1-videoSixteenByNine310.jpg","resizeWidth":false}},"type":"SimilarSuggestion"},{"recipe":{"id":1218,"url":"/recipes/1218-chicken-with-riesling","name":"Chicken With Riesling","byline":"By Mark Bittman","cookingTime":null,"kicker":null,"image":{"url":"/static/images/pattern/19.png?1","resizeWidth":true}},"type":"SimilarSuggestion"},{"recipe":{"id":1255,"url":"/recipes/1255-coq-au-vin","name":"Coq au Vin","byline":"By Marian Burros","cookingTime":"1 hour","kicker":null,"image":{"url":"/static/images/pattern/6.png?1","resizeWidth":true}},"type":"SimilarSuggestion"},{"recipe":{"id":2604,"url":"/recipes/2604-coq-au-vin-with-shiitake-mushrooms","name":"Coq au Vin With Shiitake Mushrooms","byline":"By Florence Fabricant","cookingTime":"About 2 hours","kicker":null,"image":{"url":"/static/images/pattern/5.png?1","resizeWidth":true}},"type":"SimilarSuggestion"},{"recipe":{"id":3659,"url":"/recipes/3659-au-gratin","name":"Au Gratin","byline":"By Jacques Pepin","cookingTime":null,"kicker":null,"image":{"url":"/static/images/pattern/10.png?1","resizeWidth":true}},"type":"SimilarSuggestion"},{"recipe":{"id":7095,"url":"/recipes/7095-italian-roast-potatoes","name":"Italian Roast Potatoes","byline":"By Nigella Lawson","cookingTime":"1 1/4 hours","kicker":null,"image":{"url":"https://static01.nyt.com/images/2015/11/16/dining/16COOKING-ROASTEDPOTATOES1/16COOKING-ROASTEDPOTATOES1-mediumThreeByTwo252.jpg","resizeWidth":false}},"type":"SameMealTypeSuggestion"},{"recipe":{"id":9097,"url":"/recipes/9097-salmon-with-bacon-and-gherkin-dice","name":"Salmon With Bacon And Gherkin Dice","byline":"By Nigella Lawson","cookingTime":null,"kicker":null,"image":{"url":"/static/images/pattern/48.png?1","resizeWidth":true}},"type":"SameMealTypeSuggestion"},{"recipe":{"id":11502,"url":"/recipes/11502-snapper-with-seville-orange-juice-pine-nuts-and-olives","name":"Snapper With Seville Orange Juice, Pine Nuts And Olives","byline":"By Nigella Lawson","cookingTime":null,"kicker":null,"image":{"url":"https://static01.nyt.com/images/2015/02/25/dining/snapperseville/snapperseville-videoSixteenByNine310.jpg","resizeWidth":false}},"type":"SameMealTypeSuggestion"},{"recipe":{"id":9640,"url":"/recipes/9640-summer-meatballs","name":"Summer Meatballs","byline":"By Nigella Lawson","cookingTime":"1 hour 15 minutes","kicker":null,"image":{"url":"https://static01.nyt.com/images/2014/03/21/dining/meatballs-still/meatballs-still-videoSixteenByNine310.jpg","resizeWidth":false}},"type":"SameMealTypeSuggestion"},{"recipe":{"id":11649,"url":"/recipes/11649-sweet-potato-and-chickpea-curry","name":"Sweet Potato and Chickpea Curry","byline":"By Nigella Lawson","cookingTime":"50 minutes","kicker":null,"image":{"url":"https://static01.nyt.com/images/2014/03/19/science/sweetpotatocurry/sweetpotatocurry-videoSixteenByNine310.jpg","resizeWidth":false}},"type":"SameMealTypeSuggestion"},{"recipe":{"id":11952,"url":"/recipes/11952-spaghetti-with-clams","name":"Spaghetti With Clams","byline":"By Nigella Lawson","cookingTime":"15 minutes","kicker":null,"image":{"url":"https://static01.nyt.com/images/2015/12/09/dining/09COOKING-CLAMSPAGHETTI2/09COOKING-CLAMSPAGHETTI2-mediumThreeByTwo252-v2.jpg","resizeWidth":false}},"type":"SameMealTypeSuggestion"}];
-    bootstrap.forceRegiWall = false
   </script>
 
 
-      <link rel="stylesheet" media="all" href="//int.nyt.com/applications/cooking/5134de8/assets/css/core.min.css" />
+      <link rel="stylesheet" media="all" href="https://static01.nyt.com/applications/cooking/b07b499/assets/core.min.css" />
+
+      <link rel="stylesheet" media="all" href="https://static01.nyt.com/applications/cooking/b07b499/assets/recipe.min.css" />
+
 
     <meta name="apple-mobile-web-app-title" content="NYT Cooking">
 <meta name="application-name" content="NYT Cooking">
 
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://static01.nyt.com/applications/cooking/b07b499/assets/apple-touch-icon-152x152-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://static01.nyt.com/applications/cooking/b07b499/assets/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://static01.nyt.com/applications/cooking/b07b499/assets/apple-touch-icon-120x120-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://static01.nyt.com/applications/cooking/b07b499/assets/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://static01.nyt.com/applications/cooking/b07b499/assets/apple-touch-icon-76x76-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://static01.nyt.com/applications/cooking/b07b499/assets/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/applications/cooking/b07b499/assets/apple-touch-icon-precomposed.png">
 
 
   </head>
 
   <body class="recipe-page logged-out    ">
-
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WV45RD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WV45RD');</script>
+      <script type="application/json" id="js-react-on-rails-context">{"railsEnv":"production","inMailer":false,"i18nLocale":"en","i18nDefaultLocale":"en","rorVersion":"11.3.0","rorPro":false,"href":"https://cooking.nytimes.com/recipes/1017945-coq-au-riesling","location":"/recipes/1017945-coq-au-riesling","scheme":"https","host":"cooking.nytimes.com","port":null,"pathname":"/recipes/1017945-coq-au-riesling","search":null,"httpAcceptLanguage":null,"serverSide":false}</script>
+<div id="siteNavMount"><div><div class="nytc---sitenav---siteNav"><div class="nytc---sitenav---siteNavWrap"><div class="nytc---maintenancemodebanner---maintenance-mode-banner"><span>Sorry! We&#x27;re currently performing maintenance on the site. Certain actions are not working at this time. Check back later.</span></div><div class="nytc---hamburgerbtn---hamburgerWrapper"><a class="nytc---hamburgerbtn---hamburger"><span aria-label="Menu" name="Menu"></span></a></div><a href="/?action=click&amp;module=nav&amp;region=logo&amp;pgType=recipe-page" class="nytc---sitelogo---logoWrapper" aria-label="Cooking with The New York Times"><div class="nytc---sitelogo---logo"></div></a><a class="nytc---mobileSearchIcon---iconWrapper nytc---mobileSearchIcon---position"><span class="nytc---mobileSearchIcon---icon"></span></a><div class="nytc---mask---hidden nytc---mask---showNavBlackBG"></div></div></div><div class="nytc---sitesearch---siteSearch nytc---sitesearch---isNotLoggedIn nytc---sitesearch---isNotSubscribed"><div class="nytc---sitesearchbar---inputWrap"><form class="nytc---sitesearchbar---searchForm" action="/"><span class="nytc---sitesearchbar---clearQuery">X</span><input type="search" aria-label="Search NYT Cooking" class="nytc---sitesearchbar---searchInput" placeholder="What would you like to cook?" value=""/><span class="nytc---sitesearchbar---searchBTN">Search</span></form></div></div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="SiteNavWrapped" data-trace="true" data-dom-id="siteNavMount">{"user":null,"modalState":{"isOpen":false},"popover":{"dragToFolderPopover":{"isDisplayed":false},"savePopover":{"isDisplayed":false,"saveType":""},"signUpPopover":{"isShown":false},"subscribePopover":{"isDisplayed":false},"organizeMenu":[]},"app":{"consumerMarketingURL":"https://www.nytimes.com/subscriptions/Multiproduct/lp8R3WU.html?return_url=https://cooking.nytimes.com","env":"production","saveRecapURL":"https://ckg-user-recommendations-dot-nyt-ckg-prd.appspot.com/recommendations/users","staticAssetPath":"https://static01.nyt.com/applications/cooking/b07b499/assets"},"page":{"type":"recipe-page","id":1017945,"viewableType":"recipe","uri":"nyt://recipe/f63e49f3-a88f-5ec2-af34-74b57e6b002a"},"editorsCollections":{},"promos":{"homepage":null,"recipeDetails":null,"isFetchingPromos":false},"recirculationBand":{"suggestionsData":null,"isTablet":false,"promo":null},"searchBarIsOpen":false,"sidebarIsOpen":false,"siteSearch":{"query":"","isFocused":false,"autocomplete":{"tags":null,"recipes":null,"guides":null}},"topNav":{"label":"Weeknight","path":"/topics/easy-weeknight"}}</script>
+      
 
 
-    <div id="app-container"></div>
-
-
-
-    
-  
-<script>
-  try {
-    bootstrap = window.bootstrap || {};
-    bootstrap.initialState = {
-      user: {
-        id: null,
-        isAdmin: false,
-
-        email: null,
-        displayName: null,
-        name: null,
-        userActions: {
-          firstSave: null,
-          secondSave: null,
-        },
-        collections: {
-          isCreating: false,
-          isFetching: false,
-          isUpdating: false,
-          metaCollections: null,
-          smartCollections: null,
-          userCollections: null,
-          cookingGuides: null,
-        },
-
-        features: {"promos_enabled":true,"optimizely_snippet":true,"maintenance_mode":false,"disable_search":false,"chunk_search_populate_job":false,"publish_versioned_event_page_versions":false,"elasticsearch_live_updates_enabled":true,"sponsored_by_ads":false,"menu_planner_ad":false,"new_recipebox":false,"paywall":true,"paywall_frontend":false,"paywall_debug":false,"regi_wall":false,"hide_third_party_images":true,"regi_wall_search_test":true,"all_guides_are_free":true,"pg_wtp_test":false,"async_fonts":true,"subscription_info_service":false,"ios_blacklist_filter":false,"enable_paginate_event_pages_job":false},
-      }
-    };
-    bootstrap.notes_count = [];
-    bootstrap.recipe_ratings = null;
-    bootstrap.evernote_account = {};
-    bootstrap.user = {
-      "uid":                null,
-      "email":              null,
-      "name":               "",
-      "photo":              "",
-      "subscribed":         false,
-      "onboarding_status":  "not_started",
-      "smart_folders":      null,
-      "default_collection": null,
-      "collections":        null,
-      "features":           {"promos_enabled":true,"optimizely_snippet":true,"maintenance_mode":false,"disable_search":false,"chunk_search_populate_job":false,"publish_versioned_event_page_versions":false,"elasticsearch_live_updates_enabled":true,"sponsored_by_ads":false,"menu_planner_ad":false,"new_recipebox":false,"paywall":true,"paywall_frontend":false,"paywall_debug":false,"regi_wall":false,"hide_third_party_images":true,"regi_wall_search_test":true,"all_guides_are_free":true,"pg_wtp_test":false,"async_fonts":true,"subscription_info_service":false,"ios_blacklist_filter":false,"enable_paginate_event_pages_job":false},
-      "care_email":         "cookingcare@nytimes.com",
-      "activity_collections": [{"name":"cooked","full_name":"Recipes You’ve Cooked","recipes":[]},{"name":"highly-rated","full_name":"Recipes You’ve Rated Highly","recipes":[]}],
-      "evernote_collection": {"id":null,"owner_uid":null,"name":"evernote","cloned_from_id":null,"description":"","is_default":false,"rank":null,"updated_at":null,"sync_counter":null,"plan_id":0,"collectables":[]}
-    };
-
-  } catch(e) {}
-</script>
-
-
-
-    <div id="sidebar">
-      <div class="sidebar-inner"></div>
-    </div>
+    <div id="appContainer"></div>
+    <div id="alertBannerMount"></div>
 
 
 
@@ -154,24 +138,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-  <div id="recirculationBand">
-    <div id="js-react-on-rails-context" style="display:none" data-rails-context="{&quot;inMailer&quot;:false,&quot;i18nLocale&quot;:&quot;en&quot;,&quot;i18nDefaultLocale&quot;:&quot;en&quot;,&quot;href&quot;:&quot;http://cooking.nytimes.com/recipes/1017945-coq-au-riesling&quot;,&quot;location&quot;:&quot;/recipes/1017945-coq-au-riesling&quot;,&quot;scheme&quot;:&quot;http&quot;,&quot;host&quot;:&quot;cooking.nytimes.com&quot;,&quot;port&quot;:null,&quot;pathname&quot;:&quot;/recipes/1017945-coq-au-riesling&quot;,&quot;search&quot;:null,&quot;httpAcceptLanguage&quot;:null,&quot;serverSide&quot;:false}"></div>
-<div class="js-react-on-rails-component" style="display:none" data-component-name="RecirculationBand" data-props="{&quot;suggestionsData&quot;:[{&quot;recipe&quot;:{&quot;id&quot;:12375,&quot;url&quot;:&quot;/recipes/12375-coq-au-vin-blanc&quot;,&quot;name&quot;:&quot;Coq au Vin Blanc&quot;,&quot;byline&quot;:&quot;By Florence Fabricant&quot;,&quot;cookingTime&quot;:&quot;1 hour 20 minutes&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;https://static01.nyt.com/images/2012/03/14/dining/14pair-span/14pair-span-videoSixteenByNine310.jpg&quot;,&quot;resizeWidth&quot;:false}},&quot;type&quot;:&quot;SimilarSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:1016390,&quot;url&quot;:&quot;/recipes/1016390-afton-club-punch&quot;,&quot;name&quot;:&quot;Afton Club Punch&quot;,&quot;byline&quot;:&quot;By Maria Newman&quot;,&quot;cookingTime&quot;:&quot;&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;https://static01.nyt.com/images/2014/05/21/dining/21PUNCH1/21PUNCH1-videoSixteenByNine310.jpg&quot;,&quot;resizeWidth&quot;:false}},&quot;type&quot;:&quot;SimilarSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:1218,&quot;url&quot;:&quot;/recipes/1218-chicken-with-riesling&quot;,&quot;name&quot;:&quot;Chicken With Riesling&quot;,&quot;byline&quot;:&quot;By Mark Bittman&quot;,&quot;cookingTime&quot;:null,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;/static/images/pattern/19.png?1&quot;,&quot;resizeWidth&quot;:true}},&quot;type&quot;:&quot;SimilarSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:1255,&quot;url&quot;:&quot;/recipes/1255-coq-au-vin&quot;,&quot;name&quot;:&quot;Coq au Vin&quot;,&quot;byline&quot;:&quot;By Marian Burros&quot;,&quot;cookingTime&quot;:&quot;1 hour&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;/static/images/pattern/6.png?1&quot;,&quot;resizeWidth&quot;:true}},&quot;type&quot;:&quot;SimilarSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:2604,&quot;url&quot;:&quot;/recipes/2604-coq-au-vin-with-shiitake-mushrooms&quot;,&quot;name&quot;:&quot;Coq au Vin With Shiitake Mushrooms&quot;,&quot;byline&quot;:&quot;By Florence Fabricant&quot;,&quot;cookingTime&quot;:&quot;About 2 hours&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;/static/images/pattern/5.png?1&quot;,&quot;resizeWidth&quot;:true}},&quot;type&quot;:&quot;SimilarSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:3659,&quot;url&quot;:&quot;/recipes/3659-au-gratin&quot;,&quot;name&quot;:&quot;Au Gratin&quot;,&quot;byline&quot;:&quot;By Jacques Pepin&quot;,&quot;cookingTime&quot;:null,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;/static/images/pattern/10.png?1&quot;,&quot;resizeWidth&quot;:true}},&quot;type&quot;:&quot;SimilarSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:7095,&quot;url&quot;:&quot;/recipes/7095-italian-roast-potatoes&quot;,&quot;name&quot;:&quot;Italian Roast Potatoes&quot;,&quot;byline&quot;:&quot;By Nigella Lawson&quot;,&quot;cookingTime&quot;:&quot;1 1/4 hours&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;https://static01.nyt.com/images/2015/11/16/dining/16COOKING-ROASTEDPOTATOES1/16COOKING-ROASTEDPOTATOES1-mediumThreeByTwo252.jpg&quot;,&quot;resizeWidth&quot;:false}},&quot;type&quot;:&quot;SameMealTypeSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:9097,&quot;url&quot;:&quot;/recipes/9097-salmon-with-bacon-and-gherkin-dice&quot;,&quot;name&quot;:&quot;Salmon With Bacon And Gherkin Dice&quot;,&quot;byline&quot;:&quot;By Nigella Lawson&quot;,&quot;cookingTime&quot;:null,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;/static/images/pattern/48.png?1&quot;,&quot;resizeWidth&quot;:true}},&quot;type&quot;:&quot;SameMealTypeSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:11502,&quot;url&quot;:&quot;/recipes/11502-snapper-with-seville-orange-juice-pine-nuts-and-olives&quot;,&quot;name&quot;:&quot;Snapper With Seville Orange Juice, Pine Nuts And Olives&quot;,&quot;byline&quot;:&quot;By Nigella Lawson&quot;,&quot;cookingTime&quot;:null,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;https://static01.nyt.com/images/2015/02/25/dining/snapperseville/snapperseville-videoSixteenByNine310.jpg&quot;,&quot;resizeWidth&quot;:false}},&quot;type&quot;:&quot;SameMealTypeSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:9640,&quot;url&quot;:&quot;/recipes/9640-summer-meatballs&quot;,&quot;name&quot;:&quot;Summer Meatballs&quot;,&quot;byline&quot;:&quot;By Nigella Lawson&quot;,&quot;cookingTime&quot;:&quot;1 hour 15 minutes&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;https://static01.nyt.com/images/2014/03/21/dining/meatballs-still/meatballs-still-videoSixteenByNine310.jpg&quot;,&quot;resizeWidth&quot;:false}},&quot;type&quot;:&quot;SameMealTypeSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:11649,&quot;url&quot;:&quot;/recipes/11649-sweet-potato-and-chickpea-curry&quot;,&quot;name&quot;:&quot;Sweet Potato and Chickpea Curry&quot;,&quot;byline&quot;:&quot;By Nigella Lawson&quot;,&quot;cookingTime&quot;:&quot;50 minutes&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;https://static01.nyt.com/images/2014/03/19/science/sweetpotatocurry/sweetpotatocurry-videoSixteenByNine310.jpg&quot;,&quot;resizeWidth&quot;:false}},&quot;type&quot;:&quot;SameMealTypeSuggestion&quot;},{&quot;recipe&quot;:{&quot;id&quot;:11952,&quot;url&quot;:&quot;/recipes/11952-spaghetti-with-clams&quot;,&quot;name&quot;:&quot;Spaghetti With Clams&quot;,&quot;byline&quot;:&quot;By Nigella Lawson&quot;,&quot;cookingTime&quot;:&quot;15 minutes&quot;,&quot;kicker&quot;:null,&quot;image&quot;:{&quot;url&quot;:&quot;https://static01.nyt.com/images/2015/12/09/dining/09COOKING-CLAMSPAGHETTI2/09COOKING-CLAMSPAGHETTI2-mediumThreeByTwo252-v2.jpg&quot;,&quot;resizeWidth&quot;:false}},&quot;type&quot;:&quot;SameMealTypeSuggestion&quot;}],&quot;isTablet&quot;:false,&quot;promoOptions&quot;:[]}" data-trace="false" data-dom-id="RecirculationBand-react-component-e28b172a-7a5c-4bdb-92c0-0456b3a76400"></div>
-    <div id="RecirculationBand-react-component-e28b172a-7a5c-4bdb-92c0-0456b3a76400"><section class="nytc---recirculationcard---noSlider" data-reactroot="" data-reactid="1" data-react-checksum="550923059"><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="2"><article class="nytc---recirculationcard---recirculationCard" data-reactid="3"><a class="nytc---recirculationcard---cardLink" href="/recipes/12375-coq-au-vin-blanc?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=1" data-reactid="4"><div class="nytc---recirculationcard---imgWrapper" data-reactid="5"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="https://static01.nyt.com/images/2012/03/14/dining/14pair-span/14pair-span-videoSixteenByNine310.jpg" data-reactid="6"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="7"><p class="nytc---recirculationcard---cardKicker" data-reactid="8"></p><p class="nytc---recirculationcard---cardName" data-reactid="9">Coq au Vin Blanc</p><p class="nytc---recirculationcard---byline" data-reactid="10">By Florence Fabricant</p><p class="nytc---recirculationcard---cookingTime" data-reactid="11">1 hour 20 minutes</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="12"><article class="nytc---recirculationcard---recirculationCard" data-reactid="13"><a class="nytc---recirculationcard---cardLink" href="/recipes/1016390-afton-club-punch?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=2" data-reactid="14"><div class="nytc---recirculationcard---imgWrapper" data-reactid="15"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="https://static01.nyt.com/images/2014/05/21/dining/21PUNCH1/21PUNCH1-videoSixteenByNine310.jpg" data-reactid="16"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="17"><p class="nytc---recirculationcard---cardKicker" data-reactid="18"></p><p class="nytc---recirculationcard---cardName" data-reactid="19">Afton Club Punch</p><p class="nytc---recirculationcard---byline" data-reactid="20">By Maria Newman</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="21"><article class="nytc---recirculationcard---recirculationCard" data-reactid="22"><a class="nytc---recirculationcard---cardLink" href="/recipes/1218-chicken-with-riesling?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=3" data-reactid="23"><div class="nytc---recirculationcard---imgWrapper" data-reactid="24"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="/static/images/pattern/19.png?1" data-reactid="25"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="26"><p class="nytc---recirculationcard---cardKicker" data-reactid="27"></p><p class="nytc---recirculationcard---cardName" data-reactid="28">Chicken With Riesling</p><p class="nytc---recirculationcard---byline" data-reactid="29">By Mark Bittman</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="30"><article class="nytc---recirculationcard---recirculationCard" data-reactid="31"><a class="nytc---recirculationcard---cardLink" href="/recipes/1255-coq-au-vin?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=4" data-reactid="32"><div class="nytc---recirculationcard---imgWrapper" data-reactid="33"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="/static/images/pattern/6.png?1" data-reactid="34"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="35"><p class="nytc---recirculationcard---cardKicker" data-reactid="36"></p><p class="nytc---recirculationcard---cardName" data-reactid="37">Coq au Vin</p><p class="nytc---recirculationcard---byline" data-reactid="38">By Marian Burros</p><p class="nytc---recirculationcard---cookingTime" data-reactid="39">1 hour</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="40"><article class="nytc---recirculationcard---recirculationCard" data-reactid="41"><a class="nytc---recirculationcard---cardLink" href="/recipes/2604-coq-au-vin-with-shiitake-mushrooms?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=5" data-reactid="42"><div class="nytc---recirculationcard---imgWrapper" data-reactid="43"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="/static/images/pattern/5.png?1" data-reactid="44"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="45"><p class="nytc---recirculationcard---cardKicker" data-reactid="46"></p><p class="nytc---recirculationcard---cardName" data-reactid="47">Coq au Vin With Shiitake Mushrooms</p><p class="nytc---recirculationcard---byline" data-reactid="48">By Florence Fabricant</p><p class="nytc---recirculationcard---cookingTime" data-reactid="49">About 2 hours</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="50"><article class="nytc---recirculationcard---recirculationCard" data-reactid="51"><a class="nytc---recirculationcard---cardLink" href="/recipes/3659-au-gratin?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=6" data-reactid="52"><div class="nytc---recirculationcard---imgWrapper" data-reactid="53"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="/static/images/pattern/10.png?1" data-reactid="54"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="55"><p class="nytc---recirculationcard---cardKicker" data-reactid="56"></p><p class="nytc---recirculationcard---cardName" data-reactid="57">Au Gratin</p><p class="nytc---recirculationcard---byline" data-reactid="58">By Jacques Pepin</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="59"><article class="nytc---recirculationcard---recirculationCard" data-reactid="60"><a class="nytc---recirculationcard---cardLink" href="/recipes/7095-italian-roast-potatoes?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=7" data-reactid="61"><div class="nytc---recirculationcard---imgWrapper" data-reactid="62"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="https://static01.nyt.com/images/2015/11/16/dining/16COOKING-ROASTEDPOTATOES1/16COOKING-ROASTEDPOTATOES1-mediumThreeByTwo252.jpg" data-reactid="63"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="64"><p class="nytc---recirculationcard---cardKicker" data-reactid="65"></p><p class="nytc---recirculationcard---cardName" data-reactid="66">Italian Roast Potatoes</p><p class="nytc---recirculationcard---byline" data-reactid="67">By Nigella Lawson</p><p class="nytc---recirculationcard---cookingTime" data-reactid="68">1 1/4 hours</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="69"><article class="nytc---recirculationcard---recirculationCard" data-reactid="70"><a class="nytc---recirculationcard---cardLink" href="/recipes/9097-salmon-with-bacon-and-gherkin-dice?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=8" data-reactid="71"><div class="nytc---recirculationcard---imgWrapper" data-reactid="72"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="/static/images/pattern/48.png?1" data-reactid="73"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="74"><p class="nytc---recirculationcard---cardKicker" data-reactid="75"></p><p class="nytc---recirculationcard---cardName" data-reactid="76">Salmon With Bacon And Gherkin Dice</p><p class="nytc---recirculationcard---byline" data-reactid="77">By Nigella Lawson</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="78"><article class="nytc---recirculationcard---recirculationCard" data-reactid="79"><a class="nytc---recirculationcard---cardLink" href="/recipes/11502-snapper-with-seville-orange-juice-pine-nuts-and-olives?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=9" data-reactid="80"><div class="nytc---recirculationcard---imgWrapper" data-reactid="81"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="https://static01.nyt.com/images/2015/02/25/dining/snapperseville/snapperseville-videoSixteenByNine310.jpg" data-reactid="82"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="83"><p class="nytc---recirculationcard---cardKicker" data-reactid="84"></p><p class="nytc---recirculationcard---cardName" data-reactid="85">Snapper With Seville Orange Juice, Pine Nuts And Olives</p><p class="nytc---recirculationcard---byline" data-reactid="86">By Nigella Lawson</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="87"><article class="nytc---recirculationcard---recirculationCard" data-reactid="88"><a class="nytc---recirculationcard---cardLink" href="/recipes/9640-summer-meatballs?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=10" data-reactid="89"><div class="nytc---recirculationcard---imgWrapper" data-reactid="90"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="https://static01.nyt.com/images/2014/03/21/dining/meatballs-still/meatballs-still-videoSixteenByNine310.jpg" data-reactid="91"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="92"><p class="nytc---recirculationcard---cardKicker" data-reactid="93"></p><p class="nytc---recirculationcard---cardName" data-reactid="94">Summer Meatballs</p><p class="nytc---recirculationcard---byline" data-reactid="95">By Nigella Lawson</p><p class="nytc---recirculationcard---cookingTime" data-reactid="96">1 hour 15 minutes</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="97"><article class="nytc---recirculationcard---recirculationCard" data-reactid="98"><a class="nytc---recirculationcard---cardLink" href="/recipes/11649-sweet-potato-and-chickpea-curry?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=11" data-reactid="99"><div class="nytc---recirculationcard---imgWrapper" data-reactid="100"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="https://static01.nyt.com/images/2014/03/19/science/sweetpotatocurry/sweetpotatocurry-videoSixteenByNine310.jpg" data-reactid="101"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="102"><p class="nytc---recirculationcard---cardKicker" data-reactid="103"></p><p class="nytc---recirculationcard---cardName" data-reactid="104">Sweet Potato and Chickpea Curry</p><p class="nytc---recirculationcard---byline" data-reactid="105">By Nigella Lawson</p><p class="nytc---recirculationcard---cookingTime" data-reactid="106">50 minutes</p></div></a></article></div><div class="nytc---recirculationcard---recirculationCardWrapper" data-reactid="107"><article class="nytc---recirculationcard---recirculationCard" data-reactid="108"><a class="nytc---recirculationcard---cardLink" href="/recipes/11952-spaghetti-with-clams?action=click&amp;module=RecirculationRibbon&amp;pgType=recipedetails&amp;rank=12" data-reactid="109"><div class="nytc---recirculationcard---imgWrapper" data-reactid="110"><img class="nytc---recirculationcard---fixedHeight" alt="recipe" src="https://static01.nyt.com/images/2015/12/09/dining/09COOKING-CLAMSPAGHETTI2/09COOKING-CLAMSPAGHETTI2-mediumThreeByTwo252-v2.jpg" data-reactid="111"/></div><div class="nytc---recirculationcard---recirculationInfo" data-reactid="112"><p class="nytc---recirculationcard---cardKicker" data-reactid="113"></p><p class="nytc---recirculationcard---cardName" data-reactid="114">Spaghetti With Clams</p><p class="nytc---recirculationcard---byline" data-reactid="115">By Nigella Lawson</p><p class="nytc---recirculationcard---cookingTime" data-reactid="116">15 minutes</p></div></a></article></div></section></div>
-    
 
-  </div>
-<div id="recipeDetailsPromoSlot"></div>
+
+
+
+
+    <div id="recirculationBandMount"></div>
+
 <div id="content">
-        <div class="recipe "
-         itemscope itemtype="http://schema.org/Recipe">
+      <div class="recipe" itemscope itemtype="http://schema.org/Recipe">
       <div class="grid-wrap">
-
 
   <article class="card static noclickarea recipe-detail-card
       recipe-has-topnote
       recipe-has-media
-      recipe-has-horizontal-media
       
       recipe-has-horizontal-media
       
@@ -179,9 +159,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       data-type="recipe"
       data-id="1017945"
       data-url="/recipes/1017945-coq-au-riesling"
-      data-seo-image-url="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-superJumbo.jpg"
+      data-seo-image-url="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-mediumThreeByTwo440.jpg"
       data-analytics-category="Recipe Detail Full">
-
 
     <header>
 
@@ -190,74 +169,68 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             data-share-title="Coq+au+Riesling+by+Nigella+Lawson"
             itemprop="name"
             data-url="/recipes/1017945-coq-au-riesling">
-          Coq au Riesling
+              Coq au Riesling
         </h1>
       </div>
 
-
       <div class="recipe-subhead">
-
-          <h3 class="byline ">
-
+          <h3 class="byline">
           <a class="author personality" data-author="Nigella Lawson"
-                 href="/search?q=Nigella+Lawson">
-            <span class="byline-name" itemprop="author">Nigella Lawson</span>
+             href="/search?q=Nigella+Lawson">
+             <span class="byline-name" itemprop="author">Nigella Lawson</span>
           </a>
         </h3>
           <ul class="recipe-time-yield">
               <li>
-                <span class="recipe-yield-time-label recipe-yield">Yield</span><span itemprop="recipeYield">4 to 6 servings</span>
+                <span class="recipe-yield-time-label recipe-yield">Yield</span>
+                <span class="recipe-yield-value" itemprop="recipeYield">4 to 6 servings</span>
+              </li>
+              <li>
+                <meta content="PT1H30M" itemprop="cookTime">
+                <span class="recipe-yield-time-label recipe-time">Time</span>
+                <span class="recipe-yield-value">1 1/2 hours plus overnight refrigeration (optional)</span>
               </li>
           </ul> <!-- /.recipe-time-yield -->
       </div> <!-- /.recipe-subhead -->
 
-      <div class="controls detail-controls recipe-detail-controls primary">
-  <div class="save-group">
-   <div data-regi-placement="bottom" class="save-group-front">
-     <span class="icon icon-save-white"></span>
-     Save To Recipe Box
-   </div>
-   <div class="save-organize-container">
-     <div class="save btn" data-regi-placement="bottom">
-       <span class="icon icon-save-white"></span>
-       <span class="icon icon-save-white"></span>
-       <span class="recipe-save">Save</span>
-       <span class="recipe-saved">Saved</span>
-     </div>
-     <div class="organize btn tooltip" data-regi-placement="bottom"><span class="icon icon-organize-white">Add to a collection</span>
-       <div class="add-to-collections tooltip-content"></div>
-     </div>
-   </div>
-
-   </div>
+      <div
+  class="controls detail-controls recipe-detail-controls primary"
+  data-analytics-context="top right"
+  data-analytics-name="recipe page"
+>
+    <div id="primarySaveOrganizeMount" class="save-group"></div>
    <a class="print share-btn icon icon-bubble-print"
       href="javascript:window.print()"
       data-platform="Print">Print this recipe</a>
 
     <div class="share-group share-bubbles recipe-details-share primary">
-  <a class="btn share-btn icon facebook icon-bubble-fb"
-      href="http://www.facebook.com/sharer/sharer.php?u=http://cooking.nytimes.com/recipes/1017945-coq-au-riesling"
+  <a class="btn share-btn icon email icon-bubble-email"
+      href="mailto:?subject=NYT%20Cooking:%20Coq%20au%20Riesling&amp;body=NYT%20Cooking:%20Coq%20au%20Riesling%0A%0Ahttps://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Futm_source%3Dsharetools%26utm_medium%3Demail%26utm_campaign%3Dwebsite"
       target="_blank"
       data-role="share-button"
-      data-platform="Facebook">Share on Facebook</a><!--
+      data-platform="Email"
+      rel="noreferrer noopener">Email</a><!--
 
-  --><a class="btn share-btn icon pinterest icon-bubble-pinterest"
-      href="http://www.pinterest.com/pin/create/button/?url=http://cooking.nytimes.com/recipes/1017945-coq-au-riesling&amp;description=NYT%20Cooking:%20The%20chicken%20stew%20here%20does%20have%20an%20authentic%20origin,%20but%20I%20have%20lightened%20it%20a%20little%20by%20dispensing%20with%20the%20cream%20that%20would%20be%20added%20luxuriously%20in%20its%20country%20of%20origin.%20And%20you%20can%20cheerfully%20use%20a%20dry%20or%20semi-dry%20from%20anywhere%20in%20the%20world.%20I%20have%20nothing%20against%20the%20regular%20coq%20au%20vin,%20but%20I%20might%20actually%20prefer%20this%20sprightlier%20version.%20It&#39;s%20certainly%20easier%...&amp;media=https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-verticalTwoByThree735.jpg"
+      --><a class="btn share-btn icon pinterest icon-bubble-pinterest"
+      href="http://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fcooking.nytimes.com%2Frecipes%2F1017945-coq-au-riesling%3Fsmid=pin-share&amp;description=NYT%20Cooking:%20The%20chicken%20stew%20here%20does%20have%20an%20authentic%20origin,%20but%20I%20have%20lightened%20it%20a%20little%20by%20dispensing%20with%20the%20cream%20that%20would%20be%20added%20luxuriously%20in%20its%20country%20of%20origin.%20And%20you%20can%20cheerfully%20use%20a%20dry%20or%20semi-dry%20from%20anywhere%20in%20the%20world.%20I%20have%20nothing%20against%20the%20regular%20coq%20au%20vin,%20but%20I%20might%20actually%20prefer%20this%20sprightlier%20version.%20It&#39;s%20certainly%20easier%20to%20make:%20in%20place%20of%20all%20tho...&amp;media=https%3A%2F%2Fstatic01.nyt.com%2Fimages%2F2016%2F01%2F23%2Fdining%2F23COOKING_COQAURIESLING1%2F23COOKING_COQAURIESLING1-verticalTwoByThree735.jpg"
       target="_blank"
       data-role="share-button"
-      data-platform="Pinterest">Share on Pinterest</a><!--
+      data-platform="Pinterest"
+      rel="noreferrer noopener">Share on Pinterest</a><!--
+
+  --><a class="btn share-btn icon facebook icon-bubble-fb"
+      href="http://www.facebook.com/sharer/sharer.php?u=https://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Fsmid=fb-share"
+      target="_blank"
+      data-role="share-button"
+      data-platform="Facebook"
+      rel="noreferrer noopener">Share on Facebook</a><!--
 
   --><a class="btn share-btn icon twitter icon-bubble-twitter"
-      href="http://twitter.com/intent/tweet?text=Coq%20au%20Riesling&amp;url=http://cooking.nytimes.com/recipes/1017945-coq-au-riesling&amp;hashtags=NYTCooking"
+      href="http://twitter.com/intent/tweet?text=Coq%20au%20Riesling&amp;url=https://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Fsmid=tw-share&amp;hashtags=NYTCooking"
       target="_blank"
       data-role="share-button"
-      data-platform="Twitter">Share on Twitter</a><!--
-
-  --><a class="btn share-btn icon email icon-bubble-email"
-      href="mailto:?subject=NYT%20Cooking:%20Coq%20au%20Riesling&amp;body=NYT%20Cooking:%20Coq%20au%20Riesling%0A%0Ahttp://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Futm_source%3Dsharetools%26utm_medium%3Demail%26utm_campaign%3Dwebsite"
-      target="_blank"
-      data-role="share-button"
-      data-platform="Email">Email</a>
+      data-platform="Twitter"
+      rel="noreferrer noopener">Share on Twitter</a>
 </div> <!-- /.share-group -->
 
 
@@ -268,22 +241,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="recipe-intro">
 
             <div class="media-container ">
-                <img itemprop="image" src="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-articleLarge.jpg" data-pin-media="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-verticalTwoByThree735.jpg">
+                <img
+                  itemprop="image"
+                  src="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-articleLarge.jpg"
+                  data-pin-media="https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-verticalTwoByThree735.jpg"
+                  alt="Coq au Riesling">
 
                   <p class="image-credit">
                     Craig Lee for The New York Times
                   </p>
-
             </div> <!-- /.media-container -->
 
           <div class="recipe-topnote-metadata">
               <div class="topnote" itemprop="description">
                 <p>The chicken stew here does have an authentic origin, but I have lightened it a little by dispensing with the cream that would be added luxuriously in its country of origin. And you can cheerfully use a dry or semi-dry from anywhere in the world. I have nothing against the regular coq au vin, but I might actually prefer this sprightlier version. It's certainly easier to make: in place of all those whole baby onions, which have to be peeled one by one, you can just chop your onions the usual and considerably less bothersome way. And since I always think that the breast meat of a chicken can be a bit stringy when cooked for a long time, I instead choose thigh portions. So no dismembering of a carcass is required either.</p>
-                  <p class="related-article">
-        <span class="label">Featured in: </span>
-        <a href="http://query.nytimes.com/gst/fullpage.html?res=9F0CE1DF103CF933A25752C1A9629C8B63">At My Table; Simply French: Comfort Food With Style</a>.&nbsp;
-  </p> <!-- /.related-article -->
-
+                
 
 
               </div> <!-- /.topnote -->
@@ -292,181 +264,268 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div> <!-- /.recipe-topnote-metadata -->
         </div> <!-- /.intro -->
 
-          <div class="recipe-metadata">
+        <div class="recipe-metadata">
+            <meta value="french" itemprop="recipeCuisine" />
+
+            <meta value="dinner" itemprop="recipeCategory" />
+
             <div class="tags-nutrition-container">
-                <p class="special-diets tag-block">
-                      <a id="french-tag" href=/tag/french>French</a>
-                </p>
+              <a id="french-tag" class="tag" href="/tag/french">French</a>, <a id="dinner-tag" class="tag" href="/tag/dinner">Dinner</a>, <a id="main-course-tag" class="tag" href="/tag/main%20course">Main Course</a>
+            </div>
 
-            </div> <!-- /.tags-nutrition-container -->
+          <div class="recipe-actions">
+            <div id="recipe-cooked"></div>
+            <div id="recipe-ratings" class="no-touch-header"></div>
+            <div itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating" >
+              <span class="ratings-metadata" >
+                <span itemprop="ratingValue">5</span>
+                <span itemprop="ratingCount">1402</span>
+              </span>
+            </div>
+          </div> <!-- /#recipe-actions -->
+        </div> <!-- /.recipe-metadata -->
 
-            <div class="recipe-actions">
-              <div id="recipe-cooked"></div>
-              <div id="recipe-ratings" class="no-touch-header">
-              </div> <!-- /#recipe-ratings -->
-              <div itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating" >
-                <span class="ratings-metadata" >
-                  <span itemprop="ratingValue">5</span>
-                  <span itemprop="ratingCount">624</span>
-                </span>
-              </div>
-            </div> <!-- /#recipe-actions -->
-          </div> <!-- /.recipe-metadata -->
-
-        <section id="recipeDetails-recipe-details-top-desktop-ad" class="recipe-details-top-desktop ad-container collapsed ">
+        
+<section
+  id="recipeDetails-recipe-details-top-desktop-ad"
+  class="recipe-details-top-desktop
+         ad-container collapsed
+         desktop-ad
+         
+         "
+>
   <div id='div-gpt-ad-804752003747430782-recipe-details-top-desktop' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-recipe-details-top-desktop');
-      });
+        (function() {
+          const breakpoints = ["desktop"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['recipe-details-top-desktop'] = {
+              pos: 'top',
+              size: [[728, 90], [970, 90]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-recipe-details-top-desktop`);
+          });
+        })();
     </script>
   </div>
 </section>
 
-        <section id="recipeDetails-recipe-details-top-tablet-ad" class="recipe-details-top-tablet ad-container collapsed ">
+        
+<section
+  id="recipeDetails-recipe-details-top-tablet-ad"
+  class="recipe-details-top-tablet
+         ad-container collapsed
+         tablet-ad
+         
+         "
+>
   <div id='div-gpt-ad-804752003747430782-recipe-details-top-tablet' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-recipe-details-top-tablet');
-      });
+        (function() {
+          const breakpoints = ["tablet"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['recipe-details-top-tablet'] = {
+              pos: 'top',
+              size: [[728, 90]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-recipe-details-top-tablet`);
+          });
+        })();
     </script>
   </div>
 </section>
 
-        <section id="recipeDetails-top-mobile-ad" class="top-mobile ad-container collapsed ">
+        
+<section
+  id="recipeDetails-top-mobile-ad"
+  class="top-mobile
+         ad-container collapsed
+         mobile-ad mobileLandscape-ad
+         
+         "
+>
   <div id='div-gpt-ad-804752003747430782-top-mobile' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-top-mobile');
-      });
+        (function() {
+          const breakpoints = ["mobile", "mobileLandscape"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['top-mobile'] = {
+              pos: 'top',
+              size: ["fluid", [414, 457], [300, 250]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-top-mobile`);
+          });
+        })();
     </script>
   </div>
 </section>
 
 
         <div class="recipe-instructions">
-          <section class="recipe-ingredients-wrap">
-            <h3>Ingredients</h3>
+            <section class="recipe-ingredients-wrap">
+              <h3>Ingredients</h3>
 
-            <ul class="recipe-ingredients">
-              <li itemprop="recipeIngredient">
-                <span class="quantity">8</span>
-
-
-                <span class="ingredient-name">ounces <span>sliced bacon</span>, sliced crosswise into 1-inch pieces</span>
-              </li>
-              <li itemprop="recipeIngredient">
-                <span class="quantity">3</span>
-
-
-                <span class="ingredient-name">medium <span>onions</span>, peeled and roughly chopped</span>
-              </li>
-              <li itemprop="recipeIngredient">
-                <span class="quantity">10</span>
-
-
-                <span class="ingredient-name"><span>chicken thighs</span>, with skin and bone</span>
-              </li>
-              <li itemprop="recipeIngredient">
-                <span class="quantity">8</span>
-
-
-                <span class="ingredient-name">ounces <span>button mushrooms</span>, halved</span>
-              </li>
-              <li itemprop="recipeIngredient">
-                <span class="quantity">2 or 3</span>
-
-
-                <span class="ingredient-name"><span>garlic cloves</span>, peeled and minced</span>
-              </li>
-              <li itemprop="recipeIngredient">
-                <span class="quantity">&frac14;</span>
-
-
-                <span class="ingredient-name">cup chopped <span>Italian parsley</span></span>
-              </li>
-              <li itemprop="recipeIngredient">
-                <span class="quantity">3</span>
-
-
-                <span class="ingredient-name">tablespoons chopped <span>tarragon</span></span>
-              </li>
-              <li itemprop="recipeIngredient">
-                <span class="quantity">1</span>
-
-
-                <span class="ingredient-name">bottle dry or off-dry <span>riesling wine</span> (750 ml)</span>
-              </li>
-            </ul>
-            <ul class="recipe-ingredients">
-            </ul>
-
-          </section> <!-- /.recipe-ingredients -->
+              <ul class="recipe-ingredients">
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    8
+                  </span>
+                  <span class="ingredient-name">
+                    ounces sliced bacon, sliced crosswise into 1-inch pieces
+                  </span>
+                </li>
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    3
+                  </span>
+                  <span class="ingredient-name">
+                    medium onions, peeled and roughly chopped
+                  </span>
+                </li>
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    10
+                  </span>
+                  <span class="ingredient-name">
+                    chicken thighs, with skin and bone
+                  </span>
+                </li>
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    8
+                  </span>
+                  <span class="ingredient-name">
+                    ounces button mushrooms, halved
+                  </span>
+                </li>
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    2 or 3
+                  </span>
+                  <span class="ingredient-name">
+                    garlic cloves, peeled and minced
+                  </span>
+                </li>
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    &frac14;
+                  </span>
+                  <span class="ingredient-name">
+                    cup chopped Italian parsley
+                  </span>
+                </li>
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    3
+                  </span>
+                  <span class="ingredient-name">
+                    tablespoons chopped tarragon
+                  </span>
+                </li>
+                <li itemprop="recipeIngredient">
+                  <span class="quantity">
+                    1
+                  </span>
+                  <span class="ingredient-name">
+                    bottle dry or off-dry riesling wine (750 ml)
+                  </span>
+                </li>
+              </ul>
+                <div
+                  class="groceryListIndicatorMount"
+                  data-recipe-name="Coq au Riesling"
+                  data-recipe-uri="nyt://recipe/f63e49f3-a88f-5ec2-af34-74b57e6b002a"
+                  id="groceryListIndicatorMount-1017945"
+                ></div>
+              <div id="floating-save-button-top-bound"></div>
+            </section> <!-- /.recipe-ingredients -->
 
           <section class="recipe-steps-wrap">
-            <h3>Preparation</h3>
-                <ol class="recipe-steps" itemprop="recipeInstructions">
-                    <li>Place large flameproof casserole or other heavy-bottomed pan over medium heat. Add bacon, and cook until most of the fat has been rendered. Add onions and sauté until softened, about 10 minutes. Using a slotted spoon, transfer mixture to plate, leaving behind as much liquid fat as possible.</li>
-                    <li>Place pan over medium-high heat. Working in batches (do not overcrowd pan), brown chicken pieces on both sides, transferring them to a plate after they are browned.</li>
-                    <li>Reduce heat to medium-low. Add mushrooms, garlic, 3 tablespoons of parsley and 2 tablespoons of tarragon. Sauté until mushrooms are coated in fat, about 1 minute. Return chicken pieces, onions and bacon to pan. Add wine, and raise heat to bring to a boil. Partially cover, turn heat to low, and simmer for 1 hour.</li>
-                    <li>To serve immediately, sprinkle with remaining parsley and tarragon. For best results, cool, and refrigerate overnight. The next day remove any chilled fat on surface with paper towels. Reheat gently, sprinkle with parsley and tarragon, and serve.</li>
-                </ol>
-            
-
-            <div id="module-recipe-cooked"></div>
+              <h3>Preparation</h3>
+              <ol class="recipe-steps" itemprop="recipeInstructions">
+                <li>Place large flameproof casserole or other heavy-bottomed pan over medium heat. Add bacon, and cook until most of the fat has been rendered. Add onions and sauté until softened, about 10 minutes. Using a slotted spoon, transfer mixture to plate, leaving behind as much liquid fat as possible.</li>
+                <li>Place pan over medium-high heat. Working in batches (do not overcrowd pan), brown chicken pieces on both sides, transferring them to a plate after they are browned.</li>
+                <li>Reduce heat to medium-low. Add mushrooms, garlic, 3 tablespoons of parsley and 2 tablespoons of tarragon. Sauté until mushrooms are coated in fat, about 1 minute. Return chicken pieces, onions and bacon to pan. Add wine, and raise heat to bring to a boil. Partially cover, turn heat to low, and simmer for 1 hour.</li>
+                <li>To serve immediately, sprinkle with remaining parsley and tarragon. For best results, cool, and refrigerate overnight. The next day remove any chilled fat on surface with paper towels. Reheat gently, sprinkle with parsley and tarragon, and serve.</li>
+              </ol>
 
 
-              <div class="recipe-user-notes collapsed-state hidden"></div>
+              <div id="module-recipe-cooked"></div>
+
+              <section class="recipe-newsletter-signup ">
+                <figure class="newsletter-header-image">
+                  <img class="signup-image" src="https://static01.nyt.com/applications/cooking/b07b499/assets/recipe-detail-signup.jpg" alt="Get recipes, tips and special offers in your inbox.">
+                </figure>
+                
+<div class="newsletter-container">
+  <form id="recipe-newsletter-email" class="newsletter-form" method="POST" novalidate>
+      <h3 class="title">Hungry for more recipes?</h3>
+      <span class="description">Get recipes, tips and special offers in your inbox. Opt out or <a class="contact-us-link" href="http://www.nytimes.com/help/index.html">contact us</a> anytime.</span>
+      <input class="newsletter-input genericInputField" type="email" name="email" placeholder="Add Your Email" />
+      <button type="submit" class="red-button button">Sign Up</button>
+      <div class="error-msg">Please enter a valid email address.</div>
+  </form>
+</div>
+
+              </section>
+
+            <div id="userNotesMount"></div>
+            <div id="privateNotesMount" class="hidden ">
+            </div>
+            <div id="floating-save-button-bottom-bound"></div>
 
             <div class="secondary-controls">
               <span class="header">Like this recipe?</span>
-              <div class="controls detail-controls recipe-detail-controls">
-  <div class="save-group">
-   <div data-regi-placement="bottom" class="save-group-front">
-     <span class="icon icon-save-white"></span>
-     Save To Recipe Box
-   </div>
-   <div class="save-organize-container">
-     <div class="save btn" data-regi-placement="bottom">
-       <span class="icon icon-save-white"></span>
-       <span class="icon icon-save-white"></span>
-       <span class="recipe-save">Save</span>
-       <span class="recipe-saved">Saved</span>
-     </div>
-     <div class="organize btn tooltip" data-regi-placement="bottom"><span class="icon icon-organize-white">Add to a collection</span>
-       <div class="add-to-collections tooltip-content"></div>
-     </div>
-   </div>
-
-   </div>
+              <div
+  class="controls detail-controls recipe-detail-controls"
+  data-analytics-context="like this recipe"
+  data-analytics-name="recipe page"
+>
+    <div id="secondarySaveOrganizeMount" class="save-group"></div>
    <a class="print share-btn icon icon-bubble-print"
       href="javascript:window.print()"
       data-platform="Print">Print this recipe</a>
 
     <div class="share-group share-bubbles recipe-details-share">
-  <a class="btn share-btn icon facebook icon-bubble-fb"
-      href="http://www.facebook.com/sharer/sharer.php?u=http://cooking.nytimes.com/recipes/1017945-coq-au-riesling"
+  <a class="btn share-btn icon email icon-bubble-email"
+      href="mailto:?subject=NYT%20Cooking:%20Coq%20au%20Riesling&amp;body=NYT%20Cooking:%20Coq%20au%20Riesling%0A%0Ahttps://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Futm_source%3Dsharetools%26utm_medium%3Demail%26utm_campaign%3Dwebsite"
       target="_blank"
       data-role="share-button"
-      data-platform="Facebook">Share on Facebook</a><!--
+      data-platform="Email"
+      rel="noreferrer noopener">Email</a><!--
 
-  --><a class="btn share-btn icon pinterest icon-bubble-pinterest"
-      href="http://www.pinterest.com/pin/create/button/?url=http://cooking.nytimes.com/recipes/1017945-coq-au-riesling&amp;description=NYT%20Cooking:%20The%20chicken%20stew%20here%20does%20have%20an%20authentic%20origin,%20but%20I%20have%20lightened%20it%20a%20little%20by%20dispensing%20with%20the%20cream%20that%20would%20be%20added%20luxuriously%20in%20its%20country%20of%20origin.%20And%20you%20can%20cheerfully%20use%20a%20dry%20or%20semi-dry%20from%20anywhere%20in%20the%20world.%20I%20have%20nothing%20against%20the%20regular%20coq%20au%20vin,%20but%20I%20might%20actually%20prefer%20this%20sprightlier%20version.%20It&#39;s%20certainly%20easier%...&amp;media=https://static01.nyt.com/images/2016/01/23/dining/23COOKING_COQAURIESLING1/23COOKING_COQAURIESLING1-verticalTwoByThree735.jpg"
+      --><a class="btn share-btn icon pinterest icon-bubble-pinterest"
+      href="http://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fcooking.nytimes.com%2Frecipes%2F1017945-coq-au-riesling%3Fsmid=pin-share&amp;description=NYT%20Cooking:%20The%20chicken%20stew%20here%20does%20have%20an%20authentic%20origin,%20but%20I%20have%20lightened%20it%20a%20little%20by%20dispensing%20with%20the%20cream%20that%20would%20be%20added%20luxuriously%20in%20its%20country%20of%20origin.%20And%20you%20can%20cheerfully%20use%20a%20dry%20or%20semi-dry%20from%20anywhere%20in%20the%20world.%20I%20have%20nothing%20against%20the%20regular%20coq%20au%20vin,%20but%20I%20might%20actually%20prefer%20this%20sprightlier%20version.%20It&#39;s%20certainly%20easier%20to%20make:%20in%20place%20of%20all%20tho...&amp;media=https%3A%2F%2Fstatic01.nyt.com%2Fimages%2F2016%2F01%2F23%2Fdining%2F23COOKING_COQAURIESLING1%2F23COOKING_COQAURIESLING1-verticalTwoByThree735.jpg"
       target="_blank"
       data-role="share-button"
-      data-platform="Pinterest">Share on Pinterest</a><!--
+      data-platform="Pinterest"
+      rel="noreferrer noopener">Share on Pinterest</a><!--
+
+  --><a class="btn share-btn icon facebook icon-bubble-fb"
+      href="http://www.facebook.com/sharer/sharer.php?u=https://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Fsmid=fb-share"
+      target="_blank"
+      data-role="share-button"
+      data-platform="Facebook"
+      rel="noreferrer noopener">Share on Facebook</a><!--
 
   --><a class="btn share-btn icon twitter icon-bubble-twitter"
-      href="http://twitter.com/intent/tweet?text=Coq%20au%20Riesling&amp;url=http://cooking.nytimes.com/recipes/1017945-coq-au-riesling&amp;hashtags=NYTCooking"
+      href="http://twitter.com/intent/tweet?text=Coq%20au%20Riesling&amp;url=https://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Fsmid=tw-share&amp;hashtags=NYTCooking"
       target="_blank"
       data-role="share-button"
-      data-platform="Twitter">Share on Twitter</a><!--
-
-  --><a class="btn share-btn icon email icon-bubble-email"
-      href="mailto:?subject=NYT%20Cooking:%20Coq%20au%20Riesling&amp;body=NYT%20Cooking:%20Coq%20au%20Riesling%0A%0Ahttp://cooking.nytimes.com/recipes/1017945-coq-au-riesling%3Futm_source%3Dsharetools%26utm_medium%3Demail%26utm_campaign%3Dwebsite"
-      target="_blank"
-      data-role="share-button"
-      data-platform="Email">Email</a>
+      data-platform="Twitter"
+      rel="noreferrer noopener">Share on Twitter</a>
 </div> <!-- /.share-group -->
 
 
@@ -481,86 +540,141 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div> <!-- /.recipe -->
 
+  <div class="recipe-more grid-wrap">
 
-    <div class="recipe-more grid-wrap">
-
-      <section id="recipeDetails-bottom-desktop-ad" class="bottom-desktop ad-container collapsed ">
+    
+<section
+  id="recipeDetails-bottom-desktop-ad"
+  class="bottom-desktop
+         ad-container collapsed
+         desktop-ad
+         
+         "
+>
   <div id='div-gpt-ad-804752003747430782-bottom-desktop' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-bottom-desktop');
-      });
+        (function() {
+          const breakpoints = ["desktop"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['bottom-desktop'] = {
+              pos: 'bottom',
+              size: ["fluid", [1605, 300], [728, 90], [970, 90], [970, 250]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-bottom-desktop`);
+          });
+        })();
     </script>
   </div>
 </section>
 
-      <section id="recipeDetails-bottom-tablet-ad" class="bottom-tablet ad-container collapsed ">
+    
+<section
+  id="recipeDetails-bottom-tablet-ad"
+  class="bottom-tablet
+         ad-container collapsed
+         tablet-ad
+         
+         "
+>
   <div id='div-gpt-ad-804752003747430782-bottom-tablet' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-bottom-tablet');
-      });
+        (function() {
+          const breakpoints = ["tablet"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['bottom-tablet'] = {
+              pos: 'bottom',
+              size: ["fluid", [1605, 300], [728, 90]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-bottom-tablet`);
+          });
+        })();
     </script>
   </div>
 </section>
 
-      <section id="recipeDetails-bottom-mobile-ad" class="bottom-mobile ad-container collapsed ">
+    
+<section
+  id="recipeDetails-bottom-mobile-ad"
+  class="bottom-mobile
+         ad-container collapsed
+         mobile-ad mobileLandscape-ad
+         
+         "
+>
   <div id='div-gpt-ad-804752003747430782-bottom-mobile' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-bottom-mobile');
-      });
+        (function() {
+          const breakpoints = ["mobile", "mobileLandscape"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['bottom-mobile'] = {
+              pos: 'bottom',
+              size: ["fluid", [414, 457], [300, 250]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-bottom-mobile`);
+          });
+        })();
     </script>
   </div>
 </section>
 
 
-        <section class="recipe-card-list band track-card-params"
-            data-layout="grid"
-            data-analytics-category="Recirculation Band Recipe Card | More recipes from Nigella Lawson"
-            data-suggestion-type="sameauthor"
-            data-tracker-module="Recirculation Band Recipe Card"
-            data-tracker-region="More recipes from Nigella Lawson"
-            data-page-type="recipedetails">
-          <h4 class="section-header suggestion-name">
-            More recipes from <a href="/search?q=Nigella+Lawson">Nigella Lawson</a>
-          </h4>
-            <article            class="card recipe-card collection-droppable
-           "
+      <section class="recipe-card-list band track-card-params"
+          data-layout="grid"
+          data-analytics-category="Recirculation Band Recipe Card | MORE FROM OUR BEST CHICKEN THIGH RECIPES"
+          data-suggestion-type="samecollection"
+          data-tracker-module="Recirculation Band Recipe Card"
+          data-tracker-region="More from Our Best Chicken Thigh Recipes"
+          data-page-type="recipedetails">
+        <h4 class="section-header suggestion-name">
+          More from <a href="/68861692-nyt-cooking/953799-our-best-chicken-thigh-recipes">Our Best Chicken Thigh Recipes</a>
+        </h4>
+          <article            class="card recipe-card"
            data-type="recipe"
-           data-id="11993"
-           data-url="/recipes/11993-thai-orange-duck"
-           data-seo-image-url="https://static01.nyt.com/images/2015/02/25/dining/orangeduck/orangeduck-superJumbo.jpg"
+           data-id="1017258"
+           data-url="/recipes/1017258-braised-chicken-with-lemon-and-olives"
+           data-seo-image-url="https://static01.nyt.com/images/2015/03/04/dining/04KITCH/04KITCH-superJumbo.jpg"
   >
     <div class="image-wrap">
 
-  <a href="/recipes/11993-thai-orange-duck"
+  <a href="/recipes/1017258-braised-chicken-with-lemon-and-olives"
     class="image-anchor card-link"
     >
     <div class='image'>
-          <img class='fixed-height' data-large='https://static01.nyt.com/images/2015/02/25/dining/orangeduck/orangeduck-videoSixteenByNine310.jpg' data-small='' data-pin-media='https://static01.nyt.com/images/2015/02/25/dining/orangeduck/orangeduck-verticalTwoByThree735-v2.jpg'>
-        </div>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/b07b499/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2015/03/04/dining/04KITCH/04KITCH-videoSixteenByNine310.jpg' data-pin-media='https://static01.nyt.com/images/2015/03/04/dining/04KITCH/04KITCH-verticalTwoByThree735-v2.jpg' alt='Image for Braised Chicken With Lemon and Olives'>
+      </div>
   </a>
 
 
 </div> <!-- /.image-wrap -->
 
 <div class="card-info-wrapper">
-  <a href="/recipes/11993-thai-orange-duck"
+  <a href="/recipes/1017258-braised-chicken-with-lemon-and-olives"
     class="card-recipe-info card-link"
     >
     <div class="card-data-wrapper">
       <h3 class="name"
-          data-name="Thai Orange Duck"
-          data-share-title="Thai+Orange+Duck+by+Nigella+Lawson">
-        Thai Orange Duck
+          data-name="Braised Chicken With Lemon and Olives"
+          data-share-title="Braised+Chicken+With+Lemon+and+Olives+by+David+Tanis">
+        Braised Chicken With Lemon and Olives
       </h3>
 
 
-        <p class="card-byline">By Nigella Lawson</p>
+        <p class="card-byline">By David Tanis</p>
     </div>
 
-      <p class="cooking-time">45 minutes</p>
+      <p class="cooking-time">1 hour 45 minutes</p>
 
   </a>
     <div class="controls card-controls recipe-card-controls">
@@ -575,42 +689,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
   </article>
-  <article            class="card recipe-card collection-droppable
-           "
+  <article            class="card recipe-card"
            data-type="recipe"
-           data-id="9378"
-           data-url="/recipes/9378-roast-chicken-salad"
-           data-seo-image-url="https://static01.nyt.com/images/2014/03/21/dining/chickensalad-still/chickensalad-still-superJumbo.jpg"
+           data-id="1017226"
+           data-url="/recipes/1017226-chicken-cutlets-with-mushroom-dressing"
+           data-seo-image-url="https://static01.nyt.com/images/2015/02/18/dining/18PAIRING/18PAIRING-superJumbo.jpg"
   >
     <div class="image-wrap">
 
-  <a href="/recipes/9378-roast-chicken-salad"
+  <a href="/recipes/1017226-chicken-cutlets-with-mushroom-dressing"
     class="image-anchor card-link"
     >
     <div class='image'>
-          <img class='fixed-height' data-large='https://static01.nyt.com/images/2014/03/21/dining/chickensalad-still/chickensalad-still-videoSixteenByNine310.jpg' data-small='' data-pin-media='https://static01.nyt.com/images/2014/03/21/dining/chickensalad-still/chickensalad-still-verticalTwoByThree735-v2.jpg'>
-        </div>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/6e8b4b9/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2015/02/18/dining/18PAIRING/18PAIRING-videoSixteenByNine310.jpg' data-pin-media='https://static01.nyt.com/images/2015/02/18/dining/18PAIRING/18PAIRING-verticalTwoByThree735-v2.jpg' alt='Image for Chicken Cutlets With Mushroom Dressing'>
+      </div>
   </a>
 
 
 </div> <!-- /.image-wrap -->
 
 <div class="card-info-wrapper">
-  <a href="/recipes/9378-roast-chicken-salad"
+  <a href="/recipes/1017226-chicken-cutlets-with-mushroom-dressing"
     class="card-recipe-info card-link"
     >
     <div class="card-data-wrapper">
       <h3 class="name"
-          data-name="Roast Chicken Salad"
-          data-share-title="Roast+Chicken+Salad+by+Nigella+Lawson">
-        Roast Chicken Salad
+          data-name="Chicken Cutlets With Mushroom Dressing"
+          data-share-title="Chicken+Cutlets+With+Mushroom+Dressing+by+Florence+Fabricant">
+        Chicken Cutlets With Mushroom Dressing
       </h3>
 
 
-        <p class="card-byline">By Nigella Lawson</p>
+        <p class="card-byline">By Florence Fabricant</p>
     </div>
 
-      <p class="cooking-time">10 minutes</p>
+      <p class="cooking-time">1 hour 15 minutes, plus 6 hours&#39; marinating</p>
 
   </a>
     <div class="controls card-controls recipe-card-controls">
@@ -625,47 +738,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
   </article>
-  <article            class="card recipe-card collection-droppable
-           "
+  <article            class="card recipe-card"
            data-type="recipe"
-           data-id="7518"
-           data-url="/recipes/7518-bright-rice"
-           data-seo-image-url="https://static01.nyt.com/images/2014/04/10/dining/Red-Lentil-Dal/Red-Lentil-Dal-superJumbo.jpg"
+           data-id="1017161"
+           data-url="/recipes/1017161-oven-roasted-chicken-shawarma"
+           data-seo-image-url="https://static01.nyt.com/images/2016/06/06/dining/06COOKING-ROASTCHICKSHAWARM2/06COOKING-ROASTCHICKSHAWARM2-videoSixteenByNineJumbo1600.jpg"
   >
     <div class="image-wrap">
 
-  <a href="/recipes/7518-bright-rice"
+  <a href="/recipes/1017161-oven-roasted-chicken-shawarma"
     class="image-anchor card-link"
     >
     <div class='image'>
-          <img class='fixed-height' data-large='https://static01.nyt.com/images/2014/04/10/dining/Red-Lentil-Dal/Red-Lentil-Dal-videoSixteenByNine310.jpg' data-small='' data-pin-media='https://static01.nyt.com/images/2014/04/10/dining/Red-Lentil-Dal/Red-Lentil-Dal-verticalTwoByThree735-v2.jpg'>
-        </div>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/b07b499/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2016/06/06/dining/06COOKING-ROASTCHICKSHAWARM2/06COOKING-ROASTCHICKSHAWARM2-mediumThreeByTwo252.jpg' data-pin-media='https://static01.nyt.com/images/2016/06/06/dining/06COOKING-ROASTCHICKSHAWARM2/06COOKING-ROASTCHICKSHAWARM2-verticalTwoByThree735.jpg' alt='Image for Oven-Roasted Chicken Shawarma'>
+      </div>
   </a>
 
-    <a class="sticker easy"
-       href="/search?q=&amp;filters[meal_types][]=easy"
-       title="Search for Easy Recipes">
-      Easy
-    </a>
 
 </div> <!-- /.image-wrap -->
 
 <div class="card-info-wrapper">
-  <a href="/recipes/7518-bright-rice"
+  <a href="/recipes/1017161-oven-roasted-chicken-shawarma"
     class="card-recipe-info card-link"
     >
     <div class="card-data-wrapper">
       <h3 class="name"
-          data-name="Bright Rice"
-          data-share-title="Bright+Rice+by+Nigella+Lawson">
-        Bright Rice
+          data-name="Oven-Roasted Chicken Shawarma"
+          data-share-title="Oven-Roasted+Chicken+Shawarma+by+Sam+Sifton">
+        Oven-Roasted Chicken Shawarma
       </h3>
 
 
-        <p class="card-byline">By Nigella Lawson</p>
+        <p class="card-byline">By Sam Sifton</p>
     </div>
 
-      <p class="cooking-time">30 minutes</p>
+      <p class="cooking-time">45 minutes, plus marinating</p>
 
   </a>
     <div class="controls card-controls recipe-card-controls">
@@ -680,78 +787,153 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
   </article>
-<section id="recipeDetails-paid-post-desktop-ad" class="paid-post-desktop ad-container collapsed recipe-card">
+
+<section
+  id="recipeDetails-paid-post-desktop-ad"
+  class="paid-post-desktop
+         ad-container collapsed
+         desktop-ad
+         
+         recipe-card card"
+>
   <div id='div-gpt-ad-804752003747430782-paid-post-desktop' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-paid-post-desktop');
-      });
+        (function() {
+          const breakpoints = ["desktop"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['paid-post-desktop'] = {
+              pos: 'mid1',
+              size: [[235, 278]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-paid-post-desktop`);
+          });
+        })();
     </script>
   </div>
 </section>
-<section id="recipeDetails-paid-post-tablet-ad" class="paid-post-tablet ad-container collapsed recipe-card">
+
+<section
+  id="recipeDetails-paid-post-tablet-ad"
+  class="paid-post-tablet
+         ad-container collapsed
+         tablet-ad
+         
+         recipe-card card"
+>
   <div id='div-gpt-ad-804752003747430782-paid-post-tablet' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-paid-post-tablet');
-      });
+        (function() {
+          const breakpoints = ["tablet"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['paid-post-tablet'] = {
+              pos: 'mid1',
+              size: [[235, 278]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-paid-post-tablet`);
+          });
+        })();
     </script>
   </div>
 </section>
-<section id="recipeDetails-paid-post-mobile-landscape-ad" class="paid-post-mobile-landscape ad-container collapsed recipe-card">
+
+<section
+  id="recipeDetails-paid-post-mobile-landscape-ad"
+  class="paid-post-mobile-landscape
+         ad-container collapsed
+         mobileLandscape-ad
+         
+         recipe-card card"
+>
   <div id='div-gpt-ad-804752003747430782-paid-post-mobile-landscape' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-paid-post-mobile-landscape');
-      });
+        (function() {
+          const breakpoints = ["mobileLandscape"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['paid-post-mobile-landscape'] = {
+              pos: 'mid1',
+              size: [[235, 278]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-paid-post-mobile-landscape`);
+          });
+        })();
     </script>
   </div>
 </section>
-<section id="recipeDetails-paid-post-mobile-ad" class="paid-post-mobile ad-container collapsed recipe-card">
+
+<section
+  id="recipeDetails-paid-post-mobile-ad"
+  class="paid-post-mobile
+         ad-container collapsed
+         mobile-ad
+         
+         recipe-card card"
+>
   <div id='div-gpt-ad-804752003747430782-paid-post-mobile' class="ad-unit">
     <script>
-      window.googletag.cmd.push(function() {
-        window.googletag.display('div-gpt-ad-804752003747430782-paid-post-mobile');
-      });
+        (function() {
+          const breakpoints = ["mobile"];
+          window.adUnits = window.adUnits || {};
+          breakpoints.forEach(function(br) {
+            window.adUnits[br] = window.adUnits[br] || {};
+            window.adUnits[br]['paid-post-mobile'] = {
+              pos: 'mid1',
+              size: [[145, 212]],
+            };
+          });
+          window.googletag.cmd.push(function() {
+            window.googletag.display(`div-gpt-ad-804752003747430782-paid-post-mobile`);
+          });
+        })();
     </script>
   </div>
 </section>
-  <article            class="card recipe-card collection-droppable
-           "
+  <article            class="card recipe-card"
            data-type="recipe"
-           data-id="11954"
-           data-url="/recipes/11954-lemon-gelato"
-           data-seo-image-url="https://static01.nyt.com/images/2016/04/04/dining/04COOKING-LEMONGELATO1/04COOKING-LEMONGELATO1-superJumbo.jpg"
+           data-id="12881"
+           data-url="/recipes/12881-roasted-chicken-thighs-with-winter-squash"
+           data-seo-image-url="https://static01.nyt.com/images/2014/03/12/dining/12squash/12squash-superJumbo.jpg"
   >
     <div class="image-wrap">
 
-  <a href="/recipes/11954-lemon-gelato"
+  <a href="/recipes/12881-roasted-chicken-thighs-with-winter-squash"
     class="image-anchor card-link"
     >
     <div class='image'>
-          <img class='fixed-height' data-large='https://static01.nyt.com/images/2016/04/04/dining/04COOKING-LEMONGELATO1/04COOKING-LEMONGELATO1-mediumThreeByTwo252.jpg' data-small='' data-pin-media='https://static01.nyt.com/images/2016/04/04/dining/04COOKING-LEMONGELATO1/04COOKING-LEMONGELATO1-verticalTwoByThree735.jpg'>
-        </div>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/b07b499/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2014/03/12/dining/12squash/12squash-videoSixteenByNine310.jpg' data-pin-media='https://static01.nyt.com/images/2014/03/12/dining/12squash/12squash-verticalTwoByThree735-v2.jpg' alt='Image for Roasted Chicken Thighs With Winter Squash'>
+      </div>
   </a>
 
 
 </div> <!-- /.image-wrap -->
 
 <div class="card-info-wrapper">
-  <a href="/recipes/11954-lemon-gelato"
+  <a href="/recipes/12881-roasted-chicken-thighs-with-winter-squash"
     class="card-recipe-info card-link"
     >
     <div class="card-data-wrapper">
       <h3 class="name"
-          data-name="Lemon Gelato"
-          data-share-title="Lemon+Gelato+by+Nigella+Lawson">
-        Lemon Gelato
+          data-name="Roasted Chicken Thighs With Winter Squash"
+          data-share-title="Roasted+Chicken+Thighs+With+Winter+Squash+by+Melissa+Clark">
+        Roasted Chicken Thighs With Winter Squash
       </h3>
 
 
-        <p class="card-byline">By Nigella Lawson</p>
+        <p class="card-byline">By Melissa Clark</p>
     </div>
 
-      <p class="cooking-time">40 minutes</p>
+      <p class="cooking-time">45 minutes, plus 30 minutes’ marinating </p>
 
   </a>
     <div class="controls card-controls recipe-card-controls">
@@ -767,36 +949,85 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </article>
 
-        </section>
-              <section class="recipe-card-list band track-card-params"
-            data-layout="grid"
-            data-analytics-category="Recirculation Band Recipe Card | Trending on Cooking"
-            data-suggestion-type="recentlysaved"
-            data-tracker-module="Recirculation Band Recipe Card"
-            data-tracker-region="Trending on Cooking"
-            data-page-type="recipedetails">
-          <h4 class="section-header suggestion-name">
-            Trending on Cooking
-          </h4>
-            <article            class="card recipe-card collection-droppable
-           "
+      </section>
+          <section class="recipe-card-list band track-card-params"
+          data-layout="grid"
+          data-analytics-category="Recirculation Band Recipe Card | TRENDING ON COOKING"
+          data-suggestion-type="recentlysaved"
+          data-tracker-module="Recirculation Band Recipe Card"
+          data-tracker-region="Trending on Cooking"
+          data-page-type="recipedetails">
+        <h4 class="section-header suggestion-name">
+          Trending on Cooking
+        </h4>
+          <article            class="card recipe-card"
            data-type="recipe"
-           data-id="1012796"
-           data-url="/recipes/1012796-sea-scallops-with-brown-butter-capers-and-lemon"
-           data-seo-image-url="https://static01.nyt.com/images/2016/04/07/dining/07SEASCALLOPS/07SEASCALLOPS-superJumbo-v2.jpg"
+           data-id="9726"
+           data-url="/recipes/9726-fast-scallion-pancakes"
+           data-seo-image-url="https://static01.nyt.com/images/2017/01/17/dining/17COOKING-SCALLION-PANCAKES2/17COOKING-SCALLION-PANCAKES2-videoSixteenByNineJumbo1600.jpg"
   >
     <div class="image-wrap">
 
-  <a href="/recipes/1012796-sea-scallops-with-brown-butter-capers-and-lemon"
+  <a href="/recipes/9726-fast-scallion-pancakes"
     class="image-anchor card-link"
     >
     <div class='image'>
-          <img class='fixed-height' data-large='https://static01.nyt.com/images/2016/04/07/dining/07SEASCALLOPS/07SEASCALLOPS-mediumThreeByTwo252-v2.jpg' data-small='' data-pin-media='https://static01.nyt.com/images/2016/04/07/dining/07SEASCALLOPS/07SEASCALLOPS-verticalTwoByThree735-v2.jpg'>
-        </div>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/b07b499/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2017/01/17/dining/17COOKING-SCALLION-PANCAKES2/17COOKING-SCALLION-PANCAKES2-mediumThreeByTwo252.jpg' data-pin-media='https://static01.nyt.com/images/2017/01/17/dining/17COOKING-SCALLION-PANCAKES2/17COOKING-SCALLION-PANCAKES2-verticalTwoByThree735.jpg' alt='Image for Fast Scallion Pancakes'>
+      </div>
+  </a>
+
+
+</div> <!-- /.image-wrap -->
+
+<div class="card-info-wrapper">
+  <a href="/recipes/9726-fast-scallion-pancakes"
+    class="card-recipe-info card-link"
+    >
+    <div class="card-data-wrapper">
+      <h3 class="name"
+          data-name="Fast Scallion Pancakes"
+          data-share-title="Fast+Scallion+Pancakes+by+Mark+Bittman">
+        Fast Scallion Pancakes
+      </h3>
+
+
+        <p class="card-byline">By Mark Bittman</p>
+    </div>
+
+      <p class="cooking-time">20 minutes</p>
+
+  </a>
+    <div class="controls card-controls recipe-card-controls">
+  <div class="control-buttons">
+    <div class="control-save-btn control-btn">
+      <span class="icon icon-bookmark-hover-outline control-transition"></span>
+      <span class="icon icon-bookmark-hover-fill"></span>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </article>
+  <article            class="card recipe-card"
+           data-type="recipe"
+           data-id="1016264"
+           data-url="/recipes/1016264-spaghetti-with-garlicky-bread-crumbs-and-anchovies"
+           data-seo-image-url="https://static01.nyt.com/images/2014/04/18/multimedia/clark-spaghetti-bread/clark-spaghetti-bread-superJumbo.jpg"
+  >
+    <div class="image-wrap">
+
+  <a href="/recipes/1016264-spaghetti-with-garlicky-bread-crumbs-and-anchovies"
+    class="image-anchor card-link"
+    >
+    <div class='image'>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/b07b499/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2014/04/18/multimedia/clark-spaghetti-bread/clark-spaghetti-bread-videoSixteenByNine310.jpg' data-pin-media='https://static01.nyt.com/images/2014/04/18/multimedia/clark-spaghetti-bread/clark-spaghetti-bread-superJumbo.jpg' alt='Image for Spaghetti With Garlicky Bread Crumbs and Anchovies'>
+      </div>
+      <div class="icon-video-icon-white-bg"></div>
   </a>
 
     <a class="sticker easy"
-       href="/search?q=&amp;filters[meal_types][]=easy"
+       href="/search?filters%5Bmeal_types%5D%5B%5D=easy"
        title="Search for Easy Recipes">
       Easy
     </a>
@@ -804,64 +1035,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div> <!-- /.image-wrap -->
 
 <div class="card-info-wrapper">
-  <a href="/recipes/1012796-sea-scallops-with-brown-butter-capers-and-lemon"
+  <a href="/recipes/1016264-spaghetti-with-garlicky-bread-crumbs-and-anchovies"
     class="card-recipe-info card-link"
     >
     <div class="card-data-wrapper">
       <h3 class="name"
-          data-name="Sea Scallops With Brown Butter, Capers and Lemon"
-          data-share-title="Sea+Scallops+With+Brown+Butter%2C+Capers+and+Lemon+by+Alex+Witchel">
-        Sea Scallops With Brown Butter, Capers and Lemon
-      </h3>
-
-
-        <p class="card-byline">By Alex Witchel</p>
-    </div>
-
-      <p class="cooking-time">15 minutes</p>
-
-  </a>
-    <div class="controls card-controls recipe-card-controls">
-  <div class="control-buttons">
-    <div class="control-save-btn control-btn">
-      <span class="icon icon-bookmark-hover-outline control-transition"></span>
-      <span class="icon icon-bookmark-hover-fill"></span>
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </article>
-  <article            class="card recipe-card collection-droppable
-           "
-           data-type="recipe"
-           data-id="1016117"
-           data-url="/recipes/1016117-shrimp-and-pineapple-skewers-with-peanut-sauce"
-           data-seo-image-url="https://static01.nyt.com/images/2014/03/11/dining/11Dinner/11Dinner-superJumbo.jpg"
-  >
-    <div class="image-wrap">
-
-  <a href="/recipes/1016117-shrimp-and-pineapple-skewers-with-peanut-sauce"
-    class="image-anchor card-link"
-    >
-    <div class='image'>
-          <img class='fixed-height' data-large='https://static01.nyt.com/images/2014/03/11/dining/11Dinner/11Dinner-videoSixteenByNine310.jpg' data-small='' data-pin-media='https://static01.nyt.com/images/2014/03/11/dining/11Dinner/11Dinner-verticalTwoByThree735-v2.jpg'>
-        </div>
-  </a>
-
-
-</div> <!-- /.image-wrap -->
-
-<div class="card-info-wrapper">
-  <a href="/recipes/1016117-shrimp-and-pineapple-skewers-with-peanut-sauce"
-    class="card-recipe-info card-link"
-    >
-    <div class="card-data-wrapper">
-      <h3 class="name"
-          data-name="Shrimp and Pineapple Skewers With Peanut Sauce"
-          data-share-title="Shrimp+and+Pineapple+Skewers+With+Peanut+Sauce+by+Melissa+Clark">
-        Shrimp and Pineapple Skewers With Peanut Sauce
+          data-name="Spaghetti With Garlicky Bread Crumbs and Anchovies"
+          data-share-title="Spaghetti+With+Garlicky+Bread+Crumbs+and+Anchovies+by+Melissa+Clark">
+        Spaghetti With Garlicky Bread Crumbs and Anchovies
       </h3>
 
 
@@ -883,41 +1064,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
   </article>
-  <article            class="card recipe-card collection-droppable
-           "
+  <article            class="card recipe-card"
            data-type="recipe"
-           data-id="1016272"
-           data-url="/recipes/1016272-fast-no-knead-whole-wheat-bread"
-           data-seo-image-url="//int.nyt.com/applications/cooking/049f3b1/static/images/pattern/23.png?1"
+           data-id="1019683"
+           data-url="/recipes/1019683-mozzarella-in-carrozza-fried-mozzarella-sandwiches"
+           data-seo-image-url="https://static01.nyt.com/images/2018/10/23/dining/as-mozzarella-en-carrozza/as-mozzarella-en-carrozza-threeByTwoMediumAt2X-v2.jpg"
   >
     <div class="image-wrap">
 
-  <a href="/recipes/1016272-fast-no-knead-whole-wheat-bread"
+  <a href="/recipes/1019683-mozzarella-in-carrozza-fried-mozzarella-sandwiches"
     class="image-anchor card-link"
     >
     <div class='image'>
-          <img class='pattern-23 fixed-height' data-large='/static/images/pattern/23.png?1' data-small=''>
-        </div>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/b07b499/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2018/10/23/dining/as-mozzarella-en-carrozza/as-mozzarella-en-carrozza-mediumThreeByTwo252-v2.jpg' data-pin-media='https://static01.nyt.com/images/2018/10/23/dining/as-mozzarella-en-carrozza/as-mozzarella-en-carrozza-verticalTwoByThree735-v2.jpg' alt='Image for Mozzarella in Carrozza (Fried Mozzarella Sandwiches)'>
+      </div>
   </a>
 
 
 </div> <!-- /.image-wrap -->
 
 <div class="card-info-wrapper">
-  <a href="/recipes/1016272-fast-no-knead-whole-wheat-bread"
+  <a href="/recipes/1019683-mozzarella-in-carrozza-fried-mozzarella-sandwiches"
     class="card-recipe-info card-link"
     >
     <div class="card-data-wrapper">
       <h3 class="name"
-          data-name="Fast No-Knead Whole Wheat Bread"
-          data-share-title="Fast+No-Knead+Whole+Wheat+Bread+by+The+New+York+Times">
-        Fast No-Knead Whole Wheat Bread
+          data-name="Mozzarella in Carrozza (Fried Mozzarella Sandwiches)"
+          data-share-title="Mozzarella+in+Carrozza+%28Fried+Mozzarella+Sandwiches%29+by+Ali+Slagle">
+        Mozzarella in Carrozza (Fried Mozzarella Sandwiches)
       </h3>
 
 
-        <p class="card-byline">By The New York Times</p>
+        <p class="card-byline">By Ali Slagle</p>
     </div>
 
+      <p class="cooking-time">10 minutes</p>
 
   </a>
     <div class="controls card-controls recipe-card-controls">
@@ -932,42 +1113,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
   </article>
-  <article            class="card recipe-card collection-droppable
-           "
+  <article            class="card recipe-card"
            data-type="recipe"
-           data-id="1018519"
-           data-url="/recipes/1018519-morning-glory-muffins"
-           data-seo-image-url="https://static01.nyt.com/images/2016/12/30/dining/30COOKING-MORNINGGLORY-MUFFINS1/30COOKING-MORNINGGLORY-MUFFINS1-videoSixteenByNineJumbo1600-v2.jpg"
+           data-id="1020450"
+           data-url="/recipes/1020450-indian-ish-nachos-with-cheddar-black-beans-and-chutney"
+           data-seo-image-url="https://static01.nyt.com/images/2019/09/04/dining/pk-indian-nachos/pk-indian-nachos-threeByTwoMediumAt2X.jpg"
   >
     <div class="image-wrap">
 
-  <a href="/recipes/1018519-morning-glory-muffins"
+  <a href="/recipes/1020450-indian-ish-nachos-with-cheddar-black-beans-and-chutney"
     class="image-anchor card-link"
     >
     <div class='image'>
-          <img class='fixed-height' data-large='https://static01.nyt.com/images/2016/12/30/dining/30COOKING-MORNINGGLORY-MUFFINS1/30COOKING-MORNINGGLORY-MUFFINS1-mediumThreeByTwo252.jpg' data-small='' data-pin-media='https://static01.nyt.com/images/2016/12/30/dining/30COOKING-MORNINGGLORY-MUFFINS1/30COOKING-MORNINGGLORY-MUFFINS1-verticalTwoByThree735-v2.jpg'>
-        </div>
+        <img class='fixed-height ' src='https://static01.nyt.com/applications/cooking/b07b499/assets/card-placeholder-image.png' data-src='https://static01.nyt.com/images/2019/09/04/dining/pk-indian-nachos/pk-indian-nachos-mediumThreeByTwo252.jpg' data-pin-media='https://static01.nyt.com/images/2019/09/04/dining/pk-indian-nachos/pk-indian-nachos-verticalTwoByThree735.jpg' alt='Image for Indian-ish Nachos With Cheddar, Black Beans and Chutney'>
+      </div>
   </a>
 
 
 </div> <!-- /.image-wrap -->
 
 <div class="card-info-wrapper">
-  <a href="/recipes/1018519-morning-glory-muffins"
+  <a href="/recipes/1020450-indian-ish-nachos-with-cheddar-black-beans-and-chutney"
     class="card-recipe-info card-link"
     >
     <div class="card-data-wrapper">
       <h3 class="name"
-          data-name="Morning Glory Muffins"
-          data-share-title="Morning+Glory+Muffins+by+Samantha+Seneviratne">
-        Morning Glory Muffins
+          data-name="Indian-ish Nachos With Cheddar, Black Beans and Chutney"
+          data-share-title="Indian-ish+Nachos+With+Cheddar%2C+Black+Beans+and+Chutney+by+Priya+Krishna+And+Ritu+Krishna">
+        Indian-ish Nachos With Cheddar, Black Beans and Chutney
       </h3>
 
 
-        <p class="card-byline">By Samantha Seneviratne</p>
+        <p class="card-byline">By Priya Krishna And Ritu Krishna</p>
     </div>
 
-      <p class="cooking-time">About 1 hour</p>
+      <p class="cooking-time">30 minutes</p>
 
   </a>
     <div class="controls card-controls recipe-card-controls">
@@ -983,36 +1163,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </article>
 
-        </section>
-      <!-- end suggestions -->
-      <section class="recipe-card-list band " data-layout="grid">
-        <h4 class="section-header suggestion-name">
-          Brush Up On The Basics With Our Cooking Guides
-        </h4>
-            <article class="card guide-card"
+      </section>
+    <!-- end suggestions -->
+
+    <div id="recipeDetailsRecentlyViewedBand"></div>
+
+    <section class="recipe-card-list band " data-layout="grid">
+      <h4 class="section-header suggestion-name">
+        Brush Up On The Basics With Our Cooking Guides
+      </h4>
+          <article class="card guide-card"
            data-type="guide"
-           data-id="40"
-           data-url="/guides/40-how-to-make-soup"
-           data-seo-image-url="https://static01.nyt.com/images/2017/01/11/dining/11SOUP1/11SOUP1-superJumbo.jpg"
+           data-id="12"
+           data-url="/guides/12-how-to-make-potatoes"
+           data-seo-image-url="https://static01.nyt.com/images/2019/09/17/dining/as-lemon-potatoes/as-lemon-potatoes-superJumbo-v2.jpg"
   >
     <div>
-  <a class='guide-card-link card-link' href=/guides/40-how-to-make-soup>
+  <a class='guide-card-link card-link' href=/guides/12-how-to-make-potatoes>
     <div class="image-wrap">
         <div class="image">
           <img class="fixed-height"
-               data-small="https://static01.nyt.com/images/2017/01/11/dining/11SOUP1/11SOUP1-popup.jpg"
-               data-large="https://static01.nyt.com/images/2017/01/11/dining/11SOUP1/11SOUP1-popup.jpg">
+               data-src="https://static01.nyt.com/images/2019/09/17/dining/as-lemon-potatoes/as-lemon-potatoes-mediumThreeByTwo440-v2.jpg"
+               src="https://static01.nyt.com/applications/cooking/6e8b4b9/assets/card-placeholder-image.png"
+               alt="Image for How to Cook Potatoes">
         </div>
       <div class="icon-video-icon-white-bg"></div>
     </div>
     <div class="guide-card-info">
       <p class="card-kicker">Cooking Guide</p>
-      <h3 class="name" data-share-title="How+to+Make+Soup" data-name="How to Make Soup">
-        How to Make Soup
+      <h3 class="name" data-share-title="How+to+Cook+Potatoes" data-name="How to Cook Potatoes">
+        How to Cook Potatoes
       </h3>
 
         <p class="card-byline">
-          By Samin Nosrat
+          By Julia Moskin
         </p>
     </div>
   </a>
@@ -1021,26 +1205,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </article>
 
-            <article class="card guide-card"
+          <article class="card guide-card"
            data-type="guide"
-           data-id="6"
-           data-url="/guides/6-how-to-make-gravy"
-           data-seo-image-url="https://static01.nyt.com/images/2015/09/17/dining/17CLARKTGIVING4/17CLARKTGIVING4-superJumbo.jpg"
+           data-id="11"
+           data-url="/guides/11-how-to-roast-chicken"
+           data-seo-image-url="https://static01.nyt.com/images/2015/09/21/multimedia/clark-roast-chicken/clark-roast-chicken-superJumbo-v4.jpg"
   >
     <div>
-  <a class='guide-card-link card-link' href=/guides/6-how-to-make-gravy>
+  <a class='guide-card-link card-link' href=/guides/11-how-to-roast-chicken>
     <div class="image-wrap">
         <div class="image">
           <img class="fixed-height"
-               data-small="https://static01.nyt.com/images/2015/09/17/dining/17CLARKTGIVING4/17CLARKTGIVING4-popup.jpg"
-               data-large="https://static01.nyt.com/images/2015/09/17/dining/17CLARKTGIVING4/17CLARKTGIVING4-popup.jpg">
+               data-src="https://static01.nyt.com/images/2015/09/21/multimedia/clark-roast-chicken/clark-roast-chicken-mediumThreeByTwo440-v4.jpg"
+               src="https://static01.nyt.com/applications/cooking/2a316a8/assets/card-placeholder-image.png"
+               alt="Image for How to Roast Chicken">
         </div>
       <div class="icon-video-icon-white-bg"></div>
     </div>
     <div class="guide-card-info">
       <p class="card-kicker">Cooking Guide</p>
-      <h3 class="name" data-share-title="How+to+Make+Gravy" data-name="How to Make Gravy">
-        How to Make Gravy
+      <h3 class="name" data-share-title="How+to+Roast+Chicken" data-name="How to Roast Chicken">
+        How to Roast Chicken
       </h3>
 
         <p class="card-byline">
@@ -1053,30 +1238,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </article>
 
-            <article class="card guide-card"
+          <article class="card guide-card"
            data-type="guide"
-           data-id="25"
-           data-url="/guides/25-how-to-make-fried-chicken"
-           data-seo-image-url="https://static01.nyt.com/images/2016/06/28/dining/28COOKING-FRIEDCHICKENGUIDE13/28COOKING-FRIEDCHICKENGUIDE13-superJumbo.jpg"
+           data-id="41"
+           data-url="/guides/41-how-to-drink-wine"
+           data-seo-image-url="https://static01.nyt.com/images/2017/03/21/dining/21WHITEBORDEAUX2/21WHITEBORDEAUX2-superJumbo.jpg"
   >
     <div>
-  <a class='guide-card-link card-link' href=/guides/25-how-to-make-fried-chicken>
+  <a class='guide-card-link card-link' href=/guides/41-how-to-drink-wine>
     <div class="image-wrap">
         <div class="image">
           <img class="fixed-height"
-               data-small="https://static01.nyt.com/images/2016/06/28/dining/28COOKING-FRIEDCHICKENGUIDE13/28COOKING-FRIEDCHICKENGUIDE13-popup.jpg"
-               data-large="https://static01.nyt.com/images/2016/06/28/dining/28COOKING-FRIEDCHICKENGUIDE13/28COOKING-FRIEDCHICKENGUIDE13-popup.jpg">
+               data-src="https://static01.nyt.com/images/2017/03/21/dining/21WHITEBORDEAUX2/21WHITEBORDEAUX2-mediumThreeByTwo440.jpg"
+               src="https://int.nyt.com/applications/cooking/7c1138e/assets/card-placeholder-image.png"
+               alt="Image for How to Drink Wine">
         </div>
       <div class="icon-video-icon-white-bg"></div>
     </div>
     <div class="guide-card-info">
       <p class="card-kicker">Cooking Guide</p>
-      <h3 class="name" data-share-title="How+to+Make+Fried+Chicken" data-name="How to Make Fried Chicken">
-        How to Make Fried Chicken
+      <h3 class="name" data-share-title="How+to+Drink+Wine" data-name="How to Drink Wine">
+        How to Drink Wine
       </h3>
 
         <p class="card-byline">
-          By Sam Sifton
+          By Eric Asimov
         </p>
     </div>
   </a>
@@ -1085,19 +1271,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </article>
 
-            <article class="card guide-card"
+          <article class="card guide-card"
            data-type="guide"
            data-id="2"
            data-url="/guides/2-how-to-make-stuffing"
-           data-seo-image-url="https://static01.nyt.com/images/2015/10/26/dining/26COOKING_STUFFING2/26COOKING_STUFFING2-superJumbo.jpg"
+           data-seo-image-url="https://static01.nyt.com/images/2018/11/07/dining/07stuffingrex/07stuffingrex-superJumbo.jpg"
   >
     <div>
   <a class='guide-card-link card-link' href=/guides/2-how-to-make-stuffing>
     <div class="image-wrap">
         <div class="image">
           <img class="fixed-height"
-               data-small="https://static01.nyt.com/images/2015/10/26/dining/26COOKING_STUFFING2/26COOKING_STUFFING2-popup.jpg"
-               data-large="https://static01.nyt.com/images/2015/10/26/dining/26COOKING_STUFFING2/26COOKING_STUFFING2-popup.jpg">
+               data-src="https://static01.nyt.com/images/2018/11/07/dining/07stuffingrex/07stuffingrex-mediumThreeByTwo440.jpg"
+               src="https://static01.nyt.com/applications/cooking/6abfe94/assets/card-placeholder-image.png"
+               alt="Image for How to Make Stuffing">
         </div>
       <div class="icon-video-icon-white-bg"></div>
     </div>
@@ -1117,9 +1304,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </article>
 
-      </section>
+    </section>
 
-    </div> <!-- /.recipe-more -->
+  </div> <!-- /.recipe-more -->
 
 </div><!-- /#content -->
 
@@ -1181,11 +1368,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div class="notes-user-controls">
 
-      <a href="#" class="profile-user-img ladda-button grey-spinner <%= hasImg ? 'has-image' : '' %>" data-style="normal" data-spinner-size="20" >
+      <div class="profile-user-img <%= hasImg ? 'has-image' : '' %>">
         <img class="user-img" src="<%= userImg %>">
         <i class="icon-user-anon-profile"></i>
-        <div class="fb-import-btn"><i class="icon-facebook"></i>Add photo</div>
-      </a>
+      </div>
 
       <div class="notes-user-input">
         <input class="notes-user-name" type="text" placeholder="Your name (required)" value="<%= name %>">
@@ -1246,12 +1432,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Thank you for your submission. Your note will appear once it has been approved.
       </div>
     <% } %>
-    <a class="note-img" href="<%= userUrl %>">
+    <span class="note-img">
       <img class="user-img <%= imgSrc ? '' : 'hidden' %>" src="<%= imgSrc %>">
-    </a>
+    </span>
     <div class="note-base">
       <div class="note-header">
-        <a class="note-name" href="<%= userUrl %>"><%= userName %></a>
+        <span class="note-name"><%= userName %></span>
         <i class="icon-editor-badge <%= isEditor ? '' : 'hidden' %>"></i>
         <time class="note-time note-header-additional"><%= createTime %></time>
         <span class="note-private-msg note-header-additional">only you can see this</span>
@@ -1297,60 +1483,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
       <footer id="footer">
+  <div class="footer-wrap">
+      <div class="footer-body clearfix">
+  <div class="container">
+    
+<div class="newsletter-container">
+  <form id="footer-newsletter-email" class="newsletter-form" method="POST" novalidate>
+      <h3 class="title">Get Our Newsletter</h3>
+      <span class="description">Get recipes, tips and NYT special offers delivered straight to your inbox. Opt out or <a class="contact-us-link" href="http://www.nytimes.com/help/index.html">contact us</a> anytime.</span>
+      <input class="newsletter-input genericInputField" type="email" name="email" placeholder="Add Your Email" />
+      <button type="submit" class="red-button button">Sign Up</button>
+      <div class="error-msg">Please enter a valid email address.</div>
+  </form>
+</div>
 
-  <div class="footer-body clearfix">
-    <div class="container">
 
-      <div class="newsletter-container">
-        <img height="159" width="155" alt="" src="//int.nyt.com/applications/cooking/static/images/footerIllo@2x.png">
-        <form id="footer-newsletter-form">
-          <h3>Get Our Newsletter</h3>
-          <span>Sam Sifton&rsquo;s recipe ideas and cooking tips delivered straight to your inbox.</span>
-          <input id="footer-newsletter-email" type="email" name="email" placeholder="Your Email" required>
-          <button type="submit" class="btn-std btn-default btn-large">Sign Up</button>
-        </form>
+    <div class="promo-container">
+      <div class="share-links">
+        <span class="blurb">Follow Cooking</span>
+        <a class="pinterest" target="_blank" rel="noreferrer noopener" href="https://www.pinterest.com/nytcooking/" alt="Visit NYT Cooking on Pinterest"></a>
+        <a class="fb" target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/nytcooking" alt="Visit NYT Cooking on Facebook"></a>
+        <a class="twitter" target="_blank" rel="noreferrer noopener" href="https://twitter.com/nytfood" alt="Visit NYT Cooking on Twitter"></a>
       </div>
-
-      <div class="promo-container">
-        <div class="share-links">
-          <span class="blurb">Follow Cooking</span>
-          <a class="pinterest" href="http://www.pinterest.com/nytfood/"></a>
-          <a class="fb" href="https://www.facebook.com/nytfood"></a>
-          <a class="twitter" href="https://twitter.com/nytfood"></a>
-        </div>
-        <div class="ios">
-          <span class="blurb">Cooking For iPad &amp; iPhone</span>
-          <a class="icon-appstore-gray" target="_blank" href="http://appstore.com/nytcooking"></a>
-        </div>
+      <div class="ios">
+        <span class="blurb">Cooking For iPad &amp; iPhone</span>
+        <a class="icon-appstore-gray" rel="noreferrer noopener" href="https://apps.apple.com/us/app/nyt-cooking/id911422904" alt="Download the iOS NYT Cooking app"></a>
       </div>
-
     </div>
   </div>
+</div>
 
-  <div class="footer-links">
-    <ul class="nytimes">
-      <li><a href="http://www.nytimes.com">NYTimes.com</a></li>
-      <li><a href="http://www.nytimes.com/food">NYTimes.com/food</a></li>
-      <li><a href="/frequently-asked-questions">FAQ</a></li>
-      <li><a href="mailto:cookingcare@nytimes.com" id="customer-care-email" target="_blank"><strong>Send Us Feedback</strong></a></li>
-    </ul>
-
-    <ul class="legal">
-      <li><a href="http://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="http://www.nytimes.com/content/help/rights/terms/terms-of-service.html">Terms of Service</a></li>
-      <li>
-        <a href="http://www.nytco.com" itemprop="copyrightNotice">
-          &copy;
-          <span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="http://schema.org/Corporation" itemid="http://www.nytimes.com">
-          <span itemprop="name">The New York Times Company</span>
-          <meta itemprop="tickerSymbol" content="NYSE NYT"/>
-          </span>
-        </a>
-      </li>
-    </ul>
+    <div class="footer-links">
+      <div class="container">
+        <div class="product-info">
+          <section class="about-us">
+            <h3 class="sub-heading">About Us</h3>
+              <p class="description">NYT Cooking is a subscription service of The New York Times. It is a digital cookbook and cooking guide alike, available on all platforms, that helps home cooks of every level discover, save and organize the world’s best recipes, while also helping them become better, more competent cooks. <a target="_blank" href="https://www.nytimes.com/subscriptions/Multiproduct/lp8R3WU.html?campaignId=79RLU" rel="noreferrer noopener" class="subscribe">Subscribe now</a> for full access.</p>
+          </section>
+          <section class="more">
+            <div class="learn-more">
+              <h3 class="sub-heading learn-shop">Learn More</h3>
+              <ul>
+                <li><a href="/ourcooks" class="footer-link">Our Cooks</a></li>
+                <li><a href="/see-our-features" class="footer-link">See Our Features</a></li>
+                <li><a href="/frequently-asked-questions" class="footer-link">FAQ</a></li>
+                <li><a href="/tools" class="footer-link">Tools for Saving</a></li>
+                <li><a target="_blank" href="https://www.nytimes.com/section/food" rel="noreferrer noopener" class="footer-link">NYTimes.com/food</a></li>
+                <li><a href="mailto:cookingcare@nytimes.com" class="footer-link send-feedback" id="customer-care-email">Send Us Feedback</a></li>
+              </ul>
+            </div>
+            <div class="shop">
+              <h3 class="sub-heading learn-shop">Shop</h3>
+              <ul>
+                <li><a target="_blank" href="https://www.nytimes.com/subscriptions/Multiproduct/cooking_gift.html?campaignId=7HYRF" rel="noreferrer noopener" class="footer-link">Gift Subscription</a></li>
+                <li class="cookbooks"><h4>Cookbooks</h4></li>
+                <li><a href="https://store.nytimes.com/products/new-essentials-of-french-cooking?utm_source=NYT_Cooking_Website&utm_medium=referral&utm_campaign=French_Cookbook&utm_content=footer"  target="_blank" rel="noreferrer noopener" class="footer-link">“The New Essentials of French Cooking”</a></li>
+                <li><a target="_blank" href="https://store.nytimes.com/products/personalized-cookbook?utm_source=NYT_Cooking_Website&utm_medium=referral&utm_campaign=MYO_Cookbook&utm_content=footer" rel="noreferrer noopener" class="footer-link">“Make-Your-Own Cookbook: Dinner”</a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <section class="legal">
+          <ul>
+            <li>
+              <a href="http://www.nytco.com" itemprop="copyrightNotice" class="legal-info">
+                &copy;
+                <span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="http://schema.org/Corporation" itemid="http://www.nytimes.com">
+                  <span itemprop="name">The New York Times Company</span>
+                  <meta itemprop="tickerSymbol" content="NYSE NYT"/>
+                </span>
+              </a>
+            </li>
+            <li><a href="http://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html" class="legal-info">Privacy Policy</a></li>
+            <li><a href="http://www.nytimes.com/content/help/rights/terms/terms-of-service.html" class="legal-info">Terms of Service</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
   </div>
-
 </footer>
 
     </div>
@@ -1371,270 +1583,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="icon-close-grey"></div>
       <div class="modal-body"></div>
       <div class="modal-footer btn-group">
-        <button type="button" class="btn-std btn-default btn-large cancel-btn">NO</button>
-        <button type="button" class="btn-std btn-primary btn-large ok-btn">YES</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="collection-edit-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="icon-close-grey"></div>
-      <div class="modal-body">
-        <div class="name-group">
-          <label>Folder name</label>
-          <input type="text" class="name editable">
-        </div>
-      </div>
-      <div class="modal-footer btn-group">
-        <button type="button" class="btn-std btn-default delete-btn"><span class="delete-text">Delete Folder</span></button>
-        <button type="button" class="btn-std btn-default cancel-btn">Cancel</button>
-        <button type="button" class="btn-std btn-primary ok-btn">Save Folder</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="description-edit-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="icon-close-grey"></div>
-        <div class="name-group">
-          <label>collection name</label>
-          <input type="text" class="name editable">
-        </div>
-        <div class="description-group">
-          <label>description <span class="optional"> (optional)</label>
-          <textarea class="description editable" rows="4"></textarea>
-        </div>
-      </div>
-      <div class="modal-footer btn-group">
-        <button type="button" class="btn-std btn-default delete-btn"><span class="delete-text">Delete</span></button>
-        <button type="button" class="btn-std btn-primary ok-btn">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="regi-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-
-    <div class="modal-content">
-      <div class="icon-close-grey"></div>
-      <div class="modal-body">
-
-        <div class="regi-body-promo">
-          <div class="regi-promo-blurb">
-            17,000 New York Times-tested recipes &mdash; all free.
-          </div>
-          <img class="regi-body-image standard-regi" data-src=//int.nyt.com/applications/cooking/static/images/promo-image-cake.jpg>
-          <img class="regi-body-image pg-regi hidden" data-src=//int.nyt.com/applications/cooking/static/images/pg-promo-image-souffle.png>
-        </div>
-
-        <div class="regi-body-content">
-
-          <div class="regi-modal-header">
-            <div class="regi-modal-action regi-modal-action-regi standard-regi">Join NYT Cooking for free</div>
-            <div class="regi-modal-action regi-modal-action-regi pg-regi hidden">Join NYT Cooking to start</div>
-            <div class="regi-modal-action regi-modal-action-login">Log In to NYT Cooking</div>
-            <div class="regi-footer-msg regi-footer-regi-msg">
-              Already have a NYTimes account? <a class="regi-form-toggle">Log In.</a>
-            </div>
-            <div class="regi-footer-msg regi-footer-login-msg">
-              Don't have a NYTimes account? <a class="regi-form-toggle">Sign Up.</a>
-            </div>
-          </div>
-
-          <div class="regi-form-container">
-
-            <div class="regi-social-signon-container">
-              <div class="btn-with-addon btn-social-signon btn-facebook">
-                <div class="btn-std">Continue with Facebook</div>
-                <div class="btn-std btn-addon"><i class="icon-facebook-logo"></i>&nbsp;</div>
-              </div>
-              <div class="btn-with-addon btn-social-signon btn-google">
-                <div class="btn-std">Continue with Google</div>
-                <div class="btn-std btn-addon"><i class="icon-google-logo"></i>&nbsp;</div>
-              </div>
-
-              <div class="login-separator">
-                <div class="separator-left"><hr></div>
-                <div class="separator-word">OR</div>
-                <div class="separator-right"><hr></div>
-              </div>
-            </div>
-
-            <form id="regi-login-form" method="post" action="https://myaccount.nytimes.com/auth/login?ssp=1">
-  <input class="regi-form-input" type="text" name="userid" placeholder="Email or Times Member ID">
-  <input class="regi-form-input" type="password" name="password" placeholder="Password">
-  <input type="hidden" name="is_continue" value="false">
-  <input type="hidden" name="expires" value="">
-  <input type="hidden" name="regi_info_source" value="cooking">
-  <input type="hidden" name="regi_info_platform" value="web">
-  <input type="hidden" name="regi_info_interface" value="nytpw">
-  <div class="regi-form-group regi-login-form-group">
-    <label class="regi-form-meta"><input type="checkbox" class="regi-form-checkbox" name="remember" checked value="true"><span class="regi-form-fake-checkbox">
-      <span class="icon-checkbox-empty"></span>
-      <span class="icon-checkbox-filled"></span>
-    </span>Remember me</label>
-    <a class="regi-forgot-password" target="_blank" href="https://myaccount.nytimes.com/seg/forgot-password">Forgot password?</a>
-  </div>
-  <div class="btn-group">
-    <button class="btn-std btn-primary regi-login-btn" type="submit" value="Login">Log In</button>
-  </div>
-</form>
-
-
-            <form id="regi-registration-form" method="post" action="https://myaccount.nytimes.com/register?ssp=1">
-              <input class="regi-form-input" type="email" name="email_address" placeholder="Email">
-              <input class="regi-form-input" type="password" name="password1" placeholder="Password">
-              <input class="regi-form-input" type="password" name="password2" placeholder="Confirm Password">
-              <input type="hidden" name="is_continue" value="false">
-              <input type="hidden" name="regi_info_source" value="cooking">
-              <input type="hidden" name="regi_info_platform" value="web">
-              <input type="hidden" name="regi_info_interface" value="nytpw">
-              <input type="hidden" name="no_email" value="false">
-              <input type="hidden" name="expires" value="">
-              <div class="regi-footer">
-                <div class="regi-terms">
-                  <a href="http://www.nytimes.com/content/help/rights/terms/terms-of-service.html">Terms of Service</a> & <a href="http://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html">Privacy Policy</a>
-                </div>
-              </div>
-              <div class="btn-group">
-                <button class="btn-std btn-primary regi-login-btn" type="submit" value="Login">Create Account</button>
-              </div>
-              <div class="regi-form-group">
-                <label class="regi-form-meta regi-form-meta-subscribe"><div class="regi-checkbox-container"><input type="checkbox" class="regi-form-checkbox" name="newsletter" value="1" checked>
-                <span class="regi-form-fake-checkbox">
-                  <span class="icon-checkbox-empty"></span>
-                  <span class="icon-checkbox-filled"></span>
-                </span>
-                <span class="regi-form-newsletter">Have recipe ideas and tips from NYT Cooking delivered right to your inbox.</span></label>
-              </div>
-            </form>
-          </div>
-        </div> 
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="regi-modal-mobile-prompt" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <h2 class="mobile-prompt-header">Welcome to</h2>
-        <div class="icon-cooking-logo-red"></div>
-        <p class="mobile-prompt-body">Join for free access to over 17,000 New York Times-tested recipes.</p>
-        <div class="btn-group">
-          <div class="btn-std btn-primary regi-login-btn create-account-btn">Create Account</div>
-          <a class="btn-std regi-login-btn login-btn">Log In</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="add-recipe-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="icon-close-grey"></div>
-      <div class="modal-body">
-        <h2 class="add-recipe-header">Add a Recipe</h2>
-        <div class="add-recipe-instructions">Paste a link to a recipe, or <a href="/tools">download our browser tools</a> to make it easier to save recipes from other websites.</div>
-        <div id="save-recipe-parse-message"></div>
-        <input type="text" class="url" name="url" placeholder="http://www.yourrecipe.com">
-        <div class="spinner ladda-button" data-style="normal" data-spinner-size="40"></div>
-        <div id="save-recipe-preview"></div>
-      </div>
-      <div class="modal-footer btn-group">
-        <button type="button" class="btn-std btn-default btn-large cancel-btn">Cancel</button>
-        <button type="button" class="btn-std btn-large btn-primary save-btn disabled">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="evernote-confirm-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <h1 class="en-modal-header">Success! Would You Like to Start Syncing With Evernote?</h1>
-        <div class="en-modal-content">
-          <div class="en-modal-times-content">
-            <div class="icon cooking"></div>
-            <p class="en-modal-blurb"><strong>NYT Cooking recipes</strong><br>will sync to your<br>Evernote account</p>
-          </div>
-          <div class="en-modal-en-content">
-            <div class="icon icon-evernote-logo-56"></div>
-            <p class="en-modal-blurb"><strong>Evernote recipes</strong><br>will sync to your<br>NYT Cooking Recipe Box</p>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer btn-group">
-        <button type="button" class="btn-std btn-large btn-primary sync-btn">Yes, Sync Recipes</button>
-        <button type="button" class="btn-std btn-large btn-default unlink-btn">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="create-external-recipe-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="icon-close-grey"></div>
-      <div class="modal-body">
-        <h1 class="en-modal-header">Add a Non-NYT Recipe</h1>
-        <div class="url-group name-group">
-          <label>paste url</label>
-          <div class="url-error"></div>
-          <input type="text" class="url editable">
-        </div>
-        <div class="collections-group">
-          <label>Add to a folder <span class="optional">(optional)</span></label>
-          <div class="collectionsMount"></div>
-        </div>
-      <div class="modal-footer btn-group">
-        <button type="button" class="btn-std btn-default cancel-btn"><span class="delete-text">Cancel</span></button>
-        <button type="button" class="btn-std btn-primary ok-btn">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="premium-guide-purchase-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="icon-close-grey"></div>
-      <div class="modal-body">
-        <div class="step-1">
-          <h1 class="modal-header">Let's Get Started</h1>
-          <p class="step-1-body default">Prior to receiving <em>The New Essentials of French Cooking</em> for free, please confirm your email address below.</p>
-          <p class="step-1-body low hidden">Prior to your purchase of <em>The New Essentials of French Cooking</em> for $1.99, please confirm your email address below.</p>
-          <p class="step-1-body mid hidden">Prior to your purchase of <em>The New Essentials of French Cooking</em> for $4.99, please confirm your email address below.</p>
-          <p class="step-1-body high hidden">Prior to your purchase of <em>The New Essentials of French Cooking</em> for $9.99, please confirm your email address below.</p>
-          <p class="error hidden">An error has occurred. Please try again.</p>
-          <div class="btn-group">
-            <form id="pg-pay-flow-form" action="#">
-              <input type="email" id="email" class="regi-form-input" placeholder="Email address" autocomplete="off" autocorrect="off" autocapitalize="off" autofocus required>
-              <button class="btn-std btn-primary regi-login-btn next-btn">Continue</button>
-            </form>
-          </div>
-        </div>
-        <div class="success hidden">
-          <h1 class="modal-header">Merci</h1>
-          <p class="step-2-body control">You now have full access to <em>The New Essentials of French Cooking</em>. You can now begin exploring the guide, and be sure to check your email for updates and more.</p>
-          <p class="step-2-body variant-1 hidden">As appreciation for your interest, we're giving you free, unlimited access to <em>The New Essentials of French Cooking</em>. You can now begin exploring the guide, and be sure to check your email for updates and more.</p>
-          <p class="step-2-body variant-2 hidden">As appreciation for your interest, we're giving you free, unlimited access to <em>The New Essentials of French Cooking</em>. You can now begin exploring the guide, and be sure to check your email for updates and more.</p>
-          <div class="btn-group">
-            <button type="button" class="btn-std btn-primary regi-login-btn ok-btn">Get Started</button>
-          </div>
-        </div>
+        <button type="button" class="btn-std btn-default cancel-btn">NO</button>
+        <button type="button" class="btn-std btn-primary ok-btn">YES</button>
       </div>
     </div>
   </div>
@@ -1723,11 +1673,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="collection-delete-confirmation" type="template">
   Are you sure you want to delete your folder <b><%= _.escape(name) %></b>?
   <% if (extraDescription) { %>
-    Your recipes will still be saved under &ldquo;Recipes&rdquo;.
+    Your recipes will still be saved under &ldquo;Saved Recipes.&rdquo;
   <% } %>
 </script>
 
-<script id="regi-tooltip-content" type="template">
+<script id="regi-tooltip-content" type="text/html">
   <a href="" class="regitip-login">Log in</a> or <a href="" class="regitip-regi">Sign up</a> <%= action %>.
 </script>
 
@@ -1743,78 +1693,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </script>
 
-<script id="sidebar-site-links" type="template">
-  
-  <li class="site-links-home">
-    <a href="/">Home</a>
-  </li>
-
-  <li class="site-links-rb">
-    <a href="/recipe-box" id="site-links-rb">
-      <span>Your Recipe Box</span>
-    </a>
-  </li>
-
-    <li class="site-links-super-bowl">
-      <a href="/topics/super-bowl">Super Bowl</a>
-    </li>
-
-  <li class="site-links-guides">
-    <a href="/learn-to-cook">
-      <span>Cooking Guides</span>
-    </a>
-  </li>
-
-</script>
-
 <script id="parse-msg-tmpl" type="template">
   <div class="parse-message"><%= parse_msg %></div>
 </script>
-
-<script id="save-recipe-preview-tmpl" type="template">
-  <section class="preview" data-layout="grid">
-    <% var cardClass, infoClass %>
-    <% if (type === 'guide') { %>
-      <% cardClass = 'guide-card' %>
-      <% infoClass = 'guide-card-info' %>
-    <% } else { %>
-      <% cardClass = 'recipe-card' %>
-      <% infoClass = 'card-recipe-info' %>
-    <% } %>
-    <article class="card <%- cardClass %> collection-droppable external">
-      <div class="image-wrap">
-        <div class="image">
-          <img class="<%= resize_class %> revealed" data-large="<%- image %>" data-small="" src="<%- image %>">
-        </div>
-      </div>
-      <div class="<%- infoClass %>">
-        <% if (type === 'guide') { %>
-          <p class="card-kicker">Cooking Guide</p>
-        <% } %>
-        <div class="card-data-wrapper">
-          <h3 class="name"><%- name %></h3>
-          <% if (source) { %>
-            <a class="source"><%- source %>
-          <% } %>
-          <% if (!external && byline) { %>
-            <p>By <%- byline %></p>
-          <% } %>
-        </div>
-        <% if (!external && cooking_time) { %>
-          <p class="cooking-time"><%- cooking_time %></p>
-        <% } %>
-      </div>
-    </article>
-  </section>
-</script>
-
 
 <script id="show-more-btn-tmpl" type="template">
   <div class="btn-group">
     <button class="btn-std btn-default show-more-<%= isReplies ? 'replies' : 'notes' %>-btn ladda-button grey-spinner" data-style="normal" data-spinner-size="17">Show More<%= isReplies ? ' Replies' : ' Notes' %></button>
   </div>
 </script>
-
 
 <script id="onboarding-popover-template" type="template">
   <button class="feature-onboarding-close onboarding-dismiss icon icon-close">Close</button>
@@ -1824,155 +1711,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <button class="feature-onboarding-btn onboarding-dismiss">Got It</button>
 </script>
 
-<!--
-  === TODO: NEW-RECIPE-BOX CLEANUP ===
-  REFACTOR, POSSIBLY REMOVE THIS WHEN THE SWITCH IS COMPLETE
--->
-<script id="sidebar-tmpl" type="text/template">
-<div class="sidebar
-    <%= hasNoCollectables ? 'no-collectables' : '' %>
-    <%= hasNoCollections ? 'no-collections' : '' %>">
 
-  <header class="sidebar-top">
-    <ul class="site-links">
-      
-  <li class="site-links-home">
-    <a href="/">Home</a>
-  </li>
-
-  <li class="site-links-rb">
-    <a href="/recipe-box" id="site-links-rb">
-      <span>Your Recipe Box</span>
-    </a>
-  </li>
-
-    <li class="site-links-super-bowl">
-      <a href="/topics/super-bowl">Super Bowl</a>
-    </li>
-
-  <li class="site-links-guides">
-    <a href="/learn-to-cook">
-      <span>Cooking Guides</span>
-    </a>
-  </li>
-
-    </ul>
-
-    <div class="onboard-recipebox-msg">
-      <h2>Welcome To Cooking</h2>
-      <p>This is your Recipe Box where you can save and organize recipes you find.</p>
-      <a class="link" href="/search">Find some recipes!</a>
-    </div>
-  </header>
-
-  <div class="activity-collections-wrap">
-      <h2 class="sidebar-header">Your Activity</h3>
-
-      <ul class="activity-collections">
-        <% _.each(activityCollections, function(ac) { %>
-          <li class="activity-collection" data-collection-id="<%= ac.name %>" data-collection-slug="<%= ac.name %>">
-            <a class="details" href="#">
-              <span class="collection-name">
-                <span class="icon-<%= ac.name %>-small"></span>
-                <%= ac.name %>
-              </span>
-              <span class="count"><%= activityCollectionCounts[ac.name + '_count'] || 0 %></span>
-            </a>
-            <span class="selected-arrow"></span>
-          </li>
-        <% }); %>
-      </ul>
-    </div> <!-- /.activity-collections-wrap -->
-
-  <div class="smart-collections-wrap">
-    <h2 class="sidebar-header">Your Recipe Box</h2>
-    <ul class="smart-collections">
-      <% if (is_anonymous) { %>
-        <li class="collection smart-collection">
-          <a class="details needsclick" href="#">
-            <span class="collection-name">All Recipes</span>
-            <span class="count">0</span>
-            <span class="selected-arrow"></span>
-          </a>
-        </li>
-      <% } %>
-      <% _.each(smartFolders, function(folder) { %>
-        <% if (folder.n_recipes > 0 || folder.uri_name == 'all') { %>
-          <li class="collection smart-collection<%= folder.uri_name == 'evernote' ? 'hidden' : '' %>" data-collection-id="<%= folder.uri_name %>" data-collection-slug="<%= folder.uri_name %>">
-            <a class="details needsclick" href="#">
-              <span class="collection-name"><%= _.findWhere(smartFoldersEnum, {uri_name:folder.uri_name}).display %></span>
-              <span class="count"><%= folder.n_recipes %></span>
-            </a>
-            <span class="selected-arrow"></span>
-          </li>
-        <% } %>
-      <% }); %>
-      <% if (hasEvernote) { %>
-         <li class="collection evernote-collection" data-collection-id="evernote" data-collection-slug="evernote">
-            <a class="details needsclick" href="#">
-              <span class="collection-name">Evernote</span>
-              <span class="count"><%= evernoteCount %></span>
-              <i class="icon-syncing evernote-sync-icon"></i>
-            </a>
-            <span class="selected-arrow"></span>
-      <% } %>
-    </ul>
-  </div> <!-- /.smart-collections-wrap -->
-
-  <div class="user-collections-wrap">
-    <h3 class="sidebar-subhead">Collections</h3>
-
-    <div class="onboard-collection-msg">Group recipes in collections to keep them organized. For example "Dinner Tonight" or "Fancy Brunches."</div>
-
-    <% if (!is_anonymous) { %>
-      <ul class="collections user-collections">
-        <% _.each(collections, function(collection) { %>
-          <li class="collection removable" data-collection-id="<%= collection.id %>" data-collection-slug="<%= collection.slug %>">
-            <a class="details needsclick" href="#">
-              <span class="name"><%- collection.name %></span>
-              <span class="count"><%= collection.collectables.length %></span>
-              <span class="remove-icon"></span>
-            </a>
-            <span class="selected-arrow"></span>
-            <form class="inline-edit-form">
-              <input class="inline-edit">
-            </form>
-          </li>
-        <% }); %>
-      </ul>
-    <% } %>
-  </div> <!-- /.user-collection-wrap -->
-
-  <% if (!is_anonymous) { %>
-  <div class="create-collection">
-    <form class="new-collection-form removable">
-      <input class="new-collection-input" autocomplete="off" placeholder="Add new collection…">
-    </form>
-  </div>
-  <% } %>
-
-  <div class="account-links">
-    <% if (!is_anonymous) { %>
-      <div class="account-links-container">
-        <div class="sidebar-account-email"><a href="/<%= user.uid %>/accounts/edit"><%= user.email %></a></div>
-        <div class="sidebar-account-links">
-          <a class="account-link" href="/<%= user.uid %>/accounts/edit">Edit Profile</a>
-          <a class="account-link" id="sidebar-tools" href="/tools">Tools</a>
-          <a class="account-link sidebar-log-out" href="#">Logout</a></li>
-        </div>
-      </div>
-    <% } else { %>
-      <div class="btn-std btn-default btn-large sidebar-log-in">LOG IN</div>
-    <% } %>
-  </div>
-</div>
-</script>
-
-
-    <script>
+    
+<script>
   try {
     bootstrap = window.bootstrap || {};
     bootstrap.initialState = window.bootstrap.initialState || {};
+    bootstrap.initialState.features= {"maintenance_mode":false,"disable_newsletter_subscription_job":false,"disable_subscribe_email_job":false,"disable_cookie_refresh_call":true,"disable_recently_viewed_archive":true,"recently_viewed_jobs":true,"disable_search":false,"chunk_search_populate_job":false,"elasticsearch_live_updates_enabled":true,"all_guides_are_free":false,"sync_saves_for_recently_saved_service":true,"saved_recap_sidekiq":true,"restrict_api_access":true,"save_recap":true,"react_notes":true,"sync_updated_recipes_on_gcp":true,"test_paywall_5755":false,"cassoulet_recipe_data_json":true,"profile_info_cookie_service":false,"app_association_file":true,"admin_history_table":true,"dedupe_entitlements_methods_for_ios_qa":false,"unified_lire":true,"rdp_save_organize_redux":true,"recently_viewed_gcp":true,"multi_recipe_samizdat_query":true,"samizdat_user_data":true,"new_paywall_rules":true,"public_recipe_box_samizdat":true,"samizdat_collection_recipe_cards":true,"editors_collection_samizdat":true,"free_trial_sidekiq":false,"algorithmic_recirc_band":true,"samizdat_for_rotd":true,"samizdat_for_personality_folders":true,"samizdat_for_editors_recirc_band":true,"super_collections_samizdat":true,"grocery_list_ui":true,"app_crosssell_banner":true,"search_controller_partial_samizdat":true,"guides_with_samizdat":true,"dunning":false,"ccpa":false};
     bootstrap.initialState.growler = {
       type: null,
       msg: null,
@@ -1980,14 +1725,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     bootstrap.initialState.app = {
       env:               'production',
       debug:             false,
-      name:              'recipe-page',
+      consumerMarketingURL: 'https://www.nytimes.com/subscriptions/Multiproduct/lp8R3WU.html?return_url=https://cooking.nytimes.com',
+      saveRecapURL: 'https://ckg-user-recommendations-dot-nyt-ckg-prd.appspot.com/recommendations/users',
     };
     bootstrap.initialState.topNav = {
       // TODO: Remove this and actually fix broken tests
-      label: "Super Bowl",
-      path: "/topics/super-bowl",
+      label: "Weeknight",
+      path: "/topics/easy-weeknight",
+    };
+    bootstrap.initialState.page = {
+      hasAccessState: false,
+      isFree: false,
+      type: 'recipe-page',
+      id: 1017945,
+      viewableType: 'recipe',
+      uri: 'nyt://recipe/f63e49f3-a88f-5ec2-af34-74b57e6b002a',
     };
     bootstrap.initialState.popover = {
+      dragPopover: {
+        isDisplayed: true,
+      },
+      dragToFolderPopover: {
+        isDisplayed: false,
+      },
       savePopover: {
         isDisplayed: false,
         saveType: '',
@@ -1995,24 +1755,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       signUpPopover: {
         isShown: false
       },
-      dragPopover: {
-        isDisplayed: true,
+      subscribePopover: {
+        isDisplayed: false,
       },
+      organizeMenu: [],
     };
     bootstrap.initialState.siteSearch = {
-      query: '',
-      isFocused: false
+      query: "",
+      isFocused: false,
+      autocomplete: {
+        tags: null,
+        recipes: null,
+        guides: null,
+      },
     };
     bootstrap.initialState.searchBarIsOpen = false;
-    bootstrap.initialState.modalState = {
-      isOpen: false,
-      modalType: null
-    };
     bootstrap.initialState.sidebarIsOpen = false;
-    bootstrap.initialState.users = {};
-    bootstrap.initialState.user = window.bootstrap.initialState.user || {};
-    bootstrap.initialState.user.canView = false;
-
+    bootstrap.initialState.recirculationBand = {"suggestionsData":null,"isTablet":false,"promo":null}
+    bootstrap.initialState.editorsCollections = {}
+    bootstrap.release = "b07b499";
   } catch(e) {}
 </script>
 
@@ -2023,50 +1784,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         env:               'production',
         debug:             false,
         name:              'recipe-page',
-        smartFoldersEnum:  [{"term":"all","uri_name":"all","key":"","display":"Recipes","recipe_tag_ids":null,"fallback_image":null},{"term":"breakfast","uri_name":"breakfast","key":"meal_types","display":"Breakfast","recipe_tag_ids":[129],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/breakfast.jpg"},{"term":"brunch","uri_name":"brunch","key":"meal_types","display":"Brunch","recipe_tag_ids":[130],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/brunch.jpg"},{"term":"lunch","uri_name":"lunch","key":"meal_types","display":"Lunch","recipe_tag_ids":[131],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/lunch.jpg"},{"term":"snack","uri_name":"snack","key":"meal_types","display":"Snack","recipe_tag_ids":[136],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/snack.jpg"},{"term":"appetizer","uri_name":"appetizer","key":"meal_types","display":"Appetizer","recipe_tag_ids":[4],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/appetizer.jpg"},{"term":"soups","uri_name":"soups","key":"dish_types","display":"Soups","recipe_tag_ids":[63],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/soups.jpg"},{"term":"sides","uri_name":"sides","key":"courses","display":"Sides","recipe_tag_ids":[3],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/sides.jpg"},{"term":"dinner","uri_name":"dinner","key":"meal_types","display":"Dinner","recipe_tag_ids":[128],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/dinner.jpg"},{"term":"drinks","uri_name":"drinks","key":"dish_types","display":"Drinks","recipe_tag_ids":[66,67,68,88],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/drinks.jpg"},{"term":"dessert","uri_name":"dessert","key":"courses","display":"Dessert","recipe_tag_ids":[2],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/dessert.jpg"},{"term":"vegetarian","uri_name":"vegetarian","key":"diet_types","display":"Vegetarian","recipe_tag_ids":[225],"fallback_image":"//int.nyt.com/applications/cooking/static/images/smartfolder_fallbacks/vegetarian.jpg"}],
+        smartFoldersEnum:  [{"term":"all","uri_name":"all","key":"","display":"Saved Recipes","recipe_tag_ids":null,"fallback_image":null},{"term":"breakfast","uri_name":"breakfast","key":"meal_types","display":"Breakfast","recipe_tag_ids":[129],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/breakfast.jpg"},{"term":"brunch","uri_name":"brunch","key":"meal_types","display":"Brunch","recipe_tag_ids":[130],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/brunch.jpg"},{"term":"lunch","uri_name":"lunch","key":"meal_types","display":"Lunch","recipe_tag_ids":[131],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/lunch.jpg"},{"term":"snack","uri_name":"snack","key":"meal_types","display":"Snack","recipe_tag_ids":[136],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/snack.jpg"},{"term":"appetizer","uri_name":"appetizer","key":"meal_types","display":"Appetizer","recipe_tag_ids":[4],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/appetizer.jpg"},{"term":"soups","uri_name":"soups","key":"dish_types","display":"Soups","recipe_tag_ids":[63],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/soups.jpg"},{"term":"sides","uri_name":"sides","key":"courses","display":"Sides","recipe_tag_ids":[3],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/sides.jpg"},{"term":"dinner","uri_name":"dinner","key":"meal_types","display":"Dinner","recipe_tag_ids":[128],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/dinner.jpg"},{"term":"drinks","uri_name":"drinks","key":"dish_types","display":"Drinks","recipe_tag_ids":[66,67,68,88],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/drinks.jpg"},{"term":"dessert","uri_name":"dessert","key":"courses","display":"Dessert","recipe_tag_ids":[2],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/dessert.jpg"},{"term":"vegetarian","uri_name":"vegetarian","key":"diet_types","display":"Vegetarian","recipe_tag_ids":[225],"fallback_image":"https://static01.nyt.com/applications/cooking/b07b499/assets/vegetarian.jpg"}],
+        staticAssetPath:         'https://static01.nyt.com/applications/cooking/b07b499/assets',
       };
-      bootstrap.isNewUser = false;
     </script>
 
-    
-  
+      
 <script>
     bootstrap = window.bootstrap || {};
-    bootstrap.recipe = {"id":1017945,"name":"Coq au Riesling","byline":"Nigella Lawson","published_at":1453825108000};
-    bootstrap.recipe.super_collections =  ["Our Best Chicken Recipes"]
+    bootstrap.recipe = {"id":1017945,"name":"Coq au Riesling","byline":"Nigella Lawson","published_at":1453843108000};
+    bootstrap.recipe.super_collections =  ["Our Best Chicken Recipes"];
+    bootstrap.recipe.isRotd = false;
 
       bootstrap.recipe.avg_rating = 5;
-      bootstrap.recipe.num_ratings = 636;
+      bootstrap.recipe.num_ratings = 1402;
 </script>
 
 
-  <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '422306974586348',
-          xfbml      : true,
-          cookie     : true,
-          version    : 'v2.1'
-        });
-      };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <script src="https://a1.nyt.com/analytics/json-kidd.min.js"></script>
 
-
-    <script async type='text/javascript' src="//www.googletagservices.com/tag/js/gpt.js"></script>
-
-    <script src="//int.nyt.com/applications/cooking/5134de8/assets/core.bundle.js"></script>
-
-
-    <!-- TagX -->
-      <script src="//a1.nyt.com/analytics/tagx-simple.min.js"></script>
-
+    <script src="https://static01.nyt.com/applications/cooking/b07b499/assets/core.bundle.js"></script>
   </body>
 </html>

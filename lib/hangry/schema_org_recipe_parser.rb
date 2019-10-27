@@ -84,7 +84,8 @@ module Hangry
     end
 
     def parse_name
-      node_with_itemprop(:name).content
+      node = node_with_itemprop(:name)
+      node.name == "meta" ? node.attr(:content) : node.content
     end
 
     def parse_nutrition

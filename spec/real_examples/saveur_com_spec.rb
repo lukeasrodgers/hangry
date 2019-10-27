@@ -4,7 +4,7 @@ describe Hangry do
   context "saveur.com recipe" do
     before(:all) do
       skip "saveur.com appears to be using schema.org / RDFa format which will call for a new parser"
-      @html = File.read("spec/fixtures/saveur.com.html")
+      @html = File.read("spec/fixtures/www.saveur.com.html")
       @parsed = Hangry.parse(@html)
     end
     subject { @parsed }
@@ -38,7 +38,7 @@ describe Hangry do
 
     its(:instructions) { should == nil }
     its(:prep_time) { should == nil }
-    its(:published_date) { should == Date.parse("2013-03-12") }
+    its(:published_date) { should == Date.new(2013, 3, 12) }
     its(:total_time) { should == nil }
     its(:yield) { should == nil }
   end

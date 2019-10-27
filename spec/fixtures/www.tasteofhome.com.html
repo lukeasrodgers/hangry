@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head >
+<meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYOVVdSGwcFUFRVBQQA"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rhubarb Popover Pie Recipe | Taste of Home</title>
+		<script type="text/javascript">
+			var gs_channels="DEFAULT";
+			var gsurl=window.location!=window.top.location?document.referrer:window.location;
+			document.write('<scr'+'ipt type="text/javascript" src="https://trustedmediabrands.gscontxt.net/main/channels.fcgi?url='+encodeURIComponent(gsurl)+'"></scr'+'ipt>');
+		</script>
+		<meta property="fb:pages" content="61511025427" />
+		
+
+<!-- BEGIN Salesforce DMP ControlTag for "tmbi.com" -->
+<script class='kxct' data-id='s9xpab5u5' data-timing='async' data-version='3.0' type='text/javascript'>
+window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/s9xpab5u5.js';
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  }());
+</script>
+<!-- END Salesforce DMP ControlTag -->
+
+<script class='kxint' data-namespace='trustedmediabrandsinc' type='text/javascript'>
+window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+(function(){
+  function retrieve(n){
+    var k= 'kx'+'trustedmediabrandsinc_'+n, ls=(function(){
+      try {
+        return window.localStorage;
+      } catch(e) {
+        return null;
+      }
+    })();
+    if (ls) {
+        return ls[k] || '';
+    } else if (navigator.cookieEnabled) {
+        var m = document.cookie.match(k+'=([^;]*)');
+        return (m && unescape(m[1])) || '';
+    } else {
+        return '';
+    }
+  }
+  Krux.user = retrieve('user');
+  Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+})();
+</script><meta name="msvalidate.01" content="E95ABC1A248FFE4A75E71FFFCDE5F377" />
+<!-- This site is optimized with the Yoast SEO Premium plugin v9.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="This fabulous spring breakfast &quot;pie&quot; is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!&mdash;Patricia Kile, Elizabethtown, Pennsylvania."/>
+<link rel="canonical" href="https://www.tasteofhome.com/recipes/rhubarb-popover-pie/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Rhubarb Popover Pie" />
+<meta property="og:url" content="https://www.tasteofhome.com/recipes/rhubarb-popover-pie/" />
+<meta property="og:site_name" content="Taste of Home" />
+<meta property="article:publisher" content="https://www.facebook.com/tasteofhome" />
+<meta property="fb:app_id" content="301660770297572" />
+<meta property="og:image" content="https://www.tasteofhome.com/wp-content/uploads/2017/10/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="This fabulous spring breakfast &quot;pie&quot; is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!&mdash;Patricia Kile, Elizabethtown, Pennsylvania." />
+<meta name="twitter:title" content="Rhubarb Popover Pie" />
+<meta name="twitter:site" content="@tasteofhome" />
+<meta name="twitter:image" content="https://www.tasteofhome.com/wp-content/uploads/2017/10/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg" />
+<meta name="twitter:creator" content="@tasteofhome" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//assets.adobedtm.com' />
+<link rel='dns-prefetch' href='//z.moatads.com' />
+<link rel='dns-prefetch' href='//cdn.watchingthat.net' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//s.ntv.io' />
+<link rel='dns-prefetch' href='//www.chicoryapp.com' />
+<link rel='dns-prefetch' href='//cdn.speedcurve.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="rss2" title="Taste of Home &raquo; Feed" href="https://www.tasteofhome.com/feed/" />
+<link rel="alternate" type="rss2" title="Taste of Home &raquo; Comments Feed" href="https://www.tasteofhome.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.tasteofhome.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='tohv2-child-theme-css'  href='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/toh-above-the-fold.min.css?ver=3.7.99' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-style-css'  href='https://www.tasteofhome.com/wp-content/plugins/tmbi-recirc-module/css/owl-carousel-min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-theme-default-style-css'  href='https://www.tasteofhome.com/wp-content/plugins/tmbi-recirc-module/css/owl-theme-default-min.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='re-circ-style-css'  href='https://www.tasteofhome.com/wp-content/plugins/tmbi-recirc-module/css/re-circ.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.tasteofhome.com/wp-includes/css/dist/block-library/style.min.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='opinionStage_poll_oswp_style_css_set-css'  href='https://www.tasteofhome.com/wp-content/plugins/social-polls-by-opinionstage/gutenberg/poll/dist/blocks.style.build.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='opinionStage_trivia_oswp_style_css_set-css'  href='https://www.tasteofhome.com/wp-content/plugins/social-polls-by-opinionstage/gutenberg/trivia/dist/blocks.style.build.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='opinionStage_personality_oswp_style_css_set-css'  href='https://www.tasteofhome.com/wp-content/plugins/social-polls-by-opinionstage/gutenberg/personality/dist/blocks.style.build.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='opinionStage_survey_oswp_style_css_set-css'  href='https://www.tasteofhome.com/wp-content/plugins/social-polls-by-opinionstage/gutenberg/survey/dist/blocks.style.build.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='opinionStage_slideshow_oswp_style_css_set-css'  href='https://www.tasteofhome.com/wp-content/plugins/social-polls-by-opinionstage/gutenberg/slideshow/dist/blocks.style.build.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='opinionStage_form_oswp_style_css_set-css'  href='https://www.tasteofhome.com/wp-content/plugins/social-polls-by-opinionstage/gutenberg/form/dist/blocks.style.build.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gch-frontend-styles-css'  href='https://www.tasteofhome.com/wp-content/plugins/genesis-custom-headers/css/gch-frontend-styles.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gpt-ads-style-css'  href='https://www.tasteofhome.com/wp-content/plugins/tmbi-ad-stack/css/helper.css?ver=2.2.15' type='text/css' media='all' />
+<link rel='stylesheet' id='content-card-inserter-css-css'  href='https://www.tasteofhome.com/wp-content/plugins/tmbi-content-card/css/content-card-inserter.css?ver=1.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fancy-inline-recirc-css'  href='https://www.tasteofhome.com/wp-content/plugins/tmbi-fancy-inline-recirc/css/inline-fancy-recirc.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='styles-css'  href='https://www.tasteofhome.com/wp-content/plugins/tmbi-video-preview/css/styles.css?ver=0.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='gsfw-stylesheet-css'  href='https://www.tasteofhome.com/wp-content/plugins/genesis-variable-footer-widgets/css/style.min.css?ver=1.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tohv2-child-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C700i%7COpen+Sans%3A400%2C400i%2C600%2C600i%2C700%2C700i&#038;ver=3.7.99' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://www.tasteofhome.com/wp-includes/css/dashicons.min.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-icons-styles-css'  href='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/custom-icons-styles.css?ver=3.7.99' type='text/css' media='all' />
+<script type='text/javascript' src='//run.crtx.info/track.min.js' data-domain='www.tasteofhome.com' id='ADRIZER_JS'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-sticky-feature/js/sticky-plugin.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-sticky-feature/js/sticky-custom.js?ver=1.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var digitalData = {"page":{"theme":"tmbi-theme-v3","sitename":"toh","pageName":"toh:recipe:Rhubarb Popover Pie","content":{"contentName":"Rhubarb Popover Pie","tmbiBrand":"no brand","contentID":"49051","wpContentID":55693,"contentType":"recipe","category":"","tags":"","contentCost":"","publishedDate":"2018-01-01","modifiedDate":"2019-07-30","image":{"licensorName":"not available","credits":"Taste of Home"},"author":"Taste of Home Editors","authorRole":"editor, administrator","partnerName":"Holiday & Celebrations Cookbook 2010","affiliateDisclaimer":""},"subCategory":"","subsubCategory":"","category":{"subCategory":"","subsubCategory":"","pageType":""}}};
+/* ]]> */
+</script>
+<script async type='text/javascript' src='https://assets.adobedtm.com/launch-EN610ea377c05e4527a189aad8c4be4a89.js?ver=1.4.11'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ix_header_bidder_data = {"ix-desktop-url":"\/\/js-sec.indexww.com\/ht\/p\/184414-82921100256406.js","ix-mobile-url":"\/\/js-sec.indexww.com\/ht\/p\/184414-175280077214067.js"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/rd-ix-header-bidder/js/ix-header-bidder.js?ver=1.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var referrers_list = {"aol.com":"aol.com","besthealth.ca":"besthealth.ca","bing.com":"bing.com","businessinsider.com":"businessinsider.com","com.google":"com.google","com.google.android.gm":"com.google.android.gm","com.google.android.googlequicksearchbox":"com.google.android.googlequicksearchbox","com.pinterest":"com.pinterest","constructionprotips.com":"constructionprotips.com","duckduckgo.com":"duckduckgo.com","facebook.com":"facebook.com","m.facebook.com":"m.facebook.com","familyhandyman.com":"familyhandyman.com","flipboard.com":"flipboard.com","from.flipboard.com":"from.flipboard.com","foxnews.com":"foxnews.com","gmail.com":"gmail.com","google.ca":"google.ca","google.co.in":"google.co.in","google.co.uk":"google.co.uk","google.com":"google.com","google.com.au":"google.com.au","google.com.ph":"google.com.ph","google.ie":"google.ie","instagram.com":"instagram.com","l.facebook.com":"l.facebook.com","linkedin.com":"linkedin.com","linkin.bio":"linkin.bio","live.com":"live.com","mail.yahoo.com":"mail.yahoo.com","msn.com":"msn.com","nativeapp.toutiao.com":"nativeapp.toutiao.com","newsbreakapp.com":"newsbreakapp.com","outbrain.com":"outbrain.com","outlook.com":"outlook.com","paid.outbrain.com":"paid.outbrain.com","pinterest.com":"pinterest.com","rd.com":"rd.com","readersdigest.ca":"readersdigest.ca","reddit.com":"reddit.com","selection.readersdigest.ca":"selection.readersdigest.ca","smartnews.com":"smartnews.com","t.co":"twitter.com","taboola.com":"taboola.com","tasteofhome.com":"tasteofhome.com","thehealthy.com":"thehealthy.com","twitter.com":"twitter.com","yahoo.com":"yahoo.com","search.yahoo.com":"search.yahoo.com","zergnet.com":"zergnet.com"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-referral-tracking/js/referral-tracking.js?ver=1.0.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var login_guid = [];
+var login_name = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/cookie-controller/js/cookie.min.js?ver=1.2'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/jquery-plugins/jquery.inview.custom.min.js?ver=1.3'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/js-utils/js-utils.js?ver=1.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/js-utils/js-sizes.js?ver=1.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/js/wp-js-hooks.js?ver=1.3'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/rd-taboola/js/toh-taboola-loader.js?ver=0.2.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-ad-stack/js/tmbi-media-net-bidder.js?ver=2.2.15'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tmbi_ad_data = {"property":"6178","siteId":"toh","pageType":"recipedetail","template":"detail","urlPath":"\/recipes\/rhubarb-popover-pie\/","keywords":"nokeywords","category":"novalue","topic":"novalue","header_bidders_timeout":"1000","_gfc":"","should_use_batch_SRA":"1","ad_slots":{"sponsor-logo":{"slotUrl":"sponsor","sizes":{"mobile":[[4,4]],"tablet":[[4,4]],"desktop":[[4,4]],"large_screen":[[4,4]]},"targeting":{"tf":["atf"],"pos":["sponsor"],"location":[""]},"supported_types":[]},"ad-sidebar-top":{"slotUrl":"rail_1","sizes":{"mobile":[],"tablet":[],"desktop":[[300,250]],"large_screen":[[300,250]]},"targeting":{"tf":["atf"],"pos":"rail_1","location":["rail"]},"supported_types":[]},"mobile_prearticle":{"slotUrl":"prearticle","sizes":{"mobile":[[320,50]],"tablet":[],"desktop":[],"large_screen":[]},"targeting":{"tf":["atf"],"pos":["prearticle"],"location":["top"]},"supported_types":[]},"prearticle":{"slotUrl":"prearticle","sizes":{"mobile":[],"tablet":[[728,90]],"desktop":[[970,250],[970,90],[728,90]],"large_screen":[[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["atf"],"pos":["prearticle"],"location":["top"]},"supported_types":[],"change_size":{"homepage":{"mobile":[],"tablet":[[320,50]],"desktop":[[728,90]],"large_screen":[[970,250],[970,90],[728,90],[3,3]]},"recipedetail":{"mobile":[],"tablet":[[728,90]],"desktop":[[970,250],[970,90],[728,90],[3,3]],"large_screen":[[970,250],[970,90],[728,90],[3,3]]},"category":{"mobile":[],"tablet":[[300,250],[320,50]],"desktop":[[728,90]],"large_screen":[[970,250],[970,90],[728,90],[3,3]]},"archive":{"mobile":[],"tablet":[[300,250],[320,50]],"desktop":[[728,90]],"large_screen":[[970,250],[970,90],[728,90],[3,3]]},"projectdetail":{"mobile":[],"tablet":[[320,50]],"desktop":[[728,90]],"large_screen":[[970,250],[970,90],[728,90],[3,3]]},"videocategory":{"mobile":[],"tablet":[[728,90]],"desktop":[[970,250],[970,90],[728,90],[300,250]],"large_screen":[[970,250],[970,90],[728,90],[300,250]]},"listicle":{"mobile":[],"tablet":[[728,90],[640,360],[3,3]],"desktop":[[970,250],[970,90],[728,90],[3,3]],"large_screen":[[970,250],[970,90],[728,90],[3,3]]}}},"leaderboard":{"slotUrl":"oop","sizes":{"mobile":[],"tablet":[],"desktop":[[1,1]],"large_screen":[[1,1]]},"targeting":{"tf":["btf"],"pos":["oop"],"location":["oop"]},"supported_types":[]},"ad-sidebar-middle":{"slotUrl":"rail_2","sizes":{"mobile":[],"tablet":[],"desktop":[[300,250]],"large_screen":[[300,250]]},"targeting":{"tf":["atf"],"pos":"rail_2","location":["rail"]},"supported_types":["listicle","article","recipedetail","projectdetail"]},"ad-sidebar-bottom":{"slotUrl":"railscroll","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":["railscroll"],"location":["rail"]},"supported_types":["article","recipedetail"],"scroll_type":"rail"},"ad-sidebar-fourth":{"slotUrl":"railscroll","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":["railscroll"],"location":["rail"]},"supported_types":["article","recipedetail"],"scroll_type":"rail"},"ad-recipe-sidebar-scroll":{"slotUrl":"railscroll","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":["railscroll"],"location":["rail"]},"supported_types":["recipedetail"],"scroll_type":"rail"},"non-contextual-video":{"slotUrl":"video","sizes":{"mobile":[[1000,1000]],"tablet":[[1000,1000]],"desktop":[[1000,1000]],"large_screen":[[1000,1000]]},"targeting":{"tf":["btf"],"pos":["video"],"location":["bottom"]},"supported_types":["recipedetail"]},"recipe-top":{"slotUrl":"content_1","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["atf"],"pos":"content_1","location":["top"]},"supported_types":["recipedetail"]},"recipe-middle":{"slotUrl":"content_2","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_2","location":["middle"]},"supported_types":["recipedetail"]},"recipe-scroll":{"slotUrl":"scroll","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":["scroll"],"location":["bottom"]},"supported_types":["recipedetail"]},"recipe-top-mobile":{"slotUrl":"top_mobile","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[]},"targeting":{"tf":["atf"],"pos":["top"],"location":["top"]},"supported_types":["recipedetail"]},"print-recipe":{"slotUrl":"rail_1","sizes":{"mobile":[],"tablet":[[160,600],[300,250],[300,600]],"desktop":[[160,600],[300,250],[300,600]],"large_screen":[[160,600],[300,250],[300,600]]},"targeting":{"tf":["atf"],"pos":"rail_1","location":["top"]},"supported_types":["recipedetail"]},"branded-ingredient":{"slotUrl":"sponsored","sizes":{"mobile":[[300,251]],"tablet":[[300,251]],"desktop":[[300,251]],"large_screen":[[300,251]]},"targeting":{"tf":["btf"],"pos":["ingredient"],"location":[""]},"supported_types":[]},"oop-adhesive":{"slotUrl":"oop","sizes":{"mobile":[[320,50],[1,1]],"tablet":[],"desktop":[],"large_screen":[]},"targeting":{"tf":["atf"],"pos":["oop"],"location":["oop"]},"supported_types":[]},"rail_1":{"slotUrl":"rail_1","sizes":{"mobile":[],"tablet":[],"desktop":[[300,250]],"large_screen":[[300,250]]},"targeting":{"tf":["atf"],"pos":"rail_1","location":["rail"]},"supported_types":[]},"rail_2":{"slotUrl":"rail_2","sizes":{"mobile":[],"tablet":[],"desktop":[[300,250]],"large_screen":[[300,250]]},"targeting":{"tf":["atf"],"pos":"rail_2","location":["rail"]},"supported_types":["listicle","article","recipedetail","projectdetail"]},"content_1":{"slotUrl":"content_1","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["atf"],"pos":"content_1","location":["top"]},"supported_types":["recipedetail"]},"content_2":{"slotUrl":"content_2","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_2","location":["middle"]},"supported_types":["recipedetail"]},"content_3":{"slotUrl":"content_3","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_3","location":["bottom"]},"supported_types":["recipedetail"]},"content_4":{"slotUrl":"content_4","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_4","location":["bottom"]},"supported_types":["recipedetail"]},"content_5":{"slotUrl":"content_5","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_5","location":["bottom"]},"supported_types":["recipedetail"]},"content_6":{"slotUrl":"content_6","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_6","location":["bottom"]},"supported_types":["recipedetail"]},"content_7":{"slotUrl":"content_7","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_7","location":["bottom"]},"supported_types":["recipedetail"]},"content_8":{"slotUrl":"content_8","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_8","location":["bottom"]},"supported_types":["recipedetail"]},"content_9":{"slotUrl":"content_9","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_9","location":["bottom"]},"supported_types":["recipedetail"]},"content_10":{"slotUrl":"content_10","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_10","location":["bottom"]},"supported_types":["recipedetail"]},"content_11":{"slotUrl":"content_11","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_11","location":["bottom"]},"supported_types":["recipedetail"]},"content_12":{"slotUrl":"content_12","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_12","location":["bottom"]},"supported_types":["recipedetail"]},"content_13":{"slotUrl":"content_13","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_13","location":["bottom"]},"supported_types":["recipedetail"]},"content_14":{"slotUrl":"content_14","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_14","location":["bottom"]},"supported_types":["recipedetail"]},"content_15":{"slotUrl":"content_15","sizes":{"mobile":[[300,600],[300,250],[3,3]],"tablet":[[300,250],[728,90],[640,360],[3,3]],"desktop":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]],"large_screen":[[300,250],[970,550],[970,250],[970,90],[728,90],[3,3]]},"targeting":{"tf":["btf"],"pos":"content_15","location":["bottom"]},"supported_types":["recipedetail"]},"rail_3":{"slotUrl":"rail_3","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_3","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_4":{"slotUrl":"rail_4","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_4","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_5":{"slotUrl":"rail_5","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_5","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_6":{"slotUrl":"rail_6","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_6","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_7":{"slotUrl":"rail_7","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_7","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_8":{"slotUrl":"rail_8","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_8","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_9":{"slotUrl":"rail_9","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_9","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_10":{"slotUrl":"rail_10","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_10","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_11":{"slotUrl":"rail_11","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_11","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_12":{"slotUrl":"rail_12","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_12","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_13":{"slotUrl":"rail_13","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_13","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_14":{"slotUrl":"rail_14","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_14","location":["rail"]},"supported_types":["article","recipedetail"]},"rail_15":{"slotUrl":"rail_15","sizes":{"mobile":[],"tablet":[],"desktop":[],"large_screen":[[160,600],[300,250],[300,600],[300,1050]]},"targeting":{"tf":["btf"],"pos":"rail_15","location":["rail"]},"supported_types":["article","recipedetail"]}},"options":{"dfp_property":"","dfp_site_id":"","ad_stack_batch_sra_listicles":true,"ad_stack_batch_sra_recipe":true,"ad_stack_batch_sra_homepage":true,"dfp_exclude_pages":"764080,6523,5464,951492","dfp_lazy_load_offset_article":"400","dfp_lazy_load_offset_article_mobile":"400","dfp_lazy_load_offset_category":"400","dfp_lazy_load_offset_category_mobile":"400","dfp_lazy_load_offset_homepage":"400","dfp_lazy_load_offset_homepage_mobile":"400","dfp_lazy_load_offset_joke":"400","dfp_lazy_load_offset_joke_mobile":"400","dfp_lazy_load_offset_listicle":"400","dfp_lazy_load_offset_listicle_mobile":"400","dfp_lazy_load_offset_projectdetail":"400","dfp_lazy_load_offset_projectdetail_mobile":"400","dfp_lazy_load_offset_recipedetail":"400","dfp_lazy_load_offset_recipedetail_mobile":"400","dfp_lazy_load_offset_slideshow":"400","dfp_lazy_load_offset_slideshow_mobile":"400","dfp_lazy_load_offset_videocategory":"400","dfp_lazy_load_offset_videocategory_mobile":"400","dfp_lazy_load_offset_heavy":"400","dfp_lazy_load_offset_heavy_mobile":"400","dfp_exclude_leaderboard_ad_pages":"","media_net_bidder":"1","dfp_ad_lazyload_arbitrage_switch":"1","ad_index_bidder":"1","ad_amazon_bidder":"2","dfp_refresh_ad_timer":"31","dfp_refresh_ad_count":"4","arbitrage_dfp_refresh_ad_timer":"31","arbitrage_dfp_refresh_ad_count":"4"},"lazy_load_inview_offset":{"mobile":"400","desktop":"400"},"review_count":"3","contentID":"55693","platform":"desktop","ad_unit_two":"","overrides":[],"global_targeting":{"pt":"recipedetail","tax0":"toh","tax1":"novalue","tax2":"novalue","tax3":"nokeywords","platform":"desktop","sponsors":["no_value"],"categories-v2":["no_value"],"budget":["no_value"],"cuisine":["no_value"],"course":["breakfast_recipes","brunch_recipes","easter_breakfast_recipes","pancakes","vegetarian_breakfast_recipes","vegetarian_brunch_recipes","vegetarian_recipes"],"winning-recipes":["no_value"],"kids":["no_value"],"holidays-celebrations":["easter_brunch_recipes","easter_recipes"],"ingredient":["rhubarb_recipes"],"publication":["no_value"],"healthy-eating":["no_value"],"partner-recipes":["no_value"],"cooking-style":["no_value"],"author":["cap-tohapi"]}};
+var krux_data = {"page":{"category":"novalue","topic":"novalue","keyword":"nokeywords","contentid":55693,"author":"Taste of Home Editors","ingredient":"rhubarbrecipes","recipeid":49051,"gs_categories":null,"course":"breakfastrecipes,brunchrecipes,easterbreakfastrecipes,pancakes,vegetarianbreakfastrecipes,vegetarianbrunchrecipes,vegetarianrecipes","holidays-celebrations":"easterbrunchrecipes,easterrecipes"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-ad-stack/js/tmbi-ad-stack.js?ver=2.2.15'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-ad-stack/js/tmbi-batch-sra.js?ver=2.2.15'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-amazon-a9/js/amazon-lib.js?ver=1.9'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-amazon-a9/js/tmbi-amazon-a9.js?ver=1.9'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-amazon-a9/js/tmbi-a9-video.js?ver=1.9'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-content-card/js/remove-hyperlink.js?ver=1.0.3'></script>
+<script async type='text/javascript' src='//s.ntv.io/serve/load.js?ver=1.4'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-nativo/js/nativo-custom.js?ver=1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pinterest_tid = {"tid":"2612561823788"};
+/* ]]> */
+</script>
+<script async type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-pinterest-pixels/js/pinterest-pixels.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Redirect_To_Arbitrage_Settings = {"post_type":["None"],"referer":["None"],"device_type":["None"],"msn_query_paramater":"refmsn","yahoo_query_paramater":"refyahoo","pinterest_query_paramater":"refpin"};
+var site = "toh";
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-redirect-to-arbitrage/js/redirect-to-arbitrage.js?ver=1.0.7'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-video-preview/js/vtt.min.js?ver=0.0.2'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-video-preview/js/custom-script.js?ver=0.0.2'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/genesis/lib/js/html5shiv.min.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/toh-comments.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/jquery.magnific-popup.min.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/toh-popup-custom.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/slinky.min.js?ver=3.7.99'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fb_pixel_data = {"fb_pixel_id":"1470684766408550"};
+/* ]]> */
+</script>
+<script async type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-fb-retargeting-pixel/js/facebook-retargeting-tag.js?ver=1.0.1'></script>
+<link rel='https://api.w.org/' href='https://www.tasteofhome.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.tasteofhome.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.tasteofhome.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.0.3" />
+<link rel='shortlink' href='https://www.tasteofhome.com/?p=55693' />
+<link rel="alternate" type="application/json+oembed" href="https://www.tasteofhome.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.tasteofhome.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&#038;format=xml" />
+<style type="text/css"> .enews .screenread {
+	height: 1px;
+    left: -1000em;
+    overflow: hidden;
+    position: absolute;
+    top: -1000em;
+    width: 1px; } </style>
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','gaplusu');
+
+                                                            gaplusu('create', 'UA-38657577-1', 'auto');
+                    
+                                        
+                    gaplusu('send', 'pageview');
+                
+                            </script>
+
+		
+<link rel="api" href="https://www.tasteofhome.com/wp-json/wp/v2/recipe/55693?_embed">
+<script type="application/ld+json">{
+    "@context": "https:\/\/schema.org",
+    "@type": "Recipe",
+    "@id": "https:\/\/www.tasteofhome.com\/recipes\/rhubarb-popover-pie\/",
+    "name": "Rhubarb Popover Pie",
+    "prepTime": "PT25M",
+    "cookTime": "PT20M",
+    "totalTime": "PT45M",
+    "image": [
+        "https:\/\/tmbidigitalassetsazure.blob.core.windows.net\/secure\/RMS\/attachments\/37\/1200x1200\/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg",
+        [
+            "https:\/\/cdn3.tmbi.com\/toh\/GoogleImages\/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg"
+        ],
+        [
+            "https:\/\/cdn3.tmbi.com\/toh\/GoogleImagesPostCard\/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg"
+        ]
+    ],
+    "recipeCategory": [
+        "Breakfast Recipes",
+        "Brunch Recipes",
+        "Easter Breakfast Recipes",
+        "Pancakes",
+        "Vegetarian Breakfast Recipes",
+        "Vegetarian Brunch Recipes",
+        "Vegetarian Recipes",
+        "Easter Brunch Recipes",
+        "Easter Recipes",
+        "Rhubarb Recipes"
+    ],
+    "description": "This fabulous spring breakfast \"pie\" is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!&mdash;Patricia Kile, Elizabethtown, Pennsylvania.",
+    "recipeIngredient": [
+        "1\/2 cup all-purpose flour",
+        "1\/4 teaspoon salt",
+        "2 large eggs",
+        "1\/2 cup 2% milk",
+        "2 tablespoons butter",
+        "FILLING:",
+        "1-1\/2 cups sliced fresh or frozen rhubarb, thawed",
+        "1\/2 cup canned pineapple chunks",
+        "1\/3 cup butter, cubed",
+        "1\/2 cup packed brown sugar",
+        "Whipped cream or vanilla ice cream, optional"
+    ],
+    "recipeInstructions": "In a large bowl, combine flour and salt. In another bowl, whisk eggs and milk.,    Place butter in an 9-in. pie plate; heat in a 425&deg; oven for 3-5 minutes or until butter is melted. Meanwhile, stir egg mixture into dry ingredients just until moistened.,    Carefully swirl the butter in the pan to coat the sides and bottom of pan; add batter. Bake at 425&deg; for 16-20 minutes or until puffed and golden brown.,    Meanwhile, in a large skillet, saute rhubarb and pineapple in butter until rhubarb is tender. Stir in brown sugar; bring to a boil over medium heat, stirring constantly. Pour into the center of puffed pancake; cut into six wedges. Serve immediately with whipped cream if desired.",
+    "recipeYield": "6 servings.",
+    "author": {
+        "@type": "Organization",
+        "name": "Taste of Home"
+    },
+    "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": " 279 calories",
+        "fatContent": "16g fat (10g saturated fat)",
+        "cholesterolContent": "109mg cholesterol",
+        "sodiumContent": "239mg sodium",
+        "carbohydrateContent": "31g carbohydrate (21g sugars",
+        "fiberContent": "1g fiber)",
+        "proteinContent": "4g protein. "
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "3",
+        "reviewCount": 3,
+        "ratingCount": 4
+    },
+    "review": [
+        {
+            "@type": "Review",
+            "description": "rated 6",
+            "dateCreated": "04\/09\/2013 09:11",
+            "author": {
+                "@type": "Person",
+                "name": "Prov3"
+            },
+            "itemReviewed": {
+                "@type": "Thing",
+                "name": "Rhubarb Popover Pie"
+            }
+        },
+        {
+            "@type": "Review",
+            "description": "This goes together very fast.  The dough part sure does puff up.  My filling was very thick, then I probably used extra rhubarb.  I used frozen rhubarb from the freezer to get it used up, but thawed first.  Waiting for my rhubarb to get big enough this spring so I can make it again.",
+            "dateCreated": "04\/20\/2012 15:42",
+            "author": {
+                "@type": "Person",
+                "name": "redcow"
+            },
+            "itemReviewed": {
+                "@type": "Thing",
+                "name": "Rhubarb Popover Pie"
+            }
+        },
+        {
+            "@type": "Review",
+            "description": "I had never made a popover before, it turned out great. I am guessing that I didn&#39;t cook the pineapple\/rhubarb sauce long enough. The flavor was good, it wasn&#39;t very pretty and was too runny.",
+            "dateCreated": "04\/16\/2012 08:29",
+            "author": {
+                "@type": "Person",
+                "name": "andi99"
+            },
+            "itemReviewed": {
+                "@type": "Thing",
+                "name": "Rhubarb Popover Pie"
+            }
+        }
+    ]
+}</script>
+<meta name="category" content="course, Breakfast Recipes, Brunch Recipes, holidays-celebrations, ingredient, Rhubarb Recipes, Vegetarian Recipes">
+<meta name="pageName" content="Rhubarb Popover Pie" />
+<meta name="contentId" content="49051" />
+<meta name="adZone" content="toh.tastehome/recipechannel" />
+<meta name="contentType" content="37" />
+<meta name="parsely-tags" content="course, Breakfast Recipes, Brunch Recipes, holidays-celebrations, ingredient, Rhubarb Recipes, Vegetarian Recipes" />
+<meta name="parsely-title" content="Rhubarb Popover Pie" />
+<meta name="parsely-link" content="https://www.tasteofhome.com/recipes/rhubarb-popover-pie/" />
+<meta name="parsely-image-url" content="https://www.tasteofhome.com/wp-content/uploads/2017/10/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg" />
+<meta name="parsely-type" content="post" />
+<meta name="parsely-pub-date" content="2018-01-01T00:00:00Z" />
+<meta name="parsely-author" content="Patricia Kile" />
+<meta name="parsely-section" content="RMSRecipe" />
+<link rel="icon" href="https://www.tasteofhome.com/wp-content/uploads/2018/09/TOH_Pinterest_ProfilePhoto_RedBkg-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.tasteofhome.com/wp-content/uploads/2018/09/TOH_Pinterest_ProfilePhoto_RedBkg.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.tasteofhome.com/wp-content/uploads/2018/09/TOH_Pinterest_ProfilePhoto_RedBkg.png" />
+<meta name="msapplication-TileImage" content="https://www.tasteofhome.com/wp-content/uploads/2018/09/TOH_Pinterest_ProfilePhoto_RedBkg.png" />
+</head>
+<body class="recipe-template-default single single-recipe postid-55693 header-full-width full-width-content"><div class="site-container"><section><span class="screen-reader-text">Skip links</span><ul class="genesis-skip-link"><li><a href="#genesis-content" class="screen-reader-shortcut"> Skip to content</a></li></ul></section>
+<div class="white-out"></div>
+
+	<div class="sticky-recipe-header sticky">
+
+		<div class="share-stick-wrapper">
+			<a data-analytics-metrics='{"link_name":"share","link_module":"content engagement","link_pos":"share - sticky unit"}'
+			   id="sm-recipe-social-share-header" class="srf-link" href="javascript: void(0)">
+				<div class="social-srf-container">
+					<i class="dashicons dashicons-share"></i>
+				</div>
+				<div class="share-text">Share</div>
+			</a>
+			 <a data-analytics-metrics='{"link_name":"save","link_module":"content engagement","link_pos":"share - sticky unit"}'
+				id="sm-recipe-save-header" class="srf-link login-verify" href="#recipe-save-popup"
+               style="display: none;">
+                <div class="srf-container">
+                    <i class="dashicons dashicons-heart"></i>
+                    <span id="recipe-saved-sticky">Save</span>
+                </div>
+            </a><a data-analytics-metrics='{"link_name":"facebook","link_module":"content engagement","link_pos":"facebook - sticky unit"}' id="sm-recipe-facebook-header" class="srf-link adobe-tracking" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&tRhubarb+Popover+Pie=&v=3','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" style="display: none;">
+				<div class="srf-container srf-facebook">
+					<i class="dashicons dashicons-facebook"></i>
+					<span id="recipe-facebook-sticky">Share on Facebook</span>
+				</div>
+			</a><a data-analytics-metrics='{"link_name":"pinterest","link_module":"content engagement","link_pos":"share - sticky unit"}' id="sm-recipe-pinterest-header" class="srf-link adobe-tracking" onClick="window.open('https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&media=http%3A%2F%2Fwww.tasteofhome.com%2Fwp-content%2Fuploads%2F2017%2F10%2FRhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg&description=Rhubarb+Popover+Pie','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" style="display: none;">
+				<div class="srf-container srf-pinterest">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 172 172" width="21px" height="21px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="normal" font-size="none" text-anchor="start" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#c92228"></path><g fill="#ffffff"><g id="surface1"><path d="M86,1.24038c-46.79868,0 -84.75962,37.96094 -84.75962,84.75962c0,35.86779 22.30108,66.46394 53.77584,78.84195c-0.12921,-2.89423 -0.12921,-17.90805 10.3107,-62.69111c1.39544,-14.93629 -0.54267,-20.23377 -0.54267,-26.43569c0,-14.08354 7.3131,-17.05529 11.60276,-17.05529c6.09856,0 14.49699,2.32572 14.49699,12.14543c0,11.24099 -9.17367,14.21274 -9.17367,14.21274c0,0 -0.64604,2.86838 -1.42128,10.85337c-0.7494,8.01081 2.45493,16.69351 15.50481,16.69351c20.93149,0 24.16166,-29.07151 24.16166,-37.08233c0,-11.03425 -8.08835,-33.46454 -33.23197,-33.46454c-33.51622,0 -39.27885,30.02764 -39.27885,38.03846c0,3.4369 0.93029,9.48377 1.57632,12.0679c6.33113,1.03365 5.6851,9.69051 2.97176,12.14544c-2.9976,2.71334 -18.47656,5.94351 -18.47656,-28.01202c0,-32.32753 28.8131,-48.99519 54.11178,-48.99519c24.08413,0 50.28726,16.61599 50.28726,48.60757c0,28.58053 -20.51803,51.0625 -42.09555,51.0625c-12.94651,0 -19.82031,-10.67247 -19.82031,-10.67247c0,10.0006 -18.34735,44.31791 -20.69892,48.6851c9.53546,3.69531 19.87199,5.8143 30.69952,5.8143c46.82452,0 84.75962,-37.9351 84.75962,-84.75962c0,-46.82452 -37.96094,-84.75962 -84.75962,-84.75962z"></path></g></g><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path></g></svg>
+					<span id="recipe-pinterest-sticky">Save on Pinterest</span>
+				</div>
+			</a><a data-analytics-metrics='{"link_name":"twitter","link_module":"content engagement","link_pos":"share - sticky unit"}' id="sm-recipe-twitter-header" class="srf-link adobe-tracking" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&amp;text=Rhubarb+Popover+Pie&amp;hashtags=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" style="display: none;">
+				<div class="srf-container srf-twitter">
+					<i class="dashicons dashicons-twitter"></i>
+					<span id="recipe-twitter-sticky">Tweet this</span>
+				</div>
+			</a><a data-analytics-metrics='{"link_name":"email","link_module":"content engagement","link_pos":"share - sticky unit"}' id="sm-recipe-email-header" class="srf-link adobe-tracking" onClick="window.open('mailto:?subject=Rhubarb Popover Pie&amp;body=I thought you might like this...%0D%0A %0D%0ARhubarb Popover Pie %0D%0A %0D%0Ahttps://www.tasteofhome.com/recipes/rhubarb-popover-pie/?_cmp=stf%0D%0A%0D%0AHappy Cooking, %0D%0AYour friends from Taste of Home %0D%0A %0D%0A-- %0D%0A %0D%0AFor more great recipes and cooking inspiration signup for our newsletters https://bit.ly/2RcXV7b');" href="javascript: void(0)" style="display: none;">
+				<div class="srf-container srf-email">
+					<i class="dashicons dashicons-email"></i>
+					<span id="recipe-twitter-sticky">Email</span>
+				</div>
+			</a><a id="" class="srf-link next-recipe-button" href="#">
+				<div class="srf-container next-recipe next">
+					<span>Next Recipe</span>
+					<span class="dashicons dashicons-arrow-right-alt2" aria-hidden="true"></span>
+				</div>
+			</a>
+		</div>
+	<div class="sticky-social-share-menu" style="display:none;">
+		<div class="arrow-up"></div>
+		<div class="toh-sharing social-sharing post recipe-sticky"><div class="social-share">						<a data-analytics-metrics='{"link_name":"facebook","link_module":"content engagement","link_pos":"social share-below main image"}' id="fb-share" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&tRhubarb+Popover+Pie=&v=3','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/facebook-letter-logo.svg" alt="facebook" width /></a> 							<a data-analytics-metrics='{"link_name":"flipboard","link_module":"content engagement","link_pos":"social share-below main image"}' id="flipboard-share" data-flip-widget="shareflip" href="https://flipboard.com"><img src="https://cdn.flipboard.com/badges/flipboard_mrrw.png" /></a><script src="https://cdn.flipboard.com/web/buttons/js/flbuttons.min.js" type="text/javascript"></script>
+													<a data-analytics-metrics='{"link_name":"twitter","link_module":"content engagement","link_pos":"social share-below main image"}' id="twitter-share" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&amp;text=Rhubarb+Popover+Pie&amp;hashtags=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/twitter-logo.svg" alt="twitter" /></a> 							<a data-analytics-metrics='{"link_name":"pinterest","link_module":"content engagement","link_pos":"social share-below main image"}' id="pinterest-share" onClick="window.open('https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&media=http%3A%2F%2Fwww.tasteofhome.com%2Fwp-content%2Fuploads%2F2017%2F10%2FRhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg&description=Rhubarb+Popover+Pie','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/pinterest-social-visual-website-logotype.svg" alt="Pinterest"/></a> 						<a data-analytics-metrics='{"link_name":"email","link_module":"content engagement","link_pos":"social share-below main image"}'  id="email_a_friend" onClick="window.open('mailto:?subject=Rhubarb Popover Pie&body=I thought you might like this...%0D%0A %0D%0ARhubarb Popover Pie %0D%0A %0D%0Ahttps%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F%3F_cmp%3Dstf %0D%0A %0D%0AHappy Cooking, %0D%0AYour friends from Taste of Home %0D%0A %0D%0A-- %0D%0A %0D%0AFor more great recipes and cooking inspiration signup for our newsletters https://bit.ly/2RcXV7b','_self')" href="javascript: void(0)" > <img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/envelope.svg" alt="Email" /></a> <a data-analytics-metrics="" id="share-save" class="srf-link" href="#recipe-save-popup"><i class="dashicons dashicons-heart save-button"></i></a> </div></div>	</div>
+	</div>
+
+
+<header class="site-header"><div class="wrap">	<div class="desktop-upper-wrapper  ">
+		<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<div class="menu-upper-right-menu-container"><ul id="menu-upper-right-menu" class="desktop-upper-menu"><li id="menu-item-677176" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Submit a recipe","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com/recipes/add">Submit a recipe</a></li>
+<li id="menu-item-677178" class="login-class menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Login","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com/login/index?returnurl=https://www.tasteofhome.com/recipes/rhubarb-popover-pie/">Login</a></li>
+<li id="menu-item-677179" class="join-link menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Join","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com/login/index?returnurl=https://www.tasteofhome.com/recipes/rhubarb-popover-pie/">Join</a></li>
+</ul></div><div id="subscribe-to-magazine"><a data-analytics-metrics='{"link_name":"subscribe","link_module":"header","link_pos":"secondary navigation"}' class="subscribe-header-cta" target="_blank" rel="noopener" href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&cds_page_id=217957&cds_response_key=IVKADU101"><img class="subscribe-logo" alt="Subscribe" src="https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/subscribe-to-the-magazine.png" data-pin-nopin="true" ></a></div>	</div>
+	<!-- .desktop-upper-wrapper -->
+
+	<button id="toh-menu-toggle" class="toh-menu-toggle" aria-expanded="false" aria-controls="toh-menu-wrapper">
+		<div class="toh-menu-icon" aria-hidden="true">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="menu-close">Menu</div>
+		<div class="menu-open">Close</div>
+	</button>
+	<!-- .toh-menu-toggle -->
+
+	<div class="toh-menu-wrapper" id="toh-menu-wrapper" aria-hidden="true">
+
+		<div class="toh-site-menu-wrapper">
+			<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<div class="menu-hamburger-menu-container"><ul id="menu-hamburger-menu" class="toh-site-menu"><li id="menu-item-677193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Recipes</a>
+<ul class="sub-menu">
+	<li id="menu-item-677199" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Recipes:Appetizers","link_module":"header","link_pos":"drop down navigation"}' href="https://www.tasteofhome.com/course/appetizers/">Appetizers</a></li>
+	<li id="menu-item-677208" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Recipes:Breakfast","link_module":"header","link_pos":"drop down navigation"}' href="https://www.tasteofhome.com/course/breakfast-recipes/">Breakfast</a></li>
+	<li id="menu-item-677213" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Recipes:Desserts","link_module":"header","link_pos":"drop down navigation"}' href="https://www.tasteofhome.com/course/desserts/">Desserts</a></li>
+	<li id="menu-item-677215" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Recipes:Dinner","link_module":"header","link_pos":"drop down navigation"}' href="https://www.tasteofhome.com/course/dinner-recipes/">Dinner</a></li>
+	<li id="menu-item-690634" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Recipes:Partner Recipes","link_module":"header","link_pos":"drop down navigation"}' href="https://www.tasteofhome.com/partner-recipes/">Partner Recipes</a></li>
+	<li id="menu-item-677219" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Recipes:See All Recipes","link_module":"header","link_pos":"drop down navigation"}' href="https://www.tasteofhome.com/recipes/">See All Recipes</a></li>
+</ul>
+</li>
+<li id="menu-item-677221" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Holidays","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/holidays-celebrations/">Holidays</a></li>
+<li id="menu-item-677226" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Food News","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/food-news/">Food News</a></li>
+<li id="menu-item-690639" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Home &amp; Living","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/home-living/">Home &#038; Living</a></li>
+<li id="menu-item-690636" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Kitchen","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/kitchen/">Kitchen</a></li>
+<li id="menu-item-810401" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Videos","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/videos/">Videos</a></li>
+<li id="menu-item-677227" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Contests","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/contests">Contests</a></li>
+<li id="menu-item-677228" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Magazine","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/article/subscribe-to-our-magazines/">Magazine</a></li>
+<li id="menu-item-677233" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Shop","link_module":"header","link_pos":"main navigation"}' href="https://www.shoptasteofhome.com/?utm_source=toh.com&amp;utm_medium=website&amp;utm_campaign=homepagemenu1805">Shop</a></li>
+<li id="menu-item-677238" class="login-class menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Log In \/ Join","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/login">Log In / Join</a></li>
+<li id="menu-item-677242" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Submit a Recipe","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/recipes/add">Submit a Recipe</a></li>
+<li id="menu-item-677246" class="non-logged-in-subscribe menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Subscribe","link_module":"header","link_pos":"main navigation"}' href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&amp;cds_page_id=217957&amp;cds_response_key=IW7ADU101">Subscribe</a></li>
+<li id="menu-item-730861" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Newsletters","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/newslettersignuppage?OptID=82&amp;OrgSource=CMHeader&amp;pmcode=CMHeader">Newsletters</a></li>
+<li id="menu-item-1050888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Follow Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-1050893" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Follow Us:Facebook","link_module":"header","link_pos":"drop down navigation"}' href="https://www.facebook.com/tasteofhome/">Facebook</a></li>
+	<li id="menu-item-1050898" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Follow Us:Pinterest","link_module":"header","link_pos":"drop down navigation"}' href="https://www.pinterest.com/taste_of_home/">Pinterest</a></li>
+	<li id="menu-item-1050903" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Follow Us:Instagram","link_module":"header","link_pos":"drop down navigation"}' href="https://www.instagram.com/tasteofhome/">Instagram</a></li>
+	<li id="menu-item-1050908" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Follow Us:Twitter","link_module":"header","link_pos":"drop down navigation"}' href="https://twitter.com/tasteofhome/">Twitter</a></li>
+</ul>
+</li>
+</ul></div>		</div>
+		<!-- .toh-site-menu-wrapper -->
+		<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<div class="menu-logged-in-menu-container"><ul id="menu-logged-in-menu" class="toh-secondary-menu"><li id="menu-item-677249" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"My Recipe Box","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/recipe-box">My Recipe Box</a></li>
+<li id="menu-item-677253" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"My Newsletters","link_module":"header","link_pos":"main navigation"}' href="http://pages.email.rd.com/page.aspx?QS=c76003443ff9837d8be7f695a15a349a7fa004aee9d157b6&amp;bn=TasteofHome">My Newsletters</a></li>
+<li id="menu-item-677255" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"My Account","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/myaccount/index">My Account</a></li>
+<li id="menu-item-677260" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Customer Care","link_module":"header","link_pos":"main navigation"}' href="http://goto.tasteofhome.com/redirects/23040">Customer Care</a></li>
+<li id="menu-item-677262" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Subscribe","link_module":"header","link_pos":"main navigation"}' href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&amp;cds_page_id=212916&amp;cds_response_key=IW7ADU101">Subscribe</a></li>
+<li id="menu-item-677265" class="user-logout menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a data-analytics-metrics='{"link_name":"Log out","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/">Log out</a></li>
+</ul></div>		<!-- .toh-secondary-menu -->
+	</div>
+	<!-- .toh-menu-wrapper -->
+
+	<a data-analytics-metrics='{"link_name":"home logo","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com" class="header-logo"><span class="screen-reader-text">Home</span></a>
+		<!-- .header-logo -->
+<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<div class="menu-desktop-focus-menu-container"><ul id="menu-desktop-focus-menu" class="focus-menu"><li id="menu-item-677187" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Recipes","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/recipes/">Recipes</a></li>
+<li id="menu-item-677192" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Win Cookware","link_module":"header","link_pos":"main navigation"}' href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&amp;cds_page_id=232271&amp;cds_response_key=IWMAJUA02">Win Cookware</a></li>
+<li id="menu-item-677189" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Dinner","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/course/dinner-recipes/">Dinner</a></li>
+<li id="menu-item-677184" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Stuff We Love","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/kitchen/stuff-we-love/">Stuff We Love</a></li>
+<li id="menu-item-816046" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Videos","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/videos/">Videos</a></li>
+</ul></div>		<!-- .focus-menu -->
+
+
+	<div class="toh-search-form">
+		<form data-analytics-metrics='{"link_name":"search","link_module":"header","link_pos":"search bar"}' action="https://www.tasteofhome.com/search/index" id="toh-search-form-wrapper">
+			<label for="search" class="screen-reader-text">Search</label>
+			<input type="text" id="search" name="search" />
+			<button class="submit_search"></button>
+			<div class="close-btn"><span class="dashicons dashicons-no"></span> </div>
+		</form>
+		<button class="toh-search-button" id="toh-search-toggle"><span class="screen-reader-text">Toggle Search</span></button>
+	</div>
+	<!-- .toh-search-form -->
+
+	<div class="toh-logged-in-wrapper" style="display:none">
+		<button class="toh-logged-in-menu-toggle" id="toh-logged-in-menu-toggle" aria-expanded="false" aria-controls="toh-logged-in-menu-wrapper">Hi, <span class="toh-logged-username"></span></button>
+		<div class="toh-logged-in-menu-wrapper" id="toh-logged-in-menu-wrapper" aria-hidden="true">
+			<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<div class="menu-logged-in-menu-container"><ul id="menu-logged-in-menu-1" class="toh-logged-in-menu"><li id="menu-item-677249" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"My Recipe Box","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com/recipe-box">My Recipe Box</a></li>
+<li id="menu-item-677253" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"My Newsletters","link_module":"header","link_pos":"secondary navigation"}' href="http://pages.email.rd.com/page.aspx?QS=c76003443ff9837d8be7f695a15a349a7fa004aee9d157b6&amp;bn=TasteofHome">My Newsletters</a></li>
+<li id="menu-item-677255" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"My Account","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com/myaccount/index">My Account</a></li>
+<li id="menu-item-677260" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Customer Care","link_module":"header","link_pos":"secondary navigation"}' href="http://goto.tasteofhome.com/redirects/23040">Customer Care</a></li>
+<li id="menu-item-677262" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Subscribe","link_module":"header","link_pos":"secondary navigation"}' href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&amp;cds_page_id=212916&amp;cds_response_key=IW7ADU101">Subscribe</a></li>
+<li id="menu-item-677265" class="user-logout menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a data-analytics-metrics='{"link_name":"Log out","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com/">Log out</a></li>
+</ul></div>		</div>
+	</div>
+
+	<!-- NOTE: Output only for logged-OUT users -->
+	<a data-analytics-metrics='{"link_name":"login","link_module":"header","link_pos":"secondary navigation"}' href="https://www.tasteofhome.com/login" class="header-login-link appears-on-stick">
+		Log In
+	</a>
+
+	
+<div id="subscribe-to-magazine-sticky">
+			<a data-analytics-metrics='{"link_name":"subscribe","link_module":"header","link_pos":"secondary navigation"}' href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&cds_page_id=217957&cds_response_key=IVKADU101" class="subscribe-header-cta appears-on-stick">
+			<img class="subscribe-logo" src="https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/subscribe-to-the-magazine.png"  data-pin-nopin="true"  alt="Subscribe">
+		</a>
+	</div>
+	<!-- .subscribe-header-cta.appears-on-stick END logged-out users -->
+
+</div></header><div class="header-banner-container"><a data-analytics-metrics='{"link_name":"Sign Up for Our Newsletters","link_module":"header","link_pos":"internal promotion"}' href="https://www.tasteofhome.com/newslettersignuppage/?OptID=82&OrgSource=CMHeader&pmcode=CMHeader" target="_blank"><span class="header-banner-text">Sign Up for Our Newsletters<span class="chevron">&rsaquo;</span></span></a></div><div class="site-inner">
+<!-- Ad Start:BILLBOARD_PLACEMENT -->
+<div class="ad-wrapper mobile_billboard" data-ad="mobile_prearticle" >
+<div id='div-gpt-ad-1370019314148-05' style='display:none; margin: 0 auto;' class='ad-container'>
+</div>
+</div>
+<!-- Ad End:BILLBOARD_PLACEMENT -->
+
+<!-- Ad Start:BEFORE_CONTENT_PLACEMENT -->
+<div class="ad-wrapper ad-leaderboard" data-ad="prearticle" >
+<div id='div-gpt-ad-1370019314148-25' style='display:none; margin: 0 auto;' class='ad-container'>
+</div>
+</div>
+<!-- Ad End:BEFORE_CONTENT_PLACEMENT -->
+
+<!-- Ad Start:LEADER_BOARD_PLACEMENT -->
+<div class="ad-wrapper-sticky" data-ad="leaderboard" >
+<div id='div-gpt-ad-1370019314148-20' style='display:none; margin: 0 auto;' class='ad-container'>
+</div>
+</div>
+<!-- Ad End:LEADER_BOARD_PLACEMENT -->
+<div class="content-sidebar-wrap"><main class="content" id="genesis-content"><article class="post-55693 recipe type-recipe status-publish has-post-thumbnail course-breakfast-recipes course-brunch-recipes course-easter-breakfast-recipes course-pancakes course-vegetarian-breakfast-recipes course-vegetarian-brunch-recipes course-vegetarian-recipes holidays-celebrations-easter-brunch-recipes holidays-celebrations-easter-recipes ingredient-rhubarb-recipes entry"><p id="breadcrumbs"></p><div class="entry-content"><div class="recipe-full-container recipe-content featured">	<div class = "left-container">
+		<div class="recipe-single-container recipe_page_left_bar">
+
+			<h1 class="recipe-title">Rhubarb Popover Pie</h1>
+			
+<div class="recipe-tagline">
+	<div class="recipe-tagline__image">
+		<img src="https://cdn2.tmbi.com/TOH/Images/Photos/76/100x100/CP_Kile_179_b.jpg" style="background: #fff;"/>
+	</div>
+	<div class="recipe-tagline__text">
+		This fabulous spring breakfast &quot;pie&quot; is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!&mdash;Patricia Kile, Elizabethtown, Pennsylvania.
+	</div>
+</div>
+			<div class="toh-sharing social-sharing post recipe-sticky"><div class="social-share">						<a data-analytics-metrics='{"link_name":"facebook","link_module":"content engagement","link_pos":"social share-left sticky nav"}' id="fb-share" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&tRhubarb+Popover+Pie=&v=3','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/facebook-letter-logo.svg" alt="facebook" width /></a> 							<a data-analytics-metrics='{"link_name":"flipboard","link_module":"content engagement","link_pos":"social share-left sticky nav"}' id="flipboard-share" data-flip-widget="shareflip" href="https://flipboard.com"><img src="https://cdn.flipboard.com/badges/flipboard_mrrw.png" /></a><script src="https://cdn.flipboard.com/web/buttons/js/flbuttons.min.js" type="text/javascript"></script>
+													<a data-analytics-metrics='{"link_name":"twitter","link_module":"content engagement","link_pos":"social share-left sticky nav"}' id="twitter-share" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&amp;text=Rhubarb+Popover+Pie&amp;hashtags=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/twitter-logo.svg" alt="twitter" /></a> 							<a data-analytics-metrics='{"link_name":"pinterest","link_module":"content engagement","link_pos":"social share-left sticky nav"}' id="pinterest-share" onClick="window.open('https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&media=http%3A%2F%2Fwww.tasteofhome.com%2Fwp-content%2Fuploads%2F2017%2F10%2FRhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg&description=Rhubarb+Popover+Pie','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/pinterest-social-visual-website-logotype.svg" alt="Pinterest"/></a> 						<a data-analytics-metrics='{"link_name":"email","link_module":"content engagement","link_pos":"social share-left sticky nav"}'  id="email_a_friend" onClick="window.open('mailto:?subject=Rhubarb Popover Pie&body=I thought you might like this...%0D%0A %0D%0ARhubarb Popover Pie %0D%0A %0D%0Ahttps%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F%3F_cmp%3Dstf %0D%0A %0D%0AHappy Cooking, %0D%0AYour friends from Taste of Home %0D%0A %0D%0A-- %0D%0A %0D%0AFor more great recipes and cooking inspiration signup for our newsletters https://bit.ly/2RcXV7b','_self')" href="javascript: void(0)" > <img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/envelope.svg" alt="Email" /></a> </div></div>			<div id="sponsor_ad_section"><div id ="sponsor-ad-1046769204" class = "ad-wrapper" data-ad="sponsor-logo"></div></div>
+			
+	<div class="recipe-image-and-meta-sidebar">
+		<div class="recipe-image-and-meta-sidebar__container">
+			<div class="recipe-image-and-meta-sidebar__featured-image" >
+				
+<div class="recipe-image-and-meta-sidebar__featured-container">
+	<img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/Rhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS-696x696.jpg" alt="Rhubarb Popover Pie"  class="-image" data-pin-nopin="true" />
+</div>
+
+<div class="recipe-image-and-meta-sidebar__image-caption">
+	Rhubarb Popover Pie Recipe photo by Taste of Home
+</div>
+
+			</div>
+		</div>
+		<a class="recipe-image-and-meta-sidebar__next-recipe-link" href="%s">Next Recipe <span class="dashicons dashicons-arrow-right-alt2" aria-hidden="true"></span></a>
+
+		<div class="recipe-image-and-meta-sidebar__sidebar">
+			
+<div class="recipe-meta">
+	<ul>
+		<li class="approved"><img src="https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/test-kitchen-approved-check.png" /> <a data-analytics-metrics='{"link_name":"test kitchen approved","link_module":"content reciculation","link_pos":"recipe status"}' href="https://www.tasteofhome.com/article/test-kitchen-approved/">Test Kitchen Approved</a></li><li class="rating"><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i> <a class="recipe-comments-scroll" >3 reviews</a></li>
+	</ul>
+</div>
+
+			
+<div class="recipe-recommended">
+	<h5>Recommended</h5>
+	<div class="recipe-recommended-group">
+		<img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/exps195198_TH163620C11_10_5b_WEB-1-150x150.jpg"/>
+		<a data-analytics-metrics='{"link_name":"32 Sweet and Tart Rhubarb Dessert Recipes","link_module":"content reciculation","link_pos":"recommended"}' href="https://www.tasteofhome.com/collection/sweet-and-tart-rhubarb-dessert-recipes/">32 Sweet and Tart Rhubarb Dessert Recipes</a>
+	</div>
+</div>
+<div class="recipe-share">
+	
+	
+<ul class="recipe-toolbar__social-mob">
+	<li>
+		<a data-analytics-metrics='{"link_name":"rate","link_module":"recipe engagement","link_pos":"below main image"}' class="recipe-comments-scroll" >
+			<i class="dashicons dashicons-star-filled"></i>
+			<span class="recipe-toolbar__social-action">Rate</span>
+		</a>
+	</li>
+	<li>
+		<a data-analytics-metrics='{"link_name":"comment","link_module":"recipe engagement","link_pos":"below main image"}' class="recipe-comments-scroll" >
+			<i class="dashicons dashicons-admin-comments"></i>
+			<span class="recipe-toolbar__social-action">Comment</span>
+		</a>
+	</li>
+	<li>
+		<a data-analytics-metrics='{"link_name":"save","link_module":"recipe engagement","link_pos":"below main image"}' id="recipeSave" href="#recipe-save-popup">
+			<i class="dashicons dashicons-heart"></i>
+			<span class="recipe-toolbar__social-action">Save</span>
+		</a>
+	</li>
+	<li>
+		<a data-analytics-metrics='{"link_name":"print","link_module":"recipe engagement","link_pos":"below main image"}' href="https://www.tasteofhome.com/recipes/rhubarb-popover-pie/print/">
+			<i class="dashicons dashicons-media-text"></i>
+			<span class="recipe-toolbar__social-action">Print</span>
+		</a>
+	</li>
+</ul><!-- end of social-mob -->
+	
+	
+</div>
+<div id="share_buttons" class="social-sharing-mob">
+	<div class="social-sharing__container">
+		<div class="srf-socials">
+			<div class="toh-sharing social-sharing post recipe-sticky"><div class="social-share">						<a data-analytics-metrics='{"link_name":"facebook","link_module":"content engagement","link_pos":"social share-below main image"}' id="fb-share" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&tRhubarb+Popover+Pie=&v=3','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/facebook-letter-logo.svg" alt="facebook" width /></a> 							<a data-analytics-metrics='{"link_name":"flipboard","link_module":"content engagement","link_pos":"social share-below main image"}' id="flipboard-share" data-flip-widget="shareflip" href="https://flipboard.com"><img src="https://cdn.flipboard.com/badges/flipboard_mrrw.png" /></a><script src="https://cdn.flipboard.com/web/buttons/js/flbuttons.min.js" type="text/javascript"></script>
+													<a data-analytics-metrics='{"link_name":"twitter","link_module":"content engagement","link_pos":"social share-below main image"}' id="twitter-share" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&amp;text=Rhubarb+Popover+Pie&amp;hashtags=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/twitter-logo.svg" alt="twitter" /></a> 							<a data-analytics-metrics='{"link_name":"pinterest","link_module":"content engagement","link_pos":"social share-below main image"}' id="pinterest-share" onClick="window.open('https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&media=http%3A%2F%2Fwww.tasteofhome.com%2Fwp-content%2Fuploads%2F2017%2F10%2FRhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg&description=Rhubarb+Popover+Pie','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/pinterest-social-visual-website-logotype.svg" alt="Pinterest"/></a> 						<a data-analytics-metrics='{"link_name":"email","link_module":"content engagement","link_pos":"social share-below main image"}'  id="email_a_friend" onClick="window.open('mailto:?subject=Rhubarb Popover Pie&body=I thought you might like this...%0D%0A %0D%0ARhubarb Popover Pie %0D%0A %0D%0Ahttps%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F%3F_cmp%3Dstf %0D%0A %0D%0AHappy Cooking, %0D%0AYour friends from Taste of Home %0D%0A %0D%0A-- %0D%0A %0D%0AFor more great recipes and cooking inspiration signup for our newsletters https://bit.ly/2RcXV7b','_self')" href="javascript: void(0)" > <img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/envelope.svg" alt="Email" /></a> </div></div>		</div>
+	</div> <!-- /.social-sharing__container  --->
+</div>
+<a class="next-recipe-btn-mobile" onclick="set_local_data(event);" href="#">Next Recipe <span class="dashicons dashicons-arrow-right-alt2" style="font-size: 17px;position: relative;top: 6px; width: 10px;"></span></a>
+		</div>
+	</div>
+
+			<div class="recipe-toolbar">
+				<ul class="recipe-toolbar__social">
+	<li>
+		<a data-analytics-metrics='{"link_name":"rate","link_module":"recipe engagement","link_pos":"below main image"}' class="recipe-comments-scroll" >
+			<i class="dashicons dashicons-star-filled"></i>
+			<span class="recipe-toolbar__social-action">Rate</span>
+		</a>
+	</li>
+	<li>
+		<a data-analytics-metrics='{"link_name":"comment","link_module":"recipe engagement","link_pos":"below main image"}' class="recipe-comments-scroll" >
+			<i class="dashicons dashicons-admin-comments"></i>
+			<span class="recipe-toolbar__social-action">Comment</span>
+		</a>
+	</li>
+	<li>
+		<a rel="nofollow" data-analytics-metrics='{"link_name":"save","link_module":"recipe engagement","link_pos":"below main image"}' id="recipeSave" href="#recipe-save-popup">
+			<i class="dashicons dashicons-heart"></i>
+			<span class="recipe-toolbar__social-action">Save</span>
+		</a>
+	</li>
+	<li class="recipe-toolbar__share-container">
+		<a rel="nofollow" data-analytics-metrics='{"link_name":"share","link_module":"recipe engagement","link_pos":"below main image"}' href="#" id="social-share-toggle">
+			<i class="dashicons dashicons-share"></i>
+			<span class="recipe-toolbar__social-action">Share</span>
+		</a>
+		<div class="recipe-toolbar__share-buttons social_tool_tip">
+			<div class="toh-sharing social-sharing post recipe-sticky"><div class="social-share">						<a data-analytics-metrics='{"link_name":"facebook","link_module":"content engagement","link_pos":"social share-below main image"}' id="fb-share" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&tRhubarb+Popover+Pie=&v=3','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/facebook-letter-logo.svg" alt="facebook" width /></a> 							<a data-analytics-metrics='{"link_name":"flipboard","link_module":"content engagement","link_pos":"social share-below main image"}' id="flipboard-share" data-flip-widget="shareflip" href="https://flipboard.com"><img src="https://cdn.flipboard.com/badges/flipboard_mrrw.png" /></a><script src="https://cdn.flipboard.com/web/buttons/js/flbuttons.min.js" type="text/javascript"></script>
+													<a data-analytics-metrics='{"link_name":"twitter","link_module":"content engagement","link_pos":"social share-below main image"}' id="twitter-share" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&amp;text=Rhubarb+Popover+Pie&amp;hashtags=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/twitter-logo.svg" alt="twitter" /></a> 							<a data-analytics-metrics='{"link_name":"pinterest","link_module":"content engagement","link_pos":"social share-below main image"}' id="pinterest-share" onClick="window.open('https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F&media=http%3A%2F%2Fwww.tasteofhome.com%2Fwp-content%2Fuploads%2F2017%2F10%2FRhubarb-Popover-Pie_exps49051_HCA1864839B02_17_3bC_RMS.jpg&description=Rhubarb+Popover+Pie','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/pinterest-social-visual-website-logotype.svg" alt="Pinterest"/></a> 						<a data-analytics-metrics='{"link_name":"email","link_module":"content engagement","link_pos":"social share-below main image"}'  id="email_a_friend" onClick="window.open('mailto:?subject=Rhubarb Popover Pie&body=I thought you might like this...%0D%0A %0D%0ARhubarb Popover Pie %0D%0A %0D%0Ahttps%3A%2F%2Fwww.tasteofhome.com%2Frecipes%2Frhubarb-popover-pie%2F%3F_cmp%3Dstf %0D%0A %0D%0AHappy Cooking, %0D%0AYour friends from Taste of Home %0D%0A %0D%0A-- %0D%0A %0D%0AFor more great recipes and cooking inspiration signup for our newsletters https://bit.ly/2RcXV7b','_self')" href="javascript: void(0)" > <img src="https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/./images/envelope.svg" alt="Email" /></a> </div></div>		</div>
+	</li>
+	<li>
+		<a rel="nofollow" data-analytics-metrics='{"link_name":"print","link_module":"recipe engagement","link_pos":"below main image"}' href="https://www.tasteofhome.com/recipes/rhubarb-popover-pie/print/">
+			<i class="dashicons dashicons-media-text"></i>
+			<span class="recipe-toolbar__social-action">Print</span>
+		</a>
+	</li>
+</ul>
+
+
+
+
+				
+<ul class="recipe-time-yield">
+		<li class="recipe-time-yield__item">
+		<img src="https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/clock.png">
+		<div>
+			<h5 class="recipe-time-yield__label">Total Time</h5>
+			<div class="recipe-time-yield__label-prep">
+				Prep: 25 min. Bake: 20 min. </div>
+		</div>
+	</li>
+	
+	<li class="recipe-time-yield__item">
+		<img src="https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/servings.png">
+
+		<div>
+			<h5 class="recipe-time-yield__label">Makes</h5>
+
+			<div class="recipe-time-yield__label-servings">
+				6 servings			</div>
+		</div>
+	</li>
+</ul>
+			</div>
+		</div>
+	</div>
+	<aside class = "right-sidebar">
+		<div class="toh-singe-recipe-sidebar mobile-expand-section"><div class="container"><div class="ad-wrapper ad-sidebar-top adunit-lazy" data-ad="rail_1"><div id='div-gpt-ad-1370019314148-02' style='display:none; margin: 0 auto;' class='ad-container'>
+</div>
+</div><section id="read_next_right_rail-3" class="widget widget_read_next_right_rail"><div class="widget-wrap"><h5 class="read-next-heading">Read Next</h5>
+				<div class="read-next__item">
+					<div class="read-next__image">
+						<a data-analytics-metrics='{"link_name":"Strawberry Rhubarb Cake with Orange","link_module":"content recirculation","link_pos":"read next"}'							href="https://www.tasteofhome.com/recipes/strawberry-rhubarb-cake-with-orange/">
+							<div class="rr-image-wrapper">
+								<img width="75" height="75" src="https://www.tasteofhome.com/wp-content/uploads/0001/01/Strawberry-Rhubarb-Orange-Cake_EXPS_FT19_47575_F_0711_1-150x150.jpg" data-pin-nopin="true" alt="Strawberry Rhubarb Cake with Orange">
+								
+							</div>
+						</a>
+					</div>
+					<span class="read-next__title">
+						<a data-analytics-metrics='{"link_name":"Strawberry Rhubarb Cake with Orange","link_module":"content recirculation","link_pos":"read next"}'							href="https://www.tasteofhome.com/recipes/strawberry-rhubarb-cake-with-orange/">Strawberry Rhubarb Cake with Orange</a>
+						
+						<div class="sponsored-content" ></div>
+					</span>
+				</div>
+				
+				<div class="read-next__item">
+					<div class="read-next__image">
+						<a data-analytics-metrics='{"link_name":"Pork Loin with Strawberry-Rhubarb Chutney","link_module":"content recirculation","link_pos":"read next"}'							href="https://www.tasteofhome.com/recipes/pork-loin-with-strawberry-rhubarb-chutney/">
+							<div class="rr-image-wrapper">
+								<img width="75" height="75" src="https://www.tasteofhome.com/wp-content/uploads/0001/01/Pork-Loin-with-Strawberry-Rhubarb-Chutney_EXPS_THCA19_68744_E02_26_4b-150x150.jpg" data-pin-nopin="true" alt="Pork Loin with Strawberry-Rhubarb Chutney">
+								
+							</div>
+						</a>
+					</div>
+					<span class="read-next__title">
+						<a data-analytics-metrics='{"link_name":"Pork Loin with Strawberry-Rhubarb Chutney","link_module":"content recirculation","link_pos":"read next"}'							href="https://www.tasteofhome.com/recipes/pork-loin-with-strawberry-rhubarb-chutney/">Pork Loin with Strawberry-Rhubarb Chutney</a>
+						
+						<div class="sponsored-content" ></div>
+					</span>
+				</div>
+				
+				<div class="read-next__item">
+					<div class="read-next__image">
+						<a data-analytics-metrics='{"link_name":"Pressure-Cooker Rhubarb Compote with Yogurt","link_module":"content recirculation","link_pos":"read next"}'							href="https://www.tasteofhome.com/recipes/pressure-cooker-rhubarb-compote-with-yogurt/">
+							<div class="rr-image-wrapper">
+								<img width="75" height="75" src="https://www.tasteofhome.com/wp-content/uploads/0001/01/exps63354_SD143205D01_24_2bC_RMS_basedon-150x150.jpg" data-pin-nopin="true" alt="Pressure-Cooker Rhubarb Compote with Yogurt">
+								
+							</div>
+						</a>
+					</div>
+					<span class="read-next__title">
+						<a data-analytics-metrics='{"link_name":"Pressure-Cooker Rhubarb Compote with Yogurt","link_module":"content recirculation","link_pos":"read next"}'							href="https://www.tasteofhome.com/recipes/pressure-cooker-rhubarb-compote-with-yogurt/">Pressure-Cooker Rhubarb Compote with Yogurt</a>
+						
+						<div class="sponsored-content" ></div>
+					</span>
+				</div>
+				</div></section>
+<div class="ad-wrapper ad-sidebar-middle adunit-lazy" data-ad="rail_2"><div id='div-gpt-ad-1370019314148-04' style='display:none;' class='ad-container'>
+</div>
+</div></div></div>	</aside>
+</div><div class="recipe-full-container recipe-content top-ad"><div class="recipe-in-content-ads ad_wrapper"><div class="ad-wrapper" ><div id="div-gpt-ad-1370019314148-recipe-top" class="adunit-lazy" data-ad="content_1"></div></div></div></div><div class="recipe-full-container recipe-content ingredients">	<div class = "left-container">
+		<div class="recipe-single-container">
+			
+	<div class="recipe-ingredients">
+
+		<h2>Ingredients</h2>
+
+		<ul class="recipe-ingredients__list recipe-ingredients__collection">
+			<li>1/2 cup all-purpose flour</li><li>1/4 teaspoon salt</li><li>2 large eggs</li><li>1/2 cup 2% milk</li><li>2 tablespoons butter</li><li><b class='sIngredient'>FILLING:</b></li><li>1-1/2 cups sliced fresh or frozen rhubarb, thawed</li><li>1/2 cup canned pineapple chunks</li><li>1/3 cup butter, cubed</li><li>1/2 cup packed brown sugar</li><li>Whipped cream or vanilla ice cream, optional</li>
+		</ul>
+
+		<div class="recipe-ingredients__view-more-container">
+			<button id="recipe-ingredients__view-more">View Recipe</button>
+		</div>
+	</div>
+
+				<div class="recipe-chicory-online mobile-expand-section">
+					<div class="chicory-order-ingredients"></div>
+				</div>
+
+				<div class="ad-wrapper single-online-ad" ><div id="div-gpt-ad-1370019314150" style="display:none" class="adunit-lazy" data-ad="recipe-top-mobile"></div></div>
+	<div class="recipe-directions mobile-expand-section">
+		<h2 class="recipe-directions__heading">Directions</h2>
+		<ul class="recipe-directions__list">
+			<li class="recipe-directions__item"><span>In a large bowl, combine flour and salt. In another bowl, whisk eggs and milk.</span></li><li class="recipe-directions__item"><span>   Place butter in an 9-in. pie plate; heat in a 425&deg; oven for 3-5 minutes or until butter is melted. Meanwhile, stir egg mixture into dry ingredients just until moistened.</span></li><li class="recipe-directions__item"><span>   Carefully swirl the butter in the pan to coat the sides and bottom of pan; add batter. Bake at 425&deg; for 16-20 minutes or until puffed and golden brown.</span></li><li class="recipe-directions__item"><span>   Meanwhile, in a large skillet, saute rhubarb and pineapple in butter until rhubarb is tender. Stir in brown sugar; bring to a boil over medium heat, stirring constantly. Pour into the center of puffed pancake; cut into six wedges. Serve immediately with whipped cream if desired.</span></li>
+		</ul>
+	</div>
+
+
+	<div class="recipe-editors-note mobile-expand-section">
+		<h5 class="recipe-editors-note__heading">Editor's Note</h5>If using frozen rhubarb, measure rhubarb while still frozen, then thaw completely.  Drain in a colander, but do not press liquid out.<br />
+	</div>
+
+
+	<div class="recipe-nutrition-facts mobile-expand-section">
+		<h5 class="recipe-nutrition-facts__heading">Nutrition Facts</h5>
+		1 piece: 279 calories, 16g fat (10g saturated fat), 109mg cholesterol, 239mg sodium, 31g carbohydrate (21g sugars, 1g fiber), 4g protein. 
+	</div>
+
+			<div class="mobile-expand-section">
+							</div>
+				<div id="recipe-save-popup" class="mfp-hide white-popup" data-recipe-id="55693" data-rms-recipe-id="49051">
+		<div id="spinner" style="text-align: center; display:none"><img src="https://www.tasteofhome.com/wp-admin/images/spinner.gif"></div>
+		<div id="recipe-box-details">
+
+		</div>
+
+	</div>
+
+		</div>
+
+				<div class="recipe-video-ad">
+			<div class="recipe-in-content-ads video-player">
+	<div class="recipe-non-contextual-video-player">
+		<h6 class="recipe-non-contextual-video-player_header">Recommended Video</h6>
+		<div><div class="jwplayer" id="jwpl5db604f338558" style="background: url(https://content.jwplatform.com/thumbs/NhxLhSb5.jpg) no-repeat center center; min-width: 320px; min-height: 240px;"></div></div>
+	</div>
+
+</div>		</div>
+		
+	</div>
+	<aside class = "right-sidebar space-top">
+		<div class="toh-singe-recipe-sidebar mobile-expand-section"><div class="container"><div class="ad-wrapper ad-sidebar-bottom adunit-lazy" data-ad="rail_3"><div id='div-gpt-ad-1370019314148-03' style='display:none; margin: 0 auto;' class='ad-container'>
+</div>
+</div></div></div>	</aside>
+</div><div class="recipe-full-container recipe-content reviews">	<div class = "left-container">
+		<div class="recipe-single-container">
+			<div class ="recipe-review">
+				<div id="recipe-comments" class="recipe-comments">
+	<div class="recipe-comments__wrapper">
+		<h2 class="recipe-comments__header">Reviews</h2>
+		<div class="recipe-comments__toolbar">
+	<div class="recipe-login-comments">
+		<div class="recipe-comments__login">
+		<a data-analytics-metrics='{"link_name":"log in to rate","link_module":"recipe engagement","link_pos":"rating and comments"}' class="login-verify" href="#recipe-comments">Log in to rate</a>
+	</div>
+</div>
+<div id="comments-form" class="recipe-comments__submission-form">
+	<div class="recipe-comments__submission-form-rating">
+		<i class="dashicons dashicons-star-empty" data-star="1"></i>
+		<i class="dashicons dashicons-star-empty" data-star="2"></i>
+		<i class="dashicons dashicons-star-empty" data-star="3"></i>
+		<i class="dashicons dashicons-star-empty" data-star="4"></i>
+		<i class="dashicons dashicons-star-empty" data-star="5"></i>
+		<span class="recipe-comments__submission-form__rating-label">Click stars to rate</span>
+	</div>
+	<div class="recipe-comments__submission-form-comment">
+		<input type="hidden" name="toh-review-submission-rating" value="0">
+		<textarea id="comment-area" placeholder="Provide a review on what you thought of the recipe and how you adjusted it."></textarea>
+		<button id="toh-review-submission-comment" class="recipe-comments__submission-form-submit-button" data-recipe="55693">Submit Review </button>
+	</div>
+</div>
+<div id="comment-success" style="display:none">
+	<i class="fa fa-check-circle"></i> Thank You! Your rating has been submitted. Please allow 24 hours for your review to appear.
+</div>
+<div id="comment-error" style="display:none">
+	Add a rating or review to submit
+</div>
+
+ 
+		<div class="recipe-comments__average-rating">
+			<span class="recipe-comments__average-rating-label">Average Rating:</span> <span class="recipe-comments__average-rating-stars"><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i></span>
+		</div>
+</div>
+		<ul class="recipe-comments__collection">
+			
+	<li class="recipe-comments__single-entry" data-comment-index="0">
+		<div class="recipe-comments__meta-bar">
+			<span class="recipe-comments__stars"><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i></span> <span class="recipe-comments__author">Prov3</span><br>
+		</div>
+		<div class="recipe-comments__date">Apr 9, 2013</div>
+		<p class="recipe-comments__comment">
+			rated 6
+		</p>
+	</li>
+
+	<li class="recipe-comments__single-entry" data-comment-index="0">
+		<div class="recipe-comments__meta-bar">
+			<span class="recipe-comments__stars"><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i></span> <span class="recipe-comments__author">redcow</span><br>
+		</div>
+		<div class="recipe-comments__date">Apr 20, 2012</div>
+		<p class="recipe-comments__comment">
+			This goes together very fast.  The dough part sure does puff up.  My filling was very thick, then I probably used extra rhubarb.  I used frozen rhubarb from the freezer to get it used up, but thawed first.  Waiting for my rhubarb to get big enough this spring so I can make it again.
+		</p>
+	</li>
+
+	<li class="recipe-comments__single-entry" data-comment-index="0">
+		<div class="recipe-comments__meta-bar">
+			<span class="recipe-comments__stars"><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-filled" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i><i class="dashicons dashicons-star-empty" aria-hidden="true"></i></span> <span class="recipe-comments__author">andi99</span><br>
+		</div>
+		<div class="recipe-comments__date">Apr 16, 2012</div>
+		<p class="recipe-comments__comment">
+			I had never made a popover before, it turned out great. I am guessing that I didn&#039;t cook the pineapple/rhubarb sauce long enough. The flavor was good, it wasn&#039;t very pretty and was too runny.
+		</p>
+	</li>
+
+		</ul>
+			<div class="recipe-comments__load-more">
+		<script type="text/html" id="tmpl-toh-load-more-reviews">
+			<div class="recipe-comments__meta-bar">
+				<span class="recipe-comments__stars">{{{data.stars}}}</span> <span class="recipe-comments__author">{{data.author}}</span><br>
+			</div>
+			<div class="recipe-comments__date">{{data.date}}</div>
+			<p class="recipe-comments__comment">
+				{{{data.comment}}}
+			</p>
+		</script>
+		<button id="toh-load-more-reviews" class="recipe-comments__load-more-trigger" data-recipe="55693" data-index="11" data-comments-count="3">View More</button>
+	</div>
+
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<aside class = "right-sidebar space-top">
+		<div class="toh-singe-recipe-sidebar mobile-expand-section"><div class="container"><div class="ad-wrapper ad-sidebar-fourth adunit-lazy" data-ad="rail_4"><div id='div-gpt-ad-1370019314148-21' style='display:none; margin: 0 auto;' class='ad-container'>
+</div>
+</div></div></div>	</aside>
+</div><div class="recipe-full-container middle-ad"><div class="recipe-in-content-ads ad_wrapper"><div class="ad-wrapper" ><div id="div-gpt-ad-1370019314149" class="adunit-lazy" data-ad="content_2"></div></div></div></div><div class="recirc-module">
+<h2 class="recirc_content_title">More from Taste of Home</h2>
+<div class="recirc-item owl-carousel owl-theme"><div class="item"><a href="https://www.tasteofhome.com/recipes/strawberry-rhubarb-cake-with-orange/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Strawberry Rhubarb Cake with Orange","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/0001/01/Strawberry-Rhubarb-Orange-Cake_EXPS_FT19_47575_F_0711_1-300x300.jpg"  data-pin-nopin="true"  alt="Strawberry Rhubarb Cake with Orange"></div><span class="recirc_content_item_title">Strawberry Rhubarb Cake with Orange</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/pork-loin-with-strawberry-rhubarb-chutney/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Pork Loin with Strawberry-Rhubarb Chutney","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/0001/01/Pork-Loin-with-Strawberry-Rhubarb-Chutney_EXPS_THCA19_68744_E02_26_4b-300x300.jpg"  data-pin-nopin="true"  alt="Pork Loin with Strawberry-Rhubarb Chutney"></div><span class="recirc_content_item_title">Pork Loin with Strawberry-Rhubarb Chutney</span></a></div><div class="item"><div id="reciped_nativo1"></div></div><div class="item"><a href="https://www.tasteofhome.com/recipes/pressure-cooker-rhubarb-compote-with-yogurt/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Pressure-Cooker Rhubarb Compote with Yogurt","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/0001/01/exps63354_SD143205D01_24_2bC_RMS_basedon-300x300.jpg"  data-pin-nopin="true"  alt="Pressure-Cooker Rhubarb Compote with Yogurt"></div><span class="recirc_content_item_title">Pressure-Cooker Rhubarb Compote with Yogurt</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/lemon-rhubarb-tube-cake/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Lemon Rhubarb Tube Cake","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/0001/01/Lemon-Rhubarb-Bundt-Cake_EXPS_THJJ19_233234_E02_20_8b-300x300.jpg"  data-pin-nopin="true"  alt="Lemon Rhubarb Tube Cake"></div><span class="recirc_content_item_title">Lemon Rhubarb Tube Cake</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/strawberry-rhubarb-cheesecake-bars/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Strawberry Rhubarb Cheesecake Bars","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/0001/01/Strawberry-Rhubarb-Cheesecake-Bars_EXPS_THJJ19_232666_E02_19_3b-300x300.jpg"  data-pin-nopin="true"  alt="Strawberry Rhubarb Cheesecake Bars"></div><span class="recirc_content_item_title">Strawberry Rhubarb Cheesecake Bars</span></a></div><div class="item"><a href="https://www.tasteofhome.com/collection/grandmas-favorite-rhubarb-recipes/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"55 of Grandma&#8217;s Favorite Rhubarb Recipes","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/09/Strawberry-Rhubarb-Jam_exps2020_RDS2930098D03_14_5b_RMS-348x348.jpg"  data-pin-nopin="true"  alt="55 of Grandma&#8217;s Favorite Rhubarb Recipes"><img class='recirc-play-icon' src ='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/play-icon.png'></div><span class="recirc_content_item_title">55 of Grandma&#8217;s Favorite Rhubarb Recipes</span></a></div><div class="item"><a href="https://www.tasteofhome.com/collection/surprising-savory-rhubarb-recipes/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"9 Surprising Savory Rhubarb Recipes","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2019/03/healthy-chicken-stir-fry-photo-1-300x300.jpg"  data-pin-nopin="true"  alt="9 Surprising Savory Rhubarb Recipes"></div><span class="recirc_content_item_title">9 Surprising Savory Rhubarb Recipes</span></a></div><div class="item"><a href="https://www.tasteofhome.com/collection/top-10-rhubarb-recipes/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Top 10 Rhubarb Recipes","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/08/Rhubarb-Custard-Bars_exps8431_MRR133247D07_30_3b_RMS-4.jpg"  data-pin-nopin="true"  alt="Top 10 Rhubarb Recipes"><img class='recirc-play-icon' src ='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/play-icon.png'></div><span class="recirc_content_item_title">Top 10 Rhubarb Recipes</span></a></div><div class="item"><a href="https://www.tasteofhome.com/collection/spring-jams-jellies-fruity-spreads/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"57 Jams, Jellies &#038; Fruity Spreads to Make this Spring","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/Pretty-Peach-Jam_exps10623_RDS2930098C03_27_1bCRMS-300x300.jpg"  data-pin-nopin="true"  alt="57 Jams, Jellies &#038; Fruity Spreads to Make this Spring"></div><span class="recirc_content_item_title">57 Jams, Jellies &#038; Fruity Spreads to Make this Spring</span></a></div><div class="item"><a href="https://www.tasteofhome.com/collection/rhubarb-recipes-for-spring/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"70 Rhubarb Recipes to Make This Spring (and Summer!)","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/09/Rhubarb-Custard-Bars_exps8431_MRR133247D07_30_3b_RMS-348x348.jpg"  data-pin-nopin="true"  alt="70 Rhubarb Recipes to Make This Spring (and Summer!)"><img class='recirc-play-icon' src ='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/play-icon.png'></div><span class="recirc_content_item_title">70 Rhubarb Recipes to Make This Spring (and Summer!)</span></a></div><div class="item"><a href="https://www.tasteofhome.com/collection/strawberry-rhubarb-recipes/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"21 Sweet and Savory Strawberry-Rhubarb Recipes","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/09/Strawberry-Rhubarb-Coffee-Cake_EXPS_MCSMZ17_2569_C01_05_6b-348x348.jpg"  data-pin-nopin="true"  alt="21 Sweet and Savory Strawberry-Rhubarb Recipes"></div><span class="recirc_content_item_title">21 Sweet and Savory Strawberry-Rhubarb Recipes</span></a></div><div class="item"><a href="https://www.tasteofhome.com/article/surprising-ways-to-love-rhubarb-all-year/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"6 Surprising Ways to Cook Rhubarb All Year","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2018/02/shutterstock_122255311-300x300.jpg"  data-pin-nopin="true"  alt="6 Surprising Ways to Cook Rhubarb All Year"></div><span class="recirc_content_item_title">6 Surprising Ways to Cook Rhubarb All Year</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/black-grape-rhubarb-jam/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Black Grape &#038; Rhubarb Jam","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Black-Grape-Rhubarb-Jam_EXPS176565_CW143043B02_25_8b_RMS-300x300.jpg"  data-pin-nopin="true"  alt="Black Grape &#038; Rhubarb Jam"></div><span class="recirc_content_item_title">Black Grape &#038; Rhubarb Jam</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/rhubarb-dream-bars/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Rhubarb Dream Bars","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps17835_MRR153791C09_23_1b-2-300x300.jpg"  data-pin-nopin="true"  alt="Rhubarb Dream Bars"></div><span class="recirc_content_item_title">Rhubarb Dream Bars</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/berry-delicious-rhubarb-crisp/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Berry Delicious Rhubarb Crisp","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/EXPS_43381_SD1440074D35C_RMS-1-300x300.jpg"  data-pin-nopin="true"  alt="Berry Delicious Rhubarb Crisp"></div><span class="recirc_content_item_title">Berry Delicious Rhubarb Crisp</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/rhubarb-fool-with-strawberries/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Rhubarb Fool with Strawberries","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/Rhubarb-Fool-with-Strawberries_exps169451_THC12_06_1bC_RMS-1-300x300.jpg"  data-pin-nopin="true"  alt="Rhubarb Fool with Strawberries"></div><span class="recirc_content_item_title">Rhubarb Fool with Strawberries</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/rhubarb-upside-down-cake/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Rhubarb Upside-Down Cake","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Rhubarb-Upside-Down-Cake_EXPS_SRBZ16_605_D09_14_2b-1-300x300.jpg"  data-pin-nopin="true"  alt="Rhubarb Upside-Down Cake"><img class='recirc-play-icon' src ='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/play-icon.png'></div><span class="recirc_content_item_title">Rhubarb Upside-Down Cake</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/rhubarb-crumble/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Rhubarb Crumble","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Rhubarb-Crumble_EXPS_TOHAM20_2572_B06_07_8b-300x300.jpg"  data-pin-nopin="true"  alt="Rhubarb Crumble"></div><span class="recirc_content_item_title">Rhubarb Crumble</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/spring-rhubarb-salad/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Spring Rhubarb Salad","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps3379_couam90p49ctran-2.jpg"  data-pin-nopin="true"  alt="Spring Rhubarb Salad"></div><span class="recirc_content_item_title">Spring Rhubarb Salad</span></a></div><div class="item"><a href="https://www.tasteofhome.com/recipes/rhubarb-pinwheels/" data-analytics-metrics='{"link_module":"Content Engagement","link_name":"Rhubarb Pinwheels","link_pos":"More from Taste of Home"}'><div class="recirc_img_wrapper"><img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps4536_RX1399C47B.jpg"  data-pin-nopin="true"  alt="Rhubarb Pinwheels"></div><span class="recirc_content_item_title">Rhubarb Pinwheels</span></a></div></div></div><div class="recipe-full-container scroll-ad"><div class="recipe-in-content-ads ad_wrapper"><div class="ad-wrapper" ><div id="div-gpt-ad-1370019314199" class="adunit-lazy" data-ad="content_3"></div></div></div></div><div class="recipe-full-container taboola-container"><div class="left-container"><div id="taboola-below-recipe-thumbnails"></div>
+</div><aside class="right-sidebar space-top"><div class="ad-wrapper" ><div id="div-gpt-ad-1370019314148-recipe-sidebar" class="adunit-lazy" data-ad="rail_5" ></div></div></aside></div></div><div class="syndicated-post-info"><img src="https://placehold.it/32x22" alt="" /><a href="#">Originally Published on sitename.com</a></div><footer class="entry-footer"><div class="entry-copyright"><span class="byline source"></span></div><div id="oop_adhesive"><div id ="oop_adhesive-3278779684" class = "ad-wrapper oop_adhesive" data-ad="oop-adhesive"></div></div></footer></article><h2 class="screen-reader-text">Reader Interactions</h2><div id="toh-taboola">
+<div id="taboola-below-article-thumbnails"></div>
+</div></main></div></div><footer class="site-footer"><div class="wrap"><div class="footer-left">
+		<div class="toh-newsletter footer-mobile">
+		<div class="toh-newsletter-cta-wrapper">
+			<div class="toh-newsletter-cta-description">
+				Sign-up for recipes to your inbox			</div>
+			<a data-analytics-metrics='{"link_name":"subscribe","link_module":"footer","link_pos":"navigation"}' href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&cds_page_id=217957&cds_response_key=IVKADU101">
+				<img class="subscribe-logo" src="https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/subscribe-to-the-magazine.png"  data-pin-nopin="true" >
+			</a>
+		</div>
+	</div>
+		<div class="footer-left-top">
+		<div class="footer-logo-social">
+			<a data-analytics-metrics='{"link_name":"footer logo","link_module":"navigation","link_pos":"footer"}' class="footer-logo" href="https://www.tasteofhome.com"></a>
+			<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<ul id="menu-tmbi-social-profiles" class="footer-social-links"><li id="menu-item-86501" class="tmbi-facebook menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"facebook","link_module":"footer","link_pos":"follow us"}' href="https://www.facebook.com/tasteofhome/"><i class="fa fa-facebook"></i></a></li>
+<li id="menu-item-5334" class="tmbi-pinterest menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"pinterest","link_module":"footer","link_pos":"follow us"}' href="https://pinterest.com/taste_of_home"><i class="fa fa-pinterest"></i></a></li>
+<li id="menu-item-5338" class="tmbi-twitter menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"twitter","link_module":"footer","link_pos":"follow us"}' href="https://twitter.com/tasteofhome"><i class="fa fa-twitter"></i></a></li>
+<li id="menu-item-5346" class="tmbi-youtube menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"youtube","link_module":"footer","link_pos":"follow us"}' href="https://www.youtube.com/user/tasteofhome/"><i class="fa fa-youtube"></i></a></li>
+<li id="menu-item-5350" class="tmbi-instagram menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"instagram","link_module":"footer","link_pos":"follow us"}' href="https://www.instagram.com/tasteofhome/"><i class="fa fa-instagram"></i></a></li>
+</ul>		</div>
+		<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<ul id="menu-footer-one" class="footer-site-links"><li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a href="https://www.tasteofhome.com/recipes/" data-analytics-metrics='{"link_name":"Recipes","link_module":"footer","link_pos":"navigation"}'>Recipes</a></li>
+<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="https://www.tasteofhome.com/holidays-celebrations/" data-analytics-metrics='{"link_name":"Holidays","link_module":"footer","link_pos":"navigation"}'>Holidays</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a href="https://www.tasteofhome.com/food-news/" data-analytics-metrics='{"link_name":"Food News","link_module":"footer","link_pos":"navigation"}'>Food News</a></li>
+<li id="menu-item-769700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-769700"><a href="https://www.tasteofhome.com/home-living/" data-analytics-metrics='{"link_name":"Home &amp; Living","link_module":"footer","link_pos":"navigation"}'>Home &#038; Living</a></li>
+</ul><ul class="footer-site-links"><li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49"><a target="_blank" href="https://www.tasteofhome.com/kitchen/" data-analytics-metrics='{"link_name":"Kitchen","link_module":"footer","link_pos":"navigation"}'>Kitchen</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="https://www.tasteofhome.com/contests/" data-analytics-metrics='{"link_name":"Contests","link_module":"footer","link_pos":"navigation"}'>Contests</a></li>
+<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="https://www.tasteofhome.com/article/subscribe-to-our-magazines/" data-analytics-metrics='{"link_name":"Magazines","link_module":"footer","link_pos":"navigation"}'>Magazines</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a href="https://www.tasteofhome.com/kitchen/how-to/" data-analytics-metrics='{"link_name":"How-To","link_module":"footer","link_pos":"navigation"}'>How-To</a></li>
+</ul>	</div>
+
+	<div class="toh-newsletter footer-mobile">
+		<div class="toh-newsletter-title">Sign-up for recipes to your inbox</div>
+		<form action="https://www.tasteofhome.com/newslettersignuppage/" method="post"  data-analytics-metrics='{"link_name":"newsletter signup","link_module":"newsletter signup","link_pos":"footer"}'>
+			<input class="toh-footer-nl" type="text" name="EmailAddress" placeholder="Email Address">
+			<input type="hidden" id="footer_email_nonce" name="footer_email_nonce" value="1a17fb3c7b" /><input type="hidden" name="_wp_http_referer" value="/recipes/rhubarb-popover-pie/" />			<button type="submit" name="submit" class="toh-sign-up-btn">
+				Sign up			</button>
+		</form>
+	</div>
+
+	<div class="footer-left-bottom">
+		<div class="footer-menu-label">Our Brands</div>
+		<!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<ul id="menu-our-brands" class="footer-brand-links"><li id="menu-item-677169" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Reader&#039;s Digest","link_module":"navigation","link_pos":"footer"}' href="https://www.rd.com/">Reader&#8217;s Digest</a></li>
+<li id="menu-item-677170" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"The Family Handyman","link_module":"navigation","link_pos":"footer"}' href="https://www.familyhandyman.com/">The Family Handyman</a></li>
+<li id="menu-item-677174" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Birds &amp; Blooms","link_module":"navigation","link_pos":"footer"}' href="http://www.birdsandblooms.com/">Birds &#038; Blooms</a></li>
+</ul><!-- Default Label -- MARK POINT assumed because &#36;value was not set. -->
+<ul id="menu-footer-two" class="footer-global-links"><li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"About Us","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/help/about-taste-of-home">About Us</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Contests","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/contests">Contests</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"RSS","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/rss">RSS</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Magazine Customer Service","link_module":"header","link_pos":"main navigation"}' href="http://goto.tasteofhome.com/redirects/25032">Magazine Customer Service</a></li>
+<li id="menu-item-5472" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Contact Us","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/help/contact-us">Contact Us</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Log In","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/login/index">Log In</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Help","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/taste-of-home-help">Help</a></li>
+<li id="menu-item-5475" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Press Room","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/press-room">Press Room</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Advertising","link_module":"header","link_pos":"main navigation"}' href="http://tmbimediakit.com/">Advertising</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"Terms of Use","link_module":"header","link_pos":"main navigation"}' href="https://www.tasteofhome.com/help/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-63" class="text-red menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Privacy Policy","link_module":"header","link_pos":"main navigation"}' href="https://www.trustedmediabrands.com/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-375951" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"Your CA Privacy Rights","link_module":"header","link_pos":"main navigation"}' href="https://www.trustedmediabrands.com/privacy-policy/#california">Your CA Privacy Rights</a></li>
+<li id="menu-item-780037" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-analytics-metrics='{"link_name":"OneMain Financial Services","link_module":"header","link_pos":"main navigation"}' href="https://www.onemainfinancial.com/partners/e7d37779">OneMain Financial Services</a></li>
+<li id="menu-item-375953" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" data-analytics-metrics='{"link_name":"About Ads","link_module":"header","link_pos":"main navigation"}' href="https://www.trustedmediabrands.com/privacy-policy/#advertising">About Ads</a></li>
+</ul>		<div class="footer-copyright">&copy; 2019 RDA Enthusiast Brands, LLC</div>
+	</div>
+</div>
+<div class="footer-right footer-desktop">
+	
+
+<div class="newsletter-signup-content-widget -footer">
+
+	
+	<div class="newsletter-signup-content-widget__body">
+
+		
+		<h3 class="newsletter-signup-content-widget__title">Sign-up for recipes to your inbox</h3>
+
+		<div class="newsletter-signup-content-widget__byline">
+			Recipes from real home cooks, tested in our kitchens and delivered right to your inbox!		</div>
+
+		<div class="newsletter-signup-content-widget__form">
+						<form action="https://www.tasteofhome.com/newslettersignuppage/" method="post"  data-analytics-metrics='{"link_name":"newsletter signup","link_module":"newsletter signup","link_pos":"footer"}'>
+				<input class="toh-footer-nl" type="text" name="EmailAddress" placeholder="Email Address">
+				<input type="hidden" id="footer_email_nonce" name="footer_email_nonce" value="1a17fb3c7b" /><input type="hidden" name="_wp_http_referer" value="/recipes/rhubarb-popover-pie/" />				<button type="submit" name="submit" class="toh-sign-up-btn">
+					Sign up				</button>
+			</form>
+		</div>
+	</div>
+
+		<div class="newsletter-signup-content-widget__footer">
+
+		<div class="newsletter-signup-content-widget__tagline">Taste of Home is America's #1 cooking magazine.</div>
+
+		<div class="newsletter-signup-content-widget__subscribe-link">
+			<a href="https://order.tasteofhome.com/servlet/OrdersGateway?cds_mag_code=TOH&cds_page_id=217957&cds_response_key=IVKADU101" data-analytics-metrics='{"link_name":"Subscribe link","link_module":"footer","link_pos":"magazine subscription"}'>
+				<img src="https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/images/subscribe-to-the-magazine.png"  data-pin-nopin="true" >
+			</a>
+
+		</div>
+	</div>
+	
+</div>
+
+</div>
+</div></footer></div>
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+<span id="parsely-cfg" data-parsely-site="tasteofhome.com"></span>
+</div>
+<script type="text/javascript">
+(function(s, p, d) {
+var h=d.location.protocol, i=p+"-"+s,
+e=d.getElementById(i), r=d.getElementById(p+"-root"),
+u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+:"static."+p+".com";
+if (e) return;
+e = d.createElement(s); e.id = i; e.async = true;
+e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard -->
+<noscript>
+<p>
+<img src="https://sb.scorecardresearch.com/p?c1=2&c2=6034767&cv=2.0&cj=1" height="1" width="1" alt="*">
+</p>
+</noscript>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?tid=2612561823788&noscript=1" />
+</noscript>
+
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1470684766408550&ev=PageView&noscript=1"/></noscript>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-recirc-module/js/owl-carousel-min.js?ver=2.0.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-recirc-module/js/re-circ.js?ver=2.0.1'></script>
+<script async type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/cookie-controller/js/md5.js?ver=1.2'></script>
+<script async type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/cookie-controller/js/sha1.js?ver=1.2'></script>
+<script async type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/cookie-controller/js/sha256.js?ver=1.2'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/rd-adobe-dtm/js/adobe_dtm.js?ver=1.4.11'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rd_taboola = [{"mode":"thumbnails-a","container":"taboola-below-recipe-thumbnails","placement":"toh-recipe-below recipe Thumbnails","target_type":"mix"}];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/rd-taboola/js/rd-taboola-gallery.js?ver=0.2.1'></script>
+<script type='text/javascript' src='https://api.dmcdn.net/all.js?ver=5.0.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rd_dm_videos = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/rd-video/inc/players/../js/dm-player.js?ver=1.0.7'></script>
+<script type='text/javascript' src='https://z.moatads.com/jwplayerplugin0938452/moatplugin.js?ver=5.0.3'></script>
+<script type='text/javascript' src='//cdn.watchingthat.net/wtat.plugin-jw.min.js?ver=5.0.3'></script>
+<script type='text/javascript' src='https://content.jwplatform.com/libraries/xSartojx.js?ver=5.0.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jw_settings = {"jw_videos":[{"player_id":"jwpl5db604f338558","video_id":"NhxLhSb5","sticky":"true","autoplay":"viewable","mute":"true","comscore":"true","ads":"true","native":"false","autoplay_mobile":"true","autopause":"true","autopause_mobile":"true","view":"0.80","jwp_sticky_offset":"50","jwp_sticky_mobile_offset":"15","jwp_sticky_mobile":"false","tab_pause":"true","embed_video":"false"}],"advertising_settings":{"requestTimeout":"20000","vastLoadTimeout":"12000","loadVideoTimeout":"15000","maxRedirects":"4","vpaidmode":"enabled","preloadAds":"true","autoplayadsmuted":"true","bids":{"settings":{"mediationLayerAdServer":"dfp","bidTimeout":"8000"},"bidders":[{"name":"SpotX","id":235491},{"name":"Telaria","id":"1gch3-78i97","pubid":"1gch3","type":"OpenRTB"},{"name":"EMX","id":"65258","pubid":"1118","type":"OpenRTB"}]}},"is_video_content_type":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/rd-video/inc/players/../js/jw-player.js?ver=1.2.8'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.0.1/lazyload.min.js?ver=8.0.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/smart-images/smart-images.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/social-polls-by-opinionstage/public/js/shortcodes.js?ver=19.6.24'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rd_bx = {"script_id":"934"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-bx/js/smart-tag.js?ver=1.2'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-comscore-mmx/js/comscore-mmx.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/js/krux-tracking.js?ver=1.0.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sticky_data = {"full_width_ad":".recipe-full-container.recipe-content.top-ad","prev_element":"div","is_article":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-custom-social-share/js/social-share-sticky.js?ver=1.0.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var recipe_social_settings = {"social_data":{"generic_facebook":"pinterest","generic_twitter":"pinterest","generic_pinterest":"pinterest","generic_google":"pinterest","generic_msn":"pinterest","generic_aol":"pinterest","generic_yahoo":"pinterest","generic_flipboard":"pinterest","generic_social_share_referrer":"true"}};
+var listicle_social_settings = {"social_data":{"listicle_facebook":"email","listicle_twitter":"email","listicle_pinterest":"email","listicle_google":"email","listicle_msn":"email","listicle_aol":"email","listicle_yahoo":"email","listicle_flipboard":"email","listicle_social_share_referrer":"true"}};
+var article_social_settings = {"social_data":{"article_facebook":"email","article_twitter":"email","article_pinterest":"email","article_google":"email","article_msn":"email","article_aol":"email","article_yahoo":"email","article_flipboard":"email","article_social_share_referrer":"true"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-recipe-social-share-referrer/js/social-share.js?ver=1.0.5'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-salesforce-dmp/js/krux-click-traking.js?ver=0.0.6'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/mu-plugins/js/eu-checker.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-salesforce-dmp/js/krux-consent.js?ver=0.0.6'></script>
+<script async type='text/javascript' src='//www.chicoryapp.com/widget_v2/?ver=1.0'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/genesis/lib/js/skip-links.min.js?ver=2.6.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var next_recipes = [{"id":20261,"link":"https:\/\/www.tasteofhome.com\/recipes\/scottish-shortbread-cookies\/","title":"Scottish Shortbread Cookies"},{"id":21875,"link":"https:\/\/www.tasteofhome.com\/recipes\/rainbow-cookies\/","title":"Rainbow Cookies"},{"id":20973,"link":"https:\/\/www.tasteofhome.com\/recipes\/chocolate-almond-cake\/","title":"Chocolate Almond Cake"},{"id":99560,"link":"https:\/\/www.tasteofhome.com\/recipes\/quick-coconut-macaroons\/","title":"Quick Coconut Macaroons"},{"id":21912,"link":"https:\/\/www.tasteofhome.com\/recipes\/chicken-barley-soup\/","title":"Chicken Barley Soup"},{"id":101351,"link":"https:\/\/www.tasteofhome.com\/recipes\/clam-chowder\/","title":"Clam Chowder"},{"id":104916,"link":"https:\/\/www.tasteofhome.com\/recipes\/best-bran-muffins\/","title":"Best Bran Muffins"},{"id":107010,"link":"https:\/\/www.tasteofhome.com\/recipes\/cream-of-turkey-and-wild-rice-soup\/","title":"Cream of Turkey and Wild Rice Soup"},{"id":23476,"link":"https:\/\/www.tasteofhome.com\/recipes\/chicken-and-rice-casserole\/","title":"Chicken and Rice Casserole"},{"id":23514,"link":"https:\/\/www.tasteofhome.com\/recipes\/family-favorite-oatmeal-waffles\/","title":"Family-Favorite Oatmeal Waffles"},{"id":111854,"link":"https:\/\/www.tasteofhome.com\/recipes\/skillet-beef-and-macaroni\/","title":"Skillet Beef and Macaroni"},{"id":23993,"link":"https:\/\/www.tasteofhome.com\/recipes\/farmer-s-casserole\/","title":"Farmer&#8217;s Casserole"},{"id":120986,"link":"https:\/\/www.tasteofhome.com\/recipes\/tater-topped-casserole\/","title":"Tater-Topped Casserole"},{"id":126694,"link":"https:\/\/www.tasteofhome.com\/recipes\/lemon-poppy-seed-cake\/","title":"Lemon Poppy Seed Cake"},{"id":133050,"link":"https:\/\/www.tasteofhome.com\/recipes\/chewy-macaroons\/","title":"Chewy Macaroons"},{"id":135538,"link":"https:\/\/www.tasteofhome.com\/recipes\/ravioli-casserole\/","title":"Ravioli Casserole"},{"id":135416,"link":"https:\/\/www.tasteofhome.com\/recipes\/steak-stir-fry\/","title":"Steak Stir-Fry"},{"id":27414,"link":"https:\/\/www.tasteofhome.com\/recipes\/taco-cornbread-squares\/","title":"Taco Cornbread Squares"},{"id":157744,"link":"https:\/\/www.tasteofhome.com\/recipes\/pressure-cooked-beef-stew\/","title":"Pressure-Cooked Beef Stew"},{"id":29511,"link":"https:\/\/www.tasteofhome.com\/recipes\/zucchini-crust-pizza\/","title":"Zucchini Crust Pizza"},{"id":189868,"link":"https:\/\/www.tasteofhome.com\/recipes\/taco-pinwheels\/","title":"Taco Pinwheels"},{"id":197773,"link":"https:\/\/www.tasteofhome.com\/recipes\/basic-cookie-dough\/","title":"Basic Cookie Dough"},{"id":32735,"link":"https:\/\/www.tasteofhome.com\/recipes\/slow-cooked-round-steak\/","title":"Slow-Cooked Round Steak"},{"id":203979,"link":"https:\/\/www.tasteofhome.com\/recipes\/pineapple-meringue-pie\/","title":"Pineapple Meringue Pie"},{"id":33072,"link":"https:\/\/www.tasteofhome.com\/recipes\/peanut-butter-milk-shakes\/","title":"Peanut Butter Milk Shakes"},{"id":33355,"link":"https:\/\/www.tasteofhome.com\/recipes\/cheddar-beef-enchiladas\/","title":"Cheddar Beef Enchiladas"},{"id":209663,"link":"https:\/\/www.tasteofhome.com\/recipes\/soft-garlic-breadsticks\/","title":"Soft Garlic Breadsticks"},{"id":210813,"link":"https:\/\/www.tasteofhome.com\/recipes\/sunday-dinner-mashed-potatoes\/","title":"Sunday Dinner Mashed Potatoes"},{"id":34289,"link":"https:\/\/www.tasteofhome.com\/recipes\/honey-garlic-glazed-meatballs\/","title":"Honey-Garlic Glazed Meatballs"},{"id":220535,"link":"https:\/\/www.tasteofhome.com\/recipes\/fast-vegetable-soup\/","title":"Fast Vegetable Soup"}];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/toh-next-recipe.js?ver=1.0.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var genesisSampleL10n = {"mainMenu":"Menu","subMenu":"Menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/responsive-menu.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/aalb-image.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/enquire.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/blurred-image.js?ver=3.7.99'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var google_analytics_plus = {"ga_id":"UA-38657577-1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/script.min.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-includes/js/wp-util.min.js?ver=5.0.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var toh = {"ajax_url":"https:\/\/www.tasteofhome.com\/wp-admin\/admin-ajax.php","review_load_more_action":"toh_review_load_more","review_load_more_template_name":"toh-load-more-reviews","review_load_more_nonce":"40e56794bc","review_submission_action":"toh_review_submission","review_submission_nonce":"99937d6200"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/themes/tmbi-theme-v3/js/reviews.js?ver=3.7.99'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-speed-curve-rum-tracking/js/speed-curve.js?ver=1.0.1'></script>
+<script async type='text/javascript' src='https://cdn.speedcurve.com/js/lux.js?id=128112127&#038;ver=1.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LUX_label = "www.tasteofhome.com.Recipe Detail.55693";
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-content/plugins/tmbi-speed-curve-rum-tracking/js/custom-script.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://www.tasteofhome.com/wp-includes/js/wp-embed.min.js?ver=5.0.3'></script>
+<script type='text/javascript' src='https://sb.scorecardresearch.com/c2/plugins/streamingtag_plugin_jwplayer.js?ver=1.0.1'></script>
+
+<script type="text/javascript">
+if(typeof _satellite !== "undefined"){
+  _satellite.pageBottom()
+}
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bab150296b","applicationID":"45457257","transactionName":"M1BUY0YAC0ZWUxVaXQoad1RACApbGEMIXVUIUBtFUQIMRVI=","queueTime":0,"applicationTime":2991,"atts":"HxdXFQ4aGEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>

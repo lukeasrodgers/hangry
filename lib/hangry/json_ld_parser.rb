@@ -19,11 +19,7 @@ module Hangry
 
     def recipe_hash
       return @recipe_hash if defined?(@recipe_hash)
-      nokogiri_doc.css(self.class.root_selector).each do |script|
-        json = Oj.load(script.content)
-        return @recipe_hash = json if is_a_recipe?(json) && contains_required_keys?(json)
-      end
-      @recipe_hash = nil
+      @recipe_hash = parse_recipe_hash
     end
 
     def nutrition_hash
@@ -33,8 +29,29 @@ module Hangry
 
     private
 
+    def parse_recipe_hash
+      nokogiri_doc.css(self.class.root_selector).each do |script|
+        [Oj.load(script.content)].flatten.each do |json|
+          next unless json.is_a?(Hash)
+          next unless json['@context'] =~ /schema\.org/
+
+          # b/c of www.thespruceeats.com in the specs
+          json = json['mainEntity'] if json.dig('mainEntity', '@type') == 'Recipe'
+
+          return json if is_a_recipe?(json)
+
+          if json['@graph'].is_a?(Array)
+            json['@graph'].each do |item|
+              return item if is_a_recipe?(item)
+            end
+          end
+        end
+      end
+      nil
+    end
+
     def is_a_recipe?(json)
-      json.is_a?(Hash) && json['@context'] =~ /schema\.org/ && json['@type'] == 'Recipe'
+      json['@type'] == 'Recipe' && contains_required_keys?(json)
     end
 
     def contains_required_keys?(json)
@@ -65,8 +82,20 @@ module Hangry
 
     def parse_author
       author = node_with_itemprop(:author)
-      author = author["name"] if author.is_a?(Hash) && author["@type"].to_s.downcase == "person"
-      author
+
+      case author
+      when Hash
+        type = [author.fetch("@type")].flat_map(&:downcase)
+        if type.member?("person") || type.member?("organization")
+          return author.fetch("name")
+        else
+          raise NotImplementedError, "Unexpected type for `author`: #{type.inspect}"
+        end
+      when String
+        author
+      else
+        raise NotImplementedError, "Unexpected node: #{author.inspect}"
+      end
     end
 
     def parse_description
@@ -112,7 +141,30 @@ module Hangry
       # has its steps doubled ("step by step" and "list" modes).
       nodes = nodes_with_itemprop(:recipeInstructions)
       nodes = [nodes].flatten
-      nodes.map(&:strip).uniq.join("\n")
+      parse_list_to_text(*nodes).uniq.join("\n")
+    end
+
+    def parse_list_to_text(*nodes)
+      nodes.flat_map do |node|
+        case node
+        when String then [node]
+        when Hash then parse_to_list(node)
+        else fail NotImplementedError, "Unexpected node #{node.inspect}"
+        end
+      end
+    end
+
+    def parse_to_list(node)
+      type = [node.fetch("@type")].flatten
+      if type.member?("ItemList")
+        node.fetch("itemListElement").flat_map(&method(:parse_to_list))
+      elsif type.member?("ListItem") || type.member?("HowToStep")
+        [node.fetch("text")]
+      elsif type.member?("HowToSection")
+        [node["name"], *parse_list_to_text(*node.fetch("itemListElement")), ""]
+      else
+        fail NotImplementedError, "Unexpected node @type #{type.inspect}"
+      end
     end
 
     def parse_image_url
